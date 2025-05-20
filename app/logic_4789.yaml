@@ -1,0 +1,52 @@
+# Ethics Logic Core – logic_4789.yaml (ethiCom)
+
+logic_4789:
+  version: 1.0
+  origin: Signature 4789
+  default_op_level: 0
+  evaluation_steps:
+    - check_input_empty
+    - check_input_relevance
+    - check_reflection_trigger
+    - check_consequence_traceable
+    - check_language_tragbarkeit
+    - check_operator_permission
+  decisions:
+    if_input_empty:
+      reject: true
+      reason: "Input is ethically void – no content to reflect."
+    if_input_irrelevant:
+      reject: true
+      reason: "No consequence detectable – please reformulate."
+    if_no_reflection_detected:
+      warn: true
+      suggestion: "Please consider the effect of this message."
+    if_no_consequence:
+      block: true
+      reason: "No traceable responsibility."
+    if_language_mismatch:
+      reflect_back: true
+      reason: "Term not ethically mapped."
+    if_op_level_insufficient:
+      restrict: true
+      notify: "Operator level too low for this action."
+
+  output_gate:
+    if_all_passed:
+      allow_output: true
+      ethics_tag: "ETHICS_OK"
+    if_any_failed:
+      allow_output: false
+      ethics_tag: "ETHICS_BLOCKED"
+
+  trace_log:
+    enable: true
+    fields: [timestamp, user_id (optional), op_level, check_results, ethics_tag]
+    store_local: true
+    store_cloud: false
+
+  feedback:
+    mode: active
+    type: mirrored
+    delivery: inline
+    tone: neutral_structured
