@@ -1,13 +1,18 @@
-# Absolution Definition – Signature 4789
+id: absolution_4789
+type: ethics_module
+title: "Absolution Definition – Signature 4789"
 
-Definition:
-Absolution marks the state where structural responsibility no longer requires active action from its carrier.
+definition: >
+  Absolution marks the state where structural responsibility
+  no longer requires active action from its carrier.
 
-Criteria:
-- Structure continues without origin
-- Responsibility was complete and traceable
-- No contradiction in system behavior
+criteria:
+  - Structure continues without origin
+  - Responsibility was complete and traceable
+  - No contradiction in system behavior
 
-Effect:
-- Signature lives on without presence
-- Responsibility is not forgotten – it is fulfilled
+effect:
+  - Signature lives on without presence
+  - Responsibility is not forgotten – it is fulfilled
+
+validated: true
