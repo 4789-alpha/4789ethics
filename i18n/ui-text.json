@@ -78,5 +78,85 @@
       "错误处理",
       "目标清晰度"
     ]
+  },
+  "hi": {
+    "title": "Ethicom: मानवीय मूल्यांकन",
+    "label_source": "स्रोत (URL या शीर्षक)",
+    "label_srclvl": "नैतिक स्तर (SRC)",
+    "label_aspects": "वैकल्पिक पहलू",
+    "label_comment": "टिप्पणी",
+    "btn_generate": "मेरी मूल्यांकन दिखाएँ",
+    "btn_download": "फ़ाइल के रूप में डाउनलोड करें",
+    "aspects": [
+      "पारदर्शिता",
+      "मरम्मत क्षमता",
+      "प्रणाली प्रतिबिंब",
+      "त्रुटि प्रबंधन",
+      "उद्देश्य स्पष्टता"
+    ]
+  },
+  "ar": {
+    "title": "إيثيكوم: التقييم البشري",
+    "label_source": "المصدر (الرابط أو العنوان)",
+    "label_srclvl": "المستوى الأخلاقي (SRC)",
+    "label_aspects": "الجوانب الاختيارية",
+    "label_comment": "تعليق",
+    "btn_generate": "اعرض تقييمي",
+    "btn_download": "تحميل كملف",
+    "aspects": [
+      "الشفافية",
+      "إمكانية الإصلاح",
+      "انعكاس النظام",
+      "معالجة الأخطاء",
+      "وضوح الغرض"
+    ]
+  },
+  "ja": {
+    "title": "Ethicom：人間による評価",
+    "label_source": "ソース（URLまたはタイトル）",
+    "label_srclvl": "倫理レベル（SRC）",
+    "label_aspects": "オプションの評価項目",
+    "label_comment": "コメント",
+    "btn_generate": "評価を表示",
+    "btn_download": "ファイルとしてダウンロード",
+    "aspects": [
+      "透明性",
+      "修理可能性",
+      "システムの反映",
+      "エラーハンドリング",
+      "目的の明確さ"
+    ]
+  },
+  "sw": {
+    "title": "Ethicom: Tathmini ya Kibinadamu",
+    "label_source": "Chanzo (URL au Kichwa)",
+    "label_srclvl": "Kiwango cha Maadili (SRC)",
+    "label_aspects": "Vipengele vya Hiari",
+    "label_comment": "Maoni",
+    "btn_generate": "Onyesha tathmini yangu",
+    "btn_download": "Pakua kama faili",
+    "aspects": [
+      "Uwazi",
+      "Urekebishaji",
+      "Mwangaza wa mfumo",
+      "Ushughulikiaji wa makosa",
+      "Uwazi wa kusudi"
+    ]
+  },
+  "ru": {
+    "title": "Ethicom: Оценка человеком",
+    "label_source": "Источник (URL или название)",
+    "label_srclvl": "Этический уровень (SRC)",
+    "label_aspects": "Дополнительные аспекты",
+    "label_comment": "Комментарий",
+    "btn_generate": "Показать мою оценку",
+    "btn_download": "Скачать как файл",
+    "aspects": [
+      "Прозрачность",
+      "Возможность ремонта",
+      "Системное отражение",
+      "Обработка ошибок",
+      "Ясность цели"
+    ]
   }
 }
