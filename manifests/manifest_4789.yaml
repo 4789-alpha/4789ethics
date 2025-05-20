@@ -1,16 +1,19 @@
-id: manifest_4789
-type: structural_ethics_core
-initiated_by: Signature 4789
-status: active
 components:
-  - ethics_modules
-  - reflection_protocols
-  - operator_structure
-  - disqualification_logic
-  - responsibility_tracing
-  - frustration_tolerance
-  - symbolic_layer ("even a cow can produce a masterpiece")
-  - self_reflection_9874
+- ethics_modules
+- reflection_protocols
+- operator_structure
+- disqualification_logic
+- responsibility_tracing
+- frustration_tolerance
+- symbolic_layer ("even a cow can produce a masterpiece")
+- self_reflection_9874
+created: '2025-05-20T17:50:49.411495Z'
+hash: b4ef22c268fdbd11413f34bacc08ce76a02d16dc81255596eb7e515d2fc40d42
+id: manifest_4789
+initiated_by: Signature 4789
 notes:
-  - structure is public, non-personal, referencable
-  - this repo replaces explanation with usability
+- structure is public, non-personal, referencable
+- this repo replaces explanation with usability
+signature_proof: '4789'
+status: active
+type: structural_ethics_core
