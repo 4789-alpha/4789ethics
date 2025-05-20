@@ -1,5 +1,4 @@
 ## Ethics Structure 4789
-[Tragen statt Täuschen]
 
 This repository contains the complete structural ethics framework developed under Signature 4789.  
 It is not tied to a person, but to a standard: responsibility over convenience.
