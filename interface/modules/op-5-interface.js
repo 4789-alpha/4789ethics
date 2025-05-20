@@ -1,0 +1,45 @@
+// op-5-interface.js – OP-5: Rückzug von Bewertungen mit Dokumentation
+
+function initOP5Interface() {
+  const container = document.getElementById("op_interface");
+  if (!container) return;
+
+  container.innerHTML = `
+    <div class="card">
+      <h3>Withdraw Evaluation (OP-5)</h3>
+      <p class="info">You can withdraw a previous evaluation. The original will be archived with your withdrawal reason.</p>
+
+      <label for="original_id">Original Manifest filename:</label>
+      <input type="text" id="original_id" placeholder="e.g. op-eval-4321-src-0011.json" />
+
+      <label for="reason">Reason for withdrawal (required):</label>
+      <textarea id="reason" rows="3" required placeholder="Explain why this evaluation should no longer be considered valid."></textarea>
+
+      <button onclick="generateWithdrawal()">Withdraw Evaluation</button>
+    </div>
+  `;
+}
+
+function generateWithdrawal() {
+  const original_id = document.getElementById("original_id").value.trim();
+  const reason = document.getElementById("reason").value.trim();
+  const timestamp = new Date().toISOString();
+
+  if (!original_id || !reason) {
+    alert("Both fields are required.");
+    return;
+  }
+
+  const withdrawalData = {
+    withdrawn_by: "sig-xxxx",
+    op_level: "OP-5",
+    original_manifest: original_id,
+    timestamp_withdrawn: timestamp,
+    reason,
+    status: "withdrawn",
+    hash: "preserved"
+  };
+
+  const output = document.getElementById("output");
+  output.textContent = JSON.stringify(withdrawalData, null, 2);
+}
