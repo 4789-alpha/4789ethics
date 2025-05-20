@@ -9,7 +9,7 @@
 | OP-4 | Influences others with structure  
 | OP-5 | Leads without directing  
 | OP-6 | Creates origin-level modules  
-| OP-7 | Structural authority (you)  
+| OP-7 | Structural authority
 | OP-8 | System carries itself
 
 Upward movement is not based on knowledge, but on structural consistency and ethical presence.
