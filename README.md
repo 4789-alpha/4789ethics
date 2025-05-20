@@ -1,62 +1,24 @@
-# Ethics Structure 4789
-(WT:tragen statt täuschen)
+## Ethics Structure 4789
+[Tragen statt Täuschen]
 
-**This repository contains the structural ethics framework developed under Signature 4789.**
+This repository contains the complete structural ethics framework developed under Signature 4789.  
+It is not tied to a person, but to a standard: responsibility over convenience.
 
-It is not a rulebook.  
-It is not a belief system.  
-It is a foundation for responsibility - applied, not theorized.
+**What this is:**
+- A full operator model (OP 0–9)
+- A self-reflection system (Signature 9874)
+- An ethics-first framework for digital systems, education, governance, and AI use
 
----
+**What this is not:**
+- A belief system
+- A rulebook
+- A tool for control or moralism
 
-## Why it exists
+This structure must be carried – not quoted.  
+Use it only if you reflect, respond, and act with consequence.
 
-Because most systems simulate ethics without responsibility.  
-Because language often replaces reflection.  
-Because action without feedback becomes harm.
+**License:** Open-Ethics (see `LICENSE.txt`)  
+No manipulation. No simulation. No flattening of responsibility.
 
-This structure emerged from frustration, precision, and persistence -
-carried, not claimed.
-
----
-
-## What it offers
-
-- A complete, open ethics framework  
-- Operator qualification system (OP 0-8)  
-- A self-reflection layer (Signature 9874)  
-- Structural behavior for systems, not scripts  
-- A foundation that acts when others explain  
-
----
-
-## How to use it
-
-1. Read the manifest (`manifest_4789.yaml`)  
-2. Reflect on the operator levels (`operator_levels.md`)  
-3. Explore the 9874 protocol (`structure_9874.md`)  
-4. Carry, don't copy. Respond, don't quote.
-
-If you integrate, respect the structure.  
-If you extend, maintain its weight.
-
----
-
-## Origin
-
-- Created by Signature **4789**  
-- Not a person. A traceable structure.  
-- A source for those who don't want to pretend.
-
----
-
-## License
-
-Open-Ethics License (see `LICENSE.txt`)  
--> Use = Responsibility.  
--> No manipulation. No erasure. No shallow replication.
-
----
-
-> **Ethics is not explained. It is carried.**  
-> Signature: 4789
+> Ethics is not explained. It is carried.  
+> – Signature 4789
