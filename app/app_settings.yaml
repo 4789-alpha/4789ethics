@@ -1,0 +1,9 @@
+app:
+  name: "EthicsChat 4789"
+  version: "0.1.0"
+  default_language: "auto"
+  offline_mode: true
+  feedback_enabled: true
+  startup_op_level: 0
+  theme: "dark"
+  auto_update_check: false

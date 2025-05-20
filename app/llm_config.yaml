@@ -1,0 +1,9 @@
+llm:
+  provider: "ollama"
+  url: "http://localhost:11434/api/generate"
+  model: "mistral"
+  api_key: null
+  fallback: "https://api.openrouter.ai/v1/chat/completions"
+  timeout: 10
+  headers:
+    Content-Type: application/json

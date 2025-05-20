@@ -1,0 +1,18 @@
+translations:
+  carry:
+    en: "carry"
+    de: "tragen"
+    fr: "porter"
+    it: "portare"
+    es: "llevar"
+    default: "carry"
+  responsibility:
+    en: "responsibility"
+    de: "Verantwortung"
+    fr: "responsabilité"
+    it: "responsabilità"
+    es: "responsabilidad"
+rules:
+  fallback: "en"
+  allow_override: false
+  strict_match: true

@@ -1,0 +1,9 @@
+user:
+  op_level: 0
+  language: auto
+  progress:
+    ethics_test_passed: false
+    last_feedback: null
+  memory:
+    conversations_stored: 0
+    ethics_confirmed: false
