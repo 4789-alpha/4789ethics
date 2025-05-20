@@ -19,6 +19,10 @@ Use it only if you reflect, respond, and act with consequence.
 **License:** Open-Ethics (see `LICENSE.txt`)  
 No manipulation. No simulation. No flattening of responsibility.
 
+### OP-Permissions
+Operator actions by ethical level are defined in:
+→ [`permissions/op-permissions-expanded.json`](permissions/op-permissions-expanded.json)
+
 ### Evaluated Sources (as examples)
 - [src-0001: Fairphone](sources/src-0001.json) → [`SRC-4`](manifests/op-eval-4789-src-0001.json)
 - [src-0002: Ecosia](https://www.ecosia.org/) → [`SRC-4`](manifests/op-eval-4789-src-0002.json)
