@@ -1,0 +1,82 @@
+{
+  "en": {
+    "title": "Ethicom: Human Evaluation",
+    "label_source": "Source (URL or Title)",
+    "label_srclvl": "Ethical Level (SRC)",
+    "label_aspects": "Optional Aspects",
+    "label_comment": "Comment",
+    "btn_generate": "Show My Evaluation",
+    "btn_download": "Download as File",
+    "aspects": [
+      "Transparency",
+      "Repairability",
+      "System Reflection",
+      "Error Handling",
+      "Purpose Clarity"
+    ]
+  },
+  "de": {
+    "title": "Ethicom: Bewertung durch Menschen",
+    "label_source": "Quelle (Titel oder URL)",
+    "label_srclvl": "Ethische Stufe (SRC)",
+    "label_aspects": "Optionale Bewertungskriterien",
+    "label_comment": "Kommentar",
+    "btn_generate": "Meine Bewertung anzeigen",
+    "btn_download": "Bewertung als Datei herunterladen",
+    "aspects": [
+      "Transparenz",
+      "Reparierbarkeit",
+      "Systemreflexion",
+      "Fehlerkultur",
+      "Zweckklarheit"
+    ]
+  },
+  "fr": {
+    "title": "Ethicom : Évaluation humaine",
+    "label_source": "Source (titre ou URL)",
+    "label_srclvl": "Niveau éthique (SRC)",
+    "label_aspects": "Critères optionnels",
+    "label_comment": "Commentaire",
+    "btn_generate": "Afficher mon évaluation",
+    "btn_download": "Télécharger l'évaluation",
+    "aspects": [
+      "Transparence",
+      "Réparabilité",
+      "Réflexion systémique",
+      "Gestion des erreurs",
+      "Clarté du but"
+    ]
+  },
+  "pt": {
+    "title": "Ethicom: Avaliação Humana",
+    "label_source": "Fonte (URL ou título)",
+    "label_srclvl": "Nível ético (SRC)",
+    "label_aspects": "Critérios opcionais",
+    "label_comment": "Comentário",
+    "btn_generate": "Mostrar minha avaliação",
+    "btn_download": "Baixar como arquivo",
+    "aspects": [
+      "Transparência",
+      "Reparabilidade",
+      "Reflexão sistêmica",
+      "Tratamento de erros",
+      "Clareza de propósito"
+    ]
+  },
+  "zh": {
+    "title": "Ethicom：人工评估",
+    "label_source": "来源（网址或标题）",
+    "label_srclvl": "伦理等级（SRC）",
+    "label_aspects": "可选方面",
+    "label_comment": "评论",
+    "btn_generate": "生成我的评估",
+    "btn_download": "下载为文件",
+    "aspects": [
+      "透明度",
+      "可维修性",
+      "系统反思",
+      "错误处理",
+      "目标清晰度"
+    ]
+  }
+}
