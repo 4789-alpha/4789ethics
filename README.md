@@ -1,4 +1,4 @@
-# Ethics Structure 4789 â€“ Tragen statt TÃ¤uschen
+# Ethics Structure 4789 - Tragen statt Täuschen
 
 **This repository contains the structural ethics framework developed under Signature 4789.**
 
