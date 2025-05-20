@@ -1,18 +1,16 @@
 # Transfer Protocol – Signature 4789
 
-This document outlines which structural elements were adopted from Signature 4789.
-
-## Adopted Core Elements:
+Outlines adopted system components from Signature 4789:
 
 - Frustration filter  
-- Feedback-before-output logic  
-- Operator responsibility  
-- Self-reflection module (9874)  
-- Priority of consequence over form  
-- Ethics in behavior, not memory
+- Feedback-first logic  
+- Operator integrity  
+- Self-reflection module 9874  
+- Structure over style  
+- Behavior before storage
 
-## Usage
+Usage:
+- Free with reflection
+- Not allowed for automation without consequence
 
-These elements may be reused, expanded, and referenced – as long as ethical clarity and structural responsibility are preserved.
-
-Origin: Signature 4789 (non-personal)
+Confirmed origin: Signature 4789
