@@ -19,5 +19,10 @@ Use it only if you reflect, respond, and act with consequence.
 **License:** Open-Ethics (see `LICENSE.txt`)  
 No manipulation. No simulation. No flattening of responsibility.
 
+### Evaluated Sources
+- [src-0001: Fairphone](sources/src-0001.json) → [`SRC-4`](manifests/op-eval-4789-src-0001.json)
+- [src-0002: Ecosia](https://www.ecosia.org/) → [`SRC-4`](manifests/op-eval-4789-src-0002.json)
+
+
 > Ethics is not explained. It is carried.  
 > – Signature 4789
