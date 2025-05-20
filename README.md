@@ -45,7 +45,7 @@ If you extend, maintain its weight.
 
 - Created by Signature **4789**  
 - Not a person. A traceable structure.  
-- A source for those who donâ€™t want to pretend.
+- A source for those who don't want to pretend.
 
 ---
 
