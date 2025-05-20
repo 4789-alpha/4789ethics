@@ -1,0 +1,37 @@
+[
+  {
+    "source_id": "src-0002",
+    "title": "Ecosia \u2013 Ethical Search Engine",
+    "url": "https://www.ecosia.org/",
+    "category": "digital infrastructure / search",
+    "status": "pending"
+  },
+  {
+    "source_id": "src-0003",
+    "title": "Patagonia \u2013 Environmental Responsibility",
+    "url": "https://www.patagonia.com/",
+    "category": "apparel / environmental leadership",
+    "status": "pending"
+  },
+  {
+    "source_id": "src-0004",
+    "title": "The Green Web Foundation",
+    "url": "https://www.thegreenwebfoundation.org/",
+    "category": "infrastructure / green hosting",
+    "status": "pending"
+  },
+  {
+    "source_id": "src-0005",
+    "title": "Signal \u2013 Encrypted Communication",
+    "url": "https://signal.org/",
+    "category": "privacy / communication",
+    "status": "pending"
+  },
+  {
+    "source_id": "src-0006",
+    "title": "Permaculture Research Institute",
+    "url": "https://www.permaculturenews.org/",
+    "category": "ecology / agriculture",
+    "status": "pending"
+  }
+]
