@@ -1,0 +1,5 @@
+- Host on GitHub and IPFS for accessibility  
+- Integrate with open-source ethical frameworks  
+- Use in workshops, governance labs, and schools  
+- Reference in AI development guidelines  
+- Connect to real-use decision protocols
