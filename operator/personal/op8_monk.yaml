@@ -1,0 +1,6 @@
+ op8_monk:
+  presence: passive
+  visibility: optional
+  action: only upon ethical collapse
+  structure: complete, unbound
+  reflection: continuous, quiet
