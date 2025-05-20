@@ -1,0 +1,33 @@
+{
+  "source_id": "src-0002",
+  "version": "v1",
+  "src_lvl": "SRC-4",
+  "op_level": "OP-7",
+  "operator": "4789",
+  "timestamp": "2025-05-20T18:24:40.710733Z",
+  "aspects": {
+    "transparency": "high",
+    "repairability": "not applicable",
+    "dependency": "moderate (Microsoft cloud stack)",
+    "system_reflection": "partial",
+    "error_handling": "no known protocol",
+    "purpose_clarity": "strong",
+    "economic_conflict": "low"
+  },
+  "based_on": [
+    {
+      "ref": "ethikscale-en:SRC-4",
+      "applies": true
+    },
+    {
+      "ref": "structure_9874",
+      "applies": true
+    },
+    {
+      "ref": "transfer_protocol_4789",
+      "applies": true
+    }
+  ],
+  "comment": "Ecosia is structurally ethical due to its public reforestation goals, reinvestment policy, and legal non-profit ownership. Partial dependency on major tech stacks and lack of full auditability limit its advancement beyond SRC-4.",
+  "hash": "1bfec9f1c21c8eb426fe0abc0cc074697a9fc09f1fa51b4c9d9e32b6c44f388f"
+}
