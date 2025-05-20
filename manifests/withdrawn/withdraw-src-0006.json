@@ -1,0 +1,14 @@
+{
+  "source_id": "src-0006",
+  "withdrawn_by": "4789",
+  "original_operator": "sig-4321",
+  "original_manifest": "op-eval-sig-4321-src-0006.json",
+  "reason": "evaluation contradicted by multiple OP-5+ sources and shown to be structurally invalid.",
+  "timestamp_withdrawn": "2025-06-01T12:00:00Z",
+  "notes": [
+    "Rating was inconsistent with verifiable facts.",
+    "Operator did not respond to trust evaluator request."
+  ],
+  "hash": "original-hash-remains-visible",
+  "status": "withdrawn"
+}
