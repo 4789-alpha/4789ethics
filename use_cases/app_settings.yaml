@@ -1,0 +1,11 @@
+app:
+  name: "ethiCom"
+  description: "Ethical communication interface based on Signature 4789"
+  version: "0.1.0"
+  default_language: "auto"
+  offline_mode: true
+  feedback_enabled: true
+  startup_op_level: 0
+  theme: "dark"
+  auto_update_check: false
+  signature_origin: "4789"
