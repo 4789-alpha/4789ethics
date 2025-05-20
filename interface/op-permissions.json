@@ -1,0 +1,60 @@
+{
+  "OP-0": {
+    "can_rate": true,
+    "can_sign": false,
+    "can_comment": false,
+    "can_nominate": false,
+    "can_vote": false,
+    "can_override": false,
+    "can_retract": false,
+    "can_consensus": false,
+    "can_accept_donations": false
+  },
+  "OP-1": {
+    "can_rate": true,
+    "can_sign": true,
+    "can_comment": false,
+    "can_nominate": false,
+    "can_vote": false,
+    "can_override": false,
+    "can_retract": false,
+    "can_consensus": false,
+    "can_accept_donations": false
+  },
+  "OP-2": {
+    "can_rate": true,
+    "can_sign": true,
+    "can_comment": false,
+    "can_nominate": true,
+    "can_vote": false,
+    "can_override": false,
+    "can_retract": false,
+    "can_consensus": false,
+    "can_accept_donations": false
+  },
+  "OP-3": {
+    "can_comment": true,
+    "can_vote": true
+  },
+  "OP-4": {
+    "can_retract": true
+  },
+  "OP-5": {
+    "can_override": true
+  },
+  "OP-6": {
+    "can_consensus": true
+  },
+  "OP-7": {
+    "can_override_op6": true
+  },
+  "OP-7.9": {
+    "can_accept_donations": true,
+    "can_vote_on_op79": true,
+    "can_vote_on_op8": true
+  },
+  "OP-8": {
+    "can_act_as_structure": true,
+    "can_execute_evaluations": true
+  }
+}

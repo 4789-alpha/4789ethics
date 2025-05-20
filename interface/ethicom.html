@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <title>Ethicom Evaluation</title>
@@ -20,37 +19,35 @@
     <h2 id="title">Ethicom: Human Evaluation</h2>
     <label for="lang">Language</label>
     <select id="lang" onchange="setLang(this.value)"></select>
+<script>loadLanguages();</script><label for="source" id="label_source">Source (URL or Title)</label>
+<input type="text" id="source" placeholder="https://example.org or short title" />
 
-    <label for="source" id="label_source">Source (URL or Title)</label>
-    <input type="text" id="source" placeholder="https://example.org or short title" />
+<label for="src_lvl" id="label_srclvl">Ethical Level (SRC)</label>
+<select id="src_lvl">
+  <option value="SRC-0">SRC-0: Unconscious</option>
+  <option value="SRC-1">SRC-1: Externally Controlled</option>
+  <option value="SRC-2">SRC-2: Reactive</option>
+  <option value="SRC-3">SRC-3: Ethically Attempting</option>
+  <option value="SRC-4">SRC-4: Structurally Ethical</option>
+  <option value="SRC-5">SRC-5: System-Conscious</option>
+  <option value="SRC-6">SRC-6: Consistent</option>
+  <option value="SRC-7">SRC-7: Biologically Integrated</option>
+  <option value="SRC-8+">SRC-8+: Post-Ethical</option>
+</select>
 
-    <label for="src_lvl" id="label_srclvl">Ethical Level (SRC)</label>
-    <select id="src_lvl">
-      <option value="SRC-0">SRC-0: Unconscious</option>
-      <option value="SRC-1">SRC-1: Externally Controlled</option>
-      <option value="SRC-2">SRC-2: Reactive</option>
-      <option value="SRC-3">SRC-3: Ethically Attempting</option>
-      <option value="SRC-4">SRC-4: Structurally Ethical</option>
-      <option value="SRC-5">SRC-5: System-Conscious</option>
-      <option value="SRC-6">SRC-6: Consistent</option>
-      <option value="SRC-7">SRC-7: Biologically Integrated</option>
-      <option value="SRC-8+">SRC-8+: Post-Ethical</option>
-    </select>
+<label id="label_aspects">Optional Aspects</label>
+<div class="checkboxes" id="aspect_container"></div>
 
-    <label id="label_aspects">Optional Aspects</label>
-    <div class="checkboxes" id="aspect_container"></div>
+<label for="comment" id="label_comment">Comment</label>
+<textarea id="comment" rows="3" placeholder="Your justification..."></textarea>
 
-    <label for="comment" id="label_comment">Comment</label>
-    <textarea id="comment" rows="3" placeholder="Your justification..."></textarea>
+<button onclick="generateManifest()" id="btn_generate">Show My Evaluation</button>
+<button onclick="downloadManifest()" id="btn_download">Download as File</button>
+<button onclick="runConsensus()" id="btn_consensus" style="display:none">Run Anonymous Consensus</button>
 
-    <button onclick="generateManifest()" id="btn_generate">Show My Evaluation</button>
-    <button onclick="downloadManifest()" id="btn_download">Download as File</button>
-    <button onclick="runConsensus()" id="btn_consensus" style="display:none">Run Anonymous Consensus</button>
+<pre id="output" class="card" style="background:#eef; white-space:pre-wrap;"></pre>
 
-    <pre id="output" class="card" style="background:#eef; white-space:pre-wrap;"></pre>
-  </div>
-
-  <script>
+  </div>  <script>
     let lastManifest = {};
     let translations = {};
     let lastAnonVotes = [
@@ -62,14 +59,13 @@
       const res = await fetch("i18n/ui-text.json");
       translations = await res.json();
       const selector = document.getElementById("lang");
-      selector.innerHTML = ""; // reset
       Object.keys(translations).forEach(code => {
         const opt = document.createElement("option");
         opt.value = code;
         opt.textContent = code.toUpperCase();
         selector.appendChild(opt);
       });
-      setLang("en");
+      setLang("en"); // default
     }
 
     function setLang(lang) {
@@ -85,7 +81,7 @@
       const aspectDiv = document.getElementById("aspect_container");
       aspectDiv.innerHTML = "";
       t.aspects.forEach((label, i) => {
-        const value = ["transparency", "repairability", "system_reflection", "error_handling", "purpose_clarity"][i];
+        const value = ["transparency","repairability","system_reflection","error_handling","purpose_clarity"][i];
         aspectDiv.innerHTML += `<label><input type='checkbox' name='aspects' value='${value}'> ${label}</label>`;
       });
     }
@@ -146,9 +142,6 @@
       alert("Anonymous consensus result:\n" + JSON.stringify(result, null, 2));
     }
 
-    window.addEventListener("DOMContentLoaded", () => {
-      loadLanguages();
-    });
-  </script>
-</body>
+    loadLanguages();
+  </script></body>
 </html>
