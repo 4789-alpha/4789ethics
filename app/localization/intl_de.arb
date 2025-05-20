@@ -1,0 +1,17 @@
+{
+  "@@locale": "de",
+  "appTitle": "ethiCom",
+  "inputPlaceholder": "Nachricht eingeben...",
+  "sendButton": "Senden",
+  "opLevel": "Operator-Stufe",
+  "ethicsCheck": "Diese Eingabe wurde ethisch geprüft.",
+  "carry": "tragen",
+  "responsibility": "Verantwortung",
+  "reflect": "reflektieren",
+  "feedbackRequired": "Bitte reflektiere, bevor du fortfährst.",
+  "startMessage": "Bist du bereit, etwas Echtes zu tragen?",
+  "opStatus": "Du befindest dich derzeit auf OP-Stufe {level}",
+  "languageSwitch": "Sprache wechseln",
+  "ethicsApproved": "Ethisch gültig",
+  "ethicsRejected": "Ethisch blockiert"
+}

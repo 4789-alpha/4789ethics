@@ -1,0 +1,17 @@
+{
+  "@@locale": "en",
+  "appTitle": "ethiCom",
+  "inputPlaceholder": "Enter your message...",
+  "sendButton": "Send",
+  "opLevel": "Operator Level",
+  "ethicsCheck": "This input has been ethically verified.",
+  "carry": "carry",
+  "responsibility": "responsibility",
+  "reflect": "reflect",
+  "feedbackRequired": "Please reflect before proceeding.",
+  "startMessage": "Are you ready to carry something real?",
+  "opStatus": "You are currently in OP-Level {level}",
+  "languageSwitch": "Switch Language",
+  "ethicsApproved": "Ethically valid",
+  "ethicsRejected": "Ethically blocked"
+}

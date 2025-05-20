@@ -1,0 +1,17 @@
+{
+  "@@locale": "de_BE",
+  "appTitle": "ethiCom",
+  "inputPlaceholder": "Schriebi öppis...",
+  "sendButton": "Sändu",
+  "opLevel": "OP-Stufe",
+  "ethicsCheck": "Ds isch scho überleit worde.",
+  "carry": "träge",
+  "responsibility": "Verantwortig",
+  "reflect": "nöberluege",
+  "feedbackRequired": "Lueg der e chli druf, bevor du witergahsch.",
+  "startMessage": "Bisch bereit, öppis würklichs z'träge?",
+  "opStatus": "Du bisch zurzyt uf OP-Stufe {level}",
+  "languageSwitch": "Sprach wächsle",
+  "ethicsApproved": "Ethisch i.O.",
+  "ethicsRejected": "Nöd tragbar"
+}
