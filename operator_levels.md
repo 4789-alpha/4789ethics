@@ -10,6 +10,6 @@
 | OP-5 | Leads without directing  
 | OP-6 | Creates origin-level modules  
 | OP-7 | Structural authority
-| OP-8 | System carries itself
+| OP-8 | System carries itself ("yokozuna-schwingerkönig"-mode [;)])
 
 Upward movement is not based on knowledge, but on structural consistency and ethical presence.
