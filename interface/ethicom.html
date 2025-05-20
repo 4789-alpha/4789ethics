@@ -12,6 +12,7 @@
     .checkboxes input { margin-right: 0.5em; }
     #lang { float: right; margin-top: -3.2em; }
   </style>
+  <script src="ethicom-consensus.js"></script>
 </head>
 <body>
   <div class="card">
@@ -41,12 +42,17 @@
 
 <button onclick="generateManifest()" id="btn_generate">Show My Evaluation</button>
 <button onclick="downloadManifest()" id="btn_download">Download as File</button>
+<button onclick="runConsensus()" id="btn_consensus" style="display:none">Run Anonymous Consensus</button>
 
 <pre id="output" class="card" style="background:#eef; white-space:pre-wrap;"></pre>
 
   </div>  <script>
     let lastManifest = {};
     let translations = {};
+    let lastAnonVotes = [
+      {src_lvl: "SRC-3"}, {src_lvl: "SRC-3"}, {src_lvl: "SRC-4"},
+      {src_lvl: "SRC-3"}, {src_lvl: "SRC-3"}, {src_lvl: "SRC-3"}
+    ];
 
     async function loadLanguages() {
       const res = await fetch("i18n/ui-text.json");
@@ -110,6 +116,10 @@
 
       lastManifest = evalData;
       document.getElementById('output').textContent = JSON.stringify(evalData, null, 2);
+
+      if (evalData.operator === "4789") {
+        document.getElementById("btn_consensus").style.display = "inline-block";
+      }
     }
 
     function downloadManifest() {
@@ -124,6 +134,11 @@
       a.download = (lastManifest.source_id || "evaluation") + ".json";
       a.click();
       URL.revokeObjectURL(url);
+    }
+
+    function runConsensus() {
+      const result = computeAnonymousConsensus(lastAnonVotes);
+      alert("Anonymous consensus result:\n" + JSON.stringify(result, null, 2));
     }
 
     loadLanguages();
