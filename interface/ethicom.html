@@ -1,0 +1,147 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ethicom Evaluation</title>
+  <style>
+    body { font-family: sans-serif; padding: 2em; background: #f8f8f8; }
+    .card { background: #fff; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); padding: 1.5em; margin-bottom: 1.5em; }
+    label { display: block; margin-top: 1em; }
+    select, textarea, input[type="text"] { width: 100%; padding: 0.5em; margin-top: 0.25em; }
+    button { padding: 0.75em 1.5em; background: #228B22; color: #fff; border: none; border-radius: 4px; margin-top: 1.5em; cursor: pointer; }
+    .checkboxes label { display: flex; align-items: center; margin: 0.3em 0; }
+    .checkboxes input { margin-right: 0.5em; }
+    #lang { float: right; margin-top: -3.2em; }
+  </style>
+  <script src="ethicom-consensus.js"></script>
+</head>
+<body>
+  <div class="card">
+    <h2 id="title">Ethicom: Human Evaluation</h2>
+    <label for="lang">Language</label>
+    <select id="lang" onchange="setLang(this.value)"></select>
+<script>loadLanguages();</script><label for="source" id="label_source">Source (URL or Title)</label>
+<input type="text" id="source" placeholder="https://example.org or short title" />
+
+<label for="src_lvl" id="label_srclvl">Ethical Level (SRC)</label>
+<select id="src_lvl">
+  <option value="SRC-0">SRC-0: Unconscious</option>
+  <option value="SRC-1">SRC-1: Externally Controlled</option>
+  <option value="SRC-2">SRC-2: Reactive</option>
+  <option value="SRC-3">SRC-3: Ethically Attempting</option>
+  <option value="SRC-4">SRC-4: Structurally Ethical</option>
+  <option value="SRC-5">SRC-5: System-Conscious</option>
+  <option value="SRC-6">SRC-6: Consistent</option>
+  <option value="SRC-7">SRC-7: Biologically Integrated</option>
+  <option value="SRC-8+">SRC-8+: Post-Ethical</option>
+</select>
+
+<label id="label_aspects">Optional Aspects</label>
+<div class="checkboxes" id="aspect_container"></div>
+
+<label for="comment" id="label_comment">Comment</label>
+<textarea id="comment" rows="3" placeholder="Your justification..."></textarea>
+
+<button onclick="generateManifest()" id="btn_generate">Show My Evaluation</button>
+<button onclick="downloadManifest()" id="btn_download">Download as File</button>
+<button onclick="runConsensus()" id="btn_consensus" style="display:none">Run Anonymous Consensus</button>
+
+<pre id="output" class="card" style="background:#eef; white-space:pre-wrap;"></pre>
+
+  </div>  <script>
+    let lastManifest = {};
+    let translations = {};
+    let lastAnonVotes = [
+      {src_lvl: "SRC-3"}, {src_lvl: "SRC-3"}, {src_lvl: "SRC-4"},
+      {src_lvl: "SRC-3"}, {src_lvl: "SRC-3"}, {src_lvl: "SRC-3"}
+    ];
+
+    async function loadLanguages() {
+      const res = await fetch("i18n/ui-text.json");
+      translations = await res.json();
+      const selector = document.getElementById("lang");
+      Object.keys(translations).forEach(code => {
+        const opt = document.createElement("option");
+        opt.value = code;
+        opt.textContent = code.toUpperCase();
+        selector.appendChild(opt);
+      });
+      setLang("en"); // default
+    }
+
+    function setLang(lang) {
+      const t = translations[lang] || translations["en"];
+      document.getElementById("title").textContent = t.title;
+      document.getElementById("label_source").textContent = t.label_source;
+      document.getElementById("label_srclvl").textContent = t.label_srclvl;
+      document.getElementById("label_aspects").textContent = t.label_aspects;
+      document.getElementById("label_comment").textContent = t.label_comment;
+      document.getElementById("btn_generate").textContent = t.btn_generate;
+      document.getElementById("btn_download").textContent = t.btn_download;
+
+      const aspectDiv = document.getElementById("aspect_container");
+      aspectDiv.innerHTML = "";
+      t.aspects.forEach((label, i) => {
+        const value = ["transparency","repairability","system_reflection","error_handling","purpose_clarity"][i];
+        aspectDiv.innerHTML += `<label><input type='checkbox' name='aspects' value='${value}'> ${label}</label>`;
+      });
+    }
+
+    async function generateManifest() {
+      const source = document.getElementById('source').value;
+      const src_lvl = document.getElementById('src_lvl').value;
+      const comment = document.getElementById('comment').value;
+      const operator = "4789";
+      const op_level = "OP-7";
+      const timestamp = new Date().toISOString();
+
+      const aspects = {};
+      document.querySelectorAll('input[name="aspects"]:checked').forEach(cb => {
+        aspects[cb.value] = "yes";
+      });
+
+      const evalData = {
+        source_id: source || "undefined",
+        src_lvl,
+        op_level,
+        operator,
+        aspects,
+        comment,
+        timestamp
+      };
+
+      const encoded = new TextEncoder().encode(JSON.stringify(evalData));
+      const hashBuffer = await crypto.subtle.digest('SHA-256', encoded);
+      const hashArray = Array.from(new Uint8Array(hashBuffer));
+      const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+      evalData.hash = hashHex;
+
+      lastManifest = evalData;
+      document.getElementById('output').textContent = JSON.stringify(evalData, null, 2);
+
+      if (evalData.operator === "4789") {
+        document.getElementById("btn_consensus").style.display = "inline-block";
+      }
+    }
+
+    function downloadManifest() {
+      if (!lastManifest || !lastManifest.hash) {
+        alert("Please generate your evaluation first.");
+        return;
+      }
+      const blob = new Blob([JSON.stringify(lastManifest, null, 2)], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = (lastManifest.source_id || "evaluation") + ".json";
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    function runConsensus() {
+      const result = computeAnonymousConsensus(lastAnonVotes);
+      alert("Anonymous consensus result:\n" + JSON.stringify(result, null, 2));
+    }
+
+    loadLanguages();
+  </script></body>
+</html>
