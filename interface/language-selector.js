@@ -34,18 +34,29 @@ function initLanguageDropdown(selectId = "lang_select", textPath = getUiTextPath
     .then(texts => {
       const select = document.getElementById(selectId);
       if (!select) return;
+
+      const base = texts.en || {};
+      const keys = Object.keys(base);
+      function isEmpty(v) {
+        if (Array.isArray(v)) return v.length === 0 || v.every(x => !x);
+        return v === undefined || v === null || v === "";
+      }
+
       Object.keys(texts)
         .sort()
         .forEach(code => {
           const opt = document.createElement("option");
           opt.value = code;
-          opt.textContent = code;
+          const obj = texts[code] || {};
+          const incomplete = keys.some(k => !Object.prototype.hasOwnProperty.call(obj, k) || isEmpty(obj[k]));
+          opt.textContent = incomplete ? `${code}*` : code;
+          if (incomplete) opt.title = "Translation incomplete";
           select.appendChild(opt);
         });
       const current = getLanguage();
       select.value = current;
       select.addEventListener("change", e => {
-        const lang = e.target.value;
+        const lang = e.target.value.replace(/\*$/, "");
         localStorage.setItem("ethicom_lang", lang);
         const t = texts[lang] || texts.en || {};
         if (typeof applyTexts === "function") {
