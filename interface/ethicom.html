@@ -29,6 +29,7 @@
     <a href="ratings.html" data-ui="nav_ratings">Bewertungen</a>
     <a href="signup.html" data-ui="nav_signup">Signup</a>
     <a href="haupt-readme.md" target="_blank" data-ui="nav_readme">README</a>
+    <a href="#tools" data-ui="nav_tools" onclick="showTools(event)">Tools</a>
   </nav>
   <main>
     <h2 id="title">Ethicom Evaluation</h2>
@@ -129,6 +130,25 @@
       status.textContent = uiText.status_loading_op0 || "OP-0 wird geladen...";
       renderBadge("OP-0", "OP-0");
       loadInterfaceForOP("OP-0");
+    }
+
+    function showTools(e) {
+      e.preventDefault();
+      const toolArea = document.getElementById("op_interface");
+      if (toolArea) {
+        toolArea.innerHTML = `<div class="card">
+          <h3>Select Tool</h3>
+          <select id="tool_select">
+            <option value="language-manager">Language Manager</option>
+            <option value="semantic-manager">Semantic Manager</option>
+            <option value="source-search">Source Search</option>
+            <option value="manifest-viewer">Manifest Viewer</option>
+            <option value="revision-overview">Revision Overview</option>
+            <option value="permissions-viewer">Permissions Viewer</option>
+          </select>
+          <button onclick="loadInterfaceForOP(document.getElementById('tool_select').value)">Load</button>
+        </div>`;
+      }
     }
   </script>
 </body>

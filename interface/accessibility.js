@@ -6,6 +6,7 @@ function initAccessibilitySetup() {
   const vision = saved.vision || "yes";
   const hearing = saved.hearing || "yes";
   const speech = saved.speech || "no";
+  const font = saved.font || "normal";
 
   container.innerHTML = `
     <h3 data-ui="access_title">Accessibility Setup</h3>
@@ -28,20 +29,34 @@ function initAccessibilitySetup() {
       <option value="yes" data-ui="access_opt_yes">Yes</option>
     </select>
 
+    <label for="font_select">Font size:</label>
+    <select id="font_select">
+      <option value="normal">Normal</option>
+      <option value="large">Large</option>
+    </select>
+
     <button id="access_save" data-ui="access_save_btn">Save Setup</button>
   `;
 
   document.getElementById("vision_select").value = vision;
   document.getElementById("hearing_select").value = hearing;
   document.getElementById("speech_select").value = speech;
+  document.getElementById("font_select").value = font;
+
+  function applyFont(val) {
+    document.body.classList.toggle("large-font", val === "large");
+  }
+  applyFont(font);
 
   document.getElementById("access_save").addEventListener("click", () => {
     const data = {
       vision: document.getElementById("vision_select").value,
       hearing: document.getElementById("hearing_select").value,
-      speech: document.getElementById("speech_select").value
+      speech: document.getElementById("speech_select").value,
+      font: document.getElementById("font_select").value
     };
     localStorage.setItem("ethicom_access", JSON.stringify(data));
+    applyFont(data.font);
     loadUiTexts().then(txt => {
       const t = txt[getLanguage()] || txt.en || {};
       alert(t.access_saved || "Accessibility preferences saved.");
