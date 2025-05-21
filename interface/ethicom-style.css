@@ -210,15 +210,13 @@ button:hover {
 #lang_select {
   font-size: 1.2em;
   padding: 0;
+}
+
 /* Background grid showing all OP logos */
 #op_background {
   position: fixed;
   inset: 0;
-  z-index:
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  justify-items: center;
-  align-items: center;
+  z-index: 0;
   opacity: 0.08;
   pointer-events: none;
 }
