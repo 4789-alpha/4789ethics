@@ -269,3 +269,15 @@ button:hover {
   white-space: nowrap;
 }
 
+/* Larger text mode */
+body.large-font {
+  font-size: 1.25em;
+}
+body.large-font input,
+body.large-font textarea,
+body.large-font select,
+body.large-font button {
+  font-size: 1em;
+  padding: 1em;
+}
+
