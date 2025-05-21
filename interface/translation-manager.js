@@ -131,7 +131,8 @@ function initTranslationManager() {
   editBtn.textContent = "Add/Improve Translation";
   const challenge = document.createElement("p");
   challenge.className = "info";
-  challenge.textContent = "Challenge: gather two OP signatures to confirm a language.";
+  challenge.dataset.info = "translation_challenge";
+  applyInfoTexts(challenge);
   container.appendChild(challenge);
   container.appendChild(editBtn);
 
@@ -195,7 +196,7 @@ function showTranslationEditor(code, data) {
   const sigCount = pendingLangs[code]?.signatures?.length || 0;
   form.innerHTML = `
     <h3>Edit translation for ${code}</h3>
-    <p class="info">Current signatures: ${sigCount}/2</p>
+    <p class="info" data-info="translation_sig_count" data-count="${sigCount}"></p>
     <label>Title:<br><input id="tr_title" value="${data.title || ""}"></label><br>
     <label>Label Source:<br><input id="tr_src" value="${data.label_source || ""}"></label><br>
     <label>Label SRCLvl:<br><input id="tr_srclvl" value="${data.label_srclvl || ""}"></label><br>
@@ -231,6 +232,7 @@ function showTranslationEditor(code, data) {
     <button id="tr_cancel">Cancel</button>
   `;
   overlay.appendChild(form);
+  applyInfoTexts(form);
   document.body.appendChild(overlay);
 
   document.getElementById("tr_cancel").addEventListener("click", () => overlay.remove());

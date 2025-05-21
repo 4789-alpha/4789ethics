@@ -7,11 +7,12 @@ function initOP9Interface() {
   container.innerHTML = `
     <div class="card">
       <h3>Yokozuna-Schwingerkönig Mode (OP-9)</h3>
-      <p class="info">Full structural autonomy. Finalize OP-8 evaluations and trigger self-sustaining loops.</p>
+      <p class="info" data-info="op-9"></p>
       <button id="run_diagnostic">Run Final Diagnostic</button>
       ${help('Performs an integrity check before entering OP-10.')}
     </div>
   `;
+  applyInfoTexts(container);
 
   document.getElementById("run_diagnostic").addEventListener("click", () => {
     const out = document.getElementById("output");
