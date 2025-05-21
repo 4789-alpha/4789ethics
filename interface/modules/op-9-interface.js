@@ -1,5 +1,15 @@
 // op-9-interface.js – OP-9: Nominierung und Spendenprüfung
 
+let op9FailCount = 0;
+
+function checkOP9Fail() {
+  if (op9FailCount >= 3) {
+    alert("OP-9 failure threshold reached. Consequences apply.");
+    const c = document.getElementById("op_interface");
+    if (c) c.innerHTML = "<p>OP-9 locked due to repeated failures.</p>";
+  }
+}
+
 function initOP9Interface() {
   const container = document.getElementById("op_interface");
   if (!container) return;
@@ -59,7 +69,9 @@ function generateNomination() {
   const timestamp = new Date().toISOString();
 
   if (!nominee || !reason) {
+    op9FailCount++;
     alert("Please complete the nomination fields.");
+    checkOP9Fail();
     return;
   }
 
@@ -82,7 +94,9 @@ function verifyDonation() {
   const timestamp = new Date().toISOString();
 
   if (!amount || amount <= 0) {
+    op9FailCount++;
     alert("Please enter a valid donation amount.");
+    checkOP9Fail();
     return;
   }
 
