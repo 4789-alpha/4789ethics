@@ -62,6 +62,9 @@ function loadInterfaceForOP(op_level) {
       initLanguageManager();
 
     }
+    if (typeof window.setHelpSection === "function") {
+      window.setHelpSection(op_level);
+    }
     if (status) status.textContent = "Module loaded";
   };
   document.body.appendChild(script);
