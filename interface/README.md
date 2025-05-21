@@ -3,8 +3,9 @@
 **Ethicom** is a responsibility-based evaluation framework.  
 It enables anonymous and signed evaluations of digital structures, systems, and sources.
 
-No personal account. No tracking. No influence.  
+No personal account. No tracking. No influence.
 Just structured responsibility.
+For OP-6 and above, the generator can optionally store a hashed passport or ID locally.
 
 ---
 
@@ -22,7 +23,7 @@ Just structured responsibility.
 
 - `ethicom.html` → loads modular interface per OP-level
 - `ethicom-style.css` → dark mode, badge colors, minimal energy
-- `signature-generator.js` → local signature creation (e.g. `SIG-XXXX-XXXX-XXXX`)
+- `signature-generator.js` → local signature creation (e.g. `SIG-XXXX-XXXX-XXXX`); for OP-6+ it can store a hashed passport/ID locally
 - `signature-verifier.js` → hash & password check before activation
 - `interface-loader.js` → loads correct module for OP-0 to OP-12 and extra tools
 - `language-selector.js` → user selects language (ISO 639-1)
