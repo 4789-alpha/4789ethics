@@ -2,16 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Ethicom Tools</title>
+  <title>Settings</title>
   <link rel="stylesheet" href="ethicom-style.css" />
-  <script src="interface-loader.js"></script>
   <script src="language-selector.js"></script>
   <script src="translation-manager.js"></script>
+  <script src="theme-manager.js"></script>
+  <script src="dev-mode.js"></script>
+  <script src="op0-testmode.js"></script>
+  <script src="accessibility.js"></script>
   <script src="color-auth.js"></script>
 </head>
 <body>
   <header>
-    <h1 data-ui="nav_tools">Tools</h1>
+    <h1 data-ui="nav_settings">Settings</h1>
   </header>
   <section class="hero">
     <p class="tagline">Ethik-Kompass für technologische Projekte</p>
@@ -32,18 +35,20 @@
       <label for="lang_select" data-ui="choose_language_label">Language:</label>
       <select id="lang_select"></select>
     </div>
-    <div class="card" id="tool_list">
-      <h2 data-ui="nav_tools">Tools</h2>
-      <ul style="list-style:none; padding:0;">
-        <li><button class="accent-button" onclick="loadInterfaceForOP('language-manager')">Language Manager</button></li>
-        <li><button class="accent-button" onclick="loadInterfaceForOP('semantic-manager')">Semantic Manager</button></li>
-        <li><button class="accent-button" onclick="loadInterfaceForOP('source-search')">Source Search</button></li>
-        <li><button class="accent-button" onclick="loadInterfaceForOP('manifest-viewer')">Manifest Viewer</button></li>
-        <li><button class="accent-button" onclick="loadInterfaceForOP('revision-overview')">Revision Overview</button></li>
-        <li><button class="accent-button" onclick="loadInterfaceForOP('permissions-viewer')">Permissions Viewer</button></li>
-      </ul>
+    <div id="theme_selection" class="card">
+      <label for="theme_select">Farbschema:</label>
+      <select id="theme_select">
+        <option value="dark">Dark</option>
+        <option value="tanna">Tanna</option>
+      </select>
     </div>
-    <div id="op_interface" class="card"></div>
+    <div id="dev_toggle" class="card">
+      <button onclick="toggleDevMode()" class="accent-button">Toggle Dev Mode</button>
+    </div>
+    <div id="test_toggle" class="card">
+      <button onclick="toggleOP0TestMode()" class="accent-button">Toggle OP-0 Test Mode</button>
+    </div>
+    <div id="access_setup" class="card"></div>
   </main>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
