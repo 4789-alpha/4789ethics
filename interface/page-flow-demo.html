@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Page Flow Demo</title>
+  <link rel="stylesheet" href="ethicom-style.css" />
+  <style>
+    #flow {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 1em;
+      padding: 2em;
+    }
+    .page {
+      flex-shrink: 0;
+      min-width: 60%;
+      scroll-snap-align: center;
+      background: var(--card-bg);
+      border-radius: 8px;
+      padding: 2em;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+  </style>
+  <script src="page-flow.js"></script>
+</head>
+<body>
+  <nav><a href="ethicom.html">Back</a></nav>
+  <div id="flow">
+    <div class="page">Page One</div>
+    <div class="page">Page Two</div>
+    <div class="page">Page Three</div>
+  </div>
+  <script>
+    initPageFlow('flow');
+  </script>
+</body>
+</html>
+
