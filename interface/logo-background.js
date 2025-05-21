@@ -35,7 +35,21 @@ function initLogoBackground() {
     const speed = 0.5 + Math.random() * 1.5;
     const dx = Math.cos(angle) * speed;
     const dy = Math.sin(angle) * speed;
-    symbols.push({ img, lvl, mass, x, y, dx, dy, size, radius });
+    symbols.push({
+      img,
+      lvl,
+      mass,
+      x,
+      y,
+      dx,
+      dy,
+      size,
+      radius,
+      rotation: 0,
+      rotSpeed: 0,
+      rotFrames: 0,
+      hideFrames: 0,
+    });
   }
 
   function resolveCollision(a, b) {
@@ -89,10 +103,33 @@ function initLogoBackground() {
         const minDist = s.radius + o.radius;
         if (dist < minDist) {
           resolveCollision(s, o);
+          if (s.lvl < o.lvl) {
+            s.rotSpeed = 0.2 + Math.random() * 0.3;
+            s.rotFrames = 180;
+            s.hideFrames = 10;
+          } else if (o.lvl < s.lvl) {
+            o.rotSpeed = 0.2 + Math.random() * 0.3;
+            o.rotFrames = 180;
+            o.hideFrames = 10;
+          }
         }
       }
 
-      ctx.drawImage(s.img, s.x - s.radius, s.y - s.radius, s.size, s.size);
+      if (s.rotFrames > 0) {
+        s.rotation += s.rotSpeed;
+        s.rotFrames--;
+      } else {
+        s.rotSpeed = 0;
+      }
+      if (s.hideFrames > 0) {
+        s.hideFrames--;
+      } else {
+        ctx.save();
+        ctx.translate(s.x, s.y);
+        if (s.rotation) ctx.rotate(s.rotation);
+        ctx.drawImage(s.img, -s.radius, -s.radius, s.size, s.size);
+        ctx.restore();
+      }
     }
 
     requestAnimationFrame(step);
