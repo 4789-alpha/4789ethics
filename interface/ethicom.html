@@ -25,6 +25,11 @@
   <main class="card">
     <h2 id="title">Ethicom Evaluation</h2>
 
+    <section id="welcome" class="card">
+      <p>Bisch gluschtig? Lueg derzue, ganz locker. Drück uf "Schnupper-Start" und probier OP‑0 ganz ohne Login.</p>
+      <button onclick="previewOP0()" class="accent-button">Schnupper-Start (OP‑0)</button>
+    </section>
+
     <div id="badge_gallery" class="badge-gallery"></div>
 
     <div id="badge_display" class="badge-row"></div>
@@ -113,6 +118,14 @@
       status.textContent = "Signature valid: " + stored.op_level;
       renderBadge(stored.op_level, stored.op_level);
       loadInterfaceForOP(stored.op_level);
+    }
+
+    function previewOP0() {
+      const status = document.getElementById("status");
+      status.style.display = "block";
+      status.textContent = "OP-0 wird geladen...";
+      renderBadge("OP-0", "OP-0");
+      loadInterfaceForOP("OP-0");
     }
   </script>
 </body>
