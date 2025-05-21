@@ -95,7 +95,8 @@ node tools/check-translations.js
 ```
 
 This prints a list of language codes and the fields that still require
-translation.
+translation. In the interface dropdown, languages with missing fields show an
+asterisk (`*`) so users know the translation is not complete.
 
 ### Generating Interface README [⇧](#contents)
 
