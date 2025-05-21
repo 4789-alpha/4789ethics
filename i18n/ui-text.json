@@ -47,6 +47,22 @@
       "Clarté du but"
     ]
   },
+  "es": {
+    "title": "Ethicom: Evaluación Humana",
+    "label_source": "Fuente (URL o Título)",
+    "label_srclvl": "Nivel Ético (SRC)",
+    "label_aspects": "Aspectos Opcionales",
+    "label_comment": "Comentario",
+    "btn_generate": "Mostrar Mi Evaluación",
+    "btn_download": "Descargar como Archivo",
+    "aspects": [
+      "Transparencia",
+      "Reparabilidad",
+      "Reflexión del Sistema",
+      "Manejo de Errores",
+      "Claridad de Propósito"
+    ]
+  },
   "pt": {
     "title": "Ethicom: Avaliação Humana",
     "label_source": "Fonte (URL ou título)",
@@ -157,6 +173,70 @@
       "Системное отражение",
       "Обработка ошибок",
       "Ясность цели"
+    ]
+  },
+  "it": {
+    "title": "Ethicom: Valutazione Umana",
+    "label_source": "Fonte (URL o titolo)",
+    "label_srclvl": "Livello etico (SRC)",
+    "label_aspects": "Aspetti facoltativi",
+    "label_comment": "Commento",
+    "btn_generate": "Mostra la mia valutazione",
+    "btn_download": "Scarica come file",
+    "aspects": [
+      "Trasparenza",
+      "Riparabilità",
+      "Riflessione del sistema",
+      "Gestione degli errori",
+      "Chiarezza dello scopo"
+    ]
+  },
+  "ko": {
+    "title": "Ethicom: 인간 평가",
+    "label_source": "출처(URL 또는 제목)",
+    "label_srclvl": "윤리 수준 (SRC)",
+    "label_aspects": "선택적 측면",
+    "label_comment": "댓글",
+    "btn_generate": "내 평가 보기",
+    "btn_download": "파일로 다운로드",
+    "aspects": [
+      "투명성",
+      "수리 가능성",
+      "시스템 성찰",
+      "오류 처리",
+      "목적 명확성"
+    ]
+  },
+  "fa": {
+    "title": "ایتیکام: ارزیابی انسانی",
+    "label_source": "منبع (آدرس یا عنوان)",
+    "label_srclvl": "سطح اخلاقی (SRC)",
+    "label_aspects": "جنبه‌های اختیاری",
+    "label_comment": "نظر",
+    "btn_generate": "نمایش ارزیابی من",
+    "btn_download": "دانلود به عنوان فایل",
+    "aspects": [
+      "شفافیت",
+      "قابلیت تعمیر",
+      "بازتاب سیستم",
+      "مدیریت خطا",
+      "وضوح هدف"
+    ]
+  },
+  "pl": {
+    "title": "Ethicom: Ocena Ludzka",
+    "label_source": "Źródło (URL lub tytuł)",
+    "label_srclvl": "Poziom etyczny (SRC)",
+    "label_aspects": "Opcjonalne aspekty",
+    "label_comment": "Komentarz",
+    "btn_generate": "Pokaż moją ocenę",
+    "btn_download": "Pobierz jako plik",
+    "aspects": [
+      "Przejrzystość",
+      "Naprawialność",
+      "Refleksja systemu",
+      "Obsługa błędów",
+      "Jasność celu"
     ]
   }
 }
