@@ -1,12 +1,30 @@
 
 /* ethicom-style.css – 4789-konform */
 
+
 :root {
   --bg-color: #1e1e1e;
   --text-color: #e0e0e0;
   --primary-color: #228B22;
   --card-bg: #2b2b2b;
   --accent-color: #ccaa22;
+}
+
+/* Theme classes override the CSS variables */
+.theme-dark {
+  --bg-color: #1e1e1e;
+  --text-color: #e0e0e0;
+  --primary-color: #228B22;
+  --card-bg: #2b2b2b;
+  --accent-color: #ccaa22;
+}
+
+.theme-tanna {
+  --bg-color: #eef6ee;
+  --text-color: #003300;
+  --primary-color: #228B22;
+  --card-bg: #ffffff;
+  --accent-color: #228B22;
 }
 
 body {
@@ -175,9 +193,25 @@ button:hover {
   background-color: #b58f1b;
 }
 
+
 /* larger language selector */
 #lang_select {
   font-size: 1.2em;
-  padding: 0.4em;
+  padding: 0;
+/* Background grid showing all OP logos */
+#op_background {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  justify-items: center;
+  align-items: center;
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+#op_background img {
+  max-width: 100px;
 }
 

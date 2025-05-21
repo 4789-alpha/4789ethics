@@ -12,8 +12,11 @@
   <script src="translation-manager.js"></script>
   <script src="accessibility.js"></script>
   <script src="dynamic-help.js"></script>
+  <script src="theme-manager.js"></script>
+  <script src="logo-background.js"></script>
 </head>
 <body>
+  <div id="op_background"></div>
   <header>
     <h1>Ethicom Evaluation</h1>
   </header>
@@ -40,6 +43,14 @@
       <span class="help-icon" title="Select the two-letter code for your preferred language.">?</span>
       <select id="lang_select">
         <option value="">--</option>
+      </select>
+    </div>
+
+    <div id="theme_selection" class="card">
+      <label for="theme_select">Farbschema:</label>
+      <select id="theme_select">
+        <option value="dark">Dark</option>
+        <option value="tanna">Tanna</option>
       </select>
     </div>
 
