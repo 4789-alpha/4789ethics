@@ -193,6 +193,11 @@ button:hover {
   background-color: #b58f1b;
 }
 
+
+/* larger language selector */
+#lang_select {
+  font-size: 1.2em;
+  padding: 0;
 /* Background grid showing all OP logos */
 #op_background {
   position: fixed;

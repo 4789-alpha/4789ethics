@@ -104,6 +104,23 @@ function applyTexts(t) {
   document.querySelectorAll('option[data-ui="access_opt_yes_nospeech"]').forEach(o => {
     if (t.access_opt_yes_nospeech) o.textContent = t.access_opt_yes_nospeech;
   });
+
+  const navStart = document.querySelector('[data-ui="nav_start"]');
+  if (navStart) navStart.textContent = t.nav_start || navStart.textContent;
+  const navRatings = document.querySelector('[data-ui="nav_ratings"]');
+  if (navRatings) navRatings.textContent = t.nav_ratings || navRatings.textContent;
+  const navSignup = document.querySelector('[data-ui="nav_signup"]');
+  if (navSignup) navSignup.textContent = t.nav_signup || navSignup.textContent;
+  const navReadme = document.querySelector('[data-ui="nav_readme"]');
+  if (navReadme) navReadme.textContent = t.nav_readme || navReadme.textContent;
+
+  const previewMsg = document.querySelector('[data-ui="preview_msg"]');
+  if (previewMsg) previewMsg.textContent = t.preview_msg || previewMsg.textContent;
+  const previewBtn = document.querySelector('[data-ui="preview_btn"]');
+  if (previewBtn) previewBtn.textContent = t.preview_btn || previewBtn.textContent;
+
+  const chooseLabel = document.querySelector('[data-ui="choose_language_label"]');
+  if (chooseLabel) chooseLabel.textContent = t.label_choose_language || chooseLabel.textContent;
 }
 
 function initTranslationManager() {
