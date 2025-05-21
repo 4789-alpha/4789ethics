@@ -26,6 +26,7 @@ Just structured responsibility.
 - `signature-verifier.js` → hash & password check before activation
 - `interface-loader.js` → loads correct module for OP-0 to OP-8
 - `language-selector.js` → user selects language (ISO 639-1)
+- `source-search.js` → search and verify sources
 
 ---
 
@@ -56,6 +57,7 @@ interface/
 ├── signature-verifier.js
 ├── interface-loader.js
 ├── language-selector.js
+├── source-search.js
 ├── modules/
 │   ├── op-0-interface.js
 │   ├── op-1-interface.js
