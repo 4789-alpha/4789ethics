@@ -32,6 +32,8 @@ Humor ist willkommen, wenn er Verantwortung und Klarheit unterstützt.
 - [Adding Languages](#adding-languages)
 - [Generating Interface README](#generating-interface-readme)
 - [Gatekeeper Control](#gatekeeper-control)
+- [API Access Control](#api-access-control)
+- [OP Function Bundles](#op-function-bundles)
 - [Currency Synchronization](#currency-synchronization)
 - [Roadmap](#roadmap)
 - [Local Deployment](#local-deployment)
@@ -107,6 +109,20 @@ Local control can be toggled via `tools/gatekeeper.js`. The script reads
 `app/gatekeeper_config.yaml` and only allows actions when `allow_control` is set
 to `true` for the controller `RL@RLpi`. This keeps remote commands gated and
 limited to the local environment.
+
+### API Access Control [⇧](#contents)
+
+`tools/api-access.js` checks whether API features may be used. The script reads
+the operator level and confirmation flags from `app/user_state.yaml` and grants
+access only when the specified OP level is met and the user has confirmed
+ethical intent.
+
+### OP Function Bundles [⇧](#contents)
+
+`tools/op-functions.js` exposes small helper functions that unlock
+only when the necessary operator level and ethical confirmation are present.
+Each function is associated with a minimum OP level and the
+module checks permission via `api-access.js` before returning it.
 
 ### Currency Synchronization [⇧](#contents)
 
