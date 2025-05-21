@@ -37,8 +37,16 @@ function initLanguageDropdown(selectId = "lang_select") {
       const current = getLanguage();
       select.value = current;
       select.addEventListener("change", e => {
-        localStorage.setItem("ethicom_lang", e.target.value);
-        location.reload();
+        const lang = e.target.value;
+        localStorage.setItem("ethicom_lang", lang);
+        const t = texts[lang] || texts.en || {};
+        if (typeof applyTexts === "function") {
+          applyTexts(t);
+        }
+        if (typeof applySignupTexts === "function") {
+          window.uiText = t;
+          applySignupTexts();
+        }
       });
     });
 }
