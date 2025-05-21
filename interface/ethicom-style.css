@@ -7,6 +7,9 @@
   --text-color: #e0e0e0;
   --primary-color: #228B22;
   --card-bg: #2b2b2b;
+  --header-bg: rgba(34, 34, 34, 0.9);
+  --nav-bg: rgba(51, 51, 51, 0.9);
+  --card-alpha-bg: rgba(43, 43, 43, 0.92);
   --accent-color: #ccaa22;
 }
 
@@ -16,6 +19,9 @@
   --text-color: #e0e0e0;
   --primary-color: #228B22;
   --card-bg: #2b2b2b;
+  --header-bg: rgba(34, 34, 34, 0.9);
+  --nav-bg: rgba(51, 51, 51, 0.9);
+  --card-alpha-bg: rgba(43, 43, 43, 0.92);
   --accent-color: #ccaa22;
 }
 
@@ -24,6 +30,9 @@
   --text-color: #003300;
   --primary-color: #228B22;
   --card-bg: #ffffff;
+  --header-bg: rgba(34, 34, 34, 0.9);
+  --nav-bg: rgba(51, 51, 51, 0.9);
+  --card-alpha-bg: rgba(255, 255, 255, 0.92);
   --accent-color: #228B22;
 }
 
@@ -42,7 +51,7 @@ body {
 }
 
 header {
-  background: #222;
+  background: var(--header-bg);
   padding: 1em;
   text-align: center;
   position: relative;
@@ -50,7 +59,7 @@ header {
 }
 
 nav {
-  background: #333;
+  background: var(--nav-bg);
   text-align: center;
   padding: 0.5em 0;
   position: relative;
@@ -94,7 +103,7 @@ main {
 }
 
 .card {
-  background-color: var(--card-bg);
+  background-color: var(--card-alpha-bg);
   color: inherit;
   border-left: 4px solid var(--primary-color);
   border-radius: 6px;
@@ -229,6 +238,10 @@ button:hover {
   position: fixed;
   inset: 0;
   z-index: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  justify-items: center;
+  align-items: center;
   opacity: 0.08;
   pointer-events: none;
 }
