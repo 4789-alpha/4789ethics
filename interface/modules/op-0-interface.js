@@ -7,6 +7,7 @@ function initOP0Interface() {
   container.innerHTML = `
     <div class="card">
       <h3>Anonymous Rating (OP-0)</h3>
+      ${typeof isOP0TestMode === 'function' && isOP0TestMode() ? '<p class="warn">Test Mode: Results are not recorded.</p>' : ''}
       <p class="info" data-info="op-0"></p>
 
       <label for="src_lvl">Select a general ethical level (SRC):</label>
@@ -49,7 +50,9 @@ function generateAnonymousManifest() {
   const output = document.getElementById("output");
   output.textContent = JSON.stringify(evalData, null, 2);
 
-  if (typeof recordEvidence === "function") {
+  if (typeof isOP0TestMode === 'function' && isOP0TestMode()) {
+    output.textContent += "\n(Test mode active: data not saved)";
+  } else if (typeof recordEvidence === "function") {
     recordEvidence(JSON.stringify(evalData), "user");
   }
 }
