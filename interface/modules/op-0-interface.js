@@ -46,4 +46,8 @@ function generateAnonymousManifest() {
 
   const output = document.getElementById("output");
   output.textContent = JSON.stringify(evalData, null, 2);
+
+  if (typeof recordEvidence === "function") {
+    recordEvidence(JSON.stringify(evalData), "user");
+  }
 }
