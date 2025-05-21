@@ -18,3 +18,27 @@ function getLanguage() {
   const stored = localStorage.getItem("ethicom_lang");
   return stored || askLanguageChoice();
 }
+
+// Initialize a language dropdown and reload on change
+function initLanguageDropdown(selectId = "lang_select") {
+  fetch("i18n/ui-text.json")
+    .then(r => r.json())
+    .then(texts => {
+      const select = document.getElementById(selectId);
+      if (!select) return;
+      Object.keys(texts)
+        .sort()
+        .forEach(code => {
+          const opt = document.createElement("option");
+          opt.value = code;
+          opt.textContent = code;
+          select.appendChild(opt);
+        });
+      const current = getLanguage();
+      select.value = current;
+      select.addEventListener("change", e => {
+        localStorage.setItem("ethicom_lang", e.target.value);
+        location.reload();
+      });
+    });
+}

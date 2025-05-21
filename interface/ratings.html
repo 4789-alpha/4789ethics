@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <title>Gesamtbewertungen</title>
   <link rel="stylesheet" href="ethicom-style.css" />
+  <script src="language-selector.js"></script>
   <script src="ratings.js"></script>
 </head>
 <body>
@@ -16,6 +17,10 @@
     <a href="signup.html">Signup</a>
   </nav>
   <main class="card">
+    <div id="lang_selection" class="card" style="margin-bottom:1em;">
+      <label for="lang_select">Language:</label>
+      <select id="lang_select"></select>
+    </div>
     <section class="card">
       <h2>Wie entstehen Gesamtbewertungen?</h2>
       <p>Jede einzelne Bewertung wird mit einem SRC‑Level versehen. Aus allen signierten Bewertungen einer Quelle wird ein Durchschnittswert gebildet. Dieser Durchschnitt bestimmt die Gesamtbewertung.</p>
@@ -37,5 +42,11 @@
       <p>Nimm an der offenen Bewertung teil und erstelle deine eigene Einschätzung über <a href="ethicom.html">Ethicom</a>.</p>
     </section>
   </main>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      initLanguageDropdown('lang_select');
+      initRatings();
+    });
+  </script>
 </body>
 </html>

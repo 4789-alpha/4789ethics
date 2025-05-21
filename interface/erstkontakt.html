@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <title>Erstkontakt</title>
   <link rel="stylesheet" href="ethicom-style.css" />
+  <script src="language-selector.js"></script>
   <script src="ratings.js"></script>
   <script src="interface-loader.js"></script>
   <style>
@@ -20,6 +21,10 @@
     <a href="signup.html">Signup</a>
   </nav>
   <main class="card">
+    <div id="lang_selection" class="card" style="margin-bottom:1em;">
+      <label for="lang_select">Language:</label>
+      <select id="lang_select"></select>
+    </div>
     <section class="card">
       <h2>Erste Einblicke</h2>
       <p>Hier siehst du die bisherigen Bewertungen und kannst dir einen Eindruck verschaffen.</p>
@@ -30,7 +35,10 @@
     <div id="op_interface" class="card" style="display:none;"></div>
   </main>
   <script>
-    document.addEventListener('DOMContentLoaded', initRatings);
+    document.addEventListener('DOMContentLoaded', () => {
+      initLanguageDropdown('lang_select');
+      initRatings();
+    });
     function showOP0() {
       const container = document.getElementById('op_interface');
       container.style.display = 'block';
