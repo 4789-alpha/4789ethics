@@ -3,6 +3,15 @@
 let uiTexts = {}; // merged translations
 let pendingLangs = JSON.parse(localStorage.getItem("ethicom_pending_langs") || "{}");
 
+function getSignatureId() {
+  try {
+    const sig = JSON.parse(localStorage.getItem("ethicom_signature") || "{}");
+    return sig.id || null;
+  } catch (err) {
+    return null;
+  }
+}
+
 function loadUiTexts() {
   return fetch("i18n/ui-text.json")
     .then(r => r.json())
@@ -19,15 +28,25 @@ function loadUiTexts() {
 }
 
 function savePendingLang(code, obj) {
-  pendingLangs[code] = { text: obj, confirmed: false };
+  const sig = getSignatureId();
+  const current = pendingLangs[code] || { text: obj, signatures: [], confirmed: false };
+  current.text = obj;
+  if (sig && !current.signatures.includes(sig)) {
+    current.signatures.push(sig);
+  }
+  current.confirmed = current.signatures.length >= 2;
+  pendingLangs[code] = current;
   localStorage.setItem("ethicom_pending_langs", JSON.stringify(pendingLangs));
 }
 
 function confirmPendingLang(code) {
-  if (pendingLangs[code]) {
-    pendingLangs[code].confirmed = true;
-    localStorage.setItem("ethicom_pending_langs", JSON.stringify(pendingLangs));
+  if (!pendingLangs[code]) return;
+  const sig = getSignatureId();
+  if (sig && !pendingLangs[code].signatures.includes(sig)) {
+    pendingLangs[code].signatures.push(sig);
   }
+  pendingLangs[code].confirmed = pendingLangs[code].signatures.length >= 2;
+  localStorage.setItem("ethicom_pending_langs", JSON.stringify(pendingLangs));
 }
 
 function applyTexts(t) {
@@ -93,6 +112,10 @@ function initTranslationManager() {
   const container = document.getElementById("lang_selection");
   const editBtn = document.createElement("button");
   editBtn.textContent = "Add/Improve Translation";
+  const challenge = document.createElement("p");
+  challenge.className = "info";
+  challenge.textContent = "Challenge: gather two OP signatures to confirm a language.";
+  container.appendChild(challenge);
   container.appendChild(editBtn);
 
   editBtn.addEventListener("click", () => {
@@ -152,8 +175,10 @@ function showTranslationEditor(code, data) {
   form.className = "card";
   form.style.background = "#fff";
   form.style.color = "#000";
+  const sigCount = pendingLangs[code]?.signatures?.length || 0;
   form.innerHTML = `
     <h3>Edit translation for ${code}</h3>
+    <p class="info">Current signatures: ${sigCount}/2</p>
     <label>Title:<br><input id="tr_title" value="${data.title || ""}"></label><br>
     <label>Label Source:<br><input id="tr_src" value="${data.label_source || ""}"></label><br>
     <label>Label SRCLvl:<br><input id="tr_srclvl" value="${data.label_srclvl || ""}"></label><br>
@@ -234,10 +259,11 @@ function showTranslationEditor(code, data) {
 function checkPendingConfirmation() {
   const lang = localStorage.getItem("ethicom_lang");
   if (lang && pendingLangs[lang] && !pendingLangs[lang].confirmed) {
+    const needed = 2 - (pendingLangs[lang].signatures?.length || 0);
     const box = document.createElement("div");
     box.className = "card";
     box.innerHTML = `
-      <p>Unconfirmed translation for ${lang} found. Confirm?</p>
+      <p>Unconfirmed translation for ${lang} found. ${needed} more confirmation(s) required.</p>
       <button id="tr_yes">Confirm</button>
       <button id="tr_edit">Edit</button>
     `;
