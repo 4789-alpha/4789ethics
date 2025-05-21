@@ -89,6 +89,19 @@
     "can_override_op6": true
   },
   "OP-11": {
+  "OP-7.5": {
+    "can_rate": true,
+    "can_sign": true,
+    "can_comment": true,
+    "can_nominate": true,
+    "can_vote": true,
+    "can_override": false,
+    "can_retract": true,
+    "can_consensus": true,
+    "can_accept_donations": false,
+    "can_override_op6": false
+  },
+  "OP-7.9": {
     "can_rate": true,
     "can_sign": true,
     "can_comment": true,

@@ -54,6 +54,19 @@ Just structured responsibility.
 | OP-10       | candidate for Yokozuna (OP-11)       |
 | OP-11       | Yokozuna-Schwingerkönig mode        |
 | OP-12      | first non-human stage               |
+| OP-0   | anonymous observer                                      |
+| OP-1   | first signed rating                                     |
+| OP-2   | provides feedback responsibly                            |
+| OP-3   | rating requires justification                            |
+| OP-4   | can revise after 3 weeks                                 |
+| OP-5   | may withdraw previous evaluations                        |
+| OP-6   | can verify consensus                                     |
+| OP-7   | structural authority                                     |
+| OP-7.5 | nomination preparation, review OP-8                      |
+| OP-7.9 | donation verification, confirm nominations                |
+| OP-8   | candidate stage for OP-9 (system self-stabilizes)         |
+| OP-9   | Yokozuna-Schwingerkönig mode                              |
+| OP-10  | first non-human stage                                     |
 
 ---
 

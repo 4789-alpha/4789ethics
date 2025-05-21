@@ -2,9 +2,10 @@
 
 ## Project Overview
 
-This folder contains PNG files representing the geometrically and visually refined development stages  
-of the TANNA symbol from OP-0 to OP-7. Each stage represents an abstract layer or growth level  
-in a logical, graphical, or systemic tree schema.
+This folder contains PNG files representing the geometrically and visually refined development stages
+of the TANNA symbol from OP-0 to OP-7. Each stage represents an abstract layer or growth level
+in a logical, graphical, or systemic tree schema. For OP-8 and higher the design reuses the OP-7 logo,
+repeating it horizontally and shifting the hue to indicate progression.
 
 ---
 
@@ -35,7 +36,8 @@ in a logical, graphical, or systemic tree schema.
 
 ## Notes
 
-- OP-8 (not included) will mark the conceptual/technological departure beyond biological stages.
+- Starting with OP-8 the logo repeats the OP-7 symbol multiple times and shifts the hue for each higher level.
+- OP-8 shows two OP-7 logos side by side, OP-9 shows three, and so on.
 - Designed with **color-contrast accessibility** in mind (color-blind friendly).
 - Structure is suitable for use in **SVG, animation, and generative logic**.
 
