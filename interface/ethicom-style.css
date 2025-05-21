@@ -234,29 +234,20 @@ button:hover {
   width: 5ch; /* dropdown only needs to show two-letter codes */
 }
 
-/* Background grid showing all OP logos */
+/* Animated OP logos in the background */
 #op_background {
   position: fixed;
   inset: 0;
   z-index: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  justify-items: center;
-  align-items: center;
+  overflow: hidden;
   opacity: 0.08;
   pointer-events: none;
 }
 
-#op_background img {
-  max-width: 60px;
-  animation: logoSpin 40s linear infinite;
-}
-  
-@keyframes logoSpin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-  position: absolute;
-  max-width: none;
+#op_background canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 /* Modified logo used in citation view */
