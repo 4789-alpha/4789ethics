@@ -24,6 +24,19 @@ async function initRatings() {
     table.appendChild(thead);
     const tbody = document.createElement('tbody');
 
+    function makeOpLogo(level) {
+      const base = parseInt(String(level).replace('OP-', '').split('.')[0], 10);
+      const count = base >= 8 ? base - 6 : 1;
+      const hue = base >= 8 ? (base - 7) * 30 : 0;
+      const srcNum = base >= 8 ? 7 : base;
+      let html = '<span class="op-logo-group">';
+      for (let i = 0; i < count; i++) {
+        html += `<img class="citation-logo" src="../op-logo/tanna_op${srcNum}.png" alt="Logo ${level}" style="filter: hue-rotate(-80deg) saturate(0.7) hue-rotate(${hue}deg);">`;
+      }
+      html += '</span>';
+      return html;
+    }
+
     const srcMap = {
       'SRC-0': 0, 'SRC-1': 1, 'SRC-2': 2, 'SRC-3': 3,
       'SRC-4': 4, 'SRC-5': 5, 'SRC-6': 6, 'SRC-7': 7, 'SRC-8+': 8
@@ -34,8 +47,7 @@ async function initRatings() {
 
     ratings.forEach(r => {
       const row = document.createElement('tr');
-      const opNum = parseInt(String(r.op_level).replace('OP-', '').split('.')[0], 10);
-      const logo = `<img class="citation-logo" src="../op-logo/tanna_op${opNum}.png" alt="Logo ${r.op_level}">`;
+      const logo = makeOpLogo(r.op_level);
       row.innerHTML = `<td>${r.timestamp}</td><td>${r.source_id}</td><td>${r.src_lvl}</td><td>${r.op_level}</td><td>${logo}</td><td>${r.comment || ''}</td>`;
       tbody.appendChild(row);
 
