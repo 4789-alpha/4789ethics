@@ -83,3 +83,7 @@ interface/
 │   ├── op-8-analysis.js
 │   ├── op-9-interface.js
 │   └── op-10-interface.js
+```
+
+The interface directory groups the UI logic by operational level. Each file is
+loaded dynamically so the system can scale from OP-0 through OP-10.

@@ -48,9 +48,6 @@ No manipulation. No simulation. No flattening of responsibility.
 | `releases/` | Release notes and integrity hashes |
 | `sources/` | Evaluated sources and candidate lists |
 | `test/` | Node.js test suite |
-| `manifests/` | Structural manifests and integrity data |
-| `permissions/` | Operator permission definitions |
-| `sources/` | Evaluated sources and candidate lists |
 | `tools/` | Utility scripts (e.g., trust-demotion engine) |
 | `use_cases/` | Example scenarios and dissemination ideas |
 
