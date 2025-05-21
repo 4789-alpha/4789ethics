@@ -69,6 +69,13 @@ include another language, add a new JSON object using the two-letter ISO 639-1
 code as the key and provide translations for all fields found under the `"en"`
 entry. The interface will automatically recognize the new language.
 
+### Gatekeeper Control
+
+Local control can be toggled via `tools/gatekeeper.js`. The script reads
+`app/gatekeeper_config.yaml` and only allows actions when `allow_control` is set
+to `true` for the controller `RL@RLpi`. This keeps remote commands gated and
+limited to the local environment.
+
 
 
 ### Running Tests
