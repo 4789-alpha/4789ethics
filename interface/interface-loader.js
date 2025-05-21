@@ -27,7 +27,8 @@ function loadInterfaceForOP(op_level) {
     "revisionoverview": "revision-overview.js",
     "permissionsviewer": "permissions-viewer.js",
     "languagemanager": "language-manager.js",
-    "semanticmanager": "semantic-manager.js"
+    "semanticmanager": "semantic-manager.js",
+    "chat": "chat-interface.js"
   };
 
   const script = document.createElement("script");
@@ -63,6 +64,8 @@ function loadInterfaceForOP(op_level) {
       initLanguageManager();
     } else if (op_level.toLowerCase() === "semantic-manager") {
       initSemanticManager();
+    } else if (op_level.toLowerCase() === "chat") {
+      initChatInterface();
 
     }
     if (typeof window.setHelpSection === "function") {
