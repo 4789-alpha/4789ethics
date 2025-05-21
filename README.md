@@ -31,6 +31,7 @@ No manipulation. No simulation. No flattening of responsibility.
 - [Adding Languages](#adding-languages)
 - [Gatekeeper Control](#gatekeeper-control)
 - [Roadmap](#roadmap)
+- [Local Deployment](#local-deployment)
 - [Running Tests](#running-tests)
 - [Contributing](#contributing)
 
@@ -104,7 +105,15 @@ The roadmap keeps development transparent according to Signature 4789.
    - Publish multi-language guides for all operator levels.
    - Finalize open training data licensing.
 
+### Local Deployment [⇧](#contents)
 
+Serve the Ethicom interface locally with:
+
+```bash
+node tools/serve-interface.js
+```
+
+Then open `http://localhost:8080/ethicom.html` in your browser.
 
 ### Running Tests [⇧](#contents)
 
