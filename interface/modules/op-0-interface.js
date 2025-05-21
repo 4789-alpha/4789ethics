@@ -10,6 +10,7 @@ function initOP0Interface() {
       <p class="info">You are submitting an anonymous evaluation. It will have no lasting influence and cannot be revised.</p>
 
       <label for="src_lvl">Select a general ethical level (SRC):</label>
+      ${help('SRC describes the ethical consciousness of the evaluated source.')}
       <select id="src_lvl">
         <option value="SRC-0">SRC-0: Unconscious</option>
         <option value="SRC-1">SRC-1: Externally Controlled</option>
@@ -19,6 +20,7 @@ function initOP0Interface() {
       </select>
 
       <label for="comment">Optional comment:</label>
+      ${help('Any remark to store with this evaluation.')} 
       <textarea id="comment" rows="3" placeholder="(optional) Your ethical note..."></textarea>
 
       <button onclick="generateAnonymousManifest()">Evaluate</button>

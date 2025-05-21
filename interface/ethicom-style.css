@@ -124,3 +124,19 @@ button:hover {
     flex-wrap: wrap;
   }
 }
+
+/* Simple help icon for tooltips */
+.help-icon {
+  display: inline-block;
+  margin-left: 0.3em;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background: var(--accent-color);
+  color: var(--card-bg);
+  text-align: center;
+  line-height: 1em;
+  font-weight: bold;
+  font-size: 0.75em;
+  cursor: help;
+}

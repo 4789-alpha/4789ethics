@@ -10,6 +10,7 @@ function initOP4Interface() {
       <p class="info">You are submitting a structured and traceable evaluation. A revision will become possible after 21 days.</p>
 
       <label for="src_lvl">SRC Level:</label>
+      ${help('Choose how ethically aware the source is.')}
       <select id="src_lvl">
         <option value="SRC-0">SRC-0: Unconscious</option>
         <option value="SRC-1">SRC-1: Externally Controlled</option>
@@ -20,6 +21,7 @@ function initOP4Interface() {
       </select>
 
       <label for="comment">Justification (required):</label>
+      ${help('Explain your evaluation; you can revise after 21 days.')}
       <textarea id="comment" rows="3" required placeholder="Your ethical justification..."></textarea>
 
       <p><strong>Note:</strong> After submission, this evaluation is final for 21 days. After that, you may revise it.</p>

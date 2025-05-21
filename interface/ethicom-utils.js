@@ -37,3 +37,9 @@ async function sha256(message) {
 
   throw new Error("SHA-256 hashing not supported in this environment");
 }
+
+// Return HTML for a help icon with tooltip text
+function help(text) {
+  const safe = String(text).replace(/"/g, "&quot;");
+  return `<span class="help-icon" title="${safe}">?</span>`;
+}

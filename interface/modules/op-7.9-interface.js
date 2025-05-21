@@ -11,9 +11,11 @@ function initOP79Interface() {
 
       <h4>NOMINATION</h4>
       <label for="nominee">Operator Signature (to nominate):</label>
+      ${help('Signature ID of the operator you wish to promote.')}
       <input type="text" id="nominee" placeholder="e.g. sig-4321" />
 
       <label for="target_rank">Target Rank:</label>
+      ${help('OP-level the nominee should achieve.')}
       <select id="target_rank">
         <option value="OP-2">OP-2</option>
         <option value="OP-3">OP-3</option>
@@ -24,6 +26,7 @@ function initOP79Interface() {
       </select>
 
       <label for="reason_nom">Reason for nomination:</label>
+      ${help('Provide structural justification for this promotion.')}
       <textarea id="reason_nom" rows="3" placeholder="Explain why this operator qualifies for promotion."></textarea>
 
       <button onclick="generateNomination()">Nominate</button>
@@ -32,9 +35,11 @@ function initOP79Interface() {
 
       <h4>VERIFY DONATION</h4>
       <label for="donation_sum">Visible Amount (CHF):</label>
+      ${help('Only the visible part of the donation, not private data.')}
       <input type="number" id="donation_sum" placeholder="e.g. 50" />
 
       <label for="donation_type">Source Type:</label>
+      ${help('Where the donation originates from.')}
       <select id="donation_type">
         <option value="private_individual">Private Individual</option>
         <option value="nonprofit_organization">Nonprofit Organization</option>

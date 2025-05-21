@@ -10,9 +10,11 @@ function initOP7Interface() {
       <p class="info">You are authorized to override previous evaluations if your OP-level is higher and justified.</p>
 
       <label for="original_id">Manifest to override:</label>
+      ${help('Filename of the evaluation you want to replace.')}
       <input type="text" id="original_id" placeholder="e.g. op-eval-4321-src-0011.json" />
 
       <label for="new_src">New SRC level:</label>
+      ${help('Higher ethical level you assign in place of the previous one.')}
       <select id="new_src">
         <option value="SRC-1">SRC-1</option>
         <option value="SRC-2">SRC-2</option>
@@ -22,6 +24,7 @@ function initOP7Interface() {
       </select>
 
       <label for="justification">Reason (required):</label>
+      ${help('Explain why your higher OP-level justifies this override.')}
       <textarea id="justification" rows="3" required placeholder="Why do you override this evaluation?"></textarea>
 
       <button onclick="generateOverride()">Create Override</button>

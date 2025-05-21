@@ -21,6 +21,7 @@
 
     <div id="lang_selection" class="card">
       <label for="lang_select">Choose your language (ISO 639-1):</label>
+      <span class="help-icon" title="Select the two-letter code for your preferred language.">?</span>
       <select id="lang_select">
         <option value="">--</option>
       </select>
@@ -28,9 +29,11 @@
 
     <div class="card" id="signature_area">
       <label for="sig_input">Your signature ID:</label>
+      <span class="help-icon" title="Enter the ID created by your local signature generator.">?</span>
       <input type="text" id="sig_input" placeholder="e.g. SIG-XXXX-XXXX-XXXX" />
 
       <label for="sig_pass">Password:</label>
+      <span class="help-icon" title="Password paired with your signature ID.">?</span>
       <input type="password" id="sig_pass" placeholder="Your password" />
 
       <button onclick="beginSignatureVerification()">Verify Signature</button>
