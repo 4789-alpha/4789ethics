@@ -19,16 +19,22 @@ function loadInterfaceForOP(op_level) {
     "op7": "op-7-interface.js",
     "op75": "op-7.5-interface.js",
     "op79": "op-7.9-interface.js",
-    "op8": "op-8-analysis.js"
+    "op8": "op-8-analysis.js",
+    "op9": "op-9-interface.js",
+    "op10": "op-10-interface.js"
   };
 
   const script = document.createElement("script");
   const file = moduleMap[normalized];
+  const status = document.getElementById("status");
 
   if (!file) {
     target.innerHTML = "<p>OP-level not recognized or unsupported.</p>";
+    if (status) status.textContent = "Unknown OP level";
     return;
   }
+
+  if (status) status.textContent = "Loading module...";
 
   script.src = `modules/${file}`;
   script.onload = () => {
@@ -40,6 +46,7 @@ function loadInterfaceForOP(op_level) {
     } else if (op_level === "OP-8") {
       initOP8Analysis();
     }
+    if (status) status.textContent = "Module loaded";
   };
   document.body.appendChild(script);
 }

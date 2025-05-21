@@ -43,6 +43,9 @@
       <button onclick="beginSignatureVerification()">Verify Signature</button>
     </div>
 
+
+    <div id="status" class="card" style="display:none;"></div>
+
     <div id="op_interface">
       <p class="info">Your interface will load here once verified.</p>
     </div>
@@ -65,12 +68,16 @@
     });
 
     async function beginSignatureVerification() {
+      const status = document.getElementById("status");
+      status.style.display = "block";
+      status.textContent = "Verifying signature...";
+
       const sigId = document.getElementById("sig_input").value.trim();
       const pw = document.getElementById("sig_pass").value;
       const stored = JSON.parse(localStorage.getItem("ethicom_signature") || "{}");
 
       if (!sigId || !pw || !stored.hash || !stored.created || !stored.id) {
-        alert("Signature not found or incomplete.");
+        status.textContent = "Signature not found or incomplete.";
         return;
       }
 
@@ -78,10 +85,11 @@
       const hash = await sha256(raw);
 
       if (hash !== stored.hash || sigId !== stored.id) {
-        alert("Signature invalid or password incorrect.");
+        status.textContent = "Signature invalid or password incorrect.";
         return;
       }
 
+      status.textContent = "Signature valid: " + stored.op_level;
       renderBadge(stored.op_level, stored.op_level);
       loadInterfaceForOP(stored.op_level);
     }
