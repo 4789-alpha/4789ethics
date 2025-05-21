@@ -67,6 +67,10 @@
       </select>
     </div>
 
+    <div id="simple_mode_toggle" class="card">
+      <button onclick="toggleSimpleMode()" class="accent-button" data-ui="simple_toggle_label">Toggle Simple Mode</button>
+    </div>
+
     <div id="dev_toggle" class="card">
       <button onclick="toggleDevMode()" class="accent-button">Toggle Dev Mode</button>
     </div>
@@ -103,6 +107,9 @@
       loadUiTexts().then(texts => {
         uiText = texts[getLanguage()] || texts.en || {};
         applyTexts(uiText);
+        if (localStorage.getItem('simple_mode') === 'true') {
+          document.body.classList.add('simple-mode');
+        }
         showDisclaimers(uiText);
         initTranslationManager();
         renderAllBadges();
@@ -162,6 +169,12 @@
           <button onclick="loadInterfaceForOP(document.getElementById('tool_select').value)">Load</button>
         </div>`;
       }
+    }
+
+    function toggleSimpleMode() {
+      const enabled = document.body.classList.toggle('simple-mode');
+      localStorage.setItem('simple_mode', enabled ? 'true' : 'false');
+      alert(enabled ? (uiText.simple_mode_on || 'Simple mode is active.') : (uiText.simple_mode_off || 'Simple mode is off.'));
     }
   </script>
 </body>

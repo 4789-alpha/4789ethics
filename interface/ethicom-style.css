@@ -289,3 +289,20 @@ body.large-font button {
   padding: 1em;
 }
 
+/* Simple mode for lower OP levels */
+body.simple-mode {
+  font-size: 1.1em;
+}
+body.simple-mode .badge-gallery,
+body.simple-mode #theme_selection,
+body.simple-mode #dev_toggle {
+  display: none;
+}
+body.simple-mode input,
+body.simple-mode textarea,
+body.simple-mode select,
+body.simple-mode button {
+  font-size: 1em;
+  padding: 0.8em;
+}
+
