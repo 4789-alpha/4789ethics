@@ -31,6 +31,8 @@ Just structured responsibility.
 - `revision-overview.js` → list withdrawn or revised manifests
 - `permissions-viewer.js` → visualize OP permissions
 - `language-manager.js` → generate snippets for new translations
+├── signup.html
+├── signup.js
 
 ---
 
@@ -66,6 +68,8 @@ interface/
 ├── revision-overview.js
 ├── permissions-viewer.js
 ├── language-manager.js
+├── signup.html
+├── signup.js
 ├── modules/
 │   ├── op-0-interface.js
 │   ├── op-1-interface.js

@@ -27,6 +27,7 @@ function loadInterfaceForOP(op_level) {
     "revisionoverview": "revision-overview.js",
     "permissionsviewer": "permissions-viewer.js",
     "languagemanager": "language-manager.js"
+    "search": "source-search.js"
   };
 
   const script = document.createElement("script");
@@ -60,6 +61,7 @@ function loadInterfaceForOP(op_level) {
       initPermissionsViewer();
     } else if (op_level.toLowerCase() === "language-manager") {
       initLanguageManager();
+
     }
     if (status) status.textContent = "Module loaded";
   };

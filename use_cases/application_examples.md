@@ -16,3 +16,4 @@
 ## Governance
 - Participatory systems that require consequence tracing  
 - Open decision structures with ethical layers
+
