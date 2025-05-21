@@ -87,7 +87,15 @@ code as the key and provide translations for all fields found under the `"en"`
 entry. The interface will automatically recognize the new language.
 Word collections for additional languages can be gathered with
 `tools/language-corpus.js`. The script updates `i18n/language-corpus.json`
-based on plain text input.
+based on plain text input. To verify which interface languages are still
+missing translations, run:
+
+```bash
+node tools/check-translations.js
+```
+
+This prints a list of language codes and the fields that still require
+translation.
 
 ### Generating Interface README [⇧](#contents)
 
