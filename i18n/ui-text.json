@@ -230,14 +230,6 @@
     "preview_msg": "¿Curioso? Haz clic en \"Inicio de prueba\" para probar OP-0 sin iniciar sesión.",
     "preview_btn": "Inicio de prueba (OP-0)",
     "label_choose_language": "Elige tu idioma (ISO 639-1):",
-    "disclaimer_title": "Avisos",
-    "disclaimer_items": [
-      "Esta estructura se proporciona sin garantía.",
-      "El uso es bajo su propio riesgo.",
-      "4789 es un estándar de responsabilidad, no una persona ni un sistema de creencias.",
-      "Úselo solo con reflexión y consecuencia; sin manipulación ni automatización descontrolada.",
-      "Si surge una contradicción, aplique autorreflexión (structure_9874).",
-      "Se permite el humor siempre que la responsabilidad y la claridad se mantengan."
     "signup_title": "Registro",
     "signup_email": "Correo electrónico:",
     "signup_password": "Contraseña:",
