@@ -24,9 +24,13 @@ Just structured responsibility.
 - `ethicom-style.css` → dark mode, badge colors, minimal energy
 - `signature-generator.js` → local signature creation (e.g. `SIG-XXXX-XXXX-XXXX`)
 - `signature-verifier.js` → hash & password check before activation
-- `interface-loader.js` → loads correct module for OP-0 to OP-8
+- `interface-loader.js` → loads correct module for OP-0 to OP-10 and extra tools
 - `language-selector.js` → user selects language (ISO 639-1)
 - `source-search.js` → search and verify sources
+- `manifest-viewer.js` → display any stored evaluation manifest
+- `revision-overview.js` → list withdrawn or revised manifests
+- `permissions-viewer.js` → visualize OP permissions
+- `language-manager.js` → generate snippets for new translations
 ├── signup.html
 ├── signup.js
 
@@ -60,6 +64,10 @@ interface/
 ├── interface-loader.js
 ├── language-selector.js
 ├── source-search.js
+├── manifest-viewer.js
+├── revision-overview.js
+├── permissions-viewer.js
+├── language-manager.js
 ├── signup.html
 ├── signup.js
 ├── modules/
