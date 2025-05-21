@@ -34,7 +34,9 @@ function generateEthicomSignature(op_level) {
     "OP-6": 14,
     "OP-7": 16,
     "OP-7.9": 18,
-    "OP-8": 0
+    "OP-8": 0,
+    "OP-9": 0,
+    "OP-10": 0
   };
 
   const required = policy[op_level] || 6;

@@ -4,7 +4,7 @@ This repository contains the complete structural ethics framework developed unde
 It is not tied to a person, but to a standard: responsibility over convenience.
 
 **What this is:**
-- A full operator model (OP 0–9)
+- A full operator model (OP 0–10)
 - A self-reflection system (Signature 9874)
 - An ethics-first framework for digital systems, education, governance, and AI use
 

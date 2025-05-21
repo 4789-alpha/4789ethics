@@ -40,7 +40,9 @@ Just structured responsibility.
 | OP-5+      | may withdraw previous evaluations   |
 | OP-6+      | can verify consensus                |
 | OP-7.9     | may verify donations / nominate     |
-| OP-8       | structure observer – no user input  |
+| OP-8       | candidate for Yokozuna (OP-9)       |
+| OP-9       | Yokozuna-Schwingerkönig mode        |
+| OP-10      | first non-human stage               |
 
 ---
 
@@ -58,4 +60,6 @@ interface/
 │   ├── op-0-interface.js
 │   ├── op-1-interface.js
 │   ├── ...
-│   └── op-8-analysis.js
+│   ├── op-8-analysis.js
+│   ├── op-9-interface.js
+│   └── op-10-interface.js

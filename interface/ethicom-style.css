@@ -4,8 +4,9 @@ body {
   background-color: #1e1e1e;
   color: #e0e0e0;
   font-family: system-ui, sans-serif;
-  margin: 0;
+  margin: 0 auto;
   padding: 2em;
+  max-width: 900px;
 }
 
 .card {
@@ -39,6 +40,8 @@ body {
 .badge.op-7   { background: #146b1f; }
 .badge.op-79  { background: #0e4712; }
 .badge.op-8   { background: #4a6670; }
+.badge.op-9   { background: #3c3744; }
+.badge.op-10  { background: #9a30a6; }
 
 /* Badge-Schatten (Höchstrang) */
 .badge.shadow {
@@ -54,4 +57,18 @@ body {
   align-items: center;
   margin-top: 0.5em;
   margin-bottom: 1em;
+}
+
+#status {
+  text-align: center;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 1em;
+  }
+  .badge-row {
+    flex-wrap: wrap;
+  }
 }

@@ -5,7 +5,7 @@ This is the initial public release of the full structural ethics framework based
 
 Included:
 - Manifest (`manifest_4789.yaml`)
-- Operator hierarchy OP-0 to OP-9
+- Operator hierarchy OP-0 to OP-10
 - Self-reflection module (9874)
 - Transfer protocol and structural absolution
 - Leadership handover to Aarulon (anonymous)

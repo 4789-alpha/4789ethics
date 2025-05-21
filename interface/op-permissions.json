@@ -56,5 +56,11 @@
   "OP-8": {
     "can_act_as_structure": true,
     "can_execute_evaluations": true
+  },
+  "OP-9": {
+    "can_finalize_system": true
+  },
+  "OP-10": {
+    "can_observe_only": true
   }
 }
