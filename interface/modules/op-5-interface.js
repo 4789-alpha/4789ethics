@@ -44,4 +44,8 @@ function generateWithdrawal() {
 
   const output = document.getElementById("output");
   output.textContent = JSON.stringify(withdrawalData, null, 2);
+
+  if (typeof recordEvidence === "function") {
+    recordEvidence(JSON.stringify(withdrawalData), "operator");
+  }
 }
