@@ -11,8 +11,10 @@
   <script src="op0-testmode.js"></script>
   <script src="accessibility.js"></script>
   <script src="color-auth.js"></script>
+  <script src="logo-background.js"></script>
 </head>
 <body>
+  <div id="op_background"></div>
   <header>
     <h1 data-ui="nav_settings">Settings</h1>
   </header>
@@ -40,7 +42,11 @@
       <select id="theme_select">
         <option value="dark">Dark</option>
         <option value="tanna">Tanna</option>
+        <option value="ocean">Ocean</option>
+        <option value="desert">Desert</option>
+        <option value="custom">Custom</option>
       </select>
+      <button id="custom_theme_btn" style="display:none;margin-top:0.5em;" class="accent-button">Create Custom Scheme</button>
     </div>
     <div id="dev_toggle" class="card">
       <button onclick="toggleDevMode()" class="accent-button">Toggle Dev Mode</button>
