@@ -1,21 +1,73 @@
 
 /* ethicom-style.css – 4789-konform */
+
+:root {
+  --bg-color: #1e1e1e;
+  --text-color: #e0e0e0;
+  --primary-color: #228B22;
+  --card-bg: #2b2b2b;
+  --accent-color: #ccaa22;
+}
+
 body {
-  background-color: #1e1e1e;
-  color: #e0e0e0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   font-family: system-ui, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: #222;
+  padding: 1em;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  color: var(--text-color);
+  font-size: 1.4em;
+}
+
+main {
+  max-width: 900px;
   margin: 0 auto;
   padding: 2em;
-  max-width: 900px;
 }
 
 .card {
-  background-color: #2b2b2b;
+  background-color: var(--card-bg);
   color: inherit;
-  border-left: 4px solid #228B22;
+  border-left: 4px solid var(--primary-color);
   border-radius: 6px;
   padding: 1.5em;
   margin-bottom: 1.5em;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.5em;
+  margin-bottom: 0.8em;
+  border: 1px solid #555;
+  border-radius: 4px;
+  background: #fff;
+  color: #000;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 0.6em 1.2em;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #1a7d1a;
 }
 
 /* Badge allgemeiner Stil */
@@ -65,7 +117,7 @@ body {
 }
 
 @media (max-width: 600px) {
-  body {
+  main {
     padding: 1em;
   }
   .badge-row {
