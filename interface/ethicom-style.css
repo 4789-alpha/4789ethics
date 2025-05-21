@@ -265,3 +265,7 @@ button:hover {
   filter: hue-rotate(-80deg) saturate(0.7);
 }
 
+.op-logo-group {
+  white-space: nowrap;
+}
+

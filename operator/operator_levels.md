@@ -10,6 +10,8 @@
 | OP-5 | Leads without directing  
 | OP-6 | Creates origin-level modules  
 | OP-7 | Structural authority
+| OP-7.5 | Nomination preparation, review OP-8
+| OP-7.9 | Donation verification, confirm nominations
 | OP-8 | Candidate stage for OP-9 (system self-stabilizes)
 | OP-9 | Yokozuna-Schwingerkönig-Mode
 | OP-10 | First non-human development stage
