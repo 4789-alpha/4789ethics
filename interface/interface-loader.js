@@ -26,7 +26,8 @@ function loadInterfaceForOP(op_level) {
     "manifestviewer": "manifest-viewer.js",
     "revisionoverview": "revision-overview.js",
     "permissionsviewer": "permissions-viewer.js",
-    "languagemanager": "language-manager.js"
+    "languagemanager": "language-manager.js",
+    "semanticmanager": "semantic-manager.js"
   };
 
   const script = document.createElement("script");
@@ -60,6 +61,8 @@ function loadInterfaceForOP(op_level) {
       initPermissionsViewer();
     } else if (op_level.toLowerCase() === "language-manager") {
       initLanguageManager();
+    } else if (op_level.toLowerCase() === "semantic-manager") {
+      initSemanticManager();
 
     }
     if (typeof window.setHelpSection === "function") {
