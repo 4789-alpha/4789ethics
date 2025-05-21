@@ -18,6 +18,7 @@ function initOP3Interface() {
       <textarea id="comment" rows="3" required placeholder="Explain why this source matches the selected SRC level..."></textarea>
 
       <button onclick="generateVisualManifest()">Submit Evaluation</button>
+      <button class="secondary-button" type="button" onclick="initOP3Interface()">Reset</button>
     </div>
   `;
   applyInfoTexts(container);

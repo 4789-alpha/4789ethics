@@ -57,7 +57,10 @@
     "status_sig_missing": "Signature not found or incomplete.",
     "status_sig_invalid": "Signature invalid or password incorrect.",
     "status_sig_valid": "Signature valid: {level}",
-    "status_loading_op0": "Loading OP-0..."
+    "status_loading_op0": "Loading OP-0...",
+    "disclaimer_title": "Disclaimers",
+    "disclaimer_items": ["This structure is provided without warranty.", "Use is at your own risk.", "4789 is a standard for responsibility, not a person or belief system.", "Use only with reflection and consequence; no manipulation or uncontrolled automation.", "If a contradiction arises, apply self-reflection (structure_9874).", "Humor is allowed if responsibility and clarity remain."],
+    "btn_disclaimer_accept": "I understand"
   },
   "de": {
     "title": "Ethicom: Bewertung durch Menschen",
@@ -117,7 +120,10 @@
     "status_sig_missing": "Signatur nicht gefunden oder unvollständig.",
     "status_sig_invalid": "Signatur ungültig oder Passwort falsch.",
     "status_sig_valid": "Signatur gültig: {level}",
-    "status_loading_op0": "OP-0 wird geladen..."
+    "status_loading_op0": "OP-0 wird geladen...",
+    "disclaimer_title": "Hinweise",
+    "disclaimer_items": ["Diese Struktur wird ohne Gewährleistung bereitgestellt.", "Die Nutzung erfolgt auf eigene Verantwortung.", "4789 ist ein Standard für Verantwortung, keine Person oder Ideologie.", "Nutzung nur reflektiert und mit Konsequenz; keine Manipulation oder unkontrollierte Automatisierung.", "Bei Widerspruch gilt Selbstreflexion nach structure_9874.md.", "Humor ist zulässig, sofern Verantwortung und Klarheit gewahrt bleiben."],
+    "btn_disclaimer_accept": "Verstanden"
   },
   "fr": {
     "title": "Ethicom : Évaluation humaine",

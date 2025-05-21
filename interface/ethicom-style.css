@@ -144,6 +144,16 @@ button:hover {
   background-color: #1a7d1a;
 }
 
+/* Secondary button style (e.g., Reset) */
+.secondary-button {
+  background-color: #555;
+  color: #fff;
+}
+
+.secondary-button:hover {
+  background-color: #444;
+}
+
 /* Badge allgemeiner Stil */
 .badge {
   font-weight: 600;

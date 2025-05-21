@@ -105,5 +105,8 @@ loaded dynamically so the system can scale from OP-0 through OP-10.
 ## Dev Mode
 
 Activate dev mode via the toggle button on `ethicom.html` or add `?dev` to the URL. When enabled, help and info sections reveal additional details for development and debugging. The state is stored in your browser's localStorage under `ethicom_dev`.
-loaded dynamically so the system can scale from OP-0 through OP-12.
+
+## Designprinzipien
+
+Siehe [shneiderman-rules.md](shneiderman-rules.md) für die acht Gestaltungsrichtlinien, die im Interface berücksichtigt werden.
 
