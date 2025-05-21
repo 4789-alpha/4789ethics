@@ -60,7 +60,7 @@ function initLanguageDropdown(selectId = "lang_select", textPath = getUiTextPath
           const opt = document.createElement("option");
           opt.value = code;
           const obj = texts[code] || {};
-          const incomplete = keys.some(k => !Object.prototype.hasOwnProperty.call(obj, k) || isEmpty(obj[k]));
+          const incomplete = keys.some(k => !Object.prototype.hasOwnProperty.call(obj, k) || isEmpty(obj[k]) || JSON.stringify(obj[k]) === JSON.stringify(base[k]));
           opt.textContent = incomplete ? `${code}*` : code;
           if (incomplete) opt.title = "Translation incomplete";
           select.appendChild(opt);
