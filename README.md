@@ -27,6 +27,7 @@ Humor ist willkommen, wenn er Verantwortung und Klarheit unterstützt.
 - [Ethics Structure 4789](#ethics-structure-4789)
 - [Repository Structure](#repository-structure)
 - [OP-Permissions](#op-permissions)
+- [SRC vs. OO Levels](#src-vs-oo-levels)
 - [Evaluated Sources (as examples)](#evaluated-sources-as-examples)
 - [File Integrity](#file-integrity)
 - [Adding Languages](#adding-languages)
@@ -61,6 +62,9 @@ Humor ist willkommen, wenn er Verantwortung und Klarheit unterstützt.
 ### OP-Permissions [⇧](#contents)
 Operator actions by ethical level are defined in:
 → [`permissions/op-permissions-expanded.json`](permissions/op-permissions-expanded.json)
+
+### SRC vs. OO Levels [⇧](#contents)
+Comparison table: [`references/src_vs_oo.md`](references/src_vs_oo.md)
 
 ### Evaluated Sources (as examples) [⇧](#contents)
 - [src-0001: Fairphone](sources/src-0001.json) → [`SRC-4`](manifests/op-eval-4789-src-0001.json)
