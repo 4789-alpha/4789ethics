@@ -39,12 +39,16 @@ header {
   background: #222;
   padding: 1em;
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 nav {
   background: #333;
   text-align: center;
   padding: 0.5em 0;
+  position: relative;
+  z-index: 1;
 }
 
 nav a {
@@ -68,6 +72,8 @@ main {
   max-width: 900px;
   margin: 0 auto;
   padding: 2em;
+  position: relative;
+  z-index: 1;
 }
 
 .card {
@@ -202,16 +208,13 @@ button:hover {
 #op_background {
   position: fixed;
   inset: 0;
-  z-index: -1;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  justify-items: center;
-  align-items: center;
+  z-index: 0;
   opacity: 0.08;
   pointer-events: none;
 }
 
 #op_background img {
-  max-width: 100px;
+  position: absolute;
+  max-width: none;
 }
 
