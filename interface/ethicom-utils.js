@@ -107,7 +107,26 @@ function opLevelToNumber(level) {
   return isNaN(n) ? 0 : n;
 }
 
+function showLoadingBadge(level) {
+  const container = document.getElementById("loading_badge");
+  if (!container) return;
+  const span = container.querySelector("span");
+  const lvl = level || "OP-0";
+  if (span) {
+    span.textContent = lvl;
+    span.className = `badge op-${lvl.replace("OP-", "").replace(/\./g, "")} loading-badge`;
+  }
+  container.style.display = "block";
+}
+
+function hideLoadingBadge() {
+  const container = document.getElementById("loading_badge");
+  if (container) container.style.display = "none";
+}
+
 window.getStoredOpLevel = getStoredOpLevel;
 window.opLevelToNumber = opLevelToNumber;
 window.getReadmePath = getReadmePath;
+window.showLoadingBadge = showLoadingBadge;
+window.hideLoadingBadge = hideLoadingBadge;
 

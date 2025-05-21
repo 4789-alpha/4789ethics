@@ -38,10 +38,12 @@ function loadInterfaceForOP(op_level) {
   if (!file) {
     target.innerHTML = "<p>OP-level not recognized or unsupported.</p>";
     if (status) status.textContent = "Unknown OP level";
+    if (window.hideLoadingBadge) window.hideLoadingBadge();
     return;
   }
 
   if (status) status.textContent = "Loading module...";
+  if (window.showLoadingBadge) window.showLoadingBadge(op_level);
 
   script.src = `modules/${file}`;
   script.onload = () => {
@@ -78,6 +80,7 @@ function loadInterfaceForOP(op_level) {
       }
     }
     if (status) status.textContent = "Module loaded";
+    if (window.hideLoadingBadge) window.hideLoadingBadge();
   };
   document.body.appendChild(script);
 }

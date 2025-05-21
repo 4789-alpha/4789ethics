@@ -238,6 +238,24 @@ button:hover {
   font-weight: bold;
 }
 
+#loading_badge {
+  display: none;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+@keyframes opBadgeSpin {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(0.6); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+.loading-badge {
+  display: inline-block;
+  transform-origin: center;
+  animation: opBadgeSpin 1s linear infinite;
+}
+
 @media (max-width: 600px) {
   main {
     padding: 1em;
