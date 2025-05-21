@@ -48,6 +48,10 @@
   "OP-7": {
     "can_override_op6": true
   },
+  "OP-7.5": {
+    "can_nominate": true,
+    "can_vote": true
+  },
   "OP-7.9": {
     "can_accept_donations": true,
     "can_vote_on_op79": true,
