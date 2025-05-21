@@ -10,6 +10,7 @@ function renderBadge(currentRank, maxRank) {
   mainSpan.textContent = currentRank;
 
   const mainLink = document.createElement("a");
+  mainLink.href = `README.html#${currentRank.toLowerCase().replace(/\./g, '-')}`;
   mainLink.href = `README.md#${currentRank.toLowerCase().replace(/\./g, '-')}`;
   mainLink.appendChild(mainSpan);
 
@@ -51,6 +52,7 @@ function renderAllBadges() {
     span.className = `badge op-${lvl.replace("OP-", "").replace(/\./g, "")}`;
     span.textContent = lvl;
     const link = document.createElement("a");
+    link.href = `README.html#${lvl.toLowerCase().replace(/\./g, '-')}`;
     link.href = `README.md#${lvl.toLowerCase().replace(/\./g, '-')}`;
     link.appendChild(span);
     gallery.appendChild(link);
