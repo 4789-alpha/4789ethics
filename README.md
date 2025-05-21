@@ -20,6 +20,7 @@ For a brief tour of the main files, see [GET_STARTED.md](GET_STARTED.md).
 
 **License:** Open-Ethics (see `LICENSE.txt`)
 No manipulation. No simulation. No flattening of responsibility.
+Humor ist willkommen, wenn er Verantwortung und Klarheit unterstützt.
 
 ## Contents
 
