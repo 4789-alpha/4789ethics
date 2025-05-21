@@ -5,3 +5,4 @@
 - 4789 ist ein Standard für Verantwortung, keine Person und kein Glaubenssystem.
 - Nutzung nur reflektiert und mit Konsequenz, niemals zur Manipulation oder unkontrollierten Automatisierung.
 - Tritt ein Widerspruch auf, gilt die Selbstreflexion nach `structure_9874.md`.
+- Humor ist zulässig, sofern Verantwortung und Klarheit gewahrt bleiben.
