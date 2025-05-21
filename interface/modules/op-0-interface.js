@@ -24,6 +24,7 @@ function initOP0Interface() {
       <textarea id="comment" rows="3" placeholder="(optional) Your ethical note..."></textarea>
 
       <button onclick="generateAnonymousManifest()">Evaluate</button>
+      <button class="secondary-button" type="button" onclick="initOP0Interface()">Reset</button>
     </div>
   `;
   applyInfoTexts(container);
