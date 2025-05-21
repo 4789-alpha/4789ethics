@@ -19,6 +19,19 @@ Use it only if you reflect, respond, and act with consequence.
 **License:** Open-Ethics (see `LICENSE.txt`)  
 No manipulation. No simulation. No flattening of responsibility.
 
+## Repository Structure
+
+| Directory | Purpose |
+|-----------|---------|
+| `app/` | Application settings, language rules, and user state |
+| `ethics_modules/` | Core YAML and markdown modules for the ethics framework |
+| `interface/` | Front-end files for the evaluation interface |
+| `manifests/` | Structural manifests and integrity data |
+| `permissions/` | Operator permission definitions |
+| `sources/` | Evaluated sources and candidate lists |
+| `tools/` | Utility scripts (e.g., trust-demotion engine) |
+| `use_cases/` | Example scenarios and dissemination ideas |
+
 ### OP-Permissions
 Operator actions by ethical level are defined in:
 → [`permissions/op-permissions-expanded.json`](permissions/op-permissions-expanded.json)
@@ -46,7 +59,7 @@ Translations for the evaluation interface are defined in `i18n/ui-text.json`. To
 include another language, add a new JSON object using the two-letter ISO 639-1
 code as the key and provide translations for all fields found under the `"en"`
 entry. The interface will automatically recognize the new language.
+
 ### Contributing
 
 To suggest improvements or translations, read `CONTRIBUTING.md`. All changes must follow the Open-Ethics License and be made with intention.
-
