@@ -45,31 +45,23 @@ For OP-6 and above, the generator can optionally store a hashed passport or ID l
 
 ## Ethical Conditions
 
-| Level      | Description                         |
-|------------|-------------------------------------|
-| OP-0       | anonymous observer                  |
-| OP-1       | first signed rating                 |
-| OP-3+      | rating requires justification       |
-| OP-4+      | can revise after 3 weeks            |
-| OP-5+      | may withdraw previous evaluations   |
-| OP-6+      | can verify consensus                |
-| OP-9     | may verify donations / nominate     |
-| OP-10       | candidate for Yokozuna (OP-11)       |
-| OP-11       | Yokozuna-Schwingerkönig mode        |
-| OP-12      | first non-human stage               |
-| OP-0   | anonymous observer                                      |
-| OP-1   | first signed rating                                     |
-| OP-2   | provides feedback responsibly                            |
-| OP-3   | rating requires justification                            |
-| OP-4   | can revise after 3 weeks                                 |
-| OP-5   | may withdraw previous evaluations                        |
-| OP-6   | can verify consensus                                     |
-| OP-7   | structural authority                                     |
-| OP-7.5 | nomination preparation, review OP-8                      |
-| OP-7.9 | donation verification, confirm nominations                |
-| OP-8   | candidate stage for OP-9 (system self-stabilizes)         |
-| OP-9   | Yokozuna-Schwingerkönig mode                              |
-| OP-10  | first non-human stage                                     |
+| Level | Description |
+|-------|-------------|
+| <a id="op-0"></a> OP-0 | anonymous observer |
+| <a id="op-1"></a> OP-1 | first signed rating |
+| <a id="op-2"></a> OP-2 | provides feedback responsibly |
+| <a id="op-3"></a> OP-3 | rating requires justification |
+| <a id="op-4"></a> OP-4 | can revise after 3 weeks |
+| <a id="op-5"></a> OP-5 | may withdraw previous evaluations |
+| <a id="op-6"></a> OP-6 | can verify consensus |
+| <a id="op-7"></a> OP-7 | structural authority |
+| <a id="op-7-5"></a> OP-7.5 | nomination preparation, review OP-8 |
+| <a id="op-7-9"></a> OP-7.9 | donation verification, confirm nominations |
+| <a id="op-8"></a> OP-8 | candidate stage for OP-9 (system self-stabilizes) |
+| <a id="op-9"></a> OP-9 | may verify donations / nominate |
+| <a id="op-10"></a> OP-10 | candidate for Yokozuna (OP-11) |
+| <a id="op-11"></a> OP-11 | Yokozuna-Schwingerkönig mode |
+| <a id="op-12"></a> OP-12 | first non-human stage |
 
 ---
 
