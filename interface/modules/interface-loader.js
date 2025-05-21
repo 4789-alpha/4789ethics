@@ -17,11 +17,11 @@ function loadInterfaceForOP(op_level) {
     "op5": "op-5-interface.js",
     "op6": "op-6-interface.js",
     "op7": "op-7-interface.js",
-    "op75": "op-7.5-interface.js",
-    "op79": "op-7.9-interface.js",
-    "op8": "op-8-analysis.js",
+    "op8": "op-8-interface.js",
     "op9": "op-9-interface.js",
-    "op10": "op-10-interface.js",
+    "op10": "op-10-analysis.js",
+    "op11": "op-11-interface.js",
+    "op12": "op-12-interface.js",
     "search": "source-search.js",
     "manifestviewer": "manifest-viewer.js",
     "revisionoverview": "revision-overview.js",
@@ -48,8 +48,8 @@ function loadInterfaceForOP(op_level) {
       .replace("+", "plus")}Interface`;
     if (typeof window[initFunc] === "function") {
       window[initFunc]();
-    } else if (op_level === "OP-8") {
-      initOP8Analysis();
+    } else if (op_level === "OP-10") {
+      initOP10Analysis();
     } else if (op_level.toLowerCase() === "search") {
       initSourceSearch();
     } else if (op_level.toLowerCase() === "manifest-viewer") {

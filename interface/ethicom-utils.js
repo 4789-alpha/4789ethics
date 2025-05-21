@@ -34,11 +34,11 @@ function renderAllBadges() {
     "OP-5",
     "OP-6",
     "OP-7",
-    "OP-7.5",
-    "OP-7.9",
     "OP-8",
     "OP-9",
-    "OP-10"
+    "OP-10",
+    "OP-11",
+    "OP-12"
   ];
 
   gallery.innerHTML = "";
@@ -84,7 +84,7 @@ function getStoredOpLevel() {
   }
 }
 
-// Convert OP-level string to numeric value (OP-7.5 → 7.5)
+// Convert OP-level string to numeric value (OP-8 → 8)
 function opLevelToNumber(level) {
   if (!level) return 0;
   const n = parseFloat(String(level).replace("OP-", ""));

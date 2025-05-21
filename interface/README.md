@@ -14,7 +14,7 @@ Just structured responsibility.
 - **Signatures are created locally and verified structurally**
 - **Languages are equal – no default, no bias**
 - **Responsibility must be visible, verifiable, and correctable**
-- **No one can act as OP-8 – OP-8 is structure itself**
+- **No one can act as OP-10 – OP-10 is structure itself**
 
 ---
 
@@ -24,7 +24,7 @@ Just structured responsibility.
 - `ethicom-style.css` → dark mode, badge colors, minimal energy
 - `signature-generator.js` → local signature creation (e.g. `SIG-XXXX-XXXX-XXXX`)
 - `signature-verifier.js` → hash & password check before activation
-- `interface-loader.js` → loads correct module for OP-0 to OP-10 and extra tools
+- `interface-loader.js` → loads correct module for OP-0 to OP-12 and extra tools
 - `language-selector.js` → user selects language (ISO 639-1)
 - `source-search.js` → search and verify sources
 - `manifest-viewer.js` → display any stored evaluation manifest
@@ -44,6 +44,16 @@ Just structured responsibility.
 
 | Level      | Description                         |
 |------------|-------------------------------------|
+| OP-0       | anonymous observer                  |
+| OP-1       | first signed rating                 |
+| OP-3+      | rating requires justification       |
+| OP-4+      | can revise after 3 weeks            |
+| OP-5+      | may withdraw previous evaluations   |
+| OP-6+      | can verify consensus                |
+| OP-9     | may verify donations / nominate     |
+| OP-10       | candidate for Yokozuna (OP-11)       |
+| OP-11       | Yokozuna-Schwingerkönig mode        |
+| OP-12      | first non-human stage               |
 | OP-0   | anonymous observer                                      |
 | OP-1   | first signed rating                                     |
 | OP-2   | provides feedback responsibly                            |
@@ -95,3 +105,5 @@ loaded dynamically so the system can scale from OP-0 through OP-10.
 ## Dev Mode
 
 Activate dev mode via the toggle button on `ethicom.html` or add `?dev` to the URL. When enabled, help and info sections reveal additional details for development and debugging. The state is stored in your browser's localStorage under `ethicom_dev`.
+loaded dynamically so the system can scale from OP-0 through OP-12.
+

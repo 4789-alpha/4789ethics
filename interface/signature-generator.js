@@ -26,17 +26,16 @@ function generateEthicomSignature(op_level) {
   const pw = document.getElementById("sig_pass").value;
 
   const policy = {
-    "OP-1": 4,
     "OP-2": 6,
     "OP-3": 8,
     "OP-4": 10,
     "OP-5": 12,
     "OP-6": 14,
     "OP-7": 16,
-    "OP-7.9": 18,
-    "OP-8": 0,
-    "OP-9": 0,
-    "OP-10": 0
+    "OP-9": 18,
+    "OP-10": 0,
+    "OP-11": 0,
+    "OP-12": 0
   };
 
   const required = policy[op_level] || 6;

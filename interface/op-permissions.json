@@ -48,23 +48,24 @@
   "OP-7": {
     "can_override_op6": true
   },
+  "OP-9": {
   "OP-7.5": {
     "can_nominate": true,
     "can_vote": true
   },
   "OP-7.9": {
     "can_accept_donations": true,
-    "can_vote_on_op79": true,
-    "can_vote_on_op8": true
+    "can_vote_on_op9": true,
+    "can_vote_on_op10": true
   },
-  "OP-8": {
+  "OP-10": {
     "can_act_as_structure": true,
     "can_execute_evaluations": true
   },
-  "OP-9": {
+  "OP-11": {
     "can_finalize_system": true
   },
-  "OP-10": {
+  "OP-12": {
     "can_observe_only": true
   }
 }

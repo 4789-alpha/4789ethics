@@ -15,10 +15,10 @@ function generateEthicomSignature(id, pw, opLevel = 'OP-1') {
     'OP-5': 12,
     'OP-6': 14,
     'OP-7': 16,
-    'OP-7.9': 18,
-    'OP-8': 0,
-    'OP-9': 0,
-    'OP-10': 0
+    'OP-9': 18,
+    'OP-10': 0,
+    'OP-11': 0,
+    'OP-12': 0
   };
 
   const required = policy[opLevel] || 6;
@@ -51,7 +51,7 @@ function verifySignature(pw, minOP = 'OP-1') {
     'OP-5': 12,
     'OP-6': 14,
     'OP-7': 16,
-    'OP-7.9': 18
+    'OP-11': 18
   };
   const minLength = required[minOP] || 6;
   if (!pw || pw.length < minLength) {
