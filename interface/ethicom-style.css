@@ -231,6 +231,7 @@ button:hover {
 #lang_select {
   font-size: 1.2em;
   padding: 0;
+  width: 5ch; /* dropdown only needs to show two-letter codes */
 }
 
 /* Background grid showing all OP logos */
