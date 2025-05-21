@@ -10,6 +10,7 @@ function initOP8Analysis() {
       <p class="info">This is a system-driven structural view of sources. No human input is allowed at this level.</p>
 
       <label for="inspect_id">Source ID to analyze:</label>
+      ${help('Provide the source identifier to see its structural summary.')}
       <input type="text" id="inspect_id" placeholder="e.g. src-0010" />
 
       <button onclick="loadStructuralView()">Run Analysis</button>

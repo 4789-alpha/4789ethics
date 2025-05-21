@@ -10,9 +10,11 @@ function initOP3Interface() {
       <p class="info">You are submitting a signed evaluation with structured reasoning and visual level selection.</p>
 
       <label>Select SRC level:</label>
+      ${help('Use the buttons below to choose the ethical depth of this source.')}
       <div id="src_selector" class="src-selector"></div>
 
       <label for="comment">Ethical justification (required):</label>
+      ${help('Explain briefly why the chosen SRC level fits.')}
       <textarea id="comment" rows="3" required placeholder="Explain why this source matches the selected SRC level..."></textarea>
 
       <button onclick="generateVisualManifest()">Submit Evaluation</button>

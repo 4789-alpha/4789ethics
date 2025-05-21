@@ -11,9 +11,11 @@ function initOP75Interface() {
 
       <h4>Propose Nomination</h4>
       <label for="propose_id">Operator Signature:</label>
+      ${help('Signature ID of the operator you want to nominate.')}
       <input type="text" id="propose_id" placeholder="e.g. sig-4321" />
 
       <label for="propose_target">Proposed Target Rank:</label>
+      ${help('OP-level you believe the operator has earned.')}
       <select id="propose_target">
         <option value="OP-2">OP-2</option>
         <option value="OP-3">OP-3</option>
@@ -24,6 +26,7 @@ function initOP75Interface() {
       </select>
 
       <label for="propose_reason">Why does this operator qualify?</label>
+      ${help('State your structural reasoning for the nomination.')}
       <textarea id="propose_reason" rows="3" required placeholder="Document your rationale structurally..."></textarea>
 
       <button onclick="prepareNomination()">Create Nomination Proposal</button>
