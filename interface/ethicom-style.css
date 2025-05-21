@@ -214,7 +214,7 @@ button:hover {
 #op_background {
   position: fixed;
   inset: 0;
-  z-index: 0;
+  z-index:
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   justify-items: center;
@@ -224,12 +224,15 @@ button:hover {
 }
 
 #op_background img {
+
   max-width: 100px;
   animation: logoSpin 20s linear infinite;
 }
-
+  
 @keyframes logoSpin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+  position: absolute;
+  max-width: none;
 }
 
