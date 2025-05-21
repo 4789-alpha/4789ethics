@@ -11,6 +11,7 @@ function renderBadge(currentRank, maxRank) {
 
   const mainLink = document.createElement("a");
   mainLink.href = `README.html#${currentRank.toLowerCase().replace(/\./g, '-')}`;
+  mainLink.href = `README.md#${currentRank.toLowerCase().replace(/\./g, '-')}`;
   mainLink.appendChild(mainSpan);
 
   badgeDisplay.innerHTML = "";
@@ -52,6 +53,7 @@ function renderAllBadges() {
     span.textContent = lvl;
     const link = document.createElement("a");
     link.href = `README.html#${lvl.toLowerCase().replace(/\./g, '-')}`;
+    link.href = `README.md#${lvl.toLowerCase().replace(/\./g, '-')}`;
     link.appendChild(span);
     gallery.appendChild(link);
   });
