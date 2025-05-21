@@ -127,10 +127,12 @@ ethical intent.
 
 ### OP Function Bundles [⇧](#contents)
 
-`tools/op-functions.js` exposes small helper functions that unlock
-only when the necessary operator level and ethical confirmation are present.
-Each function is associated with a minimum OP level and the
+`tools/op-functions.js` exposes small helper functions that only
+run when the necessary operator level and ethical confirmation are
+present. Each function is associated with a minimum OP level and the
 module checks permission via `api-access.js` before returning it.
+Available helpers include `info`, `analyze`, `optimize` and `log` – the
+last one prints the recent Git commit history.
 
 ### Currency Synchronization [⇧](#contents)
 
