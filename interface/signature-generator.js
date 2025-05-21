@@ -82,6 +82,7 @@ function generateEthicomSignature(op_level) {
 
     localStorage.setItem("ethicom_signature", JSON.stringify(sigObject));
     document.getElementById("sig_output").textContent = JSON.stringify(sigObject, null, 2);
+    localStorage.removeItem('chat_welcomed');
     alert("Signature created and stored locally.");
   });
 }

@@ -87,7 +87,15 @@ code as the key and provide translations for all fields found under the `"en"`
 entry. The interface will automatically recognize the new language.
 Word collections for additional languages can be gathered with
 `tools/language-corpus.js`. The script updates `i18n/language-corpus.json`
-based on plain text input.
+based on plain text input. To verify which interface languages are still
+missing translations, run:
+
+```bash
+node tools/check-translations.js
+```
+
+This prints a list of language codes and the fields that still require
+translation.
 
 ### Generating Interface README [⇧](#contents)
 
@@ -119,10 +127,12 @@ ethical intent.
 
 ### OP Function Bundles [⇧](#contents)
 
-`tools/op-functions.js` exposes small helper functions that unlock
-only when the necessary operator level and ethical confirmation are present.
-Each function is associated with a minimum OP level and the
+`tools/op-functions.js` exposes small helper functions that only
+run when the necessary operator level and ethical confirmation are
+present. Each function is associated with a minimum OP level and the
 module checks permission via `api-access.js` before returning it.
+Available helpers include `info`, `analyze`, `optimize` and `log` – the
+last one prints the recent Git commit history.
 
 ### Currency Synchronization [⇧](#contents)
 

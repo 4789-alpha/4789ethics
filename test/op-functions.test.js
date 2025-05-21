@@ -27,3 +27,14 @@ test('grants function when level meets requirement', () => {
   assert.strictEqual(fn(), 'Optimization done.');
   fs.rmSync(dir, { recursive: true, force: true });
 });
+
+test('log function returns recent commits', () => {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'opfunc-'));
+  const file = path.join(dir, 'user_state.yaml');
+  fs.writeFileSync(file, createState('OP-2', true));
+  const fn = getOpFunction('log', file);
+  assert.strictEqual(typeof fn, 'function');
+  const out = fn();
+  assert.ok(out.includes('\n'));
+  fs.rmSync(dir, { recursive: true, force: true });
+});

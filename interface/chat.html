@@ -1,21 +1,17 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Erstkontakt</title>
+  <meta charset="utf-8" />
+  <title>OP Chat</title>
   <link rel="stylesheet" href="ethicom-style.css" />
-  <script src="language-selector.js"></script>
-  <script src="signature-strength.js"></script>
-  <script src="ratings.js"></script>
   <script src="interface-loader.js"></script>
+  <script src="signature-verifier.js"></script>
+  <script src="language-selector.js"></script>
   <script src="color-auth.js"></script>
-  <style>
-    #op_interface { margin-top: 1em; }
-  </style>
 </head>
 <body>
   <header>
-    <h1>Willkommen</h1>
+    <h1>OP Chat</h1>
   </header>
   <section class="hero">
     <p class="tagline">Ethik-Kompass für technologische Projekte</p>
@@ -27,34 +23,22 @@
     <a href="ratings.html" data-ui="nav_ratings">Bewertungen</a>
     <a href="signup.html" data-ui="nav_signup">Signup</a>
     <a href="tools.html" data-ui="nav_tools">Tools</a>
-    <a href="settings.html" data-ui="nav_settings">Settings</a>
+    <a href="chat.html">Chat</a>
     <a href="../wings/index.html">Wings</a>
     <a href="../README.md" target="_blank">README</a>
   </nav>
-  <main class="card">
+  <main>
     <div id="lang_selection" class="card" style="margin-bottom:1em;">
       <label for="lang_select" data-ui="choose_language_label">Language:</label>
       <select id="lang_select"></select>
     </div>
-    <section class="card">
-      <h2>Erste Einblicke</h2>
-      <p>Hier siehst du die bisherigen Bewertungen und kannst dir einen Eindruck verschaffen.</p>
-    </section>
-    <section id="rating_summary" class="card"></section>
-    <section id="rating_library" class="card"></section>
-    <button id="op0_btn" class="accent-button" onclick="showOP0()">Erste OP‑0 Eindrücke</button>
-    <div id="op_interface" class="card" style="display:none;"></div>
+    <div id="op_interface" class="card"></div>
   </main>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       initLanguageDropdown('lang_select');
-      initRatings();
+      loadInterfaceForOP('chat');
     });
-    function showOP0() {
-      const container = document.getElementById('op_interface');
-      container.style.display = 'block';
-      loadInterfaceForOP('OP-0');
-    }
   </script>
 </body>
 </html>

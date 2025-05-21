@@ -32,7 +32,8 @@ For OP-6 and above, the generator can optionally store a hashed passport or ID l
 - `revision-overview.js` → list withdrawn or revised manifests
 - `permissions-viewer.js` → visualize OP permissions
 - `language-manager.js` → generate snippets for new translations
-- `semantic-manager.js` → manage emotion word lists for sentiment (OP-5+)
+- `semantic-manager.js` → manage emotion word lists for sentiment (OP-5+) 
+- `chat-interface.js` → local chat for operators with greeting dummy
 - `color-auth.js` → authentication via Grundfarbe (fragt höchstens alle 24h)
 - `signup.html` → signup form
 - `signup.js` → handles signup logic
@@ -87,6 +88,7 @@ interface/
 ├── revision-overview.js
 ├── permissions-viewer.js
 ├── language-manager.js
+├── chat-interface.js
 ├── signup.html
 ├── signup.js
 ├── ratings.html
