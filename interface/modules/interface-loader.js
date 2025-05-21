@@ -21,7 +21,12 @@ function loadInterfaceForOP(op_level) {
     "op79": "op-7.9-interface.js",
     "op8": "op-8-analysis.js",
     "op9": "op-9-interface.js",
-    "op10": "op-10-interface.js"
+    "op10": "op-10-interface.js",
+    "search": "source-search.js",
+    "manifestviewer": "manifest-viewer.js",
+    "revisionoverview": "revision-overview.js",
+    "permissionsviewer": "permissions-viewer.js",
+    "languagemanager": "language-manager.js"
   };
 
   const script = document.createElement("script");
@@ -45,6 +50,16 @@ function loadInterfaceForOP(op_level) {
       window[initFunc]();
     } else if (op_level === "OP-8") {
       initOP8Analysis();
+    } else if (op_level.toLowerCase() === "search") {
+      initSourceSearch();
+    } else if (op_level.toLowerCase() === "manifest-viewer") {
+      initManifestViewer();
+    } else if (op_level.toLowerCase() === "revision-overview") {
+      initRevisionOverview();
+    } else if (op_level.toLowerCase() === "permissions-viewer") {
+      initPermissionsViewer();
+    } else if (op_level.toLowerCase() === "language-manager") {
+      initLanguageManager();
     }
     if (status) status.textContent = "Module loaded";
   };
