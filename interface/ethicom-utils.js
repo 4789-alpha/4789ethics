@@ -20,6 +20,36 @@ function renderBadge(currentRank, maxRank) {
   }
 }
 
+// Display all available badges in a gallery
+function renderAllBadges() {
+  const gallery = document.getElementById("badge_gallery");
+  if (!gallery) return;
+
+  const levels = [
+    "OP-0",
+    "OP-1",
+    "OP-2",
+    "OP-3",
+    "OP-4",
+    "OP-5",
+    "OP-6",
+    "OP-7",
+    "OP-7.5",
+    "OP-7.9",
+    "OP-8",
+    "OP-9",
+    "OP-10"
+  ];
+
+  gallery.innerHTML = "";
+  levels.forEach(lvl => {
+    const span = document.createElement("span");
+    span.className = `badge op-${lvl.replace("OP-", "").replace(/\./g, "")}`;
+    span.textContent = lvl;
+    gallery.appendChild(span);
+  });
+}
+
 // Calculate a SHA-256 hash in both browser and Node.js environments
 async function sha256(message) {
   if (typeof window !== "undefined" && window.crypto && window.crypto.subtle) {
