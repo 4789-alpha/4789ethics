@@ -26,7 +26,9 @@ async function initRatings() {
 
     function makeOpLogo(level) {
       const base = parseInt(String(level).replace('OP-', '').split('.')[0], 10);
-      const count = base >= 8 ? base - 6 : 1;
+      const count = typeof getSignatureStrength === 'function'
+        ? getSignatureStrength(level)
+        : (base >= 8 ? base - 6 : 1);
       const hue = base >= 8 ? (base - 7) * 30 : 0;
       const srcNum = base >= 8 ? 7 : base;
       let html = '<span class="op-logo-group">';
