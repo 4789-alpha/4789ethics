@@ -16,6 +16,7 @@ function initLogoBackground() {
   const levels = [0, 1, 2, 3, 4, 5, 6, 7];
   const maxLvl = Math.max(...levels);
   const minScale = 0.3;
+  const FADE_MS = 500;
   const images = levels.map(lvl => {
     const img = new Image();
     img.src = `../op-logo/tanna_op${lvl}.png`;
@@ -53,6 +54,7 @@ function initLogoBackground() {
       scale: 1,
       scaleDir: 0,
       fadeOut: false,
+      fadeStart: 0,
     });
   }
 
@@ -114,6 +116,7 @@ function initLogoBackground() {
             s.rotFrames = 180;
             s.scaleDir = -1;
             s.fadeOut = true;
+            s.fadeStart = performance.now();
           } else if (o.lvl < s.lvl) {
             const base = 0.2 + Math.random() * 0.3;
             const factor = 1 - o.lvl / (maxLvl + 1);
@@ -121,6 +124,7 @@ function initLogoBackground() {
             o.rotFrames = 180;
             o.scaleDir = -1;
             o.fadeOut = true;
+            o.fadeStart = performance.now();
           }
         }
       }
@@ -148,9 +152,18 @@ function initLogoBackground() {
           }
         }
 
-        if (s.fadeOut && s.scaleDir === 0 && s.alpha > 0) {
-          s.alpha -= 0.02;
-          if (s.alpha < 0) s.alpha = 0;
+        if (s.fadeOut) {
+          const elapsed = performance.now() - s.fadeStart;
+          if (elapsed < FADE_MS / 2) {
+            s.alpha = 1 - elapsed / (FADE_MS / 2);
+          } else if (elapsed < FADE_MS) {
+            s.alpha = (elapsed - FADE_MS / 2) / (FADE_MS / 2);
+            s.scaleDir = 1;
+          } else {
+            s.alpha = 1;
+            s.fadeOut = false;
+            s.scaleDir = 0;
+          }
         }
 
         ctx.save();
