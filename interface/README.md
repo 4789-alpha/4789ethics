@@ -31,6 +31,7 @@ Just structured responsibility.
 - `revision-overview.js` → list withdrawn or revised manifests
 - `permissions-viewer.js` → visualize OP permissions
 - `language-manager.js` → generate snippets for new translations
+- `semantic-manager.js` → manage emotion word lists for sentiment
 - `signup.html` → signup form
 - `signup.js` → handles signup logic
 - `ratings.html` → external overview of overall ratings
