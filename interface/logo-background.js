@@ -52,6 +52,7 @@ function initLogoBackground() {
       alpha: 1,
       scale: 1,
       scaleDir: 0,
+      fadeOut: false,
     });
   }
 
@@ -112,12 +113,14 @@ function initLogoBackground() {
             s.rotSpeed = base * factor;
             s.rotFrames = 180;
             s.scaleDir = -1;
+            s.fadeOut = true;
           } else if (o.lvl < s.lvl) {
             const base = 0.2 + Math.random() * 0.3;
             const factor = 1 - o.lvl / (maxLvl + 1);
             o.rotSpeed = base * factor;
             o.rotFrames = 180;
             o.scaleDir = -1;
+            o.fadeOut = true;
           }
         }
       }
@@ -134,7 +137,7 @@ function initLogoBackground() {
             s.scale -= 0.2;
             if (s.scale <= minScale) {
               s.scale = minScale;
-              s.scaleDir = 1;
+              s.scaleDir = s.fadeOut ? 0 : 1;
             }
           } else if (s.scaleDir === 1) {
             s.scale += 0.02;
@@ -143,6 +146,11 @@ function initLogoBackground() {
               s.scaleDir = 0;
             }
           }
+        }
+
+        if (s.fadeOut && s.scaleDir === 0 && s.alpha > 0) {
+          s.alpha -= 0.02;
+          if (s.alpha < 0) s.alpha = 0;
         }
 
         ctx.save();
