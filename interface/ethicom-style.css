@@ -23,6 +23,23 @@ header {
   text-align: center;
 }
 
+nav {
+  background: #333;
+  text-align: center;
+  padding: 0.5em 0;
+}
+
+nav a {
+  color: var(--text-color);
+  margin: 0 0.8em;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus {
+  text-decoration: underline;
+}
+
 header h1 {
   margin: 0;
   color: var(--text-color);
