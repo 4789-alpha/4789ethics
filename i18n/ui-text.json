@@ -58,6 +58,9 @@
     "status_sig_invalid": "Signature invalid or password incorrect.",
     "status_sig_valid": "Signature valid: {level}",
     "status_loading_op0": "Loading OP-0...",
+    "simple_toggle_label": "Toggle Simple Mode",
+    "simple_mode_on": "Simple mode is active.",
+    "simple_mode_off": "Simple mode is off.",
     "disclaimer_title": "Disclaimers",
     "disclaimer_items": [
       "This structure is provided without warranty.",
@@ -128,6 +131,9 @@
     "status_sig_invalid": "Signatur ungültig oder Passwort falsch.",
     "status_sig_valid": "Signatur gültig: {level}",
     "status_loading_op0": "OP-0 wird geladen...",
+    "simple_toggle_label": "Einfach-Modus umschalten",
+    "simple_mode_on": "Einfach-Modus aktiv.",
+    "simple_mode_off": "Einfach-Modus deaktiviert.",
     "disclaimer_title": "Hinweise",
     "disclaimer_items": [
       "Diese Struktur wird ohne Gewährleistung bereitgestellt.",

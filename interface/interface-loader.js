@@ -68,6 +68,12 @@ function loadInterfaceForOP(op_level) {
     if (typeof window.setHelpSection === "function") {
       window.setHelpSection(op_level);
     }
+    if (["OP-0", "OP-1", "OP-2"].includes(op_level)) {
+      const section = document.getElementById("help_section");
+      if (section) {
+        section.querySelectorAll("details").forEach(d => (d.open = true));
+      }
+    }
     if (status) status.textContent = "Module loaded";
   };
   document.body.appendChild(script);
