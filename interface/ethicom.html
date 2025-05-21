@@ -14,6 +14,7 @@
   <script src="dynamic-help.js"></script>
   <script src="dynamic-info.js"></script>
   <script src="theme-manager.js"></script>
+  <script src="disclaimer.js"></script>
   <script src="dev-mode.js"></script>
   <script src="logo-background.js"></script>
   <script src="color-auth.js"></script>
@@ -97,6 +98,7 @@
       loadUiTexts().then(texts => {
         uiText = texts[getLanguage()] || texts.en || {};
         applyTexts(uiText);
+        showDisclaimers(uiText);
         initTranslationManager();
         renderAllBadges();
         previewOP0();

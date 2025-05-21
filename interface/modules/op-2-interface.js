@@ -67,4 +67,5 @@ function generateStructuredManifest() {
 
   const output = document.getElementById("output");
   output.textContent = JSON.stringify(evalData, null, 2);
+  triggerSelfReflection("Review your structured evaluation via structure_9874.");
 }
