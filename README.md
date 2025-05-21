@@ -13,11 +13,30 @@ It is not tied to a person, but to a standard: responsibility over convenience.
 - A rulebook
 - A tool for control or moralism
 
-This structure must be carried – not quoted.  
+This structure must be carried – not quoted.
 Use it only if you reflect, respond, and act with consequence.
 
-**License:** Open-Ethics (see `LICENSE.txt`)  
+For a brief tour of the main files, see [GET_STARTED.md](GET_STARTED.md).
+
+**License:** Open-Ethics (see `LICENSE.txt`)
 No manipulation. No simulation. No flattening of responsibility.
+
+## Repository Structure
+
+| Directory | Purpose |
+|-----------|---------|
+| `app/` | Application settings, language rules, and user state |
+| `ethics_modules/` | Core YAML and markdown modules for the ethics framework |
+| `interface/` | Front-end files for the evaluation interface |
+| `i18n/` | UI translations referenced by the interface |
+| `manifests/` | Structural manifests and integrity data |
+| `operator/` | Operator qualification guides and personal data |
+| `permissions/` | Operator permission definitions |
+| `releases/` | Release notes and integrity hashes |
+| `sources/` | Evaluated sources and candidate lists |
+| `test/` | Node.js test suite |
+| `tools/` | Utility scripts (e.g., trust-demotion engine) |
+| `use_cases/` | Example scenarios and dissemination ideas |
 
 ### OP-Permissions
 Operator actions by ethical level are defined in:
@@ -46,3 +65,13 @@ Translations for the evaluation interface are defined in `i18n/ui-text.json`. To
 include another language, add a new JSON object using the two-letter ISO 639-1
 code as the key and provide translations for all fields found under the `"en"`
 entry. The interface will automatically recognize the new language.
+
+
+### Running Tests
+
+Ensure Node.js 18 or later is installed, then run:
+
+```bash
+node --test
+```
+
