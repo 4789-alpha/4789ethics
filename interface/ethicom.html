@@ -98,6 +98,9 @@
 
 
     <div id="status" class="card" style="display:none;"></div>
+    <div id="loading_badge">
+      <span class="badge op-0 loading-badge">OP-0</span>
+    </div>
 
     <div id="op_interface">
       <p class="info" data-info="ethicom"></p>
@@ -129,12 +132,14 @@
       const status = document.getElementById("status");
       status.style.display = "block";
       status.textContent = uiText.status_verifying_sig || "Verifying signature...";
+      showLoadingBadge("OP-0");
 
       const sigId = document.getElementById("sig_input").value.trim();
       const pw = document.getElementById("sig_pass").value;
       const stored = JSON.parse(localStorage.getItem("ethicom_signature") || "{}");
 
       if (!sigId || !pw || !stored.hash || !stored.created || !stored.id) {
+        hideLoadingBadge();
         status.textContent = uiText.status_sig_missing || "Signature not found or incomplete.";
         return;
       }
@@ -143,10 +148,12 @@
       const hash = await sha256(raw);
 
       if (hash !== stored.hash || sigId !== stored.id) {
+        hideLoadingBadge();
         status.textContent = uiText.status_sig_invalid || "Signature invalid or password incorrect.";
         return;
       }
 
+      hideLoadingBadge();
       status.textContent = (uiText.status_sig_valid || "Signature valid: {level}").replace('{level}', stored.op_level);
       renderBadge(stored.op_level, stored.op_level);
       loadInterfaceForOP(stored.op_level);
@@ -156,6 +163,7 @@
       const status = document.getElementById("status");
       status.style.display = "block";
       status.textContent = uiText.status_loading_op0 || "OP-0 wird geladen...";
+      showLoadingBadge("OP-0");
       renderBadge("OP-0", "OP-0");
       loadInterfaceForOP("OP-0");
     }
