@@ -134,6 +134,16 @@ function initTranslationManager() {
   container.appendChild(challenge);
   container.appendChild(editBtn);
 
+  const op = opLevelToNumber(getStoredOpLevel());
+  if (op >= 5) {
+    const semanticBtn = document.createElement("button");
+    semanticBtn.textContent = "New Languages Editor";
+    semanticBtn.addEventListener("click", () => {
+      loadInterfaceForOP("semantic-manager");
+    });
+    container.appendChild(semanticBtn);
+  }
+
   editBtn.addEventListener("click", () => {
     const code = langSelect.value.trim();
     if (!code) {

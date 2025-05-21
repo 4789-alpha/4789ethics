@@ -73,3 +73,23 @@ function help(text) {
   const safe = String(text).replace(/"/g, "&quot;");
   return `<span class="help-icon" title="${safe}">?</span>`;
 }
+
+// Retrieve stored OP level from localStorage
+function getStoredOpLevel() {
+  try {
+    const sig = JSON.parse(localStorage.getItem("ethicom_signature") || "{}");
+    return sig.op_level || null;
+  } catch (err) {
+    return null;
+  }
+}
+
+// Convert OP-level string to numeric value (OP-7.5 → 7.5)
+function opLevelToNumber(level) {
+  if (!level) return 0;
+  const n = parseFloat(String(level).replace("OP-", ""));
+  return isNaN(n) ? 0 : n;
+}
+
+window.getStoredOpLevel = getStoredOpLevel;
+window.opLevelToNumber = opLevelToNumber;
