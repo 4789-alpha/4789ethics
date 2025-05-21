@@ -32,6 +32,7 @@ Humor ist willkommen, wenn er Verantwortung und Klarheit unterstützt.
 - [Adding Languages](#adding-languages)
 - [Generating Interface README](#generating-interface-readme)
 - [Gatekeeper Control](#gatekeeper-control)
+- [Currency Synchronization](#currency-synchronization)
 - [Roadmap](#roadmap)
 - [Local Deployment](#local-deployment)
 - [Running Tests](#running-tests)
@@ -100,10 +101,17 @@ README is used.
 
 ### Gatekeeper Control [⇧](#contents)
 
+
 Local control can be toggled via `tools/gatekeeper.js`. The script reads
 `app/gatekeeper_config.yaml` and only allows actions when `allow_control` is set
 to `true` for the controller `RL@RLpi`. This keeps remote commands gated and
 limited to the local environment.
+
+### Currency Synchronization [⇧](#contents)
+
+Run `node tools/currency-sync.js` to download current exchange rates. The
+script saves them in `references/exchange-rates.json` so comparisons remain
+consistent even offline.
 
 
 ## Roadmap [⇧](#contents)
