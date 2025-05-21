@@ -5,6 +5,7 @@
   <title>4789 Start</title>
   <link rel="stylesheet" href="interface/ethicom-style.css" />
   <script src="interface/color-auth.js"></script>
+  <script src="interface/language-selector.js"></script>
 </head>
 <body>
   <header>
@@ -41,5 +42,10 @@
       <p>Starte die Bewertung über <a href="interface/ethicom.html">Ethicom</a>. Eine Vorschau für OP‑0 ist ohne Anmeldung möglich.</p>
     </section>
   </main>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      getLanguage();
+    });
+  </script>
 </body>
 </html>
