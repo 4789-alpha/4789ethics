@@ -15,6 +15,7 @@ function initLogoBackground() {
 
   const levels = [0, 1, 2, 3, 4, 5, 6, 7];
   const maxLvl = Math.max(...levels);
+  const minScale = 0.3;
   const images = levels.map(lvl => {
     const img = new Image();
     img.src = `../op-logo/tanna_op${lvl}.png`;
@@ -49,7 +50,8 @@ function initLogoBackground() {
       rotSpeed: 0,
       rotFrames: 0,
       alpha: 1,
-      fadeDir: 0,
+      scale: 1,
+      scaleDir: 0,
     });
   }
 
@@ -74,7 +76,7 @@ function initLogoBackground() {
     b.dx += impulse * m1 * nx;
     b.dy += impulse * m1 * ny;
 
-    const minDist = a.radius + b.radius;
+    const minDist = a.radius * a.scale + b.radius * b.scale;
     const overlap = minDist - dist;
     if (overlap > 0) {
       a.x += nx * overlap * (m2 / (m1 + m2));
@@ -93,15 +95,15 @@ function initLogoBackground() {
       s.x += s.dx;
       s.y += s.dy;
 
-      if (s.x <= s.radius || s.x >= canvas.width - s.radius) s.dx *= -1;
-      if (s.y <= s.radius || s.y >= canvas.height - s.radius) s.dy *= -1;
+      if (s.x <= s.radius * s.scale || s.x >= canvas.width - s.radius * s.scale) s.dx *= -1;
+      if (s.y <= s.radius * s.scale || s.y >= canvas.height - s.radius * s.scale) s.dy *= -1;
 
       for (let j = i + 1; j < symbols.length; j++) {
         const o = symbols[j];
         const dx = s.x - o.x;
         const dy = s.y - o.y;
         const dist = Math.hypot(dx, dy);
-        const minDist = s.radius + o.radius;
+        const minDist = s.radius * s.scale + o.radius * o.scale;
         if (dist < minDist) {
           resolveCollision(s, o);
           if (s.lvl < o.lvl) {
@@ -109,13 +111,13 @@ function initLogoBackground() {
             const factor = 1 - s.lvl / (maxLvl + 1);
             s.rotSpeed = base * factor;
             s.rotFrames = 180;
-            s.fadeDir = -1;
+            s.scaleDir = -1;
           } else if (o.lvl < s.lvl) {
             const base = 0.2 + Math.random() * 0.3;
             const factor = 1 - o.lvl / (maxLvl + 1);
             o.rotSpeed = base * factor;
             o.rotFrames = 180;
-            o.fadeDir = -1;
+            o.scaleDir = -1;
           }
         }
       }
@@ -127,18 +129,18 @@ function initLogoBackground() {
           s.rotSpeed = 0;
         }
 
-        if (s.fadeDir !== 0) {
-          if (s.fadeDir === -1) {
-            s.alpha -= 0.1;
-            if (s.alpha <= 0) {
-              s.alpha = 0;
-              s.fadeDir = 1;
+        if (s.scaleDir !== 0) {
+          if (s.scaleDir === -1) {
+            s.scale -= 0.2;
+            if (s.scale <= minScale) {
+              s.scale = minScale;
+              s.scaleDir = 1;
             }
-          } else if (s.fadeDir === 1) {
-            s.alpha += 0.1;
-            if (s.alpha >= 1) {
-              s.alpha = 1;
-              s.fadeDir = 0;
+          } else if (s.scaleDir === 1) {
+            s.scale += 0.02;
+            if (s.scale >= 1) {
+              s.scale = 1;
+              s.scaleDir = 0;
             }
           }
         }
@@ -147,7 +149,13 @@ function initLogoBackground() {
         ctx.translate(s.x, s.y);
         if (s.rotation) ctx.rotate(s.rotation);
         ctx.globalAlpha = s.alpha;
-        ctx.drawImage(s.img, -s.radius, -s.radius, s.size, s.size);
+        ctx.drawImage(
+          s.img,
+          -s.radius * s.scale,
+          -s.radius * s.scale,
+          s.size * s.scale,
+          s.size * s.scale
+        );
         ctx.restore();
       }
 
