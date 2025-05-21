@@ -44,13 +44,19 @@
     "access_opt_yes": "Yes",
     "access_opt_no": "No",
     "access_opt_yes_nospeech": "Yes, but cannot speak",
+    "access_saved": "Accessibility preferences saved.",
     "nav_start": "Start",
     "nav_ratings": "Ratings",
     "nav_signup": "Signup",
     "nav_readme": "README",
     "preview_msg": "Curious? Click \"Preview Start\" to try OP-0 without logging in.",
     "preview_btn": "Preview Start (OP-0)",
-    "label_choose_language": "Choose your language (ISO 639-1):"
+    "label_choose_language": "Choose your language (ISO 639-1):",
+    "status_verifying_sig": "Verifying signature...",
+    "status_sig_missing": "Signature not found or incomplete.",
+    "status_sig_invalid": "Signature invalid or password incorrect.",
+    "status_sig_valid": "Signature valid: {level}",
+    "status_loading_op0": "Loading OP-0..."
   },
   "de": {
     "title": "Ethicom: Bewertung durch Menschen",
@@ -97,13 +103,19 @@
     "access_opt_yes": "Ja",
     "access_opt_no": "Nein",
     "access_opt_yes_nospeech": "Ja, aber ohne sprechen",
+    "access_saved": "Zugänglichkeits-Einstellungen gespeichert.",
     "nav_start": "Start",
     "nav_ratings": "Bewertungen",
     "nav_signup": "Signup",
     "nav_readme": "README",
     "preview_msg": "Schnupper gefällig? Klicke auf \"Schnupper-Start\" und teste OP-0 ohne Login.",
     "preview_btn": "Schnupper-Start (OP-0)",
-    "label_choose_language": "Sprache wählen (ISO 639-1):"
+    "label_choose_language": "Sprache wählen (ISO 639-1):",
+    "status_verifying_sig": "Signatur wird überprüft...",
+    "status_sig_missing": "Signatur nicht gefunden oder unvollständig.",
+    "status_sig_invalid": "Signatur ungültig oder Passwort falsch.",
+    "status_sig_valid": "Signatur gültig: {level}",
+    "status_loading_op0": "OP-0 wird geladen..."
   },
   "fr": {
     "title": "Ethicom : Évaluation humaine",
@@ -130,6 +142,15 @@
     "signup_unsupported": "Fournisseur non pris en charge. Utilisez un hôte sûr.",
     "signup_pw_short": "Le mot de passe doit comporter au moins 8 caractères.",
     "signup_saved": "Informations d'inscription enregistrées localement.",
+    "access_title": "Paramètres d'accessibilité",
+    "access_label_vision": "Pouvez-vous voir l'écran ?",
+    "access_label_hearing": "Pouvez-vous entendre depuis cet appareil ?",
+    "access_label_speech": "Pouvez-vous parler ?",
+    "access_save_btn": "Enregistrer les paramètres",
+    "access_opt_yes": "Oui",
+    "access_opt_no": "Non",
+    "access_opt_yes_nospeech": "Oui, mais pas de voix",
+    "access_saved": "Préférences d'accessibilité enregistrées.",
     "help_title": "Aide – Comportement de l'opérateur",
     "help_items": [
       "Vérifiez toujours si vos actions suivent l'éthique de responsabilité.",
@@ -148,7 +169,12 @@
     "nav_readme": "README",
     "preview_msg": "Curieux ? Cliquez sur \"Aperçu\" pour tester OP-0 sans vous connecter.",
     "preview_btn": "Aperçu (OP-0)",
-    "label_choose_language": "Choisissez votre langue (ISO 639-1):"
+    "label_choose_language": "Choisissez votre langue (ISO 639-1):",
+    "status_verifying_sig": "Vérification de la signature...",
+    "status_sig_missing": "Signature introuvable ou incomplète.",
+    "status_sig_invalid": "Signature invalide ou mot de passe incorrect.",
+    "status_sig_valid": "Signature valide : {level}",
+    "status_loading_op0": "Chargement de OP-0..."
   },
   "es": {
     "title": "Ethicom: Evaluación Humana",
