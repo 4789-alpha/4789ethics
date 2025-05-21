@@ -35,7 +35,15 @@
       "Create signatures locally and confirm them structurally.",
       "Withdrawals or corrections are part of the process, not weakness.",
       "Maintain transparency at every step, even with anonymous use."
-    ]
+    ],
+    "access_title": "Accessibility Setup",
+    "access_label_vision": "Can you see the screen?",
+    "access_label_hearing": "Can you hear from this device?",
+    "access_label_speech": "Can you speak?",
+    "access_save_btn": "Save Setup",
+    "access_opt_yes": "Yes",
+    "access_opt_no": "No",
+    "access_opt_yes_nospeech": "Yes, but cannot speak"
   },
   "de": {
     "title": "Ethicom: Bewertung durch Menschen",
@@ -73,7 +81,15 @@
       "Erstelle Signaturen lokal und bestätige sie strukturell.",
       "Rückzüge oder Korrekturen sind Teil des Prozesses, keine Schwäche.",
       "Wahre Transparenz in jedem Schritt, auch bei anonymer Nutzung."
-    ]
+    ],
+    "access_title": "Zugänglichkeits-Einstellungen",
+    "access_label_vision": "Kannst du den Bildschirm sehen?",
+    "access_label_hearing": "Kannst du dieses Gerät hören?",
+    "access_label_speech": "Kannst du sprechen?",
+    "access_save_btn": "Einstellungen speichern",
+    "access_opt_yes": "Ja",
+    "access_opt_no": "Nein",
+    "access_opt_yes_nospeech": "Ja, aber ohne sprechen"
   },
   "fr": {
     "title": "Ethicom : Évaluation humaine",

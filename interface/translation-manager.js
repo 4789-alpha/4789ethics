@@ -62,6 +62,27 @@ function applyTexts(t) {
   if (emailInput && t.signup_placeholder_email) emailInput.placeholder = t.signup_placeholder_email;
   const pwInput = document.getElementById('pw_input');
   if (pwInput && t.signup_placeholder_pw) pwInput.placeholder = t.signup_placeholder_pw;
+
+  const acTitle = document.querySelector('[data-ui="access_title"]');
+  if (acTitle) acTitle.textContent = t.access_title || acTitle.textContent;
+  const acVision = document.querySelector('[data-ui="access_label_vision"]');
+  if (acVision) acVision.textContent = t.access_label_vision || acVision.textContent;
+  const acHearing = document.querySelector('[data-ui="access_label_hearing"]');
+  if (acHearing) acHearing.textContent = t.access_label_hearing || acHearing.textContent;
+  const acSpeech = document.querySelector('[data-ui="access_label_speech"]');
+  if (acSpeech) acSpeech.textContent = t.access_label_speech || acSpeech.textContent;
+  const acSave = document.getElementById('access_save');
+  if (acSave) acSave.textContent = t.access_save_btn || acSave.textContent;
+
+  document.querySelectorAll('option[data-ui="access_opt_yes"]').forEach(o => {
+    if (t.access_opt_yes) o.textContent = t.access_opt_yes;
+  });
+  document.querySelectorAll('option[data-ui="access_opt_no"]').forEach(o => {
+    if (t.access_opt_no) o.textContent = t.access_opt_no;
+  });
+  document.querySelectorAll('option[data-ui="access_opt_yes_nospeech"]').forEach(o => {
+    if (t.access_opt_yes_nospeech) o.textContent = t.access_opt_yes_nospeech;
+  });
 }
 
 function initTranslationManager() {
@@ -97,6 +118,14 @@ function initTranslationManager() {
       signup_unsupported: "",
       signup_pw_short: "",
       signup_saved: "",
+      access_title: "",
+      access_label_vision: "",
+      access_label_hearing: "",
+      access_label_speech: "",
+      access_save_btn: "",
+      access_opt_yes: "",
+      access_opt_no: "",
+      access_opt_yes_nospeech: "",
       help_title: "",
       help_items: ["", "", "", "", "", "", "", "", "", ""]
     };
@@ -142,6 +171,15 @@ function showTranslationEditor(code, data) {
     <label>Msg Unsupported:<br><input id="tr_su_unsupported" value="${data.signup_unsupported || ""}"></label><br>
     <label>Msg Short Password:<br><input id="tr_su_pwshort" value="${data.signup_pw_short || ""}"></label><br>
     <label>Msg Saved:<br><input id="tr_su_saved" value="${data.signup_saved || ""}"></label><br>
+    <h4>Accessibility</h4>
+    <label>Title:<br><input id="tr_ac_title" value="${data.access_title || ""}"></label><br>
+    <label>Label Vision:<br><input id="tr_ac_vision" value="${data.access_label_vision || ""}"></label><br>
+    <label>Label Hearing:<br><input id="tr_ac_hearing" value="${data.access_label_hearing || ""}"></label><br>
+    <label>Label Speech:<br><input id="tr_ac_speech" value="${data.access_label_speech || ""}"></label><br>
+    <label>Button Text:<br><input id="tr_ac_save" value="${data.access_save_btn || ""}"></label><br>
+    <label>Opt Yes:<br><input id="tr_ac_yes" value="${data.access_opt_yes || ""}"></label><br>
+    <label>Opt No:<br><input id="tr_ac_no" value="${data.access_opt_no || ""}"></label><br>
+    <label>Opt Hear+NoSpeak:<br><input id="tr_ac_yes_nospeech" value="${data.access_opt_yes_nospeech || ""}"></label><br>
     <h4>Help Section</h4>
     <label>Help Title:<br><input id="tr_help_title" value="${data.help_title || ""}"></label><br>
     <label>Help Items (comma separated):<br><input id="tr_help_items" value="${(data.help_items || []).join(', ')}"></label><br>
@@ -172,6 +210,14 @@ function showTranslationEditor(code, data) {
       signup_unsupported: document.getElementById("tr_su_unsupported").value,
       signup_pw_short: document.getElementById("tr_su_pwshort").value,
       signup_saved: document.getElementById("tr_su_saved").value,
+      access_title: document.getElementById("tr_ac_title").value,
+      access_label_vision: document.getElementById("tr_ac_vision").value,
+      access_label_hearing: document.getElementById("tr_ac_hearing").value,
+      access_label_speech: document.getElementById("tr_ac_speech").value,
+      access_save_btn: document.getElementById("tr_ac_save").value,
+      access_opt_yes: document.getElementById("tr_ac_yes").value,
+      access_opt_no: document.getElementById("tr_ac_no").value,
+      access_opt_yes_nospeech: document.getElementById("tr_ac_yes_nospeech").value,
       help_title: document.getElementById("tr_help_title").value,
       help_items: document.getElementById("tr_help_items").value.split(/,\s*/)
     };
