@@ -91,3 +91,7 @@ interface/
 
 The interface directory groups the UI logic by operational level. Each file is
 loaded dynamically so the system can scale from OP-0 through OP-10.
+
+## Dev Mode
+
+Activate dev mode via the toggle button on `ethicom.html` or add `?dev` to the URL. When enabled, help and info sections reveal additional details for development and debugging. The state is stored in your browser's localStorage under `ethicom_dev`.
