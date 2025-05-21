@@ -238,5 +238,277 @@
       "Obsługa błędów",
       "Jasność celu"
     ]
+  },
+"am": {
+    "title": "Ethicom: Human Evaluation",
+    "label_source": "Source (URL or Title)",
+    "label_srclvl": "Ethical Level (SRC)",
+    "label_aspects": "Optional Aspects",
+    "label_comment": "Comment",
+    "btn_generate": "Show My Evaluation",
+    "btn_download": "Download as File",
+    "aspects": [
+      "Transparency",
+      "Repairability",
+      "System Reflection",
+      "Error Handling",
+      "Purpose Clarity"
+    ]
+  },
+"af": {
+    "title": "Ethicom: Human Evaluation",
+    "label_source": "Source (URL or Title)",
+    "label_srclvl": "Ethical Level (SRC)",
+    "label_aspects": "Optional Aspects",
+    "label_comment": "Comment",
+    "btn_generate": "Show My Evaluation",
+    "btn_download": "Download as File",
+    "aspects": [
+      "Transparency",
+      "Repairability",
+      "System Reflection",
+      "Error Handling",
+      "Purpose Clarity"
+    ]
+  },
+"bn": {
+    "title": "Ethicom: Human Evaluation",
+    "label_source": "Source (URL or Title)",
+    "label_srclvl": "Ethical Level (SRC)",
+    "label_aspects": "Optional Aspects",
+    "label_comment": "Comment",
+    "btn_generate": "Show My Evaluation",
+    "btn_download": "Download as File",
+    "aspects": [
+      "Transparency",
+      "Repairability",
+      "System Reflection",
+      "Error Handling",
+      "Purpose Clarity"
+    ]
+  },
+"ha": {
+    "title": "Ethicom: Human Evaluation",
+    "label_source": "Source (URL or Title)",
+    "label_srclvl": "Ethical Level (SRC)",
+    "label_aspects": "Optional Aspects",
+    "label_comment": "Comment",
+    "btn_generate": "Show My Evaluation",
+    "btn_download": "Download as File",
+    "aspects": [
+      "Transparency",
+      "Repairability",
+      "System Reflection",
+      "Error Handling",
+      "Purpose Clarity"
+    ]
+  },
+"id": {
+    "title": "Ethicom: Human Evaluation",
+    "label_source": "Source (URL or Title)",
+    "label_srclvl": "Ethical Level (SRC)",
+    "label_aspects": "Optional Aspects",
+    "label_comment": "Comment",
+    "btn_generate": "Show My Evaluation",
+    "btn_download": "Download as File",
+    "aspects": [
+      "Transparency",
+      "Repairability",
+      "System Reflection",
+      "Error Handling",
+      "Purpose Clarity"
+    ]
+  },
+"ig": {
+    "title": "Ethicom: Human Evaluation",
+    "label_source": "Source (URL or Title)",
+    "label_srclvl": "Ethical Level (SRC)",
+    "label_aspects": "Optional Aspects",
+    "label_comment": "Comment",
+    "btn_generate": "Show My Evaluation",
+    "btn_download": "Download as File",
+    "aspects": [
+      "Transparency",
+      "Repairability",
+      "System Reflection",
+      "Error Handling",
+      "Purpose Clarity"
+    ]
+  },
+"om": {
+    "title": "Ethicom: Human Evaluation",
+    "label_source": "Source (URL or Title)",
+    "label_srclvl": "Ethical Level (SRC)",
+    "label_aspects": "Optional Aspects",
+    "label_comment": "Comment",
+    "btn_generate": "Show My Evaluation",
+    "btn_download": "Download as File",
+    "aspects": [
+      "Transparency",
+      "Repairability",
+      "System Reflection",
+      "Error Handling",
+      "Purpose Clarity"
+    ]
+  },
+"rm": {
+    "title": "Ethicom: Human Evaluation",
+    "label_source": "Source (URL or Title)",
+    "label_srclvl": "Ethical Level (SRC)",
+    "label_aspects": "Optional Aspects",
+    "label_comment": "Comment",
+    "btn_generate": "Show My Evaluation",
+    "btn_download": "Download as File",
+    "aspects": [
+      "Transparency",
+      "Repairability",
+      "System Reflection",
+      "Error Handling",
+      "Purpose Clarity"
+    ]
+  },
+"ta": {
+    "title": "Ethicom: Human Evaluation",
+    "label_source": "Source (URL or Title)",
+    "label_srclvl": "Ethical Level (SRC)",
+    "label_aspects": "Optional Aspects",
+    "label_comment": "Comment",
+    "btn_generate": "Show My Evaluation",
+    "btn_download": "Download as File",
+    "aspects": [
+      "Transparency",
+      "Repairability",
+      "System Reflection",
+      "Error Handling",
+      "Purpose Clarity"
+    ]
+  },
+"te": {
+    "title": "Ethicom: Human Evaluation",
+    "label_source": "Source (URL or Title)",
+    "label_srclvl": "Ethical Level (SRC)",
+    "label_aspects": "Optional Aspects",
+    "label_comment": "Comment",
+    "btn_generate": "Show My Evaluation",
+    "btn_download": "Download as File",
+    "aspects": [
+      "Transparency",
+      "Repairability",
+      "System Reflection",
+      "Error Handling",
+      "Purpose Clarity"
+    ]
+  },
+"th": {
+    "title": "Ethicom: Human Evaluation",
+    "label_source": "Source (URL or Title)",
+    "label_srclvl": "Ethical Level (SRC)",
+    "label_aspects": "Optional Aspects",
+    "label_comment": "Comment",
+    "btn_generate": "Show My Evaluation",
+    "btn_download": "Download as File",
+    "aspects": [
+      "Transparency",
+      "Repairability",
+      "System Reflection",
+      "Error Handling",
+      "Purpose Clarity"
+    ]
+  },
+"tr": {
+    "title": "Ethicom: Human Evaluation",
+    "label_source": "Source (URL or Title)",
+    "label_srclvl": "Ethical Level (SRC)",
+    "label_aspects": "Optional Aspects",
+    "label_comment": "Comment",
+    "btn_generate": "Show My Evaluation",
+    "btn_download": "Download as File",
+    "aspects": [
+      "Transparency",
+      "Repairability",
+      "System Reflection",
+      "Error Handling",
+      "Purpose Clarity"
+    ]
+  },
+"ur": {
+    "title": "Ethicom: Human Evaluation",
+    "label_source": "Source (URL or Title)",
+    "label_srclvl": "Ethical Level (SRC)",
+    "label_aspects": "Optional Aspects",
+    "label_comment": "Comment",
+    "btn_generate": "Show My Evaluation",
+    "btn_download": "Download as File",
+    "aspects": [
+      "Transparency",
+      "Repairability",
+      "System Reflection",
+      "Error Handling",
+      "Purpose Clarity"
+    ]
+  },
+"vi": {
+    "title": "Ethicom: Human Evaluation",
+    "label_source": "Source (URL or Title)",
+    "label_srclvl": "Ethical Level (SRC)",
+    "label_aspects": "Optional Aspects",
+    "label_comment": "Comment",
+    "btn_generate": "Show My Evaluation",
+    "btn_download": "Download as File",
+    "aspects": [
+      "Transparency",
+      "Repairability",
+      "System Reflection",
+      "Error Handling",
+      "Purpose Clarity"
+    ]
+  },
+"xh": {
+    "title": "Ethicom: Human Evaluation",
+    "label_source": "Source (URL or Title)",
+    "label_srclvl": "Ethical Level (SRC)",
+    "label_aspects": "Optional Aspects",
+    "label_comment": "Comment",
+    "btn_generate": "Show My Evaluation",
+    "btn_download": "Download as File",
+    "aspects": [
+      "Transparency",
+      "Repairability",
+      "System Reflection",
+      "Error Handling",
+      "Purpose Clarity"
+    ]
+  },
+"yo": {
+    "title": "Ethicom: Human Evaluation",
+    "label_source": "Source (URL or Title)",
+    "label_srclvl": "Ethical Level (SRC)",
+    "label_aspects": "Optional Aspects",
+    "label_comment": "Comment",
+    "btn_generate": "Show My Evaluation",
+    "btn_download": "Download as File",
+    "aspects": [
+      "Transparency",
+      "Repairability",
+      "System Reflection",
+      "Error Handling",
+      "Purpose Clarity"
+    ]
+  },
+"zu": {
+    "title": "Ethicom: Human Evaluation",
+    "label_source": "Source (URL or Title)",
+    "label_srclvl": "Ethical Level (SRC)",
+    "label_aspects": "Optional Aspects",
+    "label_comment": "Comment",
+    "btn_generate": "Show My Evaluation",
+    "btn_download": "Download as File",
+    "aspects": [
+      "Transparency",
+      "Repairability",
+      "System Reflection",
+      "Error Handling",
+      "Purpose Clarity"
+    ]
   }
 }

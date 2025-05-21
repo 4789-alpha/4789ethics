@@ -35,6 +35,9 @@ No manipulation. No simulation. No flattening of responsibility.
 | `releases/` | Release notes and integrity hashes |
 | `sources/` | Evaluated sources and candidate lists |
 | `test/` | Node.js test suite |
+| `manifests/` | Structural manifests and integrity data |
+| `permissions/` | Operator permission definitions |
+| `sources/` | Evaluated sources and candidate lists |
 | `tools/` | Utility scripts (e.g., trust-demotion engine) |
 | `use_cases/` | Example scenarios and dissemination ideas |
 
@@ -67,6 +70,7 @@ code as the key and provide translations for all fields found under the `"en"`
 entry. The interface will automatically recognize the new language.
 
 
+
 ### Running Tests
 
 Ensure Node.js 18 or later is installed, then run:
@@ -75,3 +79,7 @@ Ensure Node.js 18 or later is installed, then run:
 node --test
 ```
 
+
+### Contributing
+
+To suggest improvements or translations, read `CONTRIBUTING.md`. All changes must follow the Open-Ethics License and be made with intention.

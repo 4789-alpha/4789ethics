@@ -8,6 +8,7 @@
   <script src="signature-verifier.js"></script>
   <script src="interface-loader.js"></script>
   <script src="language-selector.js"></script>
+  <script src="translation-manager.js"></script>
 </head>
 <body>
   <header>
@@ -48,9 +49,7 @@
   <script>
     let userLang = null;
 
-    fetch("i18n/ui-text.json")
-      .then(r => r.json())
-      .then(texts => {
+    loadUiTexts().then(texts => {
         const select = document.getElementById("lang_select");
         Object.keys(texts)
           .sort()
@@ -67,6 +66,8 @@
           const t = texts[userLang] || {};
           applyTexts(t);
         });
+
+        initTranslationManager();
       });
 
     async function beginSignatureVerification() {
