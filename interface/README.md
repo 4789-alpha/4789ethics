@@ -31,8 +31,10 @@ Just structured responsibility.
 - `revision-overview.js` → list withdrawn or revised manifests
 - `permissions-viewer.js` → visualize OP permissions
 - `language-manager.js` → generate snippets for new translations
-├── signup.html
-├── signup.js
+- `signup.html` → signup form
+- `signup.js` → handles signup logic
+- `ratings.html` → external overview of overall ratings
+- `ratings.js` → loads rating history and computes averages
 
 ---
 
@@ -70,6 +72,8 @@ interface/
 ├── language-manager.js
 ├── signup.html
 ├── signup.js
+├── ratings.html
+├── ratings.js
 ├── modules/
 │   ├── op-0-interface.js
 │   ├── op-1-interface.js
