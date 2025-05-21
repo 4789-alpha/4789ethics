@@ -59,7 +59,14 @@
     "status_sig_valid": "Signature valid: {level}",
     "status_loading_op0": "Loading OP-0...",
     "disclaimer_title": "Disclaimers",
-    "disclaimer_items": ["This structure is provided without warranty.", "Use is at your own risk.", "4789 is a standard for responsibility, not a person or belief system.", "Use only with reflection and consequence; no manipulation or uncontrolled automation.", "If a contradiction arises, apply self-reflection (structure_9874).", "Humor is allowed if responsibility and clarity remain."],
+    "disclaimer_items": [
+      "This structure is provided without warranty.",
+      "Use is at your own risk.",
+      "4789 is a standard for responsibility, not a person or belief system.",
+      "Use only with reflection and consequence; no manipulation or uncontrolled automation.",
+      "If a contradiction arises, apply self-reflection (structure_9874).",
+      "Humor is allowed if responsibility and clarity remain."
+    ],
     "btn_disclaimer_accept": "I understand"
   },
   "de": {
@@ -122,7 +129,14 @@
     "status_sig_valid": "Signatur gültig: {level}",
     "status_loading_op0": "OP-0 wird geladen...",
     "disclaimer_title": "Hinweise",
-    "disclaimer_items": ["Diese Struktur wird ohne Gewährleistung bereitgestellt.", "Die Nutzung erfolgt auf eigene Verantwortung.", "4789 ist ein Standard für Verantwortung, keine Person oder Ideologie.", "Nutzung nur reflektiert und mit Konsequenz; keine Manipulation oder unkontrollierte Automatisierung.", "Bei Widerspruch gilt Selbstreflexion nach structure_9874.md.", "Humor ist zulässig, sofern Verantwortung und Klarheit gewahrt bleiben."],
+    "disclaimer_items": [
+      "Diese Struktur wird ohne Gewährleistung bereitgestellt.",
+      "Die Nutzung erfolgt auf eigene Verantwortung.",
+      "4789 ist ein Standard für Verantwortung, keine Person oder Ideologie.",
+      "Nutzung nur reflektiert und mit Konsequenz; keine Manipulation oder unkontrollierte Automatisierung.",
+      "Bei Widerspruch gilt Selbstreflexion nach structure_9874.md.",
+      "Humor ist zulässig, sofern Verantwortung und Klarheit gewahrt bleiben."
+    ],
     "btn_disclaimer_accept": "Verstanden"
   },
   "fr": {
@@ -182,7 +196,17 @@
     "status_sig_missing": "Signature introuvable ou incomplète.",
     "status_sig_invalid": "Signature invalide ou mot de passe incorrect.",
     "status_sig_valid": "Signature valide : {level}",
-    "status_loading_op0": "Chargement de OP-0..."
+    "status_loading_op0": "Chargement de OP-0...",
+    "disclaimer_title": "Avertissements",
+    "disclaimer_items": [
+      "Cette structure est fournie sans garantie.",
+      "L'utilisation se fait à vos risques et périls.",
+      "4789 est une norme de responsabilité, pas une personne ou une idéologie.",
+      "Utilisez-la uniquement de manière réfléchie et avec conséquence; aucune manipulation ni automatisation incontrôlée.",
+      "En cas de contradiction, appliquez l'autoréflexion (structure_9874).",
+      "L'humour est autorisé tant que la responsabilité et la clarté sont préservées."
+    ],
+    "btn_disclaimer_accept": "Compris"
   },
   "es": {
     "title": "Ethicom: Evaluación Humana",
@@ -206,6 +230,14 @@
     "preview_msg": "¿Curioso? Haz clic en \"Inicio de prueba\" para probar OP-0 sin iniciar sesión.",
     "preview_btn": "Inicio de prueba (OP-0)",
     "label_choose_language": "Elige tu idioma (ISO 639-1):",
+    "disclaimer_title": "Avisos",
+    "disclaimer_items": [
+      "Esta estructura se proporciona sin garantía.",
+      "El uso es bajo su propio riesgo.",
+      "4789 es un estándar de responsabilidad, no una persona ni un sistema de creencias.",
+      "Úselo solo con reflexión y consecuencia; sin manipulación ni automatización descontrolada.",
+      "Si surge una contradicción, aplique autorreflexión (structure_9874).",
+      "Se permite el humor siempre que la responsabilidad y la claridad se mantengan."
     "signup_title": "Registro",
     "signup_email": "Correo electrónico:",
     "signup_password": "Contraseña:",
@@ -268,7 +300,17 @@
       "Reflexão sistêmica",
       "Tratamento de erros",
       "Clareza de propósito"
-    ]
+    ],
+    "disclaimer_title": "Avisos",
+    "disclaimer_items": [
+      "Esta estrutura é fornecida sem garantia.",
+      "O uso é por sua conta e risco.",
+      "4789 é um padrão de responsabilidade, não uma pessoa ou crença.",
+      "Use apenas com reflexão e consequência; sem manipulação ou automação descontrolada.",
+      "Se surgir uma contradição, aplique auto-reflexão (structure_9874).",
+      "O humor é permitido se a responsabilidade e a clareza forem mantidas."
+    ],
+    "btn_disclaimer_accept": "Entendi"
   },
   "zh": {
     "title": "Ethicom：人工评估",
@@ -284,7 +326,17 @@
       "系统反思",
       "错误处理",
       "目标清晰度"
-    ]
+    ],
+    "disclaimer_title": "免责声明",
+    "disclaimer_items": [
+      "本结构不提供任何担保。",
+      "使用风险自负。",
+      "4789 是责任标准，不代表个人或信仰体系。",
+      "仅在反思并承担后果的情况下使用；禁止操纵或不受控的自动化。",
+      "如有矛盾，请进行自我反思（structure_9874）。",
+      "在保持责任和清晰度的前提下，可适当幽默。"
+    ],
+    "btn_disclaimer_accept": "理解"
   },
   "hi": {
     "title": "Ethicom: मानवीय मूल्यांकन",
@@ -380,7 +432,17 @@
       "Riflessione del sistema",
       "Gestione degli errori",
       "Chiarezza dello scopo"
-    ]
+    ],
+    "disclaimer_title": "Avvertenze",
+    "disclaimer_items": [
+      "Questa struttura è fornita senza garanzia.",
+      "L'uso è a proprio rischio.",
+      "4789 è uno standard di responsabilità, non una persona o un sistema di credenze.",
+      "Usare solo con riflessione e conseguenze; nessuna manipolazione o automazione incontrollata.",
+      "Se sorge una contraddizione, applicare l'auto-riflessione (structure_9874).",
+      "L'umorismo è consentito se la responsabilità e la chiarezza rimangono."
+    ],
+    "btn_disclaimer_accept": "Ho capito"
   },
   "ko": {
     "title": "Ethicom: 인간 평가",
@@ -430,7 +492,7 @@
       "Jasność celu"
     ]
   },
-"am": {
+  "am": {
     "title": "Ethicom: Human Evaluation",
     "label_source": "Source (URL or Title)",
     "label_srclvl": "Ethical Level (SRC)",
@@ -446,7 +508,7 @@
       "Purpose Clarity"
     ]
   },
-"af": {
+  "af": {
     "title": "Ethicom: Human Evaluation",
     "label_source": "Source (URL or Title)",
     "label_srclvl": "Ethical Level (SRC)",
@@ -462,7 +524,7 @@
       "Purpose Clarity"
     ]
   },
-"bn": {
+  "bn": {
     "title": "Ethicom: Human Evaluation",
     "label_source": "Source (URL or Title)",
     "label_srclvl": "Ethical Level (SRC)",
@@ -478,7 +540,7 @@
       "Purpose Clarity"
     ]
   },
-"ha": {
+  "ha": {
     "title": "Ethicom: Human Evaluation",
     "label_source": "Source (URL or Title)",
     "label_srclvl": "Ethical Level (SRC)",
@@ -494,7 +556,7 @@
       "Purpose Clarity"
     ]
   },
-"id": {
+  "id": {
     "title": "Ethicom: Human Evaluation",
     "label_source": "Source (URL or Title)",
     "label_srclvl": "Ethical Level (SRC)",
@@ -510,7 +572,7 @@
       "Purpose Clarity"
     ]
   },
-"ig": {
+  "ig": {
     "title": "Ethicom: Human Evaluation",
     "label_source": "Source (URL or Title)",
     "label_srclvl": "Ethical Level (SRC)",
@@ -526,7 +588,7 @@
       "Purpose Clarity"
     ]
   },
-"om": {
+  "om": {
     "title": "Ethicom: Human Evaluation",
     "label_source": "Source (URL or Title)",
     "label_srclvl": "Ethical Level (SRC)",
@@ -542,7 +604,7 @@
       "Purpose Clarity"
     ]
   },
-"rm": {
+  "rm": {
     "title": "Ethicom: Human Evaluation",
     "label_source": "Source (URL or Title)",
     "label_srclvl": "Ethical Level (SRC)",
@@ -558,7 +620,7 @@
       "Purpose Clarity"
     ]
   },
-"ta": {
+  "ta": {
     "title": "Ethicom: Human Evaluation",
     "label_source": "Source (URL or Title)",
     "label_srclvl": "Ethical Level (SRC)",
@@ -574,7 +636,7 @@
       "Purpose Clarity"
     ]
   },
-"te": {
+  "te": {
     "title": "Ethicom: Human Evaluation",
     "label_source": "Source (URL or Title)",
     "label_srclvl": "Ethical Level (SRC)",
@@ -590,7 +652,7 @@
       "Purpose Clarity"
     ]
   },
-"th": {
+  "th": {
     "title": "Ethicom: Human Evaluation",
     "label_source": "Source (URL or Title)",
     "label_srclvl": "Ethical Level (SRC)",
@@ -606,7 +668,7 @@
       "Purpose Clarity"
     ]
   },
-"tr": {
+  "tr": {
     "title": "Ethicom: Human Evaluation",
     "label_source": "Source (URL or Title)",
     "label_srclvl": "Ethical Level (SRC)",
@@ -622,7 +684,7 @@
       "Purpose Clarity"
     ]
   },
-"ur": {
+  "ur": {
     "title": "Ethicom: Human Evaluation",
     "label_source": "Source (URL or Title)",
     "label_srclvl": "Ethical Level (SRC)",
@@ -638,7 +700,7 @@
       "Purpose Clarity"
     ]
   },
-"vi": {
+  "vi": {
     "title": "Ethicom: Human Evaluation",
     "label_source": "Source (URL or Title)",
     "label_srclvl": "Ethical Level (SRC)",
@@ -654,7 +716,7 @@
       "Purpose Clarity"
     ]
   },
-"xh": {
+  "xh": {
     "title": "Ethicom: Human Evaluation",
     "label_source": "Source (URL or Title)",
     "label_srclvl": "Ethical Level (SRC)",
@@ -670,7 +732,7 @@
       "Purpose Clarity"
     ]
   },
-"yo": {
+  "yo": {
     "title": "Ethicom: Human Evaluation",
     "label_source": "Source (URL or Title)",
     "label_srclvl": "Ethical Level (SRC)",
@@ -699,8 +761,8 @@
       "Repairability",
       "System Reflection",
       "Error Handling",
-    "Purpose Clarity"
-  ]
+      "Purpose Clarity"
+    ]
   },
   "nl": {
     "title": "Ethicom: Menselijke Evaluatie",
