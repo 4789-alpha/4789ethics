@@ -13,7 +13,7 @@ function getSignatureId() {
 }
 
 function loadUiTexts() {
-  return fetch("i18n/ui-text.json")
+  return fetch("../i18n/ui-text.json")
     .then(r => r.json())
     .then(data => {
       uiTexts = data;
