@@ -46,6 +46,3 @@ Translations for the evaluation interface are defined in `i18n/ui-text.json`. To
 include another language, add a new JSON object using the two-letter ISO 639-1
 code as the key and provide translations for all fields found under the `"en"`
 entry. The interface will automatically recognize the new language.
-
-Currently included translations: `en`, `de`, `fr`, `es`, `pt`, `zh`, `hi`, `ar`,
-`ja`, `sw`, `ru`, `it`, `ko`, `fa`, and `pl`.
