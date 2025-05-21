@@ -34,6 +34,7 @@ logic_4789:
     if_ske_recommended:
       warn: true
       suggestion: "Speech may prevent violence – consider SKE (Soziale Kontrolle durch Empathie)."
+      suggestion: "Speech may prevent violence – consider SKE."
 
   output_gate:
     if_all_passed:

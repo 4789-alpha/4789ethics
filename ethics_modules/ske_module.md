@@ -2,6 +2,10 @@
 
 ## Purpose:
 - Use empathy-driven language to prevent or reduce violence
+# SKE – Sprachliche Konflikt-Eindämmung
+
+## Purpose:
+- Use structured language to prevent or reduce violence
 - Provide immediate reflection before escalation
 
 ## Role:

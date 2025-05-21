@@ -44,6 +44,7 @@ Humor ist willkommen, wenn er Verantwortung und Klarheit unterstützt.
 |-----------|---------|
 | `app/` | Application settings, language rules, and user state |
 | `ethics_modules/` | Core YAML and markdown modules for the ethics framework, including `structure_9874` and `ske_module` (Soziale Kontrolle durch Empathie) |
+| `ethics_modules/` | Core YAML and markdown modules for the ethics framework, including `structure_9874` and `ske_module` |
 | `interface/` | Front-end files for the evaluation interface |
 | `i18n/` | UI translations referenced by the interface |
 | `manifests/` | Structural manifests and integrity data |
