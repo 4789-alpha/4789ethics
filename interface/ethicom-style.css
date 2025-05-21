@@ -107,6 +107,7 @@ button:hover {
 .badge.op-5   { background: #66aa33; }
 .badge.op-6   { background: #228B22; }
 .badge.op-7   { background: #146b1f; }
+.badge.op-75  { background: #0f5a1a; }
 .badge.op-79  { background: #0e4712; }
 .badge.op-8   { background: #4a6670; }
 .badge.op-9   { background: #3c3744; }
@@ -126,6 +127,13 @@ button:hover {
   align-items: center;
   margin-top: 0.5em;
   margin-bottom: 1em;
+}
+
+.badge-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em;
+  margin-bottom: 1.5em;
 }
 
 #status {

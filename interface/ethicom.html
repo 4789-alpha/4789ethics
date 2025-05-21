@@ -24,6 +24,8 @@
   <main class="card">
     <h2 id="title">Ethicom Evaluation</h2>
 
+    <div id="badge_gallery" class="badge-gallery"></div>
+
     <div id="badge_display" class="badge-row"></div>
 
     <div id="lang_selection" class="card">
@@ -97,6 +99,7 @@
         });
 
         initTranslationManager();
+        renderAllBadges();
       });
 
     async function beginSignatureVerification() {
