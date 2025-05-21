@@ -5,12 +5,16 @@ function renderBadge(currentRank, maxRank) {
   const badgeDisplay = document.getElementById("badge_display");
   if (!badgeDisplay) return;
 
-  const main = document.createElement("span");
-  main.className = `badge op-${currentRank.replace("OP-", "").replace(".", "")}`;
-  main.textContent = currentRank;
+  const mainSpan = document.createElement("span");
+  mainSpan.className = `badge op-${currentRank.replace("OP-", "").replace(".", "")}`;
+  mainSpan.textContent = currentRank;
+
+  const mainLink = document.createElement("a");
+  mainLink.href = `README.html#${currentRank.toLowerCase().replace(/\./g, '-')}`;
+  mainLink.appendChild(mainSpan);
 
   badgeDisplay.innerHTML = "";
-  badgeDisplay.appendChild(main);
+  badgeDisplay.appendChild(mainLink);
 
   if (parseFloat(maxRank.replace("OP-", "")) > parseFloat(currentRank.replace("OP-", ""))) {
     const shadow = document.createElement("span");
@@ -46,7 +50,10 @@ function renderAllBadges() {
     const span = document.createElement("span");
     span.className = `badge op-${lvl.replace("OP-", "").replace(/\./g, "")}`;
     span.textContent = lvl;
-    gallery.appendChild(span);
+    const link = document.createElement("a");
+    link.href = `README.html#${lvl.toLowerCase().replace(/\./g, '-')}`;
+    link.appendChild(span);
+    gallery.appendChild(link);
   });
 }
 
