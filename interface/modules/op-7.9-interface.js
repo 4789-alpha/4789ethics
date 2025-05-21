@@ -7,7 +7,7 @@ function initOP79Interface() {
   container.innerHTML = `
     <div class="card">
       <h3>High-Level Operator Actions (OP-7.9)</h3>
-      <p class="info">You may nominate operators and verify donations. Every action is binding and will be logged structurally.</p>
+      <p class="info" data-info="op-7.9"></p>
 
       <h4>NOMINATION</h4>
       <label for="nominee">Operator Signature (to nominate):</label>
@@ -49,6 +49,7 @@ function initOP79Interface() {
       <button onclick="verifyDonation()">Log Verified Donation</button>
     </div>
   `;
+  applyInfoTexts(container);
 }
 
 function generateNomination() {

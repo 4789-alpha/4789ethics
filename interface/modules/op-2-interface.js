@@ -7,7 +7,7 @@ function initOP2Interface() {
   container.innerHTML = `
     <div class="card">
       <h3>Structured Evaluation (OP-2)</h3>
-      <p class="info">You are submitting a signed evaluation with visible SRC level and internal identity option.</p>
+      <p class="info" data-info="op-2"></p>
 
       <label for="src_lvl">Select the SRC level:</label>
       ${help('SRC describes the ethical consciousness of the evaluated source.')}
@@ -34,6 +34,7 @@ function initOP2Interface() {
       <button onclick="generateStructuredManifest()">Submit Evaluation</button>
     </div>
   `;
+  applyInfoTexts(container);
 }
 
 function generateStructuredManifest() {

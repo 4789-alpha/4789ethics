@@ -7,7 +7,7 @@ function initOP0Interface() {
   container.innerHTML = `
     <div class="card">
       <h3>Anonymous Rating (OP-0)</h3>
-      <p class="info">You are submitting an anonymous evaluation. It will have no lasting influence and cannot be revised.</p>
+      <p class="info" data-info="op-0"></p>
 
       <label for="src_lvl">Select a general ethical level (SRC):</label>
       ${help('SRC describes the ethical consciousness of the evaluated source.')}
@@ -26,6 +26,7 @@ function initOP0Interface() {
       <button onclick="generateAnonymousManifest()">Evaluate</button>
     </div>
   `;
+  applyInfoTexts(container);
 }
 
 function generateAnonymousManifest() {

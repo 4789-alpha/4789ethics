@@ -7,7 +7,8 @@ function initOP10Interface() {
   container.innerHTML = `
     <div class="card">
       <h3>Post-Human Stage (OP-10)</h3>
-      <p class="info">Observation only. Systems operate beyond human control.</p>
+      <p class="info" data-info="op-10"></p>
     </div>
   `;
+  applyInfoTexts(container);
 }

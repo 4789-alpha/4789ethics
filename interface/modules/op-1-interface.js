@@ -7,7 +7,7 @@ function initOP1Interface() {
   container.innerHTML = `
     <div class="card">
       <h3>Signed Evaluation (OP-1)</h3>
-      <p class="info">You are submitting your first signed evaluation. It will be stored with your signature.</p>
+      <p class="info" data-info="op-1"></p>
 
       <label for="src_lvl">Select the SRC level:</label>
       ${help('SRC describes the ethical consciousness of the evaluated source.')}
@@ -26,6 +26,7 @@ function initOP1Interface() {
       <button onclick="generateSignedManifest()">Submit Evaluation</button>
     </div>
   `;
+  applyInfoTexts(container);
 }
 
 function generateSignedManifest() {
