@@ -65,29 +65,15 @@
   </main>
 
   <script>
-    let userLang = null;
-
-    loadUiTexts().then(texts => {
-        const select = document.getElementById("lang_select");
-        Object.keys(texts)
-          .sort()
-          .forEach(code => {
-            const opt = document.createElement("option");
-            opt.value = code;
-            opt.textContent = code;
-            select.appendChild(opt);
-          });
-
-        select.addEventListener("change", e => {
-          userLang = e.target.value;
-          localStorage.setItem("ethicom_lang", userLang);
-          const t = texts[userLang] || {};
-          applyTexts(t);
-        });
-
+    document.addEventListener("DOMContentLoaded", () => {
+      initLanguageDropdown("lang_select");
+      loadUiTexts().then(texts => {
+        const t = texts[getLanguage()] || {};
+        applyTexts(t);
         initTranslationManager();
         renderAllBadges();
       });
+    });
 
     async function beginSignatureVerification() {
       const status = document.getElementById("status");
