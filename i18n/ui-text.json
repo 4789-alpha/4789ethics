@@ -47,6 +47,22 @@
       "Clarté du but"
     ]
   },
+  "es": {
+    "title": "Ethicom: Evaluación Humana",
+    "label_source": "Fuente (URL o Título)",
+    "label_srclvl": "Nivel Ético (SRC)",
+    "label_aspects": "Aspectos Opcionales",
+    "label_comment": "Comentario",
+    "btn_generate": "Mostrar Mi Evaluación",
+    "btn_download": "Descargar como Archivo",
+    "aspects": [
+      "Transparencia",
+      "Reparabilidad",
+      "Reflexión del Sistema",
+      "Manejo de Errores",
+      "Claridad de Propósito"
+    ]
+  },
   "pt": {
     "title": "Ethicom: Avaliação Humana",
     "label_source": "Fonte (URL ou título)",

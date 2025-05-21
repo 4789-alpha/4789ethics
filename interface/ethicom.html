@@ -22,17 +22,6 @@
       <label for="lang_select">Choose your language (ISO 639-1):</label>
       <select id="lang_select">
         <option value="">--</option>
-        <option value="ar">ar</option>
-        <option value="de">de</option>
-        <option value="en">en</option>
-        <option value="es">es</option>
-        <option value="fr">fr</option>
-        <option value="hi">hi</option>
-        <option value="ja">ja</option>
-        <option value="pt">pt</option>
-        <option value="ru">ru</option>
-        <option value="sw">sw</option>
-        <option value="zh">zh</option>
       </select>
     </div>
 
@@ -59,16 +48,26 @@
   <script>
     let userLang = null;
 
-    document.getElementById("lang_select").addEventListener("change", e => {
-      userLang = e.target.value;
-      localStorage.setItem("ethicom_lang", userLang);
-      fetch("i18n/ui-text.json")
-        .then(r => r.json())
-        .then(texts => {
+    fetch("i18n/ui-text.json")
+      .then(r => r.json())
+      .then(texts => {
+        const select = document.getElementById("lang_select");
+        Object.keys(texts)
+          .sort()
+          .forEach(code => {
+            const opt = document.createElement("option");
+            opt.value = code;
+            opt.textContent = code;
+            select.appendChild(opt);
+          });
+
+        select.addEventListener("change", e => {
+          userLang = e.target.value;
+          localStorage.setItem("ethicom_lang", userLang);
           const t = texts[userLang] || {};
           applyTexts(t);
         });
-    });
+      });
 
     async function beginSignatureVerification() {
       const status = document.getElementById("status");

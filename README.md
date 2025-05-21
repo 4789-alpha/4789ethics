@@ -37,5 +37,12 @@ Verified 2025-05-21 by Signature 4789
 SHA-256: 37dbef63d04615fc30c369f636738375279368c63ce4016e6f6c43b282590e64  
 Verified 2025-05-21 by Signature 4789
 
-> Ethics is not explained. It is carried.  
+> Ethics is not explained. It is carried.
 > – Signature 4789
+
+### Adding Languages
+
+Translations for the evaluation interface are defined in `i18n/ui-text.json`. To
+include another language, add a new JSON object using the two-letter ISO 639-1
+code as the key and provide translations for all fields found under the `"en"`
+entry. The interface will automatically recognize the new language.
