@@ -36,12 +36,18 @@
   --accent-color: #228B22;
 }
 
+@keyframes fadeInPage {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
   font-family: system-ui, sans-serif;
   margin: 0;
   padding: 0;
+  animation: fadeInPage 0.6s ease-in-out;
 }
 
 header {
@@ -77,6 +83,17 @@ header h1 {
   font-size: 1.4em;
 }
 
+.hero {
+  text-align: center;
+  margin: 1.5em auto;
+  font-size: 1.2em;
+}
+
+.tagline {
+  margin: 0;
+  font-weight: 300;
+}
+
 main {
   max-width: 900px;
   margin: 0 auto;
@@ -98,7 +115,8 @@ input,
 select,
 textarea {
   width: 100%;
-  padding: 0.5em;
+  padding: 0.7em;
+  font-size: 1.05em;
   margin-bottom: 0.8em;
   border: 1px solid #555;
   border-radius: 4px;
@@ -213,6 +231,8 @@ button:hover {
 #lang_select {
   font-size: 1.2em;
   padding: 0;
+}
+
 /* Background grid showing all OP logos */
 #op_background {
   position: fixed;
@@ -227,6 +247,21 @@ button:hover {
 }
 
 #op_background img {
-  max-width: 100px;
+  max-width: 60px;
+  animation: logoSpin 40s linear infinite;
+}
+  
+@keyframes logoSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+  position: absolute;
+  max-width: none;
+}
+
+/* Modified logo used in citation view */
+.citation-logo {
+  width: 28px;
+  vertical-align: middle;
+  filter: hue-rotate(-80deg) saturate(0.7);
 }
 

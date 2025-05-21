@@ -73,11 +73,17 @@ function buildDetails(title, items) {
   summary.textContent = title;
   details.appendChild(summary);
   const list = document.createElement('ol');
-  items.forEach(item => {
+  if (Array.isArray(items) && items.length > 0) {
+    items.forEach(item => {
+      const li = document.createElement('li');
+      li.textContent = item;
+      list.appendChild(li);
+    });
+  } else {
     const li = document.createElement('li');
-    li.textContent = item;
+    li.textContent = 'No help content available.';
     list.appendChild(li);
-  });
+  }
   details.appendChild(list);
   return details;
 }

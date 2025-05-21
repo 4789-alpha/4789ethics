@@ -21,7 +21,7 @@ function getLanguage() {
 
 // Initialize a language dropdown and reload on change
 function initLanguageDropdown(selectId = "lang_select") {
-  fetch("i18n/ui-text.json")
+  fetch("../i18n/ui-text.json")
     .then(r => r.json())
     .then(texts => {
       const select = document.getElementById(selectId);

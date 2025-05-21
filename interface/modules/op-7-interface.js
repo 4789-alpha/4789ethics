@@ -7,7 +7,7 @@ function initOP7Interface() {
   container.innerHTML = `
     <div class="card">
       <h3>Override Evaluation (OP-7)</h3>
-      <p class="info">You are authorized to override previous evaluations if your OP-level is higher and justified.</p>
+      <p class="info" data-info="op-7"></p>
 
       <label for="original_id">Manifest to override:</label>
       ${help('Filename of the evaluation you want to replace.')}
@@ -30,6 +30,7 @@ function initOP7Interface() {
       <button onclick="generateOverride()">Create Override</button>
     </div>
   `;
+  applyInfoTexts(container);
 }
 
 function generateOverride() {

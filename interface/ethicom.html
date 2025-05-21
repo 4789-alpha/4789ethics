@@ -12,6 +12,7 @@
   <script src="translation-manager.js"></script>
   <script src="accessibility.js"></script>
   <script src="dynamic-help.js"></script>
+  <script src="dynamic-info.js"></script>
   <script src="theme-manager.js"></script>
   <script src="logo-background.js"></script>
 </head>
@@ -20,13 +21,16 @@
   <header>
     <h1>Ethicom Evaluation</h1>
   </header>
+  <section class="hero">
+    <p class="tagline">Ethik-Kompass für technologische Projekte</p>
+  </section>
   <nav>
     <a href="ethicom.html" data-ui="nav_start">Start</a>
     <a href="ratings.html" data-ui="nav_ratings">Bewertungen</a>
     <a href="signup.html" data-ui="nav_signup">Signup</a>
     <a href="haupt-readme.md" target="_blank" data-ui="nav_readme">README</a>
   </nav>
-  <main class="card">
+  <main>
     <h2 id="title">Ethicom Evaluation</h2>
 
     <section id="welcome" class="card">
@@ -72,7 +76,7 @@
     <div id="status" class="card" style="display:none;"></div>
 
     <div id="op_interface">
-      <p class="info">Your interface will load here once verified.</p>
+      <p class="info" data-info="ethicom"></p>
     </div>
 
     <pre id="output" class="card" style="background:#2b2b2b; white-space:pre-wrap; color:#ccc;"></pre>

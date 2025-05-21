@@ -7,7 +7,7 @@ function initOP75Interface() {
   container.innerHTML = `
     <div class="card">
       <h3>Responsibility Tier (OP-7.5)</h3>
-      <p class="info">You are recognized as a structurally consistent operator. You may prepare nominations and review OP-8 observations, but not execute structural changes.</p>
+      <p class="info" data-info="op-7.5"></p>
 
       <h4>Propose Nomination</h4>
       <label for="propose_id">Operator Signature:</label>
@@ -32,6 +32,7 @@ function initOP75Interface() {
       <button onclick="prepareNomination()">Create Nomination Proposal</button>
     </div>
   `;
+  applyInfoTexts(container);
 }
 
 function prepareNomination() {

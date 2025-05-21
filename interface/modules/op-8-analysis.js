@@ -7,7 +7,7 @@ function initOP8Analysis() {
   container.innerHTML = `
     <div class="card">
       <h3>Structural Analysis (OP-8)</h3>
-      <p class="info">This is a system-driven structural view of sources. No human input is allowed at this level.</p>
+      <p class="info" data-info="op-8"></p>
 
       <label for="inspect_id">Source ID to analyze:</label>
       ${help('Provide the source identifier to see its structural summary.')}
@@ -16,6 +16,7 @@ function initOP8Analysis() {
       <button onclick="loadStructuralView()">Run Analysis</button>
     </div>
   `;
+  applyInfoTexts(container);
 }
 
 function loadStructuralView() {
