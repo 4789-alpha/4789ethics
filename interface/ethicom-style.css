@@ -208,7 +208,11 @@ button:hover {
 #op_background {
   position: fixed;
   inset: 0;
-  z-index: 0;
+  z-index:
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  justify-items: center;
+  align-items: center;
   opacity: 0.08;
   pointer-events: none;
 }
