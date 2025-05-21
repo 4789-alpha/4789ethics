@@ -78,6 +78,9 @@ Translations for the evaluation interface are defined in `i18n/ui-text.json`. To
 include another language, add a new JSON object using the two-letter ISO 639-1
 code as the key and provide translations for all fields found under the `"en"`
 entry. The interface will automatically recognize the new language.
+Word collections for additional languages can be gathered with
+`tools/language-corpus.js`. The script updates `i18n/language-corpus.json`
+based on plain text input.
 
 ### Gatekeeper Control [⇧](#contents)
 
