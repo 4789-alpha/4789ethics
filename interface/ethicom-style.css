@@ -42,6 +42,36 @@
   --accent-color: #228B22;
 }
 
+.theme-ocean {
+  --bg-color: #e8f3fa;
+  --text-color: #00334d;
+  --header-text-color: #ffffff;
+  --nav-text-color: #ffffff;
+  --primary-color: #0077aa;
+  --card-bg: #ffffff;
+  --header-bg: rgba(0, 85, 119, 0.9);
+  --nav-bg: rgba(0, 85, 119, 0.9);
+  --card-alpha-bg: rgba(255, 255, 255, 0.95);
+  --accent-color: #0099cc;
+}
+
+.theme-desert {
+  --bg-color: #faf5e6;
+  --text-color: #4d3300;
+  --header-text-color: #ffffff;
+  --nav-text-color: #ffffff;
+  --primary-color: #cc9900;
+  --card-bg: #ffffff;
+  --header-bg: rgba(153, 102, 0, 0.9);
+  --nav-bg: rgba(153, 102, 0, 0.9);
+  --card-alpha-bg: rgba(255, 255, 255, 0.95);
+  --accent-color: #e6b800;
+}
+
+.theme-custom {
+  /* values will be set dynamically */
+}
+
 @keyframes fadeInPage {
   from { opacity: 0; }
   to   { opacity: 1; }
