@@ -144,6 +144,9 @@ The roadmap keeps development transparent according to Signature 4789.
 3. **v2.0 – Global Rollout**
    - Publish multi-language guides for all operator levels.
    - Finalize open training data licensing.
+4. **v2.1 – Language Expansion**
+   - Extend UI translations to all practical ISO 639-1 languages.
+   - Provide an automated translation workflow with manual review.
 
 ### Local Deployment [⇧](#contents)
 
