@@ -42,7 +42,10 @@ function initAccessibilitySetup() {
       speech: document.getElementById("speech_select").value
     };
     localStorage.setItem("ethicom_access", JSON.stringify(data));
-    alert("Accessibility preferences saved.");
+    loadUiTexts().then(txt => {
+      const t = txt[getLanguage()] || txt.en || {};
+      alert(t.access_saved || "Accessibility preferences saved.");
+    });
   });
 }
 

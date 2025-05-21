@@ -62,13 +62,11 @@ function applyTexts(t) {
   const verifyBtn = document.querySelector('#signature_area button');
   if (verifyBtn) verifyBtn.textContent = t.btn_generate || verifyBtn.textContent;
 
-  if (typeof window.setHelpSection !== 'function') {
-    const helpTitle = document.querySelector('#help_section summary');
-    if (helpTitle) helpTitle.textContent = t.help_title || helpTitle.textContent;
-    const helpList = document.querySelector('#help_section ol');
-    if (helpList && Array.isArray(t.help_items)) {
-      helpList.innerHTML = t.help_items.map(i => `<li>${i}</li>`).join('');
-    }
+  const helpTitle = document.querySelector('#help_section summary');
+  if (helpTitle) helpTitle.textContent = t.help_title || helpTitle.textContent;
+  const helpList = document.querySelector('#help_section ol');
+  if (helpList && Array.isArray(t.help_items)) {
+    helpList.innerHTML = t.help_items.map(i => `<li>${i}</li>`).join('');
   }
 
   const suTitle = document.querySelector('[data-ui="signup_title"]');

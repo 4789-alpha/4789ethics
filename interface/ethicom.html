@@ -85,11 +85,12 @@
   </main>
 
   <script>
+    let uiText = {};
     document.addEventListener("DOMContentLoaded", () => {
       initLanguageDropdown("lang_select");
       loadUiTexts().then(texts => {
-        const t = texts[getLanguage()] || {};
-        applyTexts(t);
+        uiText = texts[getLanguage()] || texts.en || {};
+        applyTexts(uiText);
         initTranslationManager();
         renderAllBadges();
       });
@@ -98,14 +99,14 @@
     async function beginSignatureVerification() {
       const status = document.getElementById("status");
       status.style.display = "block";
-      status.textContent = "Verifying signature...";
+      status.textContent = uiText.status_verifying_sig || "Verifying signature...";
 
       const sigId = document.getElementById("sig_input").value.trim();
       const pw = document.getElementById("sig_pass").value;
       const stored = JSON.parse(localStorage.getItem("ethicom_signature") || "{}");
 
       if (!sigId || !pw || !stored.hash || !stored.created || !stored.id) {
-        status.textContent = "Signature not found or incomplete.";
+        status.textContent = uiText.status_sig_missing || "Signature not found or incomplete.";
         return;
       }
 
@@ -113,11 +114,11 @@
       const hash = await sha256(raw);
 
       if (hash !== stored.hash || sigId !== stored.id) {
-        status.textContent = "Signature invalid or password incorrect.";
+        status.textContent = uiText.status_sig_invalid || "Signature invalid or password incorrect.";
         return;
       }
 
-      status.textContent = "Signature valid: " + stored.op_level;
+      status.textContent = (uiText.status_sig_valid || "Signature valid: {level}").replace('{level}', stored.op_level);
       renderBadge(stored.op_level, stored.op_level);
       loadInterfaceForOP(stored.op_level);
     }
@@ -125,7 +126,7 @@
     function previewOP0() {
       const status = document.getElementById("status");
       status.style.display = "block";
-      status.textContent = "OP-0 wird geladen...";
+      status.textContent = uiText.status_loading_op0 || "OP-0 wird geladen...";
       renderBadge("OP-0", "OP-0");
       loadInterfaceForOP("OP-0");
     }
