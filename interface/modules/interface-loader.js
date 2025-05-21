@@ -21,7 +21,8 @@ function loadInterfaceForOP(op_level) {
     "op79": "op-7.9-interface.js",
     "op8": "op-8-analysis.js",
     "op9": "op-9-interface.js",
-    "op10": "op-10-interface.js"
+    "op10": "op-10-interface.js",
+    "search": "source-search.js"
   };
 
   const script = document.createElement("script");
@@ -45,6 +46,8 @@ function loadInterfaceForOP(op_level) {
       window[initFunc]();
     } else if (op_level === "OP-8") {
       initOP8Analysis();
+    } else if (op_level.toLowerCase() === "search") {
+      initSourceSearch();
     }
     if (status) status.textContent = "Module loaded";
   };
