@@ -5,6 +5,16 @@
   <title>Project Wings</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="../interface/ethicom-style.css" />
+  <link rel="stylesheet" href="wings-style.css" />
+  <script src="../interface/ethicom-utils.js"></script>
+  <script src="../interface/interface-loader.js"></script>
+  <script src="../interface/language-selector.js"></script>
+  <script src="../interface/translation-manager.js"></script>
+  <script src="../interface/theme-manager.js"></script>
+  <script src="../interface/dynamic-help.js"></script>
+  <script src="../interface/dynamic-info.js"></script>
+  <script src="../interface/disclaimer.js"></script>
+  <script src="../interface/color-auth.js"></script>
 </head>
 <body>
   <header>
@@ -16,22 +26,65 @@
   <nav>
     <a href="../index.html">Home</a>
     <a href="../interface/erstkontakt.html">Erstkontakt</a>
-    <a href="../interface/ethicom.html">Ethicom</a>
-    <a href="../interface/ratings.html">Bewertungen</a>
-    <a href="../interface/signup.html">Signup</a>
-    <a href="../interface/tools.html">Tools</a>
-    <a href="../interface/settings.html">Settings</a>
+    <a href="../interface/ethicom.html" data-ui="nav_start">Ethicom</a>
+    <a href="../interface/ratings.html" data-ui="nav_ratings">Bewertungen</a>
+    <a href="../interface/signup.html" data-ui="nav_signup">Signup</a>
+    <a href="../interface/tools.html" data-ui="nav_tools">Tools</a>
+    <a href="../interface/settings.html" data-ui="nav_settings">Settings</a>
     <a href="index.html">Wings</a>
-    <a href="../README.md" target="_blank">README</a>
+    <a href="../README.md" target="_blank" data-ui="nav_readme" class="readme-link">README</a>
   </nav>
   <main>
+    <div id="lang_selection" class="card" style="margin-bottom:1em;">
+      <label for="lang_select" data-ui="choose_language_label">Language:</label>
+      <select id="lang_select"></select>
+    </div>
+
+    <div id="theme_selection" class="card" style="margin-bottom:1em;">
+      <label for="theme_select">Theme:</label>
+      <select id="theme_select">
+        <option value="dark">Dark</option>
+        <option value="tanna">Tanna</option>
+      </select>
+    </div>
+
     <section class="intro">
       <h2>Welcome to Wings</h2>
       <p>This interface adjusts for all devices.</p>
     </section>
+
     <section class="content">
       <p>Example content here.</p>
     </section>
+
+    <section class="card" id="preview">
+      <p data-ui="preview_msg">Bisch gluschtig? Lueg derzue, ganz locker.</p>
+      <button data-ui="preview_btn" onclick="previewOP0()" class="accent-button">Schnupper-Start (OP‑0)</button>
+    </section>
+
+    <div id="status" class="card" style="display:none;"></div>
+    <div id="op_interface" class="card"></div>
+    <section id="help_section" class="card"></section>
   </main>
+
+  <script>
+    let uiText = {};
+    document.addEventListener('DOMContentLoaded', () => {
+      initLanguageDropdown('lang_select');
+      loadUiTexts().then(t => {
+        const lang = getLanguage();
+        uiText = t[lang] || t.en || {};
+        applyTexts(uiText);
+        showDisclaimers(uiText);
+      });
+    });
+
+    function previewOP0() {
+      const status = document.getElementById('status');
+      status.style.display = 'block';
+      status.textContent = uiText.status_loading_op0 || 'OP-0 wird geladen...';
+      loadInterfaceForOP('OP-0');
+    }
+  </script>
 </body>
 </html>
