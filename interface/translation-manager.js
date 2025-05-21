@@ -32,6 +32,8 @@ function confirmPendingLang(code) {
 
 function applyTexts(t) {
   if (!t) return;
+  const lang = localStorage.getItem("ethicom_lang") || document.documentElement.lang;
+  document.documentElement.lang = lang;
   const titleEl = document.getElementById("title");
   if (titleEl) titleEl.textContent = t.title || titleEl.textContent;
   const sourceLabel = document.querySelector('label[for="sig_input"]');
@@ -40,6 +42,26 @@ function applyTexts(t) {
   if (commentLabel) commentLabel.textContent = t.label_comment || commentLabel.textContent;
   const verifyBtn = document.querySelector('#signature_area button');
   if (verifyBtn) verifyBtn.textContent = t.btn_generate || verifyBtn.textContent;
+
+  const helpTitle = document.querySelector('#help_section summary');
+  if (helpTitle) helpTitle.textContent = t.help_title || helpTitle.textContent;
+  const helpList = document.querySelector('#help_section ol');
+  if (helpList && Array.isArray(t.help_items)) {
+    helpList.innerHTML = t.help_items.map(i => `<li>${i}</li>`).join('');
+  }
+
+  const suTitle = document.querySelector('[data-ui="signup_title"]');
+  if (suTitle) suTitle.textContent = t.signup_title || suTitle.textContent;
+  const suEmail = document.querySelector('[data-ui="signup_email"]');
+  if (suEmail) suEmail.textContent = t.signup_email || suEmail.textContent;
+  const suPw = document.querySelector('[data-ui="signup_password"]');
+  if (suPw) suPw.textContent = t.signup_password || suPw.textContent;
+  const suBtn = document.getElementById('signup_btn');
+  if (suBtn) suBtn.textContent = t.signup_btn || suBtn.textContent;
+  const emailInput = document.getElementById('email_input');
+  if (emailInput && t.signup_placeholder_email) emailInput.placeholder = t.signup_placeholder_email;
+  const pwInput = document.getElementById('pw_input');
+  if (pwInput && t.signup_placeholder_pw) pwInput.placeholder = t.signup_placeholder_pw;
 }
 
 function initTranslationManager() {
@@ -64,7 +86,19 @@ function initTranslationManager() {
       label_comment: "",
       btn_generate: "",
       btn_download: "",
-      aspects: ["", "", "", "", ""]
+      aspects: ["", "", "", "", ""],
+      signup_title: "",
+      signup_email: "",
+      signup_password: "",
+      signup_btn: "",
+      signup_placeholder_email: "",
+      signup_placeholder_pw: "",
+      signup_invalid_email: "",
+      signup_unsupported: "",
+      signup_pw_short: "",
+      signup_saved: "",
+      help_title: "",
+      help_items: ["", "", "", "", "", "", "", "", "", ""]
     };
     showTranslationEditor(code, data);
   });
@@ -97,6 +131,20 @@ function showTranslationEditor(code, data) {
     <label>Button Generate:<br><input id="tr_generate" value="${data.btn_generate || ""}"></label><br>
     <label>Button Download:<br><input id="tr_download" value="${data.btn_download || ""}"></label><br>
     <label>Aspects (comma separated):<br><input id="tr_aspectlist" value="${(data.aspects || []).join(", ")}"></label><br>
+    <h4>Signup</h4>
+    <label>Title:<br><input id="tr_su_title" value="${data.signup_title || ""}"></label><br>
+    <label>Email Label:<br><input id="tr_su_email" value="${data.signup_email || ""}"></label><br>
+    <label>Password Label:<br><input id="tr_su_pw" value="${data.signup_password || ""}"></label><br>
+    <label>Button Text:<br><input id="tr_su_btn" value="${data.signup_btn || ""}"></label><br>
+    <label>Email Placeholder:<br><input id="tr_su_ph_email" value="${data.signup_placeholder_email || ""}"></label><br>
+    <label>Password Placeholder:<br><input id="tr_su_ph_pw" value="${data.signup_placeholder_pw || ""}"></label><br>
+    <label>Msg Invalid Email:<br><input id="tr_su_invalid" value="${data.signup_invalid_email || ""}"></label><br>
+    <label>Msg Unsupported:<br><input id="tr_su_unsupported" value="${data.signup_unsupported || ""}"></label><br>
+    <label>Msg Short Password:<br><input id="tr_su_pwshort" value="${data.signup_pw_short || ""}"></label><br>
+    <label>Msg Saved:<br><input id="tr_su_saved" value="${data.signup_saved || ""}"></label><br>
+    <h4>Help Section</h4>
+    <label>Help Title:<br><input id="tr_help_title" value="${data.help_title || ""}"></label><br>
+    <label>Help Items (comma separated):<br><input id="tr_help_items" value="${(data.help_items || []).join(', ')}"></label><br>
     <button id="tr_save">Save</button>
     <button id="tr_cancel">Cancel</button>
   `;
@@ -113,7 +161,19 @@ function showTranslationEditor(code, data) {
       label_comment: document.getElementById("tr_comment").value,
       btn_generate: document.getElementById("tr_generate").value,
       btn_download: document.getElementById("tr_download").value,
-      aspects: document.getElementById("tr_aspectlist").value.split(/,\s*/)
+      aspects: document.getElementById("tr_aspectlist").value.split(/,\s*/),
+      signup_title: document.getElementById("tr_su_title").value,
+      signup_email: document.getElementById("tr_su_email").value,
+      signup_password: document.getElementById("tr_su_pw").value,
+      signup_btn: document.getElementById("tr_su_btn").value,
+      signup_placeholder_email: document.getElementById("tr_su_ph_email").value,
+      signup_placeholder_pw: document.getElementById("tr_su_ph_pw").value,
+      signup_invalid_email: document.getElementById("tr_su_invalid").value,
+      signup_unsupported: document.getElementById("tr_su_unsupported").value,
+      signup_pw_short: document.getElementById("tr_su_pwshort").value,
+      signup_saved: document.getElementById("tr_su_saved").value,
+      help_title: document.getElementById("tr_help_title").value,
+      help_items: document.getElementById("tr_help_items").value.split(/,\s*/)
     };
     savePendingLang(code, obj);
     uiTexts[code] = obj;

@@ -13,6 +13,28 @@
       "System Reflection",
       "Error Handling",
       "Purpose Clarity"
+    ],
+    "signup_title": "Sign up",
+    "signup_email": "Email:",
+    "signup_password": "Password:",
+    "signup_btn": "Create Account",
+    "signup_placeholder_email": "name@provider.com",
+    "signup_placeholder_pw": "At least 8 characters",
+    "signup_invalid_email": "Invalid email format.",
+    "signup_unsupported": "Email provider not supported. Use a secure host.",
+    "signup_pw_short": "Password must be at least 8 characters.",
+    "signup_saved": "Signup information saved locally.",
+    "help_title": "Help – Operator Conduct",
+    "help_items": [
+      "Always check if your actions meet the ethics of responsibility.",
+      "Use only the tools assigned to your OP level.",
+      "Document decisions in the manifest for verification.",
+      "Nominations and feedback are structured and without personal pressure.",
+      "Consult a higher structure (from OP-7) if unsure.",
+      "Responsibility outweighs convenience.",
+      "Create signatures locally and confirm them structurally.",
+      "Withdrawals or corrections are part of the process, not weakness.",
+      "Maintain transparency at every step, even with anonymous use."
     ]
   },
   "de": {
@@ -29,6 +51,28 @@
       "Systemreflexion",
       "Fehlerkultur",
       "Zweckklarheit"
+    ],
+    "signup_title": "Registrierung",
+    "signup_email": "E-Mail:",
+    "signup_password": "Passwort:",
+    "signup_btn": "Konto erstellen",
+    "signup_placeholder_email": "name@anbieter.de",
+    "signup_placeholder_pw": "Mindestens 8 Zeichen",
+    "signup_invalid_email": "Ungültiges E-Mail-Format.",
+    "signup_unsupported": "E-Mail-Anbieter nicht unterstützt. Nutze einen sicheren Host.",
+    "signup_pw_short": "Passwort muss mindestens 8 Zeichen haben.",
+    "signup_saved": "Registrierungsdaten lokal gespeichert.",
+    "help_title": "Hilfe – Operator-Verhalten",
+    "help_items": [
+      "Prüfe jederzeit, ob dein Handeln der Verantwortungsethik entspricht.",
+      "Nutze nur die Mittel, die deinem OP-Level zugeordnet sind.",
+      "Dokumentiere Entscheidungen im Manifest zur Überprüfbarkeit.",
+      "Nominierungen und Rückmeldungen erfolgen strukturiert und ohne persönlichen Druck.",
+      "Bei Unsicherheit konsultiere eine höhere Struktur (ab OP-7).",
+      "Verantwortung geht vor Bequemlichkeit.",
+      "Erstelle Signaturen lokal und bestätige sie strukturell.",
+      "Rückzüge oder Korrekturen sind Teil des Prozesses, keine Schwäche.",
+      "Wahre Transparenz in jedem Schritt, auch bei anonymer Nutzung."
     ]
   },
   "fr": {
@@ -45,6 +89,28 @@
       "Réflexion systémique",
       "Gestion des erreurs",
       "Clarté du but"
+    ],
+    "signup_title": "Inscription",
+    "signup_email": "Courriel :",
+    "signup_password": "Mot de passe :",
+    "signup_btn": "Créer le compte",
+    "signup_placeholder_email": "nom@fournisseur.fr",
+    "signup_placeholder_pw": "Au moins 8 caractères",
+    "signup_invalid_email": "Format d'adresse invalide.",
+    "signup_unsupported": "Fournisseur non pris en charge. Utilisez un hôte sûr.",
+    "signup_pw_short": "Le mot de passe doit comporter au moins 8 caractères.",
+    "signup_saved": "Informations d'inscription enregistrées localement.",
+    "help_title": "Aide – Comportement de l'opérateur",
+    "help_items": [
+      "Vérifiez toujours si vos actions suivent l'éthique de responsabilité.",
+      "N'utilisez que les moyens attribués à votre niveau OP.",
+      "Documentez les décisions dans le manifeste pour vérification.",
+      "Les nominations et retours se font de manière structurée sans pression personnelle.",
+      "En cas de doute, consultez une structure supérieure (dès OP-7).",
+      "La responsabilité prime sur la commodité.",
+      "Créez les signatures localement et confirmez-les structurellement.",
+      "Les retraits ou corrections font partie du processus, pas une faiblesse.",
+      "Maintenez la transparence à chaque étape, même en utilisation anonyme."
     ]
   },
   "es": {
