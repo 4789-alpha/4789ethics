@@ -40,6 +40,7 @@ For OP-6 and above, the generator can optionally store a hashed passport or ID l
 - `ratings.html` → external overview of overall ratings
 - `ratings.js` → loads rating history and computes averages
 - `erstkontakt.html` → guided first contact with optional OP‑0 preview
+- `page-flow-demo.html` → dynamic page scrolling example
 
 ---
 
