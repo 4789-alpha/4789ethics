@@ -35,6 +35,7 @@ Just structured responsibility.
 - `signup.js` → handles signup logic
 - `ratings.html` → external overview of overall ratings
 - `ratings.js` → loads rating history and computes averages
+- `erstkontakt.html` → guided first contact with optional OP‑0 preview
 
 ---
 
@@ -74,6 +75,7 @@ interface/
 ├── signup.js
 ├── ratings.html
 ├── ratings.js
+├── erstkontakt.html
 ├── modules/
 │   ├── op-0-interface.js
 │   ├── op-1-interface.js

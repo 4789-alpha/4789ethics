@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>Erstkontakt</title>
+  <link rel="stylesheet" href="ethicom-style.css" />
+  <script src="ratings.js"></script>
+  <script src="interface-loader.js"></script>
+  <style>
+    #op_interface { margin-top: 1em; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Willkommen</h1>
+  </header>
+  <nav>
+    <a href="ethicom.html">Start</a>
+    <a href="ratings.html">Bewertungen</a>
+    <a href="signup.html">Signup</a>
+  </nav>
+  <main class="card">
+    <section class="card">
+      <h2>Erste Einblicke</h2>
+      <p>Hier siehst du die bisherigen Bewertungen und kannst dir einen Eindruck verschaffen.</p>
+    </section>
+    <section id="rating_summary" class="card"></section>
+    <section id="rating_library" class="card"></section>
+    <button id="op0_btn" class="accent-button" onclick="showOP0()">Erste OP‑0 Eindrücke</button>
+    <div id="op_interface" class="card" style="display:none;"></div>
+  </main>
+  <script>
+    document.addEventListener('DOMContentLoaded', initRatings);
+    function showOP0() {
+      const container = document.getElementById('op_interface');
+      container.style.display = 'block';
+      loadInterfaceForOP('OP-0');
+    }
+  </script>
+</body>
+</html>
