@@ -32,7 +32,6 @@ Just structured responsibility.
 - `permissions-viewer.js` → visualize OP permissions
 - `language-manager.js` → generate snippets for new translations
 - `semantic-manager.js` → manage emotion word lists for sentiment
-- `tools/language-corpus.js` → capture vocabulary samples from text
 - `signup.html` → signup form
 - `signup.js` → handles signup logic
 - `ratings.html` → external overview of overall ratings

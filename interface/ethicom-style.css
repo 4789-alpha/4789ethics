@@ -39,12 +39,16 @@ header {
   background: #222;
   padding: 1em;
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 nav {
   background: #333;
   text-align: center;
   padding: 0.5em 0;
+  position: relative;
+  z-index: 1;
 }
 
 nav a {
@@ -68,6 +72,8 @@ main {
   max-width: 900px;
   margin: 0 auto;
   padding: 2em;
+  position: relative;
+  z-index: 1;
 }
 
 .card {
@@ -193,11 +199,16 @@ button:hover {
   background-color: #b58f1b;
 }
 
+
+/* larger language selector */
+#lang_select {
+  font-size: 1.2em;
+  padding: 0;
 /* Background grid showing all OP logos */
 #op_background {
   position: fixed;
   inset: 0;
-  z-index: -1;
+  z-index: 0;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   justify-items: center;

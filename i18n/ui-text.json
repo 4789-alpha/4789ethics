@@ -43,7 +43,14 @@
     "access_save_btn": "Save Setup",
     "access_opt_yes": "Yes",
     "access_opt_no": "No",
-    "access_opt_yes_nospeech": "Yes, but cannot speak"
+    "access_opt_yes_nospeech": "Yes, but cannot speak",
+    "nav_start": "Start",
+    "nav_ratings": "Ratings",
+    "nav_signup": "Signup",
+    "nav_readme": "README",
+    "preview_msg": "Curious? Click \"Preview Start\" to try OP-0 without logging in.",
+    "preview_btn": "Preview Start (OP-0)",
+    "label_choose_language": "Choose your language (ISO 639-1):"
   },
   "de": {
     "title": "Ethicom: Bewertung durch Menschen",
@@ -89,7 +96,14 @@
     "access_save_btn": "Einstellungen speichern",
     "access_opt_yes": "Ja",
     "access_opt_no": "Nein",
-    "access_opt_yes_nospeech": "Ja, aber ohne sprechen"
+    "access_opt_yes_nospeech": "Ja, aber ohne sprechen",
+    "nav_start": "Start",
+    "nav_ratings": "Bewertungen",
+    "nav_signup": "Signup",
+    "nav_readme": "README",
+    "preview_msg": "Schnupper gefällig? Klicke auf \"Schnupper-Start\" und teste OP-0 ohne Login.",
+    "preview_btn": "Schnupper-Start (OP-0)",
+    "label_choose_language": "Sprache wählen (ISO 639-1):"
   },
   "fr": {
     "title": "Ethicom : Évaluation humaine",
@@ -127,7 +141,14 @@
       "Créez les signatures localement et confirmez-les structurellement.",
       "Les retraits ou corrections font partie du processus, pas une faiblesse.",
       "Maintenez la transparence à chaque étape, même en utilisation anonyme."
-    ]
+    ],
+    "nav_start": "Accueil",
+    "nav_ratings": "Évaluations",
+    "nav_signup": "Inscription",
+    "nav_readme": "README",
+    "preview_msg": "Curieux ? Cliquez sur \"Aperçu\" pour tester OP-0 sans vous connecter.",
+    "preview_btn": "Aperçu (OP-0)",
+    "label_choose_language": "Choisissez votre langue (ISO 639-1):"
   },
   "es": {
     "title": "Ethicom: Evaluación Humana",
@@ -143,7 +164,14 @@
       "Reflexión del Sistema",
       "Manejo de Errores",
       "Claridad de Propósito"
-    ]
+    ],
+    "nav_start": "Inicio",
+    "nav_ratings": "Valoraciones",
+    "nav_signup": "Registro",
+    "nav_readme": "README",
+    "preview_msg": "¿Curioso? Haz clic en \"Inicio de prueba\" para probar OP-0 sin iniciar sesión.",
+    "preview_btn": "Inicio de prueba (OP-0)",
+    "label_choose_language": "Elige tu idioma (ISO 639-1):"
   },
   "pt": {
     "title": "Ethicom: Avaliação Humana",
