@@ -14,6 +14,7 @@ function initLogoBackground() {
   resize();
 
   const levels = [0, 1, 2, 3, 4, 5, 6, 7];
+  const maxLvl = Math.max(...levels);
   const images = levels.map(lvl => {
     const img = new Image();
     img.src = `../op-logo/tanna_op${lvl}.png`;
@@ -25,7 +26,8 @@ function initLogoBackground() {
   for (let i = 0; i < total; i++) {
     const lvl = levels[i % levels.length];
     const img = images[lvl];
-    const size = 30 + Math.random() * 30;
+    const mass = lvl + 1;
+    const size = 30 + lvl * 10 + Math.random() * 10;
     const radius = size / 2;
     const x = Math.random() * (canvas.width - size) + radius;
     const y = Math.random() * (canvas.height - size) + radius;
@@ -33,16 +35,38 @@ function initLogoBackground() {
     const speed = 0.5 + Math.random() * 1.5;
     const dx = Math.cos(angle) * speed;
     const dy = Math.sin(angle) * speed;
-    symbols.push({ img, x, y, dx, dy, size, radius });
+    symbols.push({ img, lvl, mass, x, y, dx, dy, size, radius });
   }
 
-  function bounce(a, b) {
-    const tempX = a.dx;
-    const tempY = a.dy;
-    a.dx = b.dx;
-    a.dy = b.dy;
-    b.dx = tempX;
-    b.dy = tempY;
+  function resolveCollision(a, b) {
+    const dx = a.x - b.x;
+    const dy = a.y - b.y;
+    const dist = Math.hypot(dx, dy);
+    if (dist === 0) return;
+
+    const nx = dx / dist;
+    const ny = dy / dist;
+    const relVelX = a.dx - b.dx;
+    const relVelY = a.dy - b.dy;
+    const relDot = relVelX * nx + relVelY * ny;
+    if (relDot > 0) return;
+
+    const m1 = a.mass;
+    const m2 = b.mass;
+    const impulse = (2 * relDot) / (m1 + m2);
+    a.dx -= impulse * m2 * nx;
+    a.dy -= impulse * m2 * ny;
+    b.dx += impulse * m1 * nx;
+    b.dy += impulse * m1 * ny;
+
+    const minDist = a.radius + b.radius;
+    const overlap = minDist - dist;
+    if (overlap > 0) {
+      a.x += nx * overlap * (m2 / (m1 + m2));
+      a.y += ny * overlap * (m2 / (m1 + m2));
+      b.x -= nx * overlap * (m1 / (m1 + m2));
+      b.y -= ny * overlap * (m1 / (m1 + m2));
+    }
   }
 
   function step() {
@@ -64,13 +88,7 @@ function initLogoBackground() {
         const dist = Math.hypot(dx, dy);
         const minDist = s.radius + o.radius;
         if (dist < minDist) {
-          bounce(s, o);
-          const angle = Math.atan2(dy, dx);
-          const overlap = minDist - dist;
-          s.x += Math.cos(angle) * (overlap / 2);
-          s.y += Math.sin(angle) * (overlap / 2);
-          o.x -= Math.cos(angle) * (overlap / 2);
-          o.y -= Math.sin(angle) * (overlap / 2);
+          resolveCollision(s, o);
         }
       }
 
