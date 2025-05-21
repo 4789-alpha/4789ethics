@@ -1,32 +1,40 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <title>Ethicom Interface</title>
   <link rel="stylesheet" href="ethicom-style.css" />
-  <script src="interface-loader.js"></script>
   <script src="ethicom-utils.js"></script>
+  <script src="interface-loader.js"></script>
+  <script src="signature-verifier.js"></script>
 </head>
 <body>
   <div class="card">
     <h2 id="title">Ethicom Evaluation</h2>
+
     <div id="badge_display" class="badge-row"></div>
 
     <div id="op_interface">
-      <p class="info">Loading appropriate interface for your operator level...</p>
+      <p class="info">To continue, you must verify your signature.</p>
+
+      <button onclick="beginSignatureVerification()">Verify Signature</button>
     </div>
 
     <pre id="output" class="card" style="background:#2b2b2b; white-space:pre-wrap; color:#ccc;"></pre>
   </div>
 
   <script>
-    // Beispiel: aktuelle OP-Stufe manuell gesetzt (später dynamisch)
-    const op_level = "OP-3";      // z. B. OP-0 bis OP-8
-    const max_reached = "OP-3";   // ggf. OP-7.9
+    async function beginSignatureVerification() {
+      const result = await verifySignature("OP-1");
 
-    renderBadge(op_level, max_reached);
-    loadInterfaceForOP(op_level);
+      if (!result.valid) {
+        document.getElementById("op_interface").innerHTML = "<p class='error'>Verification failed: " + result.reason + "</p>";
+        return;
+      }
+
+      renderBadge(result.level, result.level);  // optional: add max_rank if stored
+      loadInterfaceForOP(result.level);
+    }
   </script>
 </body>
 </html>
