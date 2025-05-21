@@ -1,0 +1,51 @@
+/* wings-style.css – responsive design */
+:root {
+  --bg-color: #1e1e1e;
+  --text-color: #e0e0e0;
+  --primary-color: #228B22;
+  --accent-color: #ccaa22;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: system-ui, sans-serif;
+  margin: 0;
+}
+
+header {
+  text-align: center;
+  padding: 1em;
+  background: #222;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  background: #333;
+  padding: 0.5em;
+}
+
+nav a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+main {
+  padding: 1em;
+  max-width: 1200px;
+  margin: auto;
+}
+
+@media (min-width: 600px) {
+  main {
+    padding: 2em;
+  }
+}
+
+@media (min-width: 900px) {
+  nav {
+    gap: 2em;
+  }
+}
