@@ -5,8 +5,9 @@
   <title>Ethicom Interface</title>
   <link rel="stylesheet" href="ethicom-style.css" />
   <script src="ethicom-utils.js"></script>
-  <script src="interface-loader.js"></script>
   <script src="signature-verifier.js"></script>
+  <script src="interface-loader.js"></script>
+  <script src="language-selector.js"></script>
 </head>
 <body>
   <div class="card">
@@ -14,9 +15,26 @@
 
     <div id="badge_display" class="badge-row"></div>
 
-    <div id="op_interface">
-      <p class="info">To continue, you must verify your signature.</p>
+    <div id="lang_selection" class="card">
+      <label for="lang_select">Choose your language (ISO 639-1):</label>
+      <select id="lang_select">
+        <option value="">--</option>
+        <option value="ar">ar</option>
+        <option value="de">de</option>
+        <option value="en">en</option>
+        <option value="es">es</option>
+        <option value="fr">fr</option>
+        <option value="hi">hi</option>
+        <option value="ja">ja</option>
+        <option value="pt">pt</option>
+        <option value="ru">ru</option>
+        <option value="sw">sw</option>
+        <option value="zh">zh</option>
+      </select>
+    </div>
 
+    <div id="op_interface">
+      <p class="info">To continue, please verify your signature.</p>
       <button onclick="beginSignatureVerification()">Verify Signature</button>
     </div>
 
@@ -24,15 +42,30 @@
   </div>
 
   <script>
+    let userLang = null;
+
+    document.getElementById("lang_select").addEventListener("change", e => {
+      userLang = e.target.value;
+      localStorage.setItem("ethicom_lang", userLang);
+
+      fetch("i18n/ui-text.json")
+        .then(r => r.json())
+        .then(texts => {
+          const t = texts[userLang] || {};
+          applyTexts(t);  // set labels, buttons, etc.
+        });
+    });
+
     async function beginSignatureVerification() {
       const result = await verifySignature("OP-1");
 
       if (!result.valid) {
-        document.getElementById("op_interface").innerHTML = "<p class='error'>Verification failed: " + result.reason + "</p>";
+        document.getElementById("op_interface").innerHTML =
+          "<p class='error'>Verification failed: " + result.reason + "</p>";
         return;
       }
 
-      renderBadge(result.level, result.level);  // optional: add max_rank if stored
+      renderBadge(result.level, result.level);
       loadInterfaceForOP(result.level);
     }
   </script>
