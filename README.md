@@ -33,6 +33,7 @@ Humor ist willkommen, wenn er Verantwortung und Klarheit unterstützt.
 - [Generating Interface README](#generating-interface-readme)
 - [Gatekeeper Control](#gatekeeper-control)
 - [API Access Control](#api-access-control)
+- [OP Function Bundles](#op-function-bundles)
 - [Currency Synchronization](#currency-synchronization)
 - [Roadmap](#roadmap)
 - [Local Deployment](#local-deployment)
@@ -115,6 +116,13 @@ limited to the local environment.
 the operator level and confirmation flags from `app/user_state.yaml` and grants
 access only when the specified OP level is met and the user has confirmed
 ethical intent.
+
+### OP Function Bundles [⇧](#contents)
+
+`tools/op-functions.js` exposes small helper functions that unlock
+only when the necessary operator level and ethical confirmation are present.
+Each function is associated with a minimum OP level and the
+module checks permission via `api-access.js` before returning it.
 
 ### Currency Synchronization [⇧](#contents)
 
