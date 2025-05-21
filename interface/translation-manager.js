@@ -113,6 +113,8 @@ function applyTexts(t) {
   if (navReadme) navReadme.textContent = t.nav_readme || navReadme.textContent;
   const navTools = document.querySelector('[data-ui="nav_tools"]');
   if (navTools) navTools.textContent = t.nav_tools || navTools.textContent;
+  const navSettings = document.querySelector('[data-ui="nav_settings"]');
+  if (navSettings) navSettings.textContent = t.nav_settings || navSettings.textContent;
 
   const previewMsg = document.querySelector('[data-ui="preview_msg"]');
   if (previewMsg) previewMsg.textContent = t.preview_msg || previewMsg.textContent;
