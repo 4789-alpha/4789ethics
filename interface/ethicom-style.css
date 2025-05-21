@@ -245,3 +245,10 @@ button:hover {
   max-width: none;
 }
 
+/* Modified logo used in citation view */
+.citation-logo {
+  width: 28px;
+  vertical-align: middle;
+  filter: hue-rotate(-80deg) saturate(0.7);
+}
+

@@ -20,7 +20,7 @@ async function initRatings() {
     caption.textContent = 'Bewertungsverlauf';
     table.appendChild(caption);
     const thead = document.createElement('thead');
-    thead.innerHTML = '<tr><th>Zeitstempel</th><th>Quelle</th><th>SRC</th><th>OP</th><th>Kommentar</th></tr>';
+    thead.innerHTML = '<tr><th>Zeitstempel</th><th>Quelle</th><th>SRC</th><th>OP</th><th>Logo</th><th>Kommentar</th></tr>';
     table.appendChild(thead);
     const tbody = document.createElement('tbody');
 
@@ -34,7 +34,9 @@ async function initRatings() {
 
     ratings.forEach(r => {
       const row = document.createElement('tr');
-      row.innerHTML = `<td>${r.timestamp}</td><td>${r.source_id}</td><td>${r.src_lvl}</td><td>${r.op_level}</td><td>${r.comment || ''}</td>`;
+      const opNum = parseInt(String(r.op_level).replace('OP-', '').split('.')[0], 10);
+      const logo = `<img class="citation-logo" src="../op-logo/tanna_op${opNum}.png" alt="Logo ${r.op_level}">`;
+      row.innerHTML = `<td>${r.timestamp}</td><td>${r.source_id}</td><td>${r.src_lvl}</td><td>${r.op_level}</td><td>${logo}</td><td>${r.comment || ''}</td>`;
       tbody.appendChild(row);
 
       const num = srcMap[r.src_lvl] || 0;
