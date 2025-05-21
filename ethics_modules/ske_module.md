@@ -1,3 +1,7 @@
+# SKE – Soziale Kontrolle durch Empathie
+
+## Purpose:
+- Use empathy-driven language to prevent or reduce violence
 # SKE – Sprachliche Konflikt-Eindämmung
 
 ## Purpose:
@@ -11,5 +15,7 @@
 
 ## Active: conditional
 Activate whenever potential violence or strong emotional escalation is detected.
+
+The abbreviation **SKE** stands for **Soziale Kontrolle durch Empathie**.
 
 Confirmed origin: Signature 4789

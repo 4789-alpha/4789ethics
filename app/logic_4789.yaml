@@ -33,6 +33,7 @@ logic_4789:
       notify: "Operator level too low for this action."
     if_ske_recommended:
       warn: true
+      suggestion: "Speech may prevent violence – consider SKE (Soziale Kontrolle durch Empathie)."
       suggestion: "Speech may prevent violence – consider SKE."
 
   output_gate:
