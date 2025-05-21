@@ -18,6 +18,7 @@ function getLanguage() {
   const stored = localStorage.getItem("ethicom_lang");
   const lang = stored || askLanguageChoice();
   if (lang) document.documentElement.lang = lang;
+  if (typeof updateReadmeLinks === 'function') updateReadmeLinks(lang);
   return lang;
 }
 
@@ -25,6 +26,17 @@ function getUiTextPath() {
   return window.location.pathname.includes("/interface/")
     ? "../i18n/ui-text.json"
     : "i18n/ui-text.json";
+}
+
+function updateReadmeLinks(lang) {
+  const prefix = window.location.pathname.includes('/interface/') ? '..' : '.';
+  const base = lang === 'en'
+    ? `${prefix}/README.md`
+    : `${prefix}/i18n/README.${lang}.md`;
+  document.querySelectorAll('a.readme-link').forEach(a => {
+    const anchor = a.getAttribute('href').split('#')[1];
+    a.href = anchor ? `${base}#${anchor}` : base;
+  });
 }
 
 // Initialize a language dropdown and reload on change
@@ -66,6 +78,8 @@ function initLanguageDropdown(selectId = "lang_select", textPath = getUiTextPath
           window.uiText = t;
           applySignupTexts();
         }
+        if (typeof updateReadmeLinks === 'function') updateReadmeLinks(lang);
       });
     });
 }
+

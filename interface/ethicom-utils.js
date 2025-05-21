@@ -1,6 +1,13 @@
 
 // ethicom-utils.js – Hilfsfunktionen für Interface-Anzeige
 
+function getReadmePath(lang) {
+  const prefix = window.location.pathname.includes('/interface/') ? '..' : '.';
+  return lang === 'en'
+    ? `${prefix}/README.md`
+    : `${prefix}/i18n/README.${lang}.md`;
+}
+
 function renderBadge(currentRank, maxRank) {
   const badgeDisplay = document.getElementById("badge_display");
   if (!badgeDisplay) return;
@@ -9,9 +16,9 @@ function renderBadge(currentRank, maxRank) {
   mainSpan.className = `badge op-${currentRank.replace("OP-", "").replace(".", "")}`;
   mainSpan.textContent = currentRank;
 
+  const lang = localStorage.getItem('ethicom_lang') || document.documentElement.lang || 'en';
   const mainLink = document.createElement("a");
-  mainLink.href = `README.html#${currentRank.toLowerCase().replace(/\./g, '-')}`;
-  mainLink.href = `README.md#${currentRank.toLowerCase().replace(/\./g, '-')}`;
+  mainLink.href = `${getReadmePath(lang)}#${currentRank.toLowerCase().replace(/\./g, '-')}`;
   mainLink.appendChild(mainSpan);
 
   badgeDisplay.innerHTML = "";
@@ -46,14 +53,14 @@ function renderAllBadges() {
     "OP-12"
   ];
 
+  const lang = localStorage.getItem('ethicom_lang') || document.documentElement.lang || 'en';
   gallery.innerHTML = "";
   levels.forEach(lvl => {
     const span = document.createElement("span");
     span.className = `badge op-${lvl.replace("OP-", "").replace(/\./g, "")}`;
     span.textContent = lvl;
     const link = document.createElement("a");
-    link.href = `README.html#${lvl.toLowerCase().replace(/\./g, '-')}`;
-    link.href = `README.md#${lvl.toLowerCase().replace(/\./g, '-')}`;
+    link.href = `${getReadmePath(lang)}#${lvl.toLowerCase().replace(/\./g, '-')}`;
     link.appendChild(span);
     gallery.appendChild(link);
   });
@@ -102,3 +109,5 @@ function opLevelToNumber(level) {
 
 window.getStoredOpLevel = getStoredOpLevel;
 window.opLevelToNumber = opLevelToNumber;
+window.getReadmePath = getReadmePath;
+
