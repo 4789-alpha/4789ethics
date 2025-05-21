@@ -26,7 +26,7 @@ function applySignupTexts() {
 
 function initSignup() {
   const lang = getLanguage();
-  fetch('i18n/ui-text.json')
+  fetch('../i18n/ui-text.json')
     .then(r => r.json())
     .then(data => {
       uiText = data[lang] || data.en || {};
