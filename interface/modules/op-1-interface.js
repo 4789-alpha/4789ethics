@@ -52,4 +52,5 @@ function generateSignedManifest() {
 
   const output = document.getElementById("output");
   output.textContent = JSON.stringify(evalData, null, 2);
+  triggerSelfReflection("Review your evaluation via structure_9874.");
 }
