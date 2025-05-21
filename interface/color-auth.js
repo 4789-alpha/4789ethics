@@ -1,4 +1,11 @@
 function verifyColorAuth() {
+  const lastTime = parseInt(localStorage.getItem('ethicom_color_time') || '0', 10);
+  const now = Date.now();
+  const twentyFourHours = 24 * 60 * 60 * 1000;
+  if (now - lastTime < twentyFourHours) return;
+
+  localStorage.setItem('ethicom_color_time', String(now));
+
   const stored = localStorage.getItem('ethicom_color');
   const colors = ['rot', 'gruen', 'grün', 'blau', 'gelb'];
   let question = stored
