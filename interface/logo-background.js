@@ -16,7 +16,7 @@ function initLogoBackground() {
   const levels = [0, 1, 2, 3, 4, 5, 6, 7];
   const maxLvl = Math.max(...levels);
   const minScale = 0.3;
-  const FADE_MS = 500;
+  const FADE_MS = 1000;
   const images = levels.map(lvl => {
     const img = new Image();
     img.src = `../op-logo/tanna_op${lvl}.png`;
