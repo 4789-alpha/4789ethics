@@ -57,8 +57,8 @@ function applyTexts(t) {
   if (titleEl) titleEl.textContent = t.title || titleEl.textContent;
   const sourceLabel = document.querySelector('label[for="sig_input"]');
   if (sourceLabel) sourceLabel.textContent = t.label_source || sourceLabel.textContent;
-  const commentLabel = document.querySelector('label[for="sig_pass"]');
-  if (commentLabel) commentLabel.textContent = t.label_comment || commentLabel.textContent;
+  const passLabel = document.querySelector('label[for="sig_pass"]');
+  if (passLabel) passLabel.textContent = t.signup_password || passLabel.textContent;
   const verifyBtn = document.querySelector('#signature_area button');
   if (verifyBtn) verifyBtn.textContent = t.btn_generate || verifyBtn.textContent;
 
