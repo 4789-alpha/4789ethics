@@ -27,6 +27,8 @@ Just structured responsibility.
 - `interface-loader.js` → loads correct module for OP-0 to OP-8
 - `language-selector.js` → user selects language (ISO 639-1)
 - `source-search.js` → search and verify sources
+├── signup.html
+├── signup.js
 
 ---
 
@@ -58,6 +60,8 @@ interface/
 ├── interface-loader.js
 ├── language-selector.js
 ├── source-search.js
+├── signup.html
+├── signup.js
 ├── modules/
 │   ├── op-0-interface.js
 │   ├── op-1-interface.js
