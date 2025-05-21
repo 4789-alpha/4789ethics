@@ -27,12 +27,18 @@
   --accent-color: #228B22;
 }
 
+@keyframes fadeInPage {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
   font-family: system-ui, sans-serif;
   margin: 0;
   padding: 0;
+  animation: fadeInPage 0.6s ease-in-out;
 }
 
 header {
@@ -218,6 +224,14 @@ button:hover {
 }
 
 #op_background img {
+
+  max-width: 100px;
+  animation: logoSpin 20s linear infinite;
+}
+  
+@keyframes logoSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
   position: absolute;
   max-width: none;
 }
