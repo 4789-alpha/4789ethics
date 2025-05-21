@@ -107,6 +107,10 @@ loaded dynamically so the system can scale from OP-0 through OP-10.
 
 Activate dev mode via the toggle button on `ethicom.html` or add `?dev` to the URL. When enabled, help and info sections reveal additional details for development and debugging. The state is stored in your browser's localStorage under `ethicom_dev`.
 
+## OP-0 Test Mode
+
+Use the "Toggle OP-0 Test Mode" button to try anonymous evaluations without storing them as evidence. When enabled, a notice appears in the OP‑0 interface and generated data is **not** recorded in `localStorage`.
+
 ## Designprinzipien
 
 Siehe [shneiderman-rules.md](shneiderman-rules.md) für die acht Gestaltungsrichtlinien, die im Interface berücksichtigt werden.
