@@ -16,12 +16,20 @@ function askLanguageChoice() {
 
 function getLanguage() {
   const stored = localStorage.getItem("ethicom_lang");
-  return stored || askLanguageChoice();
+  const lang = stored || askLanguageChoice();
+  if (lang) document.documentElement.lang = lang;
+  return lang;
+}
+
+function getUiTextPath() {
+  return window.location.pathname.includes("/interface/")
+    ? "../i18n/ui-text.json"
+    : "i18n/ui-text.json";
 }
 
 // Initialize a language dropdown and reload on change
-function initLanguageDropdown(selectId = "lang_select") {
-  fetch("../i18n/ui-text.json")
+function initLanguageDropdown(selectId = "lang_select", textPath = getUiTextPath()) {
+  fetch(textPath)
     .then(r => r.json())
     .then(texts => {
       const select = document.getElementById(selectId);
