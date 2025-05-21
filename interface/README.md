@@ -1,0 +1,61 @@
+# Ethicom – Ethical Evaluation Interface (by 4789)
+
+**Ethicom** is a responsibility-based evaluation framework.  
+It enables anonymous and signed evaluations of digital structures, systems, and sources.
+
+No personal account. No tracking. No influence.  
+Just structured responsibility.
+
+---
+
+## Core Principles (by 4789)
+
+- **Every OP-level is earned through structure, not status**
+- **Signatures are created locally and verified structurally**
+- **Languages are equal – no default, no bias**
+- **Responsibility must be visible, verifiable, and correctable**
+- **No one can act as OP-8 – OP-8 is structure itself**
+
+---
+
+## Interface Overview
+
+- `ethicom.html` → loads modular interface per OP-level
+- `ethicom-style.css` → dark mode, badge colors, minimal energy
+- `signature-generator.js` → local signature creation (e.g. `SIG-XXXX-XXXX-XXXX`)
+- `signature-verifier.js` → hash & password check before activation
+- `interface-loader.js` → loads correct module for OP-0 to OP-8
+- `language-selector.js` → user selects language (ISO 639-1)
+
+---
+
+## Ethical Conditions
+
+| Level      | Description                         |
+|------------|-------------------------------------|
+| OP-0       | anonymous observer                  |
+| OP-1       | first signed rating                 |
+| OP-3+      | rating requires justification       |
+| OP-4+      | can revise after 3 weeks            |
+| OP-5+      | may withdraw previous evaluations   |
+| OP-6+      | can verify consensus                |
+| OP-7.9     | may verify donations / nominate     |
+| OP-8       | structure observer – no user input  |
+
+---
+
+## File Structure
+
+```plaintext
+interface/
+├── ethicom.html
+├── ethicom-style.css
+├── signature-generator.js
+├── signature-verifier.js
+├── interface-loader.js
+├── language-selector.js
+├── modules/
+│   ├── op-0-interface.js
+│   ├── op-1-interface.js
+│   ├── ...
+│   └── op-8-analysis.js
