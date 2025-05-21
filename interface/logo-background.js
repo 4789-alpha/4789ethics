@@ -11,7 +11,7 @@ function loadOpLogos() {
     img.src = `../op-logo/tanna_op${lvl}.png`;
     img.alt = `OP-${lvl} logo`;
     img.style.position = 'absolute';
-    const size = 40 + lvl * 8; // larger level -> larger logo
+    const size = 30 + lvl * 4; // more subtle sizing
     img.style.width = size + 'px';
     img.style.left = Math.random() * (width - size) + 'px';
     img.style.top = Math.random() * (height - size) + 'px';

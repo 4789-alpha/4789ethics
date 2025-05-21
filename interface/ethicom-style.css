@@ -74,6 +74,17 @@ header h1 {
   font-size: 1.4em;
 }
 
+.hero {
+  text-align: center;
+  margin: 1.5em auto;
+  font-size: 1.2em;
+}
+
+.tagline {
+  margin: 0;
+  font-weight: 300;
+}
+
 main {
   max-width: 900px;
   margin: 0 auto;
@@ -95,7 +106,8 @@ input,
 select,
 textarea {
   width: 100%;
-  padding: 0.5em;
+  padding: 0.7em;
+  font-size: 1.05em;
   margin-bottom: 0.8em;
   border: 1px solid #555;
   border-radius: 4px;
@@ -222,9 +234,8 @@ button:hover {
 }
 
 #op_background img {
-
-  max-width: 100px;
-  animation: logoSpin 20s linear infinite;
+  max-width: 60px;
+  animation: logoSpin 40s linear infinite;
 }
   
 @keyframes logoSpin {
