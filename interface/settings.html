@@ -11,6 +11,7 @@
   <script src="op0-testmode.js"></script>
   <script src="accessibility.js"></script>
   <script src="color-auth.js"></script>
+  <script src="touch-features.js"></script>
   <script src="logo-background.js"></script>
 </head>
 <body>
@@ -48,6 +49,14 @@
       </select>
       <button id="custom_theme_btn" style="display:none;margin-top:0.5em;" class="accent-button">Create Custom Scheme</button>
     </div>
+    <div id="touch_features" class="card">
+      <h3 data-ui="touch_settings_title">Touch Features</h3>
+      <label><input type="checkbox" id="touch_gestures"/> <span data-ui="touch_toggle_gestures">Enable gestures</span></label><br/>
+      <label><input type="checkbox" id="touch_longpress"/> <span data-ui="touch_toggle_longpress">Enable quick menus</span></label><br/>
+      <label><input type="checkbox" id="touch_drawing"/> <span data-ui="touch_toggle_drawing">Enable drawing</span></label><br/>
+      <label><input type="checkbox" id="touch_bigbuttons"/> <span data-ui="touch_toggle_bigbuttons">Larger buttons</span></label><br/>
+      <label><input type="checkbox" id="touch_haptics"/> <span data-ui="touch_toggle_haptics">Haptic feedback</span></label>
+    </div>
     <div id="dev_toggle" class="card">
       <button onclick="toggleDevMode()" class="accent-button">Toggle Dev Mode</button>
     </div>
@@ -64,6 +73,21 @@
         const texts = t[lang] || t.en || {};
         applyTexts(texts);
       });
+
+      const s = window.touchSettings && window.touchSettings.state || {};
+      const g = document.getElementById('touch_gestures');
+      const h = document.getElementById('touch_haptics');
+      const d = document.getElementById('touch_drawing');
+      const b = document.getElementById('touch_bigbuttons');
+      const l = document.getElementById('touch_longpress');
+      if (g) g.checked = s.gestures; if (h) h.checked = s.haptics;
+      if (d) d.checked = s.drawing; if (b) b.checked = s.bigButtons;
+      if (l) l.checked = s.longPressMenu;
+      if (g) g.addEventListener('change', e => touchSettings.toggleGestures(e.target.checked));
+      if (h) h.addEventListener('change', e => touchSettings.toggleHaptics(e.target.checked));
+      if (d) d.addEventListener('change', e => touchSettings.toggleDrawing(e.target.checked));
+      if (b) b.addEventListener('change', e => touchSettings.toggleBigButtons(e.target.checked));
+      if (l) l.addEventListener('change', e => touchSettings.toggleLongPressMenu(e.target.checked));
     });
   </script>
 </body>

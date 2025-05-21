@@ -336,3 +336,20 @@ body.simple-mode button {
   padding: 0.8em;
 }
 
+
+/* Larger buttons for touch use */
+body.touch-big-buttons button {
+  padding: 1.2em;
+  font-size: 1.1em;
+}
+
+/* Canvas overlay for drawing */
+.drawing-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1000;
+}
