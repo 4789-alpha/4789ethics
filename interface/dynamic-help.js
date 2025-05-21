@@ -43,19 +43,19 @@ const helpMap = {
   'OP-7': { title: 'OP-7 Tips', items: [
     'You hold structural authority for nominations.'
   ] },
-  'OP-7.5': { title: 'OP-7.5 Tips', items: [
-    'Prepare nominations and review OP-8 observations.'
-  ] },
-  'OP-7.9': { title: 'OP-7.9 Tips', items: [
-    'Nominate operators and verify donations.'
-  ] },
   'OP-8': { title: 'OP-8 Tips', items: [
-    'System-driven structural analysis level.'
+    'Prepare nominations and review OP-10 observations.'
   ] },
   'OP-9': { title: 'OP-9 Tips', items: [
-    'Yokozuna-level responsibilities apply.'
+    'Nominate operators and verify donations.'
   ] },
   'OP-10': { title: 'OP-10 Tips', items: [
+    'System-driven structural analysis level.'
+  ] },
+  'OP-11': { title: 'OP-11 Tips', items: [
+    'Yokozuna-level responsibilities apply.'
+  ] },
+  'OP-12': { title: 'OP-12 Tips', items: [
     'First non-human development stage.'
   ] }
 };

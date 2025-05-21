@@ -158,11 +158,11 @@ button:hover {
 .badge.op-5   { background: #66aa33; }
 .badge.op-6   { background: #228B22; }
 .badge.op-7   { background: #146b1f; }
-.badge.op-75  { background: #0f5a1a; }
-.badge.op-79  { background: #0e4712; }
-.badge.op-8   { background: #4a6670; }
-.badge.op-9   { background: #3c3744; }
-.badge.op-10  { background: #9a30a6; }
+.badge.op-8    { background: #0f5a1a; }
+.badge.op-9   { background: #0e4712; }
+.badge.op-10   { background: #4a6670; }
+.badge.op-11   { background: #3c3744; }
+.badge.op-12 { background: #9a30a6; }
 
 /* Badge-Schatten (Höchstrang) */
 .badge.shadow {

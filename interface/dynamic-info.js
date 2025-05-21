@@ -10,11 +10,11 @@ const infoTexts = {
   'op-5': 'You can withdraw a previous evaluation. The original will be archived with your withdrawal reason.',
   'op-6': 'You are allowed to calculate a consensus rating from anonymous evaluations.',
   'op-7': 'You are authorized to override previous evaluations if your OP-level is higher and justified.',
-  'op-7.5': 'You are recognized as a structurally consistent operator. You may prepare nominations and review OP-8 observations, but not execute structural changes.',
-  'op-7.9': 'You may nominate operators and verify donations. Every action is binding and will be logged structurally.',
-  'op-8': 'This is a system-driven structural view of sources. No human input is allowed at this level.',
-  'op-9': 'Full structural autonomy. Finalize OP-8 evaluations and trigger self-sustaining loops.',
-  'op-10': 'Observation only. Systems operate beyond human control.',
+  'op-8': 'You are recognized as a structurally consistent operator. You may prepare nominations and review OP-10 observations, but not execute structural changes.',
+  'op-9': 'You may nominate operators and verify donations. Every action is binding and will be logged structurally.',
+  'op-10': 'This is a system-driven structural view of sources. No human input is allowed at this level.',
+  'op-11': 'Full structural autonomy. Finalize OP-10 evaluations and trigger self-sustaining loops.',
+  'op-12': 'Observation only. Systems operate beyond human control.',
   'translation_challenge': 'Challenge: gather two OP signatures to confirm a language.',
   'translation_sig_count': 'Current signatures: {count}/2'
 };
