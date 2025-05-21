@@ -29,6 +29,7 @@ No manipulation. No simulation. No flattening of responsibility.
 - [Evaluated Sources (as examples)](#evaluated-sources-as-examples)
 - [File Integrity](#file-integrity)
 - [Adding Languages](#adding-languages)
+- [Generating Interface README](#generating-interface-readme)
 - [Gatekeeper Control](#gatekeeper-control)
 - [Roadmap](#roadmap)
 - [Local Deployment](#local-deployment)
@@ -82,6 +83,19 @@ entry. The interface will automatically recognize the new language.
 Word collections for additional languages can be gathered with
 `tools/language-corpus.js`. The script updates `i18n/language-corpus.json`
 based on plain text input.
+
+### Generating Interface README [⇧](#contents)
+
+Create a localized README for the interface by running:
+
+```bash
+node tools/generate-haupt-readme.js <lang>
+```
+
+Replace `<lang>` with a two-letter ISO code (e.g. `de` or `fr`).
+The script copies the matching `i18n/README.<lang>.md` into
+`interface/haupt-readme.md`. If no translation exists, the English
+README is used.
 
 ### Gatekeeper Control [⇧](#contents)
 
