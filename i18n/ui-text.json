@@ -495,7 +495,7 @@
       "Purpose Clarity"
     ]
   },
-"zu": {
+  "zu": {
     "title": "Ethicom: Human Evaluation",
     "label_source": "Source (URL or Title)",
     "label_srclvl": "Ethical Level (SRC)",
@@ -508,7 +508,23 @@
       "Repairability",
       "System Reflection",
       "Error Handling",
-      "Purpose Clarity"
+    "Purpose Clarity"
+  ]
+  },
+  "nl": {
+    "title": "Ethicom: Menselijke Evaluatie",
+    "label_source": "Bron (URL of titel)",
+    "label_srclvl": "Ethisch Niveau (SRC)",
+    "label_aspects": "Optionele Aspecten",
+    "label_comment": "Opmerking",
+    "btn_generate": "Toon mijn evaluatie",
+    "btn_download": "Download als bestand",
+    "aspects": [
+      "Transparantie",
+      "Repareerbaarheid",
+      "Systeemreflectie",
+      "Foutenafhandeling",
+      "Doelduidelijkheid"
     ]
   }
 }
