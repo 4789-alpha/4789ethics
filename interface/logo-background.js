@@ -48,7 +48,8 @@ function initLogoBackground() {
       rotation: 0,
       rotSpeed: 0,
       rotFrames: 0,
-      hideFrames: 0,
+      alpha: 1,
+      fadeDir: 0,
     });
   }
 
@@ -104,33 +105,51 @@ function initLogoBackground() {
         if (dist < minDist) {
           resolveCollision(s, o);
           if (s.lvl < o.lvl) {
-            s.rotSpeed = 0.2 + Math.random() * 0.3;
+            const base = 0.2 + Math.random() * 0.3;
+            const factor = 1 - s.lvl / (maxLvl + 1);
+            s.rotSpeed = base * factor;
             s.rotFrames = 180;
-            s.hideFrames = 10;
+            s.fadeDir = -1;
           } else if (o.lvl < s.lvl) {
-            o.rotSpeed = 0.2 + Math.random() * 0.3;
+            const base = 0.2 + Math.random() * 0.3;
+            const factor = 1 - o.lvl / (maxLvl + 1);
+            o.rotSpeed = base * factor;
             o.rotFrames = 180;
-            o.hideFrames = 10;
+            o.fadeDir = -1;
           }
         }
       }
 
-      if (s.rotFrames > 0) {
-        s.rotation += s.rotSpeed;
-        s.rotFrames--;
-      } else {
-        s.rotSpeed = 0;
-      }
-      if (s.hideFrames > 0) {
-        s.hideFrames--;
-      } else {
+        if (s.rotFrames > 0) {
+          s.rotation += s.rotSpeed;
+          s.rotFrames--;
+        } else {
+          s.rotSpeed = 0;
+        }
+
+        if (s.fadeDir !== 0) {
+          if (s.fadeDir === -1) {
+            s.alpha -= 0.1;
+            if (s.alpha <= 0) {
+              s.alpha = 0;
+              s.fadeDir = 1;
+            }
+          } else if (s.fadeDir === 1) {
+            s.alpha += 0.1;
+            if (s.alpha >= 1) {
+              s.alpha = 1;
+              s.fadeDir = 0;
+            }
+          }
+        }
+
         ctx.save();
         ctx.translate(s.x, s.y);
         if (s.rotation) ctx.rotate(s.rotation);
+        ctx.globalAlpha = s.alpha;
         ctx.drawImage(s.img, -s.radius, -s.radius, s.size, s.size);
         ctx.restore();
       }
-    }
 
     requestAnimationFrame(step);
   }
