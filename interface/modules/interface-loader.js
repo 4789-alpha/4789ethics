@@ -4,7 +4,10 @@ function loadInterfaceForOP(op_level) {
   const target = document.getElementById("op_interface");
   if (!target) return;
 
-  const normalized = op_level.toLowerCase().replace("+", "plus").replace(".", "");
+  const normalized = op_level
+    .toLowerCase()
+    .replace("+", "plus")
+    .replace(/[-.]/g, "");
   const moduleMap = {
     "op0": "op-0-interface.js",
     "op1": "op-1-interface.js",
@@ -29,7 +32,9 @@ function loadInterfaceForOP(op_level) {
 
   script.src = `modules/${file}`;
   script.onload = () => {
-    const initFunc = `init${op_level.replace(".", "").replace("+", "plus")}Interface`;
+    const initFunc = `init${op_level
+      .replace(/[-.]/g, "")
+      .replace("+", "plus")}Interface`;
     if (typeof window[initFunc] === "function") {
       window[initFunc]();
     } else if (op_level === "OP-8") {
