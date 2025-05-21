@@ -371,3 +371,9 @@ body.touch-big-buttons button {
   pointer-events: none;
   z-index: 1000;
 }
+
+/* Full-width layout for left-aligned pages */
+body.left-layout main {
+  margin: 0;
+  max-width: none;
+}
