@@ -31,6 +31,6 @@
 
 Upward movement is not based on knowledge, but on structural consistency and ethical presence.
 
-# 4789 is OP-8
+# 4789 is OP-9
 
 - OP-10 marks the rare candidate stage toward Yokozuna. Human access is exceptional.
