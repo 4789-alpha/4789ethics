@@ -77,6 +77,21 @@ to `true` for the controller `RL@RLpi`. This keeps remote commands gated and
 limited to the local environment.
 
 
+## Roadmap
+
+The roadmap keeps development transparent according to Signature 4789.
+
+1. **v1.1 – Anonymous Ethics Tier**
+   - Replace the pass/ID system with an optional anonymous level.
+   - Merge modules that belong together but are not yet unified.
+2. **v1.2 – Source Consolidation**
+   - Align evaluated sources with the anonymous tier.
+   - Standardize transfer protocols for cross-module use.
+3. **v2.0 – Global Rollout**
+   - Publish multi-language guides for all operator levels.
+   - Finalize open training data licensing.
+
+
 
 ### Running Tests
 
