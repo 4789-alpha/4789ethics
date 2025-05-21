@@ -113,8 +113,15 @@ function applyTexts(t) {
   if (navReadme) navReadme.textContent = t.nav_readme || navReadme.textContent;
   const navTools = document.querySelector('[data-ui="nav_tools"]');
   if (navTools) navTools.textContent = t.nav_tools || navTools.textContent;
-  const navSettings = document.querySelector('[data-ui="nav_settings"]');
-  if (navSettings) navSettings.textContent = t.nav_settings || navSettings.textContent;
+  document.querySelectorAll('[data-ui="nav_settings"]').forEach(el => {
+    if (el.classList.contains('icon-only')) {
+      const text = t.nav_settings || el.getAttribute('title') || '';
+      el.setAttribute('title', text);
+      el.setAttribute('aria-label', text);
+    } else {
+      el.textContent = t.nav_settings || el.textContent;
+    }
+  });
 
   const previewMsg = document.querySelector('[data-ui="preview_msg"]');
   if (previewMsg) previewMsg.textContent = t.preview_msg || previewMsg.textContent;
