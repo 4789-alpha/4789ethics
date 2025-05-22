@@ -126,7 +126,8 @@ Siehe [shneiderman-rules.md](shneiderman-rules.md) für die acht Gestaltungsrich
 
 Eine einfache Vorlage für neue Seiten befindet sich in `tanna-template.html`.
 Sie bindet `theme-manager.js` und `logo-background.js` ein und setzt das Schema
-auf Tanna.
+auf Tanna. Zwei Varianten mit höherem Kontrast stehen ebenfalls zur Verfügung:
+`tanna-template-dark.html` und `tanna-template-light.html`.
 
 ```html
 <!DOCTYPE html>
@@ -149,4 +150,7 @@ auf Tanna.
 </body>
 </html>
 ```
+
+Die beiden neuen Vorlagen setzen `applyTheme('tanna-dark')` bzw.
+`applyTheme('tanna-light')` ein.
 

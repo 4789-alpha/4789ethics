@@ -42,6 +42,33 @@
   --accent-color: #228B22;
 }
 
+/* Higher contrast variants for the Tanna look */
+.theme-tanna-dark {
+  --bg-color: #121212;
+  --text-color: #e6e6e6;
+  --header-text-color: #ffffff;
+  --nav-text-color: #ffffff;
+  --primary-color: #228B22;
+  --card-bg: #1e1e1e;
+  --header-bg: rgba(0, 0, 0, 0.85);
+  --nav-bg: rgba(0, 0, 0, 0.85);
+  --card-alpha-bg: rgba(34, 34, 34, 0.9);
+  --accent-color: #33cc33;
+}
+
+.theme-tanna-light {
+  --bg-color: #ffffff;
+  --text-color: #002200;
+  --header-text-color: #ffffff;
+  --nav-text-color: #ffffff;
+  --primary-color: #228B22;
+  --card-bg: #ffffff;
+  --header-bg: rgba(34, 34, 34, 0.95);
+  --nav-bg: rgba(34, 34, 34, 0.95);
+  --card-alpha-bg: rgba(255, 255, 255, 0.95);
+  --accent-color: #228B22;
+}
+
 .theme-ocean {
   --bg-color: #e8f3fa;
   --text-color: #00334d;
