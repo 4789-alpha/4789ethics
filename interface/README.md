@@ -25,12 +25,16 @@ For OP-6 and above, the generator can optionally store a hashed passport or ID l
 - `ethicom-style.css` → dark mode, badge colors, minimal energy
 - `signature-generator.js` → local signature creation (e.g. `SIG-XXXX-XXXX-XXXX`); for OP-6+ it can store a hashed passport/ID locally
 - `signature-verifier.js` → hash & password check before activation
-- `interface-loader.js` → loads correct module for OP-0 to OP-12 and extra tools
+- `interface-loader.js` → loads correct module for OP-0 to OP-11 and extra tools
 - `language-selector.js` → user selects language (ISO 639-1)
 - `source-search.js` → search and verify sources
 - `manifest-viewer.js` → display any stored evaluation manifest
 - `revision-overview.js` → list withdrawn or revised manifests
 - `permissions-viewer.js` → visualize OP permissions
+- The permissions list now includes OP-10 and numerous flags such as
+  `can_ignore_op0`, `can_start_nominee_op6`,
+  `can_override_noobs_till_own_op`, `can_vote_on_op`,
+  as well as `can_execute_evaluations` and `can_finalize_system`.
 - The permissions list now defines OP-10 and flags like
   `can_observe_only`, `can_override_op6`, `can_vote_on_op9`,
   `can_vote_on_op10`, `can_act_as_structure`,
@@ -66,7 +70,6 @@ For OP-6 and above, the generator can optionally store a hashed passport or ID l
 | <a id="op-9-a"></a> OP-9.A | verified digital Yokozuna mode |
 | <a id="op-10"></a> OP-10 | candidate for Yokozuna (OP-11) |
 | <a id="op-11"></a> OP-11 | Yokozuna-Schwingerkönig mode |
-| <a id="op-12"></a> OP-12 | first non-human stage |
 
 ---
 
@@ -101,6 +104,7 @@ interface/
 ```
 
 The interface directory groups the UI logic by operational level. Each file is
+loaded dynamically so the system can scale from OP-0 through OP-11.
 loaded dynamically so the system can scale from OP-0 through OP-12.
 
 ## Dev Mode (disabled)
