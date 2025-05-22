@@ -11,3 +11,15 @@ Inhalt dieses Repos:
 
 Interface: `ethicom.html`  
 Sprachen: siehe `i18n/ui-text.json`  
+
+## OP-0 – Anonymer Beobachter <a id="op-0"></a>
+
+OP-0 erlaubt dir, Ethicom anonym auszuprobieren.
+Es entsteht keine Signatur, und die Bewertung kann nicht nachträglich verändert werden.
+Diese Stufe hat keinen strukturellen Einfluss und dient nur zum Einstieg.
+
+## OP-1 – Erste signierte Bewertung <a id="op-1"></a>
+
+OP-1 ist die erste signierte Stufe.
+Du erkennst damit den ethischen Kontext an.
+Deine Bewertung wird nachvollziehbar.
