@@ -161,6 +161,28 @@
     "can_execute_evaluations": false,
     "can_finalize_system": false
   },
+  "OP-8": {
+    "can_rate": true,
+    "can_sign": true,
+    "can_comment": true,
+    "can_nominate": true,
+    "can_vote": true,
+    "can_override": false,
+    "can_retract": true,
+    "can_consensus": true,
+    "can_accept_donations": true,
+    "can_override_op6": true,
+    "can_vote_on_op9": true,
+    "can_vote_on_op10": true,
+    "can_accept_donations": false,
+    "can_override_op6": false,
+    "can_vote_on_op9": false,
+    "can_vote_on_op10": false,
+    "can_observe_only": false,
+    "can_act_as_structure": false,
+    "can_execute_evaluations": false,
+    "can_finalize_system": false
+  },
   "OP-9": {
     "can_rate": true,
     "can_sign": true,
