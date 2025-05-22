@@ -13,7 +13,7 @@ function initLogoBackground() {
   window.addEventListener('resize', resize);
   resize();
 
-  const levels = [0, 1, 2, 3, 4, 5, 6, 7];
+  const levels = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
   const maxLvl = Math.max(...levels);
   const minScale = 0.3;
   const FADE_MS = 1000;
