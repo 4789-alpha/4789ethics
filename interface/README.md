@@ -112,7 +112,7 @@ The test mode is no longer active. Evaluations are always stored according to yo
 
 The interface includes an accessibility setup (`accessibility.js`).
 Here you can choose larger fonts and activate a simplified interface.
-Simple mode hides advanced options and reduces visual load for inclusive use.
+Simple mode hides advanced options and reduces visual load for inclusive us.
 
 ## Designprinzipien
 
