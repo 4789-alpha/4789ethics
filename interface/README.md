@@ -108,6 +108,12 @@ Dev mode has been removed for security. The toggle now only shows an alert and d
 
 The test mode is no longer active. Evaluations are always stored according to your OP level.
 
+## Accessibility and Simple Mode
+
+The interface includes an accessibility setup (`accessibility.js`).
+Here you can choose larger fonts and activate a simplified interface.
+Simple mode hides advanced options and reduces visual load for inclusive use.
+
 ## Designprinzipien
 
 Siehe [shneiderman-rules.md](shneiderman-rules.md) für die acht Gestaltungsrichtlinien, die im Interface berücksichtigt werden.
