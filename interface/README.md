@@ -118,3 +118,31 @@ Simple mode hides advanced options and reduces visual load for inclusive use.
 
 Siehe [shneiderman-rules.md](shneiderman-rules.md) für die acht Gestaltungsrichtlinien, die im Interface berücksichtigt werden.
 
+## Standard HTML Layout mit Tanna-Hintergrund
+
+Eine einfache Vorlage für neue Seiten befindet sich in `tanna-template.html`.
+Sie bindet `theme-manager.js` und `logo-background.js` ein und setzt das Schema
+auf Tanna.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Neue Seite</title>
+  <link rel="stylesheet" href="ethicom-style.css" />
+  <script src="theme-manager.js"></script>
+  <script src="logo-background.js"></script>
+</head>
+<body>
+  <div id="op_background"></div>
+  <main>...</main>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      applyTheme('tanna');
+    });
+  </script>
+</body>
+</html>
+```
+
