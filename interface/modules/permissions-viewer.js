@@ -19,7 +19,7 @@ async function loadPermissionTable() {
     const data = await fetch("../permissions/op-permissions-expanded.json").then(r => r.json());
     const order = [
       'OP-0','OP-1','OP-2','OP-3','OP-4','OP-5','OP-6',
-      'OP-7','OP-7.5','OP-8','OP-9','OP-10','OP-11','OP-12'
+      'OP-7','OP-8','OP-9','OP-10','OP-11','OP-12'
     ];
     order.forEach(level => {
       if (!data[level]) return;
