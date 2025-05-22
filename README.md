@@ -61,6 +61,12 @@ Humor ist willkommen, wenn er Verantwortung und Klarheit unterstützt.
 ### OP-Permissions [⇧](#contents)
 Operator actions by ethical level are defined in:
 → [`permissions/op-permissions-expanded.json`](permissions/op-permissions-expanded.json)
+Additional flags now cover more operator actions such as
+`can_ignore_op0`, `can_start_nominee_op6`,
+`can_override_noobs_till_own_op`, `can_vote_on_op`,
+and advanced controls like `can_execute_evaluations` or
+`can_finalize_system`. The permission table lists stages up to
+OP‑11 with the intermediate OP‑7.5 and OP‑9.A levels.
 
 ### SRC vs. OO Levels [⇧](#contents)
 Comparison table: [`references/src_vs_oo.md`](references/src_vs_oo.md)
