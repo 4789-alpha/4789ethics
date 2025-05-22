@@ -24,7 +24,8 @@ function initLogoBackground() {
   });
 
   const symbols = [];
-  const total = 20;
+  // Increase the number of floating symbols for a richer background
+  const total = 40;
   for (let i = 0; i < total; i++) {
     const lvl = levels[i % levels.length];
     const img = images[lvl];
