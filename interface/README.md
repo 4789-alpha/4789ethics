@@ -99,13 +99,13 @@ interface/
 The interface directory groups the UI logic by operational level. Each file is
 loaded dynamically so the system can scale from OP-0 through OP-10.
 
-## Dev Mode
+## Dev Mode (disabled)
 
-Activate dev mode via the toggle button on `ethicom.html` or add `?dev` to the URL. When enabled, help and info sections reveal additional details for development and debugging. The state is stored in your browser's localStorage under `ethicom_dev`.
+Dev mode has been removed for security. The toggle now only shows an alert and does not enable additional features.
 
-## OP-0 Test Mode
+## OP-0 Test Mode (disabled)
 
-Use the "Toggle OP-0 Test Mode" button to try anonymous evaluations without storing them as evidence. When enabled, a notice appears in the OP‑0 interface and generated data is **not** recorded in `localStorage`.
+The test mode is no longer active. Evaluations are always stored according to your OP level.
 
 ## Designprinzipien
 
