@@ -35,6 +35,7 @@ For OP-6 and above, the generator can optionally store a hashed passport or ID l
 - `semantic-manager.js` → manage emotion word lists for sentiment (OP-5+) 
 - `chat-interface.js` → local chat for operators with greeting dummy
 - `color-auth.js` → authentication via Grundfarbe (fragt höchstens alle 24h)
+- `eptl.js` → Bluetooth Trust Layer verification
 - `signup.html` → signup form
 - `signup.js` → handles signup logic
 - `ratings.html` → external overview of overall ratings
