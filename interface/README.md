@@ -31,6 +31,10 @@ For OP-6 and above, the generator can optionally store a hashed passport or ID l
 - `manifest-viewer.js` → display any stored evaluation manifest
 - `revision-overview.js` → list withdrawn or revised manifests
 - `permissions-viewer.js` → visualize OP permissions
+- The permissions list now defines OP-10 and flags like
+  `can_observe_only`, `can_override_op6`, `can_vote_on_op9`,
+  `can_vote_on_op10`, `can_act_as_structure`,
+  `can_execute_evaluations`, and `can_finalize_system`.
 - `language-manager.js` → generate snippets for new translations
 - `semantic-manager.js` → manage emotion word lists for sentiment (OP-5+) 
 - `chat-interface.js` → local chat for operators with greeting dummy
@@ -98,7 +102,7 @@ interface/
 ```
 
 The interface directory groups the UI logic by operational level. Each file is
-loaded dynamically so the system can scale from OP-0 through OP-10.
+loaded dynamically so the system can scale from OP-0 through OP-12.
 
 ## Dev Mode (disabled)
 
