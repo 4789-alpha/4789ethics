@@ -50,7 +50,14 @@
     "can_choose_nominee_till_opAnalogMax": false,
     "can_choose_nominee_till_own_op": false,
     "can_assign_new_appendix": false,
-    "can_downgrade_op_till_own": false
+    "can_downgrade_op_till_own": false,
+    "can_override_op6": false,
+    "can_vote_on_op9": false,
+    "can_vote_on_op10": false,
+    "can_observe_only": false,
+    "can_act_as_structure": false,
+    "can_execute_evaluations": false,
+    "can_finalize_system": false
   },
   "OP-1": {
     "can_rate": true,
@@ -103,7 +110,14 @@
     "can_choose_nominee_till_opAnalogMax": false,
     "can_choose_nominee_till_own_op": false,
     "can_assign_new_appendix": false,
-    "can_downgrade_op_till_own": false
+    "can_downgrade_op_till_own": false,
+    "can_override_op6": false,
+    "can_vote_on_op9": false,
+    "can_vote_on_op10": false,
+    "can_observe_only": false,
+    "can_act_as_structure": false,
+    "can_execute_evaluations": false,
+    "can_finalize_system": false
   },
   "OP-2": {
     "can_rate": true,
@@ -156,7 +170,14 @@
     "can_choose_nominee_till_opAnalogMax": false,
     "can_choose_nominee_till_own_op": false,
     "can_assign_new_appendix": false,
-    "can_downgrade_op_till_own": false
+    "can_downgrade_op_till_own": false,
+    "can_override_op6": false,
+    "can_vote_on_op9": false,
+    "can_vote_on_op10": false,
+    "can_observe_only": false,
+    "can_act_as_structure": false,
+    "can_execute_evaluations": false,
+    "can_finalize_system": false
   },
   "OP-3": {
     "can_rate": true,
@@ -209,7 +230,14 @@
     "can_choose_nominee_till_opAnalogMax": false,
     "can_choose_nominee_till_own_op": false,
     "can_assign_new_appendix": false,
-    "can_downgrade_op_till_own": false
+    "can_downgrade_op_till_own": false,
+    "can_override_op6": false,
+    "can_vote_on_op9": false,
+    "can_vote_on_op10": false,
+    "can_observe_only": false,
+    "can_act_as_structure": false,
+    "can_execute_evaluations": false,
+    "can_finalize_system": false
   },
   "OP-4": {
     "can_rate": true,
@@ -262,7 +290,14 @@
     "can_choose_nominee_till_opAnalogMax": false,
     "can_choose_nominee_till_own_op": false,
     "can_assign_new_appendix": false,
-    "can_downgrade_op_till_own": false
+    "can_downgrade_op_till_own": false,
+    "can_override_op6": false,
+    "can_vote_on_op9": false,
+    "can_vote_on_op10": false,
+    "can_observe_only": false,
+    "can_act_as_structure": false,
+    "can_execute_evaluations": false,
+    "can_finalize_system": false
   },
   "OP-5": {
     "can_rate": true,
@@ -315,7 +350,14 @@
     "can_choose_nominee_till_opAnalogMax": false,
     "can_choose_nominee_till_own_op": false,
     "can_assign_new_appendix": false,
-    "can_downgrade_op_till_own": false
+    "can_downgrade_op_till_own": false,
+    "can_override_op6": false,
+    "can_vote_on_op9": false,
+    "can_vote_on_op10": false,
+    "can_observe_only": false,
+    "can_act_as_structure": false,
+    "can_execute_evaluations": false,
+    "can_finalize_system": false
   },
   "OP-6": {
     "can_rate": true,
@@ -368,7 +410,14 @@
     "can_choose_nominee_till_opAnalogMax": false,
     "can_choose_nominee_till_own_op": false,
     "can_assign_new_appendix": false,
-    "can_downgrade_op_till_own": false
+    "can_downgrade_op_till_own": false,
+    "can_override_op6": false,
+    "can_vote_on_op9": false,
+    "can_vote_on_op10": false,
+    "can_observe_only": false,
+    "can_act_as_structure": false,
+    "can_execute_evaluations": false,
+    "can_finalize_system": false
   },
   "OP-7": {
     "can_rate": true,
@@ -421,9 +470,16 @@
     "can_choose_nominee_till_opAnalogMax": false,
     "can_choose_nominee_till_own_op": false,
     "can_assign_new_appendix": false,
-    "can_downgrade_op_till_own": false
+    "can_downgrade_op_till_own": false,
+    "can_override_op6": true,
+    "can_vote_on_op9": false,
+    "can_vote_on_op10": false,
+    "can_observe_only": false,
+    "can_act_as_structure": false,
+    "can_execute_evaluations": false,
+    "can_finalize_system": false
   },
-  "OP-7.5": {
+  "OP-8": {
     "can_rate": true,
     "can_sign": true,
     "can_comment": true,
@@ -527,15 +583,22 @@
     "can_choose_nominee_till_opAnalogMax": false,
     "can_choose_nominee_till_own_op": false,
     "can_assign_new_appendix": false,
-    "can_downgrade_op_till_own": false
+    "can_downgrade_op_till_own": false,
+    "can_override_op6": false,
+    "can_vote_on_op9": false,
+    "can_vote_on_op10": false,
+    "can_observe_only": false,
+    "can_act_as_structure": false,
+    "can_execute_evaluations": false,
+    "can_finalize_system": false
   },
-  "OP-9": {
+  "OP-8": {
     "can_rate": true,
     "can_sign": true,
     "can_comment": true,
     "can_nominate": true,
     "can_vote": true,
-    "can_override": true,
+    "can_override": false,
     "can_retract": true,
     "can_consensus": true,
     "can_accept_donations": true,
@@ -580,9 +643,19 @@
     "can_choose_nominee_till_opAnalogMax": false,
     "can_choose_nominee_till_own_op": false,
     "can_assign_new_appendix": false,
-    "can_downgrade_op_till_own": false
+    "can_downgrade_op_till_own": false,
+    "can_vote_on_op9": true,
+    "can_vote_on_op10": true,
+    "can_accept_donations": false,
+    "can_override_op6": false,
+    "can_vote_on_op9": false,
+    "can_vote_on_op10": false,
+    "can_observe_only": false,
+    "can_act_as_structure": false,
+    "can_execute_evaluations": false,
+    "can_finalize_system": false
   },
-  "OP-9.A": {
+  "OP-9": {
     "can_rate": true,
     "can_sign": true,
     "can_comment": true,
@@ -636,6 +709,12 @@
     "can_downgrade_op_till_own": false
   },
   "OP-10": {
+    "can_observe_only": false,
+    "can_act_as_structure": false,
+    "can_execute_evaluations": false,
+    "can_finalize_system": false
+  },
+  "OP-9.A": {
     "can_rate": true,
     "can_sign": true,
     "can_comment": true,
@@ -660,6 +739,7 @@
     "can_override_noobs_till_own_op": false,
     "can_upgrade_nominee_till_own_op": false,
     "can_downgrade_op_under_own_op": true,
+    "can_accept_donations": true,
     "can_override_op6": true,
     "can_choose_to_evaluate_for_yokozuna": false,
     "can_choose_to_evaluate_for_7.5": false,
@@ -686,7 +766,29 @@
     "can_choose_nominee_till_opAnalogMax": false,
     "can_choose_nominee_till_own_op": false,
     "can_assign_new_appendix": false,
-    "can_downgrade_op_till_own": false
+    "can_downgrade_op_till_own": false,
+    "can_observe_only": false,
+    "can_act_as_structure": false,
+    "can_execute_evaluations": false,
+    "can_finalize_system": false
+  },
+  "OP-10": {
+    "can_rate": false,
+    "can_sign": false,
+    "can_comment": false,
+    "can_nominate": false,
+    "can_vote": false,
+    "can_override": false,
+    "can_retract": false,
+    "can_consensus": false,
+    "can_accept_donations": false,
+    "can_override_op6": false,
+    "can_vote_on_op9": false,
+    "can_vote_on_op10": false,
+    "can_observe_only": true,
+    "can_act_as_structure": false,
+    "can_execute_evaluations": false,
+    "can_finalize_system": false
   },
   "OP-11": {
     "can_rate": true,
@@ -729,6 +831,11 @@
     "is_responsible_for_global_ethics": true,
     "can_nominate_responsible_for_global_ethics": true,
     "can_vote_on_op": false,
+    "can_override_op6": true,
+    "can_vote_on_op9": true,
+    "can_vote_on_op10": true,
+    "can_observe_only": false,
+    "can_act_as_structure": true,
     "can_execute_evaluations": true,
     "can_finalize_system": true,
     "can_act_as_system": true,

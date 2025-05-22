@@ -67,6 +67,11 @@ Additional flags now cover more operator actions such as
 and advanced controls like `can_execute_evaluations` or
 `can_finalize_system`. The permission table lists stages up to
 OP‑11 with the intermediate OP‑7.5 and OP‑9.A levels.
+Additional flags now cover structural capabilities:
+`can_observe_only`, `can_override_op6`, `can_vote_on_op9`,
+`can_vote_on_op10`, `can_act_as_structure`,
+`can_execute_evaluations`, and `can_finalize_system`.
+OP‑10 has been added as a dedicated observation level.
 
 ### SRC vs. OO Levels [⇧](#contents)
 Comparison table: [`references/src_vs_oo.md`](references/src_vs_oo.md)
