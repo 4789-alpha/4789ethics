@@ -1,6 +1,6 @@
 function applyTheme(theme) {
   const body = document.body;
-  body.classList.remove('theme-dark', 'theme-tanna', 'theme-ocean', 'theme-desert', 'theme-custom');
+  body.classList.remove('theme-dark', 'theme-tanna', 'theme-ocean', 'theme-desert', 'theme-transparent', 'theme-custom');
   if (theme === 'custom') {
     const custom = JSON.parse(localStorage.getItem('ethicom_custom_theme') || '{}');
     Object.keys(custom).forEach(k => document.documentElement.style.setProperty(k, custom[k]));
