@@ -50,7 +50,7 @@
     "can_choose_nominee_till_opAnalogMax": false,
     "can_choose_nominee_till_own_op": false,
     "can_assign_new_appendix": false,
-    "can_downgrade_op_till_own": false
+    "can_downgrade_op_till_own": false,
     "can_override_op6": false,
     "can_vote_on_op9": false,
     "can_vote_on_op10": false,
@@ -110,7 +110,7 @@
     "can_choose_nominee_till_opAnalogMax": false,
     "can_choose_nominee_till_own_op": false,
     "can_assign_new_appendix": false,
-    "can_downgrade_op_till_own": false
+    "can_downgrade_op_till_own": false,
     "can_override_op6": false,
     "can_vote_on_op9": false,
     "can_vote_on_op10": false,
@@ -290,7 +290,7 @@
     "can_choose_nominee_till_opAnalogMax": false,
     "can_choose_nominee_till_own_op": false,
     "can_assign_new_appendix": false,
-    "can_downgrade_op_till_own": false
+    "can_downgrade_op_till_own": false,
     "can_override_op6": false,
     "can_vote_on_op9": false,
     "can_vote_on_op10": false,
@@ -850,7 +850,7 @@
     "can_choose_nominee_till_opAnalogMax": true,
     "can_choose_nominee_till_own_op": true,
     "can_assign_new_appendix": true,
-    "can_downgrade_op_till_own": false
+    "can_downgrade_op_till_own": false,
     "can_override_op6": true,
     "can_vote_on_op9": true,
     "can_vote_on_op10": true,
