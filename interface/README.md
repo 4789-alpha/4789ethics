@@ -61,7 +61,6 @@ For OP-6 and above, the generator can optionally store a hashed passport or ID l
 | <a id="op-5"></a> OP-5 | may withdraw previous evaluations |
 | <a id="op-6"></a> OP-6 | can verify consensus |
 | <a id="op-7"></a> OP-7 | structural authority |
-| <a id="op-7-5"></a> OP-7.5 | nomination preparation, review OP-8 |
 | <a id="op-8"></a> OP-8 | candidate stage for OP-9 (system self-stabilizes) |
 | <a id="op-9"></a> OP-9 | may verify donations, confirm nominations |
 | <a id="op-9-a"></a> OP-9.A | verified digital Yokozuna mode |

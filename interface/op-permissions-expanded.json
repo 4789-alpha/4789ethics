@@ -143,7 +143,7 @@
     "can_execute_evaluations": false,
     "can_finalize_system": false
   },
-  "OP-7.5": {
+  "OP-8": {
     "can_rate": true,
     "can_sign": true,
     "can_comment": true,

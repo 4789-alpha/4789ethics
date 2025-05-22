@@ -35,7 +35,6 @@ Beim Klick auf das OP-1-Modul erscheint im Interface die englische Statusmeldung
 | <a id="op-5"></a> OP-5 | darf frühere Bewertungen zurückziehen |
 | <a id="op-6"></a> OP-6 | kann Konsens verifizieren |
 | <a id="op-7"></a> OP-7 | strukturelle Autorität |
-| <a id="op-7-5"></a> OP-7.5 | Nominierung vorbereiten, OP‑8 prüfen |
 | <a id="op-8"></a> OP-8 | Kandidatenstufe für OP‑9 (System stabilisiert sich) |
 | <a id="op-9"></a> OP-9 | darf Spenden verifizieren, Nominierungen bestätigen |
 | <a id="op-10"></a> OP-10 | Kandidat für Yokozuna (OP‑11) |
