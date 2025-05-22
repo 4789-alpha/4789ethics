@@ -24,8 +24,9 @@ function initLogoBackground() {
   });
 
   const symbols = [];
-  // Increase the number of floating symbols for a richer background
-  const total = 40;
+  // Number of floating symbols can be customized via settings
+  const stored = parseInt(localStorage.getItem('ethicom_bg_count') || '40', 10);
+  const total = Number.isFinite(stored) ? stored : 40;
   for (let i = 0; i < total; i++) {
     const lvl = levels[i % levels.length];
     const img = images[lvl];
