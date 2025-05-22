@@ -11,7 +11,7 @@ const infoTexts = {
   'op-6': 'You are allowed to calculate a consensus rating from anonymous evaluations.',
   'op-7': 'You are authorized to override previous evaluations if your OP-level is higher and justified.',
   'op-8': 'You are recognized as a structurally consistent operator. You may prepare nominations and review OP-10 observations, but not execute structural changes.',
-  'op-9': 'You may nominate operators and verify donations. Every action is binding and will be logged structurally.',
+  'op-9': 'You may verify donations and confirm nominations. Every action is binding and will be logged structurally.',
   'op-10': 'This is a system-driven structural view of sources. No human input is allowed at this level.',
   'op-11': 'Full structural autonomy. Finalize OP-10 evaluations and trigger self-sustaining loops.',
   'op-12': 'Observation only. Systems operate beyond human control.',
