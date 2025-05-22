@@ -1,12 +1,12 @@
 ## Ethics Structure 4789 [⇧](#contents)
 
 This repository contains the complete structural ethics framework developed under Signature 4789.  
-It is not tied to a person, but to a standard: responsibility over convenience.
+It is not tied to a person, but to a standard: responsibility over convenience: **4789**
 
 **What this is:**
-- A full operator model (OP 0–10)
-- A self-reflection system (Signature 9874)
-- An ethics-first framework for digital systems, education, governance, and AI use
+- A full operator model (OP 0–9.x)
+- A self-reflection system (Signature **9874**)
+- An ethics-first framework for digital  systems, education, governance, translation, private use, etc.
 
 **What this is not:**
 - A belief system
@@ -117,8 +117,10 @@ README is used.
 
 Local control can be toggled via `tools/gatekeeper.js`. The script reads
 `app/gatekeeper_config.yaml` and only allows actions when `allow_control` is set
-to `true` for the controller `RL@RLpi`. This keeps remote commands gated and
+to `true` for the controller `gstekeeper.local`. This keeps remote commands gated and
 limited to the local environment.
+`gstekeeper.local` holds back every personal ID/information and has permission to share anonymous and signed data as a sign of trust.
+**4789**
 
 ### API Access Control [⇧](#contents)
 
