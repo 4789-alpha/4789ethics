@@ -60,6 +60,7 @@ For OP-6 and above, the generator can optionally store a hashed passport or ID l
 | <a id="op-7-5"></a> OP-7.5 | nomination preparation, review OP-8 |
 | <a id="op-8"></a> OP-8 | candidate stage for OP-9 (system self-stabilizes) |
 | <a id="op-9"></a> OP-9 | may verify donations, confirm nominations |
+| <a id="op-9-a"></a> OP-9.A | verified digital Yokozuna mode |
 | <a id="op-10"></a> OP-10 | candidate for Yokozuna (OP-11) |
 | <a id="op-11"></a> OP-11 | Yokozuna-Schwingerkönig mode |
 | <a id="op-12"></a> OP-12 | first non-human stage |
@@ -106,6 +107,12 @@ Dev mode has been removed for security. The toggle now only shows an alert and d
 ## OP-0 Test Mode (disabled)
 
 The test mode is no longer active. Evaluations are always stored according to your OP level.
+
+## Accessibility and Simple Mode
+
+The interface includes an accessibility setup (`accessibility.js`).
+Here you can choose larger fonts and activate a simplified interface.
+Simple mode hides advanced options and reduces visual load for inclusive us.
 
 ## Designprinzipien
 
