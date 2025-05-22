@@ -94,13 +94,27 @@
     "can_comment": true,
     "can_nominate": true,
     "can_vote": true,
+    "can_override": false,
+    "can_retract": true,
+    "can_consensus": true,
+    "can_accept_donations": false,
+    "can_override_op6": false
+  },
+  "OP-7.9": {
+    "can_rate": true,
+    "can_sign": true,
+    "can_comment": true,
+    "can_nominate": true,
+    "can_vote": true,
     "can_override": true,
     "can_retract": true,
     "can_consensus": true,
     "can_accept_donations": false,
-    "can_override_op6": true
+    "can_override_op6": true,
+    "can_vote_on_op9": true,
+    "can_vote_on_op10": true
   },
-  "OP-7.9": {
+  "OP-9": {
     "can_rate": true,
     "can_sign": true,
     "can_comment": true,
@@ -114,22 +128,6 @@
     "can_vote_on_op9": true,
     "can_vote_on_op10": true
   },
-  "OP-10": {
-    "can_rate": true,
-    "can_sign": true,
-    "can_comment": true,
-    "can_nominate": true,
-    "can_vote": true,
-    "can_override": true,
-    "can_retract": true,
-    "can_consensus": true,
-    "can_accept_donations": true,
-    "can_override_op6": true,
-    "can_vote_on_op9": true,
-    "can_vote_on_op10": true,
-    "can_act_as_structure": true,
-    "can_execute_evaluations": true
-  },
   "OP-11": {
     "can_rate": true,
     "can_sign": true,
@@ -139,7 +137,7 @@
     "can_override": true,
     "can_retract": true,
     "can_consensus": true,
-    "can_accept_donations": true,
+    "can_accept_donations": false,
     "can_override_op6": true,
     "can_vote_on_op9": true,
     "can_vote_on_op10": true,
@@ -156,7 +154,7 @@
     "can_override": true,
     "can_retract": true,
     "can_consensus": true,
-    "can_accept_donations": true,
+    "can_accept_donations": false,
     "can_override_op6": true,
     "can_vote_on_op9": true,
     "can_vote_on_op10": true,
