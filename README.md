@@ -86,7 +86,7 @@ Verified 2025-05-21 by Signature 4789
 
 Translations for the evaluation interface are defined in `i18n/ui-text.json`. To
 include another language, add a new JSON object using the two-letter ISO 639-1
-code as the key and provide translations for all fields found under the `"en"`
+code as the key and provide translations for all fields found under the `"de"`
 entry. The interface will automatically recognize the new language.
 Word collections for additional languages can be gathered with
 `tools/language-corpus.js`. The script updates `i18n/language-corpus.json`
@@ -97,7 +97,7 @@ missing translations, run:
 node tools/check-translations.js
 ```
 
-This prints a list of language codes and the fields that still require translation or are unchanged from English. In the interface dropdown, languages with missing fields show an asterisk (`*`) so users know the translation is not complete.
+This prints a list of language codes and the fields that still require translation or are unchanged from German. In the interface dropdown, languages with missing fields show an asterisk (`*`) so users know the translation is not complete.
 
 ### Generating Interface README [⇧](#contents)
 
@@ -109,7 +109,7 @@ node tools/generate-haupt-readme.js <lang>
 
 Replace `<lang>` with a two-letter ISO code (e.g. `de` or `fr`).
 The script copies the matching `i18n/README.<lang>.md` into
-`interface/haupt-readme.md`. If no translation exists, the English
+`interface/haupt-readme.md`. If no translation exists, the German
 README is used.
 
 ### Gatekeeper Control [⇧](#contents)
