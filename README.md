@@ -56,7 +56,7 @@ Humor ist willkommen, wenn er Verantwortung und Klarheit unterstützt.
 | `releases/` | Release notes and integrity hashes |
 | `sources/` | Evaluated sources and candidate lists |
 | `test/` | Node.js test suite |
-| `tools/` | Utility scripts (e.g., trust-demotion engine) |
+| `tools/` | Utility scripts (e.g., trust-demotion engine, Python API example) |
 | `use_cases/` | Example scenarios and dissemination ideas |
 
 ### OP-Permissions [⇧](#contents)
