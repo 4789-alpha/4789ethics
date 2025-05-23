@@ -48,7 +48,6 @@
     </section>
     <section id="rating_summary" class="card"></section>
     <section id="rating_library" class="card"></section>
-    <button id="op0_btn" class="accent-button" onclick="showOP0()">Erste OP‑0 Eindrücke</button>
     <div id="op_interface" class="card" style="display:none;"></div>
   </main>
   <script>
@@ -66,11 +65,6 @@
         }
       });
     });
-    function showOP0() {
-      const container = document.getElementById('op_interface');
-      container.style.display = 'block';
-      loadInterfaceForOP('OP-0');
-    }
   </script>
 </body>
 </html>

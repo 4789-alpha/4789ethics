@@ -27,7 +27,8 @@ function loadInterfaceForOP(op_level) {
     "manifestviewer": "manifest-viewer.js",
     "revisionoverview": "revision-overview.js",
     "permissionsviewer": "permissions-viewer.js",
-    "languagemanager": "language-manager.js"
+    "languagemanager": "language-manager.js",
+    "translation": "op-3-translation.js"
   };
 
   const script = document.createElement("script");
