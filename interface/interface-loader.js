@@ -22,6 +22,8 @@ function loadInterfaceForOP(op_level) {
     "op10": "op-10-analysis.js",
     "op11": "op-11-interface.js",
     "op12": "op-12-interface.js",
+    "op0human": "op-0-human-interface.js",
+    "op1human": "op-1-human-interface.js",
     "search": "source-search.js",
     "manifestviewer": "manifest-viewer.js",
     "revisionoverview": "revision-overview.js",

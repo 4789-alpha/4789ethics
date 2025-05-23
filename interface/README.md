@@ -28,6 +28,8 @@ For OP-6 and above, the generator can optionally store a hashed passport or ID l
 - `interface-loader.js` → loads correct module for OP-0 to OP-11 and extra tools
 - `language-selector.js` → user selects language (ISO 639-1)
 - `source-search.js` → search and verify sources
+- `op-0-human-interface.js` → anonymous yes/no rating of historical persons
+- `op-1-human-interface.js` → signed yes/no rating of historical persons
 - `manifest-viewer.js` → display any stored evaluation manifest
 - `revision-overview.js` → list withdrawn or revised manifests
 - `permissions-viewer.js` → visualize OP permissions
@@ -97,6 +99,8 @@ interface/
 ├── modules/
 │   ├── op-0-interface.js
 │   ├── op-1-interface.js
+│   ├── op-0-human-interface.js
+│   ├── op-1-human-interface.js
 │   ├── ...
 │   ├── op-8-analysis.js
 │   ├── op-9-interface.js
