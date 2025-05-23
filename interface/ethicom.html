@@ -43,14 +43,13 @@
   <main>
     <h2 id="title">Ethicom Evaluation</h2>
 
-    <section id="welcome" class="card">
-      <p data-ui="preview_msg">Bisch gluschtig? Lueg derzue, ganz locker. Drück uf "Schnupper-Start" und probier OP‑0 ganz ohne Login.</p>
-      <button data-ui="preview_btn" onclick="previewOP0()" class="accent-button">Schnupper-Start (OP‑0)</button>
-    </section>
+
 
     <div id="badge_gallery" class="badge-gallery"></div>
 
+
     <div id="badge_display" class="badge-row"></div>
+    <div id="op_buttons" class="card"></div>
 
     <div id="lang_selection" class="card">
       <label for="lang_select" data-ui="choose_language_label">Choose your language (ISO 639-1):</label>
@@ -125,7 +124,7 @@
         showDisclaimers(uiText);
         initTranslationManager();
         renderAllBadges();
-        previewOP0();
+        initOpButtons();
       });
     });
 
@@ -160,20 +159,32 @@
       loadInterfaceForOP(stored.op_level);
     }
 
-    function previewOP0() {
-      const status = document.getElementById("status");
-      status.style.display = "block";
-      status.textContent = uiText.status_loading_op0 || "OP-0 wird geladen...";
-      showLoadingBadge("OP-0");
-      renderBadge("OP-0", "OP-0");
-      loadInterfaceForOP("OP-0");
-    }
-
-
     function toggleSimpleMode() {
       const enabled = document.body.classList.toggle('simple-mode');
       localStorage.setItem('simple_mode', enabled ? 'true' : 'false');
       alert(enabled ? (uiText.simple_mode_on || 'Simple mode is active.') : (uiText.simple_mode_off || 'Simple mode is off.'));
+    }
+
+    function initOpButtons() {
+      const container = document.getElementById('op_buttons');
+      if (!container) return;
+      const levels = ['OP-1','OP-2','OP-3','OP-4','OP-5','OP-6','OP-7','OP-8','OP-9','OP-10','OP-11','OP-12'];
+      container.innerHTML = levels
+        .map(l => `<button class="accent-button" data-level="${l}" aria-label="${l}" tabindex="0">${l}</button>`)
+        .join(' ');
+      container.querySelectorAll('button').forEach(btn => {
+        btn.addEventListener('click', () => handleOpButton(btn.dataset.level));
+      });
+    }
+
+    function handleOpButton(level) {
+      const current = opLevelToNumber(getStoredOpLevel());
+      const target = opLevelToNumber(level);
+      if (current >= target) {
+        loadInterfaceForOP(level);
+      } else {
+        window.location.href = `guide/${level}`;
+      }
     }
   </script>
 </body>

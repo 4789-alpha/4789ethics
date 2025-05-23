@@ -60,10 +60,6 @@
       <p>Example content here.</p>
     </section>
 
-    <section class="card" id="preview">
-      <p data-ui="preview_msg">Bisch gluschtig? Lueg derzue, ganz locker.</p>
-      <button data-ui="preview_btn" onclick="previewOP0()" class="accent-button">Schnupper-Start (OP‑0)</button>
-    </section>
 
     <div id="status" class="card" style="display:none;"></div>
     <div id="op_interface" class="card"></div>
@@ -82,12 +78,6 @@
       });
     });
 
-    function previewOP0() {
-      const status = document.getElementById('status');
-      status.style.display = 'block';
-      status.textContent = uiText.status_loading_op0 || 'OP-0 wird geladen...';
-      loadInterfaceForOP('OP-0');
-    }
   </script>
 </body>
 </html>
