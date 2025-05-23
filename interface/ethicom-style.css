@@ -418,3 +418,12 @@ body.left-layout main {
   margin: 0;
   max-width: none;
 }
+
+@keyframes attentionWiggle {
+  0%,100% { transform: rotate(0deg); }
+  25% { transform: rotate(2deg); }
+  75% { transform: rotate(-2deg); }
+}
+.attention-wiggle {
+  animation: attentionWiggle 0.3s 6;
+}

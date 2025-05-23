@@ -11,6 +11,7 @@
   <script src="op0-testmode.js"></script>
   <script src="accessibility.js"></script>
   <script src="color-auth.js"></script>
+  <script src="attention-seeker.js"></script>
   <script src="touch-features.js"></script>
   <script src="logo-background.js"></script>
 </head>
@@ -62,6 +63,11 @@
       <label><input type="checkbox" id="touch_bigbuttons"/> <span data-ui="touch_toggle_bigbuttons">Larger buttons</span></label><br/>
       <label><input type="checkbox" id="touch_haptics"/> <span data-ui="touch_toggle_haptics">Haptic feedback</span></label>
     </div>
+    <div id="attention_features" class="card">
+      <h3>Attention Alerts</h3>
+      <label><input type="checkbox" id="attention_wiggle"/> Wiggle when idle</label><br/>
+      <label><input type="checkbox" id="attention_beep"/> Beep when idle</label>
+    </div>
     <div id="dev_toggle" class="card">
       <button onclick="toggleDevMode()" class="accent-button">Toggle Dev Mode</button>
     </div>
@@ -93,6 +99,13 @@
       if (d) d.addEventListener('change', e => touchSettings.toggleDrawing(e.target.checked));
       if (b) b.addEventListener('change', e => touchSettings.toggleBigButtons(e.target.checked));
       if (l) l.addEventListener('change', e => touchSettings.toggleLongPressMenu(e.target.checked));
+
+      const as = window.attentionSettings && window.attentionSettings.state || {};
+      const aw = document.getElementById('attention_wiggle');
+      const ab = document.getElementById('attention_beep');
+      if (aw) aw.checked = as.wiggle; if (ab) ab.checked = as.beep;
+      if (aw) aw.addEventListener('change', e => attentionSettings.toggleWiggle(e.target.checked));
+      if (ab) ab.addEventListener('change', e => attentionSettings.toggleBeep(e.target.checked));
 
       const countSlider = document.getElementById('bg_symbol_count');
       const countVal = document.getElementById('bg_symbol_count_val');

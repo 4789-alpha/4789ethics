@@ -74,7 +74,9 @@
       "If a contradiction arises, apply self-reflection (structure_9874).",
       "Humor is allowed if responsibility and clarity remain."
     ],
-    "btn_disclaimer_accept": "I understand"
+    "btn_disclaimer_accept": "I understand",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle"
   },
   "de": {
     "title": "Ethicom: Bewertung durch Menschen",
@@ -151,7 +153,9 @@
       "Bei Widerspruch gilt Selbstreflexion nach structure_9874.md.",
       "Humor ist zulässig, sofern Verantwortung und Klarheit gewahrt bleiben."
     ],
-    "btn_disclaimer_accept": "Verstanden"
+    "btn_disclaimer_accept": "Verstanden",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle"
   },
   "fr": {
     "title": "Ethicom : Évaluation humaine",
@@ -225,7 +229,9 @@
     "nav_settings": "Paramètres",
     "simple_toggle_label": "Basculer le mode simple",
     "simple_mode_on": "Mode simple activé.",
-    "simple_mode_off": "Mode simple désactivé."
+    "simple_mode_off": "Mode simple désactivé.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle"
   },
   "es": {
     "title": "Ethicom: Evaluación Humana",
@@ -299,7 +305,9 @@
     "btn_disclaimer_accept": "Entiendo",
     "simple_toggle_label": "Alternar modo simple",
     "simple_mode_on": "Modo simple activado.",
-    "simple_mode_off": "Modo simple desactivado."
+    "simple_mode_off": "Modo simple desactivado.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle"
   },
   "pt": {
     "title": "Ethicom: Avaliação Humana",
@@ -373,7 +381,9 @@
     "status_loading_op0": "Carregando OP-0...",
     "simple_toggle_label": "Alternar modo simples",
     "simple_mode_on": "Modo simples ativado.",
-    "simple_mode_off": "Modo simples desativado."
+    "simple_mode_off": "Modo simples desativado.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle"
   },
   "zh": {
     "title": "Ethicom：人工评估",
@@ -447,7 +457,9 @@
     "simple_toggle_label": "Toggle Simple Mode",
     "simple_mode_on": "Simple mode is active.",
     "simple_mode_off": "Simple mode is off.",
-    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5."
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle"
   },
   "hi": {
     "title": "Ethicom: मानवीय मूल्यांकन",
@@ -521,7 +533,9 @@
       "Humor is allowed if responsibility and clarity remain."
     ],
     "btn_disclaimer_accept": "I understand",
-    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5."
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle"
   },
   "ar": {
     "title": "إيثيكوم: التقييم البشري",
@@ -595,7 +609,9 @@
       "Humor is allowed if responsibility and clarity remain."
     ],
     "btn_disclaimer_accept": "I understand",
-    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5."
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle"
   },
   "ja": {
     "title": "Ethicom：人間による評価",
@@ -669,7 +685,9 @@
       "Humor is allowed if responsibility and clarity remain."
     ],
     "btn_disclaimer_accept": "I understand",
-    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5."
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle"
   },
   "sw": {
     "title": "Ethicom: Tathmini ya Kibinadamu",
@@ -743,7 +761,9 @@
       "Humor is allowed if responsibility and clarity remain."
     ],
     "btn_disclaimer_accept": "I understand",
-    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5."
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle"
   },
   "ru": {
     "title": "Ethicom: Оценка человеком",
@@ -817,7 +837,9 @@
       "Humor is allowed if responsibility and clarity remain."
     ],
     "btn_disclaimer_accept": "I understand",
-    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5."
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle"
   },
   "it": {
     "title": "Ethicom: Valutazione Umana",
@@ -891,7 +913,9 @@
     "status_loading_op0": "Caricamento di OP-0...",
     "simple_toggle_label": "Attiva/disattiva modalità semplice",
     "simple_mode_on": "Modalità semplice attiva.",
-    "simple_mode_off": "Modalità semplice disattiva."
+    "simple_mode_off": "Modalità semplice disattiva.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle"
   },
   "ko": {
     "title": "Ethicom: 인간 평가",
@@ -965,7 +989,9 @@
       "Humor is allowed if responsibility and clarity remain."
     ],
     "btn_disclaimer_accept": "I understand",
-    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5."
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle"
   },
   "fa": {
     "title": "ایتیکام: ارزیابی انسانی",
@@ -1039,7 +1065,9 @@
       "Humor is allowed if responsibility and clarity remain."
     ],
     "btn_disclaimer_accept": "I understand",
-    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5."
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle"
   },
   "pl": {
     "title": "Ethicom: Ocena Ludzka",
@@ -1113,7 +1141,9 @@
       "Humor is allowed if responsibility and clarity remain."
     ],
     "btn_disclaimer_accept": "I understand",
-    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5."
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle"
   },
   "am": {
     "title": "Ethicom: Human Evaluation",
@@ -1187,7 +1217,9 @@
       "Humor is allowed if responsibility and clarity remain."
     ],
     "btn_disclaimer_accept": "I understand",
-    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5."
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle"
   },
   "af": {
     "title": "Ethicom: Human Evaluation",
@@ -1261,7 +1293,9 @@
       "Humor is allowed if responsibility and clarity remain."
     ],
     "btn_disclaimer_accept": "I understand",
-    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5."
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle"
   },
   "bn": {
     "title": "Ethicom: Human Evaluation",
@@ -1335,7 +1369,9 @@
       "Humor is allowed if responsibility and clarity remain."
     ],
     "btn_disclaimer_accept": "I understand",
-    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5."
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle"
   },
   "ha": {
     "title": "Ethicom: Human Evaluation",
@@ -1409,7 +1445,9 @@
       "Humor is allowed if responsibility and clarity remain."
     ],
     "btn_disclaimer_accept": "I understand",
-    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5."
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle"
   },
   "id": {
     "title": "Ethicom: Human Evaluation",
@@ -1483,7 +1521,9 @@
       "Humor is allowed if responsibility and clarity remain."
     ],
     "btn_disclaimer_accept": "I understand",
-    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5."
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle"
   },
   "ig": {
     "title": "Ethicom: Human Evaluation",
@@ -1557,7 +1597,9 @@
       "Humor is allowed if responsibility and clarity remain."
     ],
     "btn_disclaimer_accept": "I understand",
-    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5."
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle"
   },
   "om": {
     "title": "Ethicom: Human Evaluation",
@@ -1631,7 +1673,9 @@
       "Humor is allowed if responsibility and clarity remain."
     ],
     "btn_disclaimer_accept": "I understand",
-    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5."
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle"
   },
   "rm": {
     "title": "Ethicom: Human Evaluation",
@@ -1705,7 +1749,9 @@
       "Humor is allowed if responsibility and clarity remain."
     ],
     "btn_disclaimer_accept": "I understand",
-    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5."
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle"
   },
   "ta": {
     "title": "Ethicom: Human Evaluation",
@@ -1779,7 +1825,9 @@
       "Humor is allowed if responsibility and clarity remain."
     ],
     "btn_disclaimer_accept": "I understand",
-    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5."
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle"
   },
   "te": {
     "title": "Ethicom: Human Evaluation",
@@ -1853,7 +1901,9 @@
       "Humor is allowed if responsibility and clarity remain."
     ],
     "btn_disclaimer_accept": "I understand",
-    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5."
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle"
   },
   "th": {
     "title": "Ethicom: Human Evaluation",
@@ -1927,7 +1977,9 @@
       "Humor is allowed if responsibility and clarity remain."
     ],
     "btn_disclaimer_accept": "I understand",
-    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5."
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle"
   },
   "tr": {
     "title": "Ethicom: Human Evaluation",
@@ -2001,7 +2053,9 @@
       "Humor is allowed if responsibility and clarity remain."
     ],
     "btn_disclaimer_accept": "I understand",
-    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5."
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle"
   },
   "ur": {
     "title": "Ethicom: Human Evaluation",
@@ -2075,7 +2129,9 @@
       "Humor is allowed if responsibility and clarity remain."
     ],
     "btn_disclaimer_accept": "I understand",
-    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5."
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle"
   },
   "vi": {
     "title": "Ethicom: Human Evaluation",
@@ -2149,7 +2205,9 @@
       "Humor is allowed if responsibility and clarity remain."
     ],
     "btn_disclaimer_accept": "I understand",
-    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5."
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle"
   },
   "xh": {
     "title": "Ethicom: Human Evaluation",
@@ -2223,7 +2281,9 @@
       "Humor is allowed if responsibility and clarity remain."
     ],
     "btn_disclaimer_accept": "I understand",
-    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5."
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle"
   },
   "yo": {
     "title": "Ethicom: Human Evaluation",
@@ -2297,7 +2357,9 @@
       "Humor is allowed if responsibility and clarity remain."
     ],
     "btn_disclaimer_accept": "I understand",
-    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5."
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle"
   },
   "zu": {
     "title": "Ethicom: Human Evaluation",
@@ -2371,7 +2433,9 @@
       "Humor is allowed if responsibility and clarity remain."
     ],
     "btn_disclaimer_accept": "I understand",
-    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5."
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle"
   },
   "nl": {
     "title": "Ethicom: Menselijke Evaluatie",
@@ -2445,6 +2509,8 @@
       "Humor is allowed if responsibility and clarity remain."
     ],
     "btn_disclaimer_accept": "I understand",
-    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5."
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle"
   }
 }
