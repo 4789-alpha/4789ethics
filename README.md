@@ -54,6 +54,8 @@ Humor ist willkommen, wenn er Verantwortung und Klarheit unterstützt.
 | `permissions/` | Operator permission definitions |
 | `releases/` | Release notes and integrity hashes |
 | `sources/` | Evaluated sources and candidate lists |
+| `sources/persons/` | Lists of historical persons |
+| `sources/institutions/` | Evaluated organizations and candidate sources |
 | `test/` | Node.js test suite |
 | `tools/` | Utility scripts (e.g., trust-demotion engine, Python API example) |
 | `use_cases/` | Example scenarios and dissemination ideas |
@@ -77,7 +79,7 @@ OP‑10 has been added as a dedicated observation level.
 Comparison table: [`references/src_vs_oo.md`](references/src_vs_oo.md)
 
 ### Evaluated Sources (as examples) [⇧](#contents)
-- [src-0001: Fairphone](sources/src-0001.json) → [`SRC-4`](manifests/op-eval-4789-src-0001.json)
+- [src-0001: Fairphone](sources/institutions/src-0001.json) → [`SRC-4`](manifests/op-eval-4789-src-0001.json)
 - [src-0002: Ecosia](https://www.ecosia.org/) → [`SRC-4`](manifests/op-eval-4789-src-0002.json)
 
 ### File Integrity [⇧](#contents)

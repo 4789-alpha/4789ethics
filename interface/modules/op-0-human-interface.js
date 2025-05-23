@@ -2,7 +2,7 @@ function initOP0HumanInterface() {
   const container = document.getElementById("op_interface");
   if (!container) return;
 
-  fetch("../sources/human-op0-candidates.json")
+  fetch("../sources/persons/human-op0-candidates.json")
     .then(r => r.json())
     .then(list => {
       const options = list.map(p => `<option value="${p.human_id}">${p.name}</option>`).join('');

@@ -10,7 +10,7 @@ async function initRatings() {
     const index = await fetch('../manifests/index.json').then(r => r.json());
     const ratings = [];
 
-    const candidates = await fetch('../sources/src-candidates.json').then(r => r.json()).catch(() => []);
+    const candidates = await fetch('../sources/institutions/src-candidates.json').then(r => r.json()).catch(() => []);
     const candidateMap = {};
     candidates.forEach(c => { candidateMap[c.source_id] = c; });
 
@@ -18,7 +18,7 @@ async function initRatings() {
       const data = await fetch(`../manifests/${file}`).then(r => r.json());
       let details = null;
       try {
-        details = await fetch(`../sources/${data.source_id}.json`).then(r => r.json());
+        details = await fetch(`../sources/institutions/${data.source_id}.json`).then(r => r.json());
       } catch {
         details = candidateMap[data.source_id] || null;
       }
