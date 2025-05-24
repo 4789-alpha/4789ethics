@@ -12,6 +12,7 @@
   <script src="disclaimer.js"></script>
   <script src="logo-background.js"></script>
   <script src="touch-features.js"></script>
+  <script src="module-arranger.js"></script>
 </head>
 <body>
   <div id="op_background"></div>
@@ -55,6 +56,7 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       initLanguageDropdown('lang_select');
+      applyStoredModuleOrder();
       const lang = localStorage.getItem('ethicom_lang');
       fetch('../i18n/ui-text.json').then(r => r.json()).then(t => {
         const texts = t[lang] || t.en || {};
