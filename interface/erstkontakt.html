@@ -14,6 +14,7 @@
   <script src="theme-manager.js"></script>
   <script src="logo-background.js"></script>
   <script src="touch-features.js"></script>
+  <script src="module-arranger.js"></script>
   <style>
     #op_interface { margin-top: 1em; }
   </style>
@@ -57,6 +58,7 @@
         return;
       }
       initLanguageDropdown('lang_select');
+      applyStoredModuleOrder();
       initRatings();
       loadUiTexts().then(texts => {
         const uiText = texts[getLanguage()] || texts.en || {};

@@ -14,6 +14,7 @@
   <script src="attention-seeker.js"></script>
   <script src="touch-features.js"></script>
   <script src="logo-background.js"></script>
+  <script src="module-arranger.js"></script>
 </head>
 <body class="left-layout">
   <div id="op_background"></div>
@@ -75,10 +76,17 @@
       <button onclick="toggleOP0TestMode()" class="accent-button">Toggle OP-0 Test Mode</button>
     </div>
     <div id="access_setup" class="card"></div>
+    <div id="module_manager" class="card">
+      <h3>Module Order</h3>
+      <ul id="module_manager_list" style="list-style:none; padding:0;"></ul>
+      <input id="module_add_input" placeholder="module id" type="text"/>
+      <button onclick="addModuleId()" class="accent-button">Add</button>
+    </div>
   </main>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       initLanguageDropdown('lang_select');
+      applyStoredModuleOrder();
       const lang = localStorage.getItem('ethicom_lang');
       fetch('../i18n/ui-text.json').then(r => r.json()).then(t => {
         const texts = t[lang] || t.en || {};
@@ -121,7 +129,50 @@
           alert('Reload the page to apply.');
         });
       }
+      initModuleManager();
     });
+
+    function initModuleManager(){
+      const main = document.querySelector('main');
+      if(!main) return;
+      let order = getModuleOrder();
+      const modules = Array.from(main.children).filter(e=>e.id).map(e=>e.id);
+      order = order.filter(id => modules.includes(id));
+      modules.forEach(id => { if(!order.includes(id)) order.push(id); });
+      setModuleOrder(order);
+      renderModuleList();
+    }
+
+    function renderModuleList(){
+      const list = document.getElementById('module_manager_list');
+      if(!list) return;
+      list.innerHTML='';
+      const order = getModuleOrder();
+      order.forEach((id, idx) => {
+        const li = document.createElement('li');
+        li.textContent=id+' ';
+        const up=document.createElement('button'); up.textContent='\u2191';
+        up.onclick=()=>{ if(idx>0){ const o=getModuleOrder(); [o[idx-1],o[idx]]=[o[idx],o[idx-1]]; setModuleOrder(o); renderModuleList(); applyStoredModuleOrder(); } };
+        const down=document.createElement('button'); down.textContent='\u2193';
+        down.onclick=()=>{ const o=getModuleOrder(); if(idx<o.length-1){ [o[idx],o[idx+1]]=[o[idx+1],o[idx]]; setModuleOrder(o); renderModuleList(); applyStoredModuleOrder(); } };
+        const rem=document.createElement('button'); rem.textContent='x';
+        rem.onclick=()=>{ const o=getModuleOrder().filter((_,i)=>i!==idx); setModuleOrder(o); renderModuleList(); applyStoredModuleOrder(); };
+        li.appendChild(up); li.appendChild(down); li.appendChild(rem);
+        list.appendChild(li);
+      });
+    }
+
+    function addModuleId(){
+      const inp=document.getElementById('module_add_input');
+      if(!inp) return;
+      const id=inp.value.trim();
+      if(!id) return;
+      const order=getModuleOrder();
+      if(!order.includes(id)){ order.push(id); setModuleOrder(order); }
+      inp.value='';
+      renderModuleList();
+      applyStoredModuleOrder();
+    }
   </script>
 </body>
 </html>
