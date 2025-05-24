@@ -10,7 +10,7 @@
 | OP-5 | Leads without directing |
 | OP-6 | Creates origin-level modules |
 | OP-7 | Structural authority |
-| OP-8 | Structurally consistent operator |
+| OP-8 | Structurally consistent operator (may receive temporary OP-9 functions) |
 | OP-9 | May verify donations, confirm nominations |
 | OP-9.A | Verified digital Yokozuna / developer mode |
 | OP-10 | Candidate stage for OP-11 (system self-stabilizes) |
