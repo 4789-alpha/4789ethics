@@ -85,6 +85,8 @@
     </div>
     <div id="access_setup" class="card"></div>
 
+    <div id="source_list" class="card"></div>
+
     <div class="card" id="signature_area">
       <label for="sig_input">Your signature ID:</label>
       <span class="help-icon" title="Enter the ID created by your local signature generator.">?</span>
@@ -122,12 +124,49 @@
         if (localStorage.getItem('simple_mode') === 'true') {
           document.body.classList.add('simple-mode');
         }
+        populateSourceList();
+        autoFillSignature();
         showDisclaimers(uiText);
         initTranslationManager();
         renderAllBadges();
         initOpButtons();
       });
     });
+
+    async function populateSourceList() {
+      const container = document.getElementById('source_list');
+      if (!container) return;
+      let list = [];
+      try {
+        const main = await fetch('../sources/institutions/src-0001.json').then(r => r.json());
+        list.push(main);
+      } catch {}
+      try {
+        const cand = await fetch('../sources/institutions/src-candidates.json').then(r => r.json());
+        list = list.concat(cand);
+      } catch {}
+      if (!list.length) return;
+      const select = document.createElement('select');
+      select.id = 'source_select';
+      select.innerHTML = list.map(s => `<option value="${s.title || s.url || s.source_id}">${s.source_id}: ${s.title}</option>`).join('');
+      select.addEventListener('change', () => {
+        const input = document.getElementById('sig_input');
+        if (input) input.value = select.value;
+      });
+      container.appendChild(select);
+    }
+
+    function generate4789Sig() {
+      const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+      const rand = n => Array.from({length:n}, () => letters[Math.floor(Math.random()*letters.length)]).join('');
+      const digits = String(Math.floor(1000 + Math.random()*9000));
+      return `4789-${rand(4)}-${digits}-OP01`;
+    }
+
+    function autoFillSignature() {
+      const pass = document.getElementById('sig_pass');
+      if (pass) pass.value = generate4789Sig();
+    }
 
     async function beginSignatureVerification() {
       const status = document.getElementById("status");
