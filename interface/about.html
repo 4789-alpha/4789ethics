@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>Über das Modul</title>
+  <link rel="stylesheet" href="ethicom-style.css" />
+  <script src="language-selector.js"></script>
+  <script src="ethicom-utils.js"></script>
+  <script src="translation-manager.js"></script>
+  <script src="interface-loader.js"></script>
+  <script src="disclaimer.js"></script>
+  <script src="color-auth.js"></script>
+  <script src="theme-manager.js"></script>
+  <script src="logo-background.js"></script>
+  <script src="touch-features.js"></script>
+</head>
+<body>
+  <div id="op_background"></div>
+  <header>
+    <h1>Über das Modul</h1>
+  </header>
+  <section class="hero">
+    <p class="tagline">Ethik-Kompass für technologische Projekte</p>
+  </section>
+  <nav>
+    <a href="../index.html">Home</a>
+    <a href="erstkontakt.html">Erstkontakt</a>
+    <a href="ethicom.html" data-ui="nav_start">Ethicom</a>
+    <a href="ratings.html" data-ui="nav_ratings">Bewertungen</a>
+    <a href="signup.html" data-ui="nav_signup">Signup</a>
+    <a href="tools.html" data-ui="nav_tools">Tools</a>
+    <a href="settings.html" data-ui="nav_settings" class="icon-only">⚙</a>
+    <a href="../wings/index.html">Wings</a>
+    <a href="../README.md" target="_blank" class="readme-link">README</a>
+  </nav>
+  <main>
+    <div id="lang_selection" class="card">
+      <label for="lang_select" data-ui="choose_language_label">Language:</label>
+      <select id="lang_select"></select>
+    </div>
+    <section class="card" id="module_info">
+      <h2>Modul 4789</h2>
+      <p>Dieses Modul fasst die Grundsätze der Struktur zusammen. Verantwortliches Handeln steht vor Bequemlichkeit.</p>
+    </section>
+    <section class="card" id="founder_info" style="display:none;">
+      <h2>Signature 4789</h2>
+      <p id="founder_text">Informationen über die Gründerperson werden auf höheren OP-Stufen sichtbar.</p>
+    </section>
+  </main>
+  <script>
+    function isIncomplete(base, obj, keys){
+      return keys.some(k => !Object.prototype.hasOwnProperty.call(obj, k) || !obj[k] || JSON.stringify(obj[k]) === JSON.stringify(base[k]));
+    }
+    function initCompletedLanguageDropdown(id){
+      fetch('../i18n/ui-text.json').then(r=>r.json()).then(data=>{
+        const select = document.getElementById(id);
+        if(!select) return;
+        const base=data.de||{};
+        const keys=Object.keys(base);
+        const languages=Object.entries(data).filter(([c,o])=>!isIncomplete(base,o,keys));
+        languages.forEach(([code])=>{
+          const opt=document.createElement('option');
+          opt.value=code;
+          opt.textContent=code;
+          select.appendChild(opt);
+        });
+        let lang=getLanguage();
+        if(!languages.some(([c])=>c===lang)){
+          lang=languages.some(([c])=>c==='en')?'en':languages[0][0];
+          localStorage.setItem('ethicom_lang',lang);
+        }
+        select.value=lang;
+        select.addEventListener('change',e=>{
+          const val=e.target.value;
+          localStorage.setItem('ethicom_lang',val);
+          loadUiTexts().then(t=>{
+            applyTexts(t[val]||t.en||{});
+          });
+        });
+      });
+    }
+    function updateFounderInfo(){
+      const lvl=opLevelToNumber(getStoredOpLevel());
+      const txt=document.getElementById('founder_text');
+      const section=document.getElementById('founder_info');
+      if(!txt||!section) return;
+      if(lvl>=7){
+        txt.textContent='Gründer: Raphael Lauper, Bern, Schweiz.';
+        section.style.display='block';
+        if(lvl>=9){
+          txt.textContent+=' OP-9.A: Verantwortlicher Entwickler-Modus.';
+        }
+      }
+    }
+    document.addEventListener('DOMContentLoaded',()=>{
+      initCompletedLanguageDropdown('lang_select');
+      loadUiTexts().then(texts=>{
+        const lang=getLanguage();
+        applyTexts(texts[lang]||texts.en||{});
+        showDisclaimers(texts[lang]||texts.en||{});
+      });
+      updateFounderInfo();
+    });
+  </script>
+</body>
+</html>
