@@ -19,25 +19,26 @@
   <script src="../interface/touch-features.js"></script>
 </head>
 <body>
-  <div id="op_background"></div>
+  <div id="op_background" aria-hidden="true"></div>
+  <a class="skip-link" href="#main_content">Skip to main content</a>
   <header>
     <h1>Wings</h1>
   </header>
   <section class="hero">
     <p class="tagline">Ethik-Kompass für technologische Projekte</p>
   </section>
-  <nav>
+  <nav role="navigation" aria-label="Main">
     <a href="../index.html">Home</a>
     <a href="../interface/erstkontakt.html">Erstkontakt</a>
     <a href="../interface/ethicom.html" data-ui="nav_start">Ethicom</a>
     <a href="../interface/ratings.html" data-ui="nav_ratings">Bewertungen</a>
     <a href="../interface/signup.html" data-ui="nav_signup">Signup</a>
     <a href="../interface/tools.html" data-ui="nav_tools">Tools</a>
-    <a href="../interface/settings.html" data-ui="nav_settings" class="icon-only">⚙</a>
-    <a href="index.html">Wings</a>
+    <a href="../interface/settings.html" data-ui="nav_settings" class="icon-only" title="Settings" aria-label="Settings">⚙</a>
+    <a href="index.html" aria-current="page">Wings</a>
     <a href="../README.md" target="_blank" data-ui="nav_readme" class="readme-link">README</a>
   </nav>
-  <main>
+  <main id="main_content">
     <div id="lang_selection" class="card" style="margin-bottom:1em;">
       <label for="lang_select" data-ui="choose_language_label">Language:</label>
       <select id="lang_select"></select>
