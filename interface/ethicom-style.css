@@ -187,6 +187,14 @@ main {
   margin-bottom: 1.5em;
 }
 
+.swipe-card {
+  transition: transform 0.3s;
+}
+.swipe-card.swipe-left { transform: translateX(-80px); }
+.swipe-card.swipe-right { transform: translateX(80px); }
+.swipe-card.swipe-up { transform: translateY(-80px); }
+.swipe-card.swipe-down { transform: translateY(80px); }
+
 input,
 select,
 textarea {
