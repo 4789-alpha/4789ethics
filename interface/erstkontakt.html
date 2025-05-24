@@ -2,6 +2,7 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Willkommen</title>
   <link rel="stylesheet" href="ethicom-style.css" />
   <script src="language-selector.js"></script>
@@ -20,6 +21,7 @@
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#main_content">Skip to main content</a>
   <div id="op_background"></div>
   <header>
     <h1>Willkommen</h1>
@@ -38,7 +40,7 @@
     <a href="../wings/index.html">Wings</a>
     <a href="../README.md" target="_blank" class="readme-link">README</a>
   </nav>
-  <main class="card">
+  <main class="card" id="main_content">
     <div id="lang_selection" class="card" style="margin-bottom:1em;">
       <label for="lang_select" data-ui="choose_language_label">Language:</label>
       <select id="lang_select"></select>
