@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Einstellungen</title>
   <link rel="stylesheet" href="ethicom-style.css" />
   <script src="language-selector.js"></script>
@@ -17,6 +18,7 @@
   <script src="module-arranger.js"></script>
 </head>
 <body class="left-layout">
+  <a class="skip-link" href="#main_content">Skip to main content</a>
   <div id="op_background"></div>
   <header>
     <h1 data-ui="nav_settings">Einstellungen</h1>
@@ -35,7 +37,7 @@
     <a href="../wings/index.html">Wings</a>
     <a href="../README.md" target="_blank" data-ui="nav_readme" class="readme-link">README</a>
   </nav>
-  <main>
+  <main id="main_content">
     <div id="lang_selection" class="card" style="margin-bottom:1em;">
       <label for="lang_select" data-ui="choose_language_label">Language:</label>
       <select id="lang_select"></select>

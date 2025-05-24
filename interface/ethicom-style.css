@@ -435,3 +435,20 @@ body.left-layout main {
 .attention-wiggle {
   animation: attentionWiggle 0.3s 6;
 }
+
+/* Accessibility: hide skip link off-screen until focus */
+.skip-link {
+  position: absolute;
+  left: -1000px;
+  top: auto;
+  background: var(--primary-color);
+  color: var(--text-color);
+  padding: 0.5em;
+  text-decoration: none;
+  z-index: 100;
+}
+.skip-link:focus {
+  left: 0;
+  top: 0;
+}
+

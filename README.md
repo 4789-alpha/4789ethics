@@ -21,6 +21,7 @@ For a brief tour of the main files, see [GET_STARTED.md](GET_STARTED.md).
 **License:** Open-Ethics (see `LICENSE.txt`)
 No manipulation. No simulation. No flattening of responsibility.
 Humor ist willkommen, wenn er Verantwortung und Klarheit unterstützt.
+See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
 
 ## Contents
 
@@ -60,6 +61,27 @@ Humor ist willkommen, wenn er Verantwortung und Klarheit unterstützt.
 | `tools/` | Utility scripts (e.g., trust-demotion engine, Python API example) |
 | `use_cases/` | Example scenarios and dissemination ideas |
 
+
+### Interface Pages [⇧](#contents)
+
+| File | Description |
+|------|-------------|
+| [index.html](index.html) | Start page linking to Ethicom and ratings |
+| [interface/about.html](interface/about.html) | Explains the 4789 module |
+| [interface/chat.html](interface/chat.html) | Chat interface |
+| [interface/erstkontakt.html](interface/erstkontakt.html) | Guided first contact |
+| [interface/ethicom.html](interface/ethicom.html) | Main evaluation module |
+| [interface/page-flow-demo.html](interface/page-flow-demo.html) | Demo of horizontal flow |
+| [interface/ratings.html](interface/ratings.html) | List of published ratings |
+| [interface/settings.html](interface/settings.html) | Language and theme settings |
+| [interface/signup.html](interface/signup.html) | Registration form |
+| [interface/tanna-template.html](interface/tanna-template.html) | Base template |
+| [interface/tanna-template-dark.html](interface/tanna-template-dark.html) | Template in dark theme |
+| [interface/tanna-template-light.html](interface/tanna-template-light.html) | Template in light theme |
+| [interface/tools.html](interface/tools.html) | Utility collection |
+| [interface/README.html](interface/README.html) | HTML version of the interface docs |
+| [wings/index.html](wings/index.html) | Mobile interface "Wings" |
+| [wings/ratings.html](wings/ratings.html) | Mobile ratings summary |
 ### OP-Permissions [⇧](#contents)
 Operator actions by ethical level are defined in:
 → [`permissions/op-permissions-expanded.json`](permissions/op-permissions-expanded.json)
@@ -74,6 +96,25 @@ Additional flags now cover structural capabilities:
 `can_vote_on_op10`, `can_act_as_structure`,
 `can_execute_evaluations`, and `can_finalize_system`.
 OP‑10 has been added as a dedicated observation level.
+
+### OP Levels [⇧](#contents)
+
+| Level | Description |
+|-------|-------------|
+| <a id="op-0"></a> OP-0 | anonymous observer |
+| <a id="op-1"></a> OP-1 | first signed rating |
+| <a id="op-2"></a> OP-2 | provides feedback responsibly |
+| <a id="op-3"></a> OP-3 | rating requires justification |
+| <a id="op-4"></a> OP-4 | can revise after 3 weeks |
+| <a id="op-5"></a> OP-5 | may withdraw previous evaluations |
+| <a id="op-6"></a> OP-6 | can verify consensus |
+| <a id="op-7"></a> OP-7 | structural authority |
+| <a id="op-8"></a> OP-8 | candidate stage for OP-9 (system self-stabilizes) |
+| <a id="op-9"></a> OP-9 | may verify donations, confirm nominations |
+| <a id="op-9-a"></a> OP-9.A | verified digital Yokozuna mode |
+| <a id="op-10"></a> OP-10 | candidate for Yokozuna (OP-11) |
+| <a id="op-11"></a> OP-11 | Yokozuna-Schwingerkönig mode |
+| <a id="op-12"></a> OP-12 | first non-human stage |
 
 ### SRC vs. OO Levels [⇧](#contents)
 Comparison table: [`references/src_vs_oo.md`](references/src_vs_oo.md)
