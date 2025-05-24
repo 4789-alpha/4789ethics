@@ -57,7 +57,8 @@
     "can_observe_only": false,
     "can_act_as_structure": false,
     "can_execute_evaluations": false,
-    "can_finalize_system": false
+    "can_finalize_system": false,
+    "is_edit_stage": true
   },
   "OP-1": {
     "can_rate": true,
@@ -117,7 +118,8 @@
     "can_observe_only": false,
     "can_act_as_structure": false,
     "can_execute_evaluations": false,
-    "can_finalize_system": false
+    "can_finalize_system": false,
+    "is_edit_stage": true
   },
   "OP-2": {
     "can_rate": true,
@@ -177,7 +179,8 @@
     "can_observe_only": false,
     "can_act_as_structure": false,
     "can_execute_evaluations": false,
-    "can_finalize_system": false
+    "can_finalize_system": false,
+    "is_edit_stage": true
   },
   "OP-3": {
     "can_rate": true,
@@ -237,7 +240,8 @@
     "can_observe_only": false,
     "can_act_as_structure": false,
     "can_execute_evaluations": false,
-    "can_finalize_system": false
+    "can_finalize_system": false,
+    "is_edit_stage": true
   },
   "OP-4": {
     "can_rate": true,

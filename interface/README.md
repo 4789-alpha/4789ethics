@@ -7,6 +7,7 @@ No personal account. No tracking. No influence.
 Just structured responsibility.
 For OP-6 and above, the generator can optionally store a hashed passport or ID locally.
 
+
 ---
 
 ## Core Principles (by 4789)
@@ -73,6 +74,8 @@ For OP-6 and above, the generator can optionally store a hashed passport or ID l
 | <a id="op-9-a"></a> OP-9.A | verified digital Yokozuna mode |
 | <a id="op-10"></a> OP-10 | candidate for Yokozuna (OP-11) |
 | <a id="op-11"></a> OP-11 | Yokozuna-Schwingerkönig mode |
+
+The range from OP-0 to OP-3 forms the editing stage (*Bearbeitungsstufe*) where evaluations can still be adjusted.
 
 ---
 

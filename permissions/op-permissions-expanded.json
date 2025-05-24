@@ -52,6 +52,10 @@
     "can_assign_new_appendix": false,
     "can_downgrade_op_till_own": false,
     "can_observe_only": false,
+    "can_act_as_structure": false,
+    "can_execute_evaluations": false,
+    "can_finalize_system": false,
+    "is_edit_stage": true,
     "can_act_as_structure": false
   },
   "OP-1": {
@@ -107,7 +111,12 @@
     "can_assign_new_appendix": false,
     "can_downgrade_op_till_own": false,
     "can_observe_only": false,
+    "can_act_as_structure": false,
+    "can_execute_evaluations": false,
+    "can_finalize_system": false,
+    "is_edit_stage": true,
     "can_act_as_structure": false
+
   },
   "OP-2": {
     "can_rate": true,
@@ -162,7 +171,12 @@
     "can_assign_new_appendix": false,
     "can_downgrade_op_till_own": false,
     "can_observe_only": false,
+    "can_act_as_structure": false,
+    "can_execute_evaluations": false,
+    "can_finalize_system": false,
+    "is_edit_stage": true,
     "can_act_as_structure": false
+
   },
   "OP-3": {
     "can_rate": true,
@@ -217,6 +231,10 @@
     "can_assign_new_appendix": false,
     "can_downgrade_op_till_own": false,
     "can_observe_only": false,
+    "can_act_as_structure": false,
+    "can_execute_evaluations": false,
+    "can_finalize_system": false,
+    "is_edit_stage": true,
     "can_act_as_structure": false
   },
   "OP-4": {
