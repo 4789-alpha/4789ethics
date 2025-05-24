@@ -15,19 +15,19 @@ const helpMap = {
   },
   'OP-0': { title: 'OP-0 Tips', items: [
     'Anonymous ratings have minimal influence.',
-    'Move to OP-1 to sign your evaluations.'
+    'Move to OP-1 to sign your evaluations. Editing stage.'
   ] },
   'OP-1': { title: 'OP-1 Tips', items: [
     'Signed evaluations store your signature ID.',
-    'Explain why the chosen SRC fits.'
+    'Explain why the chosen SRC fits. Editing stage.'
   ] },
   'OP-2': { title: 'OP-2 Tips', items: [
     'Add aspect tags to highlight angles of your evaluation.',
-    'Private references stay internal only.'
+    'Private references stay internal only. Editing stage.'
   ] },
   'OP-3': { title: 'OP-3 Tips', items: [
     'Structured reasoning is required.',
-    'Use visual selectors for SRC levels.'
+    'Use visual selectors for SRC levels. Editing stage.'
   ] },
   'OP-4': { title: 'OP-4 Tips', items: [
     'Revisions become possible after 21 days.',
