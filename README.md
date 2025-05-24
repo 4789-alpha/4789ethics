@@ -47,7 +47,7 @@ See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
 | Directory | Purpose |
 |-----------|---------|
 | `app/` | Application settings, language rules, and user state |
-| `ethics_modules/` | Core YAML and markdown modules for the ethics framework, including `structure_9874`, `ske_module`, and `public_trust_vii` |
+| `ethics_modules/` | Core YAML and markdown modules for the ethics framework, including `structure_9874`, `ske_module`, and `public_trust_i` |
 | `interface/` | Front-end files for the evaluation interface |
 | `i18n/` | UI translations referenced by the interface |
 | `manifests/` | Structural manifests and integrity data |
