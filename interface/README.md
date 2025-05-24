@@ -130,6 +130,18 @@ The interface includes an accessibility setup (`accessibility.js`).
 Here you can choose larger fonts and activate a simplified interface.
 Simple mode hides advanced options and reduces visual load for inclusive us.
 
+## Swipe and Keyboard Controls
+
+The OP-0 and OP-1 person modules react to touch swipes and arrow keys:
+
+- **Left** → sets the rating to *Unclear*
+- **Up** → sets the rating to *Yes*
+- **Down** → sets the rating to *No*
+- **Right** → shows an info alert about the selected name
+
+Touch gestures and keyboard shortcuts offer a quick way to adjust the current
+card. The `.swipe-card` style animates the movement when a direction is chosen.
+
 ## Designprinzipien
 
 Siehe [shneiderman-rules.md](shneiderman-rules.md) für die acht Gestaltungsrichtlinien, die im Interface berücksichtigt werden.
