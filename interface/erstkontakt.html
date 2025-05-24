@@ -10,6 +10,8 @@
   <script src="ratings.js"></script>
   <script src="interface-loader.js"></script>
   <script src="translation-manager.js"></script>
+  <script src="dynamic-info.js"></script>
+  <script src="op-overview.js"></script>
   <script src="disclaimer.js"></script>
   <script src="color-auth.js"></script>
   <script src="theme-manager.js"></script>
@@ -40,17 +42,29 @@
     <a href="../wings/index.html">Wings</a>
     <a href="../README.md" target="_blank" class="readme-link">README</a>
   </nav>
-  <main class="card" id="main_content">
+  <main id="main_content">
     <div id="lang_selection" class="card" style="margin-bottom:1em;">
       <label for="lang_select" data-ui="choose_language_label">Language:</label>
       <select id="lang_select"></select>
     </div>
-    <section class="card">
-      <h2>Erste Einblicke</h2>
-      <p>Hier siehst du die bisherigen Bewertungen und kannst dir einen Eindruck verschaffen.</p>
+    <section class="card" id="intro">
+      <h2>Einführung</h2>
+      <p>Der Ethik-Kompass (Ethicom) ist ein Framework für verantwortungsbasierte Bewertungen. Diese Seite bietet einen ersten Überblick.</p>
     </section>
-    <section id="rating_summary" class="card"></section>
-    <section id="rating_library" class="card"></section>
+    <section id="rating_summary" class="card">
+      <h2>Bewertungsübersicht</h2>
+    </section>
+    <section id="rating_categories" class="card">
+      <h2>Kategorien</h2>
+    </section>
+    <section id="rating_library" class="card">
+      <h2>Bewertungsverlauf</h2>
+    </section>
+    <section id="op_overview" class="card"></section>
+    <section class="card">
+      <h2>Weiter zu Ethicom</h2>
+      <p>Starte die Bewertung über <a href="ethicom.html">Ethicom</a>. Eine Vorschau für OP‑0 ist ohne Anmeldung möglich.</p>
+    </section>
     <div id="op_interface" class="card" style="display:none;"></div>
   </main>
   <script>
