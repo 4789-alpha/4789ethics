@@ -129,6 +129,7 @@ Comparison table: [`references/src_vs_oo.md`](references/src_vs_oo.md)
 ### Evaluated Sources (as examples) [⇧](#contents)
 - [src-0001: Fairphone](sources/institutions/src-0001.json) → [`SRC-4`](manifests/op-eval-4789-src-0001.json)
 - [src-0002: Ecosia](https://www.ecosia.org/) → [`SRC-4`](manifests/op-eval-4789-src-0002.json)
+- [human-wiki dataset](references/human-wiki-links.json) → [`SRC-1`](manifests/op-eval-anon-humanwiki.json)
 
 ### File Integrity [⇧](#contents)
 
