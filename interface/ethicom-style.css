@@ -126,6 +126,7 @@ body {
   font-family: system-ui, sans-serif;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
   animation: fadeInPage 0.6s ease-in-out;
 }
 
@@ -191,8 +192,8 @@ header .title-logo {
 }
 
 main {
-  max-width: 900px;
-  margin: 0 auto;
+  max-width: none;
+  margin: 0;
   padding: 2em;
   position: relative;
   z-index: 1;
