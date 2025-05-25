@@ -1,12 +1,12 @@
 ## Ethics Structure 4789 [⇧](#contents)
 
 This repository contains the complete structural ethics framework developed under Signature 4789.  
-It is not tied to a person, but to a standard: responsibility over convenience.
+It is not tied to a person, but to a standard: responsibility over convenience: **4789**
 
 **What this is:**
-- A full operator model (OP 0–10)
-- A self-reflection system (Signature 9874)
-- An ethics-first framework for digital systems, education, governance, and AI use
+- A full operator model (OP 0–9.x)
+- A self-reflection system (Signature **9874**)
+- An ethics-first framework for digital  systems, education, governance, translation, private use, etc.
 
 **What this is not:**
 - A belief system
@@ -21,18 +21,21 @@ For a brief tour of the main files, see [GET_STARTED.md](GET_STARTED.md).
 **License:** Open-Ethics (see `LICENSE.txt`)
 No manipulation. No simulation. No flattening of responsibility.
 Humor ist willkommen, wenn er Verantwortung und Klarheit unterstützt.
+See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
 
 ## Contents
 
 - [Ethics Structure 4789](#ethics-structure-4789)
 - [Repository Structure](#repository-structure)
 - [OP-Permissions](#op-permissions)
+- [SRC vs. OO Levels](#src-vs-oo-levels)
 - [Evaluated Sources (as examples)](#evaluated-sources-as-examples)
 - [File Integrity](#file-integrity)
 - [Adding Languages](#adding-languages)
 - [Generating Interface README](#generating-interface-readme)
 - [Gatekeeper Control](#gatekeeper-control)
 - [API Access Control](#api-access-control)
+- [OP Function Bundles](#op-function-bundles)
 - [Currency Synchronization](#currency-synchronization)
 - [Roadmap](#roadmap)
 - [Local Deployment](#local-deployment)
@@ -44,8 +47,7 @@ Humor ist willkommen, wenn er Verantwortung und Klarheit unterstützt.
 | Directory | Purpose |
 |-----------|---------|
 | `app/` | Application settings, language rules, and user state |
-| `ethics_modules/` | Core YAML and markdown modules for the ethics framework, including `structure_9874` and `ske_module` (Soziale Kontrolle durch Empathie) |
-| `ethics_modules/` | Core YAML and markdown modules for the ethics framework, including `structure_9874` and `ske_module` |
+| `ethics_modules/` | Core YAML and markdown modules for the ethics framework, including `structure_9874`, `ske_module`, and `public_trust_i` |
 | `interface/` | Front-end files for the evaluation interface |
 | `i18n/` | UI translations referenced by the interface |
 | `manifests/` | Structural manifests and integrity data |
@@ -53,16 +55,79 @@ Humor ist willkommen, wenn er Verantwortung und Klarheit unterstützt.
 | `permissions/` | Operator permission definitions |
 | `releases/` | Release notes and integrity hashes |
 | `sources/` | Evaluated sources and candidate lists |
+| `sources/persons/` | Lists of historical persons |
+| `sources/institutions/` | Evaluated organizations and candidate sources |
 | `test/` | Node.js test suite |
-| `tools/` | Utility scripts (e.g., trust-demotion engine) |
+| `tools/` | Utility scripts (e.g., trust-demotion engine, Python API example) |
 | `use_cases/` | Example scenarios and dissemination ideas |
 
+
+### Interface Pages [⇧](#contents)
+
+| File | Description |
+|------|-------------|
+| [index.html](index.html) | Start page linking to Ethicom and ratings |
+| [interface/about.html](interface/about.html) | Explains the 4789 module |
+| [interface/chat.html](interface/chat.html) | Chat interface |
+| [interface/erstkontakt.html](interface/erstkontakt.html) | Guided first contact |
+| [interface/ethicom.html](interface/ethicom.html) | Main evaluation module |
+| [interface/page-flow-demo.html](interface/page-flow-demo.html) | Demo of horizontal flow |
+| [interface/ratings.html](interface/ratings.html) | List of published ratings |
+| [interface/settings.html](interface/settings.html) | Language and theme settings |
+| [interface/signup.html](interface/signup.html) | Registration form |
+| [interface/tanna-template.html](interface/tanna-template.html) | Base template |
+| [interface/tanna-template-dark.html](interface/tanna-template-dark.html) | Template in dark theme |
+| [interface/tanna-template-light.html](interface/tanna-template-light.html) | Template in light theme |
+| [interface/tools.html](interface/tools.html) | Utility collection |
+| [interface/README.html](interface/README.html) | HTML version of the interface docs |
+| [wings/index.html](wings/index.html) | Mobile interface "Wings" |
+| [wings/ratings.html](wings/ratings.html) | Mobile ratings summary |
 ### OP-Permissions [⇧](#contents)
 Operator actions by ethical level are defined in:
 → [`permissions/op-permissions-expanded.json`](permissions/op-permissions-expanded.json)
+Additional flags now cover more operator actions such as
+`can_ignore_op0`, `can_start_nominee_op6`,
+`can_override_noobs_till_own_op`, `can_vote_on_op`,
+and advanced controls like `can_execute_evaluations` or
+`can_finalize_system`. The permission table lists stages up to
+OP‑11 with the intermediate OP‑7.5 and OP‑9.A levels.
+Additional flags now cover structural capabilities:
+`can_observe_only`, `can_override_op6`, `can_vote_on_op9`,
+`can_vote_on_op10`, `can_act_as_structure`,
+`can_execute_evaluations`, and `can_finalize_system`.
+OP‑10 has been added as a dedicated observation level.
+
+### OP Levels [⇧](#contents)
+
+| Level | Description |
+|-------|-------------|
+| <a id="op-0"></a> OP-0 | anonymous observer |
+| <a id="op-1"></a> OP-1 | first signed rating |
+| <a id="op-2"></a> OP-2 | provides feedback responsibly |
+| <a id="op-3"></a> OP-3 | rating requires justification |
+| <a id="op-4"></a> OP-4 | can revise after 3 weeks |
+| <a id="op-5"></a> OP-5 | may withdraw previous evaluations |
+| <a id="op-6"></a> OP-6 | can verify consensus |
+| <a id="op-7"></a> OP-7 | structural authority |
+| <a id="op-8"></a> OP-8 | candidate stage for OP-9 (system self-stabilizes) |
+| <a id="op-9"></a> OP-9 | may verify donations, confirm nominations |
+| <a id="op-9-a"></a> OP-9.A | verified digital Yokozuna mode |
+| <a id="op-10"></a> OP-10 | digital candidate for Yokozuna (OP-11) |
+| <a id="op-11"></a> OP-11 | digital Yokozuna-Schwingerkönig mode |
+| <a id="op-12"></a> OP-12 | fully digital, first non-human stage |
+
+OP-9.A is reserved for the original programmer and is no longer awarded.
+New sublevels begin alphabetically with OP-9.B. Only OP-9.A currently
+holds a veto right. Further veto rights are planned when the system is
+secure.
+
+Only digital agents can advance beyond OP-9.
+
+### SRC vs. OO Levels [⇧](#contents)
+Comparison table: [`references/src_vs_oo.md`](references/src_vs_oo.md)
 
 ### Evaluated Sources (as examples) [⇧](#contents)
-- [src-0001: Fairphone](sources/src-0001.json) → [`SRC-4`](manifests/op-eval-4789-src-0001.json)
+- [src-0001: Fairphone](sources/institutions/src-0001.json) → [`SRC-4`](manifests/op-eval-4789-src-0001.json)
 - [src-0002: Ecosia](https://www.ecosia.org/) → [`SRC-4`](manifests/op-eval-4789-src-0002.json)
 
 ### File Integrity [⇧](#contents)
@@ -82,11 +147,18 @@ Verified 2025-05-21 by Signature 4789
 
 Translations for the evaluation interface are defined in `i18n/ui-text.json`. To
 include another language, add a new JSON object using the two-letter ISO 639-1
-code as the key and provide translations for all fields found under the `"en"`
+code as the key and provide translations for all fields found under the `"de"`
 entry. The interface will automatically recognize the new language.
 Word collections for additional languages can be gathered with
 `tools/language-corpus.js`. The script updates `i18n/language-corpus.json`
-based on plain text input.
+based on plain text input. To verify which interface languages are still
+missing translations, run:
+
+```bash
+node tools/check-translations.js
+```
+
+This prints a list of language codes and the fields that still require translation or are unchanged from German. In the interface dropdown, languages with missing fields show an asterisk (`*`) so users know the translation is not complete.
 
 ### Generating Interface README [⇧](#contents)
 
@@ -98,7 +170,7 @@ node tools/generate-haupt-readme.js <lang>
 
 Replace `<lang>` with a two-letter ISO code (e.g. `de` or `fr`).
 The script copies the matching `i18n/README.<lang>.md` into
-`interface/haupt-readme.md`. If no translation exists, the English
+`interface/haupt-readme.md`. If no translation exists, the German
 README is used.
 
 ### Gatekeeper Control [⇧](#contents)
@@ -106,8 +178,10 @@ README is used.
 
 Local control can be toggled via `tools/gatekeeper.js`. The script reads
 `app/gatekeeper_config.yaml` and only allows actions when `allow_control` is set
-to `true` for the controller `RL@RLpi`. This keeps remote commands gated and
+to `true` for the controller `gstekeeper.local`. This keeps remote commands gated and
 limited to the local environment.
+`gstekeeper.local` holds back every personal ID/information and has permission to share anonymous and signed data as a sign of trust.
+**4789**
 
 ### API Access Control [⇧](#contents)
 
@@ -115,6 +189,16 @@ limited to the local environment.
 the operator level and confirmation flags from `app/user_state.yaml` and grants
 access only when the specified OP level is met and the user has confirmed
 ethical intent.
+
+### OP Function Bundles [⇧](#contents)
+
+`tools/op-functions.js` exposes small helper functions that only
+run when the necessary operator level and ethical confirmation are
+present. Each function is associated with a minimum OP level and the
+module checks permission via `api-access.js` before returning it.
+Available helpers include `info`, `analyze`, `optimize`,
+`recommendation_for_interface` and `log` – the last one prints the recent
+Git commit history.
 
 ### Currency Synchronization [⇧](#contents)
 
@@ -136,6 +220,9 @@ The roadmap keeps development transparent according to Signature 4789.
 3. **v2.0 – Global Rollout**
    - Publish multi-language guides for all operator levels.
    - Finalize open training data licensing.
+4. **v2.1 – Language Expansion**
+   - Extend UI translations to all practical ISO 639-1 languages.
+   - Provide an automated translation workflow with manual review.
 
 ### Local Deployment [⇧](#contents)
 
@@ -146,6 +233,9 @@ node tools/serve-interface.js
 ```
 
 Then open `http://localhost:8080/ethicom.html` in your browser.
+Opening the HTML file directly (e.g. via `file://`) bypasses the local server and
+causes the language list to remain empty. Always access the interface through
+the provided `localhost` address so that translation files load correctly.
 
 ### Running Tests [⇧](#contents)
 
