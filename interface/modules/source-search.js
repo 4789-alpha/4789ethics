@@ -23,12 +23,12 @@ async function performSourceSearch() {
 
   const list = [];
   try {
-    const candidates = await fetch("../sources/src-candidates.json").then(r => r.json());
+    const candidates = await fetch("../sources/institutions/src-candidates.json").then(r => r.json());
     list.push(...candidates);
   } catch (e) {}
 
   try {
-    const src1 = await fetch("../sources/src-0001.json").then(r => r.json());
+    const src1 = await fetch("../sources/institutions/src-0001.json").then(r => r.json());
     list.push(src1);
   } catch (e) {}
 

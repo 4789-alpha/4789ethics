@@ -2,9 +2,9 @@ const fs = require('fs');
 const path = require('path');
 const file = path.join(__dirname, '..', 'i18n', 'ui-text.json');
 const data = JSON.parse(fs.readFileSync(file, 'utf8'));
-const base = data.en;
+const base = data.de;
 for (const [lang, obj] of Object.entries(data)) {
-  if (lang === 'en') continue;
+  if (lang === 'de') continue;
   for (const [k, v] of Object.entries(base)) {
     if (!Object.prototype.hasOwnProperty.call(obj, k)) {
       obj[k] = v;
