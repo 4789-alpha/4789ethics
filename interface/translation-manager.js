@@ -57,8 +57,8 @@ function applyTexts(t) {
   if (titleEl) titleEl.textContent = t.title || titleEl.textContent;
   const sourceLabel = document.querySelector('label[for="sig_input"]');
   if (sourceLabel) sourceLabel.textContent = t.label_source || sourceLabel.textContent;
-  const commentLabel = document.querySelector('label[for="sig_pass"]');
-  if (commentLabel) commentLabel.textContent = t.label_comment || commentLabel.textContent;
+  const passLabel = document.querySelector('label[for="sig_pass"]');
+  if (passLabel) passLabel.textContent = t.signup_password || passLabel.textContent;
   const verifyBtn = document.querySelector('#signature_area button');
   if (verifyBtn) verifyBtn.textContent = t.btn_generate || verifyBtn.textContent;
 
@@ -113,11 +113,16 @@ function applyTexts(t) {
   if (navReadme) navReadme.textContent = t.nav_readme || navReadme.textContent;
   const navTools = document.querySelector('[data-ui="nav_tools"]');
   if (navTools) navTools.textContent = t.nav_tools || navTools.textContent;
+  document.querySelectorAll('[data-ui="nav_settings"]').forEach(el => {
+    if (el.classList.contains('icon-only')) {
+      const text = t.nav_settings || el.getAttribute('title') || '';
+      el.setAttribute('title', text);
+      el.setAttribute('aria-label', text);
+    } else {
+      el.textContent = t.nav_settings || el.textContent;
+    }
+  });
 
-  const previewMsg = document.querySelector('[data-ui="preview_msg"]');
-  if (previewMsg) previewMsg.textContent = t.preview_msg || previewMsg.textContent;
-  const previewBtn = document.querySelector('[data-ui="preview_btn"]');
-  if (previewBtn) previewBtn.textContent = t.preview_btn || previewBtn.textContent;
 
   const chooseLabel = document.querySelector('[data-ui="choose_language_label"]');
   if (chooseLabel) chooseLabel.textContent = t.label_choose_language || chooseLabel.textContent;
