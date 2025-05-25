@@ -22,6 +22,7 @@
     "signup_placeholder_pw": "At least 8 characters",
     "signup_invalid_email": "Invalid email format.",
     "signup_unsupported": "Email provider not supported. Use a secure host.",
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
     "signup_pw_short": "Password must be at least 8 characters.",
     "signup_saved": "Signup information saved locally.",
     "help_title": "Help – Operator Conduct",
@@ -58,6 +59,9 @@
     "status_sig_invalid": "Signature invalid or password incorrect.",
     "status_sig_valid": "Signature valid: {level}",
     "status_loading_op0": "Loading OP-0...",
+    "rating_yes": "Yes",
+    "rating_partial": "Partly",
+    "rating_no": "No",
     "simple_toggle_label": "Toggle Simple Mode",
     "simple_mode_on": "Simple mode is active.",
     "simple_mode_off": "Simple mode is off.",
@@ -70,7 +74,10 @@
       "If a contradiction arises, apply self-reflection (structure_9874).",
       "Humor is allowed if responsibility and clarity remain."
     ],
-    "btn_disclaimer_accept": "I understand"
+    "btn_disclaimer_accept": "I understand",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "de": {
     "title": "Ethicom: Bewertung durch Menschen",
@@ -95,6 +102,7 @@
     "signup_placeholder_pw": "Mindestens 8 Zeichen",
     "signup_invalid_email": "Ungültiges E-Mail-Format.",
     "signup_unsupported": "E-Mail-Anbieter nicht unterstützt. Nutze einen sicheren Host.",
+    "signup_insecure_warn": "Unsicherer E-Mail-Anbieter. Bis OP-5 zulässig.",
     "signup_pw_short": "Passwort muss mindestens 8 Zeichen haben.",
     "signup_saved": "Registrierungsdaten lokal gespeichert.",
     "help_title": "Hilfe – Operator-Verhalten",
@@ -131,6 +139,9 @@
     "status_sig_invalid": "Signatur ungültig oder Passwort falsch.",
     "status_sig_valid": "Signatur gültig: {level}",
     "status_loading_op0": "OP-0 wird geladen...",
+    "rating_yes": "Ja",
+    "rating_partial": "Zum Teil",
+    "rating_no": "Nein",
     "simple_toggle_label": "Einfach-Modus umschalten",
     "simple_mode_on": "Einfach-Modus aktiv.",
     "simple_mode_off": "Einfach-Modus deaktiviert.",
@@ -143,7 +154,10 @@
       "Bei Widerspruch gilt Selbstreflexion nach structure_9874.md.",
       "Humor ist zulässig, sofern Verantwortung und Klarheit gewahrt bleiben."
     ],
-    "btn_disclaimer_accept": "Verstanden"
+    "btn_disclaimer_accept": "Verstanden",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "fr": {
     "title": "Ethicom : Évaluation humaine",
@@ -168,6 +182,7 @@
     "signup_placeholder_pw": "Au moins 8 caractères",
     "signup_invalid_email": "Format d'adresse invalide.",
     "signup_unsupported": "Fournisseur non pris en charge. Utilisez un hôte sûr.",
+    "signup_insecure_warn": "Hôte de courriel non sécurisé. Toléré jusqu'à OP-5.",
     "signup_pw_short": "Le mot de passe doit comporter au moins 8 caractères.",
     "signup_saved": "Informations d'inscription enregistrées localement.",
     "access_title": "Paramètres d'accessibilité",
@@ -216,7 +231,10 @@
     "nav_settings": "Paramètres",
     "simple_toggle_label": "Basculer le mode simple",
     "simple_mode_on": "Mode simple activé.",
-    "simple_mode_off": "Mode simple désactivé."
+    "simple_mode_off": "Mode simple désactivé.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "es": {
     "title": "Ethicom: Evaluación Humana",
@@ -246,6 +264,7 @@
     "signup_placeholder_pw": "Al menos 8 caracteres",
     "signup_invalid_email": "Formato de correo electrónico no válido.",
     "signup_unsupported": "Proveedor de correo no soportado. Usa un host seguro.",
+    "signup_insecure_warn": "Proveedor de correo inseguro. Permitido solo hasta OP-5.",
     "signup_pw_short": "La contraseña debe tener al menos 8 caracteres.",
     "signup_saved": "Información de registro guardada localmente.",
     "help_title": "Ayuda – Conducta del Operador",
@@ -289,7 +308,10 @@
     "btn_disclaimer_accept": "Entiendo",
     "simple_toggle_label": "Alternar modo simple",
     "simple_mode_on": "Modo simple activado.",
-    "simple_mode_off": "Modo simple desactivado."
+    "simple_mode_off": "Modo simple desactivado.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "pt": {
     "title": "Ethicom: Avaliação Humana",
@@ -324,6 +346,7 @@
     "signup_placeholder_pw": "No mínimo 8 caracteres",
     "signup_invalid_email": "Formato de email inválido.",
     "signup_unsupported": "Provedor de email não suportado. Use um host seguro.",
+    "signup_insecure_warn": "Host de email inseguro. Permitido apenas até OP-5.",
     "signup_pw_short": "A senha deve ter no mínimo 8 caracteres.",
     "signup_saved": "Informações de cadastro salvas localmente.",
     "help_title": "Ajuda – Conduta do Operador",
@@ -362,7 +385,10 @@
     "status_loading_op0": "Carregando OP-0...",
     "simple_toggle_label": "Alternar modo simples",
     "simple_mode_on": "Modo simples ativado.",
-    "simple_mode_off": "Modo simples desativado."
+    "simple_mode_off": "Modo simples desativado.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "zh": {
     "title": "Ethicom：人工评估",
@@ -435,7 +461,11 @@
     "status_loading_op0": "Loading OP-0...",
     "simple_toggle_label": "Toggle Simple Mode",
     "simple_mode_on": "Simple mode is active.",
-    "simple_mode_off": "Simple mode is off."
+    "simple_mode_off": "Simple mode is off.",
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "hi": {
     "title": "Ethicom: मानवीय मूल्यांकन",
@@ -508,7 +538,11 @@
       "If a contradiction arises, apply self-reflection (structure_9874).",
       "Humor is allowed if responsibility and clarity remain."
     ],
-    "btn_disclaimer_accept": "I understand"
+    "btn_disclaimer_accept": "I understand",
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "ar": {
     "title": "إيثيكوم: التقييم البشري",
@@ -581,7 +615,11 @@
       "If a contradiction arises, apply self-reflection (structure_9874).",
       "Humor is allowed if responsibility and clarity remain."
     ],
-    "btn_disclaimer_accept": "I understand"
+    "btn_disclaimer_accept": "I understand",
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "ja": {
     "title": "Ethicom：人間による評価",
@@ -654,7 +692,11 @@
       "If a contradiction arises, apply self-reflection (structure_9874).",
       "Humor is allowed if responsibility and clarity remain."
     ],
-    "btn_disclaimer_accept": "I understand"
+    "btn_disclaimer_accept": "I understand",
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "sw": {
     "title": "Ethicom: Tathmini ya Kibinadamu",
@@ -727,7 +769,11 @@
       "If a contradiction arises, apply self-reflection (structure_9874).",
       "Humor is allowed if responsibility and clarity remain."
     ],
-    "btn_disclaimer_accept": "I understand"
+    "btn_disclaimer_accept": "I understand",
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "ru": {
     "title": "Ethicom: Оценка человеком",
@@ -800,7 +846,11 @@
       "If a contradiction arises, apply self-reflection (structure_9874).",
       "Humor is allowed if responsibility and clarity remain."
     ],
-    "btn_disclaimer_accept": "I understand"
+    "btn_disclaimer_accept": "I understand",
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "it": {
     "title": "Ethicom: Valutazione Umana",
@@ -835,6 +885,7 @@
     "signup_placeholder_pw": "Almeno 8 caratteri",
     "signup_invalid_email": "Formato email non valido.",
     "signup_unsupported": "Provider email non supportato. Usa un host sicuro.",
+    "signup_insecure_warn": "Provider email non sicuro. Consentito solo fino a OP-5.",
     "signup_pw_short": "La password deve essere di almeno 8 caratteri.",
     "signup_saved": "Informazioni di registrazione salvate localmente.",
     "help_title": "Aiuto – Comportamento dell'Operatore",
@@ -873,7 +924,10 @@
     "status_loading_op0": "Caricamento di OP-0...",
     "simple_toggle_label": "Attiva/disattiva modalità semplice",
     "simple_mode_on": "Modalità semplice attiva.",
-    "simple_mode_off": "Modalità semplice disattiva."
+    "simple_mode_off": "Modalità semplice disattiva.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "ko": {
     "title": "Ethicom: 인간 평가",
@@ -946,7 +1000,11 @@
       "If a contradiction arises, apply self-reflection (structure_9874).",
       "Humor is allowed if responsibility and clarity remain."
     ],
-    "btn_disclaimer_accept": "I understand"
+    "btn_disclaimer_accept": "I understand",
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "fa": {
     "title": "ایتیکام: ارزیابی انسانی",
@@ -1019,7 +1077,11 @@
       "If a contradiction arises, apply self-reflection (structure_9874).",
       "Humor is allowed if responsibility and clarity remain."
     ],
-    "btn_disclaimer_accept": "I understand"
+    "btn_disclaimer_accept": "I understand",
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "pl": {
     "title": "Ethicom: Ocena Ludzka",
@@ -1092,7 +1154,11 @@
       "If a contradiction arises, apply self-reflection (structure_9874).",
       "Humor is allowed if responsibility and clarity remain."
     ],
-    "btn_disclaimer_accept": "I understand"
+    "btn_disclaimer_accept": "I understand",
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "am": {
     "title": "Ethicom: Human Evaluation",
@@ -1165,7 +1231,11 @@
       "If a contradiction arises, apply self-reflection (structure_9874).",
       "Humor is allowed if responsibility and clarity remain."
     ],
-    "btn_disclaimer_accept": "I understand"
+    "btn_disclaimer_accept": "I understand",
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "af": {
     "title": "Ethicom: Human Evaluation",
@@ -1238,7 +1308,11 @@
       "If a contradiction arises, apply self-reflection (structure_9874).",
       "Humor is allowed if responsibility and clarity remain."
     ],
-    "btn_disclaimer_accept": "I understand"
+    "btn_disclaimer_accept": "I understand",
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "bn": {
     "title": "Ethicom: Human Evaluation",
@@ -1311,7 +1385,11 @@
       "If a contradiction arises, apply self-reflection (structure_9874).",
       "Humor is allowed if responsibility and clarity remain."
     ],
-    "btn_disclaimer_accept": "I understand"
+    "btn_disclaimer_accept": "I understand",
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "ha": {
     "title": "Ethicom: Human Evaluation",
@@ -1384,7 +1462,11 @@
       "If a contradiction arises, apply self-reflection (structure_9874).",
       "Humor is allowed if responsibility and clarity remain."
     ],
-    "btn_disclaimer_accept": "I understand"
+    "btn_disclaimer_accept": "I understand",
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "id": {
     "title": "Ethicom: Human Evaluation",
@@ -1457,7 +1539,11 @@
       "If a contradiction arises, apply self-reflection (structure_9874).",
       "Humor is allowed if responsibility and clarity remain."
     ],
-    "btn_disclaimer_accept": "I understand"
+    "btn_disclaimer_accept": "I understand",
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "ig": {
     "title": "Ethicom: Human Evaluation",
@@ -1530,7 +1616,11 @@
       "If a contradiction arises, apply self-reflection (structure_9874).",
       "Humor is allowed if responsibility and clarity remain."
     ],
-    "btn_disclaimer_accept": "I understand"
+    "btn_disclaimer_accept": "I understand",
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "om": {
     "title": "Ethicom: Human Evaluation",
@@ -1603,7 +1693,11 @@
       "If a contradiction arises, apply self-reflection (structure_9874).",
       "Humor is allowed if responsibility and clarity remain."
     ],
-    "btn_disclaimer_accept": "I understand"
+    "btn_disclaimer_accept": "I understand",
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "rm": {
     "title": "Ethicom: Human Evaluation",
@@ -1676,7 +1770,11 @@
       "If a contradiction arises, apply self-reflection (structure_9874).",
       "Humor is allowed if responsibility and clarity remain."
     ],
-    "btn_disclaimer_accept": "I understand"
+    "btn_disclaimer_accept": "I understand",
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "ta": {
     "title": "Ethicom: Human Evaluation",
@@ -1749,7 +1847,11 @@
       "If a contradiction arises, apply self-reflection (structure_9874).",
       "Humor is allowed if responsibility and clarity remain."
     ],
-    "btn_disclaimer_accept": "I understand"
+    "btn_disclaimer_accept": "I understand",
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "te": {
     "title": "Ethicom: Human Evaluation",
@@ -1822,7 +1924,11 @@
       "If a contradiction arises, apply self-reflection (structure_9874).",
       "Humor is allowed if responsibility and clarity remain."
     ],
-    "btn_disclaimer_accept": "I understand"
+    "btn_disclaimer_accept": "I understand",
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "th": {
     "title": "Ethicom: Human Evaluation",
@@ -1895,7 +2001,11 @@
       "If a contradiction arises, apply self-reflection (structure_9874).",
       "Humor is allowed if responsibility and clarity remain."
     ],
-    "btn_disclaimer_accept": "I understand"
+    "btn_disclaimer_accept": "I understand",
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "tr": {
     "title": "Ethicom: Human Evaluation",
@@ -1968,7 +2078,11 @@
       "If a contradiction arises, apply self-reflection (structure_9874).",
       "Humor is allowed if responsibility and clarity remain."
     ],
-    "btn_disclaimer_accept": "I understand"
+    "btn_disclaimer_accept": "I understand",
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "ur": {
     "title": "Ethicom: Human Evaluation",
@@ -2041,7 +2155,11 @@
       "If a contradiction arises, apply self-reflection (structure_9874).",
       "Humor is allowed if responsibility and clarity remain."
     ],
-    "btn_disclaimer_accept": "I understand"
+    "btn_disclaimer_accept": "I understand",
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "vi": {
     "title": "Ethicom: Human Evaluation",
@@ -2114,7 +2232,11 @@
       "If a contradiction arises, apply self-reflection (structure_9874).",
       "Humor is allowed if responsibility and clarity remain."
     ],
-    "btn_disclaimer_accept": "I understand"
+    "btn_disclaimer_accept": "I understand",
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "xh": {
     "title": "Ethicom: Human Evaluation",
@@ -2187,7 +2309,11 @@
       "If a contradiction arises, apply self-reflection (structure_9874).",
       "Humor is allowed if responsibility and clarity remain."
     ],
-    "btn_disclaimer_accept": "I understand"
+    "btn_disclaimer_accept": "I understand",
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "yo": {
     "title": "Ethicom: Human Evaluation",
@@ -2260,7 +2386,11 @@
       "If a contradiction arises, apply self-reflection (structure_9874).",
       "Humor is allowed if responsibility and clarity remain."
     ],
-    "btn_disclaimer_accept": "I understand"
+    "btn_disclaimer_accept": "I understand",
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "zu": {
     "title": "Ethicom: Human Evaluation",
@@ -2333,7 +2463,11 @@
       "If a contradiction arises, apply self-reflection (structure_9874).",
       "Humor is allowed if responsibility and clarity remain."
     ],
-    "btn_disclaimer_accept": "I understand"
+    "btn_disclaimer_accept": "I understand",
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "nl": {
     "title": "Ethicom: Menselijke Evaluatie",
@@ -2406,6 +2540,10 @@
       "If a contradiction arises, apply self-reflection (structure_9874).",
       "Humor is allowed if responsibility and clarity remain."
     ],
-    "btn_disclaimer_accept": "I understand"
+    "btn_disclaimer_accept": "I understand",
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   }
 }

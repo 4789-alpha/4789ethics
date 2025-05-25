@@ -20,3 +20,7 @@ Beispiel: Für OP-9 (Signatur 4789) sind zehn verschachtelte Arrays erforderlich
 
 Jede zusätzliche Ebene (x, y, z, …) entspricht einer weiteren Array-Schicht bis die Ziel-OP-Stufe erreicht ist. Danach folgt eine abschließende Ebene zur Sicherung der Bewertung.
 
+## Nickname pro Signatur
+
+Ab **OP-1** kann eine Signatur einen kurzen Nickname enthalten. Diese Option erleichtert die Zuordnung einzelner Bewertungen. OP-0 bleibt weiterhin anonym.
+
