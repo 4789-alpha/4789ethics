@@ -24,3 +24,11 @@ Jede zusätzliche Ebene (x, y, z, …) entspricht einer weiteren Array-Schicht b
 
 Ab **OP-1** kann eine Signatur einen kurzen Nickname enthalten. Diese Option erleichtert die Zuordnung einzelner Bewertungen. OP-0 bleibt weiterhin anonym.
 
+## Interne Speicherung und Gatekeeper
+
+Alle Bewertungen werden intern abgelegt und sind nicht öffentlich abrufbar. Ab **OP-7** archiviert ein Gatekeeper die Signaturangaben. Gespeichert werden lediglich die reduzierten Bewertungsaspekte *Qualität* und *Ethik*.
+
+## Revision ohne Duplikate
+
+Jede Quelle kann pro Nutzer nur einmal bewertet werden. Ab einer höheren Stufe ist eine Überarbeitung möglich – die vorherige Bewertung wird dabei ersetzt, nicht verdoppelt.
+
