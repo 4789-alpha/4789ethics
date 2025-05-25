@@ -23,6 +23,7 @@ async function initRatings() {
         details = candidateMap[data.source_id] || null;
       }
       data.category = details && details.category ? details.category : '';
+      data.title = details && details.title ? details.title : data.source_id;
       ratings.push(data);
     }
 
@@ -65,7 +66,7 @@ async function initRatings() {
     ratings.forEach(r => {
       const row = document.createElement('tr');
       const logo = makeOpLogo(r.op_level);
-      row.innerHTML = `<td>${r.timestamp}</td><td>${r.source_id}</td><td>${r.category}</td><td>${r.src_lvl}</td><td>${r.op_level}</td><td>${logo}</td><td>${r.comment || ''}</td>`;
+      row.innerHTML = `<td>${r.timestamp}</td><td title="${r.source_id}">${r.title}</td><td>${r.category}</td><td>${r.src_lvl}</td><td>${r.op_level}</td><td>${logo}</td><td>${r.comment || ''}</td>`;
       tbody.appendChild(row);
 
       const num = srcMap[r.src_lvl] || 0;
