@@ -6,7 +6,7 @@ function initLanguageManager() {
   container.innerHTML = `
     <div class="card">
       <h3>Language Management</h3>
-      <p class="info">Generate JSON snippets for new UI translations.</p>
+      <p class="info" data-info="language-manager"></p>
       <label for="lang_code">Language Code (ISO 639-1):</label>
       <input type="text" id="lang_code" maxlength="2" />
       <label for="lang_title">Title Text:</label>
@@ -21,6 +21,7 @@ function initLanguageManager() {
       <pre id="lang_output" style="white-space:pre-wrap;"></pre>
     </div>
   `;
+  applyInfoTexts(container);
 }
 
 function generateLangSnippet() {

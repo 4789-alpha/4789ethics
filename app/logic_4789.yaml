@@ -10,7 +10,9 @@ logic_4789:
     - check_reflection_trigger
     - check_consequence_traceable
     - check_language_tragbarkeit
+    - check_ske_relevance
     - check_operator_permission
+    - check_public_trust
   decisions:
     if_input_empty:
       reject: true
@@ -30,6 +32,13 @@ logic_4789:
     if_op_level_insufficient:
       restrict: true
       notify: "Operator level too low for this action."
+    if_ske_recommended:
+      warn: true
+      suggestion: "Speech may prevent violence – consider SKE (Soziale Kontrolle durch Empathie)."
+      suggestion: "Speech may prevent violence – consider SKE."
+    if_public_trust_missing:
+      restrict: true
+      notify: "Public trust validation failed – reverting to OP-0."
 
   output_gate:
     if_all_passed:
