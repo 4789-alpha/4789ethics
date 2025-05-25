@@ -29,3 +29,8 @@ function computeAnonymousConsensus(votes) {
 // Beispielverwendung:
 // const result = computeAnonymousConsensus([{src_lvl: "SRC-3"}, {src_lvl: "SRC-4"}, ...]);
 // console.log(result);
+
+// Make available for Node.js tests
+if (typeof module !== "undefined" && module.exports) {
+  module.exports = { computeAnonymousConsensus };
+}
