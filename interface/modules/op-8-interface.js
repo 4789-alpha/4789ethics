@@ -1,8 +1,17 @@
 // op-8-interface.js – OP-8: Vorschlagsberechtigung, nicht Verleihung
 
-function initOP8Interface() {
+async function initOP8Interface() {
   const container = document.getElementById("op_interface");
   if (!container) return;
+
+  let extra = '';
+  try {
+    const data = await fetch('../op-permissions.json').then(r => r.json());
+    if (data.op8_temp_privilege) {
+      await loadOp9Module();
+      if (typeof getOP9Card === 'function') extra = getOP9Card();
+    }
+  } catch {}
 
   container.innerHTML = `
     <div class="card">
@@ -31,8 +40,19 @@ function initOP8Interface() {
 
       <button onclick="prepareNomination()">Create Nomination Proposal</button>
     </div>
+    ${extra}
   `;
   applyInfoTexts(container);
+}
+
+function loadOp9Module() {
+  return new Promise(res => {
+    if (typeof getOP9Card === 'function') return res();
+    const s = document.createElement('script');
+    s.src = 'modules/op-9-interface.js';
+    s.onload = res;
+    document.head.appendChild(s);
+  });
 }
 
 function prepareNomination() {
