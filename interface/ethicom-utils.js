@@ -3,14 +3,14 @@
 (function() {
   function setForegroundOpacity(percent) {
     let p = parseInt(percent, 10);
-    if (isNaN(p)) p = 50;
+    if (isNaN(p)) p = 40;
     if (p < 0) p = 0;
     if (p > 100) p = 100;
     document.documentElement.style.setProperty('--foreground-opacity', (p / 100).toString());
   }
   window.setForegroundOpacity = setForegroundOpacity;
   document.addEventListener('DOMContentLoaded', () => {
-    const stored = parseInt(localStorage.getItem('ethicom_fg_opacity') || '50', 10);
+    const stored = parseInt(localStorage.getItem('ethicom_fg_opacity') || '40', 10);
     setForegroundOpacity(stored);
   });
 })();

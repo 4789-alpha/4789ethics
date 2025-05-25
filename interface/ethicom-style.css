@@ -13,7 +13,7 @@
   --nav-bg: rgba(51, 51, 51, 0.9);
   --card-alpha-bg: rgba(43, 43, 43, 0.92);
   --accent-color: #ccaa22;
-  --foreground-opacity: 0.5;
+  --foreground-opacity: 0.4;
 }
 
 /* Theme classes override the CSS variables */
