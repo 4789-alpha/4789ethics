@@ -32,6 +32,7 @@ function initOP2Interface() {
       <input type="text" id="private_id" placeholder="(optional) e.g. initials, memory code" />
 
       <button onclick="generateStructuredManifest()">Submit Evaluation</button>
+      <button class="secondary-button" type="button" onclick="initOP2Interface()">Reset</button>
     </div>
   `;
   applyInfoTexts(container);
@@ -67,4 +68,5 @@ function generateStructuredManifest() {
 
   const output = document.getElementById("output");
   output.textContent = JSON.stringify(evalData, null, 2);
+  triggerSelfReflection("Review your structured evaluation via structure_9874.");
 }
