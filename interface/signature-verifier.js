@@ -15,7 +15,7 @@ async function verifySignature(minOP = "OP-1") {
     "OP-5": 12,
     "OP-6": 14,
     "OP-7": 16,
-    "OP-7.9": 18
+    "OP-9": 18
   };
 
   const minLength = required[minOP] || 6;
