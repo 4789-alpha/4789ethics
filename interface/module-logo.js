@@ -28,21 +28,10 @@ function insertModuleLogo() {
   header.style.backgroundSize = `auto ${size}`;
   header.style.paddingLeft = `calc(${size} + 1em)`;
 
-  if (h1 && !header.querySelector('.title-logo')) {
-    const imgEl = document.createElement('img');
-    imgEl.className = 'title-logo';
-    imgEl.src = src;
-    imgEl.alt = level;
-    imgEl.setAttribute('aria-label', level);
-    imgEl.style.height = size;
-    imgEl.style.marginLeft = '0.4em';
-    imgEl.onerror = () => { imgEl.src = fallback; };
-    h1.insertAdjacentElement('afterend', imgEl);
-  } else {
-    const img = new Image();
-    img.onerror = () => { header.style.backgroundImage = `url('${fallback}')`; };
-    img.src = src;
-  }
+  if (!h1) return;
+  const img = new Image();
+  img.onerror = () => { header.style.backgroundImage = `url('${fallback}')`; };
+  img.src = src;
 }
 
 if (typeof window !== 'undefined') {
