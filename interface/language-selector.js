@@ -16,8 +16,11 @@ function askLanguageChoice() {
 
 function getLanguage() {
   const stored = localStorage.getItem("ethicom_lang");
-  const lang = stored || askLanguageChoice();
-  if (lang) document.documentElement.lang = lang;
+  const lang = stored || "de";
+  if (lang) {
+    document.documentElement.lang = lang;
+    localStorage.setItem("ethicom_lang", lang);
+  }
   if (typeof updateReadmeLinks === 'function') updateReadmeLinks(lang);
   return lang;
 }
