@@ -7,7 +7,7 @@ function initOP3Interface() {
   container.innerHTML = `
     <div class="card">
       <h3>Ethical Evaluation (OP-3)</h3>
-      <p class="info">You are submitting a signed evaluation with structured reasoning and visual level selection.</p>
+      <p class="info" data-info="op-3"></p>
 
       <label>Select SRC level:</label>
       ${help('Use the buttons below to choose the ethical depth of this source.')}
@@ -18,8 +18,10 @@ function initOP3Interface() {
       <textarea id="comment" rows="3" required placeholder="Explain why this source matches the selected SRC level..."></textarea>
 
       <button onclick="generateVisualManifest()">Submit Evaluation</button>
+      <button class="secondary-button" type="button" onclick="initOP3Interface()">Reset</button>
     </div>
   `;
+  applyInfoTexts(container);
 
   initSRCBar(); // Lade visuelle SRC-Leiste
 }

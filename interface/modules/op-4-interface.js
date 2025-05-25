@@ -7,7 +7,7 @@ function initOP4Interface() {
   container.innerHTML = `
     <div class="card">
       <h3>Structured Evaluation (OP-4)</h3>
-      <p class="info">You are submitting a structured and traceable evaluation. A revision will become possible after 21 days.</p>
+      <p class="info" data-info="op-4"></p>
 
       <label for="src_lvl">SRC Level:</label>
       ${help('Choose how ethically aware the source is.')}
@@ -28,6 +28,7 @@ function initOP4Interface() {
       <button onclick="generateTraceableManifest()">Submit</button>
     </div>
   `;
+  applyInfoTexts(container);
 }
 
 function generateTraceableManifest() {
