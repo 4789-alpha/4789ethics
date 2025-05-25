@@ -7,9 +7,10 @@ function initOP2Interface() {
   container.innerHTML = `
     <div class="card">
       <h3>Structured Evaluation (OP-2)</h3>
-      <p class="info">You are submitting a signed evaluation with visible SRC level and internal identity option.</p>
+      <p class="info" data-info="op-2"></p>
 
       <label for="src_lvl">Select the SRC level:</label>
+      ${help('SRC describes the ethical consciousness of the evaluated source.')}
       <select id="src_lvl">
         <option value="SRC-0">SRC-0: Unconscious</option>
         <option value="SRC-1">SRC-1: Externally Controlled</option>
@@ -19,17 +20,22 @@ function initOP2Interface() {
       </select>
 
       <label for="aspects">Aspect tags (comma-separated):</label>
+      ${help('Keywords that highlight specific angles of your evaluation.')}
       <input type="text" id="aspects" placeholder="e.g. transparency, repairability" />
 
       <label for="comment">Ethical justification:</label>
+      ${help('Explain why the source deserves this SRC level.')}
       <textarea id="comment" rows="3" required placeholder="Why do you assign this level?"></textarea>
 
       <label for="private_id">Private identity (optional, not public):</label>
+      ${help('Reference code only you can link back to yourself.')}
       <input type="text" id="private_id" placeholder="(optional) e.g. initials, memory code" />
 
       <button onclick="generateStructuredManifest()">Submit Evaluation</button>
+      <button class="secondary-button" type="button" onclick="initOP2Interface()">Reset</button>
     </div>
   `;
+  applyInfoTexts(container);
 }
 
 function generateStructuredManifest() {
@@ -62,4 +68,5 @@ function generateStructuredManifest() {
 
   const output = document.getElementById("output");
   output.textContent = JSON.stringify(evalData, null, 2);
+  triggerSelfReflection("Review your structured evaluation via structure_9874.");
 }
