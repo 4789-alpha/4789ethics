@@ -23,6 +23,7 @@
   <script src="touch-features.js"></script>
   <script src="color-auth.js"></script>
   <script src="module-arranger.js"></script>
+  <script src="side-drop.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main_content">Skip to main content</a>
@@ -134,6 +135,9 @@
         initTranslationManager();
         renderAllBadges();
         initOpButtons();
+        initSideDrop('about.html');
+        const badgeBtn = document.getElementById('badge_display');
+        if (badgeBtn) badgeBtn.addEventListener('click', toggleSideDrop);
       });
     });
 
@@ -221,7 +225,7 @@
       });
     }
 
-    function handleOpButton(level) {
+  function handleOpButton(level) {
       const current = opLevelToNumber(getStoredOpLevel());
       const target = opLevelToNumber(level);
       if (current >= target) {
@@ -231,5 +235,6 @@
       }
     }
   </script>
+  <div id="side_drop"></div>
 </body>
 </html>
