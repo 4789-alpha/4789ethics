@@ -36,6 +36,9 @@ async function initBewertung() {
   const options = list.map(p => `<option value="${p.human_id}">${p.name}</option>`).join('');
   container.innerHTML = `
     <h3>Person bewerten</h3>
+    <label for="human_search">Suche:</label>
+    <input type="text" id="human_search" placeholder="Name oder ID" />
+    <ul id="search_results"></ul>
     <label for="human_sel">Person:</label>
     <select id="human_sel">${options}</select>
     <div id="sed_card" style="margin:0.5em 0;"></div>
@@ -51,6 +54,9 @@ async function initBewertung() {
   applySedCard();
   const sel = document.getElementById('human_sel');
   if (sel) sel.addEventListener('change', applySedCard);
+  const searchInput = document.getElementById('human_search');
+  const resultsList = document.getElementById('search_results');
+  if (searchInput) searchInput.addEventListener('input', e => performSearch(e.target.value));
 
   function handle(dir) {
     const card = container;
@@ -79,6 +85,29 @@ async function initBewertung() {
     if (e.code === 'ArrowRight') handle('right');
   };
   document.addEventListener('keydown', window.bewertungKeyHandler);
+
+  function performSearch(q) {
+    const query = q.toLowerCase();
+    if (!resultsList) return;
+    resultsList.innerHTML = '';
+    if (!query) return;
+    const matches = list.filter(p =>
+      (p.name && p.name.toLowerCase().includes(query)) ||
+      (p.human_id && p.human_id.toLowerCase().includes(query))
+    ).slice(0, 8);
+    matches.forEach(m => {
+      const li = document.createElement('li');
+      li.textContent = `${m.name} (${m.human_id})`;
+      li.style.cursor = 'pointer';
+      li.addEventListener('click', () => {
+        if (sel) sel.value = m.human_id;
+        applySedCard();
+        if (resultsList) resultsList.innerHTML = '';
+        if (searchInput) searchInput.value = '';
+      });
+      resultsList.appendChild(li);
+    });
+  }
 
   function applySedCard() {
     const s = document.getElementById('human_sel');
