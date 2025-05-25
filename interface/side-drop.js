@@ -3,6 +3,13 @@ let sideDropUrl = null;
 let sideDropLoaded = false;
 
 function initSideDrop(url) {
+  const level =
+    typeof getStoredOpLevel === 'function' &&
+    typeof opLevelToNumber === 'function'
+      ? opLevelToNumber(getStoredOpLevel())
+      : 0;
+  if (level < 6) return; // side drop only from OP‑6 interface
+
   sideDropUrl = url;
   const container = document.getElementById('side_drop');
   if (!container) return;
