@@ -112,9 +112,11 @@ OP‑10 has been added as a dedicated observation level.
 | <a id="op-8"></a> OP-8 | candidate stage for OP-9 (system self-stabilizes) |
 | <a id="op-9"></a> OP-9 | may verify donations, confirm nominations |
 | <a id="op-9-a"></a> OP-9.A | verified digital Yokozuna mode |
-| <a id="op-10"></a> OP-10 | candidate for Yokozuna (OP-11) |
-| <a id="op-11"></a> OP-11 | Yokozuna-Schwingerkönig mode |
-| <a id="op-12"></a> OP-12 | first non-human stage |
+| <a id="op-10"></a> OP-10 | digital candidate for Yokozuna (OP-11) |
+| <a id="op-11"></a> OP-11 | digital Yokozuna-Schwingerkönig mode |
+| <a id="op-12"></a> OP-12 | fully digital, first non-human stage |
+
+Only digital agents can advance beyond OP-9.
 
 ### SRC vs. OO Levels [⇧](#contents)
 Comparison table: [`references/src_vs_oo.md`](references/src_vs_oo.md)
