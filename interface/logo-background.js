@@ -13,23 +13,30 @@ function initLogoBackground() {
   window.addEventListener('resize', resize);
   resize();
 
-  const levels = [0, 1, 2, 3, 4, 5, 6, 7];
+  const levels = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
   const maxLvl = Math.max(...levels);
   const minScale = 0.3;
+  const FADE_MS = 1000;
   const images = levels.map(lvl => {
     const img = new Image();
-    img.src = `../op-logo/tanna_op${lvl}.png`;
+    const src = lvl >= 8 ? 7 : lvl;
+    img.src = `../op-logo/tanna_op${src}.png`;
     return img;
   });
 
   const symbols = [];
-  const total = 20;
+  // Number of floating symbols can be customized via settings
+  const stored = parseInt(localStorage.getItem('ethicom_bg_count') || '40', 10);
+  const total = Number.isFinite(stored) ? stored : 40;
   for (let i = 0; i < total; i++) {
     const lvl = levels[i % levels.length];
-    const img = images[lvl];
+    const img = images[lvl >= 8 ? 7 : lvl];
     const mass = lvl + 1;
+    const count = lvl >= 8 ? lvl - 6 : 1;
+    const hue = lvl >= 8 ? (lvl - 7) * 30 : 0;
     const size = 30 + lvl * 10 + Math.random() * 10;
     const radius = size / 2;
+    const subSize = size / count;
     const x = Math.random() * (canvas.width - size) + radius;
     const y = Math.random() * (canvas.height - size) + radius;
     const angle = Math.random() * Math.PI * 2;
@@ -39,6 +46,9 @@ function initLogoBackground() {
     symbols.push({
       img,
       lvl,
+      count,
+      hue,
+      subSize,
       mass,
       x,
       y,
@@ -52,6 +62,8 @@ function initLogoBackground() {
       alpha: 1,
       scale: 1,
       scaleDir: 0,
+      fadeOut: false,
+      fadeStart: 0,
     });
   }
 
@@ -112,12 +124,16 @@ function initLogoBackground() {
             s.rotSpeed = base * factor;
             s.rotFrames = 180;
             s.scaleDir = -1;
+            s.fadeOut = true;
+            s.fadeStart = performance.now();
           } else if (o.lvl < s.lvl) {
             const base = 0.2 + Math.random() * 0.3;
             const factor = 1 - o.lvl / (maxLvl + 1);
             o.rotSpeed = base * factor;
             o.rotFrames = 180;
             o.scaleDir = -1;
+            o.fadeOut = true;
+            o.fadeStart = performance.now();
           }
         }
       }
@@ -134,7 +150,7 @@ function initLogoBackground() {
             s.scale -= 0.2;
             if (s.scale <= minScale) {
               s.scale = minScale;
-              s.scaleDir = 1;
+              s.scaleDir = s.fadeOut ? 0 : 1;
             }
           } else if (s.scaleDir === 1) {
             s.scale += 0.02;
@@ -145,17 +161,38 @@ function initLogoBackground() {
           }
         }
 
+        if (s.fadeOut) {
+          const elapsed = performance.now() - s.fadeStart;
+          if (elapsed < FADE_MS / 2) {
+            s.alpha = 1 - elapsed / (FADE_MS / 2);
+          } else if (elapsed < FADE_MS) {
+            s.alpha = (elapsed - FADE_MS / 2) / (FADE_MS / 2);
+            s.scaleDir = 1;
+          } else {
+            s.alpha = 1;
+            s.fadeOut = false;
+            s.scaleDir = 0;
+          }
+        }
+
         ctx.save();
         ctx.translate(s.x, s.y);
         if (s.rotation) ctx.rotate(s.rotation);
         ctx.globalAlpha = s.alpha;
-        ctx.drawImage(
-          s.img,
-          -s.radius * s.scale,
-          -s.radius * s.scale,
-          s.size * s.scale,
-          s.size * s.scale
-        );
+        ctx.filter = s.hue ? `hue-rotate(${s.hue}deg)` : 'none';
+
+        const start = -s.radius * s.scale;
+        for (let n = 0; n < s.count; n++) {
+          const xOff = start + n * s.subSize * s.scale;
+          ctx.drawImage(
+            s.img,
+            xOff,
+            -s.subSize * s.scale / 2,
+            s.subSize * s.scale,
+            s.subSize * s.scale
+          );
+        }
+        ctx.filter = 'none';
         ctx.restore();
       }
 
