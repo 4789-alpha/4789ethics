@@ -1,19 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="utf-8" />
-  <title>Ethicom Signup</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Registrierung</title>
   <link rel="stylesheet" href="ethicom-style.css" />
   <script src="language-selector.js"></script>
+  <script src="ethicom-utils.js"></script>
   <script src="signup.js"></script>
   <script src="color-auth.js"></script>
   <script src="theme-manager.js"></script>
   <script src="logo-background.js"></script>
+  <script src="touch-features.js"></script>
+  <script src="module-arranger.js"></script>
+  <script src="side-drop.js"></script>
+  <script src="op-side-nav.js"></script>
 </head>
 <body>
+  <a class="skip-link" href="#main_content">Skip to main content</a>
   <div id="op_background"></div>
   <header>
-    <h1>Ethicom Signup</h1>
+    <h1>Registrierung</h1>
   </header>
   <section class="hero">
     <p class="tagline">Ethik-Kompass für technologische Projekte</p>
@@ -28,8 +35,9 @@
     <a href="settings.html" data-ui="nav_settings" class="icon-only">⚙</a>
     <a href="../wings/index.html">Wings</a>
     <a href="../README.md" target="_blank" class="readme-link">README</a>
+    <a href="#" id="side_menu" class="icon-only">☰</a>
   </nav>
-  <main>
+  <main id="main_content">
     <div id="lang_selection" class="card" style="margin-bottom:1em;">
       <label for="lang_select" data-ui="choose_language_label">Language:</label>
       <select id="lang_select"></select>
@@ -47,8 +55,13 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       initLanguageDropdown('lang_select');
+      applyStoredModuleOrder();
       initSignup();
+      initSideDrop('op-navigation.html');
+      const menu=document.getElementById('side_menu');
+      if(menu) menu.addEventListener('click',e=>{e.preventDefault();toggleSideDrop();});
     });
   </script>
+  <div id="side_drop"></div>
 </body>
 </html>

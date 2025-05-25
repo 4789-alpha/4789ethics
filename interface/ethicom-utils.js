@@ -16,7 +16,7 @@ function renderBadge(currentRank, maxRank) {
   mainSpan.className = `badge op-${currentRank.replace("OP-", "").replace(".", "")}`;
   mainSpan.textContent = currentRank;
 
-  const lang = localStorage.getItem('ethicom_lang') || document.documentElement.lang || 'en';
+  const lang = localStorage.getItem('ethicom_lang') || document.documentElement.lang || 'de';
   const mainLink = document.createElement("a");
   mainLink.href = `${getReadmePath(lang)}#${currentRank.toLowerCase().replace(/\./g, '-')}`;
   mainLink.appendChild(mainSpan);
@@ -53,7 +53,7 @@ function renderAllBadges() {
     "OP-12"
   ];
 
-  const lang = localStorage.getItem('ethicom_lang') || document.documentElement.lang || 'en';
+  const lang = localStorage.getItem('ethicom_lang') || document.documentElement.lang || 'de';
   gallery.innerHTML = "";
   levels.forEach(lvl => {
     const span = document.createElement("span");
@@ -107,7 +107,26 @@ function opLevelToNumber(level) {
   return isNaN(n) ? 0 : n;
 }
 
+function showLoadingBadge(level) {
+  const container = document.getElementById("loading_badge");
+  if (!container) return;
+  const span = container.querySelector("span");
+  const lvl = level || "OP-0";
+  if (span) {
+    span.textContent = lvl;
+    span.className = `badge op-${lvl.replace("OP-", "").replace(/\./g, "")} loading-badge`;
+  }
+  container.style.display = "block";
+}
+
+function hideLoadingBadge() {
+  const container = document.getElementById("loading_badge");
+  if (container) container.style.display = "none";
+}
+
 window.getStoredOpLevel = getStoredOpLevel;
 window.opLevelToNumber = opLevelToNumber;
 window.getReadmePath = getReadmePath;
+window.showLoadingBadge = showLoadingBadge;
+window.hideLoadingBadge = hideLoadingBadge;
 
