@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="utf-8" />
-  <title>Ethicom Interface</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ethik-Kompass</title>
   <link rel="stylesheet" href="ethicom-style.css" />
   <script src="ethicom-utils.js"></script>
   <script src="evidence-recorder.js"></script>
@@ -18,13 +19,18 @@
   <script src="dev-mode.js"></script>
   <script src="op0-testmode.js"></script>
   <script src="logo-background.js"></script>
+  <script src="attention-seeker.js"></script>
   <script src="touch-features.js"></script>
   <script src="color-auth.js"></script>
+  <script src="module-arranger.js"></script>
+  <script src="side-drop.js"></script>
+  <script src="op-side-nav.js"></script>
 </head>
 <body>
+  <a class="skip-link" href="#main_content">Skip to main content</a>
   <div id="op_background"></div>
   <header>
-    <h1>Ethicom Evaluation</h1>
+    <h1>Ethik-Kompass</h1>
   </header>
   <section class="hero">
     <p class="tagline">Ethik-Kompass für technologische Projekte</p>
@@ -40,8 +46,8 @@
     <a href="../wings/index.html">Wings</a>
     <a href="../README.md" target="_blank" data-ui="nav_readme" class="readme-link">README</a>
   </nav>
-  <main>
-    <h2 id="title">Ethicom Evaluation</h2>
+  <main id="main_content">
+    <h2 id="title">Ethik-Kompass</h2>
 
 
 
@@ -84,6 +90,8 @@
     </div>
     <div id="access_setup" class="card"></div>
 
+    <div id="source_list" class="card"></div>
+
     <div class="card" id="signature_area">
       <label for="sig_input">Your signature ID:</label>
       <span class="help-icon" title="Enter the ID created by your local signature generator.">?</span>
@@ -115,18 +123,59 @@
     let uiText = {};
     document.addEventListener("DOMContentLoaded", () => {
       initLanguageDropdown("lang_select");
+      applyStoredModuleOrder();
       loadUiTexts().then(texts => {
         uiText = texts[getLanguage()] || texts.en || {};
         applyTexts(uiText);
         if (localStorage.getItem('simple_mode') === 'true') {
           document.body.classList.add('simple-mode');
         }
+        populateSourceList();
+        autoFillSignature();
         showDisclaimers(uiText);
         initTranslationManager();
         renderAllBadges();
         initOpButtons();
+        initSideDrop('op-navigation.html');
+        const badgeBtn = document.getElementById('badge_display');
+        if (badgeBtn) badgeBtn.addEventListener('click', toggleSideDrop);
       });
     });
+
+    async function populateSourceList() {
+      const container = document.getElementById('source_list');
+      if (!container) return;
+      let list = [];
+      try {
+        const main = await fetch('../sources/institutions/src-0001.json').then(r => r.json());
+        list.push(main);
+      } catch {}
+      try {
+        const cand = await fetch('../sources/institutions/src-candidates.json').then(r => r.json());
+        list = list.concat(cand);
+      } catch {}
+      if (!list.length) return;
+      const select = document.createElement('select');
+      select.id = 'source_select';
+      select.innerHTML = list.map(s => `<option value="${s.title || s.url || s.source_id}">${s.source_id}: ${s.title}</option>`).join('');
+      select.addEventListener('change', () => {
+        const input = document.getElementById('sig_input');
+        if (input) input.value = select.value;
+      });
+      container.appendChild(select);
+    }
+
+    function generate4789Sig() {
+      const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+      const rand = n => Array.from({length:n}, () => letters[Math.floor(Math.random()*letters.length)]).join('');
+      const digits = String(Math.floor(1000 + Math.random()*9000));
+      return `4789-${rand(4)}-${digits}-OP01`;
+    }
+
+    function autoFillSignature() {
+      const pass = document.getElementById('sig_pass');
+      if (pass) pass.value = generate4789Sig();
+    }
 
     async function beginSignatureVerification() {
       const status = document.getElementById("status");
@@ -177,7 +226,7 @@
       });
     }
 
-    function handleOpButton(level) {
+  function handleOpButton(level) {
       const current = opLevelToNumber(getStoredOpLevel());
       const target = opLevelToNumber(level);
       if (current >= target) {
@@ -187,5 +236,6 @@
       }
     }
   </script>
+  <div id="side_drop"></div>
 </body>
 </html>
