@@ -1,6 +1,7 @@
 user:
   op_level: 0
   language: auto
+  nickname: null
   progress:
     ethics_test_passed: false
     last_feedback: null
