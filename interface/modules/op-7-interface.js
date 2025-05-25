@@ -27,16 +27,20 @@ function initOP7Interface() {
       ${help('Explain why your higher OP-level justifies this override.')}
       <textarea id="justification" rows="3" required placeholder="Why do you override this evaluation?"></textarea>
 
+      <label for="image_upload">Attach Image:</label>
+      <input type="file" id="image_upload" accept="image/*" />
+
       <button onclick="generateOverride()">Create Override</button>
-    </div>
+      </div>
   `;
   applyInfoTexts(container);
 }
 
-function generateOverride() {
+async function generateOverride() {
   const original_id = document.getElementById("original_id").value.trim();
   const new_src = document.getElementById("new_src").value;
   const justification = document.getElementById("justification").value.trim();
+  const imageFile = document.getElementById("image_upload").files[0];
   const timestamp = new Date().toISOString();
 
   if (!original_id || !justification) {
@@ -51,10 +55,24 @@ function generateOverride() {
     overrides: original_id,
     new_src_lvl: new_src,
     reason: justification,
+    image: null,
     verified: true,
     weight: 1.25
   };
 
+  if (imageFile) {
+    override.image = await new Promise((res, rej) => {
+      const reader = new FileReader();
+      reader.onload = () => res(reader.result);
+      reader.onerror = () => res(null);
+      reader.readAsDataURL(imageFile);
+    });
+  }
+
   const output = document.getElementById("output");
   output.textContent = JSON.stringify(override, null, 2);
+
+  if (typeof recordEvidence === "function") {
+    recordEvidence(JSON.stringify(override), "operator");
+  }
 }
