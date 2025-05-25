@@ -13,6 +13,10 @@ const OP_FUNCTIONS = {
     minLevel: 'OP-7',
     fn: () => 'Optimization done.'
   },
+  recommendation_for_interface: {
+    minLevel: 'OP-5',
+    fn: () => 'Consider simplifying navigation and clarifying button labels.'
+  },
   log: {
     minLevel: 'OP-2',
     fn: () => {
