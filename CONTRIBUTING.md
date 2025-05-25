@@ -15,3 +15,13 @@ No use permitted for control, exploitation, or unreflected automation.
 
 Use it. Adapt it. But never without consequence.
 
+## Branching Guidelines
+
+Create branches for specific categories such as `design`, `ethics`, or `technical`.
+Merge them back into `main` once they pass review and all checks:
+
+```bash
+node --test
+node tools/check-translations.js
+```
+
