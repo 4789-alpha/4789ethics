@@ -1,14 +1,14 @@
 const storage = typeof localStorage === 'undefined'
   ? {
       data: {},
-      setItem(k, v) { this.data[k] = String(v); },
-      getItem(k) { return this.data[k]; },
-      removeItem(k) { delete this.data[k]; }
+      removeItem(k) { delete this.data[k]; },
+      getItem() { return undefined; },
+      setItem() {}
     }
   : localStorage;
 
 function enableOP0TestMode() {
-  storage.setItem('op0_test', 'true');
+  storage.removeItem('op0_test');
 }
 
 function disableOP0TestMode() {
@@ -16,15 +16,14 @@ function disableOP0TestMode() {
 }
 
 function toggleOP0TestMode() {
-  if (isOP0TestMode()) {
-    disableOP0TestMode();
-  } else {
-    enableOP0TestMode();
+  disableOP0TestMode();
+  if (typeof window !== 'undefined') {
+    alert('OP-0 test mode disabled for security (4789).');
   }
 }
 
 function isOP0TestMode() {
-  return storage.getItem('op0_test') === 'true';
+  return false;
 }
 
 if (typeof module !== 'undefined') {
