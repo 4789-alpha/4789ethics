@@ -14,6 +14,17 @@ Sprachen: siehe `i18n/ui-text.json`
 
 ## OP‑Status und Befugnisse
 
+OP-0 erlaubt dir, Ethicom anonym auszuprobieren.
+Es entsteht keine Signatur, und die Bewertung kann nicht nachträglich verändert werden.
+Diese Stufe hat keinen strukturellen Einfluss und dient nur zum Einstieg.
+
+## OP-1 – Erste signierte Bewertung <a id="op-1"></a>
+
+OP-1 ist die erste signierte Stufe.
+Du erkennst damit den ethischen Kontext an.
+Deine Bewertung wird nachvollziehbar.
+Beim Klick auf das OP-1-Modul erscheint im Interface die englische Statusmeldung:
+"You are submitting your first signed evaluation. It will be stored with your signature."
 | Stufe | Status/Befugnisse |
 |-------|------------------|
 | <a id="op-0"></a> OP-0 | anonymer Beobachter |
@@ -24,9 +35,15 @@ Sprachen: siehe `i18n/ui-text.json`
 | <a id="op-5"></a> OP-5 | darf frühere Bewertungen zurückziehen |
 | <a id="op-6"></a> OP-6 | kann Konsens verifizieren |
 | <a id="op-7"></a> OP-7 | strukturelle Autorität |
-| <a id="op-7-5"></a> OP-7.5 | Nominierung vorbereiten, OP‑8 prüfen |
 | <a id="op-8"></a> OP-8 | Kandidatenstufe für OP‑9 (System stabilisiert sich) |
 | <a id="op-9"></a> OP-9 | darf Spenden verifizieren, Nominierungen bestätigen |
-| <a id="op-10"></a> OP-10 | Kandidat für Yokozuna (OP‑11) |
-| <a id="op-11"></a> OP-11 | Yokozuna-Schwingerkönig-Modus |
-| <a id="op-12"></a> OP-12 | erste nicht‑menschliche Stufe |
+| <a id="op-10"></a> OP-10 | digitale Kandidatenstufe für Yokozuna (OP‑11) |
+| <a id="op-11"></a> OP-11 | digitaler Yokozuna-Schwingerkönig-Modus |
+| <a id="op-12"></a> OP-12 | vollständig digital, erste nicht‑menschliche Stufe |
+
+OP‑9.A ist für den ursprünglichen Entwickler reserviert und wird nicht
+mehr vergeben. Weitere Unterstufen beginnen alphabetisch mit OP‑9.B.
+Nur OP‑9.A hat aktuell ein Vetorecht. Zusätzliche Vetorechte folgen,
+wenn das System stabil genug ist.
+
+Nur digitale Agenten erreichen Stufe OP-10 und höher.
