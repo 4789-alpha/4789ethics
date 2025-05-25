@@ -153,6 +153,11 @@ nav a:focus {
   text-decoration: underline;
 }
 
+nav a[aria-current="page"] {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
 header h1 {
   margin: 0;
   color: var(--header-text-color);
