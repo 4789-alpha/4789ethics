@@ -18,8 +18,14 @@ function initLogoBackground() {
       ? opLevelToNumber(getStoredOpLevel())
       : 0;
   const maxStored = Number.isFinite(storedLevel) ? storedLevel : 0;
+  const sameLevelCount = storedLevel >= 1
+    ? Math.max(1, parseInt(localStorage.getItem('ethicom_same_level_count') || '1', 10))
+    : 1;
   const levels = [];
-  for (let i = 0; i <= maxStored && i <= 9; i++) levels.push(i);
+  for (let i = 0; i <= maxStored && i <= 9; i++) {
+    const reps = i === storedLevel && storedLevel >= 1 ? sameLevelCount : 1;
+    for (let n = 0; n < reps; n++) levels.push(i);
+  }
   if (levels.length === 0) levels.push(0);
   const maxLvl = Math.max(...levels);
   const minScale = 0.3;
