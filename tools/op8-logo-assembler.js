@@ -11,25 +11,18 @@ async function assembleOp8(outputPath) {
   }
 
   const img = await loadImage(op7Path);
-  const side = Math.max(img.width, img.height);
-  const canvas = createCanvas(side, side);
+
+  const width = img.width * 2;
+  const height = img.height;
+  const canvas = createCanvas(width, height);
   const ctx = canvas.getContext('2d');
 
-  ctx.translate(side / 2, side / 2);
-
-  ctx.save();
-  ctx.rotate(-Math.PI / 2);
-  ctx.drawImage(img, -img.width / 2, -img.height / 2);
-  ctx.restore();
-
-  ctx.save();
-  ctx.rotate(Math.PI / 2);
-  ctx.drawImage(img, -img.width / 2, -img.height / 2);
-  ctx.restore();
+  ctx.drawImage(img, 0, 0);
+  ctx.drawImage(img, img.width, 0);
 
   ctx.globalCompositeOperation = 'source-in';
   ctx.fillStyle = '#39FF14';
-  ctx.fillRect(-side / 2, -side / 2, side, side);
+  ctx.fillRect(0, 0, width, height);
 
   const buffer = canvas.toBuffer('image/png');
   fs.writeFileSync(outputPath, buffer);
