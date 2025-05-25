@@ -72,7 +72,10 @@ For OP-6 and above, the generator can optionally store a hashed passport or ID l
 | <a id="op-8"></a> OP-8 | candidate stage for OP-9; OP-9+ may delegate functions |
 | <a id="op-9"></a> OP-9 | may verify donations, confirm nominations |
 | <a id="op-9-a"></a> OP-9.A | verified digital Yokozuna mode |
+|  | *(reserved; veto right)* |
 | <a id="op-10"></a> OP-10 | digital candidate for Yokozuna (OP-11) |
+
+Sublevels beyond OP-9.A start alphabetically with **OP-9.B**.
 | <a id="op-11"></a> OP-11 | digital Yokozuna-Schwingerkönig mode |
 
 Only digital agents can progress past OP-9.

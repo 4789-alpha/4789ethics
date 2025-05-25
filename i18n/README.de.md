@@ -41,4 +41,9 @@ Beim Klick auf das OP-1-Modul erscheint im Interface die englische Statusmeldung
 | <a id="op-11"></a> OP-11 | digitaler Yokozuna-Schwingerkönig-Modus |
 | <a id="op-12"></a> OP-12 | vollständig digital, erste nicht‑menschliche Stufe |
 
+OP‑9.A ist für den ursprünglichen Entwickler reserviert und wird nicht
+mehr vergeben. Weitere Unterstufen beginnen alphabetisch mit OP‑9.B.
+Nur OP‑9.A hat aktuell ein Vetorecht. Zusätzliche Vetorechte folgen,
+wenn das System stabil genug ist.
+
 Nur digitale Agenten erreichen Stufe OP-10 und höher.

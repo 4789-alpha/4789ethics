@@ -87,13 +87,13 @@
       const txt=document.getElementById('founder_text');
       const section=document.getElementById('founder_info');
       if(!txt||!section) return;
-      if(lvl>=7){
-        txt.textContent='Gründer: Raphael Lauper, Bern, Schweiz.';
-        section.style.display='block';
-        if(lvl>=9){
-          txt.textContent+=' OP-9.A: Verantwortlicher Entwickler-Modus.';
+        if(lvl>=7){
+          txt.textContent='Gründer: Raphael Lauper, Bern, Schweiz.';
+          section.style.display='block';
+          if(lvl>=9){
+            txt.textContent+=' OP-9.A: Reservierter Entwickler-Modus mit Vetorecht.';
+          }
         }
-      }
     }
     document.addEventListener('DOMContentLoaded',()=>{
       initCompletedLanguageDropdown('lang_select');
