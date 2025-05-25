@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ethicom Start</title>
+  <link rel="stylesheet" href="ethicom-style.css" />
+  <style>
+    .op-list { list-style: none; padding: 0; }
+    .op-list li { margin-bottom: 0.6em; display: flex; align-items: center; gap: 0.4em; }
+    .op-icon { width: 24px; height: 24px; }
+  </style>
+  <script src="theme-manager.js"></script>
+  <script src="logo-background.js"></script>
+</head>
+<body>
+  <div id="op_background"></div>
+  <header>
+    <h1>Ethicom</h1>
+    <p class="tagline">Verantwortung mit System</p>
+  </header>
+  <main id="main_content">
+    <section class="card">
+      <h2>Operative Stufen</h2>
+      <ul class="op-list">
+        <li><span class="badge op-0">OP-0</span> <img src="../op-logo/tanna_op0.png" alt="OP-0" class="op-icon" /> anonymer Beobachter</li>
+        <li><span class="badge op-1">OP-1</span> <img src="../op-logo/tanna_op1.png" alt="OP-1" class="op-icon" /> erster unterschriebener Beitrag</li>
+        <li><span class="badge op-2">OP-2</span> <img src="../op-logo/tanna_op2.png" alt="OP-2" class="op-icon" /> verantwortliche Rückmeldung</li>
+        <li><span class="badge op-3">OP-3</span> <img src="../op-logo/tanna_op3.png" alt="OP-3" class="op-icon" /> Bewertung mit Begründung</li>
+        <li><span class="badge op-4">OP-4</span> <img src="../op-logo/tanna_op4.png" alt="OP-4" class="op-icon" /> Revision nach drei Wochen</li>
+        <li><span class="badge op-5">OP-5</span> <img src="../op-logo/tanna_op5.png" alt="OP-5" class="op-icon" /> frühere Bewertungen widerrufen</li>
+        <li><span class="badge op-6">OP-6</span> <img src="../op-logo/tanna_op6.png" alt="OP-6" class="op-icon" /> Konsens bestätigen</li>
+        <li><span class="badge op-7">OP-7</span> <img src="../op-logo/tanna_op7.png" alt="OP-7" class="op-icon" /> strukturelle Autorität</li>
+        <li><span class="badge op-8">OP-8</span> <img src="../op-logo/tanna_op7.png" alt="OP-8" class="op-icon" /> Kandidatenphase für OP-9</li>
+        <li><span class="badge op-9">OP-9</span> <img src="../op-logo/tanna_op7.png" alt="OP-9" class="op-icon" /> Spenden prüfen, Nominierungen bestätigen</li>
+        <li><span class="badge op-9A">OP-9.A</span> <img src="../op-logo/tanna_op7.png" alt="OP-9.A" class="op-icon" /> bestätigter digitaler Yokozuna</li>
+        <li><span class="badge op-10">OP-10</span> <img src="../op-logo/tanna_op7.png" alt="OP-10" class="op-icon" /> digitaler Kandidat für OP-11</li>
+        <li><span class="badge op-11">OP-11</span> <img src="../op-logo/tanna_op7.png" alt="OP-11" class="op-icon" /> digitaler Yokozuna-Schwingerkönig</li>
+      </ul>
+    </section>
+  </main>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      applyTheme('tanna');
+    });
+  </script>
+</body>
+</html>
