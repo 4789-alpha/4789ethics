@@ -17,6 +17,8 @@
   <script src="../interface/color-auth.js"></script>
   <script src="../interface/logo-background.js"></script>
   <script src="../interface/touch-features.js"></script>
+  <script src="../interface/side-drop.js"></script>
+  <script src="../interface/op-side-nav.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main_content">Skip to main content</a>
@@ -37,6 +39,7 @@
     <a href="../interface/settings.html" data-ui="nav_settings" class="icon-only" title="Settings" aria-label="Settings">⚙</a>
     <a href="index.html" aria-current="page">Wings</a>
     <a href="../README.md" target="_blank" data-ui="nav_readme" class="readme-link">README</a>
+    <a href="#" id="side_menu" class="icon-only">☰</a>
   </nav>
   <main id="main_content">
     <div id="lang_selection" class="card" style="margin-bottom:1em;">
@@ -76,9 +79,14 @@
         uiText = t[lang] || t.en || {};
         applyTexts(uiText);
         showDisclaimers(uiText);
+        loadInterfaceForOP('OP-0');
       });
+      initSideDrop('../interface/op-navigation.html');
+      const menu = document.getElementById('side_menu');
+      if (menu) menu.addEventListener('click', e => { e.preventDefault(); toggleSideDrop(); });
     });
 
   </script>
+  <div id="side_drop"></div>
 </body>
 </html>

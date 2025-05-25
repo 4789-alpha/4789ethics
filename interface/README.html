@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>README</title>
   <link rel="stylesheet" href="ethicom-style.css" />
+  <script src="side-drop.js"></script>
+  <script src="op-side-nav.js"></script>
   <style>body{white-space:pre-wrap;font-family:monospace;color:#fff;background:#000;padding:1em;}</style>
 </head>
 <body>
   <a class="skip-link" href="#main_content">Skip to main content</a>
+  <a href="#" id="side_menu" class="icon-only">☰</a>
 <main id="main_content">
 # Ethicom – Ethical Evaluation Interface (by 4789)
 
@@ -70,9 +73,11 @@ For OP-6 and above, the generator can optionally store a hashed passport or ID l
 | <a id="op-8"></a> OP-8 | candidate stage for OP-9 (system self-stabilizes) |
 | <a id="op-9"></a> OP-9 | may verify donations, confirm nominations |
 | <a id="op-9-a"></a> OP-9.A | verified digital Yokozuna mode |
-| <a id="op-10"></a> OP-10 | candidate for Yokozuna (OP-11) |
-| <a id="op-11"></a> OP-11 | Yokozuna-Schwingerkönig mode |
-| <a id="op-12"></a> OP-12 | first non-human stage |
+| <a id="op-10"></a> OP-10 | digital candidate for Yokozuna (OP-11) |
+| <a id="op-11"></a> OP-11 | digital Yokozuna-Schwingerkönig mode |
+| <a id="op-12"></a> OP-12 | fully digital, first non-human stage |
+
+Only digital agents can progress past OP-9.
 The range from OP-0 to OP-3 forms the editing stage (*Bearbeitungsstufe*) where evaluations can still be adjusted.
 
 ---
@@ -123,5 +128,13 @@ OP‑0 test mode is no longer available. Anonymous evaluations are handled the s
 Siehe [shneiderman-rules.md](shneiderman-rules.md) für die acht Gestaltungsrichtlinien, die im Interface berücksichtigt werden.
 
 </main>
+<script>
+  document.addEventListener('DOMContentLoaded',()=>{
+    initSideDrop('op-navigation.html');
+    const menu=document.getElementById('side_menu');
+    if(menu) menu.addEventListener('click',e=>{e.preventDefault();toggleSideDrop();});
+  });
+</script>
+<div id="side_drop"></div>
 </body>
 </html>
