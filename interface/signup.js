@@ -8,7 +8,7 @@ const secureHosts = [
 let uiText = {};
 
 function applySignupTexts() {
-  document.documentElement.lang = localStorage.getItem('ethicom_lang') || 'en';
+  document.documentElement.lang = localStorage.getItem('ethicom_lang') || 'de';
   const t = uiText;
   const h2 = document.querySelector('[data-ui="signup_title"]');
   if (h2) h2.textContent = t.signup_title || h2.textContent;
