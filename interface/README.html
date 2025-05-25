@@ -5,10 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>README</title>
   <link rel="stylesheet" href="ethicom-style.css" />
+  <script src="side-drop.js"></script>
+  <script src="op-side-nav.js"></script>
   <style>body{white-space:pre-wrap;font-family:monospace;color:#fff;background:#000;padding:1em;}</style>
 </head>
 <body>
   <a class="skip-link" href="#main_content">Skip to main content</a>
+  <a href="#" id="side_menu" class="icon-only">☰</a>
 <main id="main_content">
 # Ethicom – Ethical Evaluation Interface (by 4789)
 
@@ -125,5 +128,13 @@ OP‑0 test mode is no longer available. Anonymous evaluations are handled the s
 Siehe [shneiderman-rules.md](shneiderman-rules.md) für die acht Gestaltungsrichtlinien, die im Interface berücksichtigt werden.
 
 </main>
+<script>
+  document.addEventListener('DOMContentLoaded',()=>{
+    initSideDrop('op-navigation.html');
+    const menu=document.getElementById('side_menu');
+    if(menu) menu.addEventListener('click',e=>{e.preventDefault();toggleSideDrop();});
+  });
+</script>
+<div id="side_drop"></div>
 </body>
 </html>
