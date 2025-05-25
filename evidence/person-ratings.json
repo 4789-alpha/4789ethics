@@ -1,0 +1,50 @@
+[
+  {
+    "human_id": "hum-0103",
+    "person": "Adolf Hitler",
+    "rating": "no",
+    "operator": "anonymous",
+    "op_level": "OP-0",
+    "timestamp": "2025-05-25T21:28:29.448Z"
+  },
+  {
+    "human_id": "hum-0103",
+    "person": "Adolf Hitler",
+    "rating": "no",
+    "operator": "sig-1234",
+    "op_level": "OP-1",
+    "timestamp": "2025-05-26T11:00:00.000Z"
+  },
+  {
+    "human_id": "hum-0103",
+    "person": "Adolf Hitler",
+    "rating": "no",
+    "operator": "sig-9876",
+    "op_level": "OP-9",
+    "timestamp": "2025-05-27T09:15:00.000Z"
+  },
+  {
+    "human_id": "hum-0101",
+    "person": "Ada Lovelace",
+    "rating": "yes",
+    "operator": "anonymous",
+    "op_level": "OP-0",
+    "timestamp": "2025-05-25T21:30:00.000Z"
+  },
+  {
+    "human_id": "hum-0101",
+    "person": "Ada Lovelace",
+    "rating": "yes",
+    "operator": "sig-5555",
+    "op_level": "OP-2",
+    "timestamp": "2025-05-26T08:00:00.000Z"
+  },
+  {
+    "human_id": "hum-0101",
+    "person": "Ada Lovelace",
+    "rating": "yes",
+    "operator": "sig-9999",
+    "op_level": "OP-5",
+    "timestamp": "2025-05-27T12:45:00.000Z"
+  }
+]
