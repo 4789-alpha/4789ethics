@@ -30,6 +30,7 @@ function loadInterfaceForOP(op_level) {
     "permissionsviewer": "permissions-viewer.js",
     "languagemanager": "language-manager.js",
     "semanticmanager": "semantic-manager.js",
+    "translation": "op-3-translation.js",
     "chat": "chat-interface.js"
   };
 
