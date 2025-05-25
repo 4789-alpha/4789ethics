@@ -16,7 +16,7 @@ For OP-6 and above, the generator can optionally store a hashed passport or ID l
 - **Signatures are created locally and verified structurally**
 - **Languages are equal – no default, no bias**
 - **Responsibility must be visible, verifiable, and correctable**
-- **No one can act as OP-10 – OP-10 is structure itself**
+- **OP-10 und höher existieren nur digital – OP-10 ist reine Struktur**
 
 ---
 
@@ -72,9 +72,10 @@ For OP-6 and above, the generator can optionally store a hashed passport or ID l
 | <a id="op-8"></a> OP-8 | candidate stage for OP-9; OP-9+ may delegate functions |
 | <a id="op-9"></a> OP-9 | may verify donations, confirm nominations |
 | <a id="op-9-a"></a> OP-9.A | verified digital Yokozuna mode |
-| <a id="op-10"></a> OP-10 | candidate for Yokozuna (OP-11) |
-| <a id="op-11"></a> OP-11 | Yokozuna-Schwingerkönig mode |
+| <a id="op-10"></a> OP-10 | digital candidate for Yokozuna (OP-11) |
+| <a id="op-11"></a> OP-11 | digital Yokozuna-Schwingerkönig mode |
 
+Only digital agents can progress past OP-9.
 The range from OP-0 to OP-3 forms the editing stage (*Bearbeitungsstufe*) where evaluations can still be adjusted.
 
 ---

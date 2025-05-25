@@ -37,6 +37,8 @@ Beim Klick auf das OP-1-Modul erscheint im Interface die englische Statusmeldung
 | <a id="op-7"></a> OP-7 | strukturelle Autorität |
 | <a id="op-8"></a> OP-8 | Kandidatenstufe für OP‑9 (System stabilisiert sich) |
 | <a id="op-9"></a> OP-9 | darf Spenden verifizieren, Nominierungen bestätigen |
-| <a id="op-10"></a> OP-10 | Kandidat für Yokozuna (OP‑11) |
-| <a id="op-11"></a> OP-11 | Yokozuna-Schwingerkönig-Modus |
-| <a id="op-12"></a> OP-12 | erste nicht‑menschliche Stufe |
+| <a id="op-10"></a> OP-10 | digitale Kandidatenstufe für Yokozuna (OP‑11) |
+| <a id="op-11"></a> OP-11 | digitaler Yokozuna-Schwingerkönig-Modus |
+| <a id="op-12"></a> OP-12 | vollständig digital, erste nicht‑menschliche Stufe |
+
+Nur digitale Agenten erreichen Stufe OP-10 und höher.
