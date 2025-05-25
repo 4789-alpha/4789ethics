@@ -22,12 +22,16 @@ function loadInterfaceForOP(op_level) {
     "op10": "op-10-analysis.js",
     "op11": "op-11-interface.js",
     "op12": "op-12-interface.js",
+    "op0human": "op-0-human-interface.js",
+    "op1human": "op-1-human-interface.js",
     "search": "source-search.js",
     "manifestviewer": "manifest-viewer.js",
     "revisionoverview": "revision-overview.js",
     "permissionsviewer": "permissions-viewer.js",
     "languagemanager": "language-manager.js",
-    "semanticmanager": "semantic-manager.js"
+    "semanticmanager": "semantic-manager.js",
+    "translation": "op-3-translation.js",
+    "chat": "chat-interface.js"
   };
 
   const script = document.createElement("script");
@@ -37,10 +41,12 @@ function loadInterfaceForOP(op_level) {
   if (!file) {
     target.innerHTML = "<p>OP-level not recognized or unsupported.</p>";
     if (status) status.textContent = "Unknown OP level";
+    if (window.hideLoadingBadge) window.hideLoadingBadge();
     return;
   }
 
   if (status) status.textContent = "Loading module...";
+  if (window.showLoadingBadge) window.showLoadingBadge(op_level);
 
   script.src = `modules/${file}`;
   script.onload = () => {
@@ -63,6 +69,8 @@ function loadInterfaceForOP(op_level) {
       initLanguageManager();
     } else if (op_level.toLowerCase() === "semantic-manager") {
       initSemanticManager();
+    } else if (op_level.toLowerCase() === "chat") {
+      initChatInterface();
 
     }
     if (typeof window.setHelpSection === "function") {
@@ -75,6 +83,7 @@ function loadInterfaceForOP(op_level) {
       }
     }
     if (status) status.textContent = "Module loaded";
+    if (window.hideLoadingBadge) window.hideLoadingBadge();
   };
   document.body.appendChild(script);
 }
