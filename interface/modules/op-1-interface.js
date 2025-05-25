@@ -24,6 +24,7 @@ function initOP1Interface() {
       <textarea id="comment" rows="3" required placeholder="Why is this the correct SRC level?"></textarea>
 
       <button onclick="generateSignedManifest()">Submit Evaluation</button>
+      <button class="secondary-button" type="button" onclick="initOP1Interface()">Reset</button>
     </div>
   `;
   applyInfoTexts(container);
