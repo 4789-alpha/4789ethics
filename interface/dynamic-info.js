@@ -1,5 +1,5 @@
 const infoTexts = {
-  'ethicom': 'Your interface will load here once verified.',
+  'ethicom': 'Ethicom zeigt den Ethik-Score in Prozent (100% = ethisch erstrebenswert).',
   'language-manager': 'Generate JSON snippets for new UI translations.',
   'semantic-manager': 'Generate JSON snippets for positive and negative words.',
   'op-0': 'Anonymous evaluation for visitors without a signature. No lasting influence and cannot be revised.',

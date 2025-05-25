@@ -502,3 +502,9 @@ body.left-layout main {
 .op0-nav { display:flex; justify-content:space-around; background: var(--nav-bg); padding:0.5rem; }
 .op0-nav a { font-weight:bold; text-decoration:none; color: var(--nav-text-color); }
 
+
+/* cover flow for ethicom */
+.cover-flow { display:flex; overflow-x:auto; gap:0.6em; padding:0.5em 0; }
+.cover-item { flex:0 0 auto; background:var(--card-alpha-bg); padding:0.5em; border-radius:4px; text-align:center; min-width:120px; }
+.cover-item span { display:block; color:var(--accent-color); font-size:0.9em; }
+
