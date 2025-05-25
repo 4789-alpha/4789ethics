@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
-function parseConfig() {
-  const configPath = path.join(__dirname, '..', 'app', 'gatekeeper_config.yaml');
+function parseConfig(filePath) {
+  const configPath = filePath || path.join(__dirname, '..', 'app', 'gatekeeper_config.yaml');
   if (!fs.existsSync(configPath)) {
     return null;
   }
@@ -17,8 +17,8 @@ function parseConfig() {
   return cfg;
 }
 
-function gateCheck() {
-  const cfg = parseConfig();
+function gateCheck(configPath) {
+  const cfg = parseConfig(configPath);
   if (!cfg) {
     console.log('Gatekeeper: configuration missing.');
     return false;
@@ -29,10 +29,14 @@ function gateCheck() {
   return allowed && controllerOK && local;
 }
 
-if (gateCheck()) {
-  console.log('Gatekeeper: RL@RLpi control allowed (local only).');
-  process.exit(0);
-} else {
-  console.log('Gatekeeper: control denied.');
-  process.exit(1);
+if (require.main === module) {
+  if (gateCheck()) {
+    console.log('Gatekeeper: RL@RLpi control allowed (local only).');
+    process.exit(0);
+  } else {
+    console.log('Gatekeeper: control denied.');
+    process.exit(1);
+  }
 }
+
+module.exports = { gateCheck };
