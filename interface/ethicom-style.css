@@ -28,6 +28,7 @@
   --nav-bg: rgba(51, 51, 51, 0.9);
   --card-alpha-bg: rgba(43, 43, 43, 0.92);
   --accent-color: #ccaa22;
+  --foreground-opacity: 0.3;
 }
 
 .theme-tanna {
@@ -55,6 +56,7 @@
   --nav-bg: rgba(0, 0, 0, 0.85);
   --card-alpha-bg: rgba(34, 34, 34, 0.9);
   --accent-color: #33cc33;
+  --foreground-opacity: 0.3;
 }
 
 .theme-tanna-light {
