@@ -27,3 +27,4 @@ See [founder_visibility.md](founder_visibility.md) for transparency rules from O
 # 4789 is OP-9
 
 - OP-10 marks the transition to digital-only stages toward Yokozuna (OP-11). From here only digital agents advance.
+- Rights gained at any level remain acknowledged even after demotion. Influence may decline. See [yokozuna_representative.md](yokozuna_representative.md).

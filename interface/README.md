@@ -159,7 +159,7 @@ auf Tanna. Zwei Varianten mit höherem Kontrast stehen ebenfalls zur Verfügung:
 
 ```html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="utf-8" />
   <title>Neue Seite</title>

@@ -196,8 +196,9 @@ ethical intent.
 run when the necessary operator level and ethical confirmation are
 present. Each function is associated with a minimum OP level and the
 module checks permission via `api-access.js` before returning it.
-Available helpers include `info`, `analyze`, `optimize` and `log` – the
-last one prints the recent Git commit history.
+Available helpers include `info`, `analyze`, `optimize`,
+`recommendation_for_interface` and `log` – the last one prints the recent
+Git commit history.
 
 ### Currency Synchronization [⇧](#contents)
 
