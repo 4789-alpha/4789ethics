@@ -1,4 +1,15 @@
+function applyAccessibilityFromStorage() {
+  const saved = JSON.parse(localStorage.getItem("ethicom_access") || "{}");
+  const font = saved.font || "normal";
+  const simple = saved.simple || "no";
+  document.body.classList.toggle("large-font", font === "large");
+  const enabled = simple === "yes";
+  document.body.classList.toggle("simple-mode", enabled);
+  localStorage.setItem("simple_mode", enabled ? "true" : "false");
+}
+
 function initAccessibilitySetup() {
+  applyAccessibilityFromStorage();
   const container = document.getElementById("access_setup");
   if (!container) return;
 
