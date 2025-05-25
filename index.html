@@ -2,16 +2,25 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>4789 Start</title>
   <link rel="stylesheet" href="interface/ethicom-style.css" />
+  <script src="interface/ethicom-utils.js"></script>
   <script src="interface/color-auth.js"></script>
   <script src="interface/language-selector.js"></script>
   <script src="interface/dynamic-info.js"></script>
   <script src="interface/op-overview.js"></script>
+  <script src="interface/theme-manager.js"></script>
+  <script src="interface/logo-background.js"></script>
+  <script src="interface/touch-features.js"></script>
+  <script src="interface/side-drop.js"></script>
+  <script src="interface/op-side-nav.js"></script>
 </head>
 <body>
+  <a class="skip-link" href="#main_content">Skip to main content</a>
+  <div id="op_background"></div>
   <header>
-    <h1>Ethicom Start</h1>
+    <h1>Start</h1>
   </header>
   <section class="hero">
     <p class="tagline">Ethik-Kompass für technologische Projekte</p>
@@ -24,17 +33,18 @@
     <a href="interface/signup.html">Signup</a>
     <a href="interface/tools.html">Tools</a>
     <a href="interface/chat.html">Chat</a>
-    <a href="interface/settings.html">Settings</a>
+    <a href="interface/settings.html" class="icon-only">⚙</a>
     <a href="wings/index.html">Wings</a>
     <a href="README.md" target="_blank" class="readme-link">README</a>
+    <a href="#" id="side_menu" class="icon-only">☰</a>
   </nav>
-  <main>
+  <main id="main_content">
     <section class="card">
-      <h2>Willkommen</h2>
+      <h2><img src="op-logo/tanna_op0.png" class="citation-logo start-op-logo" alt="OP-0" aria-label="OP-0" /> Willkommen</h2>
       <p>Diese Seite führt zur Ethicom-Oberfläche. Sie folgt dem Corporate Design von Signature 4789.</p>
     </section>
     <section class="card">
-      <h2>Disclaimers</h2>
+      <h2><img src="op-logo/tanna_op0.png" class="citation-logo start-op-logo" alt="OP-0" aria-label="OP-0" /> Disclaimers</h2>
       <ul>
         <li>Diese Struktur wird ohne Gewährleistung bereitgestellt.</li>
         <li>Die Nutzung erfolgt auf eigene Verantwortung.</li>
@@ -43,7 +53,7 @@
       </ul>
     </section>
     <section class="card">
-      <h2>Direkt loslegen</h2>
+      <h2><img src="op-logo/tanna_op0.png" class="citation-logo start-op-logo" alt="OP-0" aria-label="OP-0" /> Direkt loslegen</h2>
       <p>Starte die Bewertung über <a href="interface/ethicom.html">Ethicom</a>. Eine Vorschau für OP‑0 ist ohne Anmeldung möglich.</p>
     </section>
     <section id="op_overview" class="card"></section>
@@ -51,8 +61,24 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       getLanguage();
+      localStorage.setItem('visited_start', 'true');
+      const level = window.getStoredOpLevel ? window.getStoredOpLevel() || 'OP-0' : 'OP-0';
+      const base = parseInt(String(level).replace('OP-', '').split('.')[0], 10);
+      const srcNum = base >= 8 ? 7 : base;
+      const hue = base >= 8 ? (base - 7) * 30 : 0;
+      document.querySelectorAll('.start-op-logo').forEach(img => {
+        img.src = `op-logo/tanna_op${srcNum}.png`;
+        img.alt = level;
+        img.setAttribute('aria-label', level);
+        img.style.filter = base >= 8 ?
+          `hue-rotate(-80deg) saturate(0.7) hue-rotate(${hue}deg)` : '';
+      });
+      initSideDrop('interface/op-navigation.html');
+      const menu = document.getElementById('side_menu');
+      if(menu) menu.addEventListener('click', e => { e.preventDefault(); toggleSideDrop(); });
     });
   </script>
+  <div id="side_drop"></div>
 </body>
 </html>
 
