@@ -492,3 +492,8 @@ body.left-layout main {
     --side-drop-width: 80vw;
   }
 }
+
+/* OP-0 navigation bar */
+.op0-nav { display:flex; justify-content:space-around; background: var(--nav-bg); padding:0.5rem; }
+.op0-nav a { font-weight:bold; text-decoration:none; color: var(--nav-text-color); }
+
