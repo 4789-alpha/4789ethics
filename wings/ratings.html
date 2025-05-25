@@ -15,6 +15,8 @@
   <script src="../interface/color-auth.js"></script>
   <script src="../interface/logo-background.js"></script>
   <script src="../interface/touch-features.js"></script>
+  <script src="../interface/side-drop.js"></script>
+  <script src="../interface/op-side-nav.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main_content">Skip to main content</a>
@@ -29,6 +31,7 @@
     <a href="../index.html">Home</a>
     <a href="index.html">Wings</a>
     <a href="../interface/ratings.html" data-ui="nav_ratings">Full View</a>
+    <a href="#" id="side_menu" class="icon-only">☰</a>
   </nav>
   <main id="main_content">
     <div id="lang_selection" class="card" style="margin-bottom:1em;">
@@ -58,7 +61,11 @@
         showDisclaimers(texts);
       });
       initRatings();
+      initSideDrop('../interface/op-navigation.html');
+      const menu=document.getElementById('side_menu');
+      if(menu) menu.addEventListener('click',e=>{e.preventDefault();toggleSideDrop();});
     });
   </script>
+  <div id="side_drop"></div>
 </body>
 </html>
