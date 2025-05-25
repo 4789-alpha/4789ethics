@@ -13,6 +13,8 @@
   let pointers = new Map();
   let startDist = 0;
   let baseScale = 1;
+  let swipeStart = null;
+  let swipeHandler = null;
 
   function save() {
     localStorage.setItem('ethicom_touch', JSON.stringify(state));
@@ -25,6 +27,7 @@
   // Gestures: pinch to zoom whole body
   function pointerDown(e) {
     pointers.set(e.pointerId, e);
+    swipeStart = { x: e.clientX, y: e.clientY };
     if (pointers.size === 2) {
       const [a, b] = [...pointers.values()];
       startDist = Math.hypot(a.clientX - b.clientX, a.clientY - b.clientY);
@@ -46,6 +49,20 @@
 
   function pointerUp(e) {
     pointers.delete(e.pointerId);
+    if (swipeStart) {
+      const dx = e.clientX - swipeStart.x;
+      const dy = e.clientY - swipeStart.y;
+      const absX = Math.abs(dx);
+      const absY = Math.abs(dy);
+      const threshold = 30;
+      if ((absX > threshold || absY > threshold) && swipeHandler) {
+        let dir;
+        if (absX > absY) dir = dx > 0 ? 'right' : 'left';
+        else dir = dy > 0 ? 'down' : 'up';
+        swipeHandler(dir);
+      }
+    }
+    swipeStart = null;
     startDist = 0;
   }
 
@@ -112,13 +129,18 @@
     });
   }
 
+  function registerSwipeHandler(fn) {
+    swipeHandler = typeof fn === 'function' ? fn : null;
+  }
+
   window.touchSettings = {
     toggleGestures,
     toggleHaptics,
     toggleDrawing,
     toggleBigButtons,
     toggleLongPressMenu,
-    state
+    state,
+    registerSwipeHandler
   };
 
   document.addEventListener('DOMContentLoaded', () => {
