@@ -82,6 +82,8 @@ See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
 | [interface/features_de.md](interface/features_de.md) | Funktionale Übersicht zum Interface |
 | [wings/index.html](wings/index.html) | Mobile interface "Wings" |
 | [wings/ratings.html](wings/ratings.html) | Mobile ratings summary |
+**Settings are stored per device using browser localStorage and are not synced globally.**
+**Ratings are stored anonymously in global manifest files. Only the OP level is saved with each rating to reflect user credibility.**
 ### OP-Permissions [⇧](#contents)
 Operator actions by ethical level are defined in:
 → [`permissions/op-permissions-expanded.json`](permissions/op-permissions-expanded.json)
