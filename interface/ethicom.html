@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -24,6 +24,7 @@
   <script src="color-auth.js"></script>
   <script src="module-arranger.js"></script>
   <script src="side-drop.js"></script>
+  <script src="op-side-nav.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main_content">Skip to main content</a>
@@ -135,7 +136,7 @@
         initTranslationManager();
         renderAllBadges();
         initOpButtons();
-        initSideDrop('about.html');
+        initSideDrop('op-navigation.html');
         const badgeBtn = document.getElementById('badge_display');
         if (badgeBtn) badgeBtn.addEventListener('click', toggleSideDrop);
       });

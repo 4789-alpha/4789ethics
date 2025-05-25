@@ -52,6 +52,9 @@ async function toggleSideDrop() {
         if (typeof applyInfoTexts === 'function') {
           applyInfoTexts(content);
         }
+        if (typeof setupOpSideNav === 'function') {
+          setupOpSideNav(content);
+        }
       }
       sideDropLoaded = true;
     } catch {}
