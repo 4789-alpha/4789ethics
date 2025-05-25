@@ -7,7 +7,7 @@ function initOP5Interface() {
   container.innerHTML = `
     <div class="card">
       <h3>Withdraw Evaluation (OP-5)</h3>
-      <p class="info">You can withdraw a previous evaluation. The original will be archived with your withdrawal reason.</p>
+      <p class="info" data-info="op-5"></p>
 
       <label for="original_id">Original Manifest filename:</label>
       ${help('Name of the manifest file you previously generated.')}
@@ -20,6 +20,7 @@ function initOP5Interface() {
       <button onclick="generateWithdrawal()">Withdraw Evaluation</button>
     </div>
   `;
+  applyInfoTexts(container);
 }
 
 function generateWithdrawal() {
@@ -44,4 +45,8 @@ function generateWithdrawal() {
 
   const output = document.getElementById("output");
   output.textContent = JSON.stringify(withdrawalData, null, 2);
+
+  if (typeof recordEvidence === "function") {
+    recordEvidence(JSON.stringify(withdrawalData), "operator");
+  }
 }
