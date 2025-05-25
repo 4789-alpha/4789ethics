@@ -15,19 +15,19 @@ const helpMap = {
   },
   'OP-0': { title: 'OP-0 Tips', items: [
     'Anonymous ratings have minimal influence.',
-    'Move to OP-1 to sign your evaluations.'
+    'Move to OP-1 to sign your evaluations. Editing stage.'
   ] },
   'OP-1': { title: 'OP-1 Tips', items: [
     'Signed evaluations store your signature ID.',
-    'Explain why the chosen SRC fits.'
+    'Explain why the chosen SRC fits. Editing stage.'
   ] },
   'OP-2': { title: 'OP-2 Tips', items: [
     'Add aspect tags to highlight angles of your evaluation.',
-    'Private references stay internal only.'
+    'Private references stay internal only. Editing stage.'
   ] },
   'OP-3': { title: 'OP-3 Tips', items: [
     'Structured reasoning is required.',
-    'Use visual selectors for SRC levels.'
+    'Use visual selectors for SRC levels. Editing stage.'
   ] },
   'OP-4': { title: 'OP-4 Tips', items: [
     'Revisions become possible after 21 days.',
@@ -43,20 +43,20 @@ const helpMap = {
   'OP-7': { title: 'OP-7 Tips', items: [
     'You hold structural authority for nominations.'
   ] },
-  'OP-7.5': { title: 'OP-7.5 Tips', items: [
-    'Prepare nominations and review OP-8 observations.'
-  ] },
-  'OP-7.9': { title: 'OP-7.9 Tips', items: [
-    'Nominate operators and verify donations.'
-  ] },
   'OP-8': { title: 'OP-8 Tips', items: [
-    'System-driven structural analysis level.'
+    'Candidate stage for OP-9. OP-9+ may delegate functions.'
   ] },
   'OP-9': { title: 'OP-9 Tips', items: [
-    'Yokozuna-level responsibilities apply.'
+    'Nominate operators and verify donations.'
   ] },
   'OP-10': { title: 'OP-10 Tips', items: [
-    'First non-human development stage.'
+    'Digital candidate for Yokozuna (OP-11).'
+  ] },
+  'OP-11': { title: 'OP-11 Tips', items: [
+    'Digital Yokozuna-level responsibilities apply.'
+  ] },
+  'OP-12': { title: 'OP-12 Tips', items: [
+    'Fully digital, first non-human stage.'
   ] }
 };
 
@@ -73,11 +73,17 @@ function buildDetails(title, items) {
   summary.textContent = title;
   details.appendChild(summary);
   const list = document.createElement('ol');
-  items.forEach(item => {
+  if (Array.isArray(items) && items.length > 0) {
+    items.forEach(item => {
+      const li = document.createElement('li');
+      li.textContent = item;
+      list.appendChild(li);
+    });
+  } else {
     const li = document.createElement('li');
-    li.textContent = item;
+    li.textContent = 'No help content available.';
     list.appendChild(li);
-  });
+  }
   details.appendChild(list);
   return details;
 }
