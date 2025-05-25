@@ -17,14 +17,19 @@ function insertModuleLogo() {
   const level = typeof getStoredOpLevel === 'function'
     ? (getStoredOpLevel() || 'OP-0')
     : 'OP-0';
-  const img = document.createElement('img');
-  img.id = 'module_logo';
-  img.className = 'module-logo';
-  img.alt = level;
-  img.src = getLogoPath(level);
-  const fallbackPrefix = img.src.includes('../') ? '../op-logo/' : 'op-logo/';
-  img.onerror = () => { img.onerror = null; img.src = `${fallbackPrefix}tanna_op0.png`; };
-  header.prepend(img);
+  const src = getLogoPath(level);
+  const fallback = src.includes('../') ? '../op-logo/tanna_op0.png' : 'op-logo/tanna_op0.png';
+  const h1 = header.querySelector('h1');
+  const size = h1 ? getComputedStyle(h1).fontSize : '1em';
+  header.classList.add('with-logo');
+  header.style.backgroundImage = `url('${src}')`;
+  header.style.backgroundRepeat = 'no-repeat';
+  header.style.backgroundPosition = '0.5em center';
+  header.style.backgroundSize = `auto ${size}`;
+  header.style.paddingLeft = `calc(${size} + 1em)`;
+  const img = new Image();
+  img.onerror = () => { header.style.backgroundImage = `url('${fallback}')`; };
+  img.src = src;
 }
 
 if (typeof window !== 'undefined') {
