@@ -171,6 +171,12 @@ header.with-logo {
   background-position: 0.5em center;
 }
 
+header .title-logo {
+  height: 1em;
+  vertical-align: middle;
+  margin-left: 0.4em;
+}
+
 .hero {
   text-align: center;
   margin: 1.5em auto;
