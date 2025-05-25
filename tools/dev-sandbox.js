@@ -6,7 +6,7 @@ function sha256(str) {
   return crypto.createHash('sha256').update(str).digest('hex');
 }
 
-function generateEthicomSignature(id, pw, opLevel = 'OP-1') {
+function generateEthicomSignature(id, pw, opLevel = 'OP-1', nickname = '') {
   const policy = {
     'OP-1': 4,
     'OP-2': 6,
@@ -34,6 +34,7 @@ function generateEthicomSignature(id, pw, opLevel = 'OP-1') {
   const created = new Date().toISOString();
   const hash = sha256(`${id}|${created}|${pw}`);
   const obj = { id, created, hash, protected: true, required_length: required, op_level: opLevel, local_only: true };
+  if (nickname) obj.nickname = nickname;
   localStorage['ethicom_signature'] = JSON.stringify(obj);
   return obj;
 }
@@ -95,7 +96,7 @@ function generateSignedManifest(src_lvl, comment, op_level = 'OP-1') {
 
 function main() {
   console.log('=== Generating Signature ===');
-  const sig = generateEthicomSignature('SIG-TEST-1234-ABCD', 'pwtest', 'OP-1');
+  const sig = generateEthicomSignature('SIG-TEST-1234-ABCD', 'pwtest', 'OP-1', 'dev');
   console.log(sig);
 
   console.log('\n=== Verifying Signature ===');

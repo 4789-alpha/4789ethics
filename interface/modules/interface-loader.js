@@ -24,6 +24,7 @@ function loadInterfaceForOP(op_level) {
     "op11": "op-11-interface.js",
     "op12": "op-12-interface.js",
     "search": "source-search.js",
+    "integrator": "source-integrator.js",
     "manifestviewer": "manifest-viewer.js",
     "revisionoverview": "revision-overview.js",
     "permissionsviewer": "permissions-viewer.js",
@@ -58,6 +59,8 @@ function loadInterfaceForOP(op_level) {
       initOP10Analysis();
     } else if (op_level.toLowerCase() === "search") {
       initSourceSearch();
+    } else if (op_level.toLowerCase() === "integrator") {
+      initSourceIntegrator();
     } else if (op_level.toLowerCase() === "manifest-viewer") {
       initManifestViewer();
     } else if (op_level.toLowerCase() === "revision-overview") {

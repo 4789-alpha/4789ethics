@@ -6,7 +6,7 @@ async function initOP0Interface() {
 
   let humans = [];
   try {
-    humans = await fetch("../sources/human-top100.json").then(r => r.json());
+    humans = await fetch("../sources/persons/human-top100.json").then(r => r.json());
   } catch {
     humans = [];
   }
