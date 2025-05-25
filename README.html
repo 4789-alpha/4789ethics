@@ -9,6 +9,7 @@
   <script src="interface/accessibility.js"></script>
   <script src="interface/logo-background.js"></script>
   <script src="interface/module-logo.js"></script>
+  <script src="interface/render-markdown.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main_content">Skip to main content</a>
@@ -47,9 +48,9 @@
     </section>
     <section class="card">
       <p>For complete details see <a href="README.md">README.md</a>.</p>
-      <pre id="readme_content" style="white-space: pre-wrap;">
+      <article id="readme_content" class="markdown-content">
         Loading README...
-      </pre>
+      </article>
     </section>
   </main>
   <script>
@@ -59,12 +60,12 @@
       fetch('README.md')
         .then(r => r.text())
         .then(t => {
-          const pre = document.getElementById('readme_content');
-          if (pre) pre.textContent = t;
+          const container = document.getElementById('readme_content');
+          if (container) container.innerHTML = renderMarkdown(t);
         })
         .catch(() => {
-          const pre = document.getElementById('readme_content');
-          if (pre) pre.textContent = 'Failed to load README.';
+          const container = document.getElementById('readme_content');
+          if (container) container.textContent = 'Failed to load README.';
         });
     });
   </script>
