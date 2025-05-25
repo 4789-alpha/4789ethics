@@ -8,7 +8,7 @@ const secureHosts = [
 let uiText = {};
 
 function applySignupTexts() {
-  document.documentElement.lang = localStorage.getItem('ethicom_lang') || 'en';
+  document.documentElement.lang = localStorage.getItem('ethicom_lang') || 'de';
   const t = uiText;
   const h2 = document.querySelector('[data-ui="signup_title"]');
   if (h2) h2.textContent = t.signup_title || h2.textContent;
@@ -26,7 +26,7 @@ function applySignupTexts() {
 
 function initSignup() {
   const lang = getLanguage();
-  fetch('i18n/ui-text.json')
+  fetch('../i18n/ui-text.json')
     .then(r => r.json())
     .then(data => {
       uiText = data[lang] || data.en || {};
@@ -48,9 +48,15 @@ function handleSignup() {
   }
 
   const domain = email.split('@')[1].toLowerCase();
+  const level = getStoredOpLevel() || 'OP-1';
+  const levelNum = opLevelToNumber(level);
   if (!secureHosts.includes(domain)) {
-    statusEl.textContent = uiText.signup_unsupported || 'Email provider not supported. Use a secure host.';
-    return;
+    if (levelNum >= 6) {
+      statusEl.textContent = uiText.signup_unsupported || 'Email provider not supported. Use a secure host.';
+      return;
+    } else {
+      statusEl.textContent = uiText.signup_insecure_warn || 'Insecure email host. Allowed only until OP-5.';
+    }
   }
 
   if (password.length < 8) {
