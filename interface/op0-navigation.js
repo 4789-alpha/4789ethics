@@ -21,6 +21,7 @@
       `<a href="${base}bewertung.html">Bewertung</a>`+
       `<a href="${base}interface/settings.html">Settings</a>`+
       `<a href="${base}interface/signup.html">Signup</a>`+
+      `<a href="${base}interface/shneiderman.html">Designregeln</a>`+
       `<a href="${base}README.html">README</a>`+
       '</nav>';
     document.body.insertAdjacentHTML('afterbegin', navHtml);

@@ -1,8 +1,21 @@
 // bewertung.js -- OP-0 rating with swipe control
 
+let ratingTexts = {};
+
+async function loadRatingTexts() {
+  try {
+    const txt = await fetch('i18n/ui-text.json').then(r => r.json());
+    const lang = (typeof getLanguage === 'function' ? getLanguage() : document.documentElement.lang) || 'de';
+    ratingTexts = txt[lang] || txt.en || {};
+  } catch {
+    ratingTexts = {};
+  }
+}
+
 async function initBewertung() {
   const container = document.getElementById('rating_container');
   if (!container) return;
+  await loadRatingTexts();
   if (window.bewertungKeyHandler) {
     document.removeEventListener('keydown', window.bewertungKeyHandler);
     window.bewertungKeyHandler = null;
@@ -96,6 +109,7 @@ function submitBewertung() {
   if (out) out.textContent = JSON.stringify(evalData, null, 2);
   if (typeof recordEvidence === 'function')
     recordEvidence(JSON.stringify(evalData), 'user');
+  alert(ratingTexts.rating_saved || 'Rating saved.');
 }
 
 if (typeof module !== 'undefined') {
