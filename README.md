@@ -69,10 +69,9 @@ See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
 | [index.html](index.html) | Start page linking to Ethicom and ratings |
 | [interface/about.html](interface/about.html) | Explains the 4789 module |
 | [interface/chat.html](interface/chat.html) | Chat interface |
-| [interface/erstkontakt.html](interface/erstkontakt.html) | Guided first contact |
 | [interface/ethicom.html](interface/ethicom.html) | Main evaluation module |
 | [interface/page-flow-demo.html](interface/page-flow-demo.html) | Demo of horizontal flow |
-| [interface/ratings.html](interface/ratings.html) | List of published ratings |
+| [bewertung.html](bewertung.html) | Swipe-based person rating |
 | [interface/settings.html](interface/settings.html) | Language, theme, and Tanna logo settings |
 | [interface/signup.html](interface/signup.html) | Registration form |
 | [interface/tanna-template.html](interface/tanna-template.html) | Base template |
