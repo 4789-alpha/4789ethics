@@ -38,8 +38,11 @@ repeating it horizontally and shifting the hue to indicate progression.
 
 - Starting with OP-8 the logo repeats the OP-7 symbol multiple times and shifts the hue for each higher level.
 - OP-8 shows two OP-7 logos side by side, OP-9 shows three, and so on.
+- The OP-8 version is rendered in neon green.
 - Designed with **color-contrast accessibility** in mind (color-blind friendly).
 - Structure is suitable for use in **SVG, animation, and generative logic**.
+- A sample Node script (`tools/op8-logo-assembler.js`) demonstrates how to
+  combine two rotated OP-7 images into an OP-8 variant.
 
 ---
 
