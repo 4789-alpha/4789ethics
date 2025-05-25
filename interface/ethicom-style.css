@@ -499,6 +499,9 @@ body.left-layout main {
   z-index: 200;
   overflow-y: auto;
 }
+#side_drop:empty {
+  display: none;
+}
 #side_drop.open {
   transform: translateX(0);
 }
