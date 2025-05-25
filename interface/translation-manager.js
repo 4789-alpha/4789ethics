@@ -123,10 +123,6 @@ function applyTexts(t) {
     }
   });
 
-  const previewMsg = document.querySelector('[data-ui="preview_msg"]');
-  if (previewMsg) previewMsg.textContent = t.preview_msg || previewMsg.textContent;
-  const previewBtn = document.querySelector('[data-ui="preview_btn"]');
-  if (previewBtn) previewBtn.textContent = t.preview_btn || previewBtn.textContent;
 
   const chooseLabel = document.querySelector('[data-ui="choose_language_label"]');
   if (chooseLabel) chooseLabel.textContent = t.label_choose_language || chooseLabel.textContent;
