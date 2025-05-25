@@ -13,7 +13,7 @@ function getSignatureId() {
 }
 
 function loadUiTexts() {
-  return fetch("i18n/ui-text.json")
+  return fetch("../i18n/ui-text.json")
     .then(r => r.json())
     .then(data => {
       uiTexts = data;
@@ -57,18 +57,16 @@ function applyTexts(t) {
   if (titleEl) titleEl.textContent = t.title || titleEl.textContent;
   const sourceLabel = document.querySelector('label[for="sig_input"]');
   if (sourceLabel) sourceLabel.textContent = t.label_source || sourceLabel.textContent;
-  const commentLabel = document.querySelector('label[for="sig_pass"]');
-  if (commentLabel) commentLabel.textContent = t.label_comment || commentLabel.textContent;
+  const passLabel = document.querySelector('label[for="sig_pass"]');
+  if (passLabel) passLabel.textContent = t.signup_password || passLabel.textContent;
   const verifyBtn = document.querySelector('#signature_area button');
   if (verifyBtn) verifyBtn.textContent = t.btn_generate || verifyBtn.textContent;
 
-  if (typeof window.setHelpSection !== 'function') {
-    const helpTitle = document.querySelector('#help_section summary');
-    if (helpTitle) helpTitle.textContent = t.help_title || helpTitle.textContent;
-    const helpList = document.querySelector('#help_section ol');
-    if (helpList && Array.isArray(t.help_items)) {
-      helpList.innerHTML = t.help_items.map(i => `<li>${i}</li>`).join('');
-    }
+  const helpTitle = document.querySelector('#help_section summary');
+  if (helpTitle) helpTitle.textContent = t.help_title || helpTitle.textContent;
+  const helpList = document.querySelector('#help_section ol');
+  if (helpList && Array.isArray(t.help_items)) {
+    helpList.innerHTML = t.help_items.map(i => `<li>${i}</li>`).join('');
   }
 
   const suTitle = document.querySelector('[data-ui="signup_title"]');
@@ -113,11 +111,18 @@ function applyTexts(t) {
   if (navSignup) navSignup.textContent = t.nav_signup || navSignup.textContent;
   const navReadme = document.querySelector('[data-ui="nav_readme"]');
   if (navReadme) navReadme.textContent = t.nav_readme || navReadme.textContent;
+  const navTools = document.querySelector('[data-ui="nav_tools"]');
+  if (navTools) navTools.textContent = t.nav_tools || navTools.textContent;
+  document.querySelectorAll('[data-ui="nav_settings"]').forEach(el => {
+    if (el.classList.contains('icon-only')) {
+      const text = t.nav_settings || el.getAttribute('title') || '';
+      el.setAttribute('title', text);
+      el.setAttribute('aria-label', text);
+    } else {
+      el.textContent = t.nav_settings || el.textContent;
+    }
+  });
 
-  const previewMsg = document.querySelector('[data-ui="preview_msg"]');
-  if (previewMsg) previewMsg.textContent = t.preview_msg || previewMsg.textContent;
-  const previewBtn = document.querySelector('[data-ui="preview_btn"]');
-  if (previewBtn) previewBtn.textContent = t.preview_btn || previewBtn.textContent;
 
   const chooseLabel = document.querySelector('[data-ui="choose_language_label"]');
   if (chooseLabel) chooseLabel.textContent = t.label_choose_language || chooseLabel.textContent;
@@ -135,6 +140,16 @@ function initTranslationManager() {
   applyInfoTexts(challenge);
   container.appendChild(challenge);
   container.appendChild(editBtn);
+
+  const op = opLevelToNumber(getStoredOpLevel());
+  if (op >= 5) {
+    const semanticBtn = document.createElement("button");
+    semanticBtn.textContent = "New Languages Editor";
+    semanticBtn.addEventListener("click", () => {
+      loadInterfaceForOP("semantic-manager");
+    });
+    container.appendChild(semanticBtn);
+  }
 
   editBtn.addEventListener("click", () => {
     const code = langSelect.value.trim();
