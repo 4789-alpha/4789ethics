@@ -53,14 +53,15 @@
     "nav_readme": "README",
     "nav_tools": "Tools",
     "nav_settings": "Settings",
-    "preview_msg": "Curious? Click \"Preview Start\" to try OP-0 without logging in.",
-    "preview_btn": "Preview Start (OP-0)",
     "label_choose_language": "Choose your language (ISO 639-1):",
     "status_verifying_sig": "Verifying signature...",
     "status_sig_missing": "Signature not found or incomplete.",
     "status_sig_invalid": "Signature invalid or password incorrect.",
     "status_sig_valid": "Signature valid: {level}",
     "status_loading_op0": "Loading OP-0...",
+    "rating_yes": "Yes",
+    "rating_partial": "Partly",
+    "rating_no": "No",
     "simple_toggle_label": "Toggle Simple Mode",
     "simple_mode_on": "Simple mode is active.",
     "simple_mode_off": "Simple mode is off.",
@@ -73,7 +74,10 @@
       "If a contradiction arises, apply self-reflection (structure_9874).",
       "Humor is allowed if responsibility and clarity remain."
     ],
-    "btn_disclaimer_accept": "I understand"
+    "btn_disclaimer_accept": "I understand",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "de": {
     "title": "Ethicom: Bewertung durch Menschen",
@@ -129,14 +133,15 @@
     "nav_readme": "Anleitung",
     "nav_tools": "Werkzeuge",
     "nav_settings": "Einstellungen",
-    "preview_msg": "Schnuppern gefällig? Klicke auf \"Schnupper-Start\" und teste OP-0 ohne Login.",
-    "preview_btn": "Schnupper-Start (OP-0)",
     "label_choose_language": "Sprache wählen (ISO 639-1):",
     "status_verifying_sig": "Signatur wird überprüft...",
     "status_sig_missing": "Signatur nicht gefunden oder unvollständig.",
     "status_sig_invalid": "Signatur ungültig oder Passwort falsch.",
     "status_sig_valid": "Signatur gültig: {level}",
     "status_loading_op0": "OP-0 wird geladen...",
+    "rating_yes": "Ja",
+    "rating_partial": "Zum Teil",
+    "rating_no": "Nein",
     "simple_toggle_label": "Einfach-Modus umschalten",
     "simple_mode_on": "Einfach-Modus aktiv.",
     "simple_mode_off": "Einfach-Modus deaktiviert.",
@@ -149,7 +154,10 @@
       "Bei Widerspruch gilt Selbstreflexion nach structure_9874.md.",
       "Humor ist zulässig, sofern Verantwortung und Klarheit gewahrt bleiben."
     ],
-    "btn_disclaimer_accept": "Verstanden"
+    "btn_disclaimer_accept": "Verstanden",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "fr": {
     "title": "Ethicom : Évaluation humaine",
@@ -203,8 +211,6 @@
     "nav_ratings": "Évaluations",
     "nav_signup": "Inscription",
     "nav_readme": "README",
-    "preview_msg": "Curieux ? Cliquez sur \"Aperçu\" pour tester OP-0 sans vous connecter.",
-    "preview_btn": "Aperçu (OP-0)",
     "label_choose_language": "Choisissez votre langue (ISO 639-1):",
     "status_verifying_sig": "Vérification de la signature...",
     "status_sig_missing": "Signature introuvable ou incomplète.",
@@ -225,7 +231,10 @@
     "nav_settings": "Paramètres",
     "simple_toggle_label": "Basculer le mode simple",
     "simple_mode_on": "Mode simple activé.",
-    "simple_mode_off": "Mode simple désactivé."
+    "simple_mode_off": "Mode simple désactivé.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "es": {
     "title": "Ethicom: Evaluación Humana",
@@ -246,8 +255,6 @@
     "nav_ratings": "Valoraciones",
     "nav_signup": "Registro",
     "nav_readme": "README",
-    "preview_msg": "¿Curioso? Haz clic en \"Inicio de prueba\" para probar OP-0 sin iniciar sesión.",
-    "preview_btn": "Inicio de prueba (OP-0)",
     "label_choose_language": "Elige tu idioma (ISO 639-1):",
     "signup_title": "Registro",
     "signup_email": "Correo electrónico:",
@@ -301,7 +308,10 @@
     "btn_disclaimer_accept": "Entiendo",
     "simple_toggle_label": "Alternar modo simple",
     "simple_mode_on": "Modo simple activado.",
-    "simple_mode_off": "Modo simple desactivado."
+    "simple_mode_off": "Modo simple desactivado.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "pt": {
     "title": "Ethicom: Avaliação Humana",
@@ -367,8 +377,6 @@
     "nav_readme": "README",
     "nav_tools": "Ferramentas",
     "nav_settings": "Configurações",
-    "preview_msg": "Curioso? Clique em \"Início de Prévia\" para testar OP-0 sem login.",
-    "preview_btn": "Início de Prévia (OP-0)",
     "label_choose_language": "Escolha seu idioma (ISO 639-1):",
     "status_verifying_sig": "Verificando assinatura...",
     "status_sig_missing": "Assinatura não encontrada ou incompleta.",
@@ -377,7 +385,10 @@
     "status_loading_op0": "Carregando OP-0...",
     "simple_toggle_label": "Alternar modo simples",
     "simple_mode_on": "Modo simples ativado.",
-    "simple_mode_off": "Modo simples desativado."
+    "simple_mode_off": "Modo simples desativado.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "zh": {
     "title": "Ethicom：人工评估",
@@ -442,8 +453,6 @@
     "nav_readme": "README",
     "nav_tools": "Tools",
     "nav_settings": "Settings",
-    "preview_msg": "Curious? Click \"Preview Start\" to try OP-0 without logging in.",
-    "preview_btn": "Preview Start (OP-0)",
     "label_choose_language": "Choose your language (ISO 639-1):",
     "status_verifying_sig": "Verifying signature...",
     "status_sig_missing": "Signature not found or incomplete.",
@@ -453,7 +462,10 @@
     "simple_toggle_label": "Toggle Simple Mode",
     "simple_mode_on": "Simple mode is active.",
     "simple_mode_off": "Simple mode is off.",
-    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5."
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "hi": {
     "title": "Ethicom: मानवीय मूल्यांकन",
@@ -508,8 +520,6 @@
     "nav_readme": "README",
     "nav_tools": "Tools",
     "nav_settings": "Settings",
-    "preview_msg": "Curious? Click \"Preview Start\" to try OP-0 without logging in.",
-    "preview_btn": "Preview Start (OP-0)",
     "label_choose_language": "Choose your language (ISO 639-1):",
     "status_verifying_sig": "Verifying signature...",
     "status_sig_missing": "Signature not found or incomplete.",
@@ -529,7 +539,10 @@
       "Humor is allowed if responsibility and clarity remain."
     ],
     "btn_disclaimer_accept": "I understand",
-    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5."
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "ar": {
     "title": "إيثيكوم: التقييم البشري",
@@ -584,8 +597,6 @@
     "nav_readme": "README",
     "nav_tools": "Tools",
     "nav_settings": "Settings",
-    "preview_msg": "Curious? Click \"Preview Start\" to try OP-0 without logging in.",
-    "preview_btn": "Preview Start (OP-0)",
     "label_choose_language": "Choose your language (ISO 639-1):",
     "status_verifying_sig": "Verifying signature...",
     "status_sig_missing": "Signature not found or incomplete.",
@@ -605,7 +616,10 @@
       "Humor is allowed if responsibility and clarity remain."
     ],
     "btn_disclaimer_accept": "I understand",
-    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5."
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "ja": {
     "title": "Ethicom：人間による評価",
@@ -660,8 +674,6 @@
     "nav_readme": "README",
     "nav_tools": "Tools",
     "nav_settings": "Settings",
-    "preview_msg": "Curious? Click \"Preview Start\" to try OP-0 without logging in.",
-    "preview_btn": "Preview Start (OP-0)",
     "label_choose_language": "Choose your language (ISO 639-1):",
     "status_verifying_sig": "Verifying signature...",
     "status_sig_missing": "Signature not found or incomplete.",
@@ -681,7 +693,10 @@
       "Humor is allowed if responsibility and clarity remain."
     ],
     "btn_disclaimer_accept": "I understand",
-    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5."
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "sw": {
     "title": "Ethicom: Tathmini ya Kibinadamu",
@@ -736,8 +751,6 @@
     "nav_readme": "README",
     "nav_tools": "Tools",
     "nav_settings": "Settings",
-    "preview_msg": "Curious? Click \"Preview Start\" to try OP-0 without logging in.",
-    "preview_btn": "Preview Start (OP-0)",
     "label_choose_language": "Choose your language (ISO 639-1):",
     "status_verifying_sig": "Verifying signature...",
     "status_sig_missing": "Signature not found or incomplete.",
@@ -757,7 +770,10 @@
       "Humor is allowed if responsibility and clarity remain."
     ],
     "btn_disclaimer_accept": "I understand",
-    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5."
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "ru": {
     "title": "Ethicom: Оценка человеком",
@@ -812,8 +828,6 @@
     "nav_readme": "README",
     "nav_tools": "Tools",
     "nav_settings": "Settings",
-    "preview_msg": "Curious? Click \"Preview Start\" to try OP-0 without logging in.",
-    "preview_btn": "Preview Start (OP-0)",
     "label_choose_language": "Choose your language (ISO 639-1):",
     "status_verifying_sig": "Verifying signature...",
     "status_sig_missing": "Signature not found or incomplete.",
@@ -833,7 +847,10 @@
       "Humor is allowed if responsibility and clarity remain."
     ],
     "btn_disclaimer_accept": "I understand",
-    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5."
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "it": {
     "title": "Ethicom: Valutazione Umana",
@@ -899,8 +916,6 @@
     "nav_readme": "README",
     "nav_tools": "Strumenti",
     "nav_settings": "Impostazioni",
-    "preview_msg": "Curioso? Clicca su \"Anteprima\" per provare OP-0 senza accedere.",
-    "preview_btn": "Anteprima (OP-0)",
     "label_choose_language": "Scegli la tua lingua (ISO 639-1):",
     "status_verifying_sig": "Verifica della firma...",
     "status_sig_missing": "Firma non trovata o incompleta.",
@@ -909,7 +924,10 @@
     "status_loading_op0": "Caricamento di OP-0...",
     "simple_toggle_label": "Attiva/disattiva modalità semplice",
     "simple_mode_on": "Modalità semplice attiva.",
-    "simple_mode_off": "Modalità semplice disattiva."
+    "simple_mode_off": "Modalità semplice disattiva.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "ko": {
     "title": "Ethicom: 인간 평가",
@@ -964,8 +982,6 @@
     "nav_readme": "README",
     "nav_tools": "Tools",
     "nav_settings": "Settings",
-    "preview_msg": "Curious? Click \"Preview Start\" to try OP-0 without logging in.",
-    "preview_btn": "Preview Start (OP-0)",
     "label_choose_language": "Choose your language (ISO 639-1):",
     "status_verifying_sig": "Verifying signature...",
     "status_sig_missing": "Signature not found or incomplete.",
@@ -985,7 +1001,10 @@
       "Humor is allowed if responsibility and clarity remain."
     ],
     "btn_disclaimer_accept": "I understand",
-    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5."
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "fa": {
     "title": "ایتیکام: ارزیابی انسانی",
@@ -1040,8 +1059,6 @@
     "nav_readme": "README",
     "nav_tools": "Tools",
     "nav_settings": "Settings",
-    "preview_msg": "Curious? Click \"Preview Start\" to try OP-0 without logging in.",
-    "preview_btn": "Preview Start (OP-0)",
     "label_choose_language": "Choose your language (ISO 639-1):",
     "status_verifying_sig": "Verifying signature...",
     "status_sig_missing": "Signature not found or incomplete.",
@@ -1061,7 +1078,10 @@
       "Humor is allowed if responsibility and clarity remain."
     ],
     "btn_disclaimer_accept": "I understand",
-    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5."
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "pl": {
     "title": "Ethicom: Ocena Ludzka",
@@ -1116,8 +1136,6 @@
     "nav_readme": "README",
     "nav_tools": "Tools",
     "nav_settings": "Settings",
-    "preview_msg": "Curious? Click \"Preview Start\" to try OP-0 without logging in.",
-    "preview_btn": "Preview Start (OP-0)",
     "label_choose_language": "Choose your language (ISO 639-1):",
     "status_verifying_sig": "Verifying signature...",
     "status_sig_missing": "Signature not found or incomplete.",
@@ -1137,7 +1155,10 @@
       "Humor is allowed if responsibility and clarity remain."
     ],
     "btn_disclaimer_accept": "I understand",
-    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5."
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "am": {
     "title": "Ethicom: Human Evaluation",
@@ -1192,8 +1213,6 @@
     "nav_readme": "README",
     "nav_tools": "Tools",
     "nav_settings": "Settings",
-    "preview_msg": "Curious? Click \"Preview Start\" to try OP-0 without logging in.",
-    "preview_btn": "Preview Start (OP-0)",
     "label_choose_language": "Choose your language (ISO 639-1):",
     "status_verifying_sig": "Verifying signature...",
     "status_sig_missing": "Signature not found or incomplete.",
@@ -1213,7 +1232,10 @@
       "Humor is allowed if responsibility and clarity remain."
     ],
     "btn_disclaimer_accept": "I understand",
-    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5."
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "af": {
     "title": "Ethicom: Human Evaluation",
@@ -1268,8 +1290,6 @@
     "nav_readme": "README",
     "nav_tools": "Tools",
     "nav_settings": "Settings",
-    "preview_msg": "Curious? Click \"Preview Start\" to try OP-0 without logging in.",
-    "preview_btn": "Preview Start (OP-0)",
     "label_choose_language": "Choose your language (ISO 639-1):",
     "status_verifying_sig": "Verifying signature...",
     "status_sig_missing": "Signature not found or incomplete.",
@@ -1289,7 +1309,10 @@
       "Humor is allowed if responsibility and clarity remain."
     ],
     "btn_disclaimer_accept": "I understand",
-    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5."
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "bn": {
     "title": "Ethicom: Human Evaluation",
@@ -1344,8 +1367,6 @@
     "nav_readme": "README",
     "nav_tools": "Tools",
     "nav_settings": "Settings",
-    "preview_msg": "Curious? Click \"Preview Start\" to try OP-0 without logging in.",
-    "preview_btn": "Preview Start (OP-0)",
     "label_choose_language": "Choose your language (ISO 639-1):",
     "status_verifying_sig": "Verifying signature...",
     "status_sig_missing": "Signature not found or incomplete.",
@@ -1365,7 +1386,10 @@
       "Humor is allowed if responsibility and clarity remain."
     ],
     "btn_disclaimer_accept": "I understand",
-    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5."
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "ha": {
     "title": "Ethicom: Human Evaluation",
@@ -1420,8 +1444,6 @@
     "nav_readme": "README",
     "nav_tools": "Tools",
     "nav_settings": "Settings",
-    "preview_msg": "Curious? Click \"Preview Start\" to try OP-0 without logging in.",
-    "preview_btn": "Preview Start (OP-0)",
     "label_choose_language": "Choose your language (ISO 639-1):",
     "status_verifying_sig": "Verifying signature...",
     "status_sig_missing": "Signature not found or incomplete.",
@@ -1441,7 +1463,10 @@
       "Humor is allowed if responsibility and clarity remain."
     ],
     "btn_disclaimer_accept": "I understand",
-    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5."
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "id": {
     "title": "Ethicom: Human Evaluation",
@@ -1496,8 +1521,6 @@
     "nav_readme": "README",
     "nav_tools": "Tools",
     "nav_settings": "Settings",
-    "preview_msg": "Curious? Click \"Preview Start\" to try OP-0 without logging in.",
-    "preview_btn": "Preview Start (OP-0)",
     "label_choose_language": "Choose your language (ISO 639-1):",
     "status_verifying_sig": "Verifying signature...",
     "status_sig_missing": "Signature not found or incomplete.",
@@ -1517,7 +1540,10 @@
       "Humor is allowed if responsibility and clarity remain."
     ],
     "btn_disclaimer_accept": "I understand",
-    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5."
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "ig": {
     "title": "Ethicom: Human Evaluation",
@@ -1572,8 +1598,6 @@
     "nav_readme": "README",
     "nav_tools": "Tools",
     "nav_settings": "Settings",
-    "preview_msg": "Curious? Click \"Preview Start\" to try OP-0 without logging in.",
-    "preview_btn": "Preview Start (OP-0)",
     "label_choose_language": "Choose your language (ISO 639-1):",
     "status_verifying_sig": "Verifying signature...",
     "status_sig_missing": "Signature not found or incomplete.",
@@ -1593,7 +1617,10 @@
       "Humor is allowed if responsibility and clarity remain."
     ],
     "btn_disclaimer_accept": "I understand",
-    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5."
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "om": {
     "title": "Ethicom: Human Evaluation",
@@ -1648,8 +1675,6 @@
     "nav_readme": "README",
     "nav_tools": "Tools",
     "nav_settings": "Settings",
-    "preview_msg": "Curious? Click \"Preview Start\" to try OP-0 without logging in.",
-    "preview_btn": "Preview Start (OP-0)",
     "label_choose_language": "Choose your language (ISO 639-1):",
     "status_verifying_sig": "Verifying signature...",
     "status_sig_missing": "Signature not found or incomplete.",
@@ -1669,7 +1694,10 @@
       "Humor is allowed if responsibility and clarity remain."
     ],
     "btn_disclaimer_accept": "I understand",
-    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5."
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "rm": {
     "title": "Ethicom: Human Evaluation",
@@ -1724,8 +1752,6 @@
     "nav_readme": "README",
     "nav_tools": "Tools",
     "nav_settings": "Settings",
-    "preview_msg": "Curious? Click \"Preview Start\" to try OP-0 without logging in.",
-    "preview_btn": "Preview Start (OP-0)",
     "label_choose_language": "Choose your language (ISO 639-1):",
     "status_verifying_sig": "Verifying signature...",
     "status_sig_missing": "Signature not found or incomplete.",
@@ -1745,7 +1771,10 @@
       "Humor is allowed if responsibility and clarity remain."
     ],
     "btn_disclaimer_accept": "I understand",
-    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5."
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "ta": {
     "title": "Ethicom: Human Evaluation",
@@ -1800,8 +1829,6 @@
     "nav_readme": "README",
     "nav_tools": "Tools",
     "nav_settings": "Settings",
-    "preview_msg": "Curious? Click \"Preview Start\" to try OP-0 without logging in.",
-    "preview_btn": "Preview Start (OP-0)",
     "label_choose_language": "Choose your language (ISO 639-1):",
     "status_verifying_sig": "Verifying signature...",
     "status_sig_missing": "Signature not found or incomplete.",
@@ -1821,7 +1848,10 @@
       "Humor is allowed if responsibility and clarity remain."
     ],
     "btn_disclaimer_accept": "I understand",
-    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5."
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "te": {
     "title": "Ethicom: Human Evaluation",
@@ -1876,8 +1906,6 @@
     "nav_readme": "README",
     "nav_tools": "Tools",
     "nav_settings": "Settings",
-    "preview_msg": "Curious? Click \"Preview Start\" to try OP-0 without logging in.",
-    "preview_btn": "Preview Start (OP-0)",
     "label_choose_language": "Choose your language (ISO 639-1):",
     "status_verifying_sig": "Verifying signature...",
     "status_sig_missing": "Signature not found or incomplete.",
@@ -1897,7 +1925,10 @@
       "Humor is allowed if responsibility and clarity remain."
     ],
     "btn_disclaimer_accept": "I understand",
-    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5."
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "th": {
     "title": "Ethicom: Human Evaluation",
@@ -1952,8 +1983,6 @@
     "nav_readme": "README",
     "nav_tools": "Tools",
     "nav_settings": "Settings",
-    "preview_msg": "Curious? Click \"Preview Start\" to try OP-0 without logging in.",
-    "preview_btn": "Preview Start (OP-0)",
     "label_choose_language": "Choose your language (ISO 639-1):",
     "status_verifying_sig": "Verifying signature...",
     "status_sig_missing": "Signature not found or incomplete.",
@@ -1973,7 +2002,10 @@
       "Humor is allowed if responsibility and clarity remain."
     ],
     "btn_disclaimer_accept": "I understand",
-    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5."
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "tr": {
     "title": "Ethicom: Human Evaluation",
@@ -2028,8 +2060,6 @@
     "nav_readme": "README",
     "nav_tools": "Tools",
     "nav_settings": "Settings",
-    "preview_msg": "Curious? Click \"Preview Start\" to try OP-0 without logging in.",
-    "preview_btn": "Preview Start (OP-0)",
     "label_choose_language": "Choose your language (ISO 639-1):",
     "status_verifying_sig": "Verifying signature...",
     "status_sig_missing": "Signature not found or incomplete.",
@@ -2049,7 +2079,10 @@
       "Humor is allowed if responsibility and clarity remain."
     ],
     "btn_disclaimer_accept": "I understand",
-    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5."
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "ur": {
     "title": "Ethicom: Human Evaluation",
@@ -2104,8 +2137,6 @@
     "nav_readme": "README",
     "nav_tools": "Tools",
     "nav_settings": "Settings",
-    "preview_msg": "Curious? Click \"Preview Start\" to try OP-0 without logging in.",
-    "preview_btn": "Preview Start (OP-0)",
     "label_choose_language": "Choose your language (ISO 639-1):",
     "status_verifying_sig": "Verifying signature...",
     "status_sig_missing": "Signature not found or incomplete.",
@@ -2125,7 +2156,10 @@
       "Humor is allowed if responsibility and clarity remain."
     ],
     "btn_disclaimer_accept": "I understand",
-    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5."
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "vi": {
     "title": "Ethicom: Human Evaluation",
@@ -2180,8 +2214,6 @@
     "nav_readme": "README",
     "nav_tools": "Tools",
     "nav_settings": "Settings",
-    "preview_msg": "Curious? Click \"Preview Start\" to try OP-0 without logging in.",
-    "preview_btn": "Preview Start (OP-0)",
     "label_choose_language": "Choose your language (ISO 639-1):",
     "status_verifying_sig": "Verifying signature...",
     "status_sig_missing": "Signature not found or incomplete.",
@@ -2201,7 +2233,10 @@
       "Humor is allowed if responsibility and clarity remain."
     ],
     "btn_disclaimer_accept": "I understand",
-    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5."
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "xh": {
     "title": "Ethicom: Human Evaluation",
@@ -2256,8 +2291,6 @@
     "nav_readme": "README",
     "nav_tools": "Tools",
     "nav_settings": "Settings",
-    "preview_msg": "Curious? Click \"Preview Start\" to try OP-0 without logging in.",
-    "preview_btn": "Preview Start (OP-0)",
     "label_choose_language": "Choose your language (ISO 639-1):",
     "status_verifying_sig": "Verifying signature...",
     "status_sig_missing": "Signature not found or incomplete.",
@@ -2277,7 +2310,10 @@
       "Humor is allowed if responsibility and clarity remain."
     ],
     "btn_disclaimer_accept": "I understand",
-    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5."
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "yo": {
     "title": "Ethicom: Human Evaluation",
@@ -2332,8 +2368,6 @@
     "nav_readme": "README",
     "nav_tools": "Tools",
     "nav_settings": "Settings",
-    "preview_msg": "Curious? Click \"Preview Start\" to try OP-0 without logging in.",
-    "preview_btn": "Preview Start (OP-0)",
     "label_choose_language": "Choose your language (ISO 639-1):",
     "status_verifying_sig": "Verifying signature...",
     "status_sig_missing": "Signature not found or incomplete.",
@@ -2353,7 +2387,10 @@
       "Humor is allowed if responsibility and clarity remain."
     ],
     "btn_disclaimer_accept": "I understand",
-    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5."
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "zu": {
     "title": "Ethicom: Human Evaluation",
@@ -2408,8 +2445,6 @@
     "nav_readme": "README",
     "nav_tools": "Tools",
     "nav_settings": "Settings",
-    "preview_msg": "Curious? Click \"Preview Start\" to try OP-0 without logging in.",
-    "preview_btn": "Preview Start (OP-0)",
     "label_choose_language": "Choose your language (ISO 639-1):",
     "status_verifying_sig": "Verifying signature...",
     "status_sig_missing": "Signature not found or incomplete.",
@@ -2429,7 +2464,10 @@
       "Humor is allowed if responsibility and clarity remain."
     ],
     "btn_disclaimer_accept": "I understand",
-    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5."
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "nl": {
     "title": "Ethicom: Menselijke Evaluatie",
@@ -2484,8 +2522,6 @@
     "nav_readme": "README",
     "nav_tools": "Tools",
     "nav_settings": "Settings",
-    "preview_msg": "Curious? Click \"Preview Start\" to try OP-0 without logging in.",
-    "preview_btn": "Preview Start (OP-0)",
     "label_choose_language": "Choose your language (ISO 639-1):",
     "status_verifying_sig": "Verifying signature...",
     "status_sig_missing": "Signature not found or incomplete.",
@@ -2505,6 +2541,9 @@
       "Humor is allowed if responsibility and clarity remain."
     ],
     "btn_disclaimer_accept": "I understand",
-    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5."
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   }
 }
