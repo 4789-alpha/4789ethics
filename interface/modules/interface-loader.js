@@ -19,14 +19,17 @@ function loadInterfaceForOP(op_level) {
     "op7": "op-7-interface.js",
     "op8": "op-8-interface.js",
     "op9": "op-9-interface.js",
+    "op9a": "op-9-interface.js",
     "op10": "op-10-analysis.js",
     "op11": "op-11-interface.js",
     "op12": "op-12-interface.js",
     "search": "source-search.js",
+    "integrator": "source-integrator.js",
     "manifestviewer": "manifest-viewer.js",
     "revisionoverview": "revision-overview.js",
     "permissionsviewer": "permissions-viewer.js",
-    "languagemanager": "language-manager.js"
+    "languagemanager": "language-manager.js",
+    "translation": "op-3-translation.js"
   };
 
   const script = document.createElement("script");
@@ -36,10 +39,12 @@ function loadInterfaceForOP(op_level) {
   if (!file) {
     target.innerHTML = "<p>OP-level not recognized or unsupported.</p>";
     if (status) status.textContent = "Unknown OP level";
+    if (window.hideLoadingBadge) window.hideLoadingBadge();
     return;
   }
 
   if (status) status.textContent = "Loading module...";
+  if (window.showLoadingBadge) window.showLoadingBadge(op_level);
 
   script.src = `modules/${file}`;
   script.onload = () => {
@@ -48,10 +53,14 @@ function loadInterfaceForOP(op_level) {
       .replace("+", "plus")}Interface`;
     if (typeof window[initFunc] === "function") {
       window[initFunc]();
+    } else if (normalized === "op9a" && typeof window["initOP9Interface"] === "function") {
+      window["initOP9Interface"]();
     } else if (op_level === "OP-10") {
       initOP10Analysis();
     } else if (op_level.toLowerCase() === "search") {
       initSourceSearch();
+    } else if (op_level.toLowerCase() === "integrator") {
+      initSourceIntegrator();
     } else if (op_level.toLowerCase() === "manifest-viewer") {
       initManifestViewer();
     } else if (op_level.toLowerCase() === "revision-overview") {
@@ -63,6 +72,7 @@ function loadInterfaceForOP(op_level) {
 
     }
     if (status) status.textContent = "Module loaded";
+    if (window.hideLoadingBadge) window.hideLoadingBadge();
   };
   document.body.appendChild(script);
 }
