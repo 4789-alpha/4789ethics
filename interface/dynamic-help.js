@@ -50,13 +50,13 @@ const helpMap = {
     'Nominate operators and verify donations.'
   ] },
   'OP-10': { title: 'OP-10 Tips', items: [
-    'Candidate for Yokozuna (OP-11).'
+    'Digital candidate for Yokozuna (OP-11).'
   ] },
   'OP-11': { title: 'OP-11 Tips', items: [
-    'Yokozuna-level responsibilities apply.'
+    'Digital Yokozuna-level responsibilities apply.'
   ] },
   'OP-12': { title: 'OP-12 Tips', items: [
-    'First non-human development stage.'
+    'Fully digital, first non-human stage.'
   ] }
 };
 

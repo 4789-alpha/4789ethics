@@ -18,6 +18,8 @@
   <script src="logo-background.js"></script>
   <script src="touch-features.js"></script>
   <script src="module-arranger.js"></script>
+  <script src="side-drop.js"></script>
+  <script src="op-side-nav.js"></script>
   <style>
     #op_interface { margin-top: 1em; }
   </style>
@@ -41,6 +43,7 @@
     <a href="settings.html" data-ui="nav_settings" class="icon-only">⚙</a>
     <a href="../wings/index.html">Wings</a>
     <a href="../README.md" target="_blank" class="readme-link">README</a>
+    <a href="#" id="side_menu" class="icon-only">☰</a>
   </nav>
   <main id="main_content">
     <div id="lang_selection" class="card" style="margin-bottom:1em;">
@@ -82,7 +85,11 @@
           showDisclaimers(uiText);
         }
       });
+      initSideDrop('op-navigation.html');
+      const menu=document.getElementById('side_menu');
+      if(menu) menu.addEventListener('click',e=>{e.preventDefault();toggleSideDrop();});
     });
   </script>
+  <div id="side_drop"></div>
 </body>
 </html>
