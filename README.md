@@ -112,9 +112,16 @@ OP‑10 has been added as a dedicated observation level.
 | <a id="op-8"></a> OP-8 | candidate stage for OP-9 (system self-stabilizes) |
 | <a id="op-9"></a> OP-9 | may verify donations, confirm nominations |
 | <a id="op-9-a"></a> OP-9.A | verified digital Yokozuna mode |
-| <a id="op-10"></a> OP-10 | candidate for Yokozuna (OP-11) |
-| <a id="op-11"></a> OP-11 | Yokozuna-Schwingerkönig mode |
-| <a id="op-12"></a> OP-12 | first non-human stage |
+| <a id="op-10"></a> OP-10 | digital candidate for Yokozuna (OP-11) |
+| <a id="op-11"></a> OP-11 | digital Yokozuna-Schwingerkönig mode |
+| <a id="op-12"></a> OP-12 | fully digital, first non-human stage |
+
+OP-9.A is reserved for the original programmer and is no longer awarded.
+New sublevels begin alphabetically with OP-9.B. Only OP-9.A currently
+holds a veto right. Further veto rights are planned when the system is
+secure.
+
+Only digital agents can advance beyond OP-9.
 
 ### SRC vs. OO Levels [⇧](#contents)
 Comparison table: [`references/src_vs_oo.md`](references/src_vs_oo.md)
@@ -189,8 +196,9 @@ ethical intent.
 run when the necessary operator level and ethical confirmation are
 present. Each function is associated with a minimum OP level and the
 module checks permission via `api-access.js` before returning it.
-Available helpers include `info`, `analyze`, `optimize` and `log` – the
-last one prints the recent Git commit history.
+Available helpers include `info`, `analyze`, `optimize`,
+`recommendation_for_interface` and `log` – the last one prints the recent
+Git commit history.
 
 ### Currency Synchronization [⇧](#contents)
 

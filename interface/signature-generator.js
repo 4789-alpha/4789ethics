@@ -17,6 +17,9 @@ function setupSignatureCreator(containerId = "op_interface", defaultOP = "OP-1")
       <label for="sig_id">Signature ID (e.g. SIG-ABCD-1234-XY9Z):</label>
       <input type="text" id="sig_id" placeholder="sig-XXXX-XXXX-XXXX" />
 
+      <label for="sig_nick">Nickname (optional):</label>
+      <input type="text" id="sig_nick" placeholder="your nickname" />
+
       <label for="sig_pass">Password (kept local):</label>
       <input type="password" id="sig_pass" placeholder="Your password" />${passField}
 
@@ -28,6 +31,7 @@ function setupSignatureCreator(containerId = "op_interface", defaultOP = "OP-1")
 
 function generateEthicomSignature(op_level) {
   const sig = document.getElementById("sig_id").value.trim().toUpperCase();
+  const nick = document.getElementById("sig_nick").value.trim();
   const pw = document.getElementById("sig_pass").value;
   const passEl = document.getElementById("sig_passport");
   const passRaw = passEl ? passEl.value.trim() : "";
@@ -78,6 +82,9 @@ function generateEthicomSignature(op_level) {
     };
     if (passHash) {
       sigObject.pass_hash = passHash;
+    }
+    if (nick) {
+      sigObject.nickname = nick;
     }
 
     localStorage.setItem("ethicom_signature", JSON.stringify(sigObject));
