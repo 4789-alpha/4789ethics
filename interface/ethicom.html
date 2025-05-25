@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ethik-Kompass</title>
   <link rel="stylesheet" href="ethicom-style.css" />
   <script src="ethicom-utils.js"></script>
@@ -22,8 +23,11 @@
   <script src="touch-features.js"></script>
   <script src="color-auth.js"></script>
   <script src="module-arranger.js"></script>
+  <script src="side-drop.js"></script>
+  <script src="op-side-nav.js"></script>
 </head>
 <body>
+  <a class="skip-link" href="#main_content">Skip to main content</a>
   <div id="op_background"></div>
   <header>
     <h1>Ethik-Kompass</h1>
@@ -42,7 +46,7 @@
     <a href="../wings/index.html">Wings</a>
     <a href="../README.md" target="_blank" data-ui="nav_readme" class="readme-link">README</a>
   </nav>
-  <main>
+  <main id="main_content">
     <h2 id="title">Ethik-Kompass</h2>
 
 
@@ -132,6 +136,9 @@
         initTranslationManager();
         renderAllBadges();
         initOpButtons();
+        initSideDrop('op-navigation.html');
+        const badgeBtn = document.getElementById('badge_display');
+        if (badgeBtn) badgeBtn.addEventListener('click', toggleSideDrop);
       });
     });
 
@@ -219,7 +226,7 @@
       });
     }
 
-    function handleOpButton(level) {
+  function handleOpButton(level) {
       const current = opLevelToNumber(getStoredOpLevel());
       const target = opLevelToNumber(level);
       if (current >= target) {
@@ -229,5 +236,6 @@
       }
     }
   </script>
+  <div id="side_drop"></div>
 </body>
 </html>
