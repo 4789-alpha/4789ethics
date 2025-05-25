@@ -10,11 +10,8 @@ function checkOP9Fail() {
   }
 }
 
-function initOP9Interface() {
-  const container = document.getElementById("op_interface");
-  if (!container) return;
-
-  container.innerHTML = `
+function getOP9Card() {
+  return `
     <div class="card">
       <h3>High-Level Operator Actions (OP-9)</h3>
       <p class="info" data-info="op-9"></p>
@@ -57,8 +54,13 @@ function initOP9Interface() {
       </select>
 
       <button onclick="verifyDonation()">Log Verified Donation</button>
-    </div>
-  `;
+    </div>`;
+}
+
+function initOP9Interface() {
+  const container = document.getElementById("op_interface");
+  if (!container) return;
+  container.innerHTML = getOP9Card();
   applyInfoTexts(container);
 }
 
