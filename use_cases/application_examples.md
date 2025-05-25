@@ -10,9 +10,12 @@
 - Frustration tolerance in dialog models
 
 ## Platforms
-- Discussion moderation through reflection, not banning  
+- Discussion moderation through reflection, not banning
+- Conflict de-escalation using the SKE module (Soziale Kontrolle durch Empathie) when language can prevent violence
+- Conflict de-escalation using the SKE module when language can prevent violence
 - Ranking based on responsibility, not visibility
 
 ## Governance
 - Participatory systems that require consequence tracing  
 - Open decision structures with ethical layers
+
