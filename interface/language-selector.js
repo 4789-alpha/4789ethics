@@ -16,8 +16,12 @@ function askLanguageChoice() {
 
 function getLanguage() {
   const stored = localStorage.getItem("ethicom_lang");
-  const lang = stored || askLanguageChoice();
-  if (lang) document.documentElement.lang = lang;
+  const lang = stored || "de";
+  if (lang) {
+    document.documentElement.lang = lang;
+    localStorage.setItem("ethicom_lang", lang);
+  }
+  if (typeof updateReadmeLinks === 'function') updateReadmeLinks(lang);
   return lang;
 }
 
@@ -25,6 +29,17 @@ function getUiTextPath() {
   return window.location.pathname.includes("/interface/")
     ? "../i18n/ui-text.json"
     : "i18n/ui-text.json";
+}
+
+function updateReadmeLinks(lang) {
+  const prefix = window.location.pathname.includes('/interface/') ? '..' : '.';
+  const base = lang === 'en'
+    ? `${prefix}/README.md`
+    : `${prefix}/i18n/README.${lang}.md`;
+  document.querySelectorAll('a.readme-link').forEach(a => {
+    const anchor = a.getAttribute('href').split('#')[1];
+    a.href = anchor ? `${base}#${anchor}` : base;
+  });
 }
 
 // Initialize a language dropdown and reload on change
@@ -48,7 +63,7 @@ function initLanguageDropdown(selectId = "lang_select", textPath = getUiTextPath
           const opt = document.createElement("option");
           opt.value = code;
           const obj = texts[code] || {};
-          const incomplete = keys.some(k => !Object.prototype.hasOwnProperty.call(obj, k) || isEmpty(obj[k]));
+          const incomplete = keys.some(k => !Object.prototype.hasOwnProperty.call(obj, k) || isEmpty(obj[k]) || JSON.stringify(obj[k]) === JSON.stringify(base[k]));
           opt.textContent = incomplete ? `${code}*` : code;
           if (incomplete) opt.title = "Translation incomplete";
           select.appendChild(opt);
@@ -66,6 +81,8 @@ function initLanguageDropdown(selectId = "lang_select", textPath = getUiTextPath
           window.uiText = t;
           applySignupTexts();
         }
+        if (typeof updateReadmeLinks === 'function') updateReadmeLinks(lang);
       });
     });
 }
+

@@ -7,6 +7,7 @@ function initAccessibilitySetup() {
   const hearing = saved.hearing || "yes";
   const speech = saved.speech || "no";
   const font = saved.font || "normal";
+  const simple = saved.simple || "no";
 
   container.innerHTML = `
     <h3 data-ui="access_title">Accessibility Setup</h3>
@@ -29,6 +30,12 @@ function initAccessibilitySetup() {
       <option value="yes" data-ui="access_opt_yes">Yes</option>
     </select>
 
+    <label for="simple_select" data-ui="access_label_simple">Simplified interface?</label>
+    <select id="simple_select">
+      <option value="no" data-ui="access_opt_no">No</option>
+      <option value="yes" data-ui="access_opt_yes">Yes</option>
+    </select>
+
     <label for="font_select">Font size:</label>
     <select id="font_select">
       <option value="normal">Normal</option>
@@ -41,6 +48,7 @@ function initAccessibilitySetup() {
   document.getElementById("vision_select").value = vision;
   document.getElementById("hearing_select").value = hearing;
   document.getElementById("speech_select").value = speech;
+  document.getElementById("simple_select").value = simple;
   document.getElementById("font_select").value = font;
 
   function applyFont(val) {
@@ -48,15 +56,24 @@ function initAccessibilitySetup() {
   }
   applyFont(font);
 
+  function applySimple(val) {
+    const enabled = val === "yes";
+    document.body.classList.toggle("simple-mode", enabled);
+    localStorage.setItem("simple_mode", enabled ? "true" : "false");
+  }
+  applySimple(simple);
+
   document.getElementById("access_save").addEventListener("click", () => {
     const data = {
       vision: document.getElementById("vision_select").value,
       hearing: document.getElementById("hearing_select").value,
       speech: document.getElementById("speech_select").value,
-      font: document.getElementById("font_select").value
+      font: document.getElementById("font_select").value,
+      simple: document.getElementById("simple_select").value
     };
     localStorage.setItem("ethicom_access", JSON.stringify(data));
     applyFont(data.font);
+    applySimple(data.simple);
     loadUiTexts().then(txt => {
       const t = txt[getLanguage()] || txt.en || {};
       alert(t.access_saved || "Accessibility preferences saved.");
