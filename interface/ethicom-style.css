@@ -42,6 +42,33 @@
   --accent-color: #228B22;
 }
 
+/* Higher contrast variants for the Tanna look */
+.theme-tanna-dark {
+  --bg-color: #121212;
+  --text-color: #e6e6e6;
+  --header-text-color: #ffffff;
+  --nav-text-color: #ffffff;
+  --primary-color: #228B22;
+  --card-bg: #1e1e1e;
+  --header-bg: rgba(0, 0, 0, 0.85);
+  --nav-bg: rgba(0, 0, 0, 0.85);
+  --card-alpha-bg: rgba(34, 34, 34, 0.9);
+  --accent-color: #33cc33;
+}
+
+.theme-tanna-light {
+  --bg-color: #ffffff;
+  --text-color: #002200;
+  --header-text-color: #ffffff;
+  --nav-text-color: #ffffff;
+  --primary-color: #228B22;
+  --card-bg: #ffffff;
+  --header-bg: rgba(34, 34, 34, 0.95);
+  --nav-bg: rgba(34, 34, 34, 0.95);
+  --card-alpha-bg: rgba(255, 255, 255, 0.95);
+  --accent-color: #228B22;
+}
+
 .theme-ocean {
   --bg-color: #e8f3fa;
   --text-color: #00334d;
@@ -159,6 +186,14 @@ main {
   padding: 1.5em;
   margin-bottom: 1.5em;
 }
+
+.swipe-card {
+  transition: transform 0.3s;
+}
+.swipe-card.swipe-left { transform: translateX(-80px); }
+.swipe-card.swipe-right { transform: translateX(80px); }
+.swipe-card.swipe-up { transform: translateY(-80px); }
+.swipe-card.swipe-down { transform: translateY(80px); }
 
 input,
 select,
@@ -390,4 +425,70 @@ body.touch-big-buttons button {
 body.left-layout main {
   margin: 0;
   max-width: none;
+}
+
+@keyframes attentionWiggle {
+  0%,100% { transform: rotate(0deg); }
+  25% { transform: rotate(2deg); }
+  75% { transform: rotate(-2deg); }
+}
+.attention-wiggle {
+  animation: attentionWiggle 0.3s 6;
+}
+
+/* Accessibility: hide skip link off-screen until focus */
+.skip-link {
+  position: absolute;
+  left: -1000px;
+  top: auto;
+  background: var(--primary-color);
+  color: var(--text-color);
+  padding: 0.5em;
+  text-decoration: none;
+  z-index: 100;
+}
+.skip-link:focus {
+  left: 0;
+  top: 0;
+}
+
+
+/* Slide-out side drop menu */
+#side_drop {
+  --side-drop-width: 260px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: var(--side-drop-width);
+  height: 100%;
+  background: var(--card-bg);
+  color: inherit;
+  transform: translateX(calc(var(--side-drop-width) - 48px));
+  transition: transform 0.3s;
+  z-index: 200;
+  overflow-y: auto;
+}
+#side_drop.open {
+  transform: translateX(0);
+}
+.side-drop-header {
+  background: var(--nav-bg);
+  padding: 0.5em;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#side_drop_badge {
+  cursor: pointer;
+}
+#side_close_btn {
+  margin-left: 0.5em;
+}
+
+@media (max-width: 600px) {
+  #side_drop {
+    --side-drop-width: 80vw;
+  }
 }
