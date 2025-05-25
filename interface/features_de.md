@@ -62,6 +62,8 @@ if (user.op_level >= 5) {
 }
 ```
 
+- Das Side-Drop-Menü steht erst ab OP-6 zur Verfügung.
+
 ## 5. Fortschrittsanzeige
 
 Ein schmaler Balken zeigt den aktuellen Fortschritt an, z.B. beim Ethiktest oder beim Erreichen eines OP-Levels.
