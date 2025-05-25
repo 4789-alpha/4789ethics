@@ -1,12 +1,12 @@
 {
   "operator_id": "4789",
-  "current_rank": "OP-7",
+  "current_rank": "OP-9",
   "rank_origin": "self-assessed + verified",
   "correlation_score": 0.92,
   "reviews_total": 12,
   "reviews_verified": 11,
   "reviews_disputed": 0,
-  "last_adjustment": "2025-05-20T14:00:00Z",
+  "last_adjustment": "2025-06-30T00:00:00Z",
   "trust_basis": [
     "structure_9874",
     "ethikscale-en.json",
