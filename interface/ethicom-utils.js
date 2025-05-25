@@ -16,7 +16,7 @@ function renderBadge(currentRank, maxRank) {
   mainSpan.className = `badge op-${currentRank.replace("OP-", "").replace(".", "")}`;
   mainSpan.textContent = currentRank;
 
-  const lang = localStorage.getItem('ethicom_lang') || document.documentElement.lang || 'en';
+  const lang = localStorage.getItem('ethicom_lang') || document.documentElement.lang || 'de';
   const mainLink = document.createElement("a");
   mainLink.href = `${getReadmePath(lang)}#${currentRank.toLowerCase().replace(/\./g, '-')}`;
   mainLink.appendChild(mainSpan);
@@ -53,7 +53,7 @@ function renderAllBadges() {
     "OP-12"
   ];
 
-  const lang = localStorage.getItem('ethicom_lang') || document.documentElement.lang || 'en';
+  const lang = localStorage.getItem('ethicom_lang') || document.documentElement.lang || 'de';
   gallery.innerHTML = "";
   levels.forEach(lvl => {
     const span = document.createElement("span");
