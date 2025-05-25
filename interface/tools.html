@@ -1,15 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="utf-8" />
-  <title>Ethicom Tools</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tools</title>
   <link rel="stylesheet" href="ethicom-style.css" />
   <script src="interface-loader.js"></script>
   <script src="language-selector.js"></script>
   <script src="translation-manager.js"></script>
   <script src="color-auth.js"></script>
+  <script src="theme-manager.js"></script>
+  <script src="disclaimer.js"></script>
+  <script src="logo-background.js"></script>
+  <script src="touch-features.js"></script>
+  <script src="module-arranger.js"></script>
+  <script src="side-drop.js"></script>
+  <script src="op-side-nav.js"></script>
 </head>
 <body>
+  <a class="skip-link" href="#main_content">Skip to main content</a>
+  <div id="op_background"></div>
   <header>
     <h1 data-ui="nav_tools">Tools</h1>
   </header>
@@ -23,11 +33,12 @@
     <a href="ratings.html" data-ui="nav_ratings">Bewertungen</a>
     <a href="signup.html" data-ui="nav_signup">Signup</a>
     <a href="tools.html" data-ui="nav_tools">Tools</a>
-    <a href="settings.html" data-ui="nav_settings">Settings</a>
+    <a href="settings.html" data-ui="nav_settings" class="icon-only">⚙</a>
     <a href="../wings/index.html">Wings</a>
-    <a href="../README.md" target="_blank" data-ui="nav_readme">README</a>
+    <a href="../README.md" target="_blank" data-ui="nav_readme" class="readme-link">README</a>
+    <a href="#" id="side_menu" class="icon-only">☰</a>
   </nav>
-  <main>
+  <main id="main_content">
     <div id="lang_selection" class="card" style="margin-bottom:1em;">
       <label for="lang_select" data-ui="choose_language_label">Language:</label>
       <select id="lang_select"></select>
@@ -38,9 +49,11 @@
         <li><button class="accent-button" onclick="loadInterfaceForOP('language-manager')">Language Manager</button></li>
         <li><button class="accent-button" onclick="loadInterfaceForOP('semantic-manager')">Semantic Manager</button></li>
         <li><button class="accent-button" onclick="loadInterfaceForOP('source-search')">Source Search</button></li>
+        <li><button class="accent-button" onclick="loadInterfaceForOP('integrator')">Source Integrator</button></li>
         <li><button class="accent-button" onclick="loadInterfaceForOP('manifest-viewer')">Manifest Viewer</button></li>
         <li><button class="accent-button" onclick="loadInterfaceForOP('revision-overview')">Revision Overview</button></li>
         <li><button class="accent-button" onclick="loadInterfaceForOP('permissions-viewer')">Permissions Viewer</button></li>
+        <li><button class="accent-button" onclick="loadInterfaceForOP('chat')">OP Chat</button></li>
       </ul>
     </div>
     <div id="op_interface" class="card"></div>
@@ -48,12 +61,18 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       initLanguageDropdown('lang_select');
+      applyStoredModuleOrder();
       const lang = localStorage.getItem('ethicom_lang');
       fetch('../i18n/ui-text.json').then(r => r.json()).then(t => {
         const texts = t[lang] || t.en || {};
         applyTexts(texts);
+        showDisclaimers(texts);
       });
+      initSideDrop('op-navigation.html');
+      const menu=document.getElementById('side_menu');
+      if(menu) menu.addEventListener('click',e=>{e.preventDefault();toggleSideDrop();});
     });
   </script>
+  <div id="side_drop"></div>
 </body>
 </html>
