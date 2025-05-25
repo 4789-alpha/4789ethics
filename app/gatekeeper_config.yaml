@@ -1,0 +1,4 @@
+gatekeeper:
+  controller: "RL@RLpi"
+  allow_control: false
+  local_only: true

@@ -1,20 +1,22 @@
-// op-8-analysis.js – OP-8: Strukturgetriebene Quellenauswertung (readonly)
+// op-10-analysis.js – OP-10: Strukturgetriebene Quellenauswertung (readonly)
 
-function initOP8Analysis() {
+function initOP10Analysis() {
   const container = document.getElementById("op_interface");
   if (!container) return;
 
   container.innerHTML = `
     <div class="card">
-      <h3>Structural Analysis (OP-8)</h3>
-      <p class="info">This is a system-driven structural view of sources. No human input is allowed at this level.</p>
+      <h3>Structural Analysis (OP-10)</h3>
+      <p class="info" data-info="op-10"></p>
 
       <label for="inspect_id">Source ID to analyze:</label>
+      ${help('Provide the source identifier to see its structural summary.')}
       <input type="text" id="inspect_id" placeholder="e.g. src-0010" />
 
       <button onclick="loadStructuralView()">Run Analysis</button>
     </div>
   `;
+  applyInfoTexts(container);
 }
 
 function loadStructuralView() {
