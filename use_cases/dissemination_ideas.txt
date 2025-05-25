@@ -4,3 +4,4 @@
 - Reference in AI development guidelines  
 - Connect to real-use decision protocols
 
+- Deploy interface on Netsly for quick sharing
