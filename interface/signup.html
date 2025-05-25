@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -13,6 +13,8 @@
   <script src="logo-background.js"></script>
   <script src="touch-features.js"></script>
   <script src="module-arranger.js"></script>
+  <script src="side-drop.js"></script>
+  <script src="op-side-nav.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main_content">Skip to main content</a>
@@ -33,6 +35,7 @@
     <a href="settings.html" data-ui="nav_settings" class="icon-only">⚙</a>
     <a href="../wings/index.html">Wings</a>
     <a href="../README.md" target="_blank" class="readme-link">README</a>
+    <a href="#" id="side_menu" class="icon-only">☰</a>
   </nav>
   <main id="main_content">
     <div id="lang_selection" class="card" style="margin-bottom:1em;">
@@ -54,7 +57,11 @@
       initLanguageDropdown('lang_select');
       applyStoredModuleOrder();
       initSignup();
+      initSideDrop('op-navigation.html');
+      const menu=document.getElementById('side_menu');
+      if(menu) menu.addEventListener('click',e=>{e.preventDefault();toggleSideDrop();});
     });
   </script>
+  <div id="side_drop"></div>
 </body>
 </html>

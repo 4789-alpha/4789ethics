@@ -452,3 +452,43 @@ body.left-layout main {
   top: 0;
 }
 
+
+/* Slide-out side drop menu */
+#side_drop {
+  --side-drop-width: 260px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: var(--side-drop-width);
+  height: 100%;
+  background: var(--card-bg);
+  color: inherit;
+  transform: translateX(calc(var(--side-drop-width) - 48px));
+  transition: transform 0.3s;
+  z-index: 200;
+  overflow-y: auto;
+}
+#side_drop.open {
+  transform: translateX(0);
+}
+.side-drop-header {
+  background: var(--nav-bg);
+  padding: 0.5em;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#side_drop_badge {
+  cursor: pointer;
+}
+#side_close_btn {
+  margin-left: 0.5em;
+}
+
+@media (max-width: 600px) {
+  #side_drop {
+    --side-drop-width: 80vw;
+  }
+}

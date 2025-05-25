@@ -76,7 +76,8 @@
     ],
     "btn_disclaimer_accept": "I understand",
     "attention_toggle_wiggle": "Wiggle when idle",
-    "attention_toggle_beep": "Beep when idle"
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "de": {
     "title": "Ethicom: Bewertung durch Menschen",
@@ -155,7 +156,8 @@
     ],
     "btn_disclaimer_accept": "Verstanden",
     "attention_toggle_wiggle": "Wiggle when idle",
-    "attention_toggle_beep": "Beep when idle"
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "fr": {
     "title": "Ethicom : Évaluation humaine",
@@ -231,7 +233,8 @@
     "simple_mode_on": "Mode simple activé.",
     "simple_mode_off": "Mode simple désactivé.",
     "attention_toggle_wiggle": "Wiggle when idle",
-    "attention_toggle_beep": "Beep when idle"
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "es": {
     "title": "Ethicom: Evaluación Humana",
@@ -307,7 +310,8 @@
     "simple_mode_on": "Modo simple activado.",
     "simple_mode_off": "Modo simple desactivado.",
     "attention_toggle_wiggle": "Wiggle when idle",
-    "attention_toggle_beep": "Beep when idle"
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "pt": {
     "title": "Ethicom: Avaliação Humana",
@@ -383,7 +387,8 @@
     "simple_mode_on": "Modo simples ativado.",
     "simple_mode_off": "Modo simples desativado.",
     "attention_toggle_wiggle": "Wiggle when idle",
-    "attention_toggle_beep": "Beep when idle"
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "zh": {
     "title": "Ethicom：人工评估",
@@ -459,7 +464,8 @@
     "simple_mode_off": "Simple mode is off.",
     "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
     "attention_toggle_wiggle": "Wiggle when idle",
-    "attention_toggle_beep": "Beep when idle"
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "hi": {
     "title": "Ethicom: मानवीय मूल्यांकन",
@@ -535,7 +541,8 @@
     "btn_disclaimer_accept": "I understand",
     "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
     "attention_toggle_wiggle": "Wiggle when idle",
-    "attention_toggle_beep": "Beep when idle"
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "ar": {
     "title": "إيثيكوم: التقييم البشري",
@@ -611,7 +618,8 @@
     "btn_disclaimer_accept": "I understand",
     "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
     "attention_toggle_wiggle": "Wiggle when idle",
-    "attention_toggle_beep": "Beep when idle"
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "ja": {
     "title": "Ethicom：人間による評価",
@@ -687,7 +695,8 @@
     "btn_disclaimer_accept": "I understand",
     "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
     "attention_toggle_wiggle": "Wiggle when idle",
-    "attention_toggle_beep": "Beep when idle"
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "sw": {
     "title": "Ethicom: Tathmini ya Kibinadamu",
@@ -763,7 +772,8 @@
     "btn_disclaimer_accept": "I understand",
     "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
     "attention_toggle_wiggle": "Wiggle when idle",
-    "attention_toggle_beep": "Beep when idle"
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "ru": {
     "title": "Ethicom: Оценка человеком",
@@ -839,7 +849,8 @@
     "btn_disclaimer_accept": "I understand",
     "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
     "attention_toggle_wiggle": "Wiggle when idle",
-    "attention_toggle_beep": "Beep when idle"
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "it": {
     "title": "Ethicom: Valutazione Umana",
@@ -915,7 +926,8 @@
     "simple_mode_on": "Modalità semplice attiva.",
     "simple_mode_off": "Modalità semplice disattiva.",
     "attention_toggle_wiggle": "Wiggle when idle",
-    "attention_toggle_beep": "Beep when idle"
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "ko": {
     "title": "Ethicom: 인간 평가",
@@ -991,7 +1003,8 @@
     "btn_disclaimer_accept": "I understand",
     "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
     "attention_toggle_wiggle": "Wiggle when idle",
-    "attention_toggle_beep": "Beep when idle"
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "fa": {
     "title": "ایتیکام: ارزیابی انسانی",
@@ -1067,7 +1080,8 @@
     "btn_disclaimer_accept": "I understand",
     "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
     "attention_toggle_wiggle": "Wiggle when idle",
-    "attention_toggle_beep": "Beep when idle"
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "pl": {
     "title": "Ethicom: Ocena Ludzka",
@@ -1143,7 +1157,8 @@
     "btn_disclaimer_accept": "I understand",
     "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
     "attention_toggle_wiggle": "Wiggle when idle",
-    "attention_toggle_beep": "Beep when idle"
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "am": {
     "title": "Ethicom: Human Evaluation",
@@ -1219,7 +1234,8 @@
     "btn_disclaimer_accept": "I understand",
     "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
     "attention_toggle_wiggle": "Wiggle when idle",
-    "attention_toggle_beep": "Beep when idle"
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "af": {
     "title": "Ethicom: Human Evaluation",
@@ -1295,7 +1311,8 @@
     "btn_disclaimer_accept": "I understand",
     "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
     "attention_toggle_wiggle": "Wiggle when idle",
-    "attention_toggle_beep": "Beep when idle"
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "bn": {
     "title": "Ethicom: Human Evaluation",
@@ -1371,7 +1388,8 @@
     "btn_disclaimer_accept": "I understand",
     "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
     "attention_toggle_wiggle": "Wiggle when idle",
-    "attention_toggle_beep": "Beep when idle"
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "ha": {
     "title": "Ethicom: Human Evaluation",
@@ -1447,7 +1465,8 @@
     "btn_disclaimer_accept": "I understand",
     "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
     "attention_toggle_wiggle": "Wiggle when idle",
-    "attention_toggle_beep": "Beep when idle"
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "id": {
     "title": "Ethicom: Human Evaluation",
@@ -1523,7 +1542,8 @@
     "btn_disclaimer_accept": "I understand",
     "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
     "attention_toggle_wiggle": "Wiggle when idle",
-    "attention_toggle_beep": "Beep when idle"
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "ig": {
     "title": "Ethicom: Human Evaluation",
@@ -1599,7 +1619,8 @@
     "btn_disclaimer_accept": "I understand",
     "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
     "attention_toggle_wiggle": "Wiggle when idle",
-    "attention_toggle_beep": "Beep when idle"
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "om": {
     "title": "Ethicom: Human Evaluation",
@@ -1675,7 +1696,8 @@
     "btn_disclaimer_accept": "I understand",
     "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
     "attention_toggle_wiggle": "Wiggle when idle",
-    "attention_toggle_beep": "Beep when idle"
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "rm": {
     "title": "Ethicom: Human Evaluation",
@@ -1751,7 +1773,8 @@
     "btn_disclaimer_accept": "I understand",
     "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
     "attention_toggle_wiggle": "Wiggle when idle",
-    "attention_toggle_beep": "Beep when idle"
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "ta": {
     "title": "Ethicom: Human Evaluation",
@@ -1827,7 +1850,8 @@
     "btn_disclaimer_accept": "I understand",
     "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
     "attention_toggle_wiggle": "Wiggle when idle",
-    "attention_toggle_beep": "Beep when idle"
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "te": {
     "title": "Ethicom: Human Evaluation",
@@ -1903,7 +1927,8 @@
     "btn_disclaimer_accept": "I understand",
     "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
     "attention_toggle_wiggle": "Wiggle when idle",
-    "attention_toggle_beep": "Beep when idle"
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "th": {
     "title": "Ethicom: Human Evaluation",
@@ -1979,7 +2004,8 @@
     "btn_disclaimer_accept": "I understand",
     "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
     "attention_toggle_wiggle": "Wiggle when idle",
-    "attention_toggle_beep": "Beep when idle"
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "tr": {
     "title": "Ethicom: Human Evaluation",
@@ -2055,7 +2081,8 @@
     "btn_disclaimer_accept": "I understand",
     "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
     "attention_toggle_wiggle": "Wiggle when idle",
-    "attention_toggle_beep": "Beep when idle"
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "ur": {
     "title": "Ethicom: Human Evaluation",
@@ -2131,7 +2158,8 @@
     "btn_disclaimer_accept": "I understand",
     "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
     "attention_toggle_wiggle": "Wiggle when idle",
-    "attention_toggle_beep": "Beep when idle"
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "vi": {
     "title": "Ethicom: Human Evaluation",
@@ -2207,7 +2235,8 @@
     "btn_disclaimer_accept": "I understand",
     "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
     "attention_toggle_wiggle": "Wiggle when idle",
-    "attention_toggle_beep": "Beep when idle"
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "xh": {
     "title": "Ethicom: Human Evaluation",
@@ -2283,7 +2312,8 @@
     "btn_disclaimer_accept": "I understand",
     "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
     "attention_toggle_wiggle": "Wiggle when idle",
-    "attention_toggle_beep": "Beep when idle"
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "yo": {
     "title": "Ethicom: Human Evaluation",
@@ -2359,7 +2389,8 @@
     "btn_disclaimer_accept": "I understand",
     "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
     "attention_toggle_wiggle": "Wiggle when idle",
-    "attention_toggle_beep": "Beep when idle"
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "zu": {
     "title": "Ethicom: Human Evaluation",
@@ -2435,7 +2466,8 @@
     "btn_disclaimer_accept": "I understand",
     "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
     "attention_toggle_wiggle": "Wiggle when idle",
-    "attention_toggle_beep": "Beep when idle"
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   },
   "nl": {
     "title": "Ethicom: Menselijke Evaluatie",
@@ -2511,6 +2543,7 @@
     "btn_disclaimer_accept": "I understand",
     "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
     "attention_toggle_wiggle": "Wiggle when idle",
-    "attention_toggle_beep": "Beep when idle"
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close"
   }
 }
