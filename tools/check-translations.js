@@ -3,7 +3,7 @@ const path = require('path');
 
 const file = path.join(__dirname, '..', 'i18n', 'ui-text.json');
 const data = JSON.parse(fs.readFileSync(file, 'utf8'));
-const base = data.en;
+const base = data.de;
 const keys = Object.keys(base);
 
 function isEmpty(val) {
@@ -13,7 +13,7 @@ function isEmpty(val) {
 
 const results = {};
 for (const [lang, obj] of Object.entries(data)) {
-  if (lang === 'en') continue;
+  if (lang === 'de') continue;
   const missing = [];
   const same = [];
   for (const k of keys) {
