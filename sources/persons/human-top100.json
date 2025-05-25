@@ -1,0 +1,702 @@
+[
+  {
+    "human_id": "hum-0001",
+    "name": "Jesus Christ",
+    "era": "c. 4 BCE - 30 CE",
+    "domain": "religion",
+    "description": "Central figure of Christianity, influential ethical teacher"
+  },
+  {
+    "human_id": "hum-0002",
+    "name": "Muhammad",
+    "era": "c. 570 - 632",
+    "domain": "religion",
+    "description": "Prophet of Islam and unifier of the Arabian Peninsula"
+  },
+  {
+    "human_id": "hum-0003",
+    "name": "Isaac Newton",
+    "era": "1643 - 1727",
+    "domain": "science / physics",
+    "description": "Formulated the laws of motion and universal gravitation"
+  },
+  {
+    "human_id": "hum-0004",
+    "name": "Siddhartha Gautama",
+    "era": "c. 563 - 483 BCE",
+    "domain": "religion",
+    "description": "Founder of Buddhism, known as the Buddha"
+  },
+  {
+    "human_id": "hum-0005",
+    "name": "Confucius",
+    "era": "551 - 479 BCE",
+    "domain": "philosophy",
+    "description": "Chinese philosopher emphasizing morality and social harmony"
+  },
+  {
+    "human_id": "hum-0006",
+    "name": "Paul the Apostle",
+    "era": "c. 5 - 64",
+    "domain": "religion",
+    "description": "Early Christian missionary who shaped Christian theology"
+  },
+  {
+    "human_id": "hum-0007",
+    "name": "Ts'ai Lun",
+    "era": "c. 50 - 121",
+    "domain": "technology",
+    "description": "Credited with inventing paper in ancient China"
+  },
+  {
+    "human_id": "hum-0008",
+    "name": "Johannes Gutenberg",
+    "era": "c. 1400 - 1468",
+    "domain": "technology / printing",
+    "description": "Introduced movable-type printing to Europe"
+  },
+  {
+    "human_id": "hum-0009",
+    "name": "Christopher Columbus",
+    "era": "1451 - 1506",
+    "domain": "exploration",
+    "description": "Voyages opened European awareness of the Americas"
+  },
+  {
+    "human_id": "hum-0010",
+    "name": "Albert Einstein",
+    "era": "1879 - 1955",
+    "domain": "science / physics",
+    "description": "Developed the theories of relativity"
+  },
+  {
+    "human_id": "hum-0011",
+    "name": "Louis Pasteur",
+    "era": "1822 - 1895",
+    "domain": "science / medicine",
+    "description": "Pioneer of microbiology and vaccination"
+  },
+  {
+    "human_id": "hum-0012",
+    "name": "Galileo Galilei",
+    "era": "1564 - 1642",
+    "domain": "science / astronomy",
+    "description": "Championed heliocentrism and modern science"
+  },
+  {
+    "human_id": "hum-0013",
+    "name": "Aristotle",
+    "era": "384 - 322 BCE",
+    "domain": "philosophy",
+    "description": "Greek philosopher who influenced logic and science"
+  },
+  {
+    "human_id": "hum-0014",
+    "name": "Euclid",
+    "era": "c. 300 BCE",
+    "domain": "mathematics",
+    "description": "Author of the foundational geometry text 'Elements'"
+  },
+  {
+    "human_id": "hum-0015",
+    "name": "Moses",
+    "era": "c. 13th century BCE",
+    "domain": "religion",
+    "description": "Hebrew prophet credited with leading the Exodus"
+  },
+  {
+    "human_id": "hum-0016",
+    "name": "Charles Darwin",
+    "era": "1809 - 1882",
+    "domain": "science / biology",
+    "description": "Theory of evolution by natural selection"
+  },
+  {
+    "human_id": "hum-0017",
+    "name": "Qin Shi Huang",
+    "era": "259 - 210 BCE",
+    "domain": "politics",
+    "description": "First emperor to unify China"
+  },
+  {
+    "human_id": "hum-0018",
+    "name": "Augustus Caesar",
+    "era": "63 BCE - 14 CE",
+    "domain": "politics",
+    "description": "First Roman emperor and shaper of imperial system"
+  },
+  {
+    "human_id": "hum-0019",
+    "name": "Nicolaus Copernicus",
+    "era": "1473 - 1543",
+    "domain": "science / astronomy",
+    "description": "Proposed heliocentric model of the solar system"
+  },
+  {
+    "human_id": "hum-0020",
+    "name": "Antoine Lavoisier",
+    "era": "1743 - 1794",
+    "domain": "science / chemistry",
+    "description": "Father of modern chemistry and conservation of mass"
+  },
+  {
+    "human_id": "hum-0021",
+    "name": "Constantine the Great",
+    "era": "c. 272 - 337",
+    "domain": "politics",
+    "description": "Roman emperor who embraced and promoted Christianity"
+  },
+  {
+    "human_id": "hum-0022",
+    "name": "James Watt",
+    "era": "1736 - 1819",
+    "domain": "technology / engineering",
+    "description": "Improved the steam engine, powering the Industrial Revolution"
+  },
+  {
+    "human_id": "hum-0023",
+    "name": "Michael Faraday",
+    "era": "1791 - 1867",
+    "domain": "science / physics",
+    "description": "Discovered electromagnetic induction and principles of electricity"
+  },
+  {
+    "human_id": "hum-0024",
+    "name": "Martin Luther",
+    "era": "1483 - 1546",
+    "domain": "religion",
+    "description": "Initiated the Protestant Reformation"
+  },
+  {
+    "human_id": "hum-0025",
+    "name": "George Washington",
+    "era": "1732 - 1799",
+    "domain": "politics",
+    "description": "Led American independence and became first U.S. president"
+  },
+  {
+    "human_id": "hum-0026",
+    "name": "Karl Marx",
+    "era": "1818 - 1883",
+    "domain": "philosophy / politics",
+    "description": "Co-authored The Communist Manifesto, influencing political theory"
+  },
+  {
+    "human_id": "hum-0027",
+    "name": "Orville Wright",
+    "era": "1871 - 1948",
+    "domain": "technology / aviation",
+    "description": "Co-invented and piloted the first successful airplane"
+  },
+  {
+    "human_id": "hum-0028",
+    "name": "Genghis Khan",
+    "era": "c. 1162 - 1227",
+    "domain": "military",
+    "description": "Founded the Mongol Empire, one of the largest in history"
+  },
+  {
+    "human_id": "hum-0029",
+    "name": "Adam Smith",
+    "era": "1723 - 1790",
+    "domain": "economics",
+    "description": "Author of 'The Wealth of Nations', shaping modern economics"
+  },
+  {
+    "human_id": "hum-0030",
+    "name": "William Shakespeare",
+    "era": "1564 - 1616",
+    "domain": "literature",
+    "description": "Playwright and poet whose works profoundly influenced English literature"
+  },
+  {
+    "human_id": "hum-0031",
+    "name": "John Dalton",
+    "era": "1766 - 1844",
+    "domain": "science / chemistry",
+    "description": "Developed atomic theory in chemistry"
+  },
+  {
+    "human_id": "hum-0032",
+    "name": "Alexander the Great",
+    "era": "356 - 323 BCE",
+    "domain": "military",
+    "description": "Conqueror who created a vast empire across three continents"
+  },
+  {
+    "human_id": "hum-0033",
+    "name": "Napoleon Bonaparte",
+    "era": "1769 - 1821",
+    "domain": "military / politics",
+    "description": "French leader whose conquests reshaped Europe"
+  },
+  {
+    "human_id": "hum-0034",
+    "name": "Thomas Edison",
+    "era": "1847 - 1931",
+    "domain": "technology",
+    "description": "Prolific inventor of electric light and sound recording"
+  },
+  {
+    "human_id": "hum-0035",
+    "name": "Antonie van Leeuwenhoek",
+    "era": "1632 - 1723",
+    "domain": "science / biology",
+    "description": "Father of microbiology for pioneering use of microscopes"
+  },
+  {
+    "human_id": "hum-0036",
+    "name": "Wilhelm Conrad Röntgen",
+    "era": "1845 - 1923",
+    "domain": "science / physics",
+    "description": "Discovered X-rays, revolutionizing medical diagnostics"
+  },
+  {
+    "human_id": "hum-0037",
+    "name": "Alexander Graham Bell",
+    "era": "1847 - 1922",
+    "domain": "technology / communication",
+    "description": "Invented the telephone"
+  },
+  {
+    "human_id": "hum-0038",
+    "name": "Alexander Fleming",
+    "era": "1881 - 1955",
+    "domain": "science / medicine",
+    "description": "Discovered penicillin, first widely used antibiotic"
+  },
+  {
+    "human_id": "hum-0039",
+    "name": "John Locke",
+    "era": "1632 - 1704",
+    "domain": "philosophy",
+    "description": "Ideas on liberty influenced modern political thought"
+  },
+  {
+    "human_id": "hum-0040",
+    "name": "Ludwig van Beethoven",
+    "era": "1770 - 1827",
+    "domain": "music",
+    "description": "Composer bridging Classical and Romantic eras"
+  },
+  {
+    "human_id": "hum-0041",
+    "name": "Werner Heisenberg",
+    "era": "1901 - 1976",
+    "domain": "science / physics",
+    "description": "Formulated the uncertainty principle in quantum mechanics"
+  },
+  {
+    "human_id": "hum-0042",
+    "name": "Alexander Pushkin",
+    "era": "1799 - 1837",
+    "domain": "literature",
+    "description": "Founder of modern Russian literature"
+  },
+  {
+    "human_id": "hum-0043",
+    "name": "Louis XIV",
+    "era": "1638 - 1715",
+    "domain": "politics",
+    "description": "French monarch known as the Sun King, exemplifying absolute monarchy"
+  },
+  {
+    "human_id": "hum-0044",
+    "name": "Mahatma Gandhi",
+    "era": "1869 - 1948",
+    "domain": "politics / civil rights",
+    "description": "Leader of Indian independence through nonviolent resistance"
+  },
+  {
+    "human_id": "hum-0045",
+    "name": "Charles V",
+    "era": "1500 - 1558",
+    "domain": "politics",
+    "description": "Holy Roman Emperor and King of Spain during European expansion"
+  },
+  {
+    "human_id": "hum-0046",
+    "name": "Henry Ford",
+    "era": "1863 - 1947",
+    "domain": "technology / industry",
+    "description": "Pioneer of mass automobile production"
+  },
+  {
+    "human_id": "hum-0047",
+    "name": "Ivan Pavlov",
+    "era": "1849 - 1936",
+    "domain": "science / psychology",
+    "description": "Known for classical conditioning experiments"
+  },
+  {
+    "human_id": "hum-0048",
+    "name": "Queen Victoria",
+    "era": "1819 - 1901",
+    "domain": "politics",
+    "description": "British monarch presiding over vast empire"
+  },
+  {
+    "human_id": "hum-0049",
+    "name": "Sigmund Freud",
+    "era": "1856 - 1939",
+    "domain": "psychology",
+    "description": "Founder of psychoanalysis"
+  },
+  {
+    "human_id": "hum-0050",
+    "name": "Laozi",
+    "era": "c. 6th century BCE",
+    "domain": "philosophy",
+    "description": "Traditional author of the Tao Te Ching, founder of Taoism"
+  },
+  {
+    "human_id": "hum-0051",
+    "name": "Joseph Stalin",
+    "era": "1878 - 1953",
+    "domain": "politics",
+    "description": "Leader of the Soviet Union and architect of its industrialization"
+  },
+  {
+    "human_id": "hum-0052",
+    "name": "William T.G. Morton",
+    "era": "1819 - 1868",
+    "domain": "medicine",
+    "description": "Demonstrated the use of ether as surgical anesthesia"
+  },
+  {
+    "human_id": "hum-0053",
+    "name": "Guglielmo Marconi",
+    "era": "1874 - 1937",
+    "domain": "technology / communication",
+    "description": "Pioneer of long-distance radio transmission"
+  },
+  {
+    "human_id": "hum-0054",
+    "name": "Adolf Hitler",
+    "era": "1889 - 1945",
+    "domain": "politics",
+    "description": "Dictator of Nazi Germany, instigator of World War II"
+  },
+  {
+    "human_id": "hum-0055",
+    "name": "Plato",
+    "era": "c. 428 - 348 BCE",
+    "domain": "philosophy",
+    "description": "Greek philosopher, student of Socrates, teacher of Aristotle"
+  },
+  {
+    "human_id": "hum-0056",
+    "name": "Oliver Cromwell",
+    "era": "1599 - 1658",
+    "domain": "politics",
+    "description": "Led parliamentary forces in the English Civil War"
+  },
+  {
+    "human_id": "hum-0057",
+    "name": "Napoleon III",
+    "era": "1808 - 1873",
+    "domain": "politics",
+    "description": "Emperor of the French during rapid modernization"
+  },
+  {
+    "human_id": "hum-0058",
+    "name": "Mustafa Kemal Atatürk",
+    "era": "1881 - 1938",
+    "domain": "politics",
+    "description": "Founder of modern Turkey and reformist leader"
+  },
+  {
+    "human_id": "hum-0059",
+    "name": "Thomas Jefferson",
+    "era": "1743 - 1826",
+    "domain": "politics",
+    "description": "Principal author of the U.S. Declaration of Independence"
+  },
+  {
+    "human_id": "hum-0060",
+    "name": "Jonas Salk",
+    "era": "1914 - 1995",
+    "domain": "medicine",
+    "description": "Developed the first successful polio vaccine"
+  },
+  {
+    "human_id": "hum-0061",
+    "name": "Abraham Lincoln",
+    "era": "1809 - 1865",
+    "domain": "politics",
+    "description": "U.S. president who preserved the Union and abolished slavery"
+  },
+  {
+    "human_id": "hum-0062",
+    "name": "René Descartes",
+    "era": "1596 - 1650",
+    "domain": "philosophy / mathematics",
+    "description": "Philosopher and mathematician known for 'I think, therefore I am'"
+  },
+  {
+    "human_id": "hum-0063",
+    "name": "Leonardo da Vinci",
+    "era": "1452 - 1519",
+    "domain": "art / science",
+    "description": "Renaissance artist and polymath"
+  },
+  {
+    "human_id": "hum-0064",
+    "name": "Michelangelo",
+    "era": "1475 - 1564",
+    "domain": "art",
+    "description": "Master sculptor and painter of the Renaissance"
+  },
+  {
+    "human_id": "hum-0065",
+    "name": "Thomas Aquinas",
+    "era": "1225 - 1274",
+    "domain": "philosophy / theology",
+    "description": "Medieval scholastic who integrated faith and reason"
+  },
+  {
+    "human_id": "hum-0066",
+    "name": "Julius Caesar",
+    "era": "100 - 44 BCE",
+    "domain": "military / politics",
+    "description": "Roman general whose actions led to the rise of the empire"
+  },
+  {
+    "human_id": "hum-0067",
+    "name": "William the Conqueror",
+    "era": "c. 1028 - 1087",
+    "domain": "politics / military",
+    "description": "Norman king who conquered England in 1066"
+  },
+  {
+    "human_id": "hum-0068",
+    "name": "Queen Elizabeth I",
+    "era": "1533 - 1603",
+    "domain": "politics",
+    "description": "Monarch who established Protestant England and global exploration"
+  },
+  {
+    "human_id": "hum-0069",
+    "name": "Joseph Lister",
+    "era": "1827 - 1912",
+    "domain": "medicine",
+    "description": "Introduced antiseptic surgery, reducing infection"
+  },
+  {
+    "human_id": "hum-0070",
+    "name": "Erwin Schrödinger",
+    "era": "1887 - 1961",
+    "domain": "science / physics",
+    "description": "Key contributor to quantum mechanics"
+  },
+  {
+    "human_id": "hum-0071",
+    "name": "Nikola Tesla",
+    "era": "1856 - 1943",
+    "domain": "technology / engineering",
+    "description": "Inventor and electrical engineer known for AC power"
+  },
+  {
+    "human_id": "hum-0072",
+    "name": "Stephen Hawking",
+    "era": "1942 - 2018",
+    "domain": "science / cosmology",
+    "description": "Developed theories on black holes and singularities"
+  },
+  {
+    "human_id": "hum-0073",
+    "name": "Fyodor Dostoevsky",
+    "era": "1821 - 1881",
+    "domain": "literature",
+    "description": "Russian novelist exploring psychology and morality"
+  },
+  {
+    "human_id": "hum-0074",
+    "name": "Jean-Jacques Rousseau",
+    "era": "1712 - 1778",
+    "domain": "philosophy",
+    "description": "Political philosopher influencing the Enlightenment"
+  },
+  {
+    "human_id": "hum-0075",
+    "name": "Harriet Tubman",
+    "era": "c. 1822 - 1913",
+    "domain": "civil rights",
+    "description": "Abolitionist who led enslaved people to freedom"
+  },
+  {
+    "human_id": "hum-0076",
+    "name": "George Orwell",
+    "era": "1903 - 1950",
+    "domain": "literature",
+    "description": "Author whose dystopian works critique totalitarianism"
+  },
+  {
+    "human_id": "hum-0077",
+    "name": "Niels Bohr",
+    "era": "1885 - 1962",
+    "domain": "science / physics",
+    "description": "Developed foundational model of atomic structure"
+  },
+  {
+    "human_id": "hum-0078",
+    "name": "Grace Hopper",
+    "era": "1906 - 1992",
+    "domain": "technology / computing",
+    "description": "Pioneer in computer programming and creator of early compilers"
+  },
+  {
+    "human_id": "hum-0079",
+    "name": "Nelson Mandela",
+    "era": "1918 - 2013",
+    "domain": "politics / civil rights",
+    "description": "Anti-apartheid leader and first black president of South Africa"
+  },
+  {
+    "human_id": "hum-0080",
+    "name": "Mother Teresa",
+    "era": "1910 - 1997",
+    "domain": "charity",
+    "description": "Catholic nun known for humanitarian work in India"
+  },
+  {
+    "human_id": "hum-0081",
+    "name": "Donald Knuth",
+    "era": "1938 - present",
+    "domain": "technology / computing",
+    "description": "Computer scientist known for The Art of Computer Programming"
+  },
+  {
+    "human_id": "hum-0082",
+    "name": "Tim Berners-Lee",
+    "era": "1955 - present",
+    "domain": "technology / internet",
+    "description": "Inventor of the World Wide Web"
+  },
+  {
+    "human_id": "hum-0083",
+    "name": "Steve Jobs",
+    "era": "1955 - 2011",
+    "domain": "technology",
+    "description": "Co-founder of Apple and pioneer of personal computing"
+  },
+  {
+    "human_id": "hum-0084",
+    "name": "Malala Yousafzai",
+    "era": "1997 - present",
+    "domain": "education / civil rights",
+    "description": "Activist for girls' education and youngest Nobel laureate"
+  },
+  {
+    "human_id": "hum-0085",
+    "name": "Barack Obama",
+    "era": "1961 - present",
+    "domain": "politics",
+    "description": "44th President of the United States, advocate for healthcare reform"
+  },
+  {
+    "human_id": "hum-0086",
+    "name": "Jeff Bezos",
+    "era": "1964 - present",
+    "domain": "technology / business",
+    "description": "Founder of Amazon and influential in e-commerce"
+  },
+  {
+    "human_id": "hum-0087",
+    "name": "Cleopatra",
+    "era": "69 - 30 BCE",
+    "domain": "politics",
+    "description": "Last active ruler of the Ptolemaic Kingdom of Egypt"
+  },
+  {
+    "human_id": "hum-0088",
+    "name": "Mary Wollstonecraft",
+    "era": "1759 - 1797",
+    "domain": "philosophy / women's rights",
+    "description": "Early advocate of women's equality"
+  },
+  {
+    "human_id": "hum-0089",
+    "name": "Marie Curie",
+    "era": "1867 - 1934",
+    "domain": "science / chemistry",
+    "description": "Pioneering researcher on radioactivity, two-time Nobel laureate"
+  },
+  {
+    "human_id": "hum-0090",
+    "name": "Rosalind Franklin",
+    "era": "1920 - 1958",
+    "domain": "science / biology",
+    "description": "Provided key insights into DNA structure"
+  },
+  {
+    "human_id": "hum-0091",
+    "name": "Hypatia",
+    "era": "c. 350 - 415",
+    "domain": "philosophy / mathematics",
+    "description": "Greek mathematician and philosopher in Alexandria"
+  },
+  {
+    "human_id": "hum-0092",
+    "name": "Alan Turing",
+    "era": "1912 - 1954",
+    "domain": "technology / computing",
+    "description": "Pioneer of computer science and codebreaking"
+  },
+  {
+    "human_id": "hum-0093",
+    "name": "Mikhail Gorbachev",
+    "era": "1931 - 2022",
+    "domain": "politics",
+    "description": "Last leader of the Soviet Union, introduced reforms"
+  },
+  {
+    "human_id": "hum-0094",
+    "name": "Isaac Asimov",
+    "era": "1920 - 1992",
+    "domain": "literature / science",
+    "description": "Prolific science-fiction author and science communicator"
+  },
+  {
+    "human_id": "hum-0095",
+    "name": "Sun Tzu",
+    "era": "c. 5th century BCE",
+    "domain": "military strategy",
+    "description": "Author of 'The Art of War'"
+  },
+  {
+    "human_id": "hum-0096",
+    "name": "Johannes Kepler",
+    "era": "1571 - 1630",
+    "domain": "science / astronomy",
+    "description": "Formulated laws of planetary motion"
+  },
+  {
+    "human_id": "hum-0097",
+    "name": "Hernán Cortés",
+    "era": "1485 - 1547",
+    "domain": "exploration / military",
+    "description": "Spanish conquistador who led the expedition to Mexico"
+  },
+  {
+    "human_id": "hum-0098",
+    "name": "Johann Sebastian Bach",
+    "era": "1685 - 1750",
+    "domain": "music",
+    "description": "Composer whose works shaped Baroque music"
+  },
+  {
+    "human_id": "hum-0099",
+    "name": "Galileo Galilei",
+    "era": "1564 - 1642",
+    "domain": "science / astronomy",
+    "description": "Observation-based advocate for heliocentrism"
+  },
+  {
+    "human_id": "hum-0100",
+    "name": "Johannes Brahms",
+    "era": "1833 - 1897",
+    "domain": "music",
+    "description": "German composer and pianist of the Romantic era"
+  }
+]
