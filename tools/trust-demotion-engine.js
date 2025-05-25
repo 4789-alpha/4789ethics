@@ -8,7 +8,8 @@ function evaluateDemotion(operatorData, evaluations) {
     demote: false,
     reason: "",
     affected_sources: [],
-    lock_until: null
+    lock_until: null,
+    retain_rights: true // rights earned remain valid
   };
 
   if (!Array.isArray(evaluations) || evaluations.length < minForReview) return demotionResult;
@@ -21,6 +22,8 @@ function evaluateDemotion(operatorData, evaluations) {
     demotionResult.demote = true;
     demotionResult.reason = "Mindestens drei Bewertungen wurden durch höherstufige Operatoren widersprochen.";
     demotionResult.affected_sources = contradicting.map(e => e.source_id);
+
+    // Influence drops, but rights remain acknowledged
 
     const now = new Date();
     now.setDate(now.getDate() + 21);
