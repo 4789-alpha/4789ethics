@@ -29,7 +29,8 @@ function computeScores(perSource) {
     result[src] = {
       score: +avg.toFixed(2),
       level: reverseMap[Math.round(avg)] || `SRC-${Math.round(avg)}`,
-      evaluations: nums.length
+      evaluations: nums.length,
+      percent: Math.round((avg / 8) * 100)
     };
   }
   return result;
