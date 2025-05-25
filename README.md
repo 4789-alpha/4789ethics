@@ -102,6 +102,8 @@ OP‑10 has been added as a dedicated observation level.
 | Level | Description |
 |-------|-------------|
 | <a id="op-0"></a> OP-0 | anonymous observer – default for visitors without a signature |
+
+OP‑0 users remain anonymous and may submit one rating per visit without later revision. The stage is for exploration only. See [interface/shneiderman.html](interface/shneiderman.html) for the design rules.
 | <a id="op-1"></a> OP-1 | first signed rating |
 | <a id="op-2"></a> OP-2 | provides feedback responsibly |
 | <a id="op-3"></a> OP-3 | rating requires justification |
