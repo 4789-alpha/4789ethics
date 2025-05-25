@@ -2,6 +2,7 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>4789 Start</title>
   <link rel="stylesheet" href="interface/ethicom-style.css" />
   <script src="interface/ethicom-utils.js"></script>
@@ -12,8 +13,11 @@
   <script src="interface/theme-manager.js"></script>
   <script src="interface/logo-background.js"></script>
   <script src="interface/touch-features.js"></script>
+  <script src="interface/side-drop.js"></script>
+  <script src="interface/op-side-nav.js"></script>
 </head>
 <body>
+  <a class="skip-link" href="#main_content">Skip to main content</a>
   <div id="op_background"></div>
   <header>
     <h1>Start</h1>
@@ -32,8 +36,9 @@
     <a href="interface/settings.html" class="icon-only">⚙</a>
     <a href="wings/index.html">Wings</a>
     <a href="README.md" target="_blank" class="readme-link">README</a>
+    <a href="#" id="side_menu" class="icon-only">☰</a>
   </nav>
-  <main>
+  <main id="main_content">
     <section class="card">
       <h2><img src="op-logo/tanna_op0.png" class="citation-logo start-op-logo" alt="OP-0" aria-label="OP-0" /> Willkommen</h2>
       <p>Diese Seite führt zur Ethicom-Oberfläche. Sie folgt dem Corporate Design von Signature 4789.</p>
@@ -68,8 +73,12 @@
         img.style.filter = base >= 8 ?
           `hue-rotate(-80deg) saturate(0.7) hue-rotate(${hue}deg)` : '';
       });
+      initSideDrop('interface/op-navigation.html');
+      const menu = document.getElementById('side_menu');
+      if(menu) menu.addEventListener('click', e => { e.preventDefault(); toggleSideDrop(); });
     });
   </script>
+  <div id="side_drop"></div>
 </body>
 </html>
 
