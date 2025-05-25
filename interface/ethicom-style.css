@@ -533,3 +533,12 @@ body.left-layout main {
 .cover-item { flex:0 0 auto; background:var(--card-alpha-bg); padding:0.5em; border-radius:4px; text-align:center; min-width:120px; }
 .cover-item span { display:block; color:var(--accent-color); font-size:0.9em; }
 
+/* Basic markdown rendering */
+.markdown-content { line-height: 1.5; }
+.markdown-content h1 { font-size: 1.6em; margin: 1em 0 0.5em; }
+.markdown-content h2 { font-size: 1.4em; margin: 1em 0 0.5em; }
+.markdown-content h3 { font-size: 1.2em; margin: 1em 0 0.5em; }
+.markdown-content ul { padding-left: 1.2em; margin: 0.5em 0; }
+.markdown-content pre { background: var(--card-bg); padding: 0.6em; overflow-x: auto; }
+.markdown-content code { background: rgba(0,0,0,0.3); padding: 0.1em 0.3em; border-radius: 4px; }
+
