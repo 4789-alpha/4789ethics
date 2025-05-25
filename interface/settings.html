@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Settings</title>
   <link rel="stylesheet" href="ethicom-style.css" />
+  <script src="ethicom-utils.js"></script>
   <script src="language-selector.js"></script>
   <script src="theme-manager.js"></script>
   <script src="accessibility.js"></script>
@@ -44,6 +45,10 @@
     <div id="background_count" class="card">
       <label for="bg_symbol_count">Tanna symbols in background: <span id="bg_symbol_count_val">40</span></label>
       <input type="range" id="bg_symbol_count" min="10" max="400" step="10" value="40" />
+    </div>
+    <div id="foreground_opacity" class="card">
+      <label for="fg_opacity">Foreground transparency: <span id="fg_opacity_val">50</span>%</label>
+      <input type="range" id="fg_opacity" min="20" max="80" step="1" value="50" />
     </div>
     <div id="touch_features" class="card">
       <h3>Touch Features</h3>
@@ -95,6 +100,21 @@
         slider.addEventListener('change', e => {
           localStorage.setItem('ethicom_bg_count', e.target.value);
           alert('Reload the page to apply.');
+        });
+      }
+
+      const fgSlider = document.getElementById('fg_opacity');
+      const fgVal = document.getElementById('fg_opacity_val');
+      if (fgSlider && fgVal) {
+        const storedFg = parseInt(localStorage.getItem('ethicom_fg_opacity') || '50', 10);
+        fgSlider.value = storedFg;
+        fgVal.textContent = storedFg;
+        fgSlider.addEventListener('input', e => {
+          fgVal.textContent = e.target.value;
+          setForegroundOpacity(e.target.value);
+        });
+        fgSlider.addEventListener('change', e => {
+          localStorage.setItem('ethicom_fg_opacity', e.target.value);
         });
       }
     });

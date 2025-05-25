@@ -1,5 +1,19 @@
 
 // ethicom-utils.js – Hilfsfunktionen für Interface-Anzeige
+(function() {
+  function setForegroundOpacity(percent) {
+    let p = parseInt(percent, 10);
+    if (isNaN(p)) p = 50;
+    if (p < 20) p = 20;
+    if (p > 80) p = 80;
+    document.documentElement.style.setProperty('--foreground-opacity', (p / 100).toString());
+  }
+  window.setForegroundOpacity = setForegroundOpacity;
+  document.addEventListener('DOMContentLoaded', () => {
+    const stored = parseInt(localStorage.getItem('ethicom_fg_opacity') || '50', 10);
+    setForegroundOpacity(stored);
+  });
+})();
 
 function getReadmePath(lang) {
   const prefix = window.location.pathname.includes('/interface/') ? '..' : '.';
