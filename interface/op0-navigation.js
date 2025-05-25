@@ -14,12 +14,14 @@
   }
   function insertNav(){
     if(document.querySelector('nav')) return;
-    const base = location.pathname.includes('/wings/') ? '../' : '';
+    const base = (location.pathname.includes('/interface/') || location.pathname.includes('/wings/')) ? '../' : '';
     const navHtml =
       '<nav class="op0-nav">'+
-      `<a href="${base}start.html">Start</a>`+
+      `<a href="${base}home.html">Home</a>`+
       `<a href="${base}bewertung.html">Bewertung</a>`+
-      `<a href="${base}interface/ethicom.html">Ethicom</a>`+
+      `<a href="${base}interface/settings.html">Settings</a>`+
+      `<a href="${base}interface/signup.html">Signup</a>`+
+      `<a href="${base}README.html">README</a>`+
       '</nav>';
     document.body.insertAdjacentHTML('afterbegin', navHtml);
   }

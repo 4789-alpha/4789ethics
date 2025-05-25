@@ -34,7 +34,7 @@ function getUiTextPath() {
 function updateReadmeLinks(lang) {
   const prefix = window.location.pathname.includes('/interface/') ? '..' : '.';
   const base = lang === 'en'
-    ? `${prefix}/README.md`
+    ? `${prefix}/README.html`
     : `${prefix}/i18n/README.${lang}.md`;
   document.querySelectorAll('a.readme-link').forEach(a => {
     const anchor = a.getAttribute('href').split('#')[1];
