@@ -17,10 +17,13 @@ function initLogoBackground() {
   const maxLvl = Math.max(...levels);
   const minScale = 0.3;
   const FADE_MS = 1000;
+  const imgBase = window.location.pathname.includes('/interface/')
+    ? '../op-logo/'
+    : 'op-logo/';
   const images = levels.map(lvl => {
     const img = new Image();
     const src = lvl >= 8 ? 7 : lvl;
-    img.src = `../op-logo/tanna_op${src}.png`;
+    img.src = `${imgBase}tanna_op${src}.png`;
     return img;
   });
 
