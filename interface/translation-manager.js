@@ -3,8 +3,17 @@
 let uiTexts = {}; // merged translations
 let pendingLangs = JSON.parse(localStorage.getItem("ethicom_pending_langs") || "{}");
 
+function getSignatureId() {
+  try {
+    const sig = JSON.parse(localStorage.getItem("ethicom_signature") || "{}");
+    return sig.id || null;
+  } catch (err) {
+    return null;
+  }
+}
+
 function loadUiTexts() {
-  return fetch("i18n/ui-text.json")
+  return fetch("../i18n/ui-text.json")
     .then(r => r.json())
     .then(data => {
       uiTexts = data;
@@ -19,15 +28,25 @@ function loadUiTexts() {
 }
 
 function savePendingLang(code, obj) {
-  pendingLangs[code] = { text: obj, confirmed: false };
+  const sig = getSignatureId();
+  const current = pendingLangs[code] || { text: obj, signatures: [], confirmed: false };
+  current.text = obj;
+  if (sig && !current.signatures.includes(sig)) {
+    current.signatures.push(sig);
+  }
+  current.confirmed = current.signatures.length >= 2;
+  pendingLangs[code] = current;
   localStorage.setItem("ethicom_pending_langs", JSON.stringify(pendingLangs));
 }
 
 function confirmPendingLang(code) {
-  if (pendingLangs[code]) {
-    pendingLangs[code].confirmed = true;
-    localStorage.setItem("ethicom_pending_langs", JSON.stringify(pendingLangs));
+  if (!pendingLangs[code]) return;
+  const sig = getSignatureId();
+  if (sig && !pendingLangs[code].signatures.includes(sig)) {
+    pendingLangs[code].signatures.push(sig);
   }
+  pendingLangs[code].confirmed = pendingLangs[code].signatures.length >= 2;
+  localStorage.setItem("ethicom_pending_langs", JSON.stringify(pendingLangs));
 }
 
 function applyTexts(t) {
@@ -38,8 +57,8 @@ function applyTexts(t) {
   if (titleEl) titleEl.textContent = t.title || titleEl.textContent;
   const sourceLabel = document.querySelector('label[for="sig_input"]');
   if (sourceLabel) sourceLabel.textContent = t.label_source || sourceLabel.textContent;
-  const commentLabel = document.querySelector('label[for="sig_pass"]');
-  if (commentLabel) commentLabel.textContent = t.label_comment || commentLabel.textContent;
+  const passLabel = document.querySelector('label[for="sig_pass"]');
+  if (passLabel) passLabel.textContent = t.signup_password || passLabel.textContent;
   const verifyBtn = document.querySelector('#signature_area button');
   if (verifyBtn) verifyBtn.textContent = t.btn_generate || verifyBtn.textContent;
 
@@ -83,6 +102,30 @@ function applyTexts(t) {
   document.querySelectorAll('option[data-ui="access_opt_yes_nospeech"]').forEach(o => {
     if (t.access_opt_yes_nospeech) o.textContent = t.access_opt_yes_nospeech;
   });
+
+  const navStart = document.querySelector('[data-ui="nav_start"]');
+  if (navStart) navStart.textContent = t.nav_start || navStart.textContent;
+  const navRatings = document.querySelector('[data-ui="nav_ratings"]');
+  if (navRatings) navRatings.textContent = t.nav_ratings || navRatings.textContent;
+  const navSignup = document.querySelector('[data-ui="nav_signup"]');
+  if (navSignup) navSignup.textContent = t.nav_signup || navSignup.textContent;
+  const navReadme = document.querySelector('[data-ui="nav_readme"]');
+  if (navReadme) navReadme.textContent = t.nav_readme || navReadme.textContent;
+  const navTools = document.querySelector('[data-ui="nav_tools"]');
+  if (navTools) navTools.textContent = t.nav_tools || navTools.textContent;
+  document.querySelectorAll('[data-ui="nav_settings"]').forEach(el => {
+    if (el.classList.contains('icon-only')) {
+      const text = t.nav_settings || el.getAttribute('title') || '';
+      el.setAttribute('title', text);
+      el.setAttribute('aria-label', text);
+    } else {
+      el.textContent = t.nav_settings || el.textContent;
+    }
+  });
+
+
+  const chooseLabel = document.querySelector('[data-ui="choose_language_label"]');
+  if (chooseLabel) chooseLabel.textContent = t.label_choose_language || chooseLabel.textContent;
 }
 
 function initTranslationManager() {
@@ -91,7 +134,22 @@ function initTranslationManager() {
   const container = document.getElementById("lang_selection");
   const editBtn = document.createElement("button");
   editBtn.textContent = "Add/Improve Translation";
+  const challenge = document.createElement("p");
+  challenge.className = "info";
+  challenge.dataset.info = "translation_challenge";
+  applyInfoTexts(challenge);
+  container.appendChild(challenge);
   container.appendChild(editBtn);
+
+  const op = opLevelToNumber(getStoredOpLevel());
+  if (op >= 5) {
+    const semanticBtn = document.createElement("button");
+    semanticBtn.textContent = "New Languages Editor";
+    semanticBtn.addEventListener("click", () => {
+      loadInterfaceForOP("semantic-manager");
+    });
+    container.appendChild(semanticBtn);
+  }
 
   editBtn.addEventListener("click", () => {
     const code = langSelect.value.trim();
@@ -150,8 +208,10 @@ function showTranslationEditor(code, data) {
   form.className = "card";
   form.style.background = "#fff";
   form.style.color = "#000";
+  const sigCount = pendingLangs[code]?.signatures?.length || 0;
   form.innerHTML = `
     <h3>Edit translation for ${code}</h3>
+    <p class="info" data-info="translation_sig_count" data-count="${sigCount}"></p>
     <label>Title:<br><input id="tr_title" value="${data.title || ""}"></label><br>
     <label>Label Source:<br><input id="tr_src" value="${data.label_source || ""}"></label><br>
     <label>Label SRCLvl:<br><input id="tr_srclvl" value="${data.label_srclvl || ""}"></label><br>
@@ -187,6 +247,7 @@ function showTranslationEditor(code, data) {
     <button id="tr_cancel">Cancel</button>
   `;
   overlay.appendChild(form);
+  applyInfoTexts(form);
   document.body.appendChild(overlay);
 
   document.getElementById("tr_cancel").addEventListener("click", () => overlay.remove());
@@ -232,10 +293,11 @@ function showTranslationEditor(code, data) {
 function checkPendingConfirmation() {
   const lang = localStorage.getItem("ethicom_lang");
   if (lang && pendingLangs[lang] && !pendingLangs[lang].confirmed) {
+    const needed = 2 - (pendingLangs[lang].signatures?.length || 0);
     const box = document.createElement("div");
     box.className = "card";
     box.innerHTML = `
-      <p>Unconfirmed translation for ${lang} found. Confirm?</p>
+      <p>Unconfirmed translation for ${lang} found. ${needed} more confirmation(s) required.</p>
       <button id="tr_yes">Confirm</button>
       <button id="tr_edit">Edit</button>
     `;
