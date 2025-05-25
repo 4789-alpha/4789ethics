@@ -10,7 +10,7 @@ async function initRatings() {
     const index = await fetch('../manifests/index.json').then(r => r.json());
     const ratings = [];
 
-    const candidates = await fetch('../sources/src-candidates.json').then(r => r.json()).catch(() => []);
+    const candidates = await fetch('../sources/institutions/src-candidates.json').then(r => r.json()).catch(() => []);
     const candidateMap = {};
     candidates.forEach(c => { candidateMap[c.source_id] = c; });
 
@@ -18,11 +18,12 @@ async function initRatings() {
       const data = await fetch(`../manifests/${file}`).then(r => r.json());
       let details = null;
       try {
-        details = await fetch(`../sources/${data.source_id}.json`).then(r => r.json());
+        details = await fetch(`../sources/institutions/${data.source_id}.json`).then(r => r.json());
       } catch {
         details = candidateMap[data.source_id] || null;
       }
       data.category = details && details.category ? details.category : '';
+      data.title = details && details.title ? details.title : data.source_id;
       ratings.push(data);
     }
 
@@ -65,7 +66,7 @@ async function initRatings() {
     ratings.forEach(r => {
       const row = document.createElement('tr');
       const logo = makeOpLogo(r.op_level);
-      row.innerHTML = `<td>${r.timestamp}</td><td>${r.source_id}</td><td>${r.category}</td><td>${r.src_lvl}</td><td>${r.op_level}</td><td>${logo}</td><td>${r.comment || ''}</td>`;
+      row.innerHTML = `<td>${r.timestamp}</td><td title="${r.source_id}">${r.title}</td><td>${r.category}</td><td>${r.src_lvl}</td><td>${r.op_level}</td><td>${logo}</td><td>${r.comment || ''}</td>`;
       tbody.appendChild(row);
 
       const num = srcMap[r.src_lvl] || 0;

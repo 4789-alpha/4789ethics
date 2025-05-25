@@ -1,4 +1,4 @@
-# VII – Öffentliche Wirkung & Vertrauensverhalten
+# I – Öffentliche Wirkung & Vertrauensverhalten
 
 ## Purpose:
 - Maintains public transparency with anonymized signatures
