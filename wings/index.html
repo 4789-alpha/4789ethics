@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Wings</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../interface/ethicom-style.css" />
+  <link rel="stylesheet" href="wings-style.css" />
+  <script src="../interface/ethicom-utils.js"></script>
+  <script src="../interface/interface-loader.js"></script>
+  <script src="../interface/language-selector.js"></script>
+  <script src="../interface/translation-manager.js"></script>
+  <script src="../interface/theme-manager.js"></script>
+  <script src="../interface/dynamic-help.js"></script>
+  <script src="../interface/dynamic-info.js"></script>
+  <script src="../interface/disclaimer.js"></script>
+  <script src="../interface/color-auth.js"></script>
+  <script src="../interface/logo-background.js"></script>
+  <script src="../interface/touch-features.js"></script>
+  <script src="../interface/side-drop.js"></script>
+  <script src="../interface/op-side-nav.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main_content">Skip to main content</a>
+  <div id="op_background" aria-hidden="true"></div>
+  <header>
+    <h1>Wings</h1>
+  </header>
+  <section class="hero">
+    <p class="tagline">Ethik-Kompass für technologische Projekte</p>
+  </section>
+  <nav role="navigation" aria-label="Main">
+    <a href="../index.html">Home</a>
+    <a href="../interface/erstkontakt.html">Erstkontakt</a>
+    <a href="../interface/ethicom.html" data-ui="nav_start">Ethicom</a>
+    <a href="../interface/ratings.html" data-ui="nav_ratings">Bewertungen</a>
+    <a href="../interface/signup.html" data-ui="nav_signup">Signup</a>
+    <a href="../interface/tools.html" data-ui="nav_tools">Tools</a>
+    <a href="../interface/settings.html" data-ui="nav_settings" class="icon-only" title="Settings" aria-label="Settings">⚙</a>
+    <a href="index.html" aria-current="page">Wings</a>
+    <a href="../README.md" target="_blank" data-ui="nav_readme" class="readme-link">README</a>
+    <a href="#" id="side_menu" class="icon-only">☰</a>
+  </nav>
+  <main id="main_content">
+    <div id="lang_selection" class="card" style="margin-bottom:1em;">
+      <label for="lang_select" data-ui="choose_language_label">Language:</label>
+      <select id="lang_select"></select>
+    </div>
+
+    <div id="theme_selection" class="card" style="margin-bottom:1em;">
+      <label for="theme_select">Theme:</label>
+      <select id="theme_select">
+        <option value="dark">Dark</option>
+        <option value="tanna">Tanna</option>
+      </select>
+    </div>
+
+    <section class="intro">
+      <h2>Welcome to Wings</h2>
+      <p>This interface adjusts for all devices.</p>
+    </section>
+
+    <section class="content">
+      <p>Example content here.</p>
+    </section>
+
+
+    <div id="status" class="card" style="display:none;"></div>
+    <div id="op_interface" class="card"></div>
+    <section id="help_section" class="card"></section>
+  </main>
+
+  <script>
+    let uiText = {};
+    document.addEventListener('DOMContentLoaded', () => {
+      initLanguageDropdown('lang_select');
+      loadUiTexts().then(t => {
+        const lang = getLanguage();
+        uiText = t[lang] || t.en || {};
+        applyTexts(uiText);
+        showDisclaimers(uiText);
+        loadInterfaceForOP('OP-0');
+      });
+      initSideDrop('../interface/op-navigation.html');
+      const menu = document.getElementById('side_menu');
+      if (menu) menu.addEventListener('click', e => { e.preventDefault(); toggleSideDrop(); });
+    });
+
+  </script>
+  <div id="side_drop"></div>
+</body>
+</html>
