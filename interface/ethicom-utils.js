@@ -4,8 +4,8 @@
   function setForegroundOpacity(percent) {
     let p = parseInt(percent, 10);
     if (isNaN(p)) p = 50;
-    if (p < 20) p = 20;
-    if (p > 80) p = 80;
+    if (p < 0) p = 0;
+    if (p > 100) p = 100;
     document.documentElement.style.setProperty('--foreground-opacity', (p / 100).toString());
   }
   window.setForegroundOpacity = setForegroundOpacity;
