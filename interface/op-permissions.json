@@ -57,7 +57,8 @@
     "can_observe_only": false,
     "can_act_as_structure": false,
     "can_execute_evaluations": false,
-    "can_finalize_system": false
+    "can_finalize_system": false,
+    "is_edit_stage": true
   },
   "OP-1": {
     "can_rate": true,
@@ -117,7 +118,8 @@
     "can_observe_only": false,
     "can_act_as_structure": false,
     "can_execute_evaluations": false,
-    "can_finalize_system": false
+    "can_finalize_system": false,
+    "is_edit_stage": true
   },
   "OP-2": {
     "can_rate": true,
@@ -177,7 +179,8 @@
     "can_observe_only": false,
     "can_act_as_structure": false,
     "can_execute_evaluations": false,
-    "can_finalize_system": false
+    "can_finalize_system": false,
+    "is_edit_stage": true
   },
   "OP-3": {
     "can_rate": true,
@@ -237,7 +240,8 @@
     "can_observe_only": false,
     "can_act_as_structure": false,
     "can_execute_evaluations": false,
-    "can_finalize_system": false
+    "can_finalize_system": false,
+    "is_edit_stage": true
   },
   "OP-4": {
     "can_rate": true,
@@ -485,10 +489,10 @@
     "can_comment": true,
     "can_nominate": true,
     "can_vote": true,
-    "can_override": false,
+    "can_override": true,
     "can_retract": true,
     "can_consensus": true,
-    "can_accept_donations": false,
+    "can_accept_donations": true,
     "can_override_op0": false,
     "can_override_op1": false,
     "cab_override_op2": false,
@@ -508,7 +512,7 @@
     "can_choose_to_evaluate_for_yokozuna": true,
     "can_choose_to_evaluate_for_7.5": false,
     "can_choose_to_evaluate_for_8": false,
-    "can_vote_on_op9": false,
+    "can_vote_on_op9": true,
     "can_vote_on_op10": false,
     "can_ignore_till_own_op": false,
     "can_override_till_own_op": false,
@@ -538,10 +542,10 @@
     "can_comment": true,
     "can_nominate": true,
     "can_vote": true,
-    "can_override": false,
+    "can_override": true,
     "can_retract": true,
     "can_consensus": true,
-    "can_accept_donations": false,
+    "can_accept_donations": true,
     "can_override_op0": false,
     "can_override_op1": false,
     "cab_override_op2": false,
@@ -561,7 +565,7 @@
     "can_choose_to_evaluate_for_yokozuna": false,
     "can_choose_to_evaluate_for_7.5": true,
     "can_choose_to_evaluate_for_8": false,
-    "can_vote_on_op9": false,
+    "can_vote_on_op9": true,
     "can_vote_on_op10": false,
     "can_ignore_till_own_op": false,
     "can_override_till_own_op": false,
@@ -598,7 +602,7 @@
     "can_comment": true,
     "can_nominate": true,
     "can_vote": true,
-    "can_override": false,
+    "can_override": true,
     "can_retract": true,
     "can_consensus": true,
     "can_accept_donations": true,
@@ -621,7 +625,7 @@
     "can_choose_to_evaluate_for_yokozuna": false,
     "can_choose_to_evaluate_for_7.5": true,
     "can_choose_to_evaluate_for_8": true,
-    "can_vote_on_op9": false,
+    "can_vote_on_op9": true,
     "can_vote_on_op10": false,
     "can_ignore_till_own_op": false,
     "can_override_till_own_op": false,
@@ -872,6 +876,7 @@
     "can_choose_nominee_till_own_op": true,
     "can_assign_new_appendix": true,
     "can_downgrade_op_till_own": false
-  }
+  },
+  "op8_temp_privilege": false
 }
 
