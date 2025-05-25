@@ -43,6 +43,13 @@
       </select>
       <button id="custom_theme_btn" style="display:none;margin-top:0.5em;" class="accent-button">Create Custom Scheme</button>
     </div>
+    <div id="tanna_color" class="card" style="display:none;">
+      <h3>Tanna Main Color</h3>
+      <label>R: <input type="range" id="tanna_r" min="0" max="255" value="34"/> <span id="tanna_r_val">34</span></label><br/>
+      <label>G: <input type="range" id="tanna_g" min="0" max="255" value="139"/> <span id="tanna_g_val">139</span></label><br/>
+      <label>B: <input type="range" id="tanna_b" min="0" max="255" value="34"/> <span id="tanna_b_val">34</span></label><br/>
+      <span id="tanna_contrast" style="color:red;display:none;">Low contrast with logos</span>
+    </div>
     <div id="background_count" class="card">
       <label for="bg_symbol_count">Tanna symbols in background: <span id="bg_symbol_count_val">40</span></label>
       <input type="range" id="bg_symbol_count" min="10" max="400" step="10" value="40" />
@@ -90,6 +97,18 @@
       if (aw) aw.checked = as.wiggle; if (ab) ab.checked = as.beep;
       if (aw) aw.addEventListener('change', e => attentionSettings.toggleWiggle(e.target.checked));
       if (ab) ab.addEventListener('change', e => attentionSettings.toggleBeep(e.target.checked));
+
+      const tr = document.getElementById('tanna_r');
+      const tg = document.getElementById('tanna_g');
+      const tb = document.getElementById('tanna_b');
+      const trv = document.getElementById('tanna_r_val');
+      const tgv = document.getElementById('tanna_g_val');
+      const tbv = document.getElementById('tanna_b_val');
+      const warn = document.getElementById('tanna_contrast');
+      function lum(v){v/=255;return v<=0.03928?v/12.92:Math.pow((v+0.055)/1.055,2.4);}
+      function contrast(c){const l1=0.2126*lum(c.r)+0.7152*lum(c.g)+0.0722*lum(c.b);const l2=0.2126*lum(34)+0.7152*lum(139)+0.0722*lum(34);return (Math.max(l1,l2)+0.05)/(Math.min(l1,l2)+0.05);}
+      function upd(){const c={r:+tr.value,g:+tg.value,b:+tb.value};trv.textContent=c.r;tgv.textContent=c.g;tbv.textContent=c.b;localStorage.setItem('ethicom_tanna_color',JSON.stringify(c));if(document.body.classList.contains('theme-tanna')){const css=`rgb(${c.r},${c.g},${c.b})`;document.documentElement.style.setProperty('--primary-color',css);document.documentElement.style.setProperty('--accent-color',css);}warn.style.display=contrast(c)<2?'inline':'none';}
+      if(tr&&tg&&tb){const s=JSON.parse(localStorage.getItem('ethicom_tanna_color')||'{"r":34,"g":139,"b":34}');tr.value=s.r;tg.value=s.g;tb.value=s.b;upd();[tr,tg,tb].forEach(el=>el.addEventListener('input',upd));}
 
       const slider = document.getElementById('bg_symbol_count');
       const val = document.getElementById('bg_symbol_count_val');

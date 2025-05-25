@@ -1,11 +1,22 @@
 function applyTheme(theme) {
   const body = document.body;
   body.classList.remove('theme-dark', 'theme-tanna', 'theme-ocean', 'theme-desert', 'theme-transparent', 'theme-custom');
+  document.documentElement.style.removeProperty('--primary-color');
+  document.documentElement.style.removeProperty('--accent-color');
   if (theme === 'custom') {
     const custom = JSON.parse(localStorage.getItem('ethicom_custom_theme') || '{}');
     Object.keys(custom).forEach(k => document.documentElement.style.setProperty(k, custom[k]));
     body.classList.add('theme-custom');
   } else {
+    if (theme === 'tanna') {
+      const saved = localStorage.getItem('ethicom_tanna_color');
+      if (saved) {
+        const { r, g, b } = JSON.parse(saved);
+        const c = `rgb(${r},${g},${b})`;
+        document.documentElement.style.setProperty('--primary-color', c);
+        document.documentElement.style.setProperty('--accent-color', c);
+      }
+    }
     body.classList.add('theme-' + theme);
   }
 }
@@ -13,14 +24,17 @@ function applyTheme(theme) {
 function initThemeSelection() {
   const select = document.getElementById('theme_select');
   const customBtn = document.getElementById('custom_theme_btn');
+  const tannaCard = document.getElementById('tanna_color');
   let theme = localStorage.getItem('ethicom_theme') || 'dark';
   applyTheme(theme);
+  if (tannaCard) tannaCard.style.display = theme === 'tanna' ? 'block' : 'none';
   if (select) {
     select.value = theme;
     select.addEventListener('change', e => {
       theme = e.target.value;
       localStorage.setItem('ethicom_theme', theme);
       applyTheme(theme);
+      if (tannaCard) tannaCard.style.display = theme === 'tanna' ? 'block' : 'none';
     });
   }
   if (customBtn) {
