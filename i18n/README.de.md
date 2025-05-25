@@ -16,6 +16,7 @@ Sprachen: siehe `i18n/ui-text.json`
 
 OP-0 erlaubt dir, Ethicom anonym auszuprobieren.
 Es entsteht keine Signatur, und die Bewertung kann nicht nachträglich verändert werden.
+Jeder Besuch ohne Signatur landet automatisch in dieser Stufe.
 Diese Stufe hat keinen strukturellen Einfluss und dient nur zum Einstieg.
 
 ## OP-1 – Erste signierte Bewertung <a id="op-1"></a>

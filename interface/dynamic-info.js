@@ -2,7 +2,7 @@ const infoTexts = {
   'ethicom': 'Your interface will load here once verified.',
   'language-manager': 'Generate JSON snippets for new UI translations.',
   'semantic-manager': 'Generate JSON snippets for positive and negative words.',
-  'op-0': 'You are submitting an anonymous evaluation. It will have no lasting influence and cannot be revised.',
+  'op-0': 'Anonymous evaluation for visitors without a signature. No lasting influence and cannot be revised.',
   'op-0-human': 'Anonymous yes/no rating for historical figures. Stored only with OP level.',
   'op-1': 'You are submitting your first signed evaluation. It will be stored with your signature.',
   'op-1-human': 'Signed yes/no rating for historical figures. A justification is required.',
