@@ -7,14 +7,16 @@ function initOP6Interface() {
   container.innerHTML = `
     <div class="card">
       <h3>Anonymous Consensus Evaluation (OP-6)</h3>
-      <p class="info">You are allowed to calculate a consensus rating from anonymous evaluations.</p>
+      <p class="info" data-info="op-6"></p>
 
       <label for="anon_input">Paste anonymous evaluations (JSON array):</label>
+      ${help('Use raw JSON from OP-0 evaluations to compute consensus.')}
       <textarea id="anon_input" rows="6" placeholder='[{"src_lvl":"SRC-3"}, {"src_lvl":"SRC-4"}, ...]'></textarea>
 
       <button onclick="runConsensusCalculation()">Calculate Consensus</button>
     </div>
   `;
+  applyInfoTexts(container);
 }
 
 function runConsensusCalculation() {
