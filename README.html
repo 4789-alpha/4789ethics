@@ -45,12 +45,25 @@
     </section>
     <section class="card">
       <p>For complete details see <a href="README.md">README.md</a>.</p>
+      <pre id="readme_content" style="white-space: pre-wrap;">
+        Loading README...
+      </pre>
     </section>
   </main>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       applyTheme('tanna');
       initLogoBackground();
+      fetch('README.md')
+        .then(r => r.text())
+        .then(t => {
+          const pre = document.getElementById('readme_content');
+          if (pre) pre.textContent = t;
+        })
+        .catch(() => {
+          const pre = document.getElementById('readme_content');
+          if (pre) pre.textContent = 'Failed to load README.';
+        });
     });
   </script>
 </body>
