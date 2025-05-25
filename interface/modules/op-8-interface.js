@@ -1,13 +1,22 @@
-// op-7.5-interface.js – OP-7.5: Vorschlagsberechtigung, nicht Verleihung
+// op-8-interface.js – OP-8: Vorschlagsberechtigung, nicht Verleihung
 
-function initOP75Interface() {
+async function initOP8Interface() {
   const container = document.getElementById("op_interface");
   if (!container) return;
 
+  let extra = '';
+  try {
+    const data = await fetch('../op-permissions.json').then(r => r.json());
+    if (data.op8_temp_privilege) {
+      await loadOp9Module();
+      if (typeof getOP9Card === 'function') extra = getOP9Card();
+    }
+  } catch {}
+
   container.innerHTML = `
     <div class="card">
-      <h3>Responsibility Tier (OP-7.5)</h3>
-      <p class="info">You are recognized as a structurally consistent operator. You may prepare nominations and review OP-8 observations, but not execute structural changes.</p>
+      <h3>Responsibility Tier (OP-8)</h3>
+      <p class="info" data-info="op-8"></p>
 
       <h4>Propose Nomination</h4>
       <label for="propose_id">Operator Signature:</label>
@@ -31,7 +40,19 @@ function initOP75Interface() {
 
       <button onclick="prepareNomination()">Create Nomination Proposal</button>
     </div>
+    ${extra}
   `;
+  applyInfoTexts(container);
+}
+
+function loadOp9Module() {
+  return new Promise(res => {
+    if (typeof getOP9Card === 'function') return res();
+    const s = document.createElement('script');
+    s.src = 'modules/op-9-interface.js';
+    s.onload = res;
+    document.head.appendChild(s);
+  });
 }
 
 function prepareNomination() {
@@ -47,7 +68,7 @@ function prepareNomination() {
 
   const proposal = {
     proposed_by: "sig-xxxx",
-    op_level: "OP-7.5",
+    op_level: "OP-8",
     nominee: op_id,
     suggested_rank: rank,
     reason,
