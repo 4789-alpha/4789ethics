@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Willkommen</title>
+  <link rel="stylesheet" href="ethicom-style.css" />
+  <script src="language-selector.js"></script>
+  <script src="signature-strength.js"></script>
+  <script src="ratings.js"></script>
+  <script src="interface-loader.js"></script>
+  <script src="translation-manager.js"></script>
+  <script src="dynamic-info.js"></script>
+  <script src="op-overview.js"></script>
+  <script src="disclaimer.js"></script>
+  <script src="color-auth.js"></script>
+  <script src="theme-manager.js"></script>
+  <script src="logo-background.js"></script>
+  <script src="touch-features.js"></script>
+  <script src="module-arranger.js"></script>
+  <script src="side-drop.js"></script>
+  <script src="op-side-nav.js"></script>
+  <style>
+    #op_interface { margin-top: 1em; }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main_content">Skip to main content</a>
+  <div id="op_background"></div>
+  <header>
+    <h1>Willkommen</h1>
+  </header>
+  <section class="hero">
+    <p class="tagline">Ethik-Kompass für technologische Projekte</p>
+  </section>
+  <nav>
+    <a href="../index.html">Home</a>
+    <a href="erstkontakt.html">Erstkontakt</a>
+    <a href="ethicom.html" data-ui="nav_start">Ethicom</a>
+    <a href="ratings.html" data-ui="nav_ratings">Bewertungen</a>
+    <a href="signup.html" data-ui="nav_signup">Signup</a>
+    <a href="tools.html" data-ui="nav_tools">Tools</a>
+    <a href="settings.html" data-ui="nav_settings" class="icon-only">⚙</a>
+    <a href="../wings/index.html">Wings</a>
+    <a href="../README.md" target="_blank" class="readme-link">README</a>
+    <a href="#" id="side_menu" class="icon-only">☰</a>
+  </nav>
+  <main id="main_content">
+    <div id="lang_selection" class="card" style="margin-bottom:1em;">
+      <label for="lang_select" data-ui="choose_language_label">Language:</label>
+      <select id="lang_select"></select>
+    </div>
+    <section class="card" id="intro">
+      <h2>Einführung</h2>
+      <p>Der Ethik-Kompass (Ethicom) ist ein Framework für verantwortungsbasierte Bewertungen. Diese Seite bietet einen ersten Überblick.</p>
+    </section>
+    <section id="rating_summary" class="card">
+      <h2>Bewertungsübersicht</h2>
+    </section>
+    <section id="rating_categories" class="card">
+      <h2>Kategorien</h2>
+    </section>
+    <section id="rating_library" class="card">
+      <h2>Bewertungsverlauf</h2>
+    </section>
+    <section id="op_overview" class="card"></section>
+    <section class="card">
+      <h2>Weiter zu Ethicom</h2>
+      <p>Starte die Bewertung über <a href="ethicom.html">Ethicom</a>. Eine Vorschau für OP‑0 ist ohne Anmeldung möglich.</p>
+    </section>
+    <div id="op_interface" class="card" style="display:none;"></div>
+  </main>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (!localStorage.getItem('visited_start')) {
+        window.location.replace('../index.html');
+        return;
+      }
+      initLanguageDropdown('lang_select');
+      applyStoredModuleOrder();
+      initRatings();
+      loadUiTexts().then(texts => {
+        const uiText = texts[getLanguage()] || texts.en || {};
+        if (typeof showDisclaimers === 'function') {
+          showDisclaimers(uiText);
+        }
+      });
+      initSideDrop('op-navigation.html');
+      const menu=document.getElementById('side_menu');
+      if(menu) menu.addEventListener('click',e=>{e.preventDefault();toggleSideDrop();});
+    });
+  </script>
+  <div id="side_drop"></div>
+</body>
+</html>

@@ -1,12 +1,120 @@
 
 /* ethicom-style.css – 4789-konform */
 
+
 :root {
   --bg-color: #1e1e1e;
   --text-color: #e0e0e0;
+  --header-text-color: var(--text-color);
+  --nav-text-color: var(--text-color);
   --primary-color: #228B22;
   --card-bg: #2b2b2b;
+  --header-bg: rgba(34, 34, 34, 0.9);
+  --nav-bg: rgba(51, 51, 51, 0.9);
+  --card-alpha-bg: rgba(43, 43, 43, 0.92);
   --accent-color: #ccaa22;
+}
+
+/* Theme classes override the CSS variables */
+.theme-dark {
+  --bg-color: #1e1e1e;
+  --text-color: #e0e0e0;
+  --header-text-color: #e0e0e0;
+  --nav-text-color: #e0e0e0;
+  --primary-color: #228B22;
+  --card-bg: #2b2b2b;
+  --header-bg: rgba(34, 34, 34, 0.9);
+  --nav-bg: rgba(51, 51, 51, 0.9);
+  --card-alpha-bg: rgba(43, 43, 43, 0.92);
+  --accent-color: #ccaa22;
+}
+
+.theme-tanna {
+  --bg-color: #eef6ee;
+  --text-color: #003300;
+  --header-text-color: #ffffff;
+  --nav-text-color: #ffffff;
+  --primary-color: #228B22;
+  --card-bg: #ffffff;
+  --header-bg: rgba(34, 34, 34, 0.9);
+  --nav-bg: rgba(51, 51, 51, 0.9);
+  --card-alpha-bg: rgba(255, 255, 255, 0.92);
+  --accent-color: #228B22;
+}
+
+/* Higher contrast variants for the Tanna look */
+.theme-tanna-dark {
+  --bg-color: #121212;
+  --text-color: #e6e6e6;
+  --header-text-color: #ffffff;
+  --nav-text-color: #ffffff;
+  --primary-color: #228B22;
+  --card-bg: #1e1e1e;
+  --header-bg: rgba(0, 0, 0, 0.85);
+  --nav-bg: rgba(0, 0, 0, 0.85);
+  --card-alpha-bg: rgba(34, 34, 34, 0.9);
+  --accent-color: #33cc33;
+}
+
+.theme-tanna-light {
+  --bg-color: #ffffff;
+  --text-color: #002200;
+  --header-text-color: #ffffff;
+  --nav-text-color: #ffffff;
+  --primary-color: #228B22;
+  --card-bg: #ffffff;
+  --header-bg: rgba(34, 34, 34, 0.95);
+  --nav-bg: rgba(34, 34, 34, 0.95);
+  --card-alpha-bg: rgba(255, 255, 255, 0.95);
+  --accent-color: #228B22;
+}
+
+.theme-ocean {
+  --bg-color: #e8f3fa;
+  --text-color: #00334d;
+  --header-text-color: #ffffff;
+  --nav-text-color: #ffffff;
+  --primary-color: #0077aa;
+  --card-bg: #ffffff;
+  --header-bg: rgba(0, 85, 119, 0.9);
+  --nav-bg: rgba(0, 85, 119, 0.9);
+  --card-alpha-bg: rgba(255, 255, 255, 0.95);
+  --accent-color: #0099cc;
+}
+
+.theme-desert {
+  --bg-color: #faf5e6;
+  --text-color: #4d3300;
+  --header-text-color: #ffffff;
+  --nav-text-color: #ffffff;
+  --primary-color: #cc9900;
+  --card-bg: #ffffff;
+  --header-bg: rgba(153, 102, 0, 0.9);
+  --nav-bg: rgba(153, 102, 0, 0.9);
+  --card-alpha-bg: rgba(255, 255, 255, 0.95);
+  --accent-color: #e6b800;
+}
+
+.theme-transparent {
+  --bg-color: transparent;
+  --text-color: #e0e0e0;
+  --header-text-color: #e0e0e0;
+  --nav-text-color: #e0e0e0;
+  --primary-color: #228B22;
+  --card-bg: #2b2b2b;
+  --header-bg: rgba(34, 34, 34, 0.7);
+  --nav-bg: rgba(51, 51, 51, 0.7);
+  --card-alpha-bg: rgba(43, 43, 43, 0.75);
+  --accent-color: #ccaa22;
+}
+
+.theme-custom {
+  /* values will be set dynamically */
+}
+
+@keyframes fadeInPage {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 body {
@@ -15,28 +123,63 @@ body {
   font-family: system-ui, sans-serif;
   margin: 0;
   padding: 0;
+  animation: fadeInPage 0.6s ease-in-out;
 }
 
 header {
-  background: #222;
+  background: var(--header-bg);
   padding: 1em;
   text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+nav {
+  background: var(--nav-bg);
+  text-align: center;
+  padding: 0.5em 0;
+  position: relative;
+  z-index: 1;
+}
+
+nav a {
+  color: var(--nav-text-color);
+  margin: 0 0.8em;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus {
+  text-decoration: underline;
 }
 
 header h1 {
   margin: 0;
-  color: var(--text-color);
+  color: var(--header-text-color);
   font-size: 1.4em;
+}
+
+.hero {
+  text-align: center;
+  margin: 1.5em auto;
+  font-size: 1.2em;
+}
+
+.tagline {
+  margin: 0;
+  font-weight: 300;
 }
 
 main {
   max-width: 900px;
   margin: 0 auto;
   padding: 2em;
+  position: relative;
+  z-index: 1;
 }
 
 .card {
-  background-color: var(--card-bg);
+  background-color: var(--card-alpha-bg);
   color: inherit;
   border-left: 4px solid var(--primary-color);
   border-radius: 6px;
@@ -44,11 +187,20 @@ main {
   margin-bottom: 1.5em;
 }
 
+.swipe-card {
+  transition: transform 0.3s;
+}
+.swipe-card.swipe-left { transform: translateX(-80px); }
+.swipe-card.swipe-right { transform: translateX(80px); }
+.swipe-card.swipe-up { transform: translateY(-80px); }
+.swipe-card.swipe-down { transform: translateY(80px); }
+
 input,
 select,
 textarea {
   width: 100%;
-  padding: 0.5em;
+  padding: 0.7em;
+  font-size: 1.05em;
   margin-bottom: 0.8em;
   border: 1px solid #555;
   border-radius: 4px;
@@ -68,6 +220,16 @@ button {
 
 button:hover {
   background-color: #1a7d1a;
+}
+
+/* Secondary button style (e.g., Reset) */
+.secondary-button {
+  background-color: #555;
+  color: #fff;
+}
+
+.secondary-button:hover {
+  background-color: #444;
 }
 
 /* Badge allgemeiner Stil */
@@ -90,10 +252,12 @@ button:hover {
 .badge.op-5   { background: #66aa33; }
 .badge.op-6   { background: #228B22; }
 .badge.op-7   { background: #146b1f; }
-.badge.op-79  { background: #0e4712; }
-.badge.op-8   { background: #4a6670; }
-.badge.op-9   { background: #3c3744; }
-.badge.op-10  { background: #9a30a6; }
+.badge.op-8    { background: #0f5a1a; }
+.badge.op-9   { background: #0e4712; }
+.badge.op-9A  { background: #0e4712; border: 2px solid #ccaa22; }
+.badge.op-10   { background: #4a6670; }
+.badge.op-11   { background: #3c3744; }
+.badge.op-12 { background: #9a30a6; }
 
 /* Badge-Schatten (Höchstrang) */
 .badge.shadow {
@@ -111,9 +275,34 @@ button:hover {
   margin-bottom: 1em;
 }
 
+.badge-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em;
+  margin-bottom: 1.5em;
+}
+
 #status {
   text-align: center;
   font-weight: bold;
+}
+
+#loading_badge {
+  display: none;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+@keyframes opBadgeSpin {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(0.6); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+.loading-badge {
+  display: inline-block;
+  transform-origin: center;
+  animation: opBadgeSpin 1s linear infinite;
 }
 
 @media (max-width: 600px) {
@@ -139,4 +328,167 @@ button:hover {
   font-weight: bold;
   font-size: 0.75em;
   cursor: help;
+}
+
+/* Button with accent color */
+.accent-button {
+  background-color: var(--accent-color);
+  color: var(--card-bg);
+}
+.accent-button:hover {
+  background-color: #b58f1b;
+}
+
+
+/* larger language selector */
+#lang_select {
+  font-size: 1.2em;
+  padding: 0;
+  width: 5ch; /* dropdown only needs to show two-letter codes */
+}
+
+/* Animated OP logos in the background */
+#op_background {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+#op_background canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Modified logo used in citation view */
+.citation-logo {
+  width: 28px;
+  vertical-align: middle;
+  filter: hue-rotate(-80deg) saturate(0.7);
+}
+
+.op-logo-group {
+  white-space: nowrap;
+}
+
+/* Larger text mode */
+body.large-font {
+  font-size: 1.25em;
+}
+body.large-font input,
+body.large-font textarea,
+body.large-font select,
+body.large-font button {
+  font-size: 1em;
+  padding: 1em;
+}
+
+/* Simple mode for lower OP levels */
+body.simple-mode {
+  font-size: 1.1em;
+}
+body.simple-mode .badge-gallery,
+body.simple-mode #theme_selection,
+body.simple-mode #dev_toggle {
+  display: none;
+}
+body.simple-mode input,
+body.simple-mode textarea,
+body.simple-mode select,
+body.simple-mode button {
+  font-size: 1em;
+  padding: 0.8em;
+}
+
+
+/* Larger buttons for touch use */
+body.touch-big-buttons button {
+  padding: 1.2em;
+  font-size: 1.1em;
+}
+
+/* Canvas overlay for drawing */
+.drawing-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+/* Full-width layout for left-aligned pages */
+body.left-layout main {
+  margin: 0;
+  max-width: none;
+}
+
+@keyframes attentionWiggle {
+  0%,100% { transform: rotate(0deg); }
+  25% { transform: rotate(2deg); }
+  75% { transform: rotate(-2deg); }
+}
+.attention-wiggle {
+  animation: attentionWiggle 0.3s 6;
+}
+
+/* Accessibility: hide skip link off-screen until focus */
+.skip-link {
+  position: absolute;
+  left: -1000px;
+  top: auto;
+  background: var(--primary-color);
+  color: var(--text-color);
+  padding: 0.5em;
+  text-decoration: none;
+  z-index: 100;
+}
+.skip-link:focus {
+  left: 0;
+  top: 0;
+}
+
+
+/* Slide-out side drop menu */
+#side_drop {
+  --side-drop-width: 260px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: var(--side-drop-width);
+  height: 100%;
+  background: var(--card-bg);
+  color: inherit;
+  transform: translateX(calc(var(--side-drop-width) - 48px));
+  transition: transform 0.3s;
+  z-index: 200;
+  overflow-y: auto;
+}
+#side_drop.open {
+  transform: translateX(0);
+}
+.side-drop-header {
+  background: var(--nav-bg);
+  padding: 0.5em;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#side_drop_badge {
+  cursor: pointer;
+}
+#side_close_btn {
+  margin-left: 0.5em;
+}
+
+@media (max-width: 600px) {
+  #side_drop {
+    --side-drop-width: 80vw;
+  }
 }
