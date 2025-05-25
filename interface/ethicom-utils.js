@@ -1,16 +1,28 @@
 
 // ethicom-utils.js – Hilfsfunktionen für Interface-Anzeige
 
+function getReadmePath(lang) {
+  const prefix = window.location.pathname.includes('/interface/') ? '..' : '.';
+  return lang === 'en'
+    ? `${prefix}/README.md`
+    : `${prefix}/i18n/README.${lang}.md`;
+}
+
 function renderBadge(currentRank, maxRank) {
   const badgeDisplay = document.getElementById("badge_display");
   if (!badgeDisplay) return;
 
-  const main = document.createElement("span");
-  main.className = `badge op-${currentRank.replace("OP-", "").replace(".", "")}`;
-  main.textContent = currentRank;
+  const mainSpan = document.createElement("span");
+  mainSpan.className = `badge op-${currentRank.replace("OP-", "").replace(".", "")}`;
+  mainSpan.textContent = currentRank;
+
+  const lang = localStorage.getItem('ethicom_lang') || document.documentElement.lang || 'de';
+  const mainLink = document.createElement("a");
+  mainLink.href = `${getReadmePath(lang)}#${currentRank.toLowerCase().replace(/\./g, '-')}`;
+  mainLink.appendChild(mainSpan);
 
   badgeDisplay.innerHTML = "";
-  badgeDisplay.appendChild(main);
+  badgeDisplay.appendChild(mainLink);
 
   if (parseFloat(maxRank.replace("OP-", "")) > parseFloat(currentRank.replace("OP-", ""))) {
     const shadow = document.createElement("span");
@@ -34,19 +46,23 @@ function renderAllBadges() {
     "OP-5",
     "OP-6",
     "OP-7",
-    "OP-7.5",
-    "OP-7.9",
     "OP-8",
     "OP-9",
-    "OP-10"
+    "OP-10",
+    "OP-11",
+    "OP-12"
   ];
 
+  const lang = localStorage.getItem('ethicom_lang') || document.documentElement.lang || 'de';
   gallery.innerHTML = "";
   levels.forEach(lvl => {
     const span = document.createElement("span");
     span.className = `badge op-${lvl.replace("OP-", "").replace(/\./g, "")}`;
     span.textContent = lvl;
-    gallery.appendChild(span);
+    const link = document.createElement("a");
+    link.href = `${getReadmePath(lang)}#${lvl.toLowerCase().replace(/\./g, '-')}`;
+    link.appendChild(span);
+    gallery.appendChild(link);
   });
 }
 
@@ -84,12 +100,33 @@ function getStoredOpLevel() {
   }
 }
 
-// Convert OP-level string to numeric value (OP-7.5 → 7.5)
+// Convert OP-level string to numeric value (OP-8 → 8)
 function opLevelToNumber(level) {
   if (!level) return 0;
   const n = parseFloat(String(level).replace("OP-", ""));
   return isNaN(n) ? 0 : n;
 }
 
+function showLoadingBadge(level) {
+  const container = document.getElementById("loading_badge");
+  if (!container) return;
+  const span = container.querySelector("span");
+  const lvl = level || "OP-0";
+  if (span) {
+    span.textContent = lvl;
+    span.className = `badge op-${lvl.replace("OP-", "").replace(/\./g, "")} loading-badge`;
+  }
+  container.style.display = "block";
+}
+
+function hideLoadingBadge() {
+  const container = document.getElementById("loading_badge");
+  if (container) container.style.display = "none";
+}
+
 window.getStoredOpLevel = getStoredOpLevel;
 window.opLevelToNumber = opLevelToNumber;
+window.getReadmePath = getReadmePath;
+window.showLoadingBadge = showLoadingBadge;
+window.hideLoadingBadge = hideLoadingBadge;
+
