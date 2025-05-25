@@ -153,7 +153,7 @@ Siehe [shneiderman-rules.md](shneiderman-rules.md) für die acht Gestaltungsrich
 ## Standard HTML Layout mit Tanna-Hintergrund
 
 Eine einfache Vorlage für neue Seiten befindet sich in `tanna-template.html`.
-Sie bindet `theme-manager.js` und `logo-background.js` ein und setzt das Schema
+Sie bindet `theme-manager.js` und `../interface/logo-background.js` ein und setzt das Schema
 auf Tanna. Zwei Varianten mit höherem Kontrast stehen ebenfalls zur Verfügung:
 `tanna-template-dark.html` und `tanna-template-light.html`.
 
@@ -165,7 +165,7 @@ auf Tanna. Zwei Varianten mit höherem Kontrast stehen ebenfalls zur Verfügung:
   <title>Neue Seite</title>
   <link rel="stylesheet" href="ethicom-style.css" />
   <script src="theme-manager.js"></script>
-  <script src="logo-background.js"></script>
+  <script src="../interface/logo-background.js"></script>
 </head>
 <body>
   <div id="op_background"></div>
@@ -181,4 +181,12 @@ auf Tanna. Zwei Varianten mit höherem Kontrast stehen ebenfalls zur Verfügung:
 
 Die beiden neuen Vorlagen setzen `applyTheme('tanna-dark')` bzw.
 `applyTheme('tanna-light')` ein.
+
+### Tanna-Hintergrund als Wasserzeichen
+
+Der animierte Hintergrund dient als verborgenes Wasserzeichen. Die sichtbaren
+Tanna-Symbole richten sich nach dem gespeicherten OP-Level: Auf OP‑0-Seiten
+erscheinen nur OP‑0-Symbole, bei OP‑1 kommen die OP‑1-Symbole hinzu und so
+weiter. Stößt ein Symbol niedrigerer Stufe auf ein höheres, dreht es sich kurz,
+verkleinert sich und blendet aus, bevor es wieder in Normalgröße sichtbar wird.
 

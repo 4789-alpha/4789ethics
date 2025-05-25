@@ -13,7 +13,14 @@ function initLogoBackground() {
   window.addEventListener('resize', resize);
   resize();
 
-  const levels = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+  const storedLevel =
+    typeof getStoredOpLevel === 'function'
+      ? opLevelToNumber(getStoredOpLevel())
+      : 0;
+  const maxStored = Number.isFinite(storedLevel) ? storedLevel : 0;
+  const levels = [];
+  for (let i = 0; i <= maxStored && i <= 9; i++) levels.push(i);
+  if (levels.length === 0) levels.push(0);
   const maxLvl = Math.max(...levels);
   const minScale = 0.3;
   const FADE_MS = 1000;
