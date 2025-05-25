@@ -12,6 +12,21 @@ const OP_FUNCTIONS = {
   optimize: {
     minLevel: 'OP-7',
     fn: () => 'Optimization done.'
+  },
+  recommendation_for_interface: {
+    minLevel: 'OP-5',
+    fn: () => 'Consider simplifying navigation and clarifying button labels.'
+  },
+  log: {
+    minLevel: 'OP-2',
+    fn: () => {
+      try {
+        const { execSync } = require('child_process');
+        return execSync('git log --oneline -n 5', { encoding: 'utf8' });
+      } catch (err) {
+        return 'Log could not be retrieved.';
+      }
+    }
   }
 };
 
