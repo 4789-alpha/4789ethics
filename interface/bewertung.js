@@ -70,7 +70,13 @@ async function initBewertung() {
       const s = document.getElementById('human_sel');
       const id = s.value;
       const link = linkMap[id];
-      if (link) window.open(link, '_blank');
+      if (link) {
+        if (typeof loadWebContent === 'function') {
+          loadWebContent(link);
+        } else {
+          window.open(link, '_blank');
+        }
+      }
     }
     card.classList.add('swipe-' + dir);
     setTimeout(() => card.classList.remove('swipe-left','swipe-right','swipe-up','swipe-down'), 300);
@@ -116,7 +122,20 @@ async function initBewertung() {
     const link = linkMap[id];
     const sed = document.getElementById('sed_card');
     if (!sed) return;
-    sed.innerHTML = `<strong>${obj.name || ''}</strong>` + (link ? ` – <a href="${link}" target="_blank">Info</a>` : '');
+    sed.innerHTML = `<strong>${obj.name || ''}</strong>` + (link ? ` – <a href="#" class="info_link">Info</a>` : '');
+    if (link) {
+      const a = sed.querySelector('.info_link');
+      if (a) {
+        a.addEventListener('click', e => {
+          e.preventDefault();
+          if (typeof loadWebContent === 'function') {
+            loadWebContent(link);
+          } else {
+            window.open(link, '_blank');
+          }
+        });
+      }
+    }
   }
 }
 

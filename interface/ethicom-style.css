@@ -546,3 +546,11 @@ body.left-layout main {
 .markdown-content pre { background: var(--card-bg); padding: 0.6em; overflow-x: auto; }
 .markdown-content code { background: rgba(0,0,0,0.3); padding: 0.1em 0.3em; border-radius: 4px; }
 
+.web-content {
+  max-height: 400px;
+  overflow: auto;
+  background: var(--card-bg);
+  padding: 1em;
+  margin-top: 1em;
+}
+
