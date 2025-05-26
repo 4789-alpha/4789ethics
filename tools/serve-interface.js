@@ -1,8 +1,10 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
+const { spawn } = require('child_process');
 
 const root = path.join(__dirname, '..', 'interface');
+const repoRoot = path.join(__dirname, '..');
 const port = process.env.PORT || 8080;
 
 const mime = {
@@ -26,6 +28,19 @@ function serveFile(filePath, res) {
 const server = http.createServer((req, res) => {
   let urlPath = decodeURIComponent(req.url.split('?')[0]);
   if (urlPath === '/' || urlPath === '') urlPath = '/ethicom.html';
+  if (urlPath === '/download.zip') {
+    res.writeHead(200, {
+      'Content-Type': 'application/zip',
+      'Content-Disposition': 'attachment; filename="ethics-structure.zip"'
+    });
+    const git = spawn('git', ['-C', repoRoot, 'archive', '--format=zip', 'HEAD']);
+    git.stdout.pipe(res);
+    git.on('error', () => {
+      res.statusCode = 500;
+      res.end('Error creating zip');
+    });
+    return;
+  }
   const filePath = path.join(root, urlPath);
 
   fs.stat(filePath, (err, stats) => {
