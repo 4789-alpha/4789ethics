@@ -1,6 +1,9 @@
 // bewertung.js -- OP-0 rating with swipe control
 
 let ratingTexts = {};
+let ratingInfo = {};
+let detailsMap = {};
+let candidateList = [];
 
 async function loadRatingTexts() {
   try {
@@ -10,6 +13,40 @@ async function loadRatingTexts() {
   } catch {
     ratingTexts = {};
   }
+}
+
+async function loadRatings() {
+  try {
+    const list = await fetch('evidence/person-ratings.json').then(r => r.json());
+    ratingInfo = {};
+    list.forEach(r => {
+      const num = parseInt(String(r.op_level).replace('OP-', '').split('.')[0], 10) || 0;
+      if (!ratingInfo[r.human_id]) ratingInfo[r.human_id] = { counts: {}, max: 0 };
+      ratingInfo[r.human_id].counts[r.rating] = (ratingInfo[r.human_id].counts[r.rating] || 0) + 1;
+      if (num > ratingInfo[r.human_id].max) ratingInfo[r.human_id].max = num;
+    });
+  } catch {
+    ratingInfo = {};
+  }
+}
+
+async function loadDetails() {
+  let details = [];
+  try {
+    details = await fetch('sources/persons/human-top100.json').then(r => r.json());
+  } catch { details = []; }
+  detailsMap = {};
+  details.forEach(d => { detailsMap[d.human_id] = d; });
+}
+
+function pickRandomCandidate() {
+  if (!candidateList.length) return null;
+  const preferred = candidateList.filter(c => {
+    const info = ratingInfo[c.human_id];
+    return !info || info.max <= 1;
+  });
+  const pool = preferred.length ? preferred : candidateList;
+  return pool[Math.floor(Math.random() * pool.length)] || null;
 }
 
 async function initBewertung() {
@@ -23,6 +60,9 @@ async function initBewertung() {
   if (window.touchSettings && window.touchSettings.registerSwipeHandler)
     window.touchSettings.registerSwipeHandler(null);
 
+  await loadRatings();
+  await loadDetails();
+
   let list = [];
   let links = [];
   try {
@@ -33,6 +73,10 @@ async function initBewertung() {
   } catch { links = []; }
   const linkMap = {};
   links.forEach(l => { linkMap[l.human_id] = l.wiki; });
+  candidateList = list.map(p => {
+    const det = detailsMap[p.human_id] || {};
+    return Object.assign({}, p, det);
+  });
   const options = list.map(p => `<option value="${p.human_id}">${p.name}</option>`).join('');
   container.innerHTML = `
     <h3>Person bewerten</h3>
@@ -51,8 +95,10 @@ async function initBewertung() {
     <button onclick="submitBewertung()">Speichern</button>
     <button class="secondary-button" type="button" onclick="initBewertung()">Reset</button>
   `;
-  applySedCard();
   const sel = document.getElementById('human_sel');
+  const randomPick = pickRandomCandidate();
+  if (sel && randomPick) sel.value = randomPick.human_id;
+  applySedCard();
   if (sel) sel.addEventListener('change', applySedCard);
   const searchInput = document.getElementById('human_search');
   const resultsList = document.getElementById('search_results');
@@ -71,6 +117,14 @@ async function initBewertung() {
       const id = s.value;
       const link = linkMap[id];
       if (link) window.open(link, '_blank');
+      const info = ratingInfo[id];
+      if (!info || info.max <= 1) {
+        const total = info ? Object.values(info.counts).reduce((a, b) => a + b, 0) : 0;
+        const choice = choiceEl.value;
+        const same = info && info.counts[choice] ? info.counts[choice] : 0;
+        const percent = total ? Math.round((same / total) * 100) : 0;
+        alert(`Daten wurden in den Quellen überprüft. Anzahl bisherige Stimmen: ${total}, Stimmen gleicher Meinung: ${percent}%`);
+      }
     }
     card.classList.add('swipe-' + dir);
     setTimeout(() => card.classList.remove('swipe-left','swipe-right','swipe-up','swipe-down'), 300);
@@ -112,12 +166,17 @@ async function initBewertung() {
   function applySedCard() {
     const s = document.getElementById('human_sel');
     const id = s.value;
-    const obj = list.find(p => p.human_id === id) || {};
+    const obj = candidateList.find(p => p.human_id === id) || {};
     const link = linkMap[id];
     const sed = document.getElementById('sed_card');
     if (!sed) return;
     const img = obj.image ? `<img class="person-image" src="${obj.image}" alt="${obj.name}">` : '';
-    sed.innerHTML = img + `<strong>${obj.name || ''}</strong>` + (link ? ` – <a href="${link}" target="_blank">Info</a>` : '');
+    const domain = obj.domain ? `<p>${obj.domain}</p>` : '';
+    const era = obj.era ? `<p>${obj.era}</p>` : '';
+    const desc = obj.description ? `<p>${obj.description}</p>` : '';
+    sed.innerHTML = img + `<strong>${obj.name || ''}</strong>` +
+      (link ? ` – <a href="${link}" target="_blank">Info</a>` : '') +
+      domain + era + desc;
   }
 }
 
@@ -139,6 +198,10 @@ function submitBewertung() {
   if (out) out.textContent = JSON.stringify(evalData, null, 2);
   if (typeof recordEvidence === 'function')
     recordEvidence(JSON.stringify(evalData), 'user');
+  if (!ratingInfo[human_id]) ratingInfo[human_id] = { counts: {}, max: 0 };
+  ratingInfo[human_id].counts[rating] = (ratingInfo[human_id].counts[rating] || 0) + 1;
+  const lvl = parseInt(evalData.op_level.replace('OP-', '').split('.')[0], 10) || 0;
+  if (lvl > ratingInfo[human_id].max) ratingInfo[human_id].max = lvl;
   alert(ratingTexts.rating_saved || 'Rating saved.');
 }
 
