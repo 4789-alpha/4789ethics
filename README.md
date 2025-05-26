@@ -232,6 +232,18 @@ The roadmap keeps development transparent according to Signature 4789.
 
 ### Local Deployment [⇧](#contents)
 
+Install the JavaScript dependencies once:
+
+```bash
+npm install
+```
+
+For optional Python utilities run:
+
+```bash
+pip install -r requirements.txt
+```
+
 Serve the Ethicom interface locally with:
 
 ```bash

@@ -1,0 +1,18 @@
+# Node dependencies
+node_modules/
+npm-debug.log*
+
+# Logs
+*.log
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# Editor directories
+.idea/
+.vscode/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
