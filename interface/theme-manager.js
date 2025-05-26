@@ -23,6 +23,7 @@ function applyTheme(theme) {
     }
     body.classList.add('theme-' + theme);
   }
+  document.dispatchEvent(new CustomEvent('themeChanged', { detail: theme }));
 }
 
 function initThemeSelection() {
