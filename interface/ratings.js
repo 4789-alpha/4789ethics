@@ -25,6 +25,7 @@ async function initRatings() {
       data.category = details && details.category ? details.category : '';
       data.title = details && details.title ? details.title : data.source_id;
       data.url = details && details.url ? details.url : '';
+      data.image = details && details.image ? details.image : '';
       ratings.push(data);
     }
 
@@ -35,7 +36,7 @@ async function initRatings() {
     caption.textContent = 'Bewertungsverlauf';
     table.appendChild(caption);
     const thead = document.createElement('thead');
-    thead.innerHTML = '<tr><th>Zeitstempel</th><th>Quelle</th><th>Kategorie</th><th>SRC</th><th>OP</th><th>Logo</th><th>Kommentar</th></tr>';
+    thead.innerHTML = '<tr><th>Zeitstempel</th><th>Quelle</th><th>Bild</th><th>Kategorie</th><th>SRC</th><th>OP</th><th>Logo</th><th>Kommentar</th></tr>';
     table.appendChild(thead);
     const tbody = document.createElement('tbody');
 
@@ -69,10 +70,11 @@ async function initRatings() {
       const row = document.createElement('tr');
       const logo = makeOpLogo(r.op_level);
       const link = r.url ? `<a href="${r.url}" target="_blank">${r.title}</a>` : r.title;
-      row.innerHTML = `<td>${r.timestamp}</td><td title="${r.source_id}">${link}</td><td>${r.category}</td><td>${r.src_lvl}</td><td>${r.op_level}</td><td>${logo}</td><td>${r.comment || ''}</td>`;
+      const img = r.image ? `<img class="source-image" src="../${r.image}" alt="${r.title}">` : '';
+      row.innerHTML = `<td>${r.timestamp}</td><td title="${r.source_id}">${link}</td><td>${img}</td><td>${r.category}</td><td>${r.src_lvl}</td><td>${r.op_level}</td><td>${logo}</td><td>${r.comment || ''}</td>`;
       tbody.appendChild(row);
 
-      if (!sourceInfo[r.source_id]) sourceInfo[r.source_id] = { title: r.title, url: r.url };
+      if (!sourceInfo[r.source_id]) sourceInfo[r.source_id] = { title: r.title, url: r.url, image: r.image };
 
       const num = srcMap[r.src_lvl] || 0;
       if (!perSource[r.source_id]) perSource[r.source_id] = [];

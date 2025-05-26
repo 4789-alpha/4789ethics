@@ -116,7 +116,8 @@ async function initBewertung() {
     const link = linkMap[id];
     const sed = document.getElementById('sed_card');
     if (!sed) return;
-    sed.innerHTML = `<strong>${obj.name || ''}</strong>` + (link ? ` – <a href="${link}" target="_blank">Info</a>` : '');
+    const img = obj.image ? `<img class="person-image" src="${obj.image}" alt="${obj.name}">` : '';
+    sed.innerHTML = img + `<strong>${obj.name || ''}</strong>` + (link ? ` – <a href="${link}" target="_blank">Info</a>` : '');
   }
 }
 
