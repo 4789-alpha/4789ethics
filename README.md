@@ -186,6 +186,12 @@ Local control can be toggled via `tools/gatekeeper.js`. The script reads
 to `true` for the controller `gstekeeper.local`. This keeps remote commands gated and
 limited to the local environment.
 `gstekeeper.local` holds back every personal ID/information and has permission to share anonymous and signed data as a sign of trust.
+The gatekeeper runs on any platform that can execute Node.js. Copy the repository or the
+`tools` and `app` folders to a USB drive and run `node tools/gatekeeper.js` on Windows,
+macOS, Linux or mobile shells such as Termux. Even older hardware is sufficient—if Node.js
+works, the gatekeeper does too. A decade-old laptop with a single-core CPU and around
+512 MB of RAM is usually enough as long as Node.js 18 or later runs. Use it responsibly as
+noted in `DISCLAIMERS.md`.
 **4789**
 
 ### API Access Control [⇧](#contents)
