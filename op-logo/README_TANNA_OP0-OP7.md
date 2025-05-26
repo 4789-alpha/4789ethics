@@ -13,14 +13,14 @@ repeating it horizontally and shifting the hue to indicate progression.
 
 | File                        | Description                                                        |
 |----------------------------|--------------------------------------------------------------------|
-| `tanna_op0_centered.png`   | Equilateral triangle, base level OP-0 (dark blue, centered)        |
-| `tanna_op1_fixed.png`      | OP-0 + trunk (1/3 width, 1/12 height), slightly greener color      |
-| `tanna_op2_visible_clear.png` | OP-1 + second triangle (1/2 height), clearly visible layering     |
-| `tanna_op3_refined_sharp.png` | OP-2 + third triangle, more sharply tapered                      |
-| `tanna_op4_refined.png`    | Four-layered structure with refined proportions                    |
-| `tanna_op5_op7like.png`    | Five layers, visually aligned with OP-7 tapering                   |
-| `tanna_op6_refined.png`    | Six-layered version with consistent proportioning                  |
-| `tanna_op7_refined.png`    | Final stage of the biological progression – forest green, seven layers |
+| `tanna_op0.png`   | Equilateral triangle, base level OP-0 (dark blue, centered)        |
+| `tanna_op1.png`      | OP-0 + trunk (1/3 width, 1/12 height), slightly greener color      |
+| `tanna_op2.png` | OP-1 + second triangle (1/2 height), clearly visible layering     |
+| `tanna_op3.png` | OP-2 + third triangle, more sharply tapered                      |
+| `tanna_op4.png`    | Four-layered structure with refined proportions                    |
+| `tanna_op5.png`    | Five layers, visually aligned with OP-7 tapering                   |
+| `tanna_op6.png`    | Six-layered version with consistent proportioning                  |
+| `tanna_op7.png`    | Final stage of the biological progression – forest green, seven layers |
 
 ---
 
@@ -46,5 +46,5 @@ repeating it horizontally and shifting the hue to indicate progression.
 
 ---
 
-**Author / Generator**  
+**Author**  
 4789, May 2025

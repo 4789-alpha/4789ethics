@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Spenden</title>
+  <link rel="stylesheet" href="ethicom-style.css" />
+  <script src="ethicom-utils.js"></script>
+  <script src="accessibility.js"></script>
+  <script src="donate.js"></script>
+  <script src="theme-manager.js"></script>
+  <script src="logo-background.js"></script>
+  <script src="side-drop.js"></script>
+  <script src="op-side-nav.js"></script>
+  <script src="module-logo.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main_content">Skip to main content</a>
+  <div id="op_background"></div>
+  <header>
+    <h1>Spenden</h1>
+    <nav>
+      <a href="../home.html">Home</a>
+      <a href="../bewertung.html">Bewertung</a>
+      <a href="settings.html" class="icon-only">⚙</a>
+      <a href="signup.html">Signup</a>
+      <a href="../README.html" class="readme-link">README</a>
+    </nav>
+  </header>
+  <main id="main_content">
+    <section class="card">
+      <h2>Betrag festlegen</h2>
+      <label for="donation_amount">Betrag (CHF):</label>
+      <input type="number" id="donation_amount" placeholder="10" min="1" step="1" />
+      <button id="donate_btn" class="accent-button">Spenden</button>
+    </section>
+    <section id="review_section" class="card" style="display:none;">
+      <h3>Spende prüfen</h3>
+      <p>Ein anderer OP‑9.A oder höher muss diese Zahlung bestätigen.</p>
+      <button id="approve_btn" class="accent-button">Zulassen</button>
+      <button id="reject_btn">Ablehnen</button>
+    </section>
+    <pre id="donation_output" class="card" style="white-space:pre-wrap;"></pre>
+  </main>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      applyTheme('tanna');
+      if (typeof initDonation === 'function') initDonation();
+      initSideDrop('op-navigation.html');
+      const menu=document.getElementById('side_menu');
+      if(menu) menu.addEventListener('click',e=>{e.preventDefault();toggleSideDrop();});
+    });
+  </script>
+  <div id="side_drop"></div>
+</body>
+</html>
