@@ -2,6 +2,42 @@ function initLogoBackground() {
   const container = document.getElementById('op_background');
   if (!container) return;
 
+  function rgbToHue(r, g, b) {
+    r /= 255; g /= 255; b /= 255;
+    const max = Math.max(r, g, b), min = Math.min(r, g, b);
+    if (max === min) return 0;
+    const d = max - min;
+    let h;
+    switch (max) {
+      case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+      case g: h = (b - r) / d + 2; break;
+      default: h = (r - g) / d + 4;
+    }
+    return h * 60;
+  }
+
+  function colorToHue(str) {
+    const hex = str.trim();
+    if (/^#[0-9a-fA-F]{6}$/.test(hex)) {
+      const r = parseInt(hex.slice(1, 3), 16);
+      const g = parseInt(hex.slice(3, 5), 16);
+      const b = parseInt(hex.slice(5, 7), 16);
+      return rgbToHue(r, g, b);
+    }
+    const m = hex.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)/);
+    return m ? rgbToHue(+m[1], +m[2], +m[3]) : NaN;
+  }
+
+  function getThemeHueDiff() {
+    const style = getComputedStyle(document.documentElement);
+    const c = style.getPropertyValue('--primary-color');
+    const h = colorToHue(c);
+    return isNaN(h) ? 0 : h - 120;
+  }
+
+  let themeHue = getThemeHueDiff();
+  document.addEventListener('themeChanged', () => { themeHue = getThemeHueDiff(); });
+
   const canvas = document.createElement('canvas');
   container.appendChild(canvas);
   const ctx = canvas.getContext('2d');
@@ -195,7 +231,8 @@ function initLogoBackground() {
         ctx.translate(s.x, s.y);
         if (s.rotation) ctx.rotate(s.rotation);
         ctx.globalAlpha = s.alpha;
-        ctx.filter = s.hue ? `hue-rotate(${s.hue}deg)` : 'none';
+        const totalHue = themeHue + s.hue;
+        ctx.filter = totalHue ? `hue-rotate(${totalHue}deg)` : 'none';
 
         const start = -s.radius * s.scale;
         for (let n = 0; n < s.count; n++) {
