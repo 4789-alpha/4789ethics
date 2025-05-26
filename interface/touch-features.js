@@ -2,8 +2,9 @@
 
 (function() {
   const settings = JSON.parse(localStorage.getItem('ethicom_touch') || '{}');
+  const gesturesEnabled = settings.gestures !== 'false';
   const state = {
-    gestures: settings.gestures === 'true',
+    gestures: gesturesEnabled,
     haptics: settings.haptics === 'true',
     drawing: settings.drawing === 'true',
     bigButtons: settings.bigButtons === 'true',
@@ -96,7 +97,19 @@
     save();
   }
 
-  function toggleGestures(on) { state.gestures = on; save(); }
+  function toggleGestures(on) {
+    state.gestures = on;
+    if (on) {
+      document.addEventListener('pointerdown', pointerDown);
+      document.addEventListener('pointermove', pointerMove);
+      document.addEventListener('pointerup', pointerUp);
+    } else {
+      document.removeEventListener('pointerdown', pointerDown);
+      document.removeEventListener('pointermove', pointerMove);
+      document.removeEventListener('pointerup', pointerUp);
+    }
+    save();
+  }
   function toggleHaptics(on) { state.haptics = on; save(); }
   function toggleBigButtons(on) {
     state.bigButtons = on;
@@ -145,7 +158,7 @@
 
   document.addEventListener('DOMContentLoaded', () => {
     if (state.bigButtons) document.body.classList.add('touch-big-buttons');
-    if (state.gestures) {
+    if (gesturesEnabled) {
       document.addEventListener('pointerdown', pointerDown);
       document.addEventListener('pointermove', pointerMove);
       document.addEventListener('pointerup', pointerUp);

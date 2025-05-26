@@ -40,6 +40,8 @@
       <select id="theme_select">
         <option value="dark">Dark</option>
         <option value="tanna">Tanna</option>
+        <option value="tanna-dark">Tanna Dark</option>
+        <option value="dark-tanna">Dark Tanna</option>
         <option value="ocean">Ocean</option>
         <option value="desert">Desert</option>
         <option value="transparent">Transparent</option>
@@ -63,8 +65,8 @@
       <input type="range" id="bg_same_level_count" min="1" max="10" step="1" value="1" />
     </div>
     <div id="foreground_opacity" class="card">
-      <label for="fg_opacity">Foreground transparency: <span id="fg_opacity_val">40</span>%</label>
-      <input type="range" id="fg_opacity" min="0" max="100" step="1" value="40" />
+      <label for="fg_opacity">Foreground transparency: <span id="fg_opacity_val">0</span>%</label>
+      <input type="range" id="fg_opacity" min="0" max="100" step="1" value="0" />
     </div>
     <div id="touch_features" class="card">
       <h3>Touch Features</h3>
@@ -167,7 +169,7 @@
       const fgSlider = document.getElementById('fg_opacity');
       const fgVal = document.getElementById('fg_opacity_val');
       if (fgSlider && fgVal) {
-        const storedFg = parseInt(localStorage.getItem('ethicom_fg_opacity') || '40', 10);
+        const storedFg = parseInt(localStorage.getItem('ethicom_fg_opacity') || '0', 10);
         fgSlider.value = storedFg;
         fgVal.textContent = storedFg;
         fgSlider.addEventListener('input', e => {
