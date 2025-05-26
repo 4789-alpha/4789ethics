@@ -13,7 +13,7 @@
   --nav-bg: rgba(51, 51, 51, 0.9);
   --card-alpha-bg: rgba(43, 43, 43, 0.92);
   --accent-color: #ccaa22;
-  --foreground-opacity: 0.4;
+  --foreground-opacity: 0;
 }
 
 /* Theme classes override the CSS variables */
@@ -28,7 +28,7 @@
   --nav-bg: rgba(51, 51, 51, 0.9);
   --card-alpha-bg: rgba(43, 43, 43, 0.92);
   --accent-color: #ccaa22;
-  --foreground-opacity: 0.3;
+  --foreground-opacity: 0;
 }
 
 .theme-tanna {
@@ -56,7 +56,22 @@
   --nav-bg: rgba(0, 0, 0, 0.85);
   --card-alpha-bg: rgba(34, 34, 34, 0.9);
   --accent-color: #33cc33;
-  --foreground-opacity: 0.3;
+  --foreground-opacity: 0;
+}
+
+/* Dark base with Tanna accents */
+.theme-dark-tanna {
+  --bg-color: #1e1e1e;
+  --text-color: #e0e0e0;
+  --header-text-color: #e0e0e0;
+  --nav-text-color: #e0e0e0;
+  --primary-color: #228B22;
+  --card-bg: #2b2b2b;
+  --header-bg: rgba(0, 0, 0, 0.85);
+  --nav-bg: rgba(0, 0, 0, 0.85);
+  --card-alpha-bg: rgba(34, 34, 34, 0.9);
+  --accent-color: #33cc33;
+  --foreground-opacity: 0;
 }
 
 .theme-tanna-light {
@@ -399,6 +414,18 @@ body::before {
   width: 28px;
   vertical-align: middle;
   filter: hue-rotate(-80deg) saturate(0.7);
+}
+
+.source-image {
+  width: 60px;
+  height: auto;
+}
+
+.person-image {
+  width: 80px;
+  height: auto;
+  display: block;
+  margin-bottom: 0.5em;
 }
 
 .op-logo-group {

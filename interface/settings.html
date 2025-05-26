@@ -41,6 +41,8 @@
         <option value="dark">Dark</option>
         <option value="tanna-dark">Dark Tanna</option>
         <option value="tanna">Tanna</option>
+        <option value="tanna-dark">Tanna Dark</option>
+        <option value="dark-tanna">Dark Tanna</option>
         <option value="ocean">Ocean</option>
         <option value="desert">Desert</option>
         <option value="transparent">Transparent</option>
@@ -64,8 +66,8 @@
       <input type="range" id="bg_same_level_count" min="1" max="10" step="1" value="1" />
     </div>
     <div id="foreground_opacity" class="card">
-      <label for="fg_opacity">Foreground transparency: <span id="fg_opacity_val">40</span>%</label>
-      <input type="range" id="fg_opacity" min="0" max="100" step="1" value="40" />
+      <label for="fg_opacity">Foreground transparency: <span id="fg_opacity_val">0</span>%</label>
+      <input type="range" id="fg_opacity" min="0" max="100" step="1" value="0" />
     </div>
     <div id="touch_features" class="card">
       <h3>Touch Features</h3>
@@ -116,24 +118,7 @@
       const warn = document.getElementById('tanna_contrast');
       function lum(v){v/=255;return v<=0.03928?v/12.92:Math.pow((v+0.055)/1.055,2.4);}
       function contrast(c){const l1=0.2126*lum(c.r)+0.7152*lum(c.g)+0.0722*lum(c.b);const l2=0.2126*lum(34)+0.7152*lum(139)+0.0722*lum(34);return (Math.max(l1,l2)+0.05)/(Math.min(l1,l2)+0.05);}
-      function upd(){
-        const c={r:+tr.value,g:+tg.value,b:+tb.value};
-        trv.textContent=c.r;
-        tgv.textContent=c.g;
-        tbv.textContent=c.b;
-        localStorage.setItem('ethicom_tanna_color',JSON.stringify(c));
-        if(document.body.classList.contains('theme-tanna') ||
-           document.body.classList.contains('theme-tanna-dark')){
-          const css=`rgb(${c.r},${c.g},${c.b})`;
-          document.documentElement.style.setProperty('--primary-color',css);
-          document.documentElement.style.setProperty('--accent-color',css);
-          const h=`rgba(${Math.round(c.r*0.2)},${Math.round(c.g*0.2)},${Math.round(c.b*0.2)},0.9)`;
-          const n=`rgba(${Math.round(c.r*0.3)},${Math.round(c.g*0.3)},${Math.round(c.b*0.3)},0.9)`;
-          document.documentElement.style.setProperty('--header-bg',h);
-          document.documentElement.style.setProperty('--nav-bg',n);
-        }
-        warn.style.display=contrast(c)<2?'inline':'none';
-      }
+      function upd(){const c={r:+tr.value,g:+tg.value,b:+tb.value};trv.textContent=c.r;tgv.textContent=c.g;tbv.textContent=c.b;localStorage.setItem('ethicom_tanna_color',JSON.stringify(c));if(document.body.classList.contains('theme-tanna')){const css=`rgb(${c.r},${c.g},${c.b})`;document.documentElement.style.setProperty('--primary-color',css);document.documentElement.style.setProperty('--accent-color',css);}warn.style.display=contrast(c)<2?'inline':'none';}
       if(tr&&tg&&tb){const s=JSON.parse(localStorage.getItem('ethicom_tanna_color')||'{"r":34,"g":139,"b":34}');tr.value=s.r;tg.value=s.g;tb.value=s.b;upd();[tr,tg,tb].forEach(el=>el.addEventListener('input',upd));}
 
       const slider = document.getElementById('bg_symbol_count');
@@ -169,7 +154,7 @@
       const fgSlider = document.getElementById('fg_opacity');
       const fgVal = document.getElementById('fg_opacity_val');
       if (fgSlider && fgVal) {
-        const storedFg = parseInt(localStorage.getItem('ethicom_fg_opacity') || '40', 10);
+        const storedFg = parseInt(localStorage.getItem('ethicom_fg_opacity') || '0', 10);
         fgSlider.value = storedFg;
         fgVal.textContent = storedFg;
         fgSlider.addEventListener('input', e => {

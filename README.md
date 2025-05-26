@@ -78,6 +78,7 @@ See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
 | [interface/tanna-template-dark.html](interface/tanna-template-dark.html) | Template in dark theme |
 | [interface/tanna-template-light.html](interface/tanna-template-light.html) | Template in light theme |
 | [interface/tools.html](interface/tools.html) | Utility collection |
+| [interface/donate.html](interface/donate.html) | Donation interface (requires OP‑9.A confirmation) |
 | [interface/README.html](interface/README.html) | HTML version of the interface docs |
 | [interface/features_de.md](interface/features_de.md) | Funktionale Übersicht zum Interface |
 | [wings/index.html](wings/index.html) | Mobile interface "Wings" |
@@ -230,6 +231,18 @@ The roadmap keeps development transparent according to Signature 4789.
    - Provide an automated translation workflow with manual review.
 
 ### Local Deployment [⇧](#contents)
+
+Install the JavaScript dependencies once:
+
+```bash
+npm install
+```
+
+For optional Python utilities run:
+
+```bash
+pip install -r requirements.txt
+```
 
 Serve the Ethicom interface locally with:
 
