@@ -39,6 +39,7 @@
       <label for="theme_select">Color scheme:</label>
       <select id="theme_select">
         <option value="dark">Dark</option>
+        <option value="tanna-dark">Dark Tanna</option>
         <option value="tanna">Tanna</option>
         <option value="tanna-dark">Tanna Dark</option>
         <option value="dark-tanna">Dark Tanna</option>
@@ -82,6 +83,9 @@
       <label><input type="checkbox" id="attention_beep"/> Beep when idle</label>
     </div>
     <div id="access_setup" class="card"></div>
+    <div id="repo_download" class="card">
+      <a href="/download.zip" class="accent-button">Download .zip</a>
+    </div>
   </main>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -123,7 +127,8 @@
         tgv.textContent=c.g;
         tbv.textContent=c.b;
         localStorage.setItem('ethicom_tanna_color',JSON.stringify(c));
-        if(document.body.classList.contains('theme-tanna')){
+        if(document.body.classList.contains('theme-tanna') ||
+           document.body.classList.contains('theme-tanna-dark')){
           const css=`rgb(${c.r},${c.g},${c.b})`;
           document.documentElement.style.setProperty('--primary-color',css);
           document.documentElement.style.setProperty('--accent-color',css);
