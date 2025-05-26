@@ -441,6 +441,13 @@ body.touch-big-buttons button {
   font-size: 1.1em;
 }
 
+/* Prevent page movement when touch gestures are active */
+body.touch-lock {
+  touch-action: none;
+  overscroll-behavior: contain;
+  overflow: hidden;
+}
+
 /* Canvas overlay for drawing */
 .drawing-overlay {
   position: fixed;
@@ -545,4 +552,12 @@ body.left-layout main {
 .markdown-content ul { padding-left: 1.2em; margin: 0.5em 0; }
 .markdown-content pre { background: var(--card-bg); padding: 0.6em; overflow-x: auto; }
 .markdown-content code { background: rgba(0,0,0,0.3); padding: 0.1em 0.3em; border-radius: 4px; }
+
+.web-content {
+  max-height: 400px;
+  overflow: auto;
+  background: var(--card-bg);
+  padding: 1em;
+  margin-top: 1em;
+}
 

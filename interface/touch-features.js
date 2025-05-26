@@ -26,6 +26,7 @@
 
   // Gestures: pinch to zoom whole body
   function pointerDown(e) {
+    e.preventDefault();
     pointers.set(e.pointerId, e);
     swipeStart = { x: e.clientX, y: e.clientY };
     if (pointers.size === 2) {
@@ -36,6 +37,7 @@
   }
 
   function pointerMove(e) {
+    e.preventDefault();
     if (!pointers.has(e.pointerId)) return;
     pointers.set(e.pointerId, e);
     if (state.gestures && pointers.size === 2) {
@@ -48,6 +50,7 @@
   }
 
   function pointerUp(e) {
+    e.preventDefault();
     pointers.delete(e.pointerId);
     if (swipeStart) {
       const dx = e.clientX - swipeStart.x;
@@ -96,7 +99,15 @@
     save();
   }
 
-  function toggleGestures(on) { state.gestures = on; save(); }
+  function setTouchLock(on) {
+    document.body.classList.toggle('touch-lock', on);
+  }
+
+  function toggleGestures(on) {
+    state.gestures = on;
+    setTouchLock(on);
+    save();
+  }
   function toggleHaptics(on) { state.haptics = on; save(); }
   function toggleBigButtons(on) {
     state.bigButtons = on;
@@ -146,6 +157,7 @@
   document.addEventListener('DOMContentLoaded', () => {
     if (state.bigButtons) document.body.classList.add('touch-big-buttons');
     if (state.gestures) {
+      setTouchLock(true);
       document.addEventListener('pointerdown', pointerDown);
       document.addEventListener('pointermove', pointerMove);
       document.addEventListener('pointerup', pointerUp);
