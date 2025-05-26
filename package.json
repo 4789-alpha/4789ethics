@@ -1,0 +1,9 @@
+{
+  "name": "4789ethics-tools",
+  "version": "1.0.0",
+  "description": "Utility scripts for the Ethics Structure 4789 project",
+  "main": "tools/serve-interface.js",
+  "dependencies": {
+    "canvas": "^2.11.2"
+  }
+}
