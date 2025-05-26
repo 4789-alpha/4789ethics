@@ -13,8 +13,12 @@ function applyTheme(theme) {
       if (saved) {
         const { r, g, b } = JSON.parse(saved);
         const c = `rgb(${r},${g},${b})`;
+        const h = `rgba(${Math.round(r*0.2)},${Math.round(g*0.2)},${Math.round(b*0.2)},0.9)`;
+        const n = `rgba(${Math.round(r*0.3)},${Math.round(g*0.3)},${Math.round(b*0.3)},0.9)`;
         document.documentElement.style.setProperty('--primary-color', c);
         document.documentElement.style.setProperty('--accent-color', c);
+        document.documentElement.style.setProperty('--header-bg', h);
+        document.documentElement.style.setProperty('--nav-bg', n);
       }
     }
     body.classList.add('theme-' + theme);
