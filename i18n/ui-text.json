@@ -89,7 +89,15 @@
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored.",
-    "translation_notice": "Language not fully implemented. Contributions welcome."
+    "translation_notice": "Language not fully implemented. Contributions welcome.",
+    "connect_title": "Connect",
+    "connect_request": "Request connection",
+    "connect_enter_sig": "Target signature:",
+    "connect_pending": "Pending requests",
+    "connect_connections": "Your connections",
+    "connect_approve": "Approve",
+    "connect_request_sent": "Request sent.",
+    "connect_error": "Request failed."
   },
   "de": {
     "title": "Ethicom: Bewertung durch Menschen",
@@ -180,7 +188,15 @@
     "login_btn": "Einloggen",
     "login_github": "GitHub-Login",
     "login_invalid": "Anmeldung fehlgeschlagen.",
-    "login_saved": "Anmeldung erfolgreich. ID gespeichert."
+    "login_saved": "Anmeldung erfolgreich. ID gespeichert.",
+    "connect_title": "Verbinden",
+    "connect_request": "Verbindung anfragen",
+    "connect_enter_sig": "Signatur:",
+    "connect_pending": "Offene Anfragen",
+    "connect_connections": "Verbindungen",
+    "connect_approve": "Bestätigen",
+    "connect_request_sent": "Anfrage gesendet.",
+    "connect_error": "Anfrage fehlgeschlagen."
   },
   "fr": {
     "title": "Ethicom : Évaluation humaine",
@@ -272,7 +288,15 @@
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored.",
     "translation_notice": "Langue pas encore pleinement implémentée. Participation bienvenue.",
-    "login_time_hint": "Current time: {time}"
+    "login_time_hint": "Current time: {time}",
+    "connect_title": "Connect",
+    "connect_request": "Request connection",
+    "connect_enter_sig": "Target signature:",
+    "connect_pending": "Pending requests",
+    "connect_connections": "Your connections",
+    "connect_approve": "Approve",
+    "connect_request_sent": "Request sent.",
+    "connect_error": "Request failed."
   },
   "es": {
     "title": "Ethicom: Evaluación Humana",
@@ -364,7 +388,15 @@
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored.",
     "translation_notice": "Idioma aún no implementado por completo. Se agradece colaboración.",
-    "login_time_hint": "Current time: {time}"
+    "login_time_hint": "Current time: {time}",
+    "connect_title": "Connect",
+    "connect_request": "Request connection",
+    "connect_enter_sig": "Target signature:",
+    "connect_pending": "Pending requests",
+    "connect_connections": "Your connections",
+    "connect_approve": "Approve",
+    "connect_request_sent": "Request sent.",
+    "connect_error": "Request failed."
   },
   "pt": {
     "title": "Ethicom: Avaliação Humana",
@@ -455,7 +487,15 @@
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored.",
-    "login_time_hint": "Current time: {time}"
+    "login_time_hint": "Current time: {time}",
+    "connect_title": "Connect",
+    "connect_request": "Request connection",
+    "connect_enter_sig": "Target signature:",
+    "connect_pending": "Pending requests",
+    "connect_connections": "Your connections",
+    "connect_approve": "Approve",
+    "connect_request_sent": "Request sent.",
+    "connect_error": "Request failed."
   },
   "zh": {
     "title": "Ethicom：人工评估",
@@ -547,7 +587,15 @@
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored.",
     "translation_notice": "Idioma ainda não totalmente implementado. Colaboração bem-vinda.",
-    "login_time_hint": "Current time: {time}"
+    "login_time_hint": "Current time: {time}",
+    "connect_title": "Connect",
+    "connect_request": "Request connection",
+    "connect_enter_sig": "Target signature:",
+    "connect_pending": "Pending requests",
+    "connect_connections": "Your connections",
+    "connect_approve": "Approve",
+    "connect_request_sent": "Request sent.",
+    "connect_error": "Request failed."
   },
   "hi": {
     "title": "Ethicom: मानवीय मूल्यांकन",
@@ -638,7 +686,15 @@
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored.",
-    "login_time_hint": "Current time: {time}"
+    "login_time_hint": "Current time: {time}",
+    "connect_title": "Connect",
+    "connect_request": "Request connection",
+    "connect_enter_sig": "Target signature:",
+    "connect_pending": "Pending requests",
+    "connect_connections": "Your connections",
+    "connect_approve": "Approve",
+    "connect_request_sent": "Request sent.",
+    "connect_error": "Request failed."
   },
   "ar": {
     "title": "إيثيكوم: التقييم البشري",
@@ -729,7 +785,15 @@
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored.",
-    "login_time_hint": "Current time: {time}"
+    "login_time_hint": "Current time: {time}",
+    "connect_title": "Connect",
+    "connect_request": "Request connection",
+    "connect_enter_sig": "Target signature:",
+    "connect_pending": "Pending requests",
+    "connect_connections": "Your connections",
+    "connect_approve": "Approve",
+    "connect_request_sent": "Request sent.",
+    "connect_error": "Request failed."
   },
   "ja": {
     "title": "Ethicom：人間による評価",
@@ -820,7 +884,15 @@
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored.",
-    "login_time_hint": "Current time: {time}"
+    "login_time_hint": "Current time: {time}",
+    "connect_title": "Connect",
+    "connect_request": "Request connection",
+    "connect_enter_sig": "Target signature:",
+    "connect_pending": "Pending requests",
+    "connect_connections": "Your connections",
+    "connect_approve": "Approve",
+    "connect_request_sent": "Request sent.",
+    "connect_error": "Request failed."
   },
   "sw": {
     "title": "Ethicom: Tathmini ya Kibinadamu",
@@ -911,7 +983,15 @@
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored.",
-    "login_time_hint": "Current time: {time}"
+    "login_time_hint": "Current time: {time}",
+    "connect_title": "Connect",
+    "connect_request": "Request connection",
+    "connect_enter_sig": "Target signature:",
+    "connect_pending": "Pending requests",
+    "connect_connections": "Your connections",
+    "connect_approve": "Approve",
+    "connect_request_sent": "Request sent.",
+    "connect_error": "Request failed."
   },
   "ru": {
     "title": "Ethicom: Оценка человеком",
@@ -1002,7 +1082,15 @@
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored.",
-    "login_time_hint": "Current time: {time}"
+    "login_time_hint": "Current time: {time}",
+    "connect_title": "Connect",
+    "connect_request": "Request connection",
+    "connect_enter_sig": "Target signature:",
+    "connect_pending": "Pending requests",
+    "connect_connections": "Your connections",
+    "connect_approve": "Approve",
+    "connect_request_sent": "Request sent.",
+    "connect_error": "Request failed."
   },
   "it": {
     "title": "Ethicom: Valutazione Umana",
@@ -1094,7 +1182,15 @@
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored.",
     "translation_notice": "Lingua non ancora completamente implementata. Collaborazione ben accetta.",
-    "login_time_hint": "Current time: {time}"
+    "login_time_hint": "Current time: {time}",
+    "connect_title": "Connect",
+    "connect_request": "Request connection",
+    "connect_enter_sig": "Target signature:",
+    "connect_pending": "Pending requests",
+    "connect_connections": "Your connections",
+    "connect_approve": "Approve",
+    "connect_request_sent": "Request sent.",
+    "connect_error": "Request failed."
   },
   "ko": {
     "title": "Ethicom: 인간 평가",
@@ -1185,7 +1281,15 @@
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored.",
-    "login_time_hint": "Current time: {time}"
+    "login_time_hint": "Current time: {time}",
+    "connect_title": "Connect",
+    "connect_request": "Request connection",
+    "connect_enter_sig": "Target signature:",
+    "connect_pending": "Pending requests",
+    "connect_connections": "Your connections",
+    "connect_approve": "Approve",
+    "connect_request_sent": "Request sent.",
+    "connect_error": "Request failed."
   },
   "fa": {
     "title": "ایتیکام: ارزیابی انسانی",
@@ -1276,7 +1380,15 @@
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored.",
-    "login_time_hint": "Current time: {time}"
+    "login_time_hint": "Current time: {time}",
+    "connect_title": "Connect",
+    "connect_request": "Request connection",
+    "connect_enter_sig": "Target signature:",
+    "connect_pending": "Pending requests",
+    "connect_connections": "Your connections",
+    "connect_approve": "Approve",
+    "connect_request_sent": "Request sent.",
+    "connect_error": "Request failed."
   },
   "pl": {
     "title": "Ethicom: Ocena Ludzka",
@@ -1367,7 +1479,15 @@
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored.",
-    "login_time_hint": "Current time: {time}"
+    "login_time_hint": "Current time: {time}",
+    "connect_title": "Connect",
+    "connect_request": "Request connection",
+    "connect_enter_sig": "Target signature:",
+    "connect_pending": "Pending requests",
+    "connect_connections": "Your connections",
+    "connect_approve": "Approve",
+    "connect_request_sent": "Request sent.",
+    "connect_error": "Request failed."
   },
   "am": {
     "title": "Ethicom: Human Evaluation",
@@ -1458,7 +1578,15 @@
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored.",
-    "login_time_hint": "Current time: {time}"
+    "login_time_hint": "Current time: {time}",
+    "connect_title": "Connect",
+    "connect_request": "Request connection",
+    "connect_enter_sig": "Target signature:",
+    "connect_pending": "Pending requests",
+    "connect_connections": "Your connections",
+    "connect_approve": "Approve",
+    "connect_request_sent": "Request sent.",
+    "connect_error": "Request failed."
   },
   "af": {
     "title": "Ethicom: Human Evaluation",
@@ -1549,7 +1677,15 @@
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored.",
-    "login_time_hint": "Current time: {time}"
+    "login_time_hint": "Current time: {time}",
+    "connect_title": "Connect",
+    "connect_request": "Request connection",
+    "connect_enter_sig": "Target signature:",
+    "connect_pending": "Pending requests",
+    "connect_connections": "Your connections",
+    "connect_approve": "Approve",
+    "connect_request_sent": "Request sent.",
+    "connect_error": "Request failed."
   },
   "bn": {
     "title": "Ethicom: Human Evaluation",
@@ -1640,7 +1776,15 @@
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored.",
-    "login_time_hint": "Current time: {time}"
+    "login_time_hint": "Current time: {time}",
+    "connect_title": "Connect",
+    "connect_request": "Request connection",
+    "connect_enter_sig": "Target signature:",
+    "connect_pending": "Pending requests",
+    "connect_connections": "Your connections",
+    "connect_approve": "Approve",
+    "connect_request_sent": "Request sent.",
+    "connect_error": "Request failed."
   },
   "ha": {
     "title": "Ethicom: Human Evaluation",
@@ -1731,7 +1875,15 @@
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored.",
-    "login_time_hint": "Current time: {time}"
+    "login_time_hint": "Current time: {time}",
+    "connect_title": "Connect",
+    "connect_request": "Request connection",
+    "connect_enter_sig": "Target signature:",
+    "connect_pending": "Pending requests",
+    "connect_connections": "Your connections",
+    "connect_approve": "Approve",
+    "connect_request_sent": "Request sent.",
+    "connect_error": "Request failed."
   },
   "id": {
     "title": "Ethicom: Human Evaluation",
@@ -1822,7 +1974,15 @@
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored.",
-    "login_time_hint": "Current time: {time}"
+    "login_time_hint": "Current time: {time}",
+    "connect_title": "Connect",
+    "connect_request": "Request connection",
+    "connect_enter_sig": "Target signature:",
+    "connect_pending": "Pending requests",
+    "connect_connections": "Your connections",
+    "connect_approve": "Approve",
+    "connect_request_sent": "Request sent.",
+    "connect_error": "Request failed."
   },
   "ig": {
     "title": "Ethicom: Human Evaluation",
@@ -1913,7 +2073,15 @@
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored.",
-    "login_time_hint": "Current time: {time}"
+    "login_time_hint": "Current time: {time}",
+    "connect_title": "Connect",
+    "connect_request": "Request connection",
+    "connect_enter_sig": "Target signature:",
+    "connect_pending": "Pending requests",
+    "connect_connections": "Your connections",
+    "connect_approve": "Approve",
+    "connect_request_sent": "Request sent.",
+    "connect_error": "Request failed."
   },
   "om": {
     "title": "Ethicom: Human Evaluation",
@@ -2004,7 +2172,15 @@
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored.",
-    "login_time_hint": "Current time: {time}"
+    "login_time_hint": "Current time: {time}",
+    "connect_title": "Connect",
+    "connect_request": "Request connection",
+    "connect_enter_sig": "Target signature:",
+    "connect_pending": "Pending requests",
+    "connect_connections": "Your connections",
+    "connect_approve": "Approve",
+    "connect_request_sent": "Request sent.",
+    "connect_error": "Request failed."
   },
   "rm": {
     "title": "Ethicom: Human Evaluation",
@@ -2095,7 +2271,15 @@
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored.",
-    "login_time_hint": "Current time: {time}"
+    "login_time_hint": "Current time: {time}",
+    "connect_title": "Connect",
+    "connect_request": "Request connection",
+    "connect_enter_sig": "Target signature:",
+    "connect_pending": "Pending requests",
+    "connect_connections": "Your connections",
+    "connect_approve": "Approve",
+    "connect_request_sent": "Request sent.",
+    "connect_error": "Request failed."
   },
   "ta": {
     "title": "Ethicom: Human Evaluation",
@@ -2186,7 +2370,15 @@
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored.",
-    "login_time_hint": "Current time: {time}"
+    "login_time_hint": "Current time: {time}",
+    "connect_title": "Connect",
+    "connect_request": "Request connection",
+    "connect_enter_sig": "Target signature:",
+    "connect_pending": "Pending requests",
+    "connect_connections": "Your connections",
+    "connect_approve": "Approve",
+    "connect_request_sent": "Request sent.",
+    "connect_error": "Request failed."
   },
   "te": {
     "title": "Ethicom: Human Evaluation",
@@ -2277,7 +2469,15 @@
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored.",
-    "login_time_hint": "Current time: {time}"
+    "login_time_hint": "Current time: {time}",
+    "connect_title": "Connect",
+    "connect_request": "Request connection",
+    "connect_enter_sig": "Target signature:",
+    "connect_pending": "Pending requests",
+    "connect_connections": "Your connections",
+    "connect_approve": "Approve",
+    "connect_request_sent": "Request sent.",
+    "connect_error": "Request failed."
   },
   "th": {
     "title": "Ethicom: Human Evaluation",
@@ -2368,7 +2568,15 @@
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored.",
-    "login_time_hint": "Current time: {time}"
+    "login_time_hint": "Current time: {time}",
+    "connect_title": "Connect",
+    "connect_request": "Request connection",
+    "connect_enter_sig": "Target signature:",
+    "connect_pending": "Pending requests",
+    "connect_connections": "Your connections",
+    "connect_approve": "Approve",
+    "connect_request_sent": "Request sent.",
+    "connect_error": "Request failed."
   },
   "tr": {
     "title": "Ethicom: Human Evaluation",
@@ -2459,7 +2667,15 @@
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored.",
-    "login_time_hint": "Current time: {time}"
+    "login_time_hint": "Current time: {time}",
+    "connect_title": "Connect",
+    "connect_request": "Request connection",
+    "connect_enter_sig": "Target signature:",
+    "connect_pending": "Pending requests",
+    "connect_connections": "Your connections",
+    "connect_approve": "Approve",
+    "connect_request_sent": "Request sent.",
+    "connect_error": "Request failed."
   },
   "ur": {
     "title": "Ethicom: Human Evaluation",
@@ -2551,7 +2767,15 @@
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored.",
     "translation_notice": "语言尚未完全实现，欢迎协助翻译。",
-    "login_time_hint": "Current time: {time}"
+    "login_time_hint": "Current time: {time}",
+    "connect_title": "Connect",
+    "connect_request": "Request connection",
+    "connect_enter_sig": "Target signature:",
+    "connect_pending": "Pending requests",
+    "connect_connections": "Your connections",
+    "connect_approve": "Approve",
+    "connect_request_sent": "Request sent.",
+    "connect_error": "Request failed."
   },
   "vi": {
     "title": "Ethicom: Human Evaluation",
@@ -2642,7 +2866,15 @@
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored.",
-    "login_time_hint": "Current time: {time}"
+    "login_time_hint": "Current time: {time}",
+    "connect_title": "Connect",
+    "connect_request": "Request connection",
+    "connect_enter_sig": "Target signature:",
+    "connect_pending": "Pending requests",
+    "connect_connections": "Your connections",
+    "connect_approve": "Approve",
+    "connect_request_sent": "Request sent.",
+    "connect_error": "Request failed."
   },
   "xh": {
     "title": "Ethicom: Human Evaluation",
@@ -2733,7 +2965,15 @@
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored.",
-    "login_time_hint": "Current time: {time}"
+    "login_time_hint": "Current time: {time}",
+    "connect_title": "Connect",
+    "connect_request": "Request connection",
+    "connect_enter_sig": "Target signature:",
+    "connect_pending": "Pending requests",
+    "connect_connections": "Your connections",
+    "connect_approve": "Approve",
+    "connect_request_sent": "Request sent.",
+    "connect_error": "Request failed."
   },
   "yo": {
     "title": "Ethicom: Human Evaluation",
@@ -2824,7 +3064,15 @@
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored.",
-    "login_time_hint": "Current time: {time}"
+    "login_time_hint": "Current time: {time}",
+    "connect_title": "Connect",
+    "connect_request": "Request connection",
+    "connect_enter_sig": "Target signature:",
+    "connect_pending": "Pending requests",
+    "connect_connections": "Your connections",
+    "connect_approve": "Approve",
+    "connect_request_sent": "Request sent.",
+    "connect_error": "Request failed."
   },
   "zu": {
     "title": "Ethicom: Human Evaluation",
@@ -2915,7 +3163,15 @@
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored.",
-    "login_time_hint": "Current time: {time}"
+    "login_time_hint": "Current time: {time}",
+    "connect_title": "Connect",
+    "connect_request": "Request connection",
+    "connect_enter_sig": "Target signature:",
+    "connect_pending": "Pending requests",
+    "connect_connections": "Your connections",
+    "connect_approve": "Approve",
+    "connect_request_sent": "Request sent.",
+    "connect_error": "Request failed."
   },
   "nl": {
     "title": "Ethicom: Menselijke Evaluatie",
@@ -3006,6 +3262,14 @@
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored.",
-    "login_time_hint": "Current time: {time}"
+    "login_time_hint": "Current time: {time}",
+    "connect_title": "Connect",
+    "connect_request": "Request connection",
+    "connect_enter_sig": "Target signature:",
+    "connect_pending": "Pending requests",
+    "connect_connections": "Your connections",
+    "connect_approve": "Approve",
+    "connect_request_sent": "Request sent.",
+    "connect_error": "Request failed."
   }
 }

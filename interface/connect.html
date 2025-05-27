@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Connect</title>
+  <link rel="stylesheet" href="ethicom-style.css" />
+  <script src="ethicom-utils.js"></script>
+  <script src="connect.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main_content">Skip to main content</a>
+  <header>
+    <h1 data-ui="connect_title">Connect</h1>
+  </header>
+  <main id="main_content">
+    <label for="sig_input" data-ui="connect_enter_sig">Target signature:</label>
+    <input id="sig_input" />
+    <button id="request_btn" data-ui="connect_request">Request connection</button>
+    <div id="connect_status"></div>
+    <h2 data-ui="connect_pending">Pending requests</h2>
+    <ul id="pending_list"></ul>
+    <h2 data-ui="connect_connections">Your connections</h2>
+    <ul id="conn_list"></ul>
+  </main>
+</body>
+</html>
