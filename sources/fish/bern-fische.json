@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Hecht",
+    "scientific_name": "Esox lucius",
+    "type": "Raubfisch",
+    "habitat": "Seen und Fluesse",
+    "max_cm": 150,
+    "spawn": "Fruehjahr",
+    "image": "sources/fish/ch/esox_ch.png"
+  },
+  {
+    "name": "Egli",
+    "scientific_name": "Perca fluviatilis",
+    "type": "Raubfisch",
+    "habitat": "Seen und Fluesse",
+    "max_cm": 60,
+    "spawn": "Fruehjahr",
+    "image": "sources/fish/ch/perca_ch.png"
+  },
+  {
+    "name": "Bachforelle",
+    "scientific_name": "Salmo trutta fario",
+    "type": "Forellenfisch",
+    "habitat": "Baeche und Fluesse",
+    "max_cm": 80,
+    "spawn": "Herbst",
+    "image": "sources/fish/ch/salmo_trutta_fario_ch.png"
+  },
+  {
+    "name": "Rotauge",
+    "scientific_name": "Rutilus rutilus",
+    "type": "Weissfisch",
+    "habitat": "Seen und Fluesse",
+    "max_cm": 45,
+    "spawn": "Fruehjahr"
+  }
+]
