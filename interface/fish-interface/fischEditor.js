@@ -1,4 +1,8 @@
 async function initFischEditor() {
+  if (opLevelToNumber(getStoredOpLevel()) < 5 || !getSanaConfirmed()) {
+    document.body.innerHTML = '<p>Fisch-Modus erfordert OP-5 und Sana-Bestätigung.</p>';
+    return;
+  }
   const table = document.getElementById('fisch_table');
   const addBtn = document.getElementById('add_fish_btn');
   if (!table || !addBtn) return;

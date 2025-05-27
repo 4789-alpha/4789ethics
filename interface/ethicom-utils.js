@@ -145,3 +145,14 @@ window.getReadmePath = getReadmePath;
 window.showLoadingBadge = showLoadingBadge;
 window.hideLoadingBadge = hideLoadingBadge;
 
+// Check if user confirmed responsibility via "Sana"
+function getSanaConfirmed() {
+  try {
+    return localStorage.getItem('sana_confirmed') === 'true';
+  } catch (err) {
+    return false;
+  }
+}
+
+window.getSanaConfirmed = getSanaConfirmed;
+

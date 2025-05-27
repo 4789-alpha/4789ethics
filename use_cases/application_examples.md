@@ -1,7 +1,8 @@
 # Application Examples – Ethics Structure 4789
 
 ## Education
-- Decision reflection modules in school settings  
+- Decision reflection modules in school settings
+- Teachers at OP-6 can create subject modules (e.g. French or math)
 - Evaluation through responsibility, not correctness
 
 ## AI Systems
