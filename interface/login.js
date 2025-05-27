@@ -9,6 +9,8 @@ function applyLoginTexts() {
   if (emailLabel) emailLabel.textContent = t.login_email || emailLabel.textContent;
   const pwLabel = document.querySelector('label[for="pw_input"]');
   if (pwLabel) pwLabel.textContent = t.login_password || pwLabel.textContent;
+  const authLabel = document.querySelector('label[for="auth_input"]');
+  if (authLabel) authLabel.textContent = t.login_auth || authLabel.textContent;
   const loginBtn = document.getElementById('login_btn');
   if (loginBtn) loginBtn.textContent = t.login_btn || loginBtn.textContent;
 }
@@ -26,9 +28,11 @@ function initLogin() {
 function handleLogin() {
   const emailInput = document.getElementById('email_input');
   const pwInput = document.getElementById('pw_input');
+  const authInput = document.getElementById('auth_input');
   const statusEl = document.getElementById('login_status');
   const email = emailInput.value.trim();
   const password = pwInput.value;
+  const auth = authInput.value.trim();
   statusEl.textContent = '';
 
   if (!/^[^@]+@[^@]+\.[^@]+$/.test(email)) {
@@ -39,7 +43,7 @@ function handleLogin() {
   fetch('api/login', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ email, password })
+    body: JSON.stringify({ email, password, auth_code: auth })
   })
     .then(r => {
       if (!r.ok) throw new Error('fail');

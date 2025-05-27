@@ -5,6 +5,58 @@ const { spawn } = require('child_process');
 const crypto = require('crypto');
 const { search, loadSources } = require('./source-search.js');
 
+const base32Alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ234567';
+
+function base32Encode(buf) {
+  let bits = 0, value = 0, out = '';
+  for (const b of buf) {
+    value = (value << 8) | b;
+    bits += 8;
+    while (bits >= 5) {
+      out += base32Alphabet[(value >>> (bits - 5)) & 31];
+      bits -= 5;
+    }
+  }
+  if (bits > 0) out += base32Alphabet[(value << (5 - bits)) & 31];
+  return out;
+}
+
+function base32Decode(str) {
+  const clean = str.toUpperCase().replace(/[^A-Z2-7]/g, '');
+  let bits = 0, value = 0, idx = 0;
+  const out = [];
+  for (const ch of clean) {
+    value = (value << 5) | base32Alphabet.indexOf(ch);
+    bits += 5;
+    if (bits >= 8) {
+      out[idx++] = (value >>> (bits - 8)) & 0xff;
+      bits -= 8;
+    }
+  }
+  return Buffer.from(out.slice(0, idx));
+}
+
+function generateTotpSecret() {
+  return base32Encode(crypto.randomBytes(10));
+}
+
+function totpCode(secret, step) {
+  const key = base32Decode(secret);
+  const buf = Buffer.alloc(8);
+  buf.writeUInt32BE(0, 0);
+  buf.writeUInt32BE(step, 4);
+  const hmac = crypto.createHmac('sha1', key).update(buf).digest();
+  const offset = hmac[19] & 0xf;
+  const num = (hmac.readUInt32BE(offset) & 0x7fffffff) % 1000000;
+  return String(num).padStart(6, '0');
+}
+
+function verifyTotp(secret, code) {
+  const t = Math.floor(Date.now() / 30000);
+  const c = String(code).padStart(6, '0');
+  return [t - 1, t, t + 1].some(step => totpCode(secret, step) === c);
+}
+
 const root = path.join(__dirname, '..', 'interface');
 const repoRoot = path.join(__dirname, '..');
 const port = process.env.PORT || 8080;
@@ -51,11 +103,12 @@ function handleSignup(req, res) {
       const emailHash = crypto.createHash('sha256').update(email).digest('hex');
       const salt = crypto.randomBytes(8).toString('hex');
       const pwHash = crypto.createHash('sha256').update(password + salt).digest('hex');
+      const secret = generateTotpSecret();
       const users = readJson(usersFile);
-      users.push({ id, emailHash, pwHash, salt, op_level: 'OP-1' });
+      users.push({ id, emailHash, pwHash, salt, op_level: 'OP-1', totpSecret: secret });
       writeJson(usersFile, users);
       res.writeHead(200, { 'Content-Type': 'application/json' });
-      res.end(JSON.stringify({ id }));
+      res.end(JSON.stringify({ id, secret }));
     } catch {
       res.writeHead(400); res.end('Bad Request');
     }
@@ -67,7 +120,7 @@ function handleLogin(req, res) {
   req.on('data', c => { body += c; });
   req.on('end', () => {
     try {
-      const { email, password } = JSON.parse(body);
+      const { email, password, auth_code } = JSON.parse(body);
       if (!/^[^@]+@[^@]+\.[^@]+$/.test(email) || !password) {
         res.writeHead(400); res.end('Invalid data'); return;
       }
@@ -77,6 +130,9 @@ function handleLogin(req, res) {
       if (!user) { res.writeHead(403); res.end('Invalid credentials'); return; }
       const pwHash = crypto.createHash('sha256').update(password + user.salt).digest('hex');
       if (pwHash !== user.pwHash) { res.writeHead(403); res.end('Invalid credentials'); return; }
+      if (user.totpSecret && !verifyTotp(user.totpSecret, auth_code)) {
+        res.writeHead(403); res.end('Invalid credentials'); return;
+      }
       res.writeHead(200, { 'Content-Type': 'application/json' });
       res.end(JSON.stringify({ id: user.id, op_level: user.op_level }));
     } catch {
