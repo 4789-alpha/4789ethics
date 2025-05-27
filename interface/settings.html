@@ -33,63 +33,84 @@
   </nav>
   <main id="main_content">
     <div class="settings-grid">
-    <div id="lang_selection" class="card">
-      <h3>Language</h3>
-      <label for="lang_select">Select:</label>
-      <select id="lang_select"></select>
-    </div>
+    <details class="card">
+      <summary>Language</summary>
+      <div id="lang_selection">
+        <label for="lang_select">Select:</label>
+        <select id="lang_select"></select>
+      </div>
+    </details>
     <!-- Theme selection removed -->
-    <div id="color_scheme" class="card"></div>
-    <div id="tanna_color" class="card" style="display:none;">
-      <h3>Tanna Main Color</h3>
-      <label>R: <input type="range" id="tanna_r" min="0" max="255" value="34"/> <span id="tanna_r_val">34</span></label><br/>
-      <label>G: <input type="range" id="tanna_g" min="0" max="255" value="139"/> <span id="tanna_g_val">139</span></label><br/>
-      <label>B: <input type="range" id="tanna_b" min="0" max="255" value="34"/> <span id="tanna_b_val">34</span></label>
-      <span id="tanna_preview" class="color-preview"></span><br/>
-      <span id="tanna_contrast" style="color:red;display:none;">Low contrast with logos</span>
-    </div>
-    <div id="background_settings" class="card">
-      <h3>Background</h3>
-      <div id="background_count">
-        <label for="bg_symbol_count">Tanna symbols in background: <span id="bg_symbol_count_val">40</span></label>
-        <input type="range" id="bg_symbol_count" min="10" max="400" step="10" value="40" />
+    <details class="card">
+      <summary>Colors</summary>
+      <div id="color_scheme"></div>
+      <div id="tanna_color" style="display:none;">
+        <label>R: <input type="range" id="tanna_r" min="0" max="255" value="34"/> <span id="tanna_r_val">34</span></label><br/>
+        <label>G: <input type="range" id="tanna_g" min="0" max="255" value="139"/> <span id="tanna_g_val">139</span></label><br/>
+        <label>B: <input type="range" id="tanna_b" min="0" max="255" value="34"/> <span id="tanna_b_val">34</span></label>
+        <span id="tanna_preview" class="color-preview"></span><br/>
+        <span id="tanna_contrast" style="color:red;display:none;">Low contrast with logos</span>
       </div>
-      <div id="same_level_count" style="display:none;">
-        <label for="bg_same_level_count">Your level Tannas: <span id="bg_same_level_val">1</span></label>
-        <input type="range" id="bg_same_level_count" min="1" max="10" step="1" value="1" />
+    </details>
+    <details class="card">
+      <summary>Background</summary>
+      <div id="background_settings">
+        <div id="background_count">
+          <label for="bg_symbol_count">Tanna symbols in background: <span id="bg_symbol_count_val">40</span></label>
+          <input type="range" id="bg_symbol_count" min="10" max="400" step="10" value="40" />
+        </div>
+        <div id="same_level_count" style="display:none;">
+          <label for="bg_same_level_count">Your level Tannas: <span id="bg_same_level_val">1</span></label>
+          <input type="range" id="bg_same_level_count" min="1" max="10" step="1" value="1" />
+        </div>
+        <div id="bg_collisions">
+          <label><input type="checkbox" id="bg_enable_collisions" checked/> Enable Tanna collisions</label>
+        </div>
       </div>
-      <div id="bg_collisions">
-        <label><input type="checkbox" id="bg_enable_collisions" checked/> Enable Tanna collisions</label>
+    </details>
+    <details class="card">
+      <summary>Content Text Color</summary>
+      <div id="text_color">
+        <label>R: <input type="range" id="text_r" min="0" max="255" value="0"/> <span id="text_r_val">0</span></label><br/>
+        <label>G: <input type="range" id="text_g" min="0" max="255" value="0"/> <span id="text_g_val">0</span></label><br/>
+        <label>B: <input type="range" id="text_b" min="0" max="255" value="0"/> <span id="text_b_val">0</span></label>
+        <span id="text_preview" class="color-preview"></span>
       </div>
-    </div>
-    <div id="text_color" class="card">
-      <h3>Content Text Color</h3>
-      <label>R: <input type="range" id="text_r" min="0" max="255" value="0"/> <span id="text_r_val">0</span></label><br/>
-      <label>G: <input type="range" id="text_g" min="0" max="255" value="0"/> <span id="text_g_val">0</span></label><br/>
-      <label>B: <input type="range" id="text_b" min="0" max="255" value="0"/> <span id="text_b_val">0</span></label>
-      <span id="text_preview" class="color-preview"></span>
-    </div>
-    <div id="foreground_opacity" class="card">
-      <label for="fg_opacity">Foreground transparency: <span id="fg_opacity_val">0</span>%</label>
-      <input type="range" id="fg_opacity" min="0" max="100" step="1" value="0" />
-    </div>
-    <div id="touch_features" class="card">
-      <h3>Touch Features</h3>
-      <label><input type="checkbox" id="touch_gestures"/> Enable gestures</label><br/>
-      <label><input type="checkbox" id="touch_longpress"/> Enable quick menus</label><br/>
-      <label><input type="checkbox" id="touch_drawing"/> Enable drawing</label><br/>
-      <label><input type="checkbox" id="touch_bigbuttons"/> Larger buttons</label><br/>
-      <label><input type="checkbox" id="touch_haptics"/> Haptic feedback</label>
-    </div>
-    <div id="attention_features" class="card">
-      <h3>Attention Alerts</h3>
-      <label><input type="checkbox" id="attention_wiggle"/> Wiggle when idle</label><br/>
-      <label><input type="checkbox" id="attention_beep"/> Beep when idle</label>
-    </div>
-    <div id="access_setup" class="card"></div>
-    <div id="repo_download" class="card">
-      <a href="/download.zip" class="accent-button">Download .zip</a>
-    </div>
+    </details>
+    <details class="card">
+      <summary>Foreground Transparency</summary>
+      <div id="foreground_opacity">
+        <label for="fg_opacity">Foreground transparency: <span id="fg_opacity_val">0</span>%</label>
+        <input type="range" id="fg_opacity" min="0" max="100" step="1" value="0" />
+      </div>
+    </details>
+    <details class="card">
+      <summary>Touch Features</summary>
+      <div id="touch_features">
+        <label><input type="checkbox" id="touch_gestures"/> Enable gestures</label><br/>
+        <label><input type="checkbox" id="touch_longpress"/> Enable quick menus</label><br/>
+        <label><input type="checkbox" id="touch_drawing"/> Enable drawing</label><br/>
+        <label><input type="checkbox" id="touch_bigbuttons"/> Larger buttons</label><br/>
+        <label><input type="checkbox" id="touch_haptics"/> Haptic feedback</label>
+      </div>
+    </details>
+    <details class="card">
+      <summary>Attention Alerts</summary>
+      <div id="attention_features">
+        <label><input type="checkbox" id="attention_wiggle"/> Wiggle when idle</label><br/>
+        <label><input type="checkbox" id="attention_beep"/> Beep when idle</label>
+      </div>
+    </details>
+    <details class="card">
+      <summary>Accessibility Setup</summary>
+      <div id="access_setup"></div>
+    </details>
+    <details class="card">
+      <summary>Repository</summary>
+      <div id="repo_download">
+        <a href="/download.zip" class="accent-button">Download .zip</a>
+      </div>
+    </details>
     </div><!-- settings-grid -->
   </main>
   <script>
@@ -115,7 +136,7 @@
           '--accent-color':'Accent','--highlight-text-color':'Highlight'
         };
         const stored=JSON.parse(localStorage.getItem('ethicom_colors')||'{}');
-        wrap.innerHTML='<h3>Colors</h3>';
+        wrap.innerHTML='';
         for(const [name,label] of Object.entries(vars)){
           const base=parseCol(stored[name]||getComputedStyle(document.documentElement).getPropertyValue(name));
           const b=document.createElement('div');
