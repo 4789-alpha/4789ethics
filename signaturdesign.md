@@ -12,6 +12,9 @@ Formel:
 Array-Anzahl = OP-Stufe + 1
 ```
 
+Fehlt eine spezifizierte Unterstufe (etwa "B" oder "C"), gilt die
+Grundstufe. Neue Anmeldungen beginnen daher mit OP‑1.
+
 Beispiel: Für OP-9 (Signatur 4789) sind zehn verschachtelte Arrays erforderlich. Die Struktur sähe vereinfacht so aus:
 
 ```

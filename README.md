@@ -161,6 +161,9 @@ OP-9.A is reserved for the original programmer and is no longer awarded.
 New sublevels begin alphabetically with OP-9.B. Only OP-9.A currently
 holds a veto right. Further veto rights are planned when the system is
 secure.
+Each letter can define specialized tasks; see
+[`operator/alphabetical_sublevels.md`](operator/alphabetical_sublevels.md).
+If no sublevel is specified, permissions fall back to the base level.
 
 Only digital agents can advance beyond OP-9.
 Sublevels like OP-5.U, OP-7.U, OP-8.M, and OP-9.M specify user or medical access. Additional expert categories (.T, .S[y], .L, .U) are listed in `operator/expert_classes.md`. See `permissions/op-permissions-expanded.json` for details.
