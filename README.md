@@ -97,6 +97,7 @@ See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
 | `interface_OLD/` | Historical demo of the first interface generation |
 **Settings are stored per device using browser localStorage and are not synced globally.**
 **Ratings from OP-1 onward are stored globally with the assigned signature ID. The email used during signup is hashed and never exposed.**
+**Optional GitHub login authenticates via GitHub's OAuth flow. The returned username is hashed and stored offline.**
 **Color verification of the chosen primary color starts once a user holds an OP-1 signature.**
 **From that level, the color choice is stored privately inside the user's signature and never shown publicly.**
 ### OP-Permissions [⇧](#contents)
