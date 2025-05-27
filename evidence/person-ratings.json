@@ -35,6 +35,14 @@
     "human_id": "hum-0101",
     "person": "Ada Lovelace",
     "rating": "yes",
+    "operator": "sig-1111",
+    "op_level": "OP-1",
+    "timestamp": "2025-05-26T06:00:00.000Z"
+  },
+  {
+    "human_id": "hum-0101",
+    "person": "Ada Lovelace",
+    "rating": "yes",
     "operator": "sig-5555",
     "op_level": "OP-2",
     "timestamp": "2025-05-26T08:00:00.000Z"
