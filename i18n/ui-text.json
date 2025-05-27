@@ -78,7 +78,13 @@
     "attention_toggle_wiggle": "Wiggle when idle",
     "attention_toggle_beep": "Beep when idle",
     "side_close": "Close",
-    "rating_saved": "Rating saved."
+    "rating_saved": "Rating saved.",
+    "login_title": "Login",
+    "login_email": "Email:",
+    "login_password": "Password:",
+    "login_btn": "Log in",
+    "login_invalid": "Login failed.",
+    "login_saved": "Login successful. ID stored."
   },
   "de": {
     "title": "Ethicom: Bewertung durch Menschen",
@@ -159,7 +165,13 @@
     "attention_toggle_wiggle": "Beim Warten wackeln",
     "attention_toggle_beep": "Beim Warten piepen",
     "side_close": "Schließen",
-    "rating_saved": "Bewertung gespeichert."
+    "rating_saved": "Bewertung gespeichert.",
+    "login_title": "Anmeldung",
+    "login_email": "E-Mail:",
+    "login_password": "Passwort:",
+    "login_btn": "Einloggen",
+    "login_invalid": "Anmeldung fehlgeschlagen.",
+    "login_saved": "Anmeldung erfolgreich. ID gespeichert."
   },
   "fr": {
     "title": "Ethicom : Évaluation humaine",
@@ -240,7 +252,13 @@
     "rating_yes": "Yes",
     "rating_partial": "Partly",
     "rating_no": "No",
-    "rating_saved": "Rating saved."
+    "rating_saved": "Rating saved.",
+    "login_title": "Login",
+    "login_email": "Email:",
+    "login_password": "Password:",
+    "login_btn": "Log in",
+    "login_invalid": "Login failed.",
+    "login_saved": "Login successful. ID stored."
   },
   "es": {
     "title": "Ethicom: Evaluación Humana",
@@ -321,7 +339,13 @@
     "rating_yes": "Yes",
     "rating_partial": "Partly",
     "rating_no": "No",
-    "rating_saved": "Rating saved."
+    "rating_saved": "Rating saved.",
+    "login_title": "Login",
+    "login_email": "Email:",
+    "login_password": "Password:",
+    "login_btn": "Log in",
+    "login_invalid": "Login failed.",
+    "login_saved": "Login successful. ID stored."
   },
   "pt": {
     "title": "Ethicom: Avaliação Humana",
@@ -402,7 +426,13 @@
     "rating_yes": "Yes",
     "rating_partial": "Partly",
     "rating_no": "No",
-    "rating_saved": "Rating saved."
+    "rating_saved": "Rating saved.",
+    "login_title": "Login",
+    "login_email": "Email:",
+    "login_password": "Password:",
+    "login_btn": "Log in",
+    "login_invalid": "Login failed.",
+    "login_saved": "Login successful. ID stored."
   },
   "zh": {
     "title": "Ethicom：人工评估",
@@ -483,7 +513,13 @@
     "rating_yes": "Yes",
     "rating_partial": "Partly",
     "rating_no": "No",
-    "rating_saved": "Rating saved."
+    "rating_saved": "Rating saved.",
+    "login_title": "Login",
+    "login_email": "Email:",
+    "login_password": "Password:",
+    "login_btn": "Log in",
+    "login_invalid": "Login failed.",
+    "login_saved": "Login successful. ID stored."
   },
   "hi": {
     "title": "Ethicom: मानवीय मूल्यांकन",
@@ -564,7 +600,13 @@
     "rating_yes": "Yes",
     "rating_partial": "Partly",
     "rating_no": "No",
-    "rating_saved": "Rating saved."
+    "rating_saved": "Rating saved.",
+    "login_title": "Login",
+    "login_email": "Email:",
+    "login_password": "Password:",
+    "login_btn": "Log in",
+    "login_invalid": "Login failed.",
+    "login_saved": "Login successful. ID stored."
   },
   "ar": {
     "title": "إيثيكوم: التقييم البشري",
@@ -645,7 +687,13 @@
     "rating_yes": "Yes",
     "rating_partial": "Partly",
     "rating_no": "No",
-    "rating_saved": "Rating saved."
+    "rating_saved": "Rating saved.",
+    "login_title": "Login",
+    "login_email": "Email:",
+    "login_password": "Password:",
+    "login_btn": "Log in",
+    "login_invalid": "Login failed.",
+    "login_saved": "Login successful. ID stored."
   },
   "ja": {
     "title": "Ethicom：人間による評価",
@@ -726,7 +774,13 @@
     "rating_yes": "Yes",
     "rating_partial": "Partly",
     "rating_no": "No",
-    "rating_saved": "Rating saved."
+    "rating_saved": "Rating saved.",
+    "login_title": "Login",
+    "login_email": "Email:",
+    "login_password": "Password:",
+    "login_btn": "Log in",
+    "login_invalid": "Login failed.",
+    "login_saved": "Login successful. ID stored."
   },
   "sw": {
     "title": "Ethicom: Tathmini ya Kibinadamu",
@@ -807,7 +861,13 @@
     "rating_yes": "Yes",
     "rating_partial": "Partly",
     "rating_no": "No",
-    "rating_saved": "Rating saved."
+    "rating_saved": "Rating saved.",
+    "login_title": "Login",
+    "login_email": "Email:",
+    "login_password": "Password:",
+    "login_btn": "Log in",
+    "login_invalid": "Login failed.",
+    "login_saved": "Login successful. ID stored."
   },
   "ru": {
     "title": "Ethicom: Оценка человеком",
@@ -888,7 +948,13 @@
     "rating_yes": "Yes",
     "rating_partial": "Partly",
     "rating_no": "No",
-    "rating_saved": "Rating saved."
+    "rating_saved": "Rating saved.",
+    "login_title": "Login",
+    "login_email": "Email:",
+    "login_password": "Password:",
+    "login_btn": "Log in",
+    "login_invalid": "Login failed.",
+    "login_saved": "Login successful. ID stored."
   },
   "it": {
     "title": "Ethicom: Valutazione Umana",
@@ -969,7 +1035,13 @@
     "rating_yes": "Yes",
     "rating_partial": "Partly",
     "rating_no": "No",
-    "rating_saved": "Rating saved."
+    "rating_saved": "Rating saved.",
+    "login_title": "Login",
+    "login_email": "Email:",
+    "login_password": "Password:",
+    "login_btn": "Log in",
+    "login_invalid": "Login failed.",
+    "login_saved": "Login successful. ID stored."
   },
   "ko": {
     "title": "Ethicom: 인간 평가",
@@ -1050,7 +1122,13 @@
     "rating_yes": "Yes",
     "rating_partial": "Partly",
     "rating_no": "No",
-    "rating_saved": "Rating saved."
+    "rating_saved": "Rating saved.",
+    "login_title": "Login",
+    "login_email": "Email:",
+    "login_password": "Password:",
+    "login_btn": "Log in",
+    "login_invalid": "Login failed.",
+    "login_saved": "Login successful. ID stored."
   },
   "fa": {
     "title": "ایتیکام: ارزیابی انسانی",
@@ -1131,7 +1209,13 @@
     "rating_yes": "Yes",
     "rating_partial": "Partly",
     "rating_no": "No",
-    "rating_saved": "Rating saved."
+    "rating_saved": "Rating saved.",
+    "login_title": "Login",
+    "login_email": "Email:",
+    "login_password": "Password:",
+    "login_btn": "Log in",
+    "login_invalid": "Login failed.",
+    "login_saved": "Login successful. ID stored."
   },
   "pl": {
     "title": "Ethicom: Ocena Ludzka",
@@ -1212,7 +1296,13 @@
     "rating_yes": "Yes",
     "rating_partial": "Partly",
     "rating_no": "No",
-    "rating_saved": "Rating saved."
+    "rating_saved": "Rating saved.",
+    "login_title": "Login",
+    "login_email": "Email:",
+    "login_password": "Password:",
+    "login_btn": "Log in",
+    "login_invalid": "Login failed.",
+    "login_saved": "Login successful. ID stored."
   },
   "am": {
     "title": "Ethicom: Human Evaluation",
@@ -1293,7 +1383,13 @@
     "rating_yes": "Yes",
     "rating_partial": "Partly",
     "rating_no": "No",
-    "rating_saved": "Rating saved."
+    "rating_saved": "Rating saved.",
+    "login_title": "Login",
+    "login_email": "Email:",
+    "login_password": "Password:",
+    "login_btn": "Log in",
+    "login_invalid": "Login failed.",
+    "login_saved": "Login successful. ID stored."
   },
   "af": {
     "title": "Ethicom: Human Evaluation",
@@ -1374,7 +1470,13 @@
     "rating_yes": "Yes",
     "rating_partial": "Partly",
     "rating_no": "No",
-    "rating_saved": "Rating saved."
+    "rating_saved": "Rating saved.",
+    "login_title": "Login",
+    "login_email": "Email:",
+    "login_password": "Password:",
+    "login_btn": "Log in",
+    "login_invalid": "Login failed.",
+    "login_saved": "Login successful. ID stored."
   },
   "bn": {
     "title": "Ethicom: Human Evaluation",
@@ -1455,7 +1557,13 @@
     "rating_yes": "Yes",
     "rating_partial": "Partly",
     "rating_no": "No",
-    "rating_saved": "Rating saved."
+    "rating_saved": "Rating saved.",
+    "login_title": "Login",
+    "login_email": "Email:",
+    "login_password": "Password:",
+    "login_btn": "Log in",
+    "login_invalid": "Login failed.",
+    "login_saved": "Login successful. ID stored."
   },
   "ha": {
     "title": "Ethicom: Human Evaluation",
@@ -1536,7 +1644,13 @@
     "rating_yes": "Yes",
     "rating_partial": "Partly",
     "rating_no": "No",
-    "rating_saved": "Rating saved."
+    "rating_saved": "Rating saved.",
+    "login_title": "Login",
+    "login_email": "Email:",
+    "login_password": "Password:",
+    "login_btn": "Log in",
+    "login_invalid": "Login failed.",
+    "login_saved": "Login successful. ID stored."
   },
   "id": {
     "title": "Ethicom: Human Evaluation",
@@ -1617,7 +1731,13 @@
     "rating_yes": "Yes",
     "rating_partial": "Partly",
     "rating_no": "No",
-    "rating_saved": "Rating saved."
+    "rating_saved": "Rating saved.",
+    "login_title": "Login",
+    "login_email": "Email:",
+    "login_password": "Password:",
+    "login_btn": "Log in",
+    "login_invalid": "Login failed.",
+    "login_saved": "Login successful. ID stored."
   },
   "ig": {
     "title": "Ethicom: Human Evaluation",
@@ -1698,7 +1818,13 @@
     "rating_yes": "Yes",
     "rating_partial": "Partly",
     "rating_no": "No",
-    "rating_saved": "Rating saved."
+    "rating_saved": "Rating saved.",
+    "login_title": "Login",
+    "login_email": "Email:",
+    "login_password": "Password:",
+    "login_btn": "Log in",
+    "login_invalid": "Login failed.",
+    "login_saved": "Login successful. ID stored."
   },
   "om": {
     "title": "Ethicom: Human Evaluation",
@@ -1779,7 +1905,13 @@
     "rating_yes": "Yes",
     "rating_partial": "Partly",
     "rating_no": "No",
-    "rating_saved": "Rating saved."
+    "rating_saved": "Rating saved.",
+    "login_title": "Login",
+    "login_email": "Email:",
+    "login_password": "Password:",
+    "login_btn": "Log in",
+    "login_invalid": "Login failed.",
+    "login_saved": "Login successful. ID stored."
   },
   "rm": {
     "title": "Ethicom: Human Evaluation",
@@ -1860,7 +1992,13 @@
     "rating_yes": "Yes",
     "rating_partial": "Partly",
     "rating_no": "No",
-    "rating_saved": "Rating saved."
+    "rating_saved": "Rating saved.",
+    "login_title": "Login",
+    "login_email": "Email:",
+    "login_password": "Password:",
+    "login_btn": "Log in",
+    "login_invalid": "Login failed.",
+    "login_saved": "Login successful. ID stored."
   },
   "ta": {
     "title": "Ethicom: Human Evaluation",
@@ -1941,7 +2079,13 @@
     "rating_yes": "Yes",
     "rating_partial": "Partly",
     "rating_no": "No",
-    "rating_saved": "Rating saved."
+    "rating_saved": "Rating saved.",
+    "login_title": "Login",
+    "login_email": "Email:",
+    "login_password": "Password:",
+    "login_btn": "Log in",
+    "login_invalid": "Login failed.",
+    "login_saved": "Login successful. ID stored."
   },
   "te": {
     "title": "Ethicom: Human Evaluation",
@@ -2022,7 +2166,13 @@
     "rating_yes": "Yes",
     "rating_partial": "Partly",
     "rating_no": "No",
-    "rating_saved": "Rating saved."
+    "rating_saved": "Rating saved.",
+    "login_title": "Login",
+    "login_email": "Email:",
+    "login_password": "Password:",
+    "login_btn": "Log in",
+    "login_invalid": "Login failed.",
+    "login_saved": "Login successful. ID stored."
   },
   "th": {
     "title": "Ethicom: Human Evaluation",
@@ -2103,7 +2253,13 @@
     "rating_yes": "Yes",
     "rating_partial": "Partly",
     "rating_no": "No",
-    "rating_saved": "Rating saved."
+    "rating_saved": "Rating saved.",
+    "login_title": "Login",
+    "login_email": "Email:",
+    "login_password": "Password:",
+    "login_btn": "Log in",
+    "login_invalid": "Login failed.",
+    "login_saved": "Login successful. ID stored."
   },
   "tr": {
     "title": "Ethicom: Human Evaluation",
@@ -2184,7 +2340,13 @@
     "rating_yes": "Yes",
     "rating_partial": "Partly",
     "rating_no": "No",
-    "rating_saved": "Rating saved."
+    "rating_saved": "Rating saved.",
+    "login_title": "Login",
+    "login_email": "Email:",
+    "login_password": "Password:",
+    "login_btn": "Log in",
+    "login_invalid": "Login failed.",
+    "login_saved": "Login successful. ID stored."
   },
   "ur": {
     "title": "Ethicom: Human Evaluation",
@@ -2265,7 +2427,13 @@
     "rating_yes": "Yes",
     "rating_partial": "Partly",
     "rating_no": "No",
-    "rating_saved": "Rating saved."
+    "rating_saved": "Rating saved.",
+    "login_title": "Login",
+    "login_email": "Email:",
+    "login_password": "Password:",
+    "login_btn": "Log in",
+    "login_invalid": "Login failed.",
+    "login_saved": "Login successful. ID stored."
   },
   "vi": {
     "title": "Ethicom: Human Evaluation",
@@ -2346,7 +2514,13 @@
     "rating_yes": "Yes",
     "rating_partial": "Partly",
     "rating_no": "No",
-    "rating_saved": "Rating saved."
+    "rating_saved": "Rating saved.",
+    "login_title": "Login",
+    "login_email": "Email:",
+    "login_password": "Password:",
+    "login_btn": "Log in",
+    "login_invalid": "Login failed.",
+    "login_saved": "Login successful. ID stored."
   },
   "xh": {
     "title": "Ethicom: Human Evaluation",
@@ -2427,7 +2601,13 @@
     "rating_yes": "Yes",
     "rating_partial": "Partly",
     "rating_no": "No",
-    "rating_saved": "Rating saved."
+    "rating_saved": "Rating saved.",
+    "login_title": "Login",
+    "login_email": "Email:",
+    "login_password": "Password:",
+    "login_btn": "Log in",
+    "login_invalid": "Login failed.",
+    "login_saved": "Login successful. ID stored."
   },
   "yo": {
     "title": "Ethicom: Human Evaluation",
@@ -2508,7 +2688,13 @@
     "rating_yes": "Yes",
     "rating_partial": "Partly",
     "rating_no": "No",
-    "rating_saved": "Rating saved."
+    "rating_saved": "Rating saved.",
+    "login_title": "Login",
+    "login_email": "Email:",
+    "login_password": "Password:",
+    "login_btn": "Log in",
+    "login_invalid": "Login failed.",
+    "login_saved": "Login successful. ID stored."
   },
   "zu": {
     "title": "Ethicom: Human Evaluation",
@@ -2589,7 +2775,13 @@
     "rating_yes": "Yes",
     "rating_partial": "Partly",
     "rating_no": "No",
-    "rating_saved": "Rating saved."
+    "rating_saved": "Rating saved.",
+    "login_title": "Login",
+    "login_email": "Email:",
+    "login_password": "Password:",
+    "login_btn": "Log in",
+    "login_invalid": "Login failed.",
+    "login_saved": "Login successful. ID stored."
   },
   "nl": {
     "title": "Ethicom: Menselijke Evaluatie",
@@ -2670,6 +2862,12 @@
     "rating_yes": "Yes",
     "rating_partial": "Partly",
     "rating_no": "No",
-    "rating_saved": "Rating saved."
+    "rating_saved": "Rating saved.",
+    "login_title": "Login",
+    "login_email": "Email:",
+    "login_password": "Password:",
+    "login_btn": "Log in",
+    "login_invalid": "Login failed.",
+    "login_saved": "Login successful. ID stored."
   }
 }
