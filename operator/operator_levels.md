@@ -18,7 +18,9 @@
 | OP-11 | digital Yokozuna-Schwingerkönig-Mode |
 | OP-12 | fully digital, first non-human stage |
 
-Additional OP-9 sublevels may be created, starting with **OP-9.B**.
+Additional OP-9 sublevels may be created, starting with **OP-9.B**. Expert
+categories such as `.T` for translator or `.S[y]` for scientific fields are
+listed in [expert_classes.md](expert_classes.md).
 
 Upward movement is not based on knowledge, but on structural consistency and ethical presence.
 
