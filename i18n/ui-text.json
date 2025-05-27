@@ -25,6 +25,7 @@
     "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
     "signup_pw_short": "Password must be at least 8 characters.",
     "signup_saved": "Signup complete. ID stored.",
+    "signup_secret": "Authenticator secret: {secret}",
     "help_title": "Help – Operator Conduct",
     "help_items": [
       "Always check if your actions meet the ethics of responsibility.",
@@ -82,7 +83,9 @@
     "login_title": "Login",
     "login_email": "Email:",
     "login_password": "Password:",
+    "login_auth": "Authenticator code:",
     "login_btn": "Log in",
+    "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored.",
     "translation_notice": "Language not fully implemented. Contributions welcome."
@@ -113,6 +116,7 @@
     "signup_insecure_warn": "Unsicherer E-Mail-Anbieter. Bis OP-5 zulässig.",
     "signup_pw_short": "Passwort muss mindestens 8 Zeichen haben.",
     "signup_saved": "Registrierung abgeschlossen. ID gespeichert.",
+    "signup_secret": "Authenticator-Schlüssel: {secret}",
     "help_title": "Hilfe – Operator-Verhalten",
     "help_items": [
       "Prüfe jederzeit, ob dein Handeln der Verantwortungsethik entspricht.",
@@ -170,7 +174,9 @@
     "login_title": "Anmeldung",
     "login_email": "E-Mail:",
     "login_password": "Passwort:",
+    "login_auth": "Authenticator-Code:",
     "login_btn": "Einloggen",
+    "login_github": "GitHub-Login",
     "login_invalid": "Anmeldung fehlgeschlagen.",
     "login_saved": "Anmeldung erfolgreich. ID gespeichert."
   },
@@ -200,6 +206,7 @@
     "signup_insecure_warn": "Hôte de courriel non sécurisé. Toléré jusqu'à OP-5.",
     "signup_pw_short": "Le mot de passe doit comporter au moins 8 caractères.",
     "signup_saved": "Informations d'inscription enregistrées localement.",
+    "signup_secret": "Authenticator secret: {secret}",
     "access_title": "Paramètres d'accessibilité",
     "access_label_vision": "Pouvez-vous voir l'écran ?",
     "access_label_hearing": "Pouvez-vous entendre depuis cet appareil ?",
@@ -257,7 +264,9 @@
     "login_title": "Login",
     "login_email": "Email:",
     "login_password": "Password:",
+    "login_auth": "Authenticator code:",
     "login_btn": "Log in",
+    "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored.",
     "translation_notice": "Langue pas encore pleinement implémentée. Participation bienvenue."
@@ -293,6 +302,7 @@
     "signup_insecure_warn": "Proveedor de correo inseguro. Permitido solo hasta OP-5.",
     "signup_pw_short": "La contraseña debe tener al menos 8 caracteres.",
     "signup_saved": "Información de registro guardada localmente.",
+    "signup_secret": "Authenticator secret: {secret}",
     "help_title": "Ayuda – Conducta del Operador",
     "help_items": [
       "Comprueba siempre que tus acciones cumplan la ética de la responsabilidad.",
@@ -345,7 +355,9 @@
     "login_title": "Login",
     "login_email": "Email:",
     "login_password": "Password:",
+    "login_auth": "Authenticator code:",
     "login_btn": "Log in",
+    "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored.",
     "translation_notice": "Idioma aún no implementado por completo. Se agradece colaboración."
@@ -386,6 +398,7 @@
     "signup_insecure_warn": "Host de email inseguro. Permitido apenas até OP-5.",
     "signup_pw_short": "A senha deve ter no mínimo 8 caracteres.",
     "signup_saved": "Informações de cadastro salvas localmente.",
+    "signup_secret": "Authenticator secret: {secret}",
     "help_title": "Ajuda – Conduta do Operador",
     "help_items": [
       "Verifique sempre se suas ações seguem a ética da responsabilidade.",
@@ -433,7 +446,9 @@
     "login_title": "Login",
     "login_email": "Email:",
     "login_password": "Password:",
+    "login_auth": "Authenticator code:",
     "login_btn": "Log in",
+    "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored."
   },
@@ -472,6 +487,7 @@
     "signup_unsupported": "Email provider not supported. Use a secure host.",
     "signup_pw_short": "Password must be at least 8 characters.",
     "signup_saved": "Signup information saved locally.",
+    "signup_secret": "Authenticator secret: {secret}",
     "help_title": "Help – Operator Conduct",
     "help_items": [
       "Always check if your actions meet the ethics of responsibility.",
@@ -520,7 +536,9 @@
     "login_title": "Login",
     "login_email": "Email:",
     "login_password": "Password:",
+    "login_auth": "Authenticator code:",
     "login_btn": "Log in",
+    "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored.",
     "translation_notice": "Idioma ainda não totalmente implementado. Colaboração bem-vinda."
@@ -550,6 +568,7 @@
     "signup_unsupported": "Email provider not supported. Use a secure host.",
     "signup_pw_short": "Password must be at least 8 characters.",
     "signup_saved": "Signup information saved locally.",
+    "signup_secret": "Authenticator secret: {secret}",
     "help_title": "Help – Operator Conduct",
     "help_items": [
       "Always check if your actions meet the ethics of responsibility.",
@@ -608,7 +627,9 @@
     "login_title": "Login",
     "login_email": "Email:",
     "login_password": "Password:",
+    "login_auth": "Authenticator code:",
     "login_btn": "Log in",
+    "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored."
   },
@@ -637,6 +658,7 @@
     "signup_unsupported": "Email provider not supported. Use a secure host.",
     "signup_pw_short": "Password must be at least 8 characters.",
     "signup_saved": "Signup information saved locally.",
+    "signup_secret": "Authenticator secret: {secret}",
     "help_title": "Help – Operator Conduct",
     "help_items": [
       "Always check if your actions meet the ethics of responsibility.",
@@ -695,7 +717,9 @@
     "login_title": "Login",
     "login_email": "Email:",
     "login_password": "Password:",
+    "login_auth": "Authenticator code:",
     "login_btn": "Log in",
+    "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored."
   },
@@ -724,6 +748,7 @@
     "signup_unsupported": "Email provider not supported. Use a secure host.",
     "signup_pw_short": "Password must be at least 8 characters.",
     "signup_saved": "Signup information saved locally.",
+    "signup_secret": "Authenticator secret: {secret}",
     "help_title": "Help – Operator Conduct",
     "help_items": [
       "Always check if your actions meet the ethics of responsibility.",
@@ -782,7 +807,9 @@
     "login_title": "Login",
     "login_email": "Email:",
     "login_password": "Password:",
+    "login_auth": "Authenticator code:",
     "login_btn": "Log in",
+    "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored."
   },
@@ -811,6 +838,7 @@
     "signup_unsupported": "Email provider not supported. Use a secure host.",
     "signup_pw_short": "Password must be at least 8 characters.",
     "signup_saved": "Signup information saved locally.",
+    "signup_secret": "Authenticator secret: {secret}",
     "help_title": "Help – Operator Conduct",
     "help_items": [
       "Always check if your actions meet the ethics of responsibility.",
@@ -869,7 +897,9 @@
     "login_title": "Login",
     "login_email": "Email:",
     "login_password": "Password:",
+    "login_auth": "Authenticator code:",
     "login_btn": "Log in",
+    "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored."
   },
@@ -898,6 +928,7 @@
     "signup_unsupported": "Email provider not supported. Use a secure host.",
     "signup_pw_short": "Password must be at least 8 characters.",
     "signup_saved": "Signup information saved locally.",
+    "signup_secret": "Authenticator secret: {secret}",
     "help_title": "Help – Operator Conduct",
     "help_items": [
       "Always check if your actions meet the ethics of responsibility.",
@@ -956,7 +987,9 @@
     "login_title": "Login",
     "login_email": "Email:",
     "login_password": "Password:",
+    "login_auth": "Authenticator code:",
     "login_btn": "Log in",
+    "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored."
   },
@@ -996,6 +1029,7 @@
     "signup_insecure_warn": "Provider email non sicuro. Consentito solo fino a OP-5.",
     "signup_pw_short": "La password deve essere di almeno 8 caratteri.",
     "signup_saved": "Informazioni di registrazione salvate localmente.",
+    "signup_secret": "Authenticator secret: {secret}",
     "help_title": "Aiuto – Comportamento dell'Operatore",
     "help_items": [
       "Controlla sempre che le tue azioni rispettino l'etica della responsabilità.",
@@ -1043,7 +1077,9 @@
     "login_title": "Login",
     "login_email": "Email:",
     "login_password": "Password:",
+    "login_auth": "Authenticator code:",
     "login_btn": "Log in",
+    "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored.",
     "translation_notice": "Lingua non ancora completamente implementata. Collaborazione ben accetta."
@@ -1073,6 +1109,7 @@
     "signup_unsupported": "Email provider not supported. Use a secure host.",
     "signup_pw_short": "Password must be at least 8 characters.",
     "signup_saved": "Signup information saved locally.",
+    "signup_secret": "Authenticator secret: {secret}",
     "help_title": "Help – Operator Conduct",
     "help_items": [
       "Always check if your actions meet the ethics of responsibility.",
@@ -1131,7 +1168,9 @@
     "login_title": "Login",
     "login_email": "Email:",
     "login_password": "Password:",
+    "login_auth": "Authenticator code:",
     "login_btn": "Log in",
+    "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored."
   },
@@ -1160,6 +1199,7 @@
     "signup_unsupported": "Email provider not supported. Use a secure host.",
     "signup_pw_short": "Password must be at least 8 characters.",
     "signup_saved": "Signup information saved locally.",
+    "signup_secret": "Authenticator secret: {secret}",
     "help_title": "Help – Operator Conduct",
     "help_items": [
       "Always check if your actions meet the ethics of responsibility.",
@@ -1218,7 +1258,9 @@
     "login_title": "Login",
     "login_email": "Email:",
     "login_password": "Password:",
+    "login_auth": "Authenticator code:",
     "login_btn": "Log in",
+    "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored."
   },
@@ -1247,6 +1289,7 @@
     "signup_unsupported": "Email provider not supported. Use a secure host.",
     "signup_pw_short": "Password must be at least 8 characters.",
     "signup_saved": "Signup information saved locally.",
+    "signup_secret": "Authenticator secret: {secret}",
     "help_title": "Help – Operator Conduct",
     "help_items": [
       "Always check if your actions meet the ethics of responsibility.",
@@ -1305,7 +1348,9 @@
     "login_title": "Login",
     "login_email": "Email:",
     "login_password": "Password:",
+    "login_auth": "Authenticator code:",
     "login_btn": "Log in",
+    "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored."
   },
@@ -1334,6 +1379,7 @@
     "signup_unsupported": "Email provider not supported. Use a secure host.",
     "signup_pw_short": "Password must be at least 8 characters.",
     "signup_saved": "Signup information saved locally.",
+    "signup_secret": "Authenticator secret: {secret}",
     "help_title": "Help – Operator Conduct",
     "help_items": [
       "Always check if your actions meet the ethics of responsibility.",
@@ -1392,7 +1438,9 @@
     "login_title": "Login",
     "login_email": "Email:",
     "login_password": "Password:",
+    "login_auth": "Authenticator code:",
     "login_btn": "Log in",
+    "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored."
   },
@@ -1421,6 +1469,7 @@
     "signup_unsupported": "Email provider not supported. Use a secure host.",
     "signup_pw_short": "Password must be at least 8 characters.",
     "signup_saved": "Signup information saved locally.",
+    "signup_secret": "Authenticator secret: {secret}",
     "help_title": "Help – Operator Conduct",
     "help_items": [
       "Always check if your actions meet the ethics of responsibility.",
@@ -1479,7 +1528,9 @@
     "login_title": "Login",
     "login_email": "Email:",
     "login_password": "Password:",
+    "login_auth": "Authenticator code:",
     "login_btn": "Log in",
+    "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored."
   },
@@ -1508,6 +1559,7 @@
     "signup_unsupported": "Email provider not supported. Use a secure host.",
     "signup_pw_short": "Password must be at least 8 characters.",
     "signup_saved": "Signup information saved locally.",
+    "signup_secret": "Authenticator secret: {secret}",
     "help_title": "Help – Operator Conduct",
     "help_items": [
       "Always check if your actions meet the ethics of responsibility.",
@@ -1566,7 +1618,9 @@
     "login_title": "Login",
     "login_email": "Email:",
     "login_password": "Password:",
+    "login_auth": "Authenticator code:",
     "login_btn": "Log in",
+    "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored."
   },
@@ -1595,6 +1649,7 @@
     "signup_unsupported": "Email provider not supported. Use a secure host.",
     "signup_pw_short": "Password must be at least 8 characters.",
     "signup_saved": "Signup information saved locally.",
+    "signup_secret": "Authenticator secret: {secret}",
     "help_title": "Help – Operator Conduct",
     "help_items": [
       "Always check if your actions meet the ethics of responsibility.",
@@ -1653,7 +1708,9 @@
     "login_title": "Login",
     "login_email": "Email:",
     "login_password": "Password:",
+    "login_auth": "Authenticator code:",
     "login_btn": "Log in",
+    "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored."
   },
@@ -1682,6 +1739,7 @@
     "signup_unsupported": "Email provider not supported. Use a secure host.",
     "signup_pw_short": "Password must be at least 8 characters.",
     "signup_saved": "Signup information saved locally.",
+    "signup_secret": "Authenticator secret: {secret}",
     "help_title": "Help – Operator Conduct",
     "help_items": [
       "Always check if your actions meet the ethics of responsibility.",
@@ -1740,7 +1798,9 @@
     "login_title": "Login",
     "login_email": "Email:",
     "login_password": "Password:",
+    "login_auth": "Authenticator code:",
     "login_btn": "Log in",
+    "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored."
   },
@@ -1769,6 +1829,7 @@
     "signup_unsupported": "Email provider not supported. Use a secure host.",
     "signup_pw_short": "Password must be at least 8 characters.",
     "signup_saved": "Signup information saved locally.",
+    "signup_secret": "Authenticator secret: {secret}",
     "help_title": "Help – Operator Conduct",
     "help_items": [
       "Always check if your actions meet the ethics of responsibility.",
@@ -1827,7 +1888,9 @@
     "login_title": "Login",
     "login_email": "Email:",
     "login_password": "Password:",
+    "login_auth": "Authenticator code:",
     "login_btn": "Log in",
+    "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored."
   },
@@ -1856,6 +1919,7 @@
     "signup_unsupported": "Email provider not supported. Use a secure host.",
     "signup_pw_short": "Password must be at least 8 characters.",
     "signup_saved": "Signup information saved locally.",
+    "signup_secret": "Authenticator secret: {secret}",
     "help_title": "Help – Operator Conduct",
     "help_items": [
       "Always check if your actions meet the ethics of responsibility.",
@@ -1914,7 +1978,9 @@
     "login_title": "Login",
     "login_email": "Email:",
     "login_password": "Password:",
+    "login_auth": "Authenticator code:",
     "login_btn": "Log in",
+    "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored."
   },
@@ -1943,6 +2009,7 @@
     "signup_unsupported": "Email provider not supported. Use a secure host.",
     "signup_pw_short": "Password must be at least 8 characters.",
     "signup_saved": "Signup information saved locally.",
+    "signup_secret": "Authenticator secret: {secret}",
     "help_title": "Help – Operator Conduct",
     "help_items": [
       "Always check if your actions meet the ethics of responsibility.",
@@ -2001,7 +2068,9 @@
     "login_title": "Login",
     "login_email": "Email:",
     "login_password": "Password:",
+    "login_auth": "Authenticator code:",
     "login_btn": "Log in",
+    "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored."
   },
@@ -2030,6 +2099,7 @@
     "signup_unsupported": "Email provider not supported. Use a secure host.",
     "signup_pw_short": "Password must be at least 8 characters.",
     "signup_saved": "Signup information saved locally.",
+    "signup_secret": "Authenticator secret: {secret}",
     "help_title": "Help – Operator Conduct",
     "help_items": [
       "Always check if your actions meet the ethics of responsibility.",
@@ -2088,7 +2158,9 @@
     "login_title": "Login",
     "login_email": "Email:",
     "login_password": "Password:",
+    "login_auth": "Authenticator code:",
     "login_btn": "Log in",
+    "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored."
   },
@@ -2117,6 +2189,7 @@
     "signup_unsupported": "Email provider not supported. Use a secure host.",
     "signup_pw_short": "Password must be at least 8 characters.",
     "signup_saved": "Signup information saved locally.",
+    "signup_secret": "Authenticator secret: {secret}",
     "help_title": "Help – Operator Conduct",
     "help_items": [
       "Always check if your actions meet the ethics of responsibility.",
@@ -2175,7 +2248,9 @@
     "login_title": "Login",
     "login_email": "Email:",
     "login_password": "Password:",
+    "login_auth": "Authenticator code:",
     "login_btn": "Log in",
+    "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored."
   },
@@ -2204,6 +2279,7 @@
     "signup_unsupported": "Email provider not supported. Use a secure host.",
     "signup_pw_short": "Password must be at least 8 characters.",
     "signup_saved": "Signup information saved locally.",
+    "signup_secret": "Authenticator secret: {secret}",
     "help_title": "Help – Operator Conduct",
     "help_items": [
       "Always check if your actions meet the ethics of responsibility.",
@@ -2262,7 +2338,9 @@
     "login_title": "Login",
     "login_email": "Email:",
     "login_password": "Password:",
+    "login_auth": "Authenticator code:",
     "login_btn": "Log in",
+    "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored."
   },
@@ -2291,6 +2369,7 @@
     "signup_unsupported": "Email provider not supported. Use a secure host.",
     "signup_pw_short": "Password must be at least 8 characters.",
     "signup_saved": "Signup information saved locally.",
+    "signup_secret": "Authenticator secret: {secret}",
     "help_title": "Help – Operator Conduct",
     "help_items": [
       "Always check if your actions meet the ethics of responsibility.",
@@ -2349,7 +2428,9 @@
     "login_title": "Login",
     "login_email": "Email:",
     "login_password": "Password:",
+    "login_auth": "Authenticator code:",
     "login_btn": "Log in",
+    "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored."
   },
@@ -2378,6 +2459,7 @@
     "signup_unsupported": "Email provider not supported. Use a secure host.",
     "signup_pw_short": "Password must be at least 8 characters.",
     "signup_saved": "Signup information saved locally.",
+    "signup_secret": "Authenticator secret: {secret}",
     "help_title": "Help – Operator Conduct",
     "help_items": [
       "Always check if your actions meet the ethics of responsibility.",
@@ -2436,7 +2518,9 @@
     "login_title": "Login",
     "login_email": "Email:",
     "login_password": "Password:",
+    "login_auth": "Authenticator code:",
     "login_btn": "Log in",
+    "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored.",
     "translation_notice": "语言尚未完全实现，欢迎协助翻译。"
@@ -2466,6 +2550,7 @@
     "signup_unsupported": "Email provider not supported. Use a secure host.",
     "signup_pw_short": "Password must be at least 8 characters.",
     "signup_saved": "Signup information saved locally.",
+    "signup_secret": "Authenticator secret: {secret}",
     "help_title": "Help – Operator Conduct",
     "help_items": [
       "Always check if your actions meet the ethics of responsibility.",
@@ -2524,7 +2609,9 @@
     "login_title": "Login",
     "login_email": "Email:",
     "login_password": "Password:",
+    "login_auth": "Authenticator code:",
     "login_btn": "Log in",
+    "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored."
   },
@@ -2553,6 +2640,7 @@
     "signup_unsupported": "Email provider not supported. Use a secure host.",
     "signup_pw_short": "Password must be at least 8 characters.",
     "signup_saved": "Signup information saved locally.",
+    "signup_secret": "Authenticator secret: {secret}",
     "help_title": "Help – Operator Conduct",
     "help_items": [
       "Always check if your actions meet the ethics of responsibility.",
@@ -2611,7 +2699,9 @@
     "login_title": "Login",
     "login_email": "Email:",
     "login_password": "Password:",
+    "login_auth": "Authenticator code:",
     "login_btn": "Log in",
+    "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored."
   },
@@ -2640,6 +2730,7 @@
     "signup_unsupported": "Email provider not supported. Use a secure host.",
     "signup_pw_short": "Password must be at least 8 characters.",
     "signup_saved": "Signup information saved locally.",
+    "signup_secret": "Authenticator secret: {secret}",
     "help_title": "Help – Operator Conduct",
     "help_items": [
       "Always check if your actions meet the ethics of responsibility.",
@@ -2698,7 +2789,9 @@
     "login_title": "Login",
     "login_email": "Email:",
     "login_password": "Password:",
+    "login_auth": "Authenticator code:",
     "login_btn": "Log in",
+    "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored."
   },
@@ -2727,6 +2820,7 @@
     "signup_unsupported": "Email provider not supported. Use a secure host.",
     "signup_pw_short": "Password must be at least 8 characters.",
     "signup_saved": "Signup information saved locally.",
+    "signup_secret": "Authenticator secret: {secret}",
     "help_title": "Help – Operator Conduct",
     "help_items": [
       "Always check if your actions meet the ethics of responsibility.",
@@ -2785,7 +2879,9 @@
     "login_title": "Login",
     "login_email": "Email:",
     "login_password": "Password:",
+    "login_auth": "Authenticator code:",
     "login_btn": "Log in",
+    "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored."
   },
@@ -2814,6 +2910,7 @@
     "signup_unsupported": "Email provider not supported. Use a secure host.",
     "signup_pw_short": "Password must be at least 8 characters.",
     "signup_saved": "Signup information saved locally.",
+    "signup_secret": "Authenticator secret: {secret}",
     "help_title": "Help – Operator Conduct",
     "help_items": [
       "Always check if your actions meet the ethics of responsibility.",
@@ -2872,7 +2969,9 @@
     "login_title": "Login",
     "login_email": "Email:",
     "login_password": "Password:",
+    "login_auth": "Authenticator code:",
     "login_btn": "Log in",
+    "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored."
   }

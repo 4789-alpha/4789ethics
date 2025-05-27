@@ -22,7 +22,6 @@ function initAccessibilitySetup() {
   const simple = saved.simple || "no";
 
   container.innerHTML = `
-    <h3 data-ui="access_title">Accessibility Setup</h3>
     <label for="vision_select" data-ui="access_label_vision">Can you see the screen?</label>
     <select id="vision_select">
       <option value="yes" data-ui="access_opt_yes">Yes</option>

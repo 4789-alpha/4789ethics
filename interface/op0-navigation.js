@@ -23,7 +23,12 @@
       `<a href="${base}interface/login.html">Login</a>`+
       `<a href="${base}wings/ratings.html">Ratings</a>`+
       `<a href="${base}interface/signup.html">Signup</a>`+
-      `<a href="${base}interface/shneiderman.html">Designregeln</a>`+
+      `<a href="${base}interface/genealogie.html">Genealogie</a>`+
+      `<a href="${base}interface/shneiderman.html">Shneiderman</a>`+
+      `<a href="${base}interface/nielsen.html">Nielsen</a>`+
+      `<a href="${base}interface/norman.html">Norman</a>`+
+      `<a href="${base}interface/material.html">Material</a>`+
+      `<a href="${base}interface/apple-hig.html">Apple\u00a0HIG</a>`+
       `<a href="${base}README.html">README</a>`+
       '</nav>';
     document.body.insertAdjacentHTML('afterbegin', navHtml);

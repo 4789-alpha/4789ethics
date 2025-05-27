@@ -12,4 +12,4 @@
 ## Active: conditional
 Triggered when public trust or signature validation is necessary.
 
-> Shell-Kommentar: kill all show, show the kill, kill the unethic root
+> Shell-Kommentar: purge all noise, show the cleanup, remove unethical roots
