@@ -8,3 +8,4 @@
 - Humor ist zulässig, sofern Verantwortung und Klarheit gewahrt bleiben.
 - Registrierungsdaten werden offline gehasht gespeichert. Keine Gewährleistung für absolute Anonymität.
 - Gerätedaten werden ebenfalls offline gehasht gespeichert.
+- Beim optionalen GitHub-Login erfolgt die Anmeldung über GitHub. Der zurückgegebene Benutzername wird offline gehasht gespeichert.

@@ -4,7 +4,7 @@
     "title": "Ecosia \u2013 Ethical Search Engine",
     "url": "https://www.ecosia.org/",
     "category": "digital infrastructure / search",
-    "image": "source-images/src-0002.svg",
+    "image": "sources/images/institutions/src-0002.svg",
     "status": "pending"
   },
   {
@@ -12,7 +12,7 @@
     "title": "Patagonia \u2013 Environmental Responsibility",
     "url": "https://www.patagonia.com/",
     "category": "apparel / environmental leadership",
-    "image": "source-images/src-0003.svg",
+    "image": "sources/images/institutions/src-0003.svg",
     "status": "pending"
   },
   {
@@ -20,7 +20,7 @@
     "title": "The Green Web Foundation",
     "url": "https://www.thegreenwebfoundation.org/",
     "category": "infrastructure / green hosting",
-    "image": "source-images/src-0004.svg",
+    "image": "sources/images/institutions/src-0004.svg",
     "status": "pending"
   },
   {
@@ -28,7 +28,7 @@
     "title": "Signal \u2013 Encrypted Communication",
     "url": "https://signal.org/",
     "category": "privacy / communication",
-    "image": "source-images/src-0005.svg",
+    "image": "sources/images/institutions/src-0005.svg",
     "status": "pending"
   },
   {
@@ -36,7 +36,7 @@
     "title": "Permaculture Research Institute",
     "url": "https://www.permaculturenews.org/",
     "category": "ecology / agriculture",
-    "image": "source-images/src-0006.svg",
+    "image": "sources/images/institutions/src-0006.svg",
     "status": "pending"
   }
 ]
