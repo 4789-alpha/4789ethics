@@ -44,7 +44,8 @@
       <h3>Tanna Main Color</h3>
       <label>R: <input type="range" id="tanna_r" min="0" max="255" value="34"/> <span id="tanna_r_val">34</span></label><br/>
       <label>G: <input type="range" id="tanna_g" min="0" max="255" value="139"/> <span id="tanna_g_val">139</span></label><br/>
-      <label>B: <input type="range" id="tanna_b" min="0" max="255" value="34"/> <span id="tanna_b_val">34</span></label><br/>
+      <label>B: <input type="range" id="tanna_b" min="0" max="255" value="34"/> <span id="tanna_b_val">34</span></label>
+      <span id="tanna_preview" class="color-preview"></span><br/>
       <span id="tanna_contrast" style="color:red;display:none;">Low contrast with logos</span>
     </div>
     <div id="background_settings" class="card">
@@ -66,6 +67,7 @@
       <label>R: <input type="range" id="text_r" min="0" max="255" value="0"/> <span id="text_r_val">0</span></label><br/>
       <label>G: <input type="range" id="text_g" min="0" max="255" value="0"/> <span id="text_g_val">0</span></label><br/>
       <label>B: <input type="range" id="text_b" min="0" max="255" value="0"/> <span id="text_b_val">0</span></label>
+      <span id="text_preview" class="color-preview"></span>
     </div>
     <div id="foreground_opacity" class="card">
       <label for="fg_opacity">Foreground transparency: <span id="fg_opacity_val">0</span>%</label>
@@ -120,9 +122,11 @@
           b.innerHTML=`<strong>${label}</strong><br>
           <label>R: <input type="range" min="0" max="255" value="${base.r}"> <span>${base.r}</span></label><br>
           <label>G: <input type="range" min="0" max="255" value="${base.g}"> <span>${base.g}</span></label><br>
-          <label>B: <input type="range" min="0" max="255" value="${base.b}"> <span>${base.b}</span></label>`;
+          <label>B: <input type="range" min="0" max="255" value="${base.b}"> <span>${base.b}</span></label>
+          <span class="color-preview"></span>`;
           const inputs=b.querySelectorAll('input');
           const spans=b.querySelectorAll('span');
+          const preview=b.querySelector('.color-preview');
           function upd(){
             const r=+inputs[0].value,g=+inputs[1].value,bv=+inputs[2].value;
             spans[0].textContent=r;spans[1].textContent=g;spans[2].textContent=bv;
@@ -130,6 +134,7 @@
             document.documentElement.style.setProperty(name,col);
             stored[name]=col;
             localStorage.setItem('ethicom_colors',JSON.stringify(stored));
+            if(preview) preview.style.backgroundColor=col;
           }
           inputs.forEach(i=>i.addEventListener('input',upd));
           wrap.appendChild(b); upd();
@@ -164,6 +169,7 @@
       const trv = document.getElementById('tanna_r_val');
       const tgv = document.getElementById('tanna_g_val');
       const tbv = document.getElementById('tanna_b_val');
+      const tp = document.getElementById('tanna_preview');
       const warn = document.getElementById('tanna_contrast');
       function lum(v){v/=255;return v<=0.03928?v/12.92:Math.pow((v+0.055)/1.055,2.4);}
       function contrast(c){const l1=0.2126*lum(c.r)+0.7152*lum(c.g)+0.0722*lum(c.b);const l2=0.2126*lum(34)+0.7152*lum(139)+0.0722*lum(34);return (Math.max(l1,l2)+0.05)/(Math.min(l1,l2)+0.05);}
@@ -183,6 +189,7 @@
           document.documentElement.style.setProperty('--header-bg',h);
           document.documentElement.style.setProperty('--nav-bg',n);
         }
+        if(tp) tp.style.backgroundColor=`rgb(${c.r},${c.g},${c.b})`;
         warn.style.display=contrast(c)<2?'inline':'none';
       }
       if(tr&&tg&&tb){const s=JSON.parse(localStorage.getItem('ethicom_tanna_color')||'{"r":34,"g":139,"b":34}');tr.value=s.r;tg.value=s.g;tb.value=s.b;upd();[tr,tg,tb].forEach(el=>el.addEventListener('input',upd));}
@@ -233,6 +240,7 @@
       const txrv = document.getElementById('text_r_val');
       const txgv = document.getElementById('text_g_val');
       const txbv = document.getElementById('text_b_val');
+      const textPrev = document.getElementById('text_preview');
       function updText(){
         const c={r:+txr.value,g:+txg.value,b:+txb.value};
         txrv.textContent=c.r;
@@ -240,6 +248,7 @@
         txbv.textContent=c.b;
         document.documentElement.style.setProperty('--text-color',`rgb(${c.r},${c.g},${c.b})`);
         localStorage.setItem('ethicom_text_color',JSON.stringify(c));
+        if(textPrev) textPrev.style.backgroundColor=`rgb(${c.r},${c.g},${c.b})`;
       }
       if(txr&&txg&&txb){
         let def;
