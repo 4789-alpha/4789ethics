@@ -83,4 +83,8 @@ function startGithubLogin() {
   window.location.href = '/auth/github';
 }
 
+function startGoogleLogin() {
+  window.location.href = '/auth/google';
+}
+
 window.addEventListener('DOMContentLoaded', initLogin);
