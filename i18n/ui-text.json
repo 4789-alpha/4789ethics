@@ -83,6 +83,7 @@
     "login_title": "Login",
     "login_email": "Email:",
     "login_password": "Password:",
+    "login_time_hint": "Current time: {time}",
     "login_auth": "Authenticator code:",
     "login_btn": "Log in",
     "login_github": "Login with GitHub",
@@ -174,6 +175,7 @@
     "login_title": "Anmeldung",
     "login_email": "E-Mail:",
     "login_password": "Passwort:",
+    "login_time_hint": "Aktuelle Uhrzeit: {time}",
     "login_auth": "Authenticator-Code:",
     "login_btn": "Einloggen",
     "login_github": "GitHub-Login",
@@ -269,7 +271,8 @@
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored.",
-    "translation_notice": "Langue pas encore pleinement implémentée. Participation bienvenue."
+    "translation_notice": "Langue pas encore pleinement implémentée. Participation bienvenue.",
+    "login_time_hint": "Current time: {time}"
   },
   "es": {
     "title": "Ethicom: Evaluación Humana",
@@ -360,7 +363,8 @@
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored.",
-    "translation_notice": "Idioma aún no implementado por completo. Se agradece colaboración."
+    "translation_notice": "Idioma aún no implementado por completo. Se agradece colaboración.",
+    "login_time_hint": "Current time: {time}"
   },
   "pt": {
     "title": "Ethicom: Avaliação Humana",
@@ -450,7 +454,8 @@
     "login_btn": "Log in",
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
-    "login_saved": "Login successful. ID stored."
+    "login_saved": "Login successful. ID stored.",
+    "login_time_hint": "Current time: {time}"
   },
   "zh": {
     "title": "Ethicom：人工评估",
@@ -541,7 +546,8 @@
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored.",
-    "translation_notice": "Idioma ainda não totalmente implementado. Colaboração bem-vinda."
+    "translation_notice": "Idioma ainda não totalmente implementado. Colaboração bem-vinda.",
+    "login_time_hint": "Current time: {time}"
   },
   "hi": {
     "title": "Ethicom: मानवीय मूल्यांकन",
@@ -631,7 +637,8 @@
     "login_btn": "Log in",
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
-    "login_saved": "Login successful. ID stored."
+    "login_saved": "Login successful. ID stored.",
+    "login_time_hint": "Current time: {time}"
   },
   "ar": {
     "title": "إيثيكوم: التقييم البشري",
@@ -721,7 +728,8 @@
     "login_btn": "Log in",
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
-    "login_saved": "Login successful. ID stored."
+    "login_saved": "Login successful. ID stored.",
+    "login_time_hint": "Current time: {time}"
   },
   "ja": {
     "title": "Ethicom：人間による評価",
@@ -811,7 +819,8 @@
     "login_btn": "Log in",
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
-    "login_saved": "Login successful. ID stored."
+    "login_saved": "Login successful. ID stored.",
+    "login_time_hint": "Current time: {time}"
   },
   "sw": {
     "title": "Ethicom: Tathmini ya Kibinadamu",
@@ -901,7 +910,8 @@
     "login_btn": "Log in",
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
-    "login_saved": "Login successful. ID stored."
+    "login_saved": "Login successful. ID stored.",
+    "login_time_hint": "Current time: {time}"
   },
   "ru": {
     "title": "Ethicom: Оценка человеком",
@@ -991,7 +1001,8 @@
     "login_btn": "Log in",
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
-    "login_saved": "Login successful. ID stored."
+    "login_saved": "Login successful. ID stored.",
+    "login_time_hint": "Current time: {time}"
   },
   "it": {
     "title": "Ethicom: Valutazione Umana",
@@ -1082,7 +1093,8 @@
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored.",
-    "translation_notice": "Lingua non ancora completamente implementata. Collaborazione ben accetta."
+    "translation_notice": "Lingua non ancora completamente implementata. Collaborazione ben accetta.",
+    "login_time_hint": "Current time: {time}"
   },
   "ko": {
     "title": "Ethicom: 인간 평가",
@@ -1172,7 +1184,8 @@
     "login_btn": "Log in",
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
-    "login_saved": "Login successful. ID stored."
+    "login_saved": "Login successful. ID stored.",
+    "login_time_hint": "Current time: {time}"
   },
   "fa": {
     "title": "ایتیکام: ارزیابی انسانی",
@@ -1262,7 +1275,8 @@
     "login_btn": "Log in",
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
-    "login_saved": "Login successful. ID stored."
+    "login_saved": "Login successful. ID stored.",
+    "login_time_hint": "Current time: {time}"
   },
   "pl": {
     "title": "Ethicom: Ocena Ludzka",
@@ -1352,7 +1366,8 @@
     "login_btn": "Log in",
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
-    "login_saved": "Login successful. ID stored."
+    "login_saved": "Login successful. ID stored.",
+    "login_time_hint": "Current time: {time}"
   },
   "am": {
     "title": "Ethicom: Human Evaluation",
@@ -1442,7 +1457,8 @@
     "login_btn": "Log in",
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
-    "login_saved": "Login successful. ID stored."
+    "login_saved": "Login successful. ID stored.",
+    "login_time_hint": "Current time: {time}"
   },
   "af": {
     "title": "Ethicom: Human Evaluation",
@@ -1532,7 +1548,8 @@
     "login_btn": "Log in",
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
-    "login_saved": "Login successful. ID stored."
+    "login_saved": "Login successful. ID stored.",
+    "login_time_hint": "Current time: {time}"
   },
   "bn": {
     "title": "Ethicom: Human Evaluation",
@@ -1622,7 +1639,8 @@
     "login_btn": "Log in",
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
-    "login_saved": "Login successful. ID stored."
+    "login_saved": "Login successful. ID stored.",
+    "login_time_hint": "Current time: {time}"
   },
   "ha": {
     "title": "Ethicom: Human Evaluation",
@@ -1712,7 +1730,8 @@
     "login_btn": "Log in",
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
-    "login_saved": "Login successful. ID stored."
+    "login_saved": "Login successful. ID stored.",
+    "login_time_hint": "Current time: {time}"
   },
   "id": {
     "title": "Ethicom: Human Evaluation",
@@ -1802,7 +1821,8 @@
     "login_btn": "Log in",
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
-    "login_saved": "Login successful. ID stored."
+    "login_saved": "Login successful. ID stored.",
+    "login_time_hint": "Current time: {time}"
   },
   "ig": {
     "title": "Ethicom: Human Evaluation",
@@ -1892,7 +1912,8 @@
     "login_btn": "Log in",
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
-    "login_saved": "Login successful. ID stored."
+    "login_saved": "Login successful. ID stored.",
+    "login_time_hint": "Current time: {time}"
   },
   "om": {
     "title": "Ethicom: Human Evaluation",
@@ -1982,7 +2003,8 @@
     "login_btn": "Log in",
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
-    "login_saved": "Login successful. ID stored."
+    "login_saved": "Login successful. ID stored.",
+    "login_time_hint": "Current time: {time}"
   },
   "rm": {
     "title": "Ethicom: Human Evaluation",
@@ -2072,7 +2094,8 @@
     "login_btn": "Log in",
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
-    "login_saved": "Login successful. ID stored."
+    "login_saved": "Login successful. ID stored.",
+    "login_time_hint": "Current time: {time}"
   },
   "ta": {
     "title": "Ethicom: Human Evaluation",
@@ -2162,7 +2185,8 @@
     "login_btn": "Log in",
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
-    "login_saved": "Login successful. ID stored."
+    "login_saved": "Login successful. ID stored.",
+    "login_time_hint": "Current time: {time}"
   },
   "te": {
     "title": "Ethicom: Human Evaluation",
@@ -2252,7 +2276,8 @@
     "login_btn": "Log in",
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
-    "login_saved": "Login successful. ID stored."
+    "login_saved": "Login successful. ID stored.",
+    "login_time_hint": "Current time: {time}"
   },
   "th": {
     "title": "Ethicom: Human Evaluation",
@@ -2342,7 +2367,8 @@
     "login_btn": "Log in",
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
-    "login_saved": "Login successful. ID stored."
+    "login_saved": "Login successful. ID stored.",
+    "login_time_hint": "Current time: {time}"
   },
   "tr": {
     "title": "Ethicom: Human Evaluation",
@@ -2432,7 +2458,8 @@
     "login_btn": "Log in",
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
-    "login_saved": "Login successful. ID stored."
+    "login_saved": "Login successful. ID stored.",
+    "login_time_hint": "Current time: {time}"
   },
   "ur": {
     "title": "Ethicom: Human Evaluation",
@@ -2523,7 +2550,8 @@
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored.",
-    "translation_notice": "语言尚未完全实现，欢迎协助翻译。"
+    "translation_notice": "语言尚未完全实现，欢迎协助翻译。",
+    "login_time_hint": "Current time: {time}"
   },
   "vi": {
     "title": "Ethicom: Human Evaluation",
@@ -2613,7 +2641,8 @@
     "login_btn": "Log in",
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
-    "login_saved": "Login successful. ID stored."
+    "login_saved": "Login successful. ID stored.",
+    "login_time_hint": "Current time: {time}"
   },
   "xh": {
     "title": "Ethicom: Human Evaluation",
@@ -2703,7 +2732,8 @@
     "login_btn": "Log in",
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
-    "login_saved": "Login successful. ID stored."
+    "login_saved": "Login successful. ID stored.",
+    "login_time_hint": "Current time: {time}"
   },
   "yo": {
     "title": "Ethicom: Human Evaluation",
@@ -2793,7 +2823,8 @@
     "login_btn": "Log in",
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
-    "login_saved": "Login successful. ID stored."
+    "login_saved": "Login successful. ID stored.",
+    "login_time_hint": "Current time: {time}"
   },
   "zu": {
     "title": "Ethicom: Human Evaluation",
@@ -2883,7 +2914,8 @@
     "login_btn": "Log in",
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
-    "login_saved": "Login successful. ID stored."
+    "login_saved": "Login successful. ID stored.",
+    "login_time_hint": "Current time: {time}"
   },
   "nl": {
     "title": "Ethicom: Menselijke Evaluatie",
@@ -2973,6 +3005,7 @@
     "login_btn": "Log in",
     "login_github": "Login with GitHub",
     "login_invalid": "Login failed.",
-    "login_saved": "Login successful. ID stored."
+    "login_saved": "Login successful. ID stored.",
+    "login_time_hint": "Current time: {time}"
   }
 }
