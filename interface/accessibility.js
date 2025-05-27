@@ -5,6 +5,7 @@ function applyAccessibilityFromStorage() {
   document.body.classList.toggle("large-font", font === "large");
   const enabled = simple === "yes";
   document.body.classList.toggle("simple-mode", enabled);
+  document.body.classList.add("highlight-fonts");
   localStorage.setItem("simple_mode", enabled ? "true" : "false");
 }
 

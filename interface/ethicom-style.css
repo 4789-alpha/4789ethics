@@ -13,6 +13,7 @@
   --nav-bg: rgba(51, 51, 51, 0.9);
   --card-alpha-bg: rgba(43, 43, 43, 0.92);
   --accent-color: #ccaa22;
+  --highlight-text-color: var(--accent-color);
   --foreground-opacity: 0;
 }
 
@@ -406,7 +407,7 @@ body::before {
   inset: 0;
   pointer-events: none;
   background: rgba(0, 0, 0, var(--foreground-opacity));
-  z-index: 0;
+  z-index: -1;
 }
 
 /* Modified logo used in citation view */
@@ -594,5 +595,12 @@ body.left-layout main {
   color: var(--accent-color);
   font-size: 0.9em;
   margin-top: 0.5em;
+}
+
+/* Highlight all text with accent color and keep it above overlays */
+.highlight-fonts, .highlight-fonts * {
+  color: var(--highlight-text-color) !important;
+  position: relative;
+  z-index: 1;
 }
 
