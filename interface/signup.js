@@ -73,8 +73,10 @@ function handleSignup() {
     .then(data => {
       const sig = { email, id: data.id, op_level: 'OP-1' };
       localStorage.setItem('ethicom_signature', JSON.stringify(sig));
-      statusEl.textContent = uiText.signup_saved || 'Signup complete. ID stored.';
-      setTimeout(() => { window.location.href = 'ethicom.html'; }, 500);
+      const msgSaved = uiText.signup_saved || 'Signup complete. ID stored.';
+      const msgSecret = (uiText.signup_secret || 'Authenticator secret: {secret}')
+        .replace('{secret}', data.secret);
+      statusEl.textContent = msgSaved + '\n' + msgSecret;
     })
     .catch(() => {
       statusEl.textContent = 'Signup failed.';

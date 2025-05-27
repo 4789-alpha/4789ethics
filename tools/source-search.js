@@ -2,7 +2,12 @@ const fs = require('fs');
 const path = require('path');
 
 function loadSources(type) {
-  const dir = path.join(__dirname, '..', 'sources', type === 'person' ? 'persons' : 'institutions');
+  const dir = path.join(
+    __dirname,
+    '..',
+    'sources',
+    type === 'person' ? 'persons' : type === 'fish' ? 'fish' : 'institutions'
+  );
   if (!fs.existsSync(dir)) return [];
   const files = fs.readdirSync(dir).filter(f => f.endsWith('.json'));
   const items = [];
@@ -82,4 +87,4 @@ if (require.main === module) {
   });
 }
 
-module.exports = { search };
+module.exports = { search, loadSources };
