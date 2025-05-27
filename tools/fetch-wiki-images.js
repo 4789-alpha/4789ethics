@@ -34,9 +34,9 @@ async function main() {
       const img = info.originalimage?.source || info.thumbnail?.source;
       if (!img) continue;
       const ext = path.extname(new URL(img).pathname).split('?')[0] || '.jpg';
-      const out = path.join(__dirname, '..', 'person-images', `${c.human_id}${ext}`);
+      const out = path.join(__dirname, '..', 'sources', 'images', 'persons', `${c.human_id}${ext}`);
       await download(img, out);
-      c.image = `person-images/${path.basename(out)}`;
+      c.image = `sources/images/persons/${path.basename(out)}`;
       changed = true;
       console.log('Saved', c.name);
     } catch (err) {

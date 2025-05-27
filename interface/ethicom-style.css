@@ -428,6 +428,12 @@ body::before {
   margin-bottom: 0.5em;
 }
 
+.fish-image {
+  width: 60px;
+  height: auto;
+}
+
+
 .op-logo-group {
   white-space: nowrap;
 }

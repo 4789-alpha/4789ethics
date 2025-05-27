@@ -59,6 +59,7 @@ See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
 | `sources/` | Evaluated sources and candidate lists |
 | `sources/persons/` | Lists of historical persons |
 | `sources/institutions/` | Evaluated organizations and candidate sources |
+| `sources/images/` | Pictures for institutions (`institutions/`), persons (`persons/`), and fish (`fish/`) |
 | `test/` | Node.js test suite |
 | `tools/` | Utility scripts (e.g., trust-demotion engine, Python API example) |
 | `use_cases/` | Example scenarios and dissemination ideas |
@@ -233,7 +234,7 @@ consistent even offline.
 ### Wiki Image Loader [⇧](#contents)
 
 Run `node tools/fetch-wiki-images.js` to download public thumbnails from
-Wikipedia. The script saves each file in `person-images/` and updates
+Wikipedia. The script saves each file in `sources/images/persons/` and updates
 `sources/persons/human-op0-candidates.json`. Review the licenses of all
 downloaded images as noted in `LICENSE.txt` and `DISCLAIMERS.md`.
 
