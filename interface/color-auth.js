@@ -158,7 +158,9 @@ function verifyColorAuth(locale) {
 
   localStorage.setItem('ethicom_color_time', String(now));
 
-  const stored = localStorage.getItem('ethicom_color');
+  const sig = JSON.parse(localStorage.getItem('ethicom_signature') || '{}');
+  const stored =
+    (sig.private && sig.private.color) || localStorage.getItem('ethicom_color');
   const colors = Object.keys(locale.map);
   const list = colors.join(', ');
   const question = stored
@@ -179,7 +181,10 @@ function verifyColorAuth(locale) {
       alert(locale.mismatch);
     }
   } else {
-    localStorage.setItem('ethicom_color', normalized);
+    if (!sig.private) sig.private = {};
+    sig.private.color = normalized;
+    localStorage.setItem('ethicom_signature', JSON.stringify(sig));
+    localStorage.removeItem('ethicom_color');
     alert(locale.saved.replace('{color}', normalized));
   }
 }

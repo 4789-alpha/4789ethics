@@ -97,6 +97,7 @@ See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
 **Settings are stored per device using browser localStorage and are not synced globally.**
 **Ratings from OP-1 onward are stored globally with the assigned signature ID. The email used during signup is hashed and never exposed.**
 **Color verification of the chosen primary color starts once a user holds an OP-1 signature.**
+**From that level, the color choice is stored privately inside the user's signature and never shown publicly.**
 ### OP-Permissions [⇧](#contents)
 Operator actions by ethical level are defined in:
 → [`permissions/op-permissions-expanded.json`](permissions/op-permissions-expanded.json)
