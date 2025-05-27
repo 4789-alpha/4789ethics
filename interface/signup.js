@@ -64,19 +64,21 @@ function handleSignup() {
     return;
   }
 
-  function generateSigId() {
-    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-    let out = '';
-    for (let i = 0; i < 12; i++) {
-      out += chars[Math.floor(Math.random() * chars.length)];
-    }
-    return 'SIG-' + out;
-  }
-
-  const sig = { email, id: generateSigId(), op_level: 'OP-1' };
-  localStorage.setItem('ethicom_signature', JSON.stringify(sig));
-  statusEl.textContent = uiText.signup_saved || 'Signup information saved locally.';
-  setTimeout(() => { window.location.href = 'ethicom.html'; }, 500);
+  fetch('api/signup', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email, password })
+  })
+    .then(r => r.json())
+    .then(data => {
+      const sig = { email, id: data.id, op_level: 'OP-1' };
+      localStorage.setItem('ethicom_signature', JSON.stringify(sig));
+      statusEl.textContent = uiText.signup_saved || 'Signup complete. ID stored.';
+      setTimeout(() => { window.location.href = 'ethicom.html'; }, 500);
+    })
+    .catch(() => {
+      statusEl.textContent = 'Signup failed.';
+    });
 }
 
 window.addEventListener('DOMContentLoaded', initSignup);

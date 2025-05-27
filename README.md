@@ -85,7 +85,7 @@ See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
 | [wings/ratings.html](wings/ratings.html) | Mobile ratings summary |
 | `interface_OLD/` | Historical demo of the first interface generation |
 **Settings are stored per device using browser localStorage and are not synced globally.**
-**Ratings from OP-1 onward are stored globally with the assigned signature ID. The email used during signup remains private and is never exposed.**
+**Ratings from OP-1 onward are stored globally with the assigned signature ID. The email used during signup is hashed and never exposed.**
 **Color verification of the chosen primary color starts once a user holds an OP-1 signature.**
 ### OP-Permissions [⇧](#contents)
 Operator actions by ethical level are defined in:

@@ -24,7 +24,7 @@
     "signup_unsupported": "Email provider not supported. Use a secure host.",
     "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
     "signup_pw_short": "Password must be at least 8 characters.",
-    "signup_saved": "Signup information saved locally.",
+    "signup_saved": "Signup complete. ID stored.",
     "help_title": "Help – Operator Conduct",
     "help_items": [
       "Always check if your actions meet the ethics of responsibility.",
@@ -105,7 +105,7 @@
     "signup_unsupported": "E-Mail-Anbieter nicht unterstützt. Nutze einen sicheren Host.",
     "signup_insecure_warn": "Unsicherer E-Mail-Anbieter. Bis OP-5 zulässig.",
     "signup_pw_short": "Passwort muss mindestens 8 Zeichen haben.",
-    "signup_saved": "Registrierungsdaten lokal gespeichert.",
+    "signup_saved": "Registrierung abgeschlossen. ID gespeichert.",
     "help_title": "Hilfe – Operator-Verhalten",
     "help_items": [
       "Prüfe jederzeit, ob dein Handeln der Verantwortungsethik entspricht.",
