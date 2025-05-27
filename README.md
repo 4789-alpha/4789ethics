@@ -37,6 +37,7 @@ See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
 - [API Access Control](#api-access-control)
 - [OP Function Bundles](#op-function-bundles)
 - [Currency Synchronization](#currency-synchronization)
+- [Wiki Image Loader](#wiki-image-loader)
 - [Roadmap](#roadmap)
 - [Local Deployment](#local-deployment)
 - [Running Tests](#running-tests)
@@ -222,6 +223,13 @@ Git commit history.
 Run `node tools/currency-sync.js` to download current exchange rates. The
 script saves them in `references/exchange-rates.json` so comparisons remain
 consistent even offline.
+
+### Wiki Image Loader [⇧](#contents)
+
+Run `node tools/fetch-wiki-images.js` to download public thumbnails from
+Wikipedia. The script saves each file in `person-images/` and updates
+`sources/persons/human-op0-candidates.json`. Review the licenses of all
+downloaded images as noted in `LICENSE.txt` and `DISCLAIMERS.md`.
 
 
 ## Roadmap [⇧](#contents)
