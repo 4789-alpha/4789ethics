@@ -101,6 +101,17 @@ See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
 **Optional Google login authenticates via Google's OAuth flow. The returned email address is hashed and stored offline.**
 **Color verification of the chosen primary color starts once a user holds an OP-1 signature.**
 **From that level, the color choice is stored privately inside the user's signature and never shown publicly.**
+
+### Login Methods by OP Level [⇧](#contents)
+
+| OP Range | Authentication | Technology Examples |
+|----------|----------------|--------------------|
+| OP 1–3 | Email/Password | Node.js, Express, bcrypt, JWT |
+| OP 4–6 | OAuth | Auth0 or Firebase Auth |
+| OP 7–8 | MFA | TOTP (Google Authenticator), Twilio |
+| OP 9+ | Biometric login | Flutter (`local_auth`) |
+
+*Biometric login can optionally be enabled from OP‑1 onward if devices support it.*
 ### OP-Permissions [⇧](#contents)
 Operator actions by ethical level are defined in:
 → [`permissions/op-permissions-expanded.json`](permissions/op-permissions-expanded.json)
