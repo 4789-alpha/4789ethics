@@ -4,15 +4,15 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Fische Bern</title>
-  <link rel="stylesheet" href="ethicom-style.css" />
-  <script src="ethicom-utils.js"></script>
-  <script src="accessibility.js"></script>
-  <script src="theme-manager.js"></script>
-  <script src="logo-background.js"></script>
-  <script src="side-drop.js"></script>
-  <script src="op-side-nav.js"></script>
+  <link rel="stylesheet" href="../ethicom-style.css" />
+  <script src="../ethicom-utils.js"></script>
+  <script src="../accessibility.js"></script>
+  <script src="../theme-manager.js"></script>
+  <script src="../logo-background.js"></script>
+  <script src="../side-drop.js"></script>
+  <script src="../op-side-nav.js"></script>
   <script src="fischeBern.js"></script>
-  <script src="module-logo.js"></script>
+  <script src="../module-logo.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main_content">Skip to main content</a>
@@ -20,11 +20,11 @@
   <header>
     <h1>Fische Bern</h1>
     <nav>
-      <a href="../home.html">Home</a>
-      <a href="../bewertung.html">Bewertung</a>
-      <a href="settings.html" class="icon-only">⚙</a>
-      <a href="signup.html">Signup</a>
-      <a href="../README.html" class="readme-link">README</a>
+      <a href="../../home.html">Home</a>
+      <a href="../../bewertung.html">Bewertung</a>
+      <a href="../settings.html" class="icon-only">⚙</a>
+      <a href="../signup.html">Signup</a>
+      <a href="../../README.html" class="readme-link">README</a>
     </nav>
   </header>
   <main id="main_content">
@@ -44,7 +44,7 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       applyTheme('tanna');
-      initSideDrop('op-navigation.html');
+      initSideDrop('../op-navigation.html');
       const menu=document.getElementById('side_menu');
       if(menu) menu.addEventListener('click',e=>{e.preventDefault();toggleSideDrop();});
     });
