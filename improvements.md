@@ -1,4 +1,4 @@
-# Verbesserungs-Checkliste für 4789ethics-1.21
+# Verbesserungs-Checkliste für 4789ethics-1.22
 
 Diese Liste enthält konkrete Vorschläge zur Verbesserung der Benutzerfreundlichkeit und Barrierefreiheit.
 
