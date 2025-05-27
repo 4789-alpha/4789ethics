@@ -30,6 +30,7 @@ See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
 - [OP-Permissions](#op-permissions)
 - [SRC vs. OO Levels](#src-vs-oo-levels)
 - [Evaluated Sources (as examples)](#evaluated-sources-as-examples)
+- [Person Image Sources](#person-image-sources)
 - [File Integrity](#file-integrity)
 - [Adding Languages](#adding-languages)
 - [Generating Interface README](#generating-interface-readme)
@@ -37,6 +38,8 @@ See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
 - [API Access Control](#api-access-control)
 - [OP Function Bundles](#op-function-bundles)
 - [Currency Synchronization](#currency-synchronization)
+- [Wiki Image Loader](#wiki-image-loader)
+- [Source Manager](#source-manager)
 - [Roadmap](#roadmap)
 - [Local Deployment](#local-deployment)
 - [Running Tests](#running-tests)
@@ -57,9 +60,16 @@ See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
 | `sources/` | Evaluated sources and candidate lists |
 | `sources/persons/` | Lists of historical persons |
 | `sources/institutions/` | Evaluated organizations and candidate sources |
+| `sources/images/` | Pictures for institutions (`institutions/`), persons (`persons/`), and fish (`fish/`) |
+| `sources/fish/ch/` | Text placeholders for Swiss fish images (e.g., `esox_ch.png`) |
 | `test/` | Node.js test suite |
 | `tools/` | Utility scripts (e.g., trust-demotion engine, Python API example) |
 | `use_cases/` | Example scenarios and dissemination ideas |
+| `op-logo/` | Stages of the Tanna symbol |
+| `wings/` | Minimal mobile interface |
+| `evidence/` | Datasets such as `person-ratings.json` |
+| `interface_OLD/` | Legacy version of the first interface |
+| `references/` | Reference tables and scores |
 
 
 ### Interface Pages [⇧](#contents)
@@ -79,14 +89,17 @@ See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
 | [interface/tanna-template-light.html](interface/tanna-template-light.html) | Template in light theme |
 | [interface/tools.html](interface/tools.html) | Utility collection |
 | [interface/donate.html](interface/donate.html) | Donation interface (requires OP‑9.A confirmation) |
+| [interface/genealogie.html](interface/genealogie.html) | Genealogy interface |
 | [interface/README.html](interface/README.html) | HTML version of the interface docs |
 | [interface/features_de.md](interface/features_de.md) | Funktionale Übersicht zum Interface |
 | [wings/index.html](wings/index.html) | Mobile interface "Wings" |
-| [wings/ratings.html](wings/ratings.html) | Mobile ratings summary |
+| [wings/ratings.html](wings/ratings.html) | Library of all ratings with search |
 | `interface_OLD/` | Historical demo of the first interface generation |
 **Settings are stored per device using browser localStorage and are not synced globally.**
 **Ratings from OP-1 onward are stored globally with the assigned signature ID. The email used during signup is hashed and never exposed.**
+**Optional GitHub login authenticates via GitHub's OAuth flow. The returned username is hashed and stored offline.**
 **Color verification of the chosen primary color starts once a user holds an OP-1 signature.**
+**From that level, the color choice is stored privately inside the user's signature and never shown publicly.**
 ### OP-Permissions [⇧](#contents)
 Operator actions by ethical level are defined in:
 → [`permissions/op-permissions-expanded.json`](permissions/op-permissions-expanded.json)
@@ -108,7 +121,12 @@ OP‑10 has been added as a dedicated observation level.
 |-------|-------------|
 | <a id="op-0"></a> OP-0 | anonymous observer – default for visitors without a signature |
 
-OP‑0 users remain anonymous and may submit one rating per visit without later revision. The stage is for exploration only. See [interface/shneiderman.html](interface/shneiderman.html) for the design rules.
+OP‑0 users remain anonymous and may submit one rating per visit without later revision. The stage is for exploration only. See
+[interface/shneiderman.html](interface/shneiderman.html),
+[interface/nielsen.html](interface/nielsen.html),
+[interface/norman.html](interface/norman.html),
+[interface/material.html](interface/material.html) and
+[interface/apple-hig.html](interface/apple-hig.html) for the design rules.
 | <a id="op-1"></a> OP-1 | first signed rating |
 | <a id="op-2"></a> OP-2 | provides feedback responsibly |
 | <a id="op-3"></a> OP-3 | rating requires justification |
@@ -134,9 +152,14 @@ Only digital agents can advance beyond OP-9.
 Comparison table: [`references/src_vs_oo.md`](references/src_vs_oo.md)
 
 ### Evaluated Sources (as examples) [⇧](#contents)
+- [Person Image Sources](#person-image-sources)
 - [src-0001: Fairphone](sources/institutions/src-0001.json) → [`SRC-4`](manifests/op-eval-4789-src-0001.json)
 - [src-0002: Ecosia](https://www.ecosia.org/) → [`SRC-4`](manifests/op-eval-4789-src-0002.json)
  - [human-wiki dataset](references/human-wiki-links.json) → [`SRC-1`](manifests/op-eval-sig-1111-humanwiki.json)
+
+### Person Image Sources [⇧](#contents)
+
+Use the `image_url` field in `sources/persons/human-op0-candidates.json` to record image URLs. Specify `image_source` (e.g. "wiki") when known.
 
 ### File Integrity [⇧](#contents)
 
@@ -167,6 +190,7 @@ node tools/check-translations.js
 ```
 
 This prints a list of language codes and the fields that still require translation or are unchanged from German. In the interface dropdown, languages with missing fields show an asterisk (`*`) so users know the translation is not complete.
+When a partially translated language is selected, the interface displays a notice and falls back to English for missing text. Contributions for additional translations are welcome.
 
 ### Generating Interface README [⇧](#contents)
 
@@ -215,12 +239,29 @@ module checks permission via `api-access.js` before returning it.
 Available helpers include `info`, `analyze`, `optimize`,
 `recommendation_for_interface` and `log` – the last one prints the recent
 Git commit history.
+### OP Rights Demo [⇧](#contents)
+Run `node tools/op-rights-demo.js` to print all available permissions for your current operator level. Pass a level as an argument to preview other stages.
+
 
 ### Currency Synchronization [⇧](#contents)
 
 Run `node tools/currency-sync.js` to download current exchange rates. The
 script saves them in `references/exchange-rates.json` so comparisons remain
 consistent even offline.
+
+### Wiki Image Loader [⇧](#contents)
+
+Run `node tools/fetch-wiki-images.js` to download public thumbnails from
+Wikipedia. The script saves each file in `sources/images/persons/` and updates
+`sources/persons/human-op0-candidates.json`. Review the licenses of all
+downloaded images as noted in `LICENSE.txt` and `DISCLAIMERS.md`.
+
+### Source Manager [⇧](#contents)
+
+Run `node tools/source-manager.js list` to view all sources. Use
+`--type=person` or `--type=org` to filter and `--sort=name` or
+`--sort=category` to control the order. This keeps the candidate lists
+organized and easy to review.
 
 
 ## Roadmap [⇧](#contents)
@@ -247,6 +288,9 @@ Install the JavaScript dependencies once:
 ```bash
 npm install
 ```
+
+Some tools rely on the `canvas` package. On Linux, you may need system packages
+such as `libcairo2-dev` and `build-essential` to compile it.
 
 For optional Python utilities run:
 
