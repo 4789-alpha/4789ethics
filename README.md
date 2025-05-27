@@ -60,6 +60,7 @@ See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
 | `sources/persons/` | Lists of historical persons |
 | `sources/institutions/` | Evaluated organizations and candidate sources |
 | `sources/images/` | Pictures for institutions (`institutions/`), persons (`persons/`), and fish (`fish/`) |
+| `sources/fish/ch/` | Text placeholders for Swiss fish images (e.g., `esox_ch.png`) |
 | `test/` | Node.js test suite |
 | `tools/` | Utility scripts (e.g., trust-demotion engine, Python API example) |
 | `use_cases/` | Example scenarios and dissemination ideas |
