@@ -185,6 +185,9 @@ function verifyColorAuth(locale) {
 }
 
 function initColorAuth() {
+  const level =
+    typeof getStoredOpLevel === 'function' ? getStoredOpLevel() : null;
+  if (!level || opLevelToNumber(level) < 1) return;
   const lang = getLang();
   const locale = colorLocales[lang] || colorLocales.en;
   verifyColorAuth(locale);

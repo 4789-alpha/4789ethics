@@ -83,8 +83,10 @@ See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
 | [interface/features_de.md](interface/features_de.md) | Funktionale Übersicht zum Interface |
 | [wings/index.html](wings/index.html) | Mobile interface "Wings" |
 | [wings/ratings.html](wings/ratings.html) | Mobile ratings summary |
+| `interface_OLD/` | Historical demo of the first interface generation |
 **Settings are stored per device using browser localStorage and are not synced globally.**
-**Ratings are stored anonymously in global manifest files. Only the OP level is saved with each rating to reflect user credibility.**
+**Ratings from OP-1 onward are stored globally with the assigned signature ID. The email used during signup remains private and is never exposed.**
+**Color verification of the chosen primary color starts once a user holds an OP-1 signature.**
 ### OP-Permissions [⇧](#contents)
 Operator actions by ethical level are defined in:
 → [`permissions/op-permissions-expanded.json`](permissions/op-permissions-expanded.json)

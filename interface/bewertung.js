@@ -186,12 +186,21 @@ function submitBewertung() {
   const human_name = sel.options[sel.selectedIndex].textContent;
   const rating = document.getElementById('rating_sel').value;
   const timestamp = new Date().toISOString();
+  let operator = 'anonymous';
+  let opLevel = 'OP-0';
+  try {
+    const sig = JSON.parse(localStorage.getItem('ethicom_signature') || '{}');
+    if (sig && sig.id) {
+      operator = sig.id;
+      opLevel = sig.op_level || 'OP-1';
+    }
+  } catch {}
   const evalData = {
     human_id,
     person: human_name,
     rating,
-    operator: 'anonymous',
-    op_level: 'OP-0',
+    operator,
+    op_level: opLevel,
     timestamp
   };
   const out = document.getElementById('output');

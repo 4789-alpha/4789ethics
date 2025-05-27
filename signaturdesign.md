@@ -23,6 +23,7 @@ Jede zusätzliche Ebene (x, y, z, …) entspricht einer weiteren Array-Schicht b
 ## Nickname pro Signatur
 
 Ab **OP-1** kann eine Signatur einen kurzen Nickname enthalten. Diese Option erleichtert die Zuordnung einzelner Bewertungen. OP-0 bleibt weiterhin anonym.
+Bei der Registrierung wird eine zufällige, 12‑stellige Signatur (z.B. `SIG-XXXXXXXXXXXX`) erzeugt. Zusammen mit der privat hinterlegten E‑Mail‑Adresse wird sie unter `ethicom_signature` im Browser gespeichert. Nur die Signatur-ID erscheint später in den globalen Bewertungsdateien; die E‑Mail bleibt verborgen.
 
 ## Interne Speicherung und Gatekeeper
 

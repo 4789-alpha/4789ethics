@@ -64,8 +64,19 @@ function handleSignup() {
     return;
   }
 
-  localStorage.setItem('ethicom_signup_email', email);
+  function generateSigId() {
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    let out = '';
+    for (let i = 0; i < 12; i++) {
+      out += chars[Math.floor(Math.random() * chars.length)];
+    }
+    return 'SIG-' + out;
+  }
+
+  const sig = { email, id: generateSigId(), op_level: 'OP-1' };
+  localStorage.setItem('ethicom_signature', JSON.stringify(sig));
   statusEl.textContent = uiText.signup_saved || 'Signup information saved locally.';
+  setTimeout(() => { window.location.href = 'ethicom.html'; }, 500);
 }
 
 window.addEventListener('DOMContentLoaded', initSignup);
