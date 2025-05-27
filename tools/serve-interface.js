@@ -41,10 +41,15 @@ function parseOAuthConfig(filePath) {
   const cfgPath = filePath || path.join(__dirname, '..', 'app', 'oauth_config.yaml');
   if (!fs.existsSync(cfgPath)) return null;
   const lines = fs.readFileSync(cfgPath, 'utf8').split(/\r?\n/);
-  const cfg = {};
+  const cfg = { github: {}, google: {} };
+  let section = null;
   lines.forEach(line => {
+    const sec = line.trim().match(/^([a-zA-Z]+):\s*$/);
+    if (sec) { section = sec[1].toLowerCase(); return; }
     const m = line.trim().match(/^(client_id|client_secret):\s*(.*)$/);
-    if (m) cfg[m[1]] = m[2].replace(/['"]/g, '');
+    if (section && m && cfg[section]) {
+      cfg[section][m[1]] = m[2].replace(/['"]/g, '');
+    }
   });
   return cfg;
 }
@@ -167,12 +172,12 @@ function handleLogin(req, res) {
 }
 
 function handleGithubStart(req, res) {
-  if (!oauthCfg || !oauthCfg.client_id) {
+  if (!oauthCfg || !oauthCfg.github || !oauthCfg.github.client_id) {
     res.writeHead(500); res.end('OAuth not configured'); return;
   }
   const state = crypto.randomBytes(8).toString('hex');
   oauthStates.add(state);
-  const url = `https://github.com/login/oauth/authorize?client_id=${oauthCfg.client_id}&state=${state}`;
+  const url = `https://github.com/login/oauth/authorize?client_id=${oauthCfg.github.client_id}&state=${state}`;
   res.writeHead(302, { Location: url });
   res.end();
 }
@@ -200,7 +205,7 @@ function fetchGithubUser(token, cb) {
 }
 
 function handleGithubCallback(req, res) {
-  if (!oauthCfg || !oauthCfg.client_id || !oauthCfg.client_secret) {
+  if (!oauthCfg || !oauthCfg.github || !oauthCfg.github.client_id || !oauthCfg.github.client_secret) {
     res.writeHead(500); res.end('OAuth not configured'); return;
   }
   const u = new URL(req.url, 'http://localhost');
@@ -210,7 +215,7 @@ function handleGithubCallback(req, res) {
     res.writeHead(400); res.end('Invalid state'); return;
   }
   oauthStates.delete(state);
-  const postData = `client_id=${oauthCfg.client_id}&client_secret=${oauthCfg.client_secret}&code=${code}`;
+  const postData = `client_id=${oauthCfg.github.client_id}&client_secret=${oauthCfg.github.client_secret}&code=${code}`;
   const opts = {
     hostname: 'github.com',
     path: '/login/oauth/access_token',
@@ -261,6 +266,100 @@ function handleGithubCallback(req, res) {
   ghReq.on('error', () => { res.writeHead(500); res.end('Auth failed'); });
   ghReq.write(postData);
   ghReq.end();
+}
+
+function handleGoogleStart(req, res) {
+  if (!oauthCfg || !oauthCfg.google || !oauthCfg.google.client_id) {
+    res.writeHead(500); res.end('OAuth not configured'); return;
+  }
+  const state = crypto.randomBytes(8).toString('hex');
+  oauthStates.add(state);
+  const redirect = encodeURIComponent(`http://localhost:${port}/auth/google/callback`);
+  const url = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${oauthCfg.google.client_id}&redirect_uri=${redirect}&response_type=code&scope=openid%20email&state=${state}`;
+  res.writeHead(302, { Location: url });
+  res.end();
+}
+
+function fetchGoogleEmail(token, cb) {
+  const opts = {
+    hostname: 'www.googleapis.com',
+    path: '/oauth2/v2/userinfo',
+    method: 'GET',
+    headers: { Authorization: `Bearer ${token}` }
+  };
+  const rq = https.request(opts, r => {
+    let data = '';
+    r.on('data', c => { data += c; });
+    r.on('end', () => {
+      try { const u = JSON.parse(data); cb(null, u.email); } catch (e) { cb(e); }
+    });
+  });
+  rq.on('error', cb);
+  rq.end();
+}
+
+function handleGoogleCallback(req, res) {
+  if (!oauthCfg || !oauthCfg.google || !oauthCfg.google.client_id || !oauthCfg.google.client_secret) {
+    res.writeHead(500); res.end('OAuth not configured'); return;
+  }
+  const u = new URL(req.url, 'http://localhost');
+  const code = u.searchParams.get('code');
+  const state = u.searchParams.get('state');
+  if (!code || !state || !oauthStates.has(state)) {
+    res.writeHead(400); res.end('Invalid state'); return;
+  }
+  oauthStates.delete(state);
+  const redirect = `http://localhost:${port}/auth/google/callback`;
+  const postData = `code=${code}&client_id=${oauthCfg.google.client_id}&client_secret=${oauthCfg.google.client_secret}&redirect_uri=${encodeURIComponent(redirect)}&grant_type=authorization_code`;
+  const opts = {
+    hostname: 'oauth2.googleapis.com',
+    path: '/token',
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'Content-Length': Buffer.byteLength(postData)
+    }
+  };
+  const gReq = https.request(opts, gRes => {
+    let body = '';
+    gRes.on('data', c => { body += c; });
+    gRes.on('end', () => {
+      try {
+        const token = JSON.parse(body).access_token;
+        if (!token) { res.writeHead(400); res.end('Auth failed'); return; }
+        fetchGoogleEmail(token, (err, email) => {
+          if (err || !email) { res.writeHead(400); res.end('Auth failed'); return; }
+          const users = readJson(usersFile);
+          const gHash = crypto.createHash('sha256').update(email).digest('hex');
+          const tokenHash = crypto.createHash('sha256').update(token).digest('hex');
+          let user = users.find(u => u.googleHash === gHash);
+          if (!user) {
+            user = {
+              id: 'SIG-' + crypto.randomBytes(6).toString('hex').toUpperCase(),
+              op_level: 'OP-1',
+              googleHash: gHash,
+              tokenHash
+            };
+            users.push(user);
+          } else {
+            user.tokenHash = tokenHash;
+          }
+          writeJson(usersFile, users);
+          res.writeHead(200, { 'Content-Type': 'text/html' });
+          res.end(`<script>
+            const sig = { id: '${user.id}', op_level: '${user.op_level}', private: { google: '${email}' } };
+            localStorage.setItem('ethicom_signature', JSON.stringify(sig));
+            window.location.href = '/interface/ethicom.html';
+          </script>`);
+        });
+      } catch {
+        res.writeHead(500); res.end('Auth failed');
+      }
+    });
+  });
+  gReq.on('error', () => { res.writeHead(500); res.end('Auth failed'); });
+  gReq.write(postData);
+  gReq.end();
 }
 
 function handleEvaluation(req, res) {
@@ -384,6 +483,12 @@ const server = http.createServer((req, res) => {
   if (req.method === 'GET' && urlPath === '/auth/github/callback') {
     return handleGithubCallback(req, res);
   }
+  if (req.method === 'GET' && urlPath === '/auth/google') {
+    return handleGoogleStart(req, res);
+  }
+  if (req.method === 'GET' && urlPath === '/auth/google/callback') {
+    return handleGoogleCallback(req, res);
+  }
   if (req.method === 'POST' && urlPath === '/api/evaluate') {
     return handleEvaluation(req, res);
   }
@@ -436,6 +541,8 @@ if (require.main === module) {
     handleSources,
     handleGithubStart,
     handleGithubCallback,
+    handleGoogleStart,
+    handleGoogleCallback,
     handleConnectRequest,
     handleConnectApprove,
     handleConnectList
