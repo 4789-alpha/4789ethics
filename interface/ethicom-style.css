@@ -241,6 +241,15 @@ input[type=range] {
   max-width: 200px;
 }
 
+.color-preview {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #555;
+  vertical-align: middle;
+  margin-left: 0.5em;
+}
+
 button {
   background-color: var(--primary-color);
   color: #fff;
