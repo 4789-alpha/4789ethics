@@ -267,6 +267,7 @@ Ensure Node.js 18 or later is installed, then run:
 
 ```bash
 node --test
+node tools/check-translations.js
 ```
 
 
