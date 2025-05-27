@@ -135,16 +135,18 @@
           '--header-bg':'Header BG','--nav-bg':'Nav BG','--card-alpha-bg':'Card Alpha',
           '--accent-color':'Accent','--highlight-text-color':'Highlight'
         };
+        const textVars=new Set(['--text-color','--header-text-color','--nav-text-color','--highlight-text-color']);
         const stored=JSON.parse(localStorage.getItem('ethicom_colors')||'{}');
         wrap.innerHTML='';
         for(const [name,label] of Object.entries(vars)){
           const base=parseCol(stored[name]||getComputedStyle(document.documentElement).getPropertyValue(name));
           const b=document.createElement('div');
+          const sample=textVars.has(name)?'Text':'';
           b.innerHTML=`<strong>${label}</strong><br>
           <label>R: <input type="range" min="0" max="255" value="${base.r}"> <span>${base.r}</span></label><br>
           <label>G: <input type="range" min="0" max="255" value="${base.g}"> <span>${base.g}</span></label><br>
           <label>B: <input type="range" min="0" max="255" value="${base.b}"> <span>${base.b}</span></label>
-          <span class="color-preview"></span>`;
+          <span class="color-preview${sample?' text-preview':''}">${sample}</span>`;
           const inputs=b.querySelectorAll('input');
           const spans=b.querySelectorAll('span');
           const preview=b.querySelector('.color-preview');
@@ -155,7 +157,9 @@
             document.documentElement.style.setProperty(name,col);
             stored[name]=col;
             localStorage.setItem('ethicom_colors',JSON.stringify(stored));
-            if(preview) preview.style.backgroundColor=col;
+            if(preview){
+              if(textVars.has(name)) preview.style.color=col; else preview.style.backgroundColor=col;
+            }
           }
           inputs.forEach(i=>i.addEventListener('input',upd));
           wrap.appendChild(b); upd();
