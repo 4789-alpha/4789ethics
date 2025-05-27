@@ -60,4 +60,8 @@ function handleLogin() {
     });
 }
 
+function startGithubLogin() {
+  window.location.href = '/auth/github';
+}
+
 window.addEventListener('DOMContentLoaded', initLogin);
