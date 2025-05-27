@@ -11,6 +11,14 @@
     "human_id": "hum-0103",
     "person": "Adolf Hitler",
     "rating": "no",
+    "operator": "sig-1111",
+    "op_level": "OP-1",
+    "timestamp": "2025-05-26T05:00:00.000Z"
+  },
+  {
+    "human_id": "hum-0103",
+    "person": "Adolf Hitler",
+    "rating": "no",
     "operator": "sig-1234",
     "op_level": "OP-1",
     "timestamp": "2025-05-26T11:00:00.000Z"
@@ -30,6 +38,14 @@
     "operator": "anonymous",
     "op_level": "OP-0",
     "timestamp": "2025-05-25T21:30:00.000Z"
+  },
+  {
+    "human_id": "hum-0101",
+    "person": "Ada Lovelace",
+    "rating": "yes",
+    "operator": "sig-1111",
+    "op_level": "OP-1",
+    "timestamp": "2025-05-26T06:00:00.000Z"
   },
   {
     "human_id": "hum-0101",

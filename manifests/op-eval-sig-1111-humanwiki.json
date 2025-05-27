@@ -1,0 +1,12 @@
+{
+  "source_id": "human-wiki",
+  "src_lvl": "SRC-1",
+  "op_level": "OP-1",
+  "operator": "sig-1111",
+  "comment": "Initial data set for historical figures derived from Wikipedia links.",
+  "timestamp": "2025-05-26T05:00:00.000Z",
+  "based_on": [
+    "https://en.wikipedia.org/"
+  ],
+  "hash": "82b0607746ccb7247b56ae518535ee56f67ba0176bd2cda7743a55a8caa8699f"
+}
