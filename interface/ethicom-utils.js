@@ -62,6 +62,7 @@ function renderAllBadges() {
     "OP-7",
     "OP-8",
     "OP-9",
+    "OP-9.A",
     "OP-10",
     "OP-11",
     "OP-12"
