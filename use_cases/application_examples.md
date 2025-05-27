@@ -18,3 +18,7 @@
 - Participatory systems that require consequence tracing  
 - Open decision structures with ethical layers
 
+## Clubs and Organizations
+- OP status hierarchy clarifies roles in clubs and civic associations
+- Structured responsibilities make decisions traceable
+
