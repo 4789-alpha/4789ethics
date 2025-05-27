@@ -158,11 +158,6 @@
 
   document.addEventListener('DOMContentLoaded', () => {
     if (state.bigButtons) document.body.classList.add('touch-big-buttons');
-    if (gesturesEnabled) {
-      document.addEventListener('pointerdown', pointerDown);
-      document.addEventListener('pointermove', pointerMove);
-      document.addEventListener('pointerup', pointerUp);
-    }
     if (state.drawing) initCanvas();
     initLongPressElements();
   });
