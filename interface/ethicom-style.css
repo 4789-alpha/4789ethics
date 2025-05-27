@@ -584,3 +584,9 @@ body.left-layout main {
   z-index: 5;
 }
 
+.lang-notice {
+  color: var(--accent-color);
+  font-size: 0.9em;
+  margin-top: 0.5em;
+}
+

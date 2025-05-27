@@ -84,7 +84,8 @@
     "login_password": "Password:",
     "login_btn": "Log in",
     "login_invalid": "Login failed.",
-    "login_saved": "Login successful. ID stored."
+    "login_saved": "Login successful. ID stored.",
+    "translation_notice": "Language not fully implemented. Contributions welcome."
   },
   "de": {
     "title": "Ethicom: Bewertung durch Menschen",
@@ -258,7 +259,8 @@
     "login_password": "Password:",
     "login_btn": "Log in",
     "login_invalid": "Login failed.",
-    "login_saved": "Login successful. ID stored."
+    "login_saved": "Login successful. ID stored.",
+    "translation_notice": "Langue pas encore pleinement implémentée. Participation bienvenue."
   },
   "es": {
     "title": "Ethicom: Evaluación Humana",
@@ -345,7 +347,8 @@
     "login_password": "Password:",
     "login_btn": "Log in",
     "login_invalid": "Login failed.",
-    "login_saved": "Login successful. ID stored."
+    "login_saved": "Login successful. ID stored.",
+    "translation_notice": "Idioma aún no implementado por completo. Se agradece colaboración."
   },
   "pt": {
     "title": "Ethicom: Avaliação Humana",
@@ -519,7 +522,8 @@
     "login_password": "Password:",
     "login_btn": "Log in",
     "login_invalid": "Login failed.",
-    "login_saved": "Login successful. ID stored."
+    "login_saved": "Login successful. ID stored.",
+    "translation_notice": "Idioma ainda não totalmente implementado. Colaboração bem-vinda."
   },
   "hi": {
     "title": "Ethicom: मानवीय मूल्यांकन",
@@ -1041,7 +1045,8 @@
     "login_password": "Password:",
     "login_btn": "Log in",
     "login_invalid": "Login failed.",
-    "login_saved": "Login successful. ID stored."
+    "login_saved": "Login successful. ID stored.",
+    "translation_notice": "Lingua non ancora completamente implementata. Collaborazione ben accetta."
   },
   "ko": {
     "title": "Ethicom: 인간 평가",
@@ -2433,7 +2438,8 @@
     "login_password": "Password:",
     "login_btn": "Log in",
     "login_invalid": "Login failed.",
-    "login_saved": "Login successful. ID stored."
+    "login_saved": "Login successful. ID stored.",
+    "translation_notice": "语言尚未完全实现，欢迎协助翻译。"
   },
   "vi": {
     "title": "Ethicom: Human Evaluation",
