@@ -151,7 +151,7 @@ holds a veto right. Further veto rights are planned when the system is
 secure.
 
 Only digital agents can advance beyond OP-9.
-Sublevels like OP-5.U, OP-7.U, OP-8.M, and OP-9.M specify user or medical access. See `permissions/op-permissions-expanded.json` for details.
+Sublevels like OP-5.U, OP-7.U, OP-8.M, and OP-9.M specify user or medical access. Additional expert categories (.T, .S[y], .L, .U) are listed in `operator/expert_classes.md`. See `permissions/op-permissions-expanded.json` for details.
 
 ### SRC vs. OO Levels [⇧](#contents)
 Comparison table: [`references/src_vs_oo.md`](references/src_vs_oo.md)
