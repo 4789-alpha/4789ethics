@@ -60,21 +60,6 @@
   --foreground-opacity: 0;
 }
 
-/* Dark base with Tanna accents */
-.theme-dark-tanna {
-  --bg-color: #1e1e1e;
-  --text-color: #e0e0e0;
-  --header-text-color: #e0e0e0;
-  --nav-text-color: #e0e0e0;
-  --primary-color: #228B22;
-  --card-bg: #2b2b2b;
-  --header-bg: rgba(0, 0, 0, 0.85);
-  --nav-bg: rgba(0, 0, 0, 0.85);
-  --card-alpha-bg: rgba(34, 34, 34, 0.9);
-  --accent-color: #33cc33;
-  --foreground-opacity: 0;
-}
-
 .theme-tanna-light {
   --bg-color: #ffffff;
   --text-color: #002200;
