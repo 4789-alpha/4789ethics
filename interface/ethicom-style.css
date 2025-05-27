@@ -209,6 +209,18 @@ main {
   margin-bottom: 1.5em;
 }
 
+details.card {
+  padding: 0;
+}
+details.card > summary {
+  padding: 1.5em;
+  cursor: pointer;
+  font-weight: bold;
+}
+details.card > *:not(summary) {
+  padding: 0 1.5em 1.5em;
+}
+
 /* Layout grid for settings */
 .settings-grid {
   display: grid;
