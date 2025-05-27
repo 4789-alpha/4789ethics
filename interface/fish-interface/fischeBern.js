@@ -2,7 +2,7 @@ async function initFischeBern() {
   const table = document.getElementById('fisch_table');
   if (!table) return;
   try {
-    const list = await fetch('../sources/fish/bern-fische.json').then(r => r.json());
+    const list = await fetch('../../sources/fish/bern-fische.json').then(r => r.json());
     const tbody = document.createElement('tbody');
     list.forEach(f => {
       const row = document.createElement('tr');
