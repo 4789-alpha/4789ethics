@@ -224,6 +224,13 @@ main {
   margin-bottom: 1.5em;
 }
 
+/* Layout grid for settings */
+.settings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1em;
+}
+
 .swipe-card {
   transition: transform 0.3s;
 }
@@ -243,6 +250,10 @@ textarea {
   border-radius: 4px;
   background: #fff;
   color: #000;
+}
+
+input[type=range] {
+  max-width: 280px;
 }
 
 button {

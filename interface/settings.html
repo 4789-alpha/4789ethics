@@ -32,11 +32,14 @@
     <a href="../README.html" class="readme-link">README</a>
   </nav>
   <main id="main_content">
+    <div class="settings-grid">
     <div id="lang_selection" class="card">
-      <label for="lang_select">Language:</label>
+      <h3>Language</h3>
+      <label for="lang_select">Select:</label>
       <select id="lang_select"></select>
     </div>
     <div id="theme_selection" class="card">
+      <h3>Theme</h3>
       <label for="theme_select">Color scheme:</label>
       <select id="theme_select">
         <option value="dark">Dark</option>
@@ -58,16 +61,19 @@
       <label>B: <input type="range" id="tanna_b" min="0" max="255" value="34"/> <span id="tanna_b_val">34</span></label><br/>
       <span id="tanna_contrast" style="color:red;display:none;">Low contrast with logos</span>
     </div>
-    <div id="background_count" class="card">
-      <label for="bg_symbol_count">Tanna symbols in background: <span id="bg_symbol_count_val">40</span></label>
-      <input type="range" id="bg_symbol_count" min="10" max="400" step="10" value="40" />
-    </div>
-    <div id="same_level_count" class="card" style="display:none;">
-      <label for="bg_same_level_count">Your level Tannas: <span id="bg_same_level_val">1</span></label>
-      <input type="range" id="bg_same_level_count" min="1" max="10" step="1" value="1" />
-    </div>
-    <div id="bg_collisions" class="card">
-      <label><input type="checkbox" id="bg_enable_collisions" checked/> Enable Tanna collisions</label>
+    <div id="background_settings" class="card">
+      <h3>Background</h3>
+      <div id="background_count">
+        <label for="bg_symbol_count">Tanna symbols in background: <span id="bg_symbol_count_val">40</span></label>
+        <input type="range" id="bg_symbol_count" min="10" max="400" step="10" value="40" />
+      </div>
+      <div id="same_level_count" style="display:none;">
+        <label for="bg_same_level_count">Your level Tannas: <span id="bg_same_level_val">1</span></label>
+        <input type="range" id="bg_same_level_count" min="1" max="10" step="1" value="1" />
+      </div>
+      <div id="bg_collisions">
+        <label><input type="checkbox" id="bg_enable_collisions" checked/> Enable Tanna collisions</label>
+      </div>
     </div>
     <div id="text_color" class="card">
       <h3>Content Text Color</h3>
@@ -96,6 +102,7 @@
     <div id="repo_download" class="card">
       <a href="/download.zip" class="accent-button">Download .zip</a>
     </div>
+    </div><!-- settings-grid -->
   </main>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
