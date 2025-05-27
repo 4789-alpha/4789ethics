@@ -56,6 +56,28 @@ function initLanguageDropdown(selectId = "lang_select", textPath = getUiTextPath
         if (Array.isArray(v)) return v.length === 0 || v.every(x => !x);
         return v === undefined || v === null || v === "";
       }
+      function isIncomplete(obj) {
+        return keys.some(k =>
+          !Object.prototype.hasOwnProperty.call(obj, k) ||
+          isEmpty(obj[k]) ||
+          JSON.stringify(obj[k]) === JSON.stringify(base[k])
+        );
+      }
+
+      function displayLangNotice(msg) {
+        let el = document.getElementById('lang_notice');
+        if (!msg) {
+          if (el) el.remove();
+          return;
+        }
+        if (!el) {
+          el = document.createElement('p');
+          el.id = 'lang_notice';
+          el.className = 'lang-notice';
+          select.parentElement.appendChild(el);
+        }
+        el.textContent = msg;
+      }
 
       Object.keys(texts)
         .sort()
@@ -70,10 +92,13 @@ function initLanguageDropdown(selectId = "lang_select", textPath = getUiTextPath
         });
       const current = getLanguage();
       select.value = current;
-      select.addEventListener("change", e => {
-        const lang = e.target.value.replace(/\*$/, "");
-        localStorage.setItem("ethicom_lang", lang);
+      function applyLanguage(lang) {
         const t = texts[lang] || texts.en || {};
+        const notice = isIncomplete(t)
+          ? t.translation_notice ||
+            'Language not fully implemented. Contributions welcome.'
+          : '';
+        displayLangNotice(notice);
         if (typeof applyTexts === "function") {
           applyTexts(t);
         }
@@ -82,6 +107,13 @@ function initLanguageDropdown(selectId = "lang_select", textPath = getUiTextPath
           applySignupTexts();
         }
         if (typeof updateReadmeLinks === 'function') updateReadmeLinks(lang);
+      }
+
+      applyLanguage(current);
+      select.addEventListener("change", e => {
+        const lang = e.target.value.replace(/\*$/, "");
+        localStorage.setItem("ethicom_lang", lang);
+        applyLanguage(lang);
       });
     });
 }

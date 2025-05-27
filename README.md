@@ -167,6 +167,7 @@ node tools/check-translations.js
 ```
 
 This prints a list of language codes and the fields that still require translation or are unchanged from German. In the interface dropdown, languages with missing fields show an asterisk (`*`) so users know the translation is not complete.
+When a partially translated language is selected, the interface displays a notice and falls back to English for missing text. Contributions for additional translations are welcome.
 
 ### Generating Interface README [⇧](#contents)
 
