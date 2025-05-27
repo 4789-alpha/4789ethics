@@ -6,8 +6,9 @@ function renderOpOverview() {
     .then(r => r.json())
     .then(data => {
       const levels = [
-        'OP-0','OP-1','OP-2','OP-3','OP-4','OP-5','OP-6',
-        'OP-7','OP-8','OP-9','OP-9.A','OP-10','OP-11','OP-12'
+        'OP-0','OP-1','OP-2','OP-3','OP-4','OP-5','OP-5.U','OP-6',
+        'OP-7','OP-7.U','OP-8','OP-8.M','OP-9','OP-9.M','OP-9.A',
+        'OP-10','OP-11','OP-12'
       ];
       container.innerHTML = '';
       levels.forEach(level => {
