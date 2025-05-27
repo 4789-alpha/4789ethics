@@ -86,6 +86,16 @@ async function initRatings() {
     table.appendChild(tbody);
     library.appendChild(table);
 
+    const searchInput = document.getElementById('rating_search');
+    if (searchInput) {
+      searchInput.addEventListener('input', e => {
+        const q = e.target.value.toLowerCase();
+        Array.from(tbody.rows).forEach(r => {
+          r.style.display = r.textContent.toLowerCase().includes(q) ? '' : 'none';
+        });
+      });
+    }
+
     const list = document.createElement('ul');
     for (const [src, nums] of Object.entries(perSource)) {
       const avg = nums.reduce((a, b) => a + b, 0) / nums.length;
