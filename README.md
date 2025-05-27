@@ -39,6 +39,7 @@ See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
 - [OP Function Bundles](#op-function-bundles)
 - [Currency Synchronization](#currency-synchronization)
 - [Wiki Image Loader](#wiki-image-loader)
+- [Source Manager](#source-manager)
 - [Roadmap](#roadmap)
 - [Local Deployment](#local-deployment)
 - [Running Tests](#running-tests)
@@ -243,6 +244,13 @@ Run `node tools/fetch-wiki-images.js` to download public thumbnails from
 Wikipedia. The script saves each file in `sources/images/persons/` and updates
 `sources/persons/human-op0-candidates.json`. Review the licenses of all
 downloaded images as noted in `LICENSE.txt` and `DISCLAIMERS.md`.
+
+### Source Manager [⇧](#contents)
+
+Run `node tools/source-manager.js list` to view all sources. Use
+`--type=person` or `--type=org` to filter and `--sort=name` or
+`--sort=category` to control the order. This keeps the candidate lists
+organized and easy to review.
 
 
 ## Roadmap [⇧](#contents)
