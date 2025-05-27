@@ -8,10 +8,20 @@
     if (p > 100) p = 100;
     document.documentElement.style.setProperty('--foreground-opacity', (p / 100).toString());
   }
+  function applyTextColor(obj) {
+    if (!obj) return;
+    const css = `rgb(${obj.r},${obj.g},${obj.b})`;
+    document.documentElement.style.setProperty('--text-color', css);
+  }
   window.setForegroundOpacity = setForegroundOpacity;
+  window.applyTextColor = applyTextColor;
   document.addEventListener('DOMContentLoaded', () => {
     const stored = parseInt(localStorage.getItem('ethicom_fg_opacity') || '0', 10);
     setForegroundOpacity(stored);
+    try {
+      const tc = JSON.parse(localStorage.getItem('ethicom_text_color') || 'null');
+      if (tc) applyTextColor(tc);
+    } catch {}
   });
 })();
 

@@ -80,6 +80,7 @@ function initLogoBackground() {
   // Number of floating symbols can be customized via settings
   const stored = parseInt(localStorage.getItem('ethicom_bg_count') || '40', 10);
   const total = Number.isFinite(stored) ? stored : 40;
+  const collisionsEnabled = localStorage.getItem('ethicom_bg_collisions') !== '0';
   for (let i = 0; i < total; i++) {
     const lvl = levels[i % levels.length];
     const img = images[lvl >= 8 ? 7 : lvl];
@@ -162,30 +163,32 @@ function initLogoBackground() {
       if (s.x <= s.radius * s.scale || s.x >= canvas.width - s.radius * s.scale) s.dx *= -1;
       if (s.y <= s.radius * s.scale || s.y >= canvas.height - s.radius * s.scale) s.dy *= -1;
 
-      for (let j = i + 1; j < symbols.length; j++) {
-        const o = symbols[j];
-        const dx = s.x - o.x;
-        const dy = s.y - o.y;
-        const dist = Math.hypot(dx, dy);
-        const minDist = s.radius * s.scale + o.radius * o.scale;
-        if (dist < minDist) {
-          resolveCollision(s, o);
-          if (s.lvl < o.lvl) {
-            const base = 0.2 + Math.random() * 0.3;
-            const factor = 1 - s.lvl / (maxLvl + 1);
-            s.rotSpeed = base * factor;
-            s.rotFrames = 180;
-            s.scaleDir = -1;
-            s.fadeOut = true;
-            s.fadeStart = performance.now();
-          } else if (o.lvl < s.lvl) {
-            const base = 0.2 + Math.random() * 0.3;
-            const factor = 1 - o.lvl / (maxLvl + 1);
-            o.rotSpeed = base * factor;
-            o.rotFrames = 180;
-            o.scaleDir = -1;
-            o.fadeOut = true;
-            o.fadeStart = performance.now();
+      if (collisionsEnabled) {
+        for (let j = i + 1; j < symbols.length; j++) {
+          const o = symbols[j];
+          const dx = s.x - o.x;
+          const dy = s.y - o.y;
+          const dist = Math.hypot(dx, dy);
+          const minDist = s.radius * s.scale + o.radius * o.scale;
+          if (dist < minDist) {
+            resolveCollision(s, o);
+            if (s.lvl < o.lvl) {
+              const base = 0.2 + Math.random() * 0.3;
+              const factor = 1 - s.lvl / (maxLvl + 1);
+              s.rotSpeed = base * factor;
+              s.rotFrames = 180;
+              s.scaleDir = -1;
+              s.fadeOut = true;
+              s.fadeStart = performance.now();
+            } else if (o.lvl < s.lvl) {
+              const base = 0.2 + Math.random() * 0.3;
+              const factor = 1 - o.lvl / (maxLvl + 1);
+              o.rotSpeed = base * factor;
+              o.rotFrames = 180;
+              o.scaleDir = -1;
+              o.fadeOut = true;
+              o.fadeStart = performance.now();
+            }
           }
         }
       }

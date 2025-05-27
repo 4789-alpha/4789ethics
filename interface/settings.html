@@ -27,69 +27,146 @@
     <a href="../home.html">Home</a>
     <a href="../bewertung.html">Bewertung</a>
     <a href="settings.html" aria-current="page" class="icon-only">⚙</a>
+    <a href="../wings/ratings.html">Ratings</a>
     <a href="signup.html">Signup</a>
+    <a href="genealogie.html">Genealogie</a>
     <a href="../README.html" class="readme-link">README</a>
   </nav>
   <main id="main_content">
-    <div id="lang_selection" class="card">
-      <label for="lang_select">Language:</label>
-      <select id="lang_select"></select>
-    </div>
-    <div id="theme_selection" class="card">
-      <label for="theme_select">Color scheme:</label>
-      <select id="theme_select">
-        <option value="dark">Dark</option>
-        <option value="tanna-dark">Dark Tanna</option>
-        <option value="tanna">Tanna</option>
-        <option value="tanna-dark">Tanna Dark</option>
-        <option value="dark-tanna">Dark Tanna</option>
-        <option value="ocean">Ocean</option>
-        <option value="desert">Desert</option>
-        <option value="transparent">Transparent</option>
-        <option value="custom">Custom</option>
-      </select>
-      <button id="custom_theme_btn" style="display:none;margin-top:0.5em;" class="accent-button">Create Custom Scheme</button>
-    </div>
-    <div id="tanna_color" class="card" style="display:none;">
-      <h3>Tanna Main Color</h3>
-      <label>R: <input type="range" id="tanna_r" min="0" max="255" value="34"/> <span id="tanna_r_val">34</span></label><br/>
-      <label>G: <input type="range" id="tanna_g" min="0" max="255" value="139"/> <span id="tanna_g_val">139</span></label><br/>
-      <label>B: <input type="range" id="tanna_b" min="0" max="255" value="34"/> <span id="tanna_b_val">34</span></label><br/>
-      <span id="tanna_contrast" style="color:red;display:none;">Low contrast with logos</span>
-    </div>
-    <div id="background_count" class="card">
-      <label for="bg_symbol_count">Tanna symbols in background: <span id="bg_symbol_count_val">40</span></label>
-      <input type="range" id="bg_symbol_count" min="10" max="400" step="10" value="40" />
-    </div>
-    <div id="same_level_count" class="card" style="display:none;">
-      <label for="bg_same_level_count">Your level Tannas: <span id="bg_same_level_val">1</span></label>
-      <input type="range" id="bg_same_level_count" min="1" max="10" step="1" value="1" />
-    </div>
-    <div id="foreground_opacity" class="card">
-      <label for="fg_opacity">Foreground transparency: <span id="fg_opacity_val">0</span>%</label>
-      <input type="range" id="fg_opacity" min="0" max="100" step="1" value="0" />
-    </div>
-    <div id="touch_features" class="card">
-      <h3>Touch Features</h3>
-      <label><input type="checkbox" id="touch_gestures"/> Enable gestures</label><br/>
-      <label><input type="checkbox" id="touch_longpress"/> Enable quick menus</label><br/>
-      <label><input type="checkbox" id="touch_drawing"/> Enable drawing</label><br/>
-      <label><input type="checkbox" id="touch_bigbuttons"/> Larger buttons</label><br/>
-      <label><input type="checkbox" id="touch_haptics"/> Haptic feedback</label>
-    </div>
-    <div id="attention_features" class="card">
-      <h3>Attention Alerts</h3>
-      <label><input type="checkbox" id="attention_wiggle"/> Wiggle when idle</label><br/>
-      <label><input type="checkbox" id="attention_beep"/> Beep when idle</label>
-    </div>
-    <div id="access_setup" class="card"></div>
-    <div id="repo_download" class="card">
-      <a href="/download.zip" class="accent-button">Download .zip</a>
-    </div>
+    <div class="settings-grid">
+    <details class="card">
+      <summary>Language</summary>
+      <div id="lang_selection">
+        <label for="lang_select">Select:</label>
+        <select id="lang_select"></select>
+      </div>
+    </details>
+    <!-- Theme selection removed -->
+    <details class="card">
+      <summary>Colors</summary>
+      <div id="color_scheme"></div>
+      <div id="tanna_color" style="display:none;">
+        <label>R: <input type="range" id="tanna_r" min="0" max="255" value="34"/> <span id="tanna_r_val">34</span></label><br/>
+        <label>G: <input type="range" id="tanna_g" min="0" max="255" value="139"/> <span id="tanna_g_val">139</span></label><br/>
+        <label>B: <input type="range" id="tanna_b" min="0" max="255" value="34"/> <span id="tanna_b_val">34</span></label>
+        <span id="tanna_preview" class="color-preview"></span><br/>
+        <span id="tanna_contrast" style="color:red;display:none;">Low contrast with logos</span>
+      </div>
+    </details>
+    <details class="card">
+      <summary>Background</summary>
+      <div id="background_settings">
+        <div id="background_count">
+          <label for="bg_symbol_count">Tanna symbols in background: <span id="bg_symbol_count_val">40</span></label>
+          <input type="range" id="bg_symbol_count" min="10" max="400" step="10" value="40" />
+        </div>
+        <div id="same_level_count" style="display:none;">
+          <label for="bg_same_level_count">Your level Tannas: <span id="bg_same_level_val">1</span></label>
+          <input type="range" id="bg_same_level_count" min="1" max="10" step="1" value="1" />
+        </div>
+        <div id="bg_collisions">
+          <label><input type="checkbox" id="bg_enable_collisions" checked/> Enable Tanna collisions</label>
+        </div>
+      </div>
+    </details>
+    <details class="card">
+      <summary>Content Text Color</summary>
+      <div id="text_color">
+        <label>R: <input type="range" id="text_r" min="0" max="255" value="0"/> <span id="text_r_val">0</span></label><br/>
+        <label>G: <input type="range" id="text_g" min="0" max="255" value="0"/> <span id="text_g_val">0</span></label><br/>
+        <label>B: <input type="range" id="text_b" min="0" max="255" value="0"/> <span id="text_b_val">0</span></label>
+        <span id="text_preview" class="color-preview"></span>
+      </div>
+    </details>
+    <details class="card">
+      <summary>Foreground Transparency</summary>
+      <div id="foreground_opacity">
+        <label for="fg_opacity">Foreground transparency: <span id="fg_opacity_val">0</span>%</label>
+        <input type="range" id="fg_opacity" min="0" max="100" step="1" value="0" />
+      </div>
+    </details>
+    <details class="card">
+      <summary>Touch Features</summary>
+      <div id="touch_features">
+        <label><input type="checkbox" id="touch_gestures"/> Enable gestures</label><br/>
+        <label><input type="checkbox" id="touch_longpress"/> Enable quick menus</label><br/>
+        <label><input type="checkbox" id="touch_drawing"/> Enable drawing</label><br/>
+        <label><input type="checkbox" id="touch_bigbuttons"/> Larger buttons</label><br/>
+        <label><input type="checkbox" id="touch_haptics"/> Haptic feedback</label>
+      </div>
+    </details>
+    <details class="card">
+      <summary>Attention Alerts</summary>
+      <div id="attention_features">
+        <label><input type="checkbox" id="attention_wiggle"/> Wiggle when idle</label><br/>
+        <label><input type="checkbox" id="attention_beep"/> Beep when idle</label>
+      </div>
+    </details>
+    <details class="card">
+      <summary>Accessibility Setup</summary>
+      <div id="access_setup"></div>
+    </details>
+    <details class="card">
+      <summary>Repository</summary>
+      <div id="repo_download">
+        <a href="/download.zip" class="accent-button">Download .zip</a>
+      </div>
+    </details>
+    </div><!-- settings-grid -->
   </main>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       initLanguageDropdown('lang_select');
+      function parseCol(v){
+        v=(v||'').trim();
+        if(v.startsWith('#')){
+          if(v.length===4) v='#'+v[1]+v[1]+v[2]+v[2]+v[3]+v[3];
+          const n=parseInt(v.slice(1),16);
+          return {r:(n>>16)&255,g:(n>>8)&255,b:n&255};
+        }
+        const m=v.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)/);
+        return m?{r:+m[1],g:+m[2],b:+m[3]}:{r:0,g:0,b:0};
+      }
+      function initColorSliders(){
+        const wrap=document.getElementById('color_scheme');
+        if(!wrap) return;
+        const vars={
+          '--highlight-text-color':'Highlight','--text-color':'Text','--header-text-color':'Header Text',
+          '--nav-text-color':'Nav Text','--bg-color':'Background','--card-bg':'Card',
+          '--header-bg':'Header BG','--nav-bg':'Nav BG','--card-alpha-bg':'Card Alpha',
+          '--primary-color':'Primary','--accent-color':'Accent'
+        };
+        const textVars=new Set(['--text-color','--header-text-color','--nav-text-color','--highlight-text-color']);
+        const stored=JSON.parse(localStorage.getItem('ethicom_colors')||'{}');
+        wrap.innerHTML='';
+        for(const [name,label] of Object.entries(vars)){
+          const base=parseCol(stored[name]||getComputedStyle(document.documentElement).getPropertyValue(name));
+          const b=document.createElement('div');
+          const sample=textVars.has(name)?'Text':'';
+          b.innerHTML=`<strong>${label}</strong><br>
+          <label>R: <input type="range" min="0" max="255" value="${base.r}"> <span>${base.r}</span></label><br>
+          <label>G: <input type="range" min="0" max="255" value="${base.g}"> <span>${base.g}</span></label><br>
+          <label>B: <input type="range" min="0" max="255" value="${base.b}"> <span>${base.b}</span></label>
+          <span class="color-preview${sample?' text-preview':''}">${sample}</span>`;
+          const inputs=b.querySelectorAll('input');
+          const spans=b.querySelectorAll('span');
+          const preview=b.querySelector('.color-preview');
+          function upd(){
+            const r=+inputs[0].value,g=+inputs[1].value,bv=+inputs[2].value;
+            spans[0].textContent=r;spans[1].textContent=g;spans[2].textContent=bv;
+            const col=`rgb(${r},${g},${bv})`;
+            document.documentElement.style.setProperty(name,col);
+            stored[name]=col;
+            localStorage.setItem('ethicom_colors',JSON.stringify(stored));
+            if(preview){
+              if(textVars.has(name)) preview.style.color=col; else preview.style.backgroundColor=col;
+            }
+          }
+          inputs.forEach(i=>i.addEventListener('input',upd));
+          wrap.appendChild(b); upd();
+        }
+      }
+      initColorSliders();
       const s = window.touchSettings && window.touchSettings.state || {};
       const g = document.getElementById('touch_gestures');
       const h = document.getElementById('touch_haptics');
@@ -118,6 +195,7 @@
       const trv = document.getElementById('tanna_r_val');
       const tgv = document.getElementById('tanna_g_val');
       const tbv = document.getElementById('tanna_b_val');
+      const tp = document.getElementById('tanna_preview');
       const warn = document.getElementById('tanna_contrast');
       function lum(v){v/=255;return v<=0.03928?v/12.92:Math.pow((v+0.055)/1.055,2.4);}
       function contrast(c){const l1=0.2126*lum(c.r)+0.7152*lum(c.g)+0.0722*lum(c.b);const l2=0.2126*lum(34)+0.7152*lum(139)+0.0722*lum(34);return (Math.max(l1,l2)+0.05)/(Math.min(l1,l2)+0.05);}
@@ -137,6 +215,7 @@
           document.documentElement.style.setProperty('--header-bg',h);
           document.documentElement.style.setProperty('--nav-bg',n);
         }
+        if(tp) tp.style.backgroundColor=`rgb(${c.r},${c.g},${c.b})`;
         warn.style.display=contrast(c)<2?'inline':'none';
       }
       if(tr&&tg&&tb){const s=JSON.parse(localStorage.getItem('ethicom_tanna_color')||'{"r":34,"g":139,"b":34}');tr.value=s.r;tg.value=s.g;tb.value=s.b;upd();[tr,tg,tb].forEach(el=>el.addEventListener('input',upd));}
@@ -169,6 +248,45 @@
           localStorage.setItem('ethicom_same_level_count', e.target.value);
           alert('Reload the page to apply.');
         });
+      }
+
+      const colChk = document.getElementById('bg_enable_collisions');
+      if (colChk) {
+        const storedCol = localStorage.getItem('ethicom_bg_collisions');
+        colChk.checked = storedCol !== '0';
+        colChk.addEventListener('change', e => {
+          localStorage.setItem('ethicom_bg_collisions', e.target.checked ? '1' : '0');
+          alert('Reload the page to apply.');
+        });
+      }
+
+      const txr = document.getElementById('text_r');
+      const txg = document.getElementById('text_g');
+      const txb = document.getElementById('text_b');
+      const txrv = document.getElementById('text_r_val');
+      const txgv = document.getElementById('text_g_val');
+      const txbv = document.getElementById('text_b_val');
+      const textPrev = document.getElementById('text_preview');
+      function updText(){
+        const c={r:+txr.value,g:+txg.value,b:+txb.value};
+        txrv.textContent=c.r;
+        txgv.textContent=c.g;
+        txbv.textContent=c.b;
+        document.documentElement.style.setProperty('--text-color',`rgb(${c.r},${c.g},${c.b})`);
+        localStorage.setItem('ethicom_text_color',JSON.stringify(c));
+        if(textPrev) textPrev.style.backgroundColor=`rgb(${c.r},${c.g},${c.b})`;
+      }
+      if(txr&&txg&&txb){
+        let def;
+        try{def=JSON.parse(localStorage.getItem('ethicom_text_color')||'null');}catch{}
+        if(!def){
+          const comp=getComputedStyle(document.documentElement).getPropertyValue('--text-color').trim();
+          const m=comp.match(/rgb\((\d+),\s*(\d+),\s*(\d+)\)/);
+          def=m?{r:+m[1],g:+m[2],b:+m[3]}:{r:224,g:224,b:224};
+        }
+        txr.value=def.r;txg.value=def.g;txb.value=def.b;
+        updText();
+        [txr,txg,txb].forEach(el=>el.addEventListener('input',updText));
       }
 
       const fgSlider = document.getElementById('fg_opacity');
