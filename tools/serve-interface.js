@@ -75,6 +75,7 @@ const repoRoot = path.join(__dirname, '..');
 const port = process.env.PORT || 8080;
 const usersFile = path.join(__dirname, '..', 'app', 'users.json');
 const evalFile = path.join(__dirname, '..', 'app', 'evaluations.json');
+const connFile = path.join(__dirname, '..', 'app', 'connections.json');
 const oauthCfg = parseOAuthConfig();
 const oauthStates = new Set();
 
@@ -309,6 +310,66 @@ function handleSources(req, res) {
   res.end(JSON.stringify(items));
 }
 
+function handleConnectRequest(req, res) {
+  let body = '';
+  req.on('data', c => { body += c; });
+  req.on('end', () => {
+    try {
+      const { id, target_id } = JSON.parse(body);
+      const users = readJson(usersFile);
+      const from = users.find(u => u.id === id);
+      const to = users.find(u => u.id === target_id);
+      if (!from || !to) { res.writeHead(400); res.end('Invalid'); return; }
+      const cons = readJson(connFile);
+      const exists = cons.find(c => c.requester === id && c.target === target_id);
+      if (!exists) {
+        cons.push({ requester: id, target: target_id, approved: false, timestamp: new Date().toISOString() });
+        writeJson(connFile, cons);
+      }
+      res.writeHead(200, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ success: true }));
+    } catch {
+      res.writeHead(400); res.end('Bad Request');
+    }
+  });
+}
+
+function handleConnectApprove(req, res) {
+  let body = '';
+  req.on('data', c => { body += c; });
+  req.on('end', () => {
+    try {
+      const { id, requester_id } = JSON.parse(body);
+      const cons = readJson(connFile);
+      const conn = cons.find(c => c.requester === requester_id && c.target === id);
+      if (conn) {
+        conn.approved = true;
+        conn.approved_at = new Date().toISOString();
+        writeJson(connFile, cons);
+        res.writeHead(200, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ success: true }));
+      } else { res.writeHead(404); res.end('Not found'); }
+    } catch {
+      res.writeHead(400); res.end('Bad Request');
+    }
+  });
+}
+
+function handleConnectList(req, res) {
+  const url = new URL(req.url, 'http://localhost');
+  const id = url.searchParams.get('id');
+  const cons = readJson(connFile);
+  const users = readJson(usersFile);
+  const pending = cons.filter(c => c.target === id && !c.approved).map(c => ({ requester: c.requester }));
+  const conns = cons.filter(c => (c.requester === id || c.target === id) && c.approved).map(c => {
+    const otherId = c.requester === id ? c.target : c.requester;
+    const u = users.find(us => us.id === otherId) || {};
+    return { id: otherId, op_level: u.op_level };
+  });
+  res.writeHead(200, { 'Content-Type': 'application/json' });
+  res.end(JSON.stringify({ pending: pending, connections: conns }));
+}
+
 const server = http.createServer((req, res) => {
   let urlPath = decodeURIComponent(req.url.split('?')[0]);
   if (req.method === 'POST' && urlPath === '/api/signup') {
@@ -325,6 +386,15 @@ const server = http.createServer((req, res) => {
   }
   if (req.method === 'POST' && urlPath === '/api/evaluate') {
     return handleEvaluation(req, res);
+  }
+  if (req.method === 'POST' && urlPath === '/api/connect/request') {
+    return handleConnectRequest(req, res);
+  }
+  if (req.method === 'POST' && urlPath === '/api/connect/approve') {
+    return handleConnectApprove(req, res);
+  }
+  if (req.method === 'GET' && urlPath === '/api/connect/list') {
+    return handleConnectList(req, res);
   }
   if (req.method === 'GET' && urlPath === '/api/sources') {
     return handleSources(req, res);
@@ -365,6 +435,9 @@ if (require.main === module) {
     handleLogin,
     handleSources,
     handleGithubStart,
-    handleGithubCallback
+    handleGithubCallback,
+    handleConnectRequest,
+    handleConnectApprove,
+    handleConnectList
   };
 }
