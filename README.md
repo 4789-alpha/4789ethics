@@ -314,6 +314,9 @@ Then open `http://localhost:8080/ethicom.html` in your browser.
 Opening the HTML file directly (e.g. via `file://`) bypasses the local server and
 causes the language list to remain empty. Always access the interface through
 the provided `localhost` address so that translation files load correctly.
+When deploying on another domain, set the environment variable `BASE_URL`
+to that public origin (e.g. `https://4789-alpha.github.io`) so that OAuth
+redirects work properly.
 
 ### Running Tests [⇧](#contents)
 
