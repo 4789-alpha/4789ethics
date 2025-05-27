@@ -121,7 +121,12 @@ OP‑10 has been added as a dedicated observation level.
 |-------|-------------|
 | <a id="op-0"></a> OP-0 | anonymous observer – default for visitors without a signature |
 
-OP‑0 users remain anonymous and may submit one rating per visit without later revision. The stage is for exploration only. See [interface/shneiderman.html](interface/shneiderman.html) for the design rules.
+OP‑0 users remain anonymous and may submit one rating per visit without later revision. The stage is for exploration only. See
+[interface/shneiderman.html](interface/shneiderman.html),
+[interface/nielsen.html](interface/nielsen.html),
+[interface/norman.html](interface/norman.html),
+[interface/material.html](interface/material.html) and
+[interface/apple-hig.html](interface/apple-hig.html) for the design rules.
 | <a id="op-1"></a> OP-1 | first signed rating |
 | <a id="op-2"></a> OP-2 | provides feedback responsibly |
 | <a id="op-3"></a> OP-3 | rating requires justification |
