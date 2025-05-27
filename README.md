@@ -281,6 +281,9 @@ Install the JavaScript dependencies once:
 npm install
 ```
 
+Some tools rely on the `canvas` package. On Linux, you may need system packages
+such as `libcairo2-dev` and `build-essential` to compile it.
+
 For optional Python utilities run:
 
 ```bash
