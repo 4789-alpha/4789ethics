@@ -239,6 +239,9 @@ module checks permission via `api-access.js` before returning it.
 Available helpers include `info`, `analyze`, `optimize`,
 `recommendation_for_interface` and `log` – the last one prints the recent
 Git commit history.
+### OP Rights Demo [⇧](#contents)
+Run `node tools/op-rights-demo.js` to print all available permissions for your current operator level. Pass a level as an argument to preview other stages.
+
 
 ### Currency Synchronization [⇧](#contents)
 
