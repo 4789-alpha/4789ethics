@@ -66,6 +66,12 @@
       <label for="bg_same_level_count">Your level Tannas: <span id="bg_same_level_val">1</span></label>
       <input type="range" id="bg_same_level_count" min="1" max="10" step="1" value="1" />
     </div>
+    <div id="text_color" class="card">
+      <h3>Content Text Color</h3>
+      <label>R: <input type="range" id="text_r" min="0" max="255" value="0"/> <span id="text_r_val">0</span></label><br/>
+      <label>G: <input type="range" id="text_g" min="0" max="255" value="0"/> <span id="text_g_val">0</span></label><br/>
+      <label>B: <input type="range" id="text_b" min="0" max="255" value="0"/> <span id="text_b_val">0</span></label>
+    </div>
     <div id="foreground_opacity" class="card">
       <label for="fg_opacity">Foreground transparency: <span id="fg_opacity_val">0</span>%</label>
       <input type="range" id="fg_opacity" min="0" max="100" step="1" value="0" />
@@ -170,6 +176,33 @@
           localStorage.setItem('ethicom_same_level_count', e.target.value);
           alert('Reload the page to apply.');
         });
+      }
+
+      const txr = document.getElementById('text_r');
+      const txg = document.getElementById('text_g');
+      const txb = document.getElementById('text_b');
+      const txrv = document.getElementById('text_r_val');
+      const txgv = document.getElementById('text_g_val');
+      const txbv = document.getElementById('text_b_val');
+      function updText(){
+        const c={r:+txr.value,g:+txg.value,b:+txb.value};
+        txrv.textContent=c.r;
+        txgv.textContent=c.g;
+        txbv.textContent=c.b;
+        document.documentElement.style.setProperty('--text-color',`rgb(${c.r},${c.g},${c.b})`);
+        localStorage.setItem('ethicom_text_color',JSON.stringify(c));
+      }
+      if(txr&&txg&&txb){
+        let def;
+        try{def=JSON.parse(localStorage.getItem('ethicom_text_color')||'null');}catch{}
+        if(!def){
+          const comp=getComputedStyle(document.documentElement).getPropertyValue('--text-color').trim();
+          const m=comp.match(/rgb\((\d+),\s*(\d+),\s*(\d+)\)/);
+          def=m?{r:+m[1],g:+m[2],b:+m[3]}:{r:224,g:224,b:224};
+        }
+        txr.value=def.r;txg.value=def.g;txb.value=def.b;
+        updText();
+        [txr,txg,txb].forEach(el=>el.addEventListener('input',updText));
       }
 
       const fgSlider = document.getElementById('fg_opacity');
