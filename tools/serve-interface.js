@@ -61,6 +61,29 @@ function handleSignup(req, res) {
   });
 }
 
+function handleLogin(req, res) {
+  let body = '';
+  req.on('data', c => { body += c; });
+  req.on('end', () => {
+    try {
+      const { email, password } = JSON.parse(body);
+      if (!/^[^@]+@[^@]+\.[^@]+$/.test(email) || !password) {
+        res.writeHead(400); res.end('Invalid data'); return;
+      }
+      const users = readJson(usersFile);
+      const emailHash = crypto.createHash('sha256').update(email).digest('hex');
+      const user = users.find(u => u.emailHash === emailHash);
+      if (!user) { res.writeHead(403); res.end('Invalid credentials'); return; }
+      const pwHash = crypto.createHash('sha256').update(password + user.salt).digest('hex');
+      if (pwHash !== user.pwHash) { res.writeHead(403); res.end('Invalid credentials'); return; }
+      res.writeHead(200, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ id: user.id, op_level: user.op_level }));
+    } catch {
+      res.writeHead(400); res.end('Bad Request');
+    }
+  });
+}
+
 function handleEvaluation(req, res) {
   let body = '';
   req.on('data', c => { body += c; });
@@ -94,6 +117,9 @@ const server = http.createServer((req, res) => {
   if (req.method === 'POST' && urlPath === '/api/signup') {
     return handleSignup(req, res);
   }
+  if (req.method === 'POST' && urlPath === '/api/login') {
+    return handleLogin(req, res);
+  }
   if (req.method === 'POST' && urlPath === '/api/evaluate') {
     return handleEvaluation(req, res);
   }
@@ -125,3 +151,7 @@ const server = http.createServer((req, res) => {
 server.listen(port, () => {
   console.log(`Ethicom interface available at http://localhost:${port}/ethicom.html`);
 });
+
+if (require.main !== module) {
+  module.exports = { handleSignup, handleEvaluation, handleLogin };
+}
