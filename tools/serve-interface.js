@@ -78,6 +78,7 @@ function verifyTotp(secret, code) {
 const root = path.join(__dirname, '..', 'interface');
 const repoRoot = path.join(__dirname, '..');
 const port = process.env.PORT || 8080;
+const baseUrl = process.env.BASE_URL || `http://localhost:${port}`;
 const usersFile = path.join(__dirname, '..', 'app', 'users.json');
 const evalFile = path.join(__dirname, '..', 'app', 'evaluations.json');
 const connFile = path.join(__dirname, '..', 'app', 'connections.json');
@@ -274,7 +275,7 @@ function handleGoogleStart(req, res) {
   }
   const state = crypto.randomBytes(8).toString('hex');
   oauthStates.add(state);
-  const redirect = encodeURIComponent(`http://localhost:${port}/auth/google/callback`);
+  const redirect = encodeURIComponent(`${baseUrl}/auth/google/callback`);
   const url = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${oauthCfg.google.client_id}&redirect_uri=${redirect}&response_type=code&scope=openid%20email&state=${state}`;
   res.writeHead(302, { Location: url });
   res.end();
@@ -309,7 +310,7 @@ function handleGoogleCallback(req, res) {
     res.writeHead(400); res.end('Invalid state'); return;
   }
   oauthStates.delete(state);
-  const redirect = `http://localhost:${port}/auth/google/callback`;
+  const redirect = `${baseUrl}/auth/google/callback`;
   const postData = `code=${code}&client_id=${oauthCfg.google.client_id}&client_secret=${oauthCfg.google.client_secret}&redirect_uri=${encodeURIComponent(redirect)}&grant_type=authorization_code`;
   const opts = {
     hostname: 'oauth2.googleapis.com',
