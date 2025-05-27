@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const { spawn } = require('child_process');
 const crypto = require('crypto');
+const { search, loadSources } = require('./source-search.js');
 
 const root = path.join(__dirname, '..', 'interface');
 const repoRoot = path.join(__dirname, '..');
@@ -112,6 +113,25 @@ function handleEvaluation(req, res) {
   });
 }
 
+function handleSources(req, res) {
+  const url = new URL(req.url, 'http://localhost');
+  const type = url.searchParams.get('type') || 'person';
+  const query = url.searchParams.get('q');
+  const limit = parseInt(url.searchParams.get('limit') || '0', 10);
+  let items = [];
+  if (query) {
+    items = search(query, { type, limit: limit || 5 });
+  } else {
+    items = loadSources(type);
+    if (limit > 0) items = items.slice(0, limit);
+  }
+  res.writeHead(200, {
+    'Content-Type': 'application/json',
+    'Access-Control-Allow-Origin': '*'
+  });
+  res.end(JSON.stringify(items));
+}
+
 const server = http.createServer((req, res) => {
   let urlPath = decodeURIComponent(req.url.split('?')[0]);
   if (req.method === 'POST' && urlPath === '/api/signup') {
@@ -122,6 +142,9 @@ const server = http.createServer((req, res) => {
   }
   if (req.method === 'POST' && urlPath === '/api/evaluate') {
     return handleEvaluation(req, res);
+  }
+  if (req.method === 'GET' && urlPath === '/api/sources') {
+    return handleSources(req, res);
   }
   if (urlPath === '/' || urlPath === '') urlPath = '/ethicom.html';
   if (urlPath === '/download.zip') {
@@ -148,10 +171,10 @@ const server = http.createServer((req, res) => {
   });
 });
 
-server.listen(port, () => {
-  console.log(`Ethicom interface available at http://localhost:${port}/ethicom.html`);
-});
-
-if (require.main !== module) {
-  module.exports = { handleSignup, handleEvaluation, handleLogin };
+if (require.main === module) {
+  server.listen(port, () => {
+    console.log(`Ethicom interface available at http://localhost:${port}/ethicom.html`);
+  });
+} else {
+  module.exports = { handleSignup, handleEvaluation, handleLogin, handleSources };
 }
