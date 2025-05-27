@@ -82,7 +82,7 @@ See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
 | [interface/README.html](interface/README.html) | HTML version of the interface docs |
 | [interface/features_de.md](interface/features_de.md) | Funktionale Übersicht zum Interface |
 | [wings/index.html](wings/index.html) | Mobile interface "Wings" |
-| [wings/ratings.html](wings/ratings.html) | Mobile ratings summary |
+| [wings/ratings.html](wings/ratings.html) | Library of all ratings with search |
 | `interface_OLD/` | Historical demo of the first interface generation |
 **Settings are stored per device using browser localStorage and are not synced globally.**
 **Ratings from OP-1 onward are stored globally with the assigned signature ID. The email used during signup is hashed and never exposed.**
