@@ -30,6 +30,7 @@ See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
 - [OP-Permissions](#op-permissions)
 - [SRC vs. OO Levels](#src-vs-oo-levels)
 - [Evaluated Sources (as examples)](#evaluated-sources-as-examples)
+- [Person Image Sources](#person-image-sources)
 - [File Integrity](#file-integrity)
 - [Adding Languages](#adding-languages)
 - [Generating Interface README](#generating-interface-readme)
@@ -134,9 +135,14 @@ Only digital agents can advance beyond OP-9.
 Comparison table: [`references/src_vs_oo.md`](references/src_vs_oo.md)
 
 ### Evaluated Sources (as examples) [⇧](#contents)
+- [Person Image Sources](#person-image-sources)
 - [src-0001: Fairphone](sources/institutions/src-0001.json) → [`SRC-4`](manifests/op-eval-4789-src-0001.json)
 - [src-0002: Ecosia](https://www.ecosia.org/) → [`SRC-4`](manifests/op-eval-4789-src-0002.json)
  - [human-wiki dataset](references/human-wiki-links.json) → [`SRC-1`](manifests/op-eval-sig-1111-humanwiki.json)
+
+### Person Image Sources [⇧](#contents)
+
+Use the `image_url` field in `sources/persons/human-op0-candidates.json` to record image URLs. Specify `image_source` (e.g. "wiki") when known.
 
 ### File Integrity [⇧](#contents)
 
