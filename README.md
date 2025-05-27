@@ -195,6 +195,8 @@ macOS, Linux or mobile shells such as Termux. Even older hardware is sufficient�
 works, the gatekeeper does too. A decade-old laptop with a single-core CPU and around
 512 MB of RAM is usually enough as long as Node.js 18 or later runs. Use it responsibly as
 noted in `DISCLAIMERS.md`.
+Confirmed devices are stored hashed in `app/gatekeeper_devices.json`. Once the same controller is used again, no further confirmation is needed.
+Registrierungsdaten werden offline gehasht gespeichert. Keine Gewährleistung für absolute Anonymität.
 **4789**
 
 ### API Access Control [⇧](#contents)
