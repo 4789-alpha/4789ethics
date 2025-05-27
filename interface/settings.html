@@ -38,20 +38,8 @@
       <label for="lang_select">Select:</label>
       <select id="lang_select"></select>
     </div>
-    <div id="theme_selection" class="card">
-      <h3>Theme</h3>
-      <label for="theme_select">Color scheme:</label>
-      <select id="theme_select">
-        <option value="dark">Dark</option>
-        <option value="tanna-dark">Dark Tanna</option>
-        <option value="tanna">Tanna</option>
-        <option value="ocean">Ocean</option>
-        <option value="desert">Desert</option>
-        <option value="transparent">Transparent</option>
-        <option value="custom">Custom</option>
-      </select>
-      <button id="custom_theme_btn" style="display:none;margin-top:0.5em;" class="accent-button">Create Custom Scheme</button>
-    </div>
+    <!-- Theme selection removed -->
+    <div id="color_scheme" class="card"></div>
     <div id="tanna_color" class="card" style="display:none;">
       <h3>Tanna Main Color</h3>
       <label>R: <input type="range" id="tanna_r" min="0" max="255" value="34"/> <span id="tanna_r_val">34</span></label><br/>
@@ -105,6 +93,49 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       initLanguageDropdown('lang_select');
+      function parseCol(v){
+        v=(v||'').trim();
+        if(v.startsWith('#')){
+          if(v.length===4) v='#'+v[1]+v[1]+v[2]+v[2]+v[3]+v[3];
+          const n=parseInt(v.slice(1),16);
+          return {r:(n>>16)&255,g:(n>>8)&255,b:n&255};
+        }
+        const m=v.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)/);
+        return m?{r:+m[1],g:+m[2],b:+m[3]}:{r:0,g:0,b:0};
+      }
+      function initColorSliders(){
+        const wrap=document.getElementById('color_scheme');
+        if(!wrap) return;
+        const vars={
+          '--bg-color':'Background','--text-color':'Text','--header-text-color':'Header Text',
+          '--nav-text-color':'Nav Text','--primary-color':'Primary','--card-bg':'Card',
+          '--header-bg':'Header BG','--nav-bg':'Nav BG','--card-alpha-bg':'Card Alpha',
+          '--accent-color':'Accent','--highlight-text-color':'Highlight'
+        };
+        const stored=JSON.parse(localStorage.getItem('ethicom_colors')||'{}');
+        wrap.innerHTML='<h3>Colors</h3>';
+        for(const [name,label] of Object.entries(vars)){
+          const base=parseCol(stored[name]||getComputedStyle(document.documentElement).getPropertyValue(name));
+          const b=document.createElement('div');
+          b.innerHTML=`<strong>${label}</strong><br>
+          <label>R: <input type="range" min="0" max="255" value="${base.r}"> <span>${base.r}</span></label><br>
+          <label>G: <input type="range" min="0" max="255" value="${base.g}"> <span>${base.g}</span></label><br>
+          <label>B: <input type="range" min="0" max="255" value="${base.b}"> <span>${base.b}</span></label>`;
+          const inputs=b.querySelectorAll('input');
+          const spans=b.querySelectorAll('span');
+          function upd(){
+            const r=+inputs[0].value,g=+inputs[1].value,bv=+inputs[2].value;
+            spans[0].textContent=r;spans[1].textContent=g;spans[2].textContent=bv;
+            const col=`rgb(${r},${g},${bv})`;
+            document.documentElement.style.setProperty(name,col);
+            stored[name]=col;
+            localStorage.setItem('ethicom_colors',JSON.stringify(stored));
+          }
+          inputs.forEach(i=>i.addEventListener('input',upd));
+          wrap.appendChild(b); upd();
+        }
+      }
+      initColorSliders();
       const s = window.touchSettings && window.touchSettings.state || {};
       const g = document.getElementById('touch_gestures');
       const h = document.getElementById('touch_haptics');
