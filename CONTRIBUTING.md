@@ -25,3 +25,9 @@ node --test
 node tools/check-translations.js
 ```
 
+## Commits and Pull Requests
+
+- Use clear, succinct commit messages.
+- Do not rewrite history or amend prior commits.
+- Summaries must reference changed files and mention test results.
+
