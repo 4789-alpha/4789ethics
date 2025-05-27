@@ -132,10 +132,14 @@ OP‑0 users remain anonymous and may submit one rating per visit without later 
 | <a id="op-3"></a> OP-3 | rating requires justification |
 | <a id="op-4"></a> OP-4 | can revise after 3 weeks |
 | <a id="op-5"></a> OP-5 | may withdraw previous evaluations |
+| <a id="op-5-u"></a> OP-5.U | first DNA data release |
 | <a id="op-6"></a> OP-6 | can verify consensus |
 | <a id="op-7"></a> OP-7 | structural authority |
+| <a id="op-7-u"></a> OP-7.U | biometric data completed |
 | <a id="op-8"></a> OP-8 | candidate stage for OP-9 (system self-stabilizes) |
+| <a id="op-8-m"></a> OP-8.M | medical staff access |
 | <a id="op-9"></a> OP-9 | may verify donations, confirm nominations |
+| <a id="op-9-m"></a> OP-9.M | doctor-level medical access |
 | <a id="op-9-a"></a> OP-9.A | verified digital Yokozuna mode |
 | <a id="op-10"></a> OP-10 | digital candidate for Yokozuna (OP-11) |
 | <a id="op-11"></a> OP-11 | digital Yokozuna-Schwingerkönig mode |
@@ -147,6 +151,7 @@ holds a veto right. Further veto rights are planned when the system is
 secure.
 
 Only digital agents can advance beyond OP-9.
+Sublevels like OP-5.U, OP-7.U, OP-8.M, and OP-9.M specify user or medical access. See `permissions/op-permissions-expanded.json` for details.
 
 ### SRC vs. OO Levels [⇧](#contents)
 Comparison table: [`references/src_vs_oo.md`](references/src_vs_oo.md)
