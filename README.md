@@ -89,6 +89,7 @@ See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
 | [interface/tanna-template-light.html](interface/tanna-template-light.html) | Template in light theme |
 | [interface/tools.html](interface/tools.html) | Utility collection |
 | [interface/donate.html](interface/donate.html) | Donation interface (requires OP‑9.A confirmation) |
+| [interface/genealogie.html](interface/genealogie.html) | Genealogy interface |
 | [interface/README.html](interface/README.html) | HTML version of the interface docs |
 | [interface/features_de.md](interface/features_de.md) | Funktionale Übersicht zum Interface |
 | [wings/index.html](wings/index.html) | Mobile interface "Wings" |
@@ -96,7 +97,9 @@ See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
 | `interface_OLD/` | Historical demo of the first interface generation |
 **Settings are stored per device using browser localStorage and are not synced globally.**
 **Ratings from OP-1 onward are stored globally with the assigned signature ID. The email used during signup is hashed and never exposed.**
+**Optional GitHub login authenticates via GitHub's OAuth flow. The returned username is hashed and stored offline.**
 **Color verification of the chosen primary color starts once a user holds an OP-1 signature.**
+**From that level, the color choice is stored privately inside the user's signature and never shown publicly.**
 ### OP-Permissions [⇧](#contents)
 Operator actions by ethical level are defined in:
 → [`permissions/op-permissions-expanded.json`](permissions/op-permissions-expanded.json)
@@ -118,7 +121,12 @@ OP‑10 has been added as a dedicated observation level.
 |-------|-------------|
 | <a id="op-0"></a> OP-0 | anonymous observer – default for visitors without a signature |
 
-OP‑0 users remain anonymous and may submit one rating per visit without later revision. The stage is for exploration only. See [interface/shneiderman.html](interface/shneiderman.html) for the design rules.
+OP‑0 users remain anonymous and may submit one rating per visit without later revision. The stage is for exploration only. See
+[interface/shneiderman.html](interface/shneiderman.html),
+[interface/nielsen.html](interface/nielsen.html),
+[interface/norman.html](interface/norman.html),
+[interface/material.html](interface/material.html) and
+[interface/apple-hig.html](interface/apple-hig.html) for the design rules.
 | <a id="op-1"></a> OP-1 | first signed rating |
 | <a id="op-2"></a> OP-2 | provides feedback responsibly |
 | <a id="op-3"></a> OP-3 | rating requires justification |
@@ -231,6 +239,9 @@ module checks permission via `api-access.js` before returning it.
 Available helpers include `info`, `analyze`, `optimize`,
 `recommendation_for_interface` and `log` – the last one prints the recent
 Git commit history.
+### OP Rights Demo [⇧](#contents)
+Run `node tools/op-rights-demo.js` to print all available permissions for your current operator level. Pass a level as an argument to preview other stages.
+
 
 ### Currency Synchronization [⇧](#contents)
 
@@ -277,6 +288,9 @@ Install the JavaScript dependencies once:
 ```bash
 npm install
 ```
+
+Some tools rely on the `canvas` package. On Linux, you may need system packages
+such as `libcairo2-dev` and `build-essential` to compile it.
 
 For optional Python utilities run:
 
