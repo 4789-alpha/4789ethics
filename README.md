@@ -64,6 +64,11 @@ See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
 | `test/` | Node.js test suite |
 | `tools/` | Utility scripts (e.g., trust-demotion engine, Python API example) |
 | `use_cases/` | Example scenarios and dissemination ideas |
+| `op-logo/` | Stages of the Tanna symbol |
+| `wings/` | Minimal mobile interface |
+| `evidence/` | Datasets such as `person-ratings.json` |
+| `interface_OLD/` | Legacy version of the first interface |
+| `references/` | Reference tables and scores |
 
 
 ### Interface Pages [⇧](#contents)
