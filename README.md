@@ -85,7 +85,7 @@ README.md -> GET_STARTED.md -> index.html
 | `sources/images/` | Pictures for institutions (`institutions/`), persons (`persons/`), and fish (`fish/`) |
 | `sources/fish/ch/` | Text placeholders for Swiss fish images (e.g., `esox_ch.png`) |
 | `test/` | Node.js test suite |
-| `tools/` | Utility scripts (e.g., trust-demotion engine, Python API example) |
+| `tools/` | Utility scripts (e.g., trust-demotion engine, correction engine, Python API example) |
 | `use_cases/` | Example scenarios and dissemination ideas |
 | `op-logo/` | Stages of the Tanna symbol |
 | `wings/` | Minimal mobile interface |
@@ -345,6 +345,11 @@ Run `node tools/source-manager.js list` to view all sources. Use
 `--type=person` or `--type=org` to filter and `--sort=name` or
 `--sort=category` to control the order. This keeps the candidate lists
 organized and easy to review.
+
+### Correction Engine
+[⇧](#contents)
+
+Run `node tools/correction-engine.js` to flag evaluations contradicted by higher OP-level ratings. The script outputs suggested demotions or rating changes as JSON.
 
 
 ## Roadmap
