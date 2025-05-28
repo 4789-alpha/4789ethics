@@ -3,21 +3,27 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Fish Interface</title>
+  <title>Hermes</title>
   <link rel="stylesheet" href="ethicom-style.css" />
   <script src="ethicom-utils.js"></script>
   <script src="accessibility.js"></script>
+  <script src="language-selector.js"></script>
+  <script src="dynamic-info.js"></script>
   <script src="theme-manager.js"></script>
+  <script src="signature-verifier.js"></script>
   <script src="logo-background.js"></script>
   <script src="side-drop.js"></script>
   <script src="op-side-nav.js"></script>
+  <script src="render-markdown.js"></script>
+  <script src="hermes.js"></script>
   <script src="module-logo.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main_content">Skip to main content</a>
   <div id="op_background"></div>
   <header>
-    <h1>Fish Interface</h1>
+    <h1>Hermes</h1>
+    <div id="badge_display" class="badge-row"></div>
     <nav>
       <a href="../home.html">Home</a>
       <a href="../bewertung.html">Bewertung</a>
@@ -31,20 +37,31 @@
     </nav>
   </header>
   <main id="main_content">
+    <section id="hermes_tree" class="card"></section>
+    <section id="hermes_view" class="card">
+      <div id="hermes_content">Wähle einen Artikel.</div>
+    </section>
     <section class="card">
-      <h2>Regional Fish Data</h2>
-      <p>
-        <a href="fish-interface/fischeBern.html">Fische Bern</a> – Übersicht lokaler Fischarten.
-      </p>
-      <p>
-        <a href="fish-interface/fischEditor.html">Fisch-Editor</a> – Datenbearbeitung ab OP-5.
-      </p>
+      <h2>Disclaimers</h2>
+      <ul>
+        <li>Diese Struktur wird ohne Gewährleistung bereitgestellt.</li>
+        <li>Die Nutzung erfolgt auf eigene Verantwortung.</li>
+        <li>4789 ist ein Standard für Verantwortung, keine Person.</li>
+        <li>Nutzung nur reflektiert und mit Konsequenz.</li>
+      </ul>
     </section>
   </main>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      getLanguage();
       applyTheme('tanna-dark');
+      renderBadge(getStoredOpLevel() || 'OP-0', getStoredOpLevel() || 'OP-0');
+      if (typeof initHermes === 'function') initHermes();
+      initSideDrop('op-navigation.html');
+      const badge = document.getElementById('badge_display');
+      if (badge) badge.addEventListener('click', e => { e.preventDefault(); toggleSideDrop(); });
     });
   </script>
+  <div id="side_drop"></div>
 </body>
 </html>

@@ -77,9 +77,13 @@ function initLogoBackground() {
   });
 
   const symbols = [];
-  // Number of floating symbols can be customized via settings
-  const stored = parseInt(localStorage.getItem('ethicom_bg_count') || '40', 10);
-  const total = Number.isFinite(stored) ? stored : 40;
+  // Density of floating symbols can be customized via settings
+  const storedPct = parseInt(localStorage.getItem('ethicom_bg_fill') || '40', 10);
+  const fillRatio = Number.isFinite(storedPct) ? storedPct / 100 : 0.4;
+  const avgSize = levels.reduce((sum, lvl) => sum + 30 + lvl * 10 + 5, 0) / levels.length;
+  const avgArea = avgSize * avgSize;
+  const maxSymbols = Math.floor(canvas.width * canvas.height / avgArea);
+  const total = Math.max(20, Math.floor(maxSymbols * fillRatio));
   const collisionsEnabled = localStorage.getItem('ethicom_bg_collisions') !== '0';
   for (let i = 0; i < total; i++) {
     const lvl = levels[i % levels.length];

@@ -1,0 +1,1545 @@
+[
+  {
+    "id": 1,
+    "question": "Bestimme diesen Fisch.",
+    "choices": [
+      "Zander",
+      "Egli",
+      "Schleie"
+    ],
+    "correct": "Zander"
+  },
+  {
+    "id": 2,
+    "question": "Bestimme diesen Fisch.",
+    "choices": [
+      "Schleie",
+      "Karpfen",
+      "Alet"
+    ],
+    "correct": "Schleie"
+  },
+  {
+    "id": 3,
+    "question": "Bestimme diesen Fisch.",
+    "choices": [
+      "Egli",
+      "Zander",
+      "Hecht"
+    ],
+    "correct": "Egli"
+  },
+  {
+    "id": 4,
+    "question": "Bestimme diesen Fisch.",
+    "choices": [
+      "Nase",
+      "Barbe",
+      "Alet"
+    ],
+    "correct": "Nase"
+  },
+  {
+    "id": 5,
+    "question": "Bestimme diesen Fisch.",
+    "choices": [
+      "Karpfen",
+      "Nase",
+      "Felche"
+    ],
+    "correct": "Karpfen"
+  },
+  {
+    "id": 6,
+    "question": "Bestimme diesen Fisch.",
+    "choices": [
+      "Schleie",
+      "Rotauge",
+      "Brachsmen"
+    ],
+    "correct": "Schleie"
+  },
+  {
+    "id": 7,
+    "question": "Bestimme diesen Fisch.",
+    "choices": [
+      "Barbe",
+      "Alet",
+      "Felche"
+    ],
+    "correct": "Barbe"
+  },
+  {
+    "id": 8,
+    "question": "Bestimme diesen Fisch.",
+    "choices": [
+      "Rotauge",
+      "Rotfeder",
+      "Alet"
+    ],
+    "correct": "Rotauge"
+  },
+  {
+    "id": 9,
+    "question": "Bestimme diesen Fisch.",
+    "choices": [
+      "Zander",
+      "Egli",
+      "Hecht"
+    ],
+    "correct": "Zander"
+  },
+  {
+    "id": 10,
+    "question": "Bestimme diesen Fisch.",
+    "choices": [
+      "Regenbogenforelle",
+      "Seeforelle",
+      "Seesaibling"
+    ],
+    "correct": "Regenbogenforelle"
+  },
+  {
+    "id": 11,
+    "question": "Bestimme diesen Fisch.",
+    "choices": [
+      "Felche",
+      "Seesaibling",
+      "Alet"
+    ],
+    "correct": "Felche"
+  },
+  {
+    "id": 12,
+    "question": "Bestimme diesen Fisch.",
+    "choices": [
+      "Wels",
+      "Aal",
+      "Trüsche"
+    ],
+    "correct": "Wels"
+  },
+  {
+    "id": 13,
+    "question": "Bestimme diesen Fisch.",
+    "choices": [
+      "Rotauge",
+      "Brachsmen",
+      "Rotfeder"
+    ],
+    "correct": "Rotauge"
+  },
+  {
+    "id": 14,
+    "question": "Bestimme diesen Fisch.",
+    "choices": [
+      "Rotfeder",
+      "Brachsmen",
+      "Rotauge"
+    ],
+    "correct": "Rotfeder"
+  },
+  {
+    "id": 15,
+    "question": "Bestimme diesen Fisch.",
+    "choices": [
+      "Seeforelle",
+      "Äsche",
+      "Barbe"
+    ],
+    "correct": "Seeforelle"
+  },
+  {
+    "id": 16,
+    "question": "Bestimme diesen Fisch.",
+    "choices": [
+      "Seesaibling",
+      "Felche",
+      "Bachforelle"
+    ],
+    "correct": "Seesaibling"
+  },
+  {
+    "id": 17,
+    "question": "Bestimme diesen Fisch.",
+    "choices": [
+      "Äsche",
+      "Seeforelle",
+      "Felche"
+    ],
+    "correct": "Äsche"
+  },
+  {
+    "id": 18,
+    "question": "Welche Fischarten sind typische Kieslaicher?",
+    "choices": [
+      "z. B. Forelle, Äsche, Barbe, Nase",
+      "z. B. Hecht, Egli, Rotfeder",
+      "z. B. Felche, Karpfen, Schleie"
+    ],
+    "correct": "z. B. Forelle, Äsche, Barbe, Nase"
+  },
+  {
+    "id": 19,
+    "question": "Welche Ansprüche stellen Forellen an ihre Laichplätze?",
+    "choices": [
+      "Lockerer, gut durchströmter Kies",
+      "Dichter Pflanzenbewuchs",
+      "Mindestens 80 cm Wassertiefe"
+    ],
+    "correct": "Lockerer, gut durchströmter Kies"
+  },
+  {
+    "id": 20,
+    "question": "Warum sind gewisse Fischarten geschützt?",
+    "choices": [
+      "Weil sie aus touristischen Gründen interessant sind",
+      "Weil es Arten gibt, die stark gefährdet oder vom Aussterben bedroht sind",
+      "Weil sie als Futter für Raubfische dienen"
+    ],
+    "correct": "Weil sie aus touristischen Gründen interessant sind"
+  },
+  {
+    "id": 21,
+    "question": "Gibt es gesamtschweizerisch geschützte Arten?",
+    "choices": [
+      "Nein, das regeln nur die Kantone",
+      "Ja, laut Verordnung zum Bundesgesetz über die Fischerei",
+      "Ja, aber sie sind alle ausgestorben"
+    ],
+    "correct": "Nein, das regeln nur die Kantone"
+  },
+  {
+    "id": 22,
+    "question": "Was tun, wenn eine geschützte Art am Haken hängt?",
+    "choices": [
+      "Im Wasser lösen und vorsichtig zurücksetzen",
+      "Herausnehmen, fotografieren, vermessen",
+      "Lebend mitnehmen und Aufsicht zeigen"
+    ],
+    "correct": "Im Wasser lösen und vorsichtig zurücksetzen"
+  },
+  {
+    "id": 23,
+    "question": "Warum sind nicht-einheimische Krebsarten gefährlich?",
+    "choices": [
+      "Wegen Krebspest",
+      "Weil sie schneller wachsen",
+      "Weil sie Fischlaich fressen"
+    ],
+    "correct": "Wegen Krebspest"
+  },
+  {
+    "id": 24,
+    "question": "Welche Krebsart ist nicht einheimisch?",
+    "choices": [
+      "Kamberkrebs",
+      "Dohlenkrebs",
+      "Steinkrebs"
+    ],
+    "correct": "Kamberkrebs"
+  },
+  {
+    "id": 25,
+    "question": "Zu welcher Fischfamilie gehören viele kleinwüchsige Arten?",
+    "choices": [
+      "Barschartige",
+      "Forellenartige",
+      "Karpfenartige"
+    ],
+    "correct": "Barschartige"
+  },
+  {
+    "id": 26,
+    "question": "Was versteht man unter dem Begriff \"Biodiversität\"?",
+    "choices": [
+      "Fische schonend zurücksetzen",
+      "Es ist eine Fischkrankheit",
+      "Die gesamte biologische Vielfalt, von der genetischen Vielfalt bis zur Ökosystem-Vielfalt"
+    ],
+    "correct": "Fische schonend zurücksetzen"
+  },
+  {
+    "id": 27,
+    "question": "Welche Fischfamilie ist in der Schweiz für aussergewöhnlich grosse Artenvielfalt bekannt?",
+    "choices": [
+      "Felchen",
+      "Hechte",
+      "Barsche"
+    ],
+    "correct": "Felchen"
+  },
+  {
+    "id": 28,
+    "question": "In welchem Kanton leben viele Fischarten, die sonst in der Schweiz nicht vorkommen?",
+    "choices": [
+      "Luzern",
+      "Neuenburg",
+      "Tessin"
+    ],
+    "correct": "Luzern"
+  },
+  {
+    "id": 29,
+    "question": "Wie passen sich Fisch-Populationen an den Lebensraum an?",
+    "choices": [
+      "Durch schnelles Wachstum",
+      "Durch natürliche Auslese und Evolution",
+      "Durch reduzierte Aktivität"
+    ],
+    "correct": "Durch schnelles Wachstum"
+  },
+  {
+    "id": 30,
+    "question": "Warum ist genetische Vielfalt wichtig?",
+    "choices": [
+      "Erhöht Anpassungsfähigkeit",
+      "Ist bei Fischen unwichtig",
+      "Damit das Fischfleisch besser schmeckt"
+    ],
+    "correct": "Erhöht Anpassungsfähigkeit"
+  },
+  {
+    "id": 31,
+    "question": "Wie erhält man genetische Vielfalt bei Fischen am besten?",
+    "choices": [
+      "Durch Förderung der natürlichen Fortpflanzung",
+      "Durch Besatz mit grossen Fischen",
+      "Durch gezielte Befischung nicht angepasster Fische"
+    ],
+    "correct": "Durch Förderung der natürlichen Fortpflanzung"
+  },
+  {
+    "id": 32,
+    "question": "Welche Fische laichen im Frühling?",
+    "choices": [
+      "Äschen",
+      "Seesaiblinge",
+      "Forellen"
+    ],
+    "correct": "Äschen"
+  },
+  {
+    "id": 33,
+    "question": "Mit welcher Flosse bewegen sich Fische rasch vorwärts?",
+    "choices": [
+      "Rückenflosse",
+      "Afterflosse",
+      "Schwanzflosse"
+    ],
+    "correct": "Rückenflosse"
+  },
+  {
+    "id": 34,
+    "question": "Wozu dienen Schuppen?",
+    "choices": [
+      "Mechanischer Schutz",
+      "Schnelles Schwimmen",
+      "Kalkreserve"
+    ],
+    "correct": "Mechanischer Schutz"
+  },
+  {
+    "id": 35,
+    "question": "Wozu dienen die Kiemen?",
+    "choices": [
+      "Unterstützen den Geruchssinn",
+      "Wichtigstes Atmungsorgan",
+      "Temperaturausgleich"
+    ],
+    "correct": "Unterstützen den Geruchssinn"
+  },
+  {
+    "id": 36,
+    "question": "Welches Organ hilft beim Halten der Schwimmhöhe?",
+    "choices": [
+      "Kiemen",
+      "Schwimmblase",
+      "Rückenflosse"
+    ],
+    "correct": "Kiemen"
+  },
+  {
+    "id": 37,
+    "question": "Wozu dient das Seitenlinienorgan?",
+    "choices": [
+      "Hören",
+      "Geschlechtsunterscheidung",
+      "Umgebungswahrnehmung"
+    ],
+    "correct": "Hören"
+  },
+  {
+    "id": 38,
+    "question": "Wie ist die Körperoberfläche des Aals beschaffen?",
+    "choices": [
+      "Schuppenlos",
+      "Kleine Schuppen",
+      "Grosse Schuppen"
+    ],
+    "correct": "Schuppenlos"
+  },
+  {
+    "id": 39,
+    "question": "Welcher Salmonide hat eine grosse Rückenflosse?",
+    "choices": [
+      "Regenbogenforelle",
+      "Äsche",
+      "Seesaibling"
+    ],
+    "correct": "Regenbogenforelle"
+  },
+  {
+    "id": 40,
+    "question": "Welcher Fisch hat keine Schwimmblase/-gang?",
+    "choices": [
+      "Groppe",
+      "Elritze",
+      "Gründling"
+    ],
+    "correct": "Groppe"
+  },
+  {
+    "id": 41,
+    "question": "Welcher Fisch hat ein unterständiges Maul?",
+    "choices": [
+      "Nase",
+      "Laube",
+      "Forelle"
+    ],
+    "correct": "Nase"
+  },
+  {
+    "id": 42,
+    "question": "Wie ist die Mundpartie des Egli?",
+    "choices": [
+      "Zahnlos",
+      "Wenige, grosse Zähne",
+      "Viele, kleine Zähnchen"
+    ],
+    "correct": "Zahnlos"
+  },
+  {
+    "id": 43,
+    "question": "Was passiert bei schnellem Hochholen aus Tiefe?",
+    "choices": [
+      "Luft in der Schwimmblase dehnt sich aus",
+      "Luft wird zusammengedrückt",
+      "Das Herz hört auf zu schlagen – Fisch muss nicht getötet werden"
+    ],
+    "correct": "Luft in der Schwimmblase dehnt sich aus"
+  },
+  {
+    "id": 44,
+    "question": "Welche Fischgruppe hat eine Fettflosse?",
+    "choices": [
+      "Forellenartige",
+      "Barschartige",
+      "Karpfenartige"
+    ],
+    "correct": "Forellenartige"
+  },
+  {
+    "id": 45,
+    "question": "Wie fressen Fische mit unterständigem Maul?",
+    "choices": [
+      "Von der Oberfläche",
+      "Vom Grund",
+      "Aus freiem Wasser"
+    ],
+    "correct": "Von der Oberfläche"
+  },
+  {
+    "id": 46,
+    "question": "Welchen Vorteil haben Fische mit pfeilförmiger Körperform (z. B. Hecht)?",
+    "choices": [
+      "Hohe Geschwindigkeit auf kurzer Strecke",
+      "Weniger Feinde durch Aussehen",
+      "Besseres Verstecken im Schilf"
+    ],
+    "correct": "Hohe Geschwindigkeit auf kurzer Strecke"
+  },
+  {
+    "id": 47,
+    "question": "Können Hautschäden bei Fischen zum Tod führen?",
+    "choices": [
+      "Nein, nur Pilzgefahr",
+      "Ja, bei starken Schäden",
+      "Nein, nur Infektionsgefahr"
+    ],
+    "correct": "Nein, nur Pilzgefahr"
+  },
+  {
+    "id": 48,
+    "question": "Wo sind krankheitsverdächtige Fische zu melden?",
+    "choices": [
+      "Labor",
+      "Fischereiaufsicht",
+      "Bundesamt für Veterinärwesen"
+    ],
+    "correct": "Labor"
+  },
+  {
+    "id": 49,
+    "question": "Welche Gewässer sind besonders von PKD betroffen?",
+    "choices": [
+      "Seen",
+      "Kühle Bergbäche",
+      "Wärmere Mittellandflüsse"
+    ],
+    "correct": "Seen"
+  },
+  {
+    "id": 50,
+    "question": "Warum nur mit nassen Händen lebende Fische anfassen?",
+    "choices": [
+      "Temperaturausgleich",
+      "Schutz der Schleimschicht",
+      "Rücksetzen wird einfacher"
+    ],
+    "correct": "Temperaturausgleich"
+  },
+  {
+    "id": 51,
+    "question": "Was können Angler gegen Krankheitsverbreitung (z. B. Saprolegnia) tun?",
+    "choices": [
+      "Nichts – Sache des Bundes",
+      "Geräte reinigen und trocknen",
+      "Auch geschützte Fische entnehmen"
+    ],
+    "correct": "Nichts – Sache des Bundes"
+  },
+  {
+    "id": 52,
+    "question": "Was fördert Ausbruch von Krankheiten?",
+    "choices": [
+      "Stress (Temperatur, Pestizide etc.)",
+      "Ungereinigte Ausrüstung",
+      "Mangel an Antibiotika"
+    ],
+    "correct": "Stress (Temperatur, Pestizide etc.)"
+  },
+  {
+    "id": 53,
+    "question": "Wie Geräte desinfizieren?",
+    "choices": [
+      "Hitze, Austrocknung oder Desinfektion",
+      "Lauwarmes Wasser",
+      "Nicht möglich"
+    ],
+    "correct": "Hitze, Austrocknung oder Desinfektion"
+  },
+  {
+    "id": 54,
+    "question": "Welche Region passt zu \"Quellgewässer, kühl, sauerstoffreich\"?",
+    "choices": [
+      "Barbenregion",
+      "Forellenregion",
+      "Äschenregion"
+    ],
+    "correct": "Barbenregion"
+  },
+  {
+    "id": 55,
+    "question": "Was ändert sich, wenn aus Bach ein Strom wird?",
+    "choices": [
+      "Gefälle und Geschwindigkeit sinken",
+      "Untergrund wird grobkörniger",
+      "Temperatur-Schwankungen kleiner"
+    ],
+    "correct": "Gefälle und Geschwindigkeit sinken"
+  },
+  {
+    "id": 56,
+    "question": "Warum sind Flachwasserzonen wichtig?",
+    "choices": [
+      "Fischer kann besser waten",
+      "Wasser erwärmt sich schneller",
+      "Lebensraum für Jungfische"
+    ],
+    "correct": "Fischer kann besser waten"
+  },
+  {
+    "id": 57,
+    "question": "Was fördert Artenvielfalt?",
+    "choices": [
+      "Landwirtschaft nahe Gewässer",
+      "Vielfältige Lebensräume",
+      "Harte Uferverbauung"
+    ],
+    "correct": "Landwirtschaft nahe Gewässer"
+  },
+  {
+    "id": 58,
+    "question": "Zusammenhang Nährstoff- & Sauerstoffgehalt?",
+    "choices": [
+      "Oligotroph = mehr O₂",
+      "Oligotroph = weniger O₂",
+      "Kein Zusammenhang"
+    ],
+    "correct": "Oligotroph = mehr O₂"
+  },
+  {
+    "id": 59,
+    "question": "Zusammenhang Wassertemperatur & Sauerstoff?",
+    "choices": [
+      "Immer gleich viel O₂",
+      "Je wärmer, desto weniger O₂",
+      "Je wärmer, desto mehr O₂"
+    ],
+    "correct": "Immer gleich viel O₂"
+  },
+  {
+    "id": 60,
+    "question": "Wer sind Produzenten der Nahrungskette?",
+    "choices": [
+      "Wasserpflanzen",
+      "Schnecken",
+      "Fische"
+    ],
+    "correct": "Wasserpflanzen"
+  },
+  {
+    "id": 61,
+    "question": "Fressen Fische ganzjährig gleich viel?",
+    "choices": [
+      "Im Winter mehr",
+      "Ja",
+      "Im Winter weniger"
+    ],
+    "correct": "Im Winter mehr"
+  },
+  {
+    "id": 62,
+    "question": "Welche Fischgrösse kommt am häufigsten vor?",
+    "choices": [
+      "Gleich verteilt",
+      "Grosse Fische",
+      "Kleine Jungfische"
+    ],
+    "correct": "Gleich verteilt"
+  },
+  {
+    "id": 63,
+    "question": "Wer ist für Bewirtschaftung zuständig?",
+    "choices": [
+      "Kantonale Fischereifachstellen",
+      "Bundesamt für Veterinärwesen",
+      "Bundesamt für Umwelt"
+    ],
+    "correct": "Kantonale Fischereifachstellen"
+  },
+  {
+    "id": 64,
+    "question": "Welche Grösse von Besatztieren ist am erfolgversprechendsten?",
+    "choices": [
+      "Wenige grosse Fische",
+      "Angepasster Anteil Brütlinge/Sömmerlinge",
+      "Viele billige Brütlinge/Sömmerlinge"
+    ],
+    "correct": "Wenige grosse Fische"
+  },
+  {
+    "id": 65,
+    "question": "Was bedeutet \"die Fische laichen\"?",
+    "choices": [
+      "Sie legen Eier ab",
+      "Sie fressen",
+      "Sie sterben"
+    ],
+    "correct": "Sie legen Eier ab"
+  },
+  {
+    "id": 66,
+    "question": "Wie sollten Elterntiere für Besatz ausgewählt werden?",
+    "choices": [
+      "Möglichst wenige grosse Tiere",
+      "Spielt keine Rolle",
+      "Möglichst zahlreich & aus dem gleichen Gewässer"
+    ],
+    "correct": "Möglichst wenige grosse Tiere"
+  },
+  {
+    "id": 67,
+    "question": "Woher stammen optimale Elterntiere?",
+    "choices": [
+      "Aus fremden Gewässern (\"Blutauffrischung\")",
+      "Aus Zielgewässer (angepasst)",
+      "Aus billigster Zucht"
+    ],
+    "correct": "Aus fremden Gewässern (\"Blutauffrischung\")"
+  },
+  {
+    "id": 68,
+    "question": "Was ist das Ziel von Schonmassnahmen?",
+    "choices": [
+      "Schutz der Jungfische",
+      "Förderung sportlicher Methoden",
+      "Schutz kranker Fische"
+    ],
+    "correct": "Schutz der Jungfische"
+  },
+  {
+    "id": 69,
+    "question": "Was passiert im Schongebiet?",
+    "choices": [
+      "Grosse Fische nehmen überhand",
+      "Gleichgewicht stellt sich ein",
+      "Bestand steigt ständig"
+    ],
+    "correct": "Grosse Fische nehmen überhand"
+  },
+  {
+    "id": 70,
+    "question": "Was bewirkt eine Fangzahnbeschränkung?",
+    "choices": [
+      "Gerechtere Verteilung",
+      "Mehr Bestand",
+      "Schutz der Laichtiere"
+    ],
+    "correct": "Gerechtere Verteilung"
+  },
+  {
+    "id": 71,
+    "question": "Worauf sind Schonzeiten ausgerichtet?",
+    "choices": [
+      "Laichzeit der Fische",
+      "Jahreszeiten",
+      "Bedürfnisse der Angler"
+    ],
+    "correct": "Laichzeit der Fische"
+  },
+  {
+    "id": 72,
+    "question": "Warum Fangmindestmasse?",
+    "choices": [
+      "Damit jeder Fisch einmal laichen kann",
+      "Kleine Fische schwer zu filetieren",
+      "Gleichmässiger Fangertrag"
+    ],
+    "correct": "Damit jeder Fisch einmal laichen kann"
+  },
+  {
+    "id": 73,
+    "question": "Sieht man bei Gewässerschäden immer tote Fische?",
+    "choices": [
+      "Ja",
+      "Nicht unbedingt",
+      "Nie"
+    ],
+    "correct": "Ja"
+  },
+  {
+    "id": 74,
+    "question": "Was ist bei Fischsterben zu tun?",
+    "choices": [
+      "Alarm & Beweissicherung",
+      "Stauen, Abfischen, Beweise",
+      "Alarm, Gifteinfluss ableiten, Frischwasser"
+    ],
+    "correct": "Alarm & Beweissicherung"
+  },
+  {
+    "id": 75,
+    "question": "Wer muss bei Fischsterben informiert werden?",
+    "choices": [
+      "Fischereiaufsicht & Polizei",
+      "Vereinspräsident",
+      "Bundesamt für Umwelt"
+    ],
+    "correct": "Fischereiaufsicht & Polizei"
+  },
+  {
+    "id": 76,
+    "question": "Wie unterstützt man Vielfalt am besten?",
+    "choices": [
+      "Durch Besatz",
+      "Durch Revitalisierung",
+      "Durch gebietsfremde Arten"
+    ],
+    "correct": "Durch Besatz"
+  },
+  {
+    "id": 77,
+    "question": "Problem bei Wasserkraftnutzung?",
+    "choices": [
+      "Zu wenig Geschiebe durch Stau",
+      "Kein Problem",
+      "Zu viel Geschiebe"
+    ],
+    "correct": "Zu wenig Geschiebe durch Stau"
+  },
+  {
+    "id": 78,
+    "question": "Warum viele Gewässer kanalisiert?",
+    "choices": [
+      "Landgewinn",
+      "Für bessere Fischbedingungen",
+      "Fast keine Kanalisierung"
+    ],
+    "correct": "Landgewinn"
+  },
+  {
+    "id": 79,
+    "question": "Welcher Knoten verbindet zwei Schnüre?",
+    "choices": [
+      "Uni-Knoten",
+      "Chirurgen-Knoten",
+      "Clinch-Knoten"
+    ],
+    "correct": "Uni-Knoten"
+  },
+  {
+    "id": 80,
+    "question": "Wozu dient der Zapfen?",
+    "choices": [
+      "Standortmarkierung",
+      "Lockmittel",
+      "Bissanzeiger"
+    ],
+    "correct": "Standortmarkierung"
+  },
+  {
+    "id": 81,
+    "question": "Welche Arten beim Grundfischen?",
+    "choices": [
+      "Karpfen, Schleien, Weissfische",
+      "Köderfische",
+      "Raubfische"
+    ],
+    "correct": "Karpfen, Schleien, Weissfische"
+  },
+  {
+    "id": 82,
+    "question": "Was dient als Beschwerung beim Grundfischen?",
+    "choices": [
+      "Laufzapfen",
+      "Laufblei",
+      "Klemmblei"
+    ],
+    "correct": "Laufzapfen"
+  },
+  {
+    "id": 83,
+    "question": "Wie verwendet man einen Spinnköder?",
+    "choices": [
+      "Auf den Grund setzen",
+      "Im Wasser spielen lassen",
+      "Mit Laufzapfen kombinieren"
+    ],
+    "correct": "Auf den Grund setzen"
+  },
+  {
+    "id": 84,
+    "question": "Schleppfischerei-Zielarten?",
+    "choices": [
+      "Raubfische",
+      "Weissfische",
+      "Karpfenartige"
+    ],
+    "correct": "Raubfische"
+  },
+  {
+    "id": 85,
+    "question": "Hegene wird v. a. bei welchen Arten eingesetzt?",
+    "choices": [
+      "Felchen, Egli",
+      "Hecht, Forelle",
+      "Karpfen, Schleie"
+    ],
+    "correct": "Felchen, Egli"
+  },
+  {
+    "id": 86,
+    "question": "Wann brauchen Boote einen weissen Ball?",
+    "choices": [
+      "Beim Spinnfischen",
+      "Beim Hegenen",
+      "Beim Schleppen"
+    ],
+    "correct": "Beim Spinnfischen"
+  },
+  {
+    "id": 87,
+    "question": "Hauptnahrung von Weissfischen?",
+    "choices": [
+      "Kleinlebewesen, Pflanzen, Algen",
+      "Kleine Fische",
+      "Teig, Boilies"
+    ],
+    "correct": "Kleinlebewesen, Pflanzen, Algen"
+  },
+  {
+    "id": 88,
+    "question": "Warum Kunstköder bevorzugen?",
+    "choices": [
+      "Preisgünstiger",
+      "Fängiger",
+      "Werden weniger tief geschluckt"
+    ],
+    "correct": "Preisgünstiger"
+  },
+  {
+    "id": 89,
+    "question": "Was fressen Raubfische mit Vorliebe?",
+    "choices": [
+      "Algen",
+      "Kleine Fische",
+      "Gummiköder"
+    ],
+    "correct": "Algen"
+  },
+  {
+    "id": 90,
+    "question": "Welcher künstliche Köder ist hier abgebildet?",
+    "choices": [
+      "Spinner",
+      "Löffel",
+      "Wobbler"
+    ],
+    "correct": "Spinner"
+  },
+  {
+    "id": 91,
+    "question": "Welcher künstliche Köder ist hier abgebildet?",
+    "choices": [
+      "Twister",
+      "Nymphe",
+      "Streamer"
+    ],
+    "correct": "Twister"
+  },
+  {
+    "id": 92,
+    "question": "Wie heisst dieser künstliche Köder?",
+    "choices": [
+      "Spinner",
+      "Löffel",
+      "Wobbler"
+    ],
+    "correct": "Spinner"
+  },
+  {
+    "id": 93,
+    "question": "Was tue ich mit alter, nicht mehr brauchbarer Angelschnur?",
+    "choices": [
+      "Liegen lassen",
+      "Vergraben",
+      "Mitnehmen und entsorgen"
+    ],
+    "correct": "Liegen lassen"
+  },
+  {
+    "id": 94,
+    "question": "Warum dünneres Vorfach als Hauptschnur verwenden?",
+    "choices": [
+      "Weniger sichtbar",
+      "Besser zu knüpfen",
+      "Reißt zuerst, schont den Fisch"
+    ],
+    "correct": "Weniger sichtbar"
+  },
+  {
+    "id": 95,
+    "question": "Die Tierschutzbestimmungen gelten:",
+    "choices": [
+      "Nur für geschützte Arten",
+      "Nur für Salmoniden",
+      "Für alle Fischarten"
+    ],
+    "correct": "Nur für geschützte Arten"
+  },
+  {
+    "id": 96,
+    "question": "Wer besitzt Fischereihoheit in der Schweiz?",
+    "choices": [
+      "Bezirk",
+      "Kantone",
+      "Bund"
+    ],
+    "correct": "Bezirk"
+  },
+  {
+    "id": 97,
+    "question": "Wo ist die Fischerei gesetzlich geregelt?",
+    "choices": [
+      "Gewässerschutzgesetz",
+      "Bundesverfassung",
+      "Bundesgesetz über die Fischerei"
+    ],
+    "correct": "Gewässerschutzgesetz"
+  },
+  {
+    "id": 98,
+    "question": "Was zeichnet gute Fischer aus?",
+    "choices": [
+      "Viel Beute mit teurer Ausrüstung",
+      "Waidgerechter Umgang",
+      "Setzen sich nicht für Hege/Pflege ein"
+    ],
+    "correct": "Viel Beute mit teurer Ausrüstung"
+  },
+  {
+    "id": 99,
+    "question": "Warum sind invasive Arten unerwünscht?",
+    "choices": [
+      "Schwer zu fangen",
+      "Gefährden einheimische Arten",
+      "Nicht essbar"
+    ],
+    "correct": "Schwer zu fangen"
+  },
+  {
+    "id": 100,
+    "question": "Warum schnurstärkengerecht angeln?",
+    "choices": [
+      "Ermöglicht kurzen Drill",
+      "Zu dicke Schnur → zu langer Drill",
+      "Einige Arten beissen nicht bei dünner Schnur"
+    ],
+    "correct": "Ermöglicht kurzen Drill"
+  },
+  {
+    "id": 101,
+    "question": "Mehrere untermassige Fische gefangen – was tun?",
+    "choices": [
+      "Platz wechseln",
+      "Weiterfischen",
+      "Grösseren Köder verwenden"
+    ],
+    "correct": "Platz wechseln"
+  },
+  {
+    "id": 102,
+    "question": "Wie Angelplatz auswählen?",
+    "choices": [
+      "Möglichst weit weg vom Wasser",
+      "Gute Anlandemöglichkeiten, kein Jungfischgebiet",
+      "Keine Kriterien nötig"
+    ],
+    "correct": "Möglichst weit weg vom Wasser"
+  },
+  {
+    "id": 103,
+    "question": "Warum bei Naturköder sofort anschlagen?",
+    "choices": [
+      "Sonst spuckt er Köder aus",
+      "Sonst schluckt er tief, schwer lösbar",
+      "Spielt keine Rolle"
+    ],
+    "correct": "Sonst spuckt er Köder aus"
+  },
+  {
+    "id": 104,
+    "question": "Warum Drilldauer kurz halten?",
+    "choices": [
+      "Verhindert Erschöpfung & O₂-Mangel",
+      "Schont Schnur",
+      "Für mehr Beute"
+    ],
+    "correct": "Verhindert Erschöpfung & O₂-Mangel"
+  },
+  {
+    "id": 105,
+    "question": "Was tun bei tief geschlucktem Haken bei untermassigem Fisch?",
+    "choices": [
+      "Fisch töten",
+      "Vorfach knapp abschneiden",
+      "Haken herausoperieren"
+    ],
+    "correct": "Fisch töten"
+  },
+  {
+    "id": 106,
+    "question": "Was schützt die empfindliche Fischhaut?",
+    "choices": [
+      "Nur Schuppen",
+      "Schuppen & Schleimschicht",
+      "Haut ist robust, braucht keinen Schutz"
+    ],
+    "correct": "Nur Schuppen"
+  },
+  {
+    "id": 107,
+    "question": "Wie nimmt man Fisch zum Hakenlösen korrekt in die Hand?",
+    "choices": [
+      "Bauch in hohle, nasse Hand, Finger auf Rücken",
+      "Rücken in hohle, nasse Hand, Finger auf Bauch",
+      "Wie es gerade passt"
+    ],
+    "correct": "Bauch in hohle, nasse Hand, Finger auf Rücken"
+  },
+  {
+    "id": 108,
+    "question": "Was tun, wenn man den Fisch entnehmen darf?",
+    "choices": [
+      "Anlanden, vom Haken lösen, töten",
+      "Anlanden, betäuben, töten, Haken lösen",
+      "Anlanden, messen, dann töten"
+    ],
+    "correct": "Anlanden, vom Haken lösen, töten"
+  },
+  {
+    "id": 109,
+    "question": "Reicht ein Schlag auf den Kopf zum Töten?",
+    "choices": [
+      "Ja, mit 3 Schlägen",
+      "Meistens, evtl. zusätzlich schlagen",
+      "Nein, zusätzlich Entbluten oder Ausnehmen nötig"
+    ],
+    "correct": "Ja, mit 3 Schlägen"
+  },
+  {
+    "id": 110,
+    "question": "Wie werden lebende Fische korrekt gehältert?",
+    "choices": [
+      "In grossen Behältern mit Sauerstoff",
+      "In feuchtem Tuch",
+      "In Plastiksack mit Wasser"
+    ],
+    "correct": "In grossen Behältern mit Sauerstoff"
+  },
+  {
+    "id": 111,
+    "question": "Wie lange darf ein SaNa-Inhaber Fische hältern?",
+    "choices": [
+      "2 Stunden",
+      "Bis Ende Angeltag",
+      "3 Wochen"
+    ],
+    "correct": "2 Stunden"
+  },
+  {
+    "id": 112,
+    "question": "Wie hält man Fang frisch?",
+    "choices": [
+      "Nur durch lebende Hälterung",
+      "Sofort ausnehmen, kühl lagern",
+      "In Plastiksack legen"
+    ],
+    "correct": "Nur durch lebende Hälterung"
+  },
+  {
+    "id": 113,
+    "question": "Wie misst man einen knapp massigen Fisch korrekt?",
+    "choices": [
+      "Ruhig halten, dann messen",
+      "Mehrmals messen",
+      "Im Wasser messen, bei Zweifel zurücksetzen"
+    ],
+    "correct": "Ruhig halten, dann messen"
+  },
+  {
+    "id": 114,
+    "question": "Müssen Fischer an privaten Gewässern auch Bundesrecht beachten?",
+    "choices": [
+      "Ja",
+      "Nein, eigene Vorschriften",
+      "Nur Bundesrecht gilt"
+    ],
+    "correct": "Ja"
+  },
+  {
+    "id": 115,
+    "question": "Welche Fischart ist ganzjährig geschützt?",
+    "choices": [
+      "Regenbogenforelle",
+      "Nase",
+      "Äsche"
+    ],
+    "correct": "Regenbogenforelle"
+  },
+  {
+    "id": 116,
+    "question": "Warum wurden Widerhaken verboten (ausser Ausnahmen)?",
+    "choices": [
+      "Empfehlung WHO",
+      "Verletzungsgefahr beim Lösen",
+      "Selbstschutz des Fischers"
+    ],
+    "correct": "Empfehlung WHO"
+  },
+  {
+    "id": 117,
+    "question": "Wann dürfen massige Fische zurückgesetzt werden?",
+    "choices": [
+      "Bei Absicht vor dem Fang",
+      "Aus ökologischen Gründen",
+      "Wenn sie zu gross für die Pfanne sind"
+    ],
+    "correct": "Bei Absicht vor dem Fang"
+  },
+  {
+    "id": 118,
+    "question": "Wie setzt man untermassige Fische korrekt zurück?",
+    "choices": [
+      "Schnell zurückwerfen",
+      "Gar nicht – Entnahmegebot",
+      "Im Wasser Haken lösen, Fisch gegen Strömung halten"
+    ],
+    "correct": "Schnell zurückwerfen"
+  },
+  {
+    "id": 119,
+    "question": "Warum keinen Druck auf den Fischkörper ausüben?",
+    "choices": [
+      "Schützt innere Organe",
+      "Galle nicht quetschen",
+      "Atmung nicht behindern"
+    ],
+    "correct": "Schützt innere Organe"
+  },
+  {
+    "id": 120,
+    "question": "Muss mit Fischen gleich sorgfältig umgegangen werden wie mit anderen Wirbeltieren?",
+    "choices": [
+      "Nein, sind kaltblütig",
+      "Ja",
+      "Liegt im Ermessen des Fischers"
+    ],
+    "correct": "Nein, sind kaltblütig"
+  },
+  {
+    "id": 121,
+    "question": "Wer darf Fische lebend hältern?",
+    "choices": [
+      "Jeder Patent-Inhaber",
+      "Jeder SaNa-Inhaber, wo erlaubt",
+      "Jeder Fischer, wo erlaubt"
+    ],
+    "correct": "Jeder Patent-Inhaber"
+  },
+  {
+    "id": 122,
+    "question": "Darf man lebende Köderfische verwenden?",
+    "choices": [
+      "Niemals",
+      "Nur mit SaNa, wenn erlaubt",
+      "Immer bei Raubfischangeln"
+    ],
+    "correct": "Niemals"
+  },
+  {
+    "id": 123,
+    "question": "Welche Vorschrift vor dem Angeln konsultieren?",
+    "choices": [
+      "Bundesverfassung",
+      "Eidg. Fischereigesetz",
+      "Kantonale Vorschriften"
+    ],
+    "correct": "Bundesverfassung"
+  },
+  {
+    "id": 124,
+    "question": "Was vor dem Anfassen eines Fisches tun?",
+    "choices": [
+      "Hand mit Wasser benetzen",
+      "Mit Sand rau machen",
+      "Mit Desinfektionsmittel einreiben"
+    ],
+    "correct": "Hand mit Wasser benetzen"
+  },
+  {
+    "id": 125,
+    "question": "Wie lebende Fische fotografieren?",
+    "choices": [
+      "Nur tot",
+      "Möglichst weit vom Wasser",
+      "Im Wasser oder kurz herausheben"
+    ],
+    "correct": "Nur tot"
+  },
+  {
+    "id": 126,
+    "question": "Warum zurückzusetzende Fische schonend behandeln?",
+    "choices": [
+      "Busse vermeiden",
+      "Überlebensfähigkeit sichern",
+      "Fleischqualität nicht verlieren"
+    ],
+    "correct": "Busse vermeiden"
+  },
+  {
+    "id": 127,
+    "question": "Warum sofort ausnehmen?",
+    "choices": [
+      "Sonst schwimmt er weg",
+      "Verwesung schadet Qualität",
+      "Innereien ungeniessbar"
+    ],
+    "correct": "Sonst schwimmt er weg"
+  },
+  {
+    "id": 128,
+    "question": "Worauf beim Bauchaufschneiden achten?",
+    "choices": [
+      "Schleimschicht nicht verletzen",
+      "Gallenblase nicht anstechen",
+      "Innereien nicht verlieren"
+    ],
+    "correct": "Schleimschicht nicht verletzen"
+  },
+  {
+    "id": 129,
+    "question": "Wie ausgenommenen Fisch lagern beim Weiterfischen?",
+    "choices": [
+      "Plastiksack",
+      "Tuch oder Fischkorb, kühl",
+      "Ins Gras legen"
+    ],
+    "correct": "Plastiksack"
+  },
+  {
+    "id": 130,
+    "question": "Was bei zu langer Tiefkühllagerung?",
+    "choices": [
+      "Fisch trocknet aus, ungeniessbar",
+      "Beliebig lange lagerbar",
+      "Verfärbt sich, bleibt geniessbar"
+    ],
+    "correct": "Fisch trocknet aus, ungeniessbar"
+  },
+  {
+    "id": 131,
+    "question": "Wie erkennt man verdorbenen Fisch?",
+    "choices": [
+      "Trockene Schleimschicht",
+      "Geruch, trübe Augen",
+      "Nur an Kiemen erkennbar"
+    ],
+    "correct": "Trockene Schleimschicht"
+  },
+  {
+    "id": 132,
+    "question": "Können alle Fische gleich lang tiefgekühlt gelagert werden?",
+    "choices": [
+      "Nein, fettreiche kürzer haltbar",
+      "Fettreiche länger haltbar",
+      "Gleich haltbar"
+    ],
+    "correct": "Nein, fettreiche kürzer haltbar"
+  },
+  {
+    "id": 133,
+    "question": "Wie soll man Fisch auftauen?",
+    "choices": [
+      "Im Kühlschrank, nicht im Tauwasser",
+      "In lauwarmem Wasser",
+      "Über Nacht in der Küche"
+    ],
+    "correct": "Im Kühlschrank, nicht im Tauwasser"
+  },
+  {
+    "id": 134,
+    "question": "Worauf achten beim Einfrieren?",
+    "choices": [
+      "Beutel dicht, schnell einfrieren, Datum",
+      "In Folie wickeln, einfrieren",
+      "In Papier wickeln, einfrieren"
+    ],
+    "correct": "Beutel dicht, schnell einfrieren, Datum"
+  },
+  {
+    "id": 135,
+    "question": "Weissfischfilets mit Gräten – wie geniessbar machen?",
+    "choices": [
+      "Klein schneiden, Gräten zupfen, evtl. Hackfleisch",
+      "Nie Weissfische entnehmen",
+      "Unessbar wegen Gräten"
+    ],
+    "correct": "Klein schneiden, Gräten zupfen, evtl. Hackfleisch"
+  },
+  {
+    "id": 136,
+    "question": "Woran erkennt man frischen Fisch?",
+    "choices": [
+      "Kein Geruch, glänzende Augen, rote Kiemen",
+      "Kein Geruch, feuchte Haut, klare Kiemen",
+      "Frischer Geruch, glänzende Augen, rote Kiemen"
+    ],
+    "correct": "Kein Geruch, glänzende Augen, rote Kiemen"
+  },
+  {
+    "id": 137,
+    "question": "Welche Merkmale deuten auf verdorbenen Fisch hin?",
+    "choices": [
+      "Geruch, trockene Haut, verfärbte Kiemen",
+      "Geruch, verfärbte Haut, verklebte Kiemen",
+      "Frischer Geruch, glänzende Augen, rote Kiemen"
+    ],
+    "correct": "Geruch, trockene Haut, verfärbte Kiemen"
+  },
+  {
+    "id": 138,
+    "question": "Welche Vorschrift vor dem Angeln konsultieren?",
+    "choices": [
+      "Bundesverfassung",
+      "Eidg. Fischereigesetz",
+      "Kantonale Vorschriften"
+    ],
+    "correct": "Bundesverfassung"
+  },
+  {
+    "id": 139,
+    "question": "Was vor dem Anfassen eines Fisches tun?",
+    "choices": [
+      "Hand mit Wasser benetzen",
+      "Mit Sand rau machen",
+      "Mit Desinfektionsmittel einreiben"
+    ],
+    "correct": "Hand mit Wasser benetzen"
+  },
+  {
+    "id": 140,
+    "question": "Wie lebende Fische fotografieren?",
+    "choices": [
+      "Nur tot",
+      "Möglichst weit vom Wasser",
+      "Im Wasser oder kurz herausheben"
+    ],
+    "correct": "Nur tot"
+  },
+  {
+    "id": 141,
+    "question": "Warum zurückzusetzende Fische schonend behandeln?",
+    "choices": [
+      "Busse vermeiden",
+      "Überlebensfähigkeit sichern",
+      "Fleischqualität nicht verlieren"
+    ],
+    "correct": "Busse vermeiden"
+  },
+  {
+    "id": 142,
+    "question": "Warum sofort ausnehmen?",
+    "choices": [
+      "Sonst schwimmt er weg",
+      "Verwesung schadet Qualität",
+      "Innereien ungeniessbar"
+    ],
+    "correct": "Sonst schwimmt er weg"
+  },
+  {
+    "id": 143,
+    "question": "Worauf beim Bauchaufschneiden achten?",
+    "choices": [
+      "Schleimschicht nicht verletzen",
+      "Gallenblase nicht anstechen",
+      "Innereien nicht verlieren"
+    ],
+    "correct": "Schleimschicht nicht verletzen"
+  },
+  {
+    "id": 144,
+    "question": "Wie ausgenommenen Fisch lagern beim Weiterfischen?",
+    "choices": [
+      "Plastiksack",
+      "Tuch oder Fischkorb, kühl",
+      "Ins Gras legen"
+    ],
+    "correct": "Plastiksack"
+  },
+  {
+    "id": 145,
+    "question": "Was bei zu langer Tiefkühllagerung?",
+    "choices": [
+      "Fisch trocknet aus, ungeniessbar",
+      "Beliebig lange lagerbar",
+      "Verfärbt sich, bleibt geniessbar"
+    ],
+    "correct": "Fisch trocknet aus, ungeniessbar"
+  },
+  {
+    "id": 146,
+    "question": "Wie erkennt man verdorbenen Fisch?",
+    "choices": [
+      "Trockene Schleimschicht",
+      "Geruch, trübe Augen",
+      "Nur an Kiemen erkennbar"
+    ],
+    "correct": "Trockene Schleimschicht"
+  },
+  {
+    "id": 147,
+    "question": "Können alle Fische gleich lang tiefgekühlt gelagert werden?",
+    "choices": [
+      "Nein, fettreiche kürzer haltbar",
+      "Fettreiche länger haltbar",
+      "Gleich haltbar"
+    ],
+    "correct": "Nein, fettreiche kürzer haltbar"
+  },
+  {
+    "id": 148,
+    "question": "Wie soll man Fisch auftauen?",
+    "choices": [
+      "Im Kühlschrank, nicht im Tauwasser",
+      "In lauwarmem Wasser",
+      "Über Nacht in der Küche"
+    ],
+    "correct": "Im Kühlschrank, nicht im Tauwasser"
+  },
+  {
+    "id": 149,
+    "question": "Worauf achten beim Einfrieren?",
+    "choices": [
+      "Beutel dicht, schnell einfrieren, Datum",
+      "In Folie wickeln, einfrieren",
+      "In Papier wickeln, einfrieren"
+    ],
+    "correct": "Beutel dicht, schnell einfrieren, Datum"
+  },
+  {
+    "id": 150,
+    "question": "Weissfischfilets mit Gräten – wie geniessbar machen?",
+    "choices": [
+      "Klein schneiden, Gräten zupfen, evtl. Hackfleisch",
+      "Nie Weissfische entnehmen",
+      "Unessbar wegen Gräten"
+    ],
+    "correct": "Klein schneiden, Gräten zupfen, evtl. Hackfleisch"
+  }
+,
+  {
+    "id": 210,
+    "question": "Wie lange dauert die Schonzeit der Äsche im Kanton Bern?",
+    "choices": [
+      "01. März – 31. Mai",
+      "01. März – 31. August",
+      "01. Oktober – 31. Dezember",
+      "Keine Schonzeit",
+      "Ganzjährig geschützt"
+    ],
+    "correct": "01. März – 31. August",
+    "explanation": "Im Kanton Bern wurde die Schonzeit der Äsche verlängert und dauert nun vom 1. März bis zum 31. August, um den Bestand zu schützen.",
+    "kantone": ["BE"]
+  },
+  {
+    "id": 211,
+    "question": "Welche Mindestfanglänge gilt im Kanton Bern für den Zander?",
+    "choices": [
+      "45 cm",
+      "50 cm",
+      "55 cm",
+      "60 cm",
+      "Keine Mindestlänge"
+    ],
+    "correct": "50 cm",
+    "explanation": "Laut aktueller Berner Fischereiverordnung beträgt das Mindestmass für Zander 50 cm.",
+    "kantone": ["BE"]
+  },
+  {
+    "id": 212,
+    "question": "Welche Aussage zur Felchen-Fischerei im Kanton Bern ist korrekt?",
+    "choices": [
+      "Es besteht keine Fangzahlbeschränkung",
+      "Felchen dürfen nur mit der Hegene gefangen werden",
+      "Felchen haben eine Fangzeit von Sonnenaufgang bis -untergang",
+      "Der Fang ist auf 10 Stück pro Tag begrenzt",
+      "Felchen dürfen nicht vom Ufer aus gefangen werden"
+    ],
+    "correct": "Der Fang ist auf 10 Stück pro Tag begrenzt",
+    "explanation": "Im Kanton Bern gilt eine Tageshöchstfangzahl von 10 Felchen pro Angler.",
+    "kantone": ["BE"]
+  }
+]

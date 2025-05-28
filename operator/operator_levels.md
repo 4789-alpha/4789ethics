@@ -21,6 +21,9 @@
 Additional OP-9 sublevels may be created, starting with **OP-9.B**. Expert
 categories such as `.T` for translator or `.S[y]` for scientific fields are
 listed in [expert_classes.md](expert_classes.md).
+Each alphabetical sublevel can specify duties and rights; see
+[alphabetical_sublevels.md](alphabetical_sublevels.md). Without a sublevel,
+permissions default to the base OP level.
 
 Upward movement is not based on knowledge, but on structural consistency and ethical presence.
 

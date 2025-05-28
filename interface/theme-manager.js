@@ -133,7 +133,108 @@ function createCustomTheme() {
   });
 }
 
+function initSliderSet(rId,gId,bId,rvId,gvId,bvId,previewId,storeKey,setCSS){
+  const r=document.getElementById(rId),g=document.getElementById(gId),b=document.getElementById(bId);
+  const rv=document.getElementById(rvId),gv=document.getElementById(gvId),bv=document.getElementById(bvId);
+  const prev=document.getElementById(previewId);
+  if(!r||!g||!b) return;
+  const def=parseCol(getComputedStyle(document.documentElement).getPropertyValue(setCSS.var||setCSS));
+  let cur;
+  try{cur=JSON.parse(localStorage.getItem(storeKey)||'null');}catch{}
+  if(!cur) cur=def;
+  r.value=cur.r;g.value=cur.g;b.value=cur.b;
+  function upd(){
+    const c={r:+r.value,g:+g.value,b:+b.value};
+    rv.textContent=c.r;gv.textContent=c.g;bv.textContent=c.b;
+    if(previewId) prev.style.backgroundColor=`rgb(${c.r},${c.g},${c.b})`;
+    localStorage.setItem(storeKey,JSON.stringify(c));
+    const css=`rgb(${c.r},${c.g},${c.b})`;
+    if(typeof setCSS ==='string') document.documentElement.style.setProperty(setCSS,css);
+    else if(setCSS.apply) setCSS.apply(c,css);
+  }
+  [r,g,b].forEach(el=>el.addEventListener('input',upd));
+  upd();
+}
+
+function openColorSettingsPopin(){
+  const overlay=document.createElement('div');
+  overlay.style.position='fixed';overlay.style.top=0;overlay.style.left=0;
+  overlay.style.right=0;overlay.style.bottom=0;overlay.style.background='rgba(0,0,0,0.5)';
+  overlay.style.zIndex=1000;
+
+  const box=document.createElement('div');
+  box.className='card';
+  box.style.background='#fff';box.style.color='#000';
+  box.style.maxHeight='90vh';box.style.overflowY='auto';
+
+  box.innerHTML=`<button id="color_popin_close" style="float:right">X</button>
+<details class="card"><summary>Fonts</summary>
+ <div id="text_color_pop">
+  <label>R: <input type="range" id="text_r_p" min="0" max="255"> <span id="text_r_p_val"></span></label><br/>
+  <label>G: <input type="range" id="text_g_p" min="0" max="255"> <span id="text_g_p_val"></span></label><br/>
+  <label>B: <input type="range" id="text_b_p" min="0" max="255"> <span id="text_b_p_val"></span></label>
+  <span id="text_preview_p" class="color-preview"></span>
+ </div></details>
+<details class="card"><summary>Background</summary>
+ <div id="bg_color_pop">
+  <label>R: <input type="range" id="bg_r" min="0" max="255"> <span id="bg_r_val"></span></label><br/>
+  <label>G: <input type="range" id="bg_g" min="0" max="255"> <span id="bg_g_val"></span></label><br/>
+  <label>B: <input type="range" id="bg_b" min="0" max="255"> <span id="bg_b_val"></span></label>
+  <span id="bg_preview" class="color-preview"></span>
+ </div></details>
+<details class="card"><summary>Tanna Symbol</summary>
+ <div id="tanna_color_pop">
+  <label>R: <input type="range" id="tanna_r_p" min="0" max="255"> <span id="tanna_r_p_val"></span></label><br/>
+  <label>G: <input type="range" id="tanna_g_p" min="0" max="255"> <span id="tanna_g_p_val"></span></label><br/>
+  <label>B: <input type="range" id="tanna_b_p" min="0" max="255"> <span id="tanna_b_p_val"></span></label>
+  <span id="tanna_preview_p" class="color-preview"></span><br/>
+  <span id="tanna_contrast_p" style="color:red;display:none;">Low contrast with logos</span>
+ </div></details>
+<details class="card"><summary>Module Color</summary>
+ <div id="module_color_pop">
+  <label>R: <input type="range" id="module_r" min="0" max="255"> <span id="module_r_val"></span></label><br/>
+  <label>G: <input type="range" id="module_g" min="0" max="255"> <span id="module_g_val"></span></label><br/>
+  <label>B: <input type="range" id="module_b" min="0" max="255"> <span id="module_b_val"></span></label>
+  <span id="module_preview" class="color-preview"></span>
+ </div></details>`;
+
+  overlay.appendChild(box);document.body.appendChild(overlay);
+
+  document.getElementById('color_popin_close').addEventListener('click',()=>overlay.remove());
+
+  initSliderSet('text_r_p','text_g_p','text_b_p','text_r_p_val','text_g_p_val','text_b_p_val','text_preview_p','ethicom_text_color','--text-color');
+  initSliderSet('bg_r','bg_g','bg_b','bg_r_val','bg_g_val','bg_b_val','bg_preview','ethicom_bg_color','--bg-color');
+
+  function applyTanna(c){
+    localStorage.setItem('ethicom_tanna_color',JSON.stringify(c));
+    if(document.body.classList.contains('theme-tanna')||document.body.classList.contains('theme-tanna-dark')){
+      const css=`rgb(${c.r},${c.g},${c.b})`;
+      document.documentElement.style.setProperty('--primary-color',css);
+      document.documentElement.style.setProperty('--accent-color',css);
+      const h=`rgba(${Math.round(c.r*0.2)},${Math.round(c.g*0.2)},${Math.round(c.b*0.2)},0.9)`;
+      const n=`rgba(${Math.round(c.r*0.3)},${Math.round(c.g*0.3)},${Math.round(c.b*0.3)},0.9)`;
+      document.documentElement.style.setProperty('--header-bg',h);
+      document.documentElement.style.setProperty('--nav-bg',n);
+    }
+  }
+
+  function applyTannaCSS(c,css){
+    document.getElementById('tanna_preview_p').style.backgroundColor=css;
+    const warn=document.getElementById('tanna_contrast_p');
+    function lum(v){v/=255;return v<=0.03928?v/12.92:Math.pow((v+0.055)/1.055,2.4);}    
+    const base={r:34,g:139,b:34};
+    const l1=0.2126*lum(c.r)+0.7152*lum(c.g)+0.0722*lum(c.b);
+    const l2=0.2126*lum(base.r)+0.7152*lum(base.g)+0.0722*lum(base.b);
+    if(warn) warn.style.display=((Math.max(l1,l2)+0.05)/(Math.min(l1,l2)+0.05))<2?'inline':'none';
+    applyTanna(c);
+  }
+  initSliderSet('tanna_r_p','tanna_g_p','tanna_b_p','tanna_r_p_val','tanna_g_p_val','tanna_b_p_val','tanna_preview_p','ethicom_tanna_color',{var:'--primary-color',apply:applyTannaCSS});
+
+  initSliderSet('module_r','module_g','module_b','module_r_val','module_g_val','module_b_val','module_preview','ethicom_module_color','--module-color');
+}
+
 window.applyTheme = applyTheme;
 window.createCustomTheme = createCustomTheme;
+window.openColorSettingsPopin = openColorSettingsPopin;
 
 document.addEventListener('DOMContentLoaded', initThemeSelection);
