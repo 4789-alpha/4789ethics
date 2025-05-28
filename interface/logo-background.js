@@ -2,6 +2,8 @@ function initLogoBackground() {
   const container = document.getElementById('op_background');
   if (!container) return;
 
+  const RESTITUTION = 0.9;
+
   function rgbToHue(r, g, b) {
     r /= 255; g /= 255; b /= 255;
     const max = Math.max(r, g, b), min = Math.min(r, g, b);
@@ -156,7 +158,7 @@ function initLogoBackground() {
 
     const m1 = a.mass;
     const m2 = b.mass;
-    const impulse = (2 * relDot) / (m1 + m2);
+    const impulse = (2 * relDot * RESTITUTION) / (m1 + m2);
     a.dx -= impulse * m2 * nx;
     a.dy -= impulse * m2 * ny;
     b.dx += impulse * m1 * nx;
@@ -214,9 +216,12 @@ function initLogoBackground() {
         }
       }
 
-        if (s.rotFrames > 0) {
-          s.rotation += s.rotSpeed;
-          s.rotFrames--;
+      s.dx *= RESTITUTION;
+      s.dy *= RESTITUTION;
+
+      if (s.rotFrames > 0) {
+        s.rotation += s.rotSpeed;
+        s.rotFrames--;
         } else {
           s.rotSpeed = 0;
         }
