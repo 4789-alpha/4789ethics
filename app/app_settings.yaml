@@ -6,4 +6,5 @@ app:
   feedback_enabled: true
   startup_op_level: 0
   theme: "dark"
+  interface_port: 8080
   auto_update_check: false
