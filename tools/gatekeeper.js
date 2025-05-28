@@ -113,6 +113,24 @@ function verifyTempToken(controller, storePath, token) {
   return !!(exp && exp > now);
 }
 
+function pruneExpiredTokens(storePath) {
+  if (!storePath) return 0;
+  const devices = readDevices(storePath);
+  const now = Date.now();
+  let removed = 0;
+  for (const entry of Object.values(devices)) {
+    if (!entry.tokens) continue;
+    for (const [h, exp] of Object.entries(entry.tokens)) {
+      if (exp < now) {
+        delete entry.tokens[h];
+        removed++;
+      }
+    }
+  }
+  if (removed > 0) writeDevices(devices, storePath);
+  return removed;
+}
+
 function gateCheck(configPath, devicesPath, tempToken) {
   const cfg = parseConfig(configPath);
   if (!cfg) {
@@ -157,6 +175,9 @@ if (require.main === module) {
     const dur = parseInt(cfg.temp_token_duration || '86400', 10);
     const tok = issueTempToken(cfg.controller || 'gstekeeper.local', storePath, idHash, dur);
     console.log(tok);
+  } else if (cmd === 'prune') {
+    const count = pruneExpiredTokens(storePath);
+    console.log(`Gatekeeper: pruned ${count} expired token${count === 1 ? '' : 's'}.`);
   } else {
     if (gateCheck(cfgPath, storePath, cmd)) {
       console.log('Gatekeeper: gstekeeper.local control allowed (local only).');
@@ -168,4 +189,10 @@ if (require.main === module) {
   }
 }
 
-module.exports = { gateCheck, issueTempToken, verifyTempToken, parseConfig };
+module.exports = {
+  gateCheck,
+  issueTempToken,
+  verifyTempToken,
+  parseConfig,
+  pruneExpiredTokens,
+};

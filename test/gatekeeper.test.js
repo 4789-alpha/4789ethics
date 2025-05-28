@@ -3,7 +3,12 @@ const assert = require('node:assert');
 const fs = require('node:fs');
 const path = require('node:path');
 const os = require('node:os');
-const { gateCheck, issueTempToken, verifyTempToken } = require('../tools/gatekeeper.js');
+const {
+  gateCheck,
+  issueTempToken,
+  verifyTempToken,
+  pruneExpiredTokens,
+} = require('../tools/gatekeeper.js');
 
 function createConfig(allow, id = 'singularity') {
   return `gatekeeper:\n  controller: "gstekeeper.local"\n  allow_control: ${allow}\n  local_only: true\n  private_identity: "${id}"`;
@@ -80,5 +85,19 @@ test('temp token expires', () => {
   data['gstekeeper.local'].tokens[tokHash] = Date.now() - 1000;
   fs.writeFileSync(store, JSON.stringify(data));
   assert.strictEqual(verifyTempToken('gstekeeper.local', store, token), false);
+  fs.rmSync(dir, { recursive: true, force: true });
+});
+
+test('prunes expired tokens', () => {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'gate-'));
+  const store = path.join(dir, 'devices.json');
+  issueTempToken('gstekeeper.local', store, null, 60);
+  const data = JSON.parse(fs.readFileSync(store, 'utf8'));
+  const tokHash = Object.keys(data['gstekeeper.local'].tokens)[0];
+  data['gstekeeper.local'].tokens[tokHash] = Date.now() - 1000;
+  fs.writeFileSync(store, JSON.stringify(data));
+  pruneExpiredTokens(store);
+  const after = JSON.parse(fs.readFileSync(store, 'utf8'));
+  assert.strictEqual(Object.keys(after['gstekeeper.local'].tokens).length, 0);
   fs.rmSync(dir, { recursive: true, force: true });
 });
