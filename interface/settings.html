@@ -80,6 +80,11 @@
           <input type="range" id="bg_symbol_hue" min="0" max="360" step="1" value="0" />
             <small class="note">Reload to apply.</small>
         </div>
+        <div id="bg_symbol_size_wrap">
+          <label for="bg_symbol_size">Tanna size: <span id="bg_symbol_size_val">100</span>%</label>
+          <input type="range" id="bg_symbol_size" min="50" max="200" step="10" value="100" />
+            <small class="note">Reload to apply.</small>
+        </div>
       </div>
     </details>
     <details class="card">
@@ -269,6 +274,19 @@
         hueSlider.addEventListener('input', e => hueVal.textContent = e.target.value);
         hueSlider.addEventListener('change', e => {
           localStorage.setItem('ethicom_bg_symbol_hue', e.target.value);
+          alert('Reload the page to apply.');
+        });
+      }
+
+      const sizeSlider = document.getElementById('bg_symbol_size');
+      const sizeVal = document.getElementById('bg_symbol_size_val');
+      if (sizeSlider && sizeVal) {
+        const storedSize = parseInt(localStorage.getItem('ethicom_bg_symbol_size') || '100', 10);
+        sizeSlider.value = storedSize;
+        sizeVal.textContent = storedSize;
+        sizeSlider.addEventListener('input', e => sizeVal.textContent = e.target.value);
+        sizeSlider.addEventListener('change', e => {
+          localStorage.setItem('ethicom_bg_symbol_size', e.target.value);
           alert('Reload the page to apply.');
         });
       }
