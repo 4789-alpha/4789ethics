@@ -3,6 +3,9 @@ llm:
   url: "http://localhost:11434/api/generate"
   model: "mistral"
   api_key: null
+  # Fallback URL used when the local endpoint fails.
+  # Removing this or setting it to null prevents prompts from
+  # being sent to the remote service in strict offline mode.
   fallback: "https://api.openrouter.ai/v1/chat/completions"
   timeout: 10
   headers:

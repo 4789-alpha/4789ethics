@@ -63,6 +63,7 @@ README.md -> GET_STARTED.md -> index.html
 - [Source Manager](#source-manager)
 - [Roadmap](#roadmap)
 - [Local Deployment](#local-deployment)
+- [Strict Offline Mode](#strict-offline-mode)
 - [Running Tests](#running-tests)
 - [Contributing](#contributing)
 
@@ -385,6 +386,14 @@ the provided `localhost` address so that translation files load correctly.
 When deploying on another domain, set the environment variable `BASE_URL`
 to that public origin (e.g. `https://4789-alpha.github.io`) so that OAuth
 redirects work properly.
+
+### Strict Offline Mode
+[⇧](#contents)
+
+In environments without outbound network access delete the `fallback` line in
+`app/llm_config.yaml` or set it to `null`. This disables the automatic fallback
+to the public API and ensures no prompts are sent to external services when the
+local LLM is unreachable.
 
 ### Running Tests
 [⇧](#contents)
