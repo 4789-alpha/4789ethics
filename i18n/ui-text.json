@@ -98,7 +98,8 @@
     "connect_connections": "Your connections",
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
-    "connect_error": "Request failed."
+    "connect_error": "Request failed.",
+    "nav_story": "Story"
   },
   "de": {
     "title": "Ethicom: Bewertung durch Menschen",
@@ -198,7 +199,8 @@
     "connect_connections": "Verbindungen",
     "connect_approve": "Bestätigen",
     "connect_request_sent": "Anfrage gesendet.",
-    "connect_error": "Anfrage fehlgeschlagen."
+    "connect_error": "Anfrage fehlgeschlagen.",
+    "nav_story": "Geschichte"
   },
   "fr": {
     "title": "Ethicom : Évaluation humaine",
@@ -299,7 +301,8 @@
     "connect_connections": "Your connections",
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
-    "connect_error": "Request failed."
+    "connect_error": "Request failed.",
+    "nav_story": "Story"
   },
   "es": {
     "title": "Ethicom: Evaluación Humana",
@@ -400,7 +403,8 @@
     "connect_connections": "Your connections",
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
-    "connect_error": "Request failed."
+    "connect_error": "Request failed.",
+    "nav_story": "Story"
   },
   "pt": {
     "title": "Ethicom: Avaliação Humana",
@@ -500,7 +504,8 @@
     "connect_connections": "Your connections",
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
-    "connect_error": "Request failed."
+    "connect_error": "Request failed.",
+    "nav_story": "Story"
   },
   "zh": {
     "title": "Ethicom：人工评估",
@@ -601,7 +606,8 @@
     "connect_connections": "Your connections",
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
-    "connect_error": "Request failed."
+    "connect_error": "Request failed.",
+    "nav_story": "Story"
   },
   "hi": {
     "title": "Ethicom: मानवीय मूल्यांकन",
@@ -701,7 +707,8 @@
     "connect_connections": "Your connections",
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
-    "connect_error": "Request failed."
+    "connect_error": "Request failed.",
+    "nav_story": "Story"
   },
   "ar": {
     "title": "إيثيكوم: التقييم البشري",
@@ -801,7 +808,8 @@
     "connect_connections": "Your connections",
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
-    "connect_error": "Request failed."
+    "connect_error": "Request failed.",
+    "nav_story": "Story"
   },
   "ja": {
     "title": "Ethicom：人間による評価",
@@ -901,7 +909,8 @@
     "connect_connections": "Your connections",
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
-    "connect_error": "Request failed."
+    "connect_error": "Request failed.",
+    "nav_story": "Story"
   },
   "sw": {
     "title": "Ethicom: Tathmini ya Kibinadamu",
@@ -1001,7 +1010,8 @@
     "connect_connections": "Your connections",
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
-    "connect_error": "Request failed."
+    "connect_error": "Request failed.",
+    "nav_story": "Story"
   },
   "ru": {
     "title": "Ethicom: Оценка человеком",
@@ -1101,7 +1111,8 @@
     "connect_connections": "Your connections",
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
-    "connect_error": "Request failed."
+    "connect_error": "Request failed.",
+    "nav_story": "Story"
   },
   "it": {
     "title": "Ethicom: Valutazione Umana",
@@ -1202,7 +1213,8 @@
     "connect_connections": "Your connections",
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
-    "connect_error": "Request failed."
+    "connect_error": "Request failed.",
+    "nav_story": "Story"
   },
   "ko": {
     "title": "Ethicom: 인간 평가",
@@ -1302,7 +1314,8 @@
     "connect_connections": "Your connections",
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
-    "connect_error": "Request failed."
+    "connect_error": "Request failed.",
+    "nav_story": "Story"
   },
   "fa": {
     "title": "ایتیکام: ارزیابی انسانی",
@@ -1402,7 +1415,8 @@
     "connect_connections": "Your connections",
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
-    "connect_error": "Request failed."
+    "connect_error": "Request failed.",
+    "nav_story": "Story"
   },
   "pl": {
     "title": "Ethicom: Ocena Ludzka",
@@ -1502,7 +1516,8 @@
     "connect_connections": "Your connections",
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
-    "connect_error": "Request failed."
+    "connect_error": "Request failed.",
+    "nav_story": "Story"
   },
   "am": {
     "title": "Ethicom: Human Evaluation",
@@ -1602,7 +1617,8 @@
     "connect_connections": "Your connections",
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
-    "connect_error": "Request failed."
+    "connect_error": "Request failed.",
+    "nav_story": "Story"
   },
   "af": {
     "title": "Ethicom: Human Evaluation",
@@ -1702,7 +1718,8 @@
     "connect_connections": "Your connections",
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
-    "connect_error": "Request failed."
+    "connect_error": "Request failed.",
+    "nav_story": "Story"
   },
   "bn": {
     "title": "Ethicom: Human Evaluation",
@@ -1802,7 +1819,8 @@
     "connect_connections": "Your connections",
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
-    "connect_error": "Request failed."
+    "connect_error": "Request failed.",
+    "nav_story": "Story"
   },
   "ha": {
     "title": "Ethicom: Human Evaluation",
@@ -1902,7 +1920,8 @@
     "connect_connections": "Your connections",
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
-    "connect_error": "Request failed."
+    "connect_error": "Request failed.",
+    "nav_story": "Story"
   },
   "id": {
     "title": "Ethicom: Human Evaluation",
@@ -2002,7 +2021,8 @@
     "connect_connections": "Your connections",
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
-    "connect_error": "Request failed."
+    "connect_error": "Request failed.",
+    "nav_story": "Story"
   },
   "ig": {
     "title": "Ethicom: Human Evaluation",
@@ -2102,7 +2122,8 @@
     "connect_connections": "Your connections",
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
-    "connect_error": "Request failed."
+    "connect_error": "Request failed.",
+    "nav_story": "Story"
   },
   "om": {
     "title": "Ethicom: Human Evaluation",
@@ -2202,7 +2223,8 @@
     "connect_connections": "Your connections",
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
-    "connect_error": "Request failed."
+    "connect_error": "Request failed.",
+    "nav_story": "Story"
   },
   "rm": {
     "title": "Ethicom: Human Evaluation",
@@ -2302,7 +2324,8 @@
     "connect_connections": "Your connections",
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
-    "connect_error": "Request failed."
+    "connect_error": "Request failed.",
+    "nav_story": "Story"
   },
   "ta": {
     "title": "Ethicom: Human Evaluation",
@@ -2402,7 +2425,8 @@
     "connect_connections": "Your connections",
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
-    "connect_error": "Request failed."
+    "connect_error": "Request failed.",
+    "nav_story": "Story"
   },
   "te": {
     "title": "Ethicom: Human Evaluation",
@@ -2502,7 +2526,8 @@
     "connect_connections": "Your connections",
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
-    "connect_error": "Request failed."
+    "connect_error": "Request failed.",
+    "nav_story": "Story"
   },
   "th": {
     "title": "Ethicom: Human Evaluation",
@@ -2602,7 +2627,8 @@
     "connect_connections": "Your connections",
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
-    "connect_error": "Request failed."
+    "connect_error": "Request failed.",
+    "nav_story": "Story"
   },
   "tr": {
     "title": "Ethicom: Human Evaluation",
@@ -2702,7 +2728,8 @@
     "connect_connections": "Your connections",
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
-    "connect_error": "Request failed."
+    "connect_error": "Request failed.",
+    "nav_story": "Story"
   },
   "ur": {
     "title": "Ethicom: Human Evaluation",
@@ -2803,7 +2830,8 @@
     "connect_connections": "Your connections",
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
-    "connect_error": "Request failed."
+    "connect_error": "Request failed.",
+    "nav_story": "Story"
   },
   "vi": {
     "title": "Ethicom: Human Evaluation",
@@ -2903,7 +2931,8 @@
     "connect_connections": "Your connections",
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
-    "connect_error": "Request failed."
+    "connect_error": "Request failed.",
+    "nav_story": "Story"
   },
   "xh": {
     "title": "Ethicom: Human Evaluation",
@@ -3003,7 +3032,8 @@
     "connect_connections": "Your connections",
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
-    "connect_error": "Request failed."
+    "connect_error": "Request failed.",
+    "nav_story": "Story"
   },
   "yo": {
     "title": "Ethicom: Human Evaluation",
@@ -3103,7 +3133,8 @@
     "connect_connections": "Your connections",
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
-    "connect_error": "Request failed."
+    "connect_error": "Request failed.",
+    "nav_story": "Story"
   },
   "zu": {
     "title": "Ethicom: Human Evaluation",
@@ -3203,7 +3234,8 @@
     "connect_connections": "Your connections",
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
-    "connect_error": "Request failed."
+    "connect_error": "Request failed.",
+    "nav_story": "Story"
   },
   "nl": {
     "title": "Ethicom: Menselijke Evaluatie",
@@ -3303,6 +3335,7 @@
     "connect_connections": "Your connections",
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
-    "connect_error": "Request failed."
+    "connect_error": "Request failed.",
+    "nav_story": "Story"
   }
 }

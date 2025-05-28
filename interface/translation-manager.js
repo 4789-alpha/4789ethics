@@ -113,6 +113,8 @@ function applyTexts(t) {
   if (navReadme) navReadme.textContent = t.nav_readme || navReadme.textContent;
   const navTools = document.querySelector('[data-ui="nav_tools"]');
   if (navTools) navTools.textContent = t.nav_tools || navTools.textContent;
+  const navStory = document.querySelector('[data-ui="nav_story"]');
+  if (navStory) navStory.textContent = t.nav_story || navStory.textContent;
   document.querySelectorAll('[data-ui="nav_settings"]').forEach(el => {
     if (el.classList.contains('icon-only')) {
       const text = t.nav_settings || el.getAttribute('title') || '';
