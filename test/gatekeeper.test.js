@@ -7,7 +7,7 @@ const { gateCheck, issueTempToken, verifyTempToken, pruneExpiredTokens } = requi
 const crypto = require('node:crypto');
 
 function createConfig(allow, id = 'singularity') {
-  return `gatekeeper:\n  controller: "gstekeeper.local"\n  allow_control: ${allow}\n  local_only: true\n  private_identity: "${id}"`;
+  return `gatekeeper:\n  controller: "gatekeeper.local"\n  allow_control: ${allow}\n  local_only: true\n  private_identity: "${id}"`;
 }
 
 test('denies control when allow_control is false', () => {
@@ -67,33 +67,33 @@ test('denies control with mismatched identity', () => {
 test('creates and validates temp token', () => {
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'gate-'));
   const store = path.join(dir, 'devices.json');
-  const token = issueTempToken('gstekeeper.local', store, null, 60);
-  assert.ok(verifyTempToken('gstekeeper.local', store, token));
+  const token = issueTempToken('gatekeeper.local', store, null, 60);
+  assert.ok(verifyTempToken('gatekeeper.local', store, token));
   fs.rmSync(dir, { recursive: true, force: true });
 });
 
 test('temp token expires', () => {
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'gate-'));
   const store = path.join(dir, 'devices.json');
-  const token = issueTempToken('gstekeeper.local', store, null, 60);
+  const token = issueTempToken('gatekeeper.local', store, null, 60);
   const data = JSON.parse(fs.readFileSync(store, 'utf8'));
-  const tokHash = Object.keys(data['gstekeeper.local'].tokens)[0];
-  data['gstekeeper.local'].tokens[tokHash] = Date.now() - 1000;
+  const tokHash = Object.keys(data['gatekeeper.local'].tokens)[0];
+  data['gatekeeper.local'].tokens[tokHash] = Date.now() - 1000;
   fs.writeFileSync(store, JSON.stringify(data));
-  assert.strictEqual(verifyTempToken('gstekeeper.local', store, token), false);
+  assert.strictEqual(verifyTempToken('gatekeeper.local', store, token), false);
   fs.rmSync(dir, { recursive: true, force: true });
 });
 
 test('prunes expired tokens', () => {
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'gate-'));
   const store = path.join(dir, 'devices.json');
-  issueTempToken('gstekeeper.local', store, null, 60);
+  issueTempToken('gatekeeper.local', store, null, 60);
   const data = JSON.parse(fs.readFileSync(store, 'utf8'));
-  const h = Object.keys(data['gstekeeper.local'].tokens)[0];
-  data['gstekeeper.local'].tokens[h] = Date.now() - 1000;
+  const h = Object.keys(data['gatekeeper.local'].tokens)[0];
+  data['gatekeeper.local'].tokens[h] = Date.now() - 1000;
   fs.writeFileSync(store, JSON.stringify(data));
   pruneExpiredTokens(store);
-  const after = JSON.parse(fs.readFileSync(store, 'utf8'))['gstekeeper.local'].tokens;
+  const after = JSON.parse(fs.readFileSync(store, 'utf8'))['gatekeeper.local'].tokens;
   assert.strictEqual(Object.keys(after).length, 0);
   fs.rmSync(dir, { recursive: true, force: true });
 });
@@ -102,11 +102,11 @@ test('stores hashed address and phone', () => {
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'gate-'));
   const file = path.join(dir, 'config.yaml');
   const store = path.join(dir, 'devices.json');
-  const cfg = `gatekeeper:\n  controller: "gstekeeper.local"\n  allow_control: true\n  local_only: true\n  private_identity: "id"\n  address: "Street 1"\n  phone: "+123"`;
+  const cfg = `gatekeeper:\n  controller: "gatekeeper.local"\n  allow_control: true\n  local_only: true\n  private_identity: "id"\n  address: "Street 1"\n  phone: "+123"`;
   fs.writeFileSync(file, cfg);
   assert.strictEqual(gateCheck(file, store), true);
   const data = JSON.parse(fs.readFileSync(store, 'utf8'));
-  const entry = data['gstekeeper.local'];
+  const entry = data['gatekeeper.local'];
   const addrHash = crypto.createHash('sha256').update('Street 1').digest('hex');
   const phoneHash = crypto.createHash('sha256').update('+123').digest('hex');
   assert.strictEqual(entry.address, addrHash);
@@ -118,10 +118,10 @@ test('denies control with mismatched address', () => {
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'gate-'));
   const file = path.join(dir, 'config.yaml');
   const store = path.join(dir, 'devices.json');
-  const cfgA = `gatekeeper:\n  controller: "gstekeeper.local"\n  allow_control: true\n  local_only: true\n  private_identity: "id"\n  address: "A"`;
+  const cfgA = `gatekeeper:\n  controller: "gatekeeper.local"\n  allow_control: true\n  local_only: true\n  private_identity: "id"\n  address: "A"`;
   fs.writeFileSync(file, cfgA);
   assert.strictEqual(gateCheck(file, store), true);
-  const cfgB = `gatekeeper:\n  controller: "gstekeeper.local"\n  allow_control: true\n  local_only: true\n  private_identity: "id"\n  address: "B"`;
+  const cfgB = `gatekeeper:\n  controller: "gatekeeper.local"\n  allow_control: true\n  local_only: true\n  private_identity: "id"\n  address: "B"`;
   fs.writeFileSync(file, cfgB);
   assert.strictEqual(gateCheck(file, store), false);
   fs.rmSync(dir, { recursive: true, force: true });
@@ -131,7 +131,7 @@ test('logs token issuance', () => {
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'gate-'));
   const store = path.join(dir, 'devices.json');
   const logFile = path.join(dir, 'log.json');
-  issueTempToken('gstekeeper.local', store, null, 10, logFile);
+  issueTempToken('gatekeeper.local', store, null, 10, logFile);
   const data = JSON.parse(fs.readFileSync(logFile, 'utf8'));
   assert.strictEqual(data.length, 1);
   assert.strictEqual(data[0].action, 'issue_token');

@@ -490,7 +490,7 @@ function handleTempToken(req, res) {
   const dur = parseInt(cfg.temp_token_duration || '86400', 10);
   const idHash = cfg.private_identity ? crypto.createHash('sha256').update(String(cfg.private_identity)).digest('hex') : null;
   const token = issueTempToken(
-    cfg.controller || 'gstekeeper.local',
+    cfg.controller || 'gatekeeper.local',
     gateStore,
     idHash,
     dur,
