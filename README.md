@@ -218,8 +218,14 @@ SHA-256: 9a961e40cdafdd1314eb648b49ed6fcfbd97b173c0e1f708b6e0efc029589b19
 Verified 2025-05-21 by Signature 4789
 
 **ethicom-consensus.js**
-SHA-256: 37dbef63d04615fc30c369f636738375279368c63ce4016e6f6c43b282590e64  
+SHA-256: 37dbef63d04615fc30c369f636738375279368c63ce4016e6f6c43b282590e64
 Verified 2025-05-21 by Signature 4789
+
+Check them anytime with:
+
+```bash
+npm run verify
+```
 
 > Ethics is not explained. It is carried.
 > – Signature 4789
