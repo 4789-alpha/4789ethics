@@ -293,6 +293,8 @@ Verify the stored hashes after updates with:
 ```bash
 node tools/verify-gatekeeper.js
 ```
+For a simple web interface run `node tools/gatekeeper-gui.js` and open the printed
+URL (default `http://localhost:8675/gatekeeper.html`).
 Registrierungsdaten werden offline gehasht gespeichert. Keine Gewährleistung für absolute Anonymität.
 Adressen und Telefonnummern werden ebenfalls offline gehasht gespeichert.
 **4789**

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gatekeeper</title>
+  <link rel="stylesheet" href="ethicom-style.css" />
+</head>
+<body>
+  <header><h1>Gatekeeper</h1></header>
+  <main>
+    <button id="check_btn" class="accent-button">Check Gate</button>
+    <p id="check_result" class="note"></p>
+    <button id="tok_btn" class="accent-button">Generate Token</button>
+    <p id="tok_out" class="note"></p>
+    <button id="prune_btn" class="accent-button">Prune Tokens</button>
+    <p id="prune_out" class="note"></p>
+  </main>
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const checkBtn = document.getElementById('check_btn');
+    const resP = document.getElementById('check_result');
+    const tokBtn = document.getElementById('tok_btn');
+    const tokOut = document.getElementById('tok_out');
+    const pruneBtn = document.getElementById('prune_btn');
+    const pruneOut = document.getElementById('prune_out');
+
+    checkBtn.addEventListener('click', () => {
+      fetch('/check').then(r => r.json()).then(d => {
+        resP.textContent = d.allowed ? 'Allowed' : 'Denied';
+      });
+    });
+
+    tokBtn.addEventListener('click', () => {
+      fetch('/token', {method:'POST'}).then(r => r.json()).then(d => {
+        tokOut.textContent = d.token + ' (expires in ' + d.expires_in + 's)';
+      });
+    });
+
+    pruneBtn.addEventListener('click', () => {
+      fetch('/prune', {method:'POST'}).then(r => r.text()).then(t => {
+        pruneOut.textContent = t;
+      });
+    });
+  });
+  </script>
+</body>
+</html>
