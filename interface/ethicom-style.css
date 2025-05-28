@@ -13,6 +13,7 @@
   --nav-bg: rgba(51, 51, 51, 0.9);
   --card-alpha-bg: rgba(43, 43, 43, 0.92);
   --accent-color: #ccaa22;
+  --module-color: #228B22;
   --highlight-text-color: var(--accent-color);
   --foreground-opacity: 0;
 }
@@ -29,6 +30,7 @@
   --nav-bg: rgba(51, 51, 51, 0.9);
   --card-alpha-bg: rgba(43, 43, 43, 0.92);
   --accent-color: #ccaa22;
+  --module-color: #228B22;
   --foreground-opacity: 0;
 }
 
@@ -43,6 +45,7 @@
   --nav-bg: rgba(51, 51, 51, 0.9);
   --card-alpha-bg: rgba(255, 255, 255, 0.92);
   --accent-color: #228B22;
+  --module-color: #228B22;
 }
 
 /* Higher contrast variants for the Tanna look */
@@ -57,6 +60,7 @@
   --nav-bg: rgba(0, 0, 0, 0.85);
   --card-alpha-bg: rgba(34, 34, 34, 0.9);
   --accent-color: #33cc33;
+  --module-color: #228B22;
   --foreground-opacity: 0;
 }
 
@@ -71,6 +75,7 @@
   --nav-bg: rgba(34, 34, 34, 0.95);
   --card-alpha-bg: rgba(255, 255, 255, 0.95);
   --accent-color: #228B22;
+  --module-color: #228B22;
 }
 
 .theme-ocean {
@@ -84,6 +89,7 @@
   --nav-bg: rgba(0, 85, 119, 0.9);
   --card-alpha-bg: rgba(255, 255, 255, 0.95);
   --accent-color: #0099cc;
+  --module-color: #0077aa;
 }
 
 .theme-desert {
@@ -97,6 +103,7 @@
   --nav-bg: rgba(153, 102, 0, 0.9);
   --card-alpha-bg: rgba(255, 255, 255, 0.95);
   --accent-color: #e6b800;
+  --module-color: #cc9900;
 }
 
 .theme-transparent {
@@ -110,6 +117,7 @@
   --nav-bg: rgba(51, 51, 51, 0.7);
   --card-alpha-bg: rgba(43, 43, 43, 0.75);
   --accent-color: #ccaa22;
+  --module-color: #228B22;
 }
 
 .theme-custom {
@@ -228,6 +236,12 @@ details.card > *:not(summary) {
   grid-auto-flow: row;
   gap: 1em;
   align-content: start;
+}
+
+.module {
+  background-color: var(--module-color);
+  color: var(--text-color);
+  padding: 1em;
 }
 
 .swipe-card {
