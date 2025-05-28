@@ -3,5 +3,6 @@ The dataset is reconstructed from public example questions and does not represen
 It falls under the Open-Ethics License. Use it only for educational purposes.
 
 Files:
-- `sana_questions.json` – base set with ~200 questions
-- `sana_questions_v2025.json` – extended sample with metadata for version 2025
+- `sana_questions.json` – base set with ~200 questions.
+The file `sana_questions_2025.json` contains an extended question set with
+additional metadata.

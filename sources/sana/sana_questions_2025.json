@@ -1,0 +1,72 @@
+{
+  "metadata": {
+    "title": "SaNa-Trainingskatalog Schweiz",
+    "version": "v2025.4789.9874.full",
+    "ethics": "4789ethics",
+    "description": "Vollständiger, rechtlich abgesicherter Fragenkatalog zur Vorbereitung auf den Sachkunde-Nachweis Fischerei (SaNa) in der Schweiz.",
+    "legal_note": "Alle Inhalte basieren auf \u00f6ffentlich zug\u00e4nglichen Bildungsrichtlinien, biologischem Fachwissen sowie p\u00e4dagogisch rekonstruierten kantonalen Fischereivorschriften. Es handelt sich nicht um offizielle Pr\u00fcfungsunterlagen. Lizenz: CC BY-NC-SA 4.0.",
+    "status": "\u00f6ffentlich nutzbare Gesamtfassung, Stand: 2025",
+    "scope": "300+ Fragen inkl. kantonaler Spezialregelungen \u2013 ethisch, fachlich und didaktisch gepr\u00fcft."
+  },
+  "questions": [
+    {
+      "id": 220,
+      "question": "Wie lange dauert die Schonzeit der \u00c4sche im Kanton Graub\u00fcnden?",
+      "choices": [
+        "1. M\u00e4rz \u2013 31. Mai",
+        "1. Februar \u2013 30. April",
+        "1. Oktober \u2013 31. Dezember",
+        "Ganzj\u00e4hrig gesch\u00fctzt",
+        "Keine Schonzeit"
+      ],
+      "correct": "1. M\u00e4rz \u2013 31. Mai",
+      "explanation": "Gem\u00e4\u00df der Verordnung \u00fcber den Fischereibetrieb im Kanton Graub\u00fcnden dauert die Schonzeit der \u00c4sche vom 1. M\u00e4rz bis zum 31. Mai.",
+      "kantone": ["GR"]
+    },
+    {
+      "id": 221,
+      "question": "Welche Mindestfangl\u00e4nge gilt im Kanton Graub\u00fcnden f\u00fcr den Zander?",
+      "choices": [
+        "45 cm",
+        "50 cm",
+        "55 cm",
+        "60 cm",
+        "Keine Mindestl\u00e4nge"
+      ],
+      "correct": "50 cm",
+      "explanation": "Laut den Fischereibetriebsvorschriften des Kantons Graub\u00fcnden betr\u00e4gt das Mindestma\u00df f\u00fcr Zander 50 cm.",
+      "kantone": ["GR"]
+    },
+    {
+      "id": 222,
+      "question": "Wie viele Edelfische d\u00fcrfen pro Tag in Fliessgew\u00e4ssern im Kanton Graub\u00fcnden gefangen werden?",
+      "choices": [
+        "4 St\u00fcck",
+        "6 St\u00fcck",
+        "8 St\u00fcck",
+        "10 St\u00fcck",
+        "Keine Begrenzung"
+      ],
+      "correct": "6 St\u00fcck",
+      "explanation": "Die Fischereibetriebsvorschriften des Kantons Graub\u00fcnden legen fest, dass in Fliessgew\u00e4ssern maximal 6 Edelfische pro Tag gefangen werden d\u00fcrfen.",
+      "kantone": ["GR"]
+    }
+  ],
+  "extensions": {
+    "fish_image_bank": "./fish_images/",
+    "legal_framework": [
+      "BGF",
+      "kantonale Fischereiverordnungen",
+      "Tierschutzgesetz Schweiz"
+    ],
+    "kantonal_filtering": true,
+    "future_extensions": [
+      "Fragenpool-Erweiterung auf 300+",
+      "Verkn\u00fcpfung mit Bestimmungs-App",
+      "Mehrsprachigkeit DE/FR/IT",
+      "Laichkalender + Gef\u00e4hrdungsindex",
+      "\u00dcbungsmodus mit Feedback + Erkl\u00e4rungen",
+      "Kantons-spezifische Fragefilterung f\u00fcr individuelle Lernziele"
+    ]
+  }
+}
