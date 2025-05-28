@@ -93,7 +93,11 @@ function initLogoBackground() {
   // Density of floating symbols can be customized via settings
   const storedPct = parseInt(localStorage.getItem('ethicom_bg_fill') || '40', 10);
   const fillRatio = Number.isFinite(storedPct) ? storedPct / 100 : 0.4;
-  const avgSize = levels.reduce((sum, lvl) => sum + 30 + lvl * 10 + 5, 0) / levels.length;
+  const storedSize = parseInt(localStorage.getItem('ethicom_bg_symbol_size') || '100', 10);
+  const sizeScale = Number.isFinite(storedSize) ? storedSize / 100 : 1;
+  const avgSize =
+    levels.reduce((sum, lvl) => sum + (30 + lvl * 10 + 5) * sizeScale, 0) /
+    levels.length;
   const avgArea = avgSize * avgSize;
   const maxSymbols = Math.floor(canvas.width * canvas.height / avgArea);
   const total = Math.max(20, Math.floor(maxSymbols * fillRatio));
@@ -104,7 +108,7 @@ function initLogoBackground() {
     const mass = lvl + 1;
     const count = lvl >= 8 ? lvl - 6 : 1;
     const hue = lvl >= 8 ? (lvl - 7) * 30 : 0;
-    const size = 30 + lvl * 10 + Math.random() * 10;
+    const size = (30 + lvl * 10 + Math.random() * 10) * sizeScale;
     const radius = size / 2;
     const subSize = size / count;
     const x = Math.random() * (canvas.width - size) + radius;
