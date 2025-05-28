@@ -83,6 +83,7 @@ const baseUrl = process.env.BASE_URL || `http://localhost:${port}`;
 const usersFile = path.join(__dirname, '..', 'app', 'users.json');
 const evalFile = path.join(__dirname, '..', 'app', 'evaluations.json');
 const connFile = path.join(__dirname, '..', 'app', 'connections.json');
+const userProfileFile = path.join(__dirname, '..', 'app', 'userprofile.json');
 const oauthCfg = parseOAuthConfig();
 const oauthStates = new Set();
 const gateCfgPath = path.join(__dirname, '..', 'app', 'gatekeeper_config.yaml');
@@ -482,6 +483,31 @@ function handleTempToken(req, res) {
   res.end(JSON.stringify({ token: token, expires_in: dur }));
 }
 
+function handleUserProfile(req, res) {
+  if (req.method === 'GET') {
+    const data = readJson(userProfileFile);
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify(data));
+    return;
+  }
+  if (req.method === 'POST') {
+    let body = '';
+    req.on('data', c => { body += c; });
+    req.on('end', () => {
+      try {
+        const { language, theme } = JSON.parse(body);
+        writeJson(userProfileFile, { language, theme });
+        res.writeHead(200, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ success: true }));
+      } catch {
+        res.writeHead(400); res.end('Bad Request');
+      }
+    });
+    return;
+  }
+  res.writeHead(405); res.end('Method not allowed');
+}
+
 const server = http.createServer((req, res) => {
   let urlPath = decodeURIComponent(req.url.split('?')[0]);
   if (req.method === 'POST' && urlPath === '/api/signup') {
@@ -516,6 +542,9 @@ const server = http.createServer((req, res) => {
   }
   if (req.method === 'GET' && urlPath === '/api/gatekeeper/token') {
     return handleTempToken(req, res);
+  }
+  if (urlPath === '/api/userprofile') {
+    return handleUserProfile(req, res);
   }
   if (req.method === 'GET' && urlPath === '/api/sources') {
     return handleSources(req, res);
@@ -562,6 +591,7 @@ if (require.main === module) {
     handleConnectRequest,
     handleConnectApprove,
     handleConnectList,
-    handleTempToken
+    handleTempToken,
+    handleUserProfile
   };
 }

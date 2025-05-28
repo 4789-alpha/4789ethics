@@ -15,9 +15,9 @@ Diese Liste enthält konkrete Vorschläge zur Verbesserung der Benutzerfreundlic
 - [ ] Zentrale config.json mit dokumentierten Defaultwerten.
 
 ## 3. Login & Benutzerführung
-- [ ] Optionales Loginmodul mit lokalem Userprofil.
-- [ ] Speicherung persönlicher Einstellungen: userprofile.json o. Ä.
-- [ ] Rückmeldung nach Login personalisieren („Willkommen zurück…“).
+- [x] Optionales Loginmodul mit lokalem Userprofil.
+- [x] Speicherung persönlicher Einstellungen: userprofile.json o. Ä.
+- [x] Rückmeldung nach Login personalisieren („Willkommen zurück…“).
 
 ## 4. Barrierefreiheit (Accessibility)
 - [ ] Texte screenreaderfreundlich gestalten.

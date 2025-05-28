@@ -38,6 +38,15 @@ function initLogin() {
     .then(data => {
       uiText = data[lang] || data.en || {};
       applyLoginTexts();
+      if (window.simpleAuth && typeof window.simpleAuth.loginWithStoredToken === 'function') {
+        window.simpleAuth.loginWithStoredToken().then(success => {
+          if (success) {
+            const statusEl = document.getElementById('login_status');
+            statusEl.textContent = uiText.login_welcome || 'Welcome back.';
+            setTimeout(() => { window.location.href = 'ethicom.html'; }, 500);
+          }
+        });
+      }
     });
 }
 
@@ -71,7 +80,11 @@ function handleLogin() {
     .then(data => {
       const sig = { email, id: data.id, op_level: data.op_level };
       localStorage.setItem('ethicom_signature', JSON.stringify(sig));
-      statusEl.textContent = uiText.login_saved || 'Login successful. ID stored.';
+      if (window.simpleAuth && typeof window.simpleAuth.savePreferences === 'function') {
+        window.simpleAuth.savePreferences();
+      }
+      statusEl.textContent = (uiText.login_welcome || 'Welcome back.') + ' ' +
+        (uiText.login_saved || 'Login successful. ID stored.');
       setTimeout(() => { window.location.href = 'ethicom.html'; }, 500);
     })
     .catch(() => {
