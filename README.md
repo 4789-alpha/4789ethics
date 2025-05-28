@@ -278,6 +278,11 @@ Confirmed devices are stored hashed in `app/gatekeeper_devices.json`. Once the s
 The private identity is hashed too and remains local-only. Only you have access to the unhashed string.
 Temporary tokens can be issued with `node tools/gatekeeper.js token` and expire after the configured duration.
 Tokens and device hashes are stored hashed in `app/gatekeeper_devices.json`.
+Verify the stored hashes after updates with:
+
+```bash
+node tools/verify-gatekeeper.js
+```
 Registrierungsdaten werden offline gehasht gespeichert. Keine Gewährleistung für absolute Anonymität.
 **4789**
 
