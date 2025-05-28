@@ -1,6 +1,16 @@
 // ratings.js - display overall ratings and rating history
 
+async function loadConfig() {
+  try {
+    return await fetch('../config.json').then(r => r.json());
+  } catch {
+    return {};
+  }
+}
+
 async function initRatings() {
+  const cfg = await loadConfig();
+  const baseUrl = (cfg && cfg.baseUrl) || 'http://localhost:8080';
   const summary = document.getElementById('rating_summary');
   const library = document.getElementById('rating_library');
   const categories = document.getElementById('rating_categories');
@@ -131,7 +141,7 @@ async function initRatings() {
     library.innerHTML =
       'Fehler beim Laden der Bibliothek. ' +
       'Bitte rufen Sie die Seite \u00fcber <code>node tools/serve-interface.js</code> ' +
-      'unter <a href="http://localhost:8080/ethicom.html">localhost</a> auf.';
+      `unter <a href="${baseUrl}/ethicom.html">${baseUrl}</a> auf.`;
   }
 }
 

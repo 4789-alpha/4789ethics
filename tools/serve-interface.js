@@ -78,15 +78,24 @@ function verifyTotp(secret, code) {
 
 const root = path.join(__dirname, '..', 'interface');
 const repoRoot = path.join(__dirname, '..');
-const port = process.env.PORT || 8080;
-const baseUrl = process.env.BASE_URL || `http://localhost:${port}`;
-const usersFile = path.join(__dirname, '..', 'app', 'users.json');
-const evalFile = path.join(__dirname, '..', 'app', 'evaluations.json');
-const connFile = path.join(__dirname, '..', 'app', 'connections.json');
-const oauthCfg = parseOAuthConfig();
+
+// Load optional project configuration
+let cfg = {};
+try {
+  cfg = JSON.parse(fs.readFileSync(path.join(repoRoot, 'config.json'), 'utf8'));
+} catch {}
+
+const port = process.env.PORT || cfg.port || 8080;
+const baseUrl = process.env.BASE_URL || cfg.baseUrl || `http://localhost:${port}`;
+const paths = cfg.paths || {};
+
+const usersFile = path.join(repoRoot, paths.users || 'app/users.json');
+const evalFile = path.join(repoRoot, paths.evaluations || 'app/evaluations.json');
+const connFile = path.join(repoRoot, paths.connections || 'app/connections.json');
+const oauthCfg = parseOAuthConfig(paths.oauthConfig ? path.join(repoRoot, paths.oauthConfig) : undefined);
 const oauthStates = new Set();
-const gateCfgPath = path.join(__dirname, '..', 'app', 'gatekeeper_config.yaml');
-const gateStore = path.join(__dirname, '..', 'app', 'gatekeeper_devices.json');
+const gateCfgPath = path.join(repoRoot, paths.gatekeeperConfig || 'app/gatekeeper_config.yaml');
+const gateStore = path.join(repoRoot, paths.gatekeeperDevices || 'app/gatekeeper_devices.json');
 
 const mime = {
   '.html': 'text/html',
@@ -520,6 +529,9 @@ const server = http.createServer((req, res) => {
   if (req.method === 'GET' && urlPath === '/api/sources') {
     return handleSources(req, res);
   }
+  if (req.method === 'GET' && urlPath === '/config.json') {
+    return serveFile(path.join(repoRoot, 'config.json'), res);
+  }
   if (urlPath === '/' || urlPath === '') urlPath = '/ethicom.html';
   if (urlPath === '/download.zip') {
     res.writeHead(200, {
@@ -547,7 +559,7 @@ const server = http.createServer((req, res) => {
 
 if (require.main === module) {
   server.listen(port, () => {
-    console.log(`Ethicom interface available at http://localhost:${port}/ethicom.html`);
+    console.log(`Ethicom interface available at ${baseUrl}/ethicom.html`);
   });
 } else {
   module.exports = {
