@@ -97,7 +97,7 @@ function initLogoBackground() {
   const avgArea = avgSize * avgSize;
   const maxSymbols = Math.floor(canvas.width * canvas.height / avgArea);
   const total = Math.max(20, Math.floor(maxSymbols * fillRatio));
-  const collisionsEnabled = localStorage.getItem('ethicom_bg_collisions') !== '0';
+  const collisionsEnabled = true;
   for (let i = 0; i < total; i++) {
     const lvl = levels[i % levels.length];
     const img = images[lvl >= 8 ? 7 : lvl];
