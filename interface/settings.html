@@ -66,8 +66,7 @@
             <small class="note">Reload to apply.</small>
         </div>
         <div id="bg_collisions">
-          <label><input type="checkbox" id="bg_enable_collisions" checked/> Enable Tanna collisions</label>
-            <small class="note">Reload to apply.</small>
+          <label>Tanna collisions always enabled</label>
         </div>
         <div id="bg_symbol_hue_wrap">
           <label for="bg_symbol_hue">Tanna hue offset: <span id="bg_symbol_hue_val">0</span>&deg;</label>
@@ -253,15 +252,6 @@
         });
       }
 
-      const colChk = document.getElementById('bg_enable_collisions');
-      if (colChk) {
-        const storedCol = localStorage.getItem('ethicom_bg_collisions');
-        colChk.checked = storedCol !== '0';
-        colChk.addEventListener('change', e => {
-          localStorage.setItem('ethicom_bg_collisions', e.target.checked ? '1' : '0');
-          alert('Reload the page to apply.');
-        });
-      }
 
       const hueSlider = document.getElementById('bg_symbol_hue');
       const hueVal = document.getElementById('bg_symbol_hue_val');
