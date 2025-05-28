@@ -43,6 +43,7 @@ function initThemeSelection() {
       theme = e.target.value;
       localStorage.setItem('ethicom_theme', theme);
       applyTheme(theme);
+      resetSlidersFromTheme();
       if (tannaCard) tannaCard.style.display = theme === 'tanna' ? 'block' : 'none';
       const idx = themes.indexOf(theme);
       if (slider && idx >= 0) {
@@ -62,6 +63,7 @@ function initThemeSelection() {
       if (label) label.textContent = labels[idx] || labels[0];
       localStorage.setItem('ethicom_theme', theme);
       applyTheme(theme);
+      resetSlidersFromTheme();
       if (tannaCard) tannaCard.style.display = theme === 'tanna' ? 'block' : 'none';
       if (select) select.value = theme;
     });
@@ -151,6 +153,7 @@ function createCustomTheme() {
     localStorage.setItem('ethicom_custom_theme', JSON.stringify(custom));
     localStorage.setItem('ethicom_theme', 'custom');
     applyTheme('custom');
+    resetSlidersFromTheme();
     const select = document.getElementById('theme_select');
     if (select) select.value = 'custom';
     overlay.remove();
@@ -178,6 +181,30 @@ function initSliderSet(rId,gId,bId,rvId,gvId,bvId,previewId,storeKey,setCSS){
   }
   [r,g,b].forEach(el=>el.addEventListener('input',upd));
   upd();
+}
+
+function updateSliderSet(rId,gId,bId,rvId,gvId,bvId,previewId,storeKey,setCSS){
+  const r=document.getElementById(rId),g=document.getElementById(gId),b=document.getElementById(bId);
+  const rv=document.getElementById(rvId),gv=document.getElementById(gvId),bv=document.getElementById(bvId);
+  const prev=document.getElementById(previewId);
+  if(!r||!g||!b) return;
+  const c=parseCol(getComputedStyle(document.documentElement).getPropertyValue(setCSS.var||setCSS));
+  r.value=c.r;g.value=c.g;b.value=c.b;
+  if(rv) rv.textContent=c.r;
+  if(gv) gv.textContent=c.g;
+  if(bv) bv.textContent=c.b;
+  if(previewId) prev.style.backgroundColor=`rgb(${c.r},${c.g},${c.b})`;
+  localStorage.setItem(storeKey,JSON.stringify(c));
+  const css=`rgb(${c.r},${c.g},${c.b})`;
+  if(typeof setCSS==='string') document.documentElement.style.setProperty(setCSS,css);
+  else if(setCSS.apply) setCSS.apply(c,css);
+}
+
+function resetSlidersFromTheme(){
+  updateSliderSet('text_r_p','text_g_p','text_b_p','text_r_p_val','text_g_p_val','text_b_p_val','text_preview_p','ethicom_text_color','--text-color');
+  updateSliderSet('bg_r','bg_g','bg_b','bg_r_val','bg_g_val','bg_b_val','bg_preview','ethicom_bg_color','--bg-color');
+  updateSliderSet('tanna_r_p','tanna_g_p','tanna_b_p','tanna_r_p_val','tanna_g_p_val','tanna_b_p_val','tanna_preview_p','ethicom_tanna_color',{var:'--primary-color',apply:applyTannaCSS});
+  updateSliderSet('module_r','module_g','module_b','module_r_val','module_g_val','module_b_val','module_preview','ethicom_module_color','--module-color');
 }
 
 function openColorSettingsPopin(){
@@ -259,6 +286,7 @@ function openColorSettingsPopin(){
       const val=e.target.value;
       localStorage.setItem('ethicom_theme',val);
       applyTheme(val);
+      resetSlidersFromTheme();
       const idx=themes.indexOf(val);
       const slider=document.getElementById('theme_slider');
       const label=document.getElementById('theme_slider_label');
@@ -309,6 +337,7 @@ document.addEventListener('keydown', e => {
     const next = cur === 'high-contrast' ? 'dark' : 'high-contrast';
     localStorage.setItem('ethicom_theme', next);
     applyTheme(next);
+    resetSlidersFromTheme();
     const select = document.getElementById('theme_select');
     if (select) select.value = next;
     const slider = document.getElementById('theme_slider');
@@ -322,3 +351,13 @@ document.addEventListener('keydown', e => {
     }
   }
 });
+
+function saveCurrentAsCustom(){
+  if(localStorage.getItem('ethicom_theme')!=='custom') return;
+  const vars=['--bg-color','--text-color','--primary-color','--accent-color'];
+  const custom={};
+  vars.forEach(v=>custom[v]=getComputedStyle(document.documentElement).getPropertyValue(v).trim());
+  localStorage.setItem('ethicom_custom_theme',JSON.stringify(custom));
+}
+
+window.addEventListener('beforeunload',saveCurrentAsCustom);
