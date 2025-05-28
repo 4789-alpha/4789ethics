@@ -98,6 +98,11 @@
         <a href="/download.zip" class="accent-button">Download .zip</a>
       </div>
     </details>
+    <details class="card">
+      <summary>Gatekeeper Token</summary>
+      <button id="token_btn" class="accent-button" type="button">Generate Token</button>
+      <p id="token_display" class="note"></p>
+    </details>
     </div><!-- settings-grid -->
   </main>
   <script>
@@ -288,6 +293,19 @@
         });
         fgSlider.addEventListener('change', e => {
           localStorage.setItem('ethicom_fg_opacity', e.target.value);
+        });
+      }
+
+      const tokenBtn = document.getElementById('token_btn');
+      const tokenDisplay = document.getElementById('token_display');
+      if (tokenBtn && tokenDisplay) {
+        tokenBtn.addEventListener('click', () => {
+          fetch('/api/gatekeeper/token')
+            .then(r => r.json())
+            .then(d => {
+              tokenDisplay.textContent = d.token;
+              localStorage.setItem('gate_temp_token', JSON.stringify({ token: d.token, expires: Date.now() + d.expires_in * 1000 }));
+            });
         });
       }
     });

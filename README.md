@@ -258,6 +258,8 @@ works, the gatekeeper does too. A decade-old laptop with a single-core CPU and a
 noted in `DISCLAIMERS.md`.
 Confirmed devices are stored hashed in `app/gatekeeper_devices.json`. Once the same controller is used again, no further confirmation is needed.
 The private identity is hashed too and remains local-only. Only you have access to the unhashed string.
+Temporary tokens can be issued with `node tools/gatekeeper.js token` and expire after the configured duration.
+Tokens and device hashes are stored hashed in `app/gatekeeper_devices.json`.
 Registrierungsdaten werden offline gehasht gespeichert. Keine Gewährleistung für absolute Anonymität.
 **4789**
 
