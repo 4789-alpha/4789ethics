@@ -3,6 +3,31 @@ const path = require('path');
 const os = require('os');
 const crypto = require('crypto');
 
+const defaultLogPath = path.join(__dirname, '..', 'app', 'gatekeeper_log.json');
+
+function readLog(filePath) {
+  if (!filePath || !fs.existsSync(filePath)) return [];
+  try {
+    const raw = fs.readFileSync(filePath, 'utf8');
+    return JSON.parse(raw);
+  } catch {
+    return [];
+  }
+}
+
+function writeLog(entries, filePath) {
+  if (!filePath) return;
+  fs.writeFileSync(filePath, JSON.stringify(entries, null, 2));
+}
+
+function appendLog(entry, filePath) {
+  if (!filePath) return;
+  const logFile = filePath;
+  const entries = readLog(logFile);
+  entries.push({ ts: Date.now(), ...entry });
+  writeLog(entries, logFile);
+}
+
 function parseConfig(filePath) {
   const configPath = filePath || path.join(__dirname, '..', 'app', 'gatekeeper_config.yaml');
   if (!fs.existsSync(configPath)) {
@@ -90,7 +115,7 @@ function rememberDevice(controller, storePath, idHash, addrHash, phoneHash) {
   }
 }
 
-function issueTempToken(controller, storePath, idHash, durationSec) {
+function issueTempToken(controller, storePath, idHash, durationSec, logPath) {
   const token = crypto.randomBytes(16).toString('hex');
   const hash = crypto.createHash('sha256').update(token).digest('hex');
   const exp = Date.now() + (durationSec || 86400) * 1000;
@@ -101,10 +126,11 @@ function issueTempToken(controller, storePath, idHash, durationSec) {
   if (!devices[controller].tokens) devices[controller].tokens = {};
   devices[controller].tokens[hash] = exp;
   writeDevices(devices, storePath);
+  appendLog({ action: 'issue_token', controller }, logPath);
   return token;
 }
 
-function verifyTempToken(controller, storePath, token) {
+function verifyTempToken(controller, storePath, token, logPath) {
   const hash = crypto.createHash('sha256').update(String(token)).digest('hex');
   const devices = readDevices(storePath);
   const entry = devices[controller];
@@ -115,9 +141,12 @@ function verifyTempToken(controller, storePath, token) {
   }
   writeDevices(devices, storePath);
   const exp = entry.tokens[hash];
-  return !!(exp && exp > now);
+  const ok = !!(exp && exp > now);
+  appendLog({ action: 'verify_token', controller, success: ok }, logPath);
+  return ok;
 }
 
+function gateCheck(configPath, devicesPath, tempToken, logPath) {
 function pruneExpiredTokens(storePath, now = Date.now()) {
   const devices = readDevices(storePath);
   let changed = false;
@@ -154,11 +183,13 @@ function gateCheck(configPath, devicesPath, tempToken) {
   }
 
   if (controllerOK && local && deviceRecognized(cfg.controller, deviceFile, idHash, addrHash, phoneHash)) {
+    appendLog({ action: 'gate_check', controller: cfg.controller, success: true }, logPath);
     return true;
   }
 
-  if (tempToken && verifyTempToken(cfg.controller, deviceFile, tempToken)) {
+  if (tempToken && verifyTempToken(cfg.controller, deviceFile, tempToken, logPath)) {
     rememberDevice(cfg.controller, deviceFile, idHash, addrHash, phoneHash);
+    appendLog({ action: 'gate_check', controller: cfg.controller, success: true }, logPath);
     return true;
   }
 
@@ -169,6 +200,7 @@ function gateCheck(configPath, devicesPath, tempToken) {
     rememberDevice(cfg.controller, deviceFile, idHash, addrHash, phoneHash);
   }
 
+  appendLog({ action: 'gate_check', controller: cfg.controller, success: result }, logPath);
   return result;
 }
 
@@ -176,17 +208,18 @@ if (require.main === module) {
   const cmd = process.argv[2];
   const cfgPath = path.join(__dirname, '..', 'app', 'gatekeeper_config.yaml');
   const storePath = path.join(__dirname, '..', 'app', 'gatekeeper_devices.json');
+  const logPath = defaultLogPath;
   const cfg = parseConfig(cfgPath) || {};
   const idHash = identityHash(cfg.private_identity);
   if (cmd === 'token') {
     const dur = parseInt(cfg.temp_token_duration || '86400', 10);
-    const tok = issueTempToken(cfg.controller || 'gstekeeper.local', storePath, idHash, dur);
+    const tok = issueTempToken(cfg.controller || 'gstekeeper.local', storePath, idHash, dur, logPath);
     console.log(tok);
   } else if (cmd === 'prune') {
     pruneExpiredTokens(storePath);
     console.log('Expired tokens pruned.');
   } else {
-    if (gateCheck(cfgPath, storePath, cmd)) {
+    if (gateCheck(cfgPath, storePath, cmd, logPath)) {
       console.log('Gatekeeper: gstekeeper.local control allowed (local only).');
       process.exit(0);
     } else {
