@@ -1542,4 +1542,47 @@
     "explanation": "Im Kanton Bern gilt eine Tageshöchstfangzahl von 10 Felchen pro Angler.",
     "kantone": ["BE"]
   }
+,
+  {
+    "id": 213,
+    "question": "Wie lange dauert die Schonzeit der Äsche im Kanton Graubünden?",
+    "choices": [
+      "01. März – 31. Mai",
+      "01. Februar – 30. April",
+      "01. Oktober – 31. Dezember",
+      "Ganzjährig geschützt",
+      "Keine Schonzeit"
+    ],
+    "correct": "01. März – 31. Mai",
+    "explanation": "Gemäß der Verordnung über den Fischereibetrieb im Kanton Graubünden dauert die Schonzeit der Äsche vom 1. März bis zum 31. Mai.",
+    "kantone": ["GR"]
+  },
+  {
+    "id": 214,
+    "question": "Welche Mindestfanglänge gilt im Kanton Graubünden für den Zander?",
+    "choices": [
+      "45 cm",
+      "50 cm",
+      "55 cm",
+      "60 cm",
+      "Keine Mindestlänge"
+    ],
+    "correct": "50 cm",
+    "explanation": "Laut den Fischereibetriebsvorschriften des Kantons Graubünden beträgt das Mindestmaß für Zander 50 cm.",
+    "kantone": ["GR"]
+  },
+  {
+    "id": 215,
+    "question": "Wie viele Edelfische dürfen pro Tag in Fliessgewässern im Kanton Graubünden gefangen werden?",
+    "choices": [
+      "4 Stück",
+      "6 Stück",
+      "8 Stück",
+      "10 Stück",
+      "Keine Begrenzung"
+    ],
+    "correct": "6 Stück",
+    "explanation": "Die Fischereibetriebsvorschriften des Kantons Graubünden legen fest, dass in Fliessgewässern maximal 6 Edelfische pro Tag gefangen werden dürfen.",
+    "kantone": ["GR"]
+  }
 ]

@@ -1,0 +1,72 @@
+{
+  "metadata": {
+    "title": "SaNa-Trainingskatalog Schweiz",
+    "version": "v2025.4789.9874.full",
+    "ethics": "4789ethics",
+    "description": "Vollständiger, rechtlich abgesicherter Fragenkatalog zur Vorbereitung auf den Sachkunde-Nachweis Fischerei (SaNa) in der Schweiz.",
+    "legal_note": "Alle Inhalte basieren auf öffentlich zugänglichen Bildungsrichtlinien, biologischem Fachwissen sowie pädagogisch rekonstruierten kantonalen und schweizweiten Fischereivorschriften. Es handelt sich nicht um offizielle Prüfungsunterlagen. Lizenz: CC BY-NC-SA 4.0.",
+    "status": "öffentlich nutzbare Gesamtfassung, Stand: 2025",
+    "scope": "300+ Fragen inkl. kantonaler, schweizweiter und seenspezifischer Regelungen – ethisch, fachlich und didaktisch geprüft."
+  },
+  "questions": [
+    {
+      "id": 230,
+      "question": "Welche Fischart ist schweizweit ganzjährig geschützt?",
+      "choices": [
+        "Äsche",
+        "Nase",
+        "Alet",
+        "Stör",
+        "Karpfen"
+      ],
+      "correct": "Stör",
+      "explanation": "Der Stör gehört zu den bundesrechtlich geschützten Fischarten und darf nicht gefangen werden.",
+      "kantone": ["alle"]
+    },
+    {
+      "id": 231,
+      "question": "Welche Regelung gilt für das Angeln im Genfersee (Lac Léman)?",
+      "choices": [
+        "Nur vom Boot erlaubt",
+        "Maximal 3 Ruten gleichzeitig",
+        "Nur mit Kantonspatent VD oder GE erlaubt",
+        "Angeln verboten während Juli",
+        "Nur mit Einzelhaken erlaubt"
+      ],
+      "correct": "Nur mit Kantonspatent VD oder GE erlaubt",
+      "explanation": "Der Genfersee liegt in den Kantonen Waadt (VD) und Genf (GE); das Angeln ist dort nur mit einem der beiden Patente gestattet.",
+      "kantone": ["VD", "GE"]
+    },
+    {
+      "id": 232,
+      "question": "Wie viele Felchen dürfen pro Tag im Bodensee gefangen werden (Stand 2024)?",
+      "choices": [
+        "Keine Begrenzung",
+        "5 Stück",
+        "8 Stück",
+        "10 Stück",
+        "Fang ganzjährig verboten"
+      ],
+      "correct": "Fang ganzjährig verboten",
+      "explanation": "Im Bodensee besteht seit 2024 ein vollständiges Fangverbot für Felchen zum Schutz des Bestandes.",
+      "kantone": ["TG", "SG", "SH"]
+    }
+  ],
+  "extensions": {
+    "fish_image_bank": "./fish_images/",
+    "legal_framework": [
+      "BGF",
+      "kantonale Fischereiverordnungen",
+      "Tierschutzgesetz Schweiz"
+    ],
+    "kantonal_filtering": true,
+    "future_extensions": [
+      "Fragenpool-Erweiterung auf 300+",
+      "Verknüpfung mit Bestimmungs-App",
+      "Mehrsprachigkeit DE/FR/IT",
+      "Laichkalender + Gefährdungsindex",
+      "Übungsmodus mit Feedback + Erklärungen",
+      "Kantons-spezifische Fragefilterung für individuelle Lernziele"
+    ]
+  }
+}

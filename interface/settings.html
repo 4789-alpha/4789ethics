@@ -81,6 +81,9 @@
         <div id="bg_collisions">
           <label>Tanna collisions always enabled</label>
         </div>
+        <div id="bg_low_motion_wrap">
+          <label><input type="checkbox" id="bg_low_motion"/> Low motion background</label>
+        </div>
         <div id="bg_symbol_hue_wrap">
           <label for="bg_symbol_hue">Tanna hue offset: <span id="bg_symbol_hue_val">0</span>&deg;</label>
           <input type="range" id="bg_symbol_hue" min="0" max="360" step="1" value="0" />
@@ -286,16 +289,24 @@
 
       const sizeSlider = document.getElementById('bg_symbol_size');
       const sizeVal = document.getElementById('bg_symbol_size_val');
-      if (sizeSlider && sizeVal) {
-        const storedSize = parseInt(localStorage.getItem('ethicom_bg_symbol_size') || '100', 10);
-        sizeSlider.value = storedSize;
-        sizeVal.textContent = storedSize;
-        sizeSlider.addEventListener('input', e => sizeVal.textContent = e.target.value);
-        sizeSlider.addEventListener('change', e => {
-          localStorage.setItem('ethicom_bg_symbol_size', e.target.value);
-          alert('Reload the page to apply.');
-        });
-      }
+        if (sizeSlider && sizeVal) {
+          const storedSize = parseInt(localStorage.getItem('ethicom_bg_symbol_size') || '100', 10);
+          sizeSlider.value = storedSize;
+          sizeVal.textContent = storedSize;
+          sizeSlider.addEventListener('input', e => sizeVal.textContent = e.target.value);
+          sizeSlider.addEventListener('change', e => {
+            localStorage.setItem('ethicom_bg_symbol_size', e.target.value);
+            alert('Reload the page to apply.');
+          });
+        }
+
+        const lowMotionChk = document.getElementById('bg_low_motion');
+        if (lowMotionChk) {
+          lowMotionChk.checked = localStorage.getItem('ethicom_bg_low_motion') === 'true';
+          lowMotionChk.addEventListener('change', e => {
+            localStorage.setItem('ethicom_bg_low_motion', e.target.checked ? 'true' : 'false');
+          });
+        }
 
       const txr = document.getElementById('text_r');
       const txg = document.getElementById('text_g');
@@ -354,6 +365,15 @@
             });
         });
       }
+
+      const all = document.querySelectorAll('.settings-grid details');
+      all.forEach(det => {
+        det.addEventListener('toggle', () => {
+          if (det.open) {
+            all.forEach(other => { if (other !== det) other.open = false; });
+          }
+        });
+      });
     });
   </script>
 </body>
