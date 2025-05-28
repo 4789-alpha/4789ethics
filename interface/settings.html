@@ -33,6 +33,7 @@
     <a href="../README.html" class="readme-link">README</a>
   </nav>
   <main id="main_content">
+    <p class="note">Settings are saved locally. Some options apply after reload.</p>
     <div class="settings-grid">
     <details class="card">
       <summary>Language</summary>
@@ -59,13 +60,16 @@
         <div id="background_count">
           <label for="bg_fill_ratio">Tanna background fill: <span id="bg_fill_ratio_val">40</span>%</label>
           <input type="range" id="bg_fill_ratio" min="20" max="99" step="1" value="40" />
+            <small class="note">Reload to apply.</small>
         </div>
         <div id="same_level_count" style="display:none;">
           <label for="bg_same_level_count">Your level Tannas: <span id="bg_same_level_val">1</span></label>
           <input type="range" id="bg_same_level_count" min="1" max="10" step="1" value="1" />
+            <small class="note">Reload to apply.</small>
         </div>
         <div id="bg_collisions">
           <label><input type="checkbox" id="bg_enable_collisions" checked/> Enable Tanna collisions</label>
+            <small class="note">Reload to apply.</small>
         </div>
       </div>
     </details>
