@@ -368,6 +368,14 @@ When deploying on another domain, set the environment variable `BASE_URL`
 to that public origin (e.g. `https://4789-alpha.github.io`) so that OAuth
 redirects work properly.
 
+### Optional Setup Helper
+[⇧](#contents)
+
+Run `python3 install.py` and follow the prompts to update `app/app_settings.yaml`.
+The script lets you configure the default interface language, offline mode and
+the port used by `tools/serve-interface.js`. All values are stored locally so
+the helper works without network access.
+
 ### Running Tests
 [⇧](#contents)
 
