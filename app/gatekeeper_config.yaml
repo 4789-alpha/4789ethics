@@ -1,4 +1,5 @@
 gatekeeper:
-  controller: "RL@RLpi"
+  controller: "gstekeeper.local"
   allow_control: false
   local_only: true
+  private_identity: "singularity"
