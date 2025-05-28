@@ -368,6 +368,16 @@ When deploying on another domain, set the environment variable `BASE_URL`
 to that public origin (e.g. `https://4789-alpha.github.io`) so that OAuth
 redirects work properly.
 
+### Keyboard Shortcuts
+[⇧](#contents)
+
+Cards in the Ethicom interface react to arrow keys and swipe gestures:
+
+- **Left** → sets the rating to *Unclear*
+- **Up** → sets the rating to *Yes*
+- **Down** → sets the rating to *No*
+- **Right** → shows an info alert about the selected name
+
 ### Running Tests
 [⇧](#contents)
 

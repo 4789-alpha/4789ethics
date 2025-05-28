@@ -10,7 +10,8 @@ const helpMap = {
       'Responsibility outweighs convenience.',
       'Create signatures locally and confirm them structurally.',
       'Withdrawals or corrections are part of the process, not weakness.',
-      'Maintain transparency at every step, even with anonymous use.'
+      'Maintain transparency at every step, even with anonymous use.',
+      'Use arrow keys or swipe gestures (left=Unclear, up=Yes, down=No, right=Info) to adjust the current card.'
     ]
   },
   'OP-0': { title: 'OP-0 Tips', items: [
