@@ -45,7 +45,12 @@
         <select id="lang_select"></select>
       </div>
     </details>
-    <!-- Theme selection removed -->
+    <details class="card" id="theme_selection">
+      <summary>Color Scheme</summary>
+      <label for="theme_slider">Scheme: <span id="theme_slider_label"></span></label>
+      <input type="range" id="theme_slider" min="0" max="5" step="1" value="0" />
+      <button id="custom_theme_btn" style="display:none;margin-top:0.5em;" class="accent-button">Create Custom Scheme</button>
+    </details>
     <button id="color_settings_btn" class="accent-button" type="button" onclick="openColorSettingsPopin()">Color Settings</button>
     <details class="card">
       <summary>Background</summary>
