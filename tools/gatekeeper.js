@@ -11,7 +11,7 @@ function parseConfig(filePath) {
   const lines = fs.readFileSync(configPath, 'utf8').split(/\r?\n/);
   const cfg = {};
   lines.forEach(line => {
-    const m = line.trim().match(/^(controller|allow_control|local_only):\s*(.*)$/);
+    const m = line.trim().match(/^(controller|allow_control|local_only|private_identity):\s*(.*)$/);
     if (m) {
       cfg[m[1]] = m[2].replace(/['"]/g, '');
     }
@@ -22,6 +22,11 @@ function parseConfig(filePath) {
 function deviceHash() {
   const data = `${os.hostname()}|${os.platform()}|${os.arch()}`;
   return crypto.createHash('sha256').update(data).digest('hex');
+}
+
+function identityHash(id) {
+  if (!id) return null;
+  return crypto.createHash('sha256').update(String(id)).digest('hex');
 }
 
 function readDevices(filePath) {
@@ -41,20 +46,25 @@ function writeDevices(devices, filePath) {
   fs.writeFileSync(filePath, JSON.stringify(devices, null, 2));
 }
 
-function deviceRecognized(controller, storePath) {
+function deviceRecognized(controller, storePath, idHash) {
   const devices = readDevices(storePath);
+  const entry = devices[controller];
+  if (!entry || (idHash && entry.identity !== idHash)) return false;
   const hash = deviceHash();
-  return Array.isArray(devices[controller]) && devices[controller].includes(hash);
+  return Array.isArray(entry.devices) && entry.devices.includes(hash);
 }
 
-function rememberDevice(controller, storePath) {
+function rememberDevice(controller, storePath, idHash) {
   const hash = deviceHash();
   const devices = readDevices(storePath);
-  if (!Array.isArray(devices[controller])) {
-    devices[controller] = [];
+  if (!devices[controller]) {
+    devices[controller] = { identity: idHash || null, devices: [] };
   }
-  if (!devices[controller].includes(hash)) {
-    devices[controller].push(hash);
+  if (idHash) devices[controller].identity = idHash;
+  const list = devices[controller].devices;
+  if (!Array.isArray(list)) devices[controller].devices = [];
+  if (!devices[controller].devices.includes(hash)) {
+    devices[controller].devices.push(hash);
     writeDevices(devices, storePath);
   }
 }
@@ -66,10 +76,15 @@ function gateCheck(configPath, devicesPath) {
     return false;
   }
   const deviceFile = devicesPath || path.join(__dirname, '..', 'app', 'gatekeeper_devices.json');
-  const controllerOK = cfg.controller === 'RL@RLpi';
+  const controllerOK = cfg.controller === 'gstekeeper.local';
+  const idHash = identityHash(cfg.private_identity);
   const local = cfg.local_only === 'true';
+  const existing = readDevices(deviceFile)[cfg.controller];
+  if (existing && idHash && existing.identity && existing.identity !== idHash) {
+    return false;
+  }
 
-  if (controllerOK && local && deviceRecognized(cfg.controller, deviceFile)) {
+  if (controllerOK && local && deviceRecognized(cfg.controller, deviceFile, idHash)) {
     return true;
   }
 
@@ -77,7 +92,7 @@ function gateCheck(configPath, devicesPath) {
   const result = allowed && controllerOK && local;
 
   if (result) {
-    rememberDevice(cfg.controller, deviceFile);
+    rememberDevice(cfg.controller, deviceFile, idHash);
   }
 
   return result;
@@ -85,7 +100,7 @@ function gateCheck(configPath, devicesPath) {
 
 if (require.main === module) {
   if (gateCheck()) {
-    console.log('Gatekeeper: RL@RLpi control allowed (local only).');
+    console.log('Gatekeeper: gstekeeper.local control allowed (local only).');
     process.exit(0);
   } else {
     console.log('Gatekeeper: control denied.');

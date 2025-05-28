@@ -30,6 +30,7 @@
     <a href="../wings/ratings.html">Ratings</a>
     <a href="signup.html">Signup</a>
     <a href="genealogie.html">Genealogie</a>
+      <a href="hermes.html">Hermes</a>
     <a href="../README.html" class="readme-link">README</a>
   </nav>
   <main id="main_content">
@@ -43,17 +44,7 @@
       </div>
     </details>
     <!-- Theme selection removed -->
-    <details class="card">
-      <summary>Colors</summary>
-      <div id="color_scheme"></div>
-      <div id="tanna_color" style="display:none;">
-        <label>R: <input type="range" id="tanna_r" min="0" max="255" value="34"/> <span id="tanna_r_val">34</span></label><br/>
-        <label>G: <input type="range" id="tanna_g" min="0" max="255" value="139"/> <span id="tanna_g_val">139</span></label><br/>
-        <label>B: <input type="range" id="tanna_b" min="0" max="255" value="34"/> <span id="tanna_b_val">34</span></label>
-        <span id="tanna_preview" class="color-preview"></span><br/>
-        <span id="tanna_contrast" style="color:red;display:none;">Low contrast with logos</span>
-      </div>
-    </details>
+    <button id="color_settings_btn" class="accent-button" type="button" onclick="openColorSettingsPopin()">Color Settings</button>
     <details class="card">
       <summary>Background</summary>
       <div id="background_settings">
@@ -74,19 +65,10 @@
       </div>
     </details>
     <details class="card">
-      <summary>Content Text Color</summary>
-      <div id="text_color">
-        <label>R: <input type="range" id="text_r" min="0" max="255" value="0"/> <span id="text_r_val">0</span></label><br/>
-        <label>G: <input type="range" id="text_g" min="0" max="255" value="0"/> <span id="text_g_val">0</span></label><br/>
-        <label>B: <input type="range" id="text_b" min="0" max="255" value="0"/> <span id="text_b_val">0</span></label>
-        <span id="text_preview" class="color-preview"></span>
-      </div>
-    </details>
-    <details class="card">
       <summary>Foreground Transparency</summary>
       <div id="foreground_opacity">
         <label for="fg_opacity">Foreground transparency: <span id="fg_opacity_val">0</span>%</label>
-        <input type="range" id="fg_opacity" min="0" max="100" step="1" value="0" />
+        <input type="range" id="fg_opacity" min="0" max="80" step="1" value="0" />
       </div>
     </details>
     <details class="card">
@@ -296,7 +278,8 @@
       const fgSlider = document.getElementById('fg_opacity');
       const fgVal = document.getElementById('fg_opacity_val');
       if (fgSlider && fgVal) {
-        const storedFg = parseInt(localStorage.getItem('ethicom_fg_opacity') || '0', 10);
+        let storedFg = parseInt(localStorage.getItem('ethicom_fg_opacity') || '0', 10);
+        if (storedFg > 80) storedFg = 80;
         fgSlider.value = storedFg;
         fgVal.textContent = storedFg;
         fgSlider.addEventListener('input', e => {
