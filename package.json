@@ -5,5 +5,8 @@
   "main": "tools/serve-interface.js",
   "dependencies": {
     "canvas": "^2.11.2"
+  },
+  "scripts": {
+    "verify": "node tools/check-file-integrity.js"
   }
 }
