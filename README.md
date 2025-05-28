@@ -1,4 +1,5 @@
-## Ethics Structure 4789 [⇧](#contents)
+## Ethics Structure 4789
+[⇧](#contents)
 
 This repository contains the complete structural ethics framework developed under Signature 4789.  
 It is not tied to a person, but to a standard: responsibility over convenience: **4789**
@@ -45,7 +46,8 @@ See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
 - [Running Tests](#running-tests)
 - [Contributing](#contributing)
 
-## Repository Structure [⇧](#contents)
+## Repository Structure
+[⇧](#contents)
 
 | Directory | Purpose |
 |-----------|---------|
@@ -72,7 +74,8 @@ See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
 | `references/` | Reference tables and scores |
 
 
-### Interface Pages [⇧](#contents)
+### Interface Pages
+[⇧](#contents)
 
 | File | Description |
 |------|-------------|
@@ -102,7 +105,8 @@ See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
 **Color verification of the chosen primary color starts once a user holds an OP-1 signature.**
 **From that level, the color choice is stored privately inside the user's signature and never shown publicly.**
 
-### Login Methods by OP Level [⇧](#contents)
+### Login Methods by OP Level
+[⇧](#contents)
 
 | OP Range | Authentication | Technology Examples |
 |----------|----------------|--------------------|
@@ -112,7 +116,8 @@ See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
 | OP 9+ | Biometric login | Flutter (`local_auth`) |
 
 *Biometric login can optionally be enabled from OP‑1 onward if devices support it.*
-### OP-Permissions [⇧](#contents)
+### OP-Permissions
+[⇧](#contents)
 Operator actions by ethical level are defined in:
 → [`permissions/op-permissions-expanded.json`](permissions/op-permissions-expanded.json)
 Additional flags now cover more operator actions such as
@@ -127,7 +132,8 @@ Additional flags now cover structural capabilities:
 `can_execute_evaluations`, and `can_finalize_system`.
 OP‑10 has been added as a dedicated observation level.
 
-### OP Levels [⇧](#contents)
+### OP Levels
+[⇧](#contents)
 
 | Level | Description |
 |-------|-------------|
@@ -168,20 +174,24 @@ If no sublevel is specified, permissions fall back to the base level.
 Only digital agents can advance beyond OP-9.
 Sublevels like OP-5.U, OP-7.U, OP-8.M, and OP-9.M specify user or medical access. Additional expert categories (.T, .S[y], .L, .U) are listed in `operator/expert_classes.md`. See `permissions/op-permissions-expanded.json` for details.
 
-### SRC vs. OO Levels [⇧](#contents)
+### SRC vs. OO Levels
+[⇧](#contents)
 Comparison table: [`references/src_vs_oo.md`](references/src_vs_oo.md)
 
-### Evaluated Sources (as examples) [⇧](#contents)
+### Evaluated Sources (as examples)
+[⇧](#contents)
 - [Person Image Sources](#person-image-sources)
 - [src-0001: Fairphone](sources/institutions/src-0001.json) → [`SRC-4`](manifests/op-eval-4789-src-0001.json)
 - [src-0002: Ecosia](https://www.ecosia.org/) → [`SRC-4`](manifests/op-eval-4789-src-0002.json)
  - [human-wiki dataset](references/human-wiki-links.json) → [`SRC-1`](manifests/op-eval-sig-1111-humanwiki.json)
 
-### Person Image Sources [⇧](#contents)
+### Person Image Sources
+[⇧](#contents)
 
 Use the `image_url` field in `sources/persons/human-op0-candidates.json` to record image URLs. Specify `image_source` (e.g. "wiki") when known.
 
-### File Integrity [⇧](#contents)
+### File Integrity
+[⇧](#contents)
 
 **ethicom.html**
 SHA-256: 9a961e40cdafdd1314eb648b49ed6fcfbd97b173c0e1f708b6e0efc029589b19  
@@ -194,7 +204,8 @@ Verified 2025-05-21 by Signature 4789
 > Ethics is not explained. It is carried.
 > – Signature 4789
 
-### Adding Languages [⇧](#contents)
+### Adding Languages
+[⇧](#contents)
 
 Translations for the evaluation interface are defined in `i18n/ui-text.json`. To
 include another language, add a new JSON object using the two-letter ISO 639-1
@@ -212,7 +223,8 @@ node tools/check-translations.js
 This prints a list of language codes and the fields that still require translation or are unchanged from German. In the interface dropdown, languages with missing fields show an asterisk (`*`) so users know the translation is not complete.
 When a partially translated language is selected, the interface displays a notice and falls back to English for missing text. Contributions for additional translations are welcome.
 
-### Generating Interface README [⇧](#contents)
+### Generating Interface README
+[⇧](#contents)
 
 Create a localized README for the interface by running:
 
@@ -225,7 +237,8 @@ The script copies the matching `i18n/README.<lang>.md` into
 `interface/haupt-readme.md`. If no translation exists, the German
 README is used.
 
-### Gatekeeper Control [⇧](#contents)
+### Gatekeeper Control
+[⇧](#contents)
 
 
 Local control can be toggled via `tools/gatekeeper.js`. The script reads
@@ -243,14 +256,16 @@ Confirmed devices are stored hashed in `app/gatekeeper_devices.json`. Once the s
 Registrierungsdaten werden offline gehasht gespeichert. Keine Gewährleistung für absolute Anonymität.
 **4789**
 
-### API Access Control [⇧](#contents)
+### API Access Control
+[⇧](#contents)
 
 `tools/api-access.js` checks whether API features may be used. The script reads
 the operator level and confirmation flags from `app/user_state.yaml` and grants
 access only when the specified OP level is met and the user has confirmed
 ethical intent.
 
-### OP Function Bundles [⇧](#contents)
+### OP Function Bundles
+[⇧](#contents)
 
 `tools/op-functions.js` exposes small helper functions that only
 run when the necessary operator level and ethical confirmation are
@@ -259,24 +274,28 @@ module checks permission via `api-access.js` before returning it.
 Available helpers include `info`, `analyze`, `optimize`,
 `recommendation_for_interface` and `log` – the last one prints the recent
 Git commit history.
-### OP Rights Demo [⇧](#contents)
+### OP Rights Demo
+[⇧](#contents)
 Run `node tools/op-rights-demo.js` to print all available permissions for your current operator level. Pass a level as an argument to preview other stages.
 
 
-### Currency Synchronization [⇧](#contents)
+### Currency Synchronization
+[⇧](#contents)
 
 Run `node tools/currency-sync.js` to download current exchange rates. The
 script saves them in `references/exchange-rates.json` so comparisons remain
 consistent even offline.
 
-### Wiki Image Loader [⇧](#contents)
+### Wiki Image Loader
+[⇧](#contents)
 
 Run `node tools/fetch-wiki-images.js` to download public thumbnails from
 Wikipedia. The script saves each file in `sources/images/persons/` and updates
 `sources/persons/human-op0-candidates.json`. Review the licenses of all
 downloaded images as noted in `LICENSE.txt` and `DISCLAIMERS.md`.
 
-### Source Manager [⇧](#contents)
+### Source Manager
+[⇧](#contents)
 
 Run `node tools/source-manager.js list` to view all sources. Use
 `--type=person` or `--type=org` to filter and `--sort=name` or
@@ -284,7 +303,8 @@ Run `node tools/source-manager.js list` to view all sources. Use
 organized and easy to review.
 
 
-## Roadmap [⇧](#contents)
+## Roadmap
+[⇧](#contents)
 
 The roadmap keeps development transparent according to Signature 4789.
 
@@ -301,7 +321,8 @@ The roadmap keeps development transparent according to Signature 4789.
    - Extend UI translations to all practical ISO 639-1 languages.
    - Provide an automated translation workflow with manual review.
 
-### Local Deployment [⇧](#contents)
+### Local Deployment
+[⇧](#contents)
 
 Install the JavaScript dependencies once:
 
@@ -332,7 +353,8 @@ When deploying on another domain, set the environment variable `BASE_URL`
 to that public origin (e.g. `https://4789-alpha.github.io`) so that OAuth
 redirects work properly.
 
-### Running Tests [⇧](#contents)
+### Running Tests
+[⇧](#contents)
 
 Ensure Node.js 18 or later is installed, then run:
 
@@ -342,6 +364,7 @@ node tools/check-translations.js
 ```
 
 
-### Contributing [⇧](#contents)
+### Contributing
+[⇧](#contents)
 
 To suggest improvements or translations, read `CONTRIBUTING.md`. All changes must follow the Open-Ethics License and be made with intention.
