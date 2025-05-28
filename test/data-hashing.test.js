@@ -108,11 +108,11 @@ test('gatekeeper stores device hashes and no biometric file exists as stated in 
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'gate-'));
   const cfgFile = path.join(dir, 'cfg.yaml');
   const storeFile = path.join(dir, 'devices.json');
-  fs.writeFileSync(cfgFile, 'gatekeeper:\n  controller: "gstekeeper.local"\n  allow_control: true\n  local_only: true\n  private_identity: "id42"');
-  const token = issueTempToken('gstekeeper.local', storeFile, null, 60);
+  fs.writeFileSync(cfgFile, 'gatekeeper:\n  controller: "gatekeeper.local"\n  allow_control: true\n  local_only: true\n  private_identity: "id42"');
+  const token = issueTempToken('gatekeeper.local', storeFile, null, 60);
   assert.ok(fs.existsSync(storeFile));
   assert.ok(gateCheck(cfgFile, storeFile, token));
-  const data = JSON.parse(fs.readFileSync(storeFile, 'utf8'))['gstekeeper.local'];
+  const data = JSON.parse(fs.readFileSync(storeFile, 'utf8'))['gatekeeper.local'];
   const devHash = data.devices[0];
   const tokHash = Object.keys(data.tokens)[0];
   assert.strictEqual(devHash.length, 64);

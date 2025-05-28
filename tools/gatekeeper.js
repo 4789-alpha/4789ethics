@@ -146,7 +146,6 @@ function verifyTempToken(controller, storePath, token, logPath) {
   return ok;
 }
 
-function gateCheck(configPath, devicesPath, tempToken, logPath) {
 function pruneExpiredTokens(storePath, now = Date.now()) {
   const devices = readDevices(storePath);
   let changed = false;
@@ -163,14 +162,14 @@ function pruneExpiredTokens(storePath, now = Date.now()) {
   return changed;
 }
 
-function gateCheck(configPath, devicesPath, tempToken) {
+function gateCheck(configPath, devicesPath, tempToken, logPath) {
   const cfg = parseConfig(configPath);
   if (!cfg) {
     console.log('Gatekeeper: configuration missing.');
     return false;
   }
   const deviceFile = devicesPath || path.join(__dirname, '..', 'app', 'gatekeeper_devices.json');
-  const controllerOK = cfg.controller === 'gstekeeper.local';
+  const controllerOK = cfg.controller === 'gatekeeper.local';
   const idHash = identityHash(cfg.private_identity);
   const addrHash = identityHash(cfg.address);
   const phoneHash = identityHash(cfg.phone);
@@ -213,14 +212,14 @@ if (require.main === module) {
   const idHash = identityHash(cfg.private_identity);
   if (cmd === 'token') {
     const dur = parseInt(cfg.temp_token_duration || '86400', 10);
-    const tok = issueTempToken(cfg.controller || 'gstekeeper.local', storePath, idHash, dur, logPath);
+    const tok = issueTempToken(cfg.controller || 'gatekeeper.local', storePath, idHash, dur, logPath);
     console.log(tok);
   } else if (cmd === 'prune') {
     pruneExpiredTokens(storePath);
     console.log('Expired tokens pruned.');
   } else {
     if (gateCheck(cfgPath, storePath, cmd, logPath)) {
-      console.log('Gatekeeper: gstekeeper.local control allowed (local only).');
+      console.log('Gatekeeper: gatekeeper.local control allowed (local only).');
       process.exit(0);
     } else {
       console.log('Gatekeeper: control denied.');

@@ -272,10 +272,10 @@ README is used.
 
 Local control can be toggled via `tools/gatekeeper.js`. The script reads
 `app/gatekeeper_config.yaml` and only allows actions when `allow_control` is set
-to `true` for the controller `gstekeeper.local`. The optional
+to `true` for the controller `gatekeeper.local`. The optional
 `private_identity` value is hashed and stored with the device hash in
 `app/gatekeeper_devices.json`. This keeps remote commands gated and
-limited to the local environment. `gstekeeper.local` holds back every personal
+limited to the local environment. `gatekeeper.local` holds back every personal
 ID and may share only signed, anonymous data as a sign of trust.
 The gatekeeper runs on any platform that can execute Node.js. Copy the repository or the
 `tools` and `app` folders to a USB drive and run `node tools/gatekeeper.js` on Windows,
