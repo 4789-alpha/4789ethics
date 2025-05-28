@@ -1,6 +1,6 @@
 function applyTheme(theme) {
   const body = document.body;
-  body.classList.remove('theme-dark', 'theme-tanna', 'theme-ocean', 'theme-desert', 'theme-transparent', 'theme-custom');
+  body.classList.remove('theme-dark', 'theme-tanna', 'theme-ocean', 'theme-desert', 'theme-transparent', 'theme-custom', 'theme-high-contrast');
   document.documentElement.style.removeProperty('--primary-color');
   document.documentElement.style.removeProperty('--accent-color');
   if (theme === 'custom') {
@@ -239,3 +239,14 @@ window.createCustomTheme = createCustomTheme;
 window.openColorSettingsPopin = openColorSettingsPopin;
 
 document.addEventListener('DOMContentLoaded', initThemeSelection);
+document.addEventListener('keydown', e => {
+  if (e.altKey && (e.key === 'h' || e.key === 'H')) {
+    e.preventDefault();
+    const cur = localStorage.getItem('ethicom_theme');
+    const next = cur === 'high-contrast' ? 'dark' : 'high-contrast';
+    localStorage.setItem('ethicom_theme', next);
+    applyTheme(next);
+    const select = document.getElementById('theme_select');
+    if (select) select.value = next;
+  }
+});

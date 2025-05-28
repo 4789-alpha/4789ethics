@@ -2,6 +2,7 @@ function applyAccessibilityFromStorage() {
   const saved = JSON.parse(localStorage.getItem("ethicom_access") || "{}");
   const font = saved.font || "normal";
   const simple = saved.simple || "no";
+  const slow = saved.slow || "no";
   document.body.classList.toggle("large-font", font === "large");
   const enabled = simple === "yes";
   document.body.classList.toggle("simple-mode", enabled);
@@ -53,6 +54,12 @@ function initAccessibilitySetup() {
       <option value="large">Large</option>
     </select>
 
+    <label for="slow_select">Slow mode?</label>
+    <select id="slow_select">
+      <option value="no">No</option>
+      <option value="yes">Yes</option>
+    </select>
+
     <button id="access_save" data-ui="access_save_btn">Save Setup</button>
   `;
 
@@ -60,6 +67,8 @@ function initAccessibilitySetup() {
   document.getElementById("hearing_select").value = hearing;
   document.getElementById("speech_select").value = speech;
   document.getElementById("simple_select").value = simple;
+  const slowSel = document.getElementById("slow_select");
+  if (slowSel) slowSel.value = slow;
   document.getElementById("font_select").value = font;
 
   function applyFont(val) {
@@ -74,17 +83,27 @@ function initAccessibilitySetup() {
   }
   applySimple(simple);
 
+  function applySlow(val) {
+    const enabled = val === "yes";
+    if (window.slowMode) slowMode.enabled = enabled;
+    document.body.classList.toggle("slow-mode", enabled);
+    localStorage.setItem("ethicom_slow_mode", enabled ? "true" : "false");
+  }
+  applySlow(slow);
+
   document.getElementById("access_save").addEventListener("click", () => {
     const data = {
       vision: document.getElementById("vision_select").value,
       hearing: document.getElementById("hearing_select").value,
       speech: document.getElementById("speech_select").value,
       font: document.getElementById("font_select").value,
-      simple: document.getElementById("simple_select").value
+      simple: document.getElementById("simple_select").value,
+      slow: document.getElementById("slow_select").value
     };
     localStorage.setItem("ethicom_access", JSON.stringify(data));
     applyFont(data.font);
     applySimple(data.simple);
+    applySlow(data.slow);
     loadUiTexts().then(txt => {
       const t = txt[getLanguage()] || txt.en || {};
       alert(t.access_saved || "Accessibility preferences saved.");

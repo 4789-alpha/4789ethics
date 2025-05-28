@@ -106,6 +106,20 @@
   --module-color: #cc9900;
 }
 
+.theme-high-contrast {
+  --bg-color: #000000;
+  --text-color: #ffffff;
+  --header-text-color: #ffffff;
+  --nav-text-color: #ffffff;
+  --primary-color: #ffff00;
+  --card-bg: #000000;
+  --header-bg: #000000;
+  --nav-bg: #000000;
+  --card-alpha-bg: rgba(0, 0, 0, 0.95);
+  --accent-color: #ffff00;
+  --module-color: #ffff00;
+}
+
 .theme-transparent {
   --bg-color: transparent;
   --text-color: #e0e0e0;
@@ -522,6 +536,12 @@ body.simple-mode select,
 body.simple-mode button {
   font-size: 1em;
   padding: 0.8em;
+}
+
+/* Slow mode with wider line spacing */
+body.slow-mode {
+  line-height: 1.6;
+  scroll-behavior: smooth;
 }
 
 
