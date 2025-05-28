@@ -269,6 +269,11 @@ input[type=range] {
   padding: 0 0.3em;
   line-height: 1.2;
 }
+.note {
+  font-size: 0.9em;
+  color: #666;
+}
+
 
 button {
   background-color: var(--primary-color);
