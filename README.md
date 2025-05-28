@@ -82,24 +82,15 @@ See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
 | File | Description |
 |------|-------------|
 | [index.html](index.html) | Start page linking to Ethicom and ratings |
-| [interface/about.html](interface/about.html) | Explains the 4789 module |
-| [interface/chat.html](interface/chat.html) | Chat interface |
+| [interface/start.html](interface/start.html) | Modern interface overview |
 | [interface/ethicom.html](interface/ethicom.html) | Main evaluation module |
-| [interface/page-flow-demo.html](interface/page-flow-demo.html) | Demo of horizontal flow |
 | [bewertung.html](bewertung.html) | Swipe-based person rating |
 | [interface/settings.html](interface/settings.html) | Language, theme, and Tanna logo settings |
-| [interface/signup.html](interface/signup.html) | Registration form |
-| [interface/tanna-template.html](interface/tanna-template.html) | Base template |
-| [interface/tanna-template-dark.html](interface/tanna-template-dark.html) | Template in dark theme |
-| [interface/tanna-template-light.html](interface/tanna-template-light.html) | Template in light theme |
-| [interface/tools.html](interface/tools.html) | Utility collection |
 | [interface/donate.html](interface/donate.html) | Donation interface (requires OP‑9.A confirmation) |
 | [interface/genealogie.html](interface/genealogie.html) | Optional genealogy module |
-| [interface/README.html](interface/README.html) | HTML version of the interface docs |
-| [interface/features_de.md](interface/features_de.md) | Funktionale Übersicht zum Interface |
 | [wings/index.html](wings/index.html) | Mobile interface "Wings" |
 | [wings/ratings.html](wings/ratings.html) | Library of all ratings with search |
-| `interface_OLD/` | Historical demo of the first interface generation |
+| `interface_OLD/` | Archived demo of the first interface generation |
 **Settings are stored per device using browser localStorage and are not synced globally.**
 **Ratings from OP-1 onward are stored globally with the assigned signature ID. The email used during signup is hashed and never exposed.**
 **Optional GitHub login authenticates via GitHub's OAuth flow. The returned username is hashed and stored offline.**

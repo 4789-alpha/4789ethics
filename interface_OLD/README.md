@@ -1,5 +1,7 @@
 # Ethicom – Ethical Evaluation Interface (by 4789)
 
+**Archived:** This folder contains the first generation demo. The active modules now live in `../interface/`.
+
 **Ethicom** is a responsibility-based evaluation framework.  
 It enables anonymous and signed evaluations of digital structures, systems, and sources.
 
