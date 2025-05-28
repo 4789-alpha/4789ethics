@@ -5,6 +5,7 @@ const path = require('path');
 const { spawn } = require('child_process');
 const crypto = require('crypto');
 const { search, loadSources } = require('./source-search.js');
+const { issueTempToken, parseConfig } = require('./gatekeeper.js');
 
 const base32Alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ234567';
 
@@ -84,6 +85,8 @@ const evalFile = path.join(__dirname, '..', 'app', 'evaluations.json');
 const connFile = path.join(__dirname, '..', 'app', 'connections.json');
 const oauthCfg = parseOAuthConfig();
 const oauthStates = new Set();
+const gateCfgPath = path.join(__dirname, '..', 'app', 'gatekeeper_config.yaml');
+const gateStore = path.join(__dirname, '..', 'app', 'gatekeeper_devices.json');
 
 const mime = {
   '.html': 'text/html',
@@ -470,6 +473,15 @@ function handleConnectList(req, res) {
   res.end(JSON.stringify({ pending: pending, connections: conns }));
 }
 
+function handleTempToken(req, res) {
+  const cfg = parseConfig(gateCfgPath) || {};
+  const dur = parseInt(cfg.temp_token_duration || '86400', 10);
+  const idHash = cfg.private_identity ? crypto.createHash('sha256').update(String(cfg.private_identity)).digest('hex') : null;
+  const token = issueTempToken(cfg.controller || 'gstekeeper.local', gateStore, idHash, dur);
+  res.writeHead(200, { 'Content-Type': 'application/json' });
+  res.end(JSON.stringify({ token: token, expires_in: dur }));
+}
+
 const server = http.createServer((req, res) => {
   let urlPath = decodeURIComponent(req.url.split('?')[0]);
   if (req.method === 'POST' && urlPath === '/api/signup') {
@@ -501,6 +513,9 @@ const server = http.createServer((req, res) => {
   }
   if (req.method === 'GET' && urlPath === '/api/connect/list') {
     return handleConnectList(req, res);
+  }
+  if (req.method === 'GET' && urlPath === '/api/gatekeeper/token') {
+    return handleTempToken(req, res);
   }
   if (req.method === 'GET' && urlPath === '/api/sources') {
     return handleSources(req, res);
@@ -546,6 +561,7 @@ if (require.main === module) {
     handleGoogleCallback,
     handleConnectRequest,
     handleConnectApprove,
-    handleConnectList
+    handleConnectList,
+    handleTempToken
   };
 }

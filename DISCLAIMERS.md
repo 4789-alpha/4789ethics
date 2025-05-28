@@ -8,6 +8,7 @@
 - Humor ist zulässig, sofern Verantwortung und Klarheit gewahrt bleiben.
 - Registrierungsdaten werden offline gehasht gespeichert. Keine Gewährleistung für absolute Anonymität.
 - Gerätedaten werden ebenfalls offline gehasht gespeichert.
+- Temporäre Gatekeeper-Tokens werden ebenfalls gehasht gespeichert.
 - Beim optionalen GitHub-Login erfolgt die Anmeldung über GitHub. Der zurückgegebene Benutzername wird offline gehasht gespeichert.
 - Beim optionalen Google-Login erfolgt die Anmeldung über Google. Die zurückgegebene E-Mail-Adresse wird offline gehasht gespeichert.
 - Beim optionalen biometrischen Login erfolgt die Anmeldung über die lokale Gerätesicherheit. Biometrische Merkmale werden nicht zentral gespeichert.

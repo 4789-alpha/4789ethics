@@ -9,11 +9,27 @@ function parseConfig(filePath) {
     return null;
   }
   const lines = fs.readFileSync(configPath, 'utf8').split(/\r?\n/);
-  const cfg = {};
+  const cfg = { authorized_temp: [] };
+  let inList = false;
   lines.forEach(line => {
-    const m = line.trim().match(/^(controller|allow_control|local_only|private_identity):\s*(.*)$/);
+    const trimmed = line.trim();
+    if (inList) {
+      const m = trimmed.match(/^-(.*)$/);
+      if (m) {
+        cfg.authorized_temp.push(m[1].trim().replace(/['"]/g, ''));
+        return;
+      }
+      inList = false;
+    }
+    const m = trimmed.match(/^(controller|allow_control|local_only|private_identity|temp_token_duration):\s*(.*)$/);
     if (m) {
       cfg[m[1]] = m[2].replace(/['"]/g, '');
+      return;
+    }
+    if (trimmed.startsWith('authorized_temp:')) {
+      const val = trimmed.split(':')[1].trim();
+      if (val) cfg.authorized_temp.push(val.replace(/['"]/g, ''));
+      inList = true;
     }
   });
   return cfg;
@@ -58,7 +74,7 @@ function rememberDevice(controller, storePath, idHash) {
   const hash = deviceHash();
   const devices = readDevices(storePath);
   if (!devices[controller]) {
-    devices[controller] = { identity: idHash || null, devices: [] };
+    devices[controller] = { identity: idHash || null, devices: [], tokens: {} };
   }
   if (idHash) devices[controller].identity = idHash;
   const list = devices[controller].devices;
@@ -69,7 +85,35 @@ function rememberDevice(controller, storePath, idHash) {
   }
 }
 
-function gateCheck(configPath, devicesPath) {
+function issueTempToken(controller, storePath, idHash, durationSec) {
+  const token = crypto.randomBytes(16).toString('hex');
+  const hash = crypto.createHash('sha256').update(token).digest('hex');
+  const exp = Date.now() + (durationSec || 86400) * 1000;
+  const devices = readDevices(storePath);
+  if (!devices[controller]) {
+    devices[controller] = { identity: idHash || null, devices: [], tokens: {} };
+  }
+  if (!devices[controller].tokens) devices[controller].tokens = {};
+  devices[controller].tokens[hash] = exp;
+  writeDevices(devices, storePath);
+  return token;
+}
+
+function verifyTempToken(controller, storePath, token) {
+  const hash = crypto.createHash('sha256').update(String(token)).digest('hex');
+  const devices = readDevices(storePath);
+  const entry = devices[controller];
+  if (!entry || !entry.tokens) return false;
+  const now = Date.now();
+  for (const [h, exp] of Object.entries(entry.tokens)) {
+    if (exp < now) delete entry.tokens[h];
+  }
+  writeDevices(devices, storePath);
+  const exp = entry.tokens[hash];
+  return !!(exp && exp > now);
+}
+
+function gateCheck(configPath, devicesPath, tempToken) {
   const cfg = parseConfig(configPath);
   if (!cfg) {
     console.log('Gatekeeper: configuration missing.');
@@ -88,6 +132,11 @@ function gateCheck(configPath, devicesPath) {
     return true;
   }
 
+  if (tempToken && verifyTempToken(cfg.controller, deviceFile, tempToken)) {
+    rememberDevice(cfg.controller, deviceFile, idHash);
+    return true;
+  }
+
   const allowed = cfg.allow_control === 'true';
   const result = allowed && controllerOK && local;
 
@@ -99,13 +148,24 @@ function gateCheck(configPath, devicesPath) {
 }
 
 if (require.main === module) {
-  if (gateCheck()) {
-    console.log('Gatekeeper: gstekeeper.local control allowed (local only).');
-    process.exit(0);
+  const cmd = process.argv[2];
+  const cfgPath = path.join(__dirname, '..', 'app', 'gatekeeper_config.yaml');
+  const storePath = path.join(__dirname, '..', 'app', 'gatekeeper_devices.json');
+  const cfg = parseConfig(cfgPath) || {};
+  const idHash = identityHash(cfg.private_identity);
+  if (cmd === 'token') {
+    const dur = parseInt(cfg.temp_token_duration || '86400', 10);
+    const tok = issueTempToken(cfg.controller || 'gstekeeper.local', storePath, idHash, dur);
+    console.log(tok);
   } else {
-    console.log('Gatekeeper: control denied.');
-    process.exit(1);
+    if (gateCheck(cfgPath, storePath, cmd)) {
+      console.log('Gatekeeper: gstekeeper.local control allowed (local only).');
+      process.exit(0);
+    } else {
+      console.log('Gatekeeper: control denied.');
+      process.exit(1);
+    }
   }
 }
 
-module.exports = { gateCheck };
+module.exports = { gateCheck, issueTempToken, verifyTempToken, parseConfig };
