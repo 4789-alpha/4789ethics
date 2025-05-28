@@ -25,9 +25,27 @@ No manipulation. No simulation. No flattening of responsibility.
 Humor ist willkommen, wenn er Verantwortung und Klarheit unterstützt.
 See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
 
+## Quick Start
+[⇧](#contents)
+
+**Purpose:** Provide a clear framework for ethical projects.
+**Audience:** Developers, educators, and curious readers.
+
+1. Read `GET_STARTED.md` for the main files.
+2. Run `node tools/serve-interface.js` to start the local server.
+3. Open `http://localhost:8080/index.html`.
+
+```
+README.md -> GET_STARTED.md -> index.html
+                   |             |
+                   v             +--> settings.html
+              ethicom.html
+```
+
 ## Contents
 
 - [Ethics Structure 4789](#ethics-structure-4789)
+- [Quick Start](#quick-start)
 - [Repository Structure](#repository-structure)
 - [OP-Permissions](#op-permissions)
 - [SRC vs. OO Levels](#src-vs-oo-levels)
