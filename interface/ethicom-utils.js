@@ -1,7 +1,7 @@
 
 // ethicom-utils.js – Hilfsfunktionen für Interface-Anzeige
 (function() {
-  const FG_OPACITY_MAX = 80;
+  const FG_OPACITY_MAX = 65;
   function setForegroundOpacity(percent) {
     let p = parseInt(percent, 10);
     if (isNaN(p)) p = 0;
