@@ -41,6 +41,7 @@ See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
 - [OP Function Bundles](#op-function-bundles)
 - [Currency Synchronization](#currency-synchronization)
 - [Wiki Image Loader](#wiki-image-loader)
+- [Stereo Anaglyph Generator](#stereo-anaglyph-generator)
 - [Source Manager](#source-manager)
 - [Roadmap](#roadmap)
 - [Local Deployment](#local-deployment)
@@ -297,6 +298,14 @@ Run `node tools/fetch-wiki-images.js` to download public thumbnails from
 Wikipedia. The script saves each file in `sources/images/persons/` and updates
 `sources/persons/human-op0-candidates.json`. Review the licenses of all
 downloaded images as noted in `LICENSE.txt` and `DISCLAIMERS.md`.
+
+### Stereo Anaglyph Generator
+[⇧](#contents)
+
+Run `node tools/stereo-anaglyph.js <left> <right> <output> [foreground|full]` to
+combine two slightly shifted images into a single anaglyph. Pass `foreground`
+to align near objects; omit it or use `full` for a general merge. The script
+expects PNG or JPEG inputs and writes the result to the specified output path.
 
 ### Source Manager
 [⇧](#contents)
