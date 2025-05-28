@@ -129,7 +129,7 @@ function handleSignup(req, res) {
   req.on('data', c => { body += c; });
   req.on('end', () => {
     try {
-      const { email, password } = JSON.parse(body);
+      const { email, password, address, phone } = JSON.parse(body);
       if (!/^[^@]+@[^@]+\.[^@]+$/.test(email) || !password || password.length < 8) {
         res.writeHead(400); res.end('Invalid data'); return;
       }
@@ -137,9 +137,11 @@ function handleSignup(req, res) {
       const emailHash = crypto.createHash('sha256').update(email).digest('hex');
       const salt = crypto.randomBytes(8).toString('hex');
       const pwHash = crypto.createHash('sha256').update(password + salt).digest('hex');
+      const addrHash = address ? crypto.createHash('sha256').update(address).digest('hex') : null;
+      const phoneHash = phone ? crypto.createHash('sha256').update(phone).digest('hex') : null;
       const secret = generateTotpSecret();
       const users = readJson(usersFile);
-      users.push({ id, emailHash, pwHash, salt, op_level: 'OP-1', totpSecret: secret });
+      users.push({ id, emailHash, pwHash, salt, op_level: 'OP-1', totpSecret: secret, addrHash, phoneHash });
       writeJson(usersFile, users);
       res.writeHead(200, { 'Content-Type': 'application/json' });
       res.end(JSON.stringify({ id, secret }));

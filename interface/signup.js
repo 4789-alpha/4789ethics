@@ -22,6 +22,14 @@ function applySignupTexts() {
   if (emailInput && t.signup_placeholder_email) emailInput.placeholder = t.signup_placeholder_email;
   const pwInput = document.getElementById('pw_input');
   if (pwInput && t.signup_placeholder_pw) pwInput.placeholder = t.signup_placeholder_pw;
+  const addrLabel = document.querySelector('label[for="addr_input"]');
+  if (addrLabel) addrLabel.textContent = t.signup_address || addrLabel.textContent;
+  const addrInput = document.getElementById('addr_input');
+  if (addrInput && t.signup_placeholder_address) addrInput.placeholder = t.signup_placeholder_address;
+  const phoneLabel = document.querySelector('label[for="phone_input"]');
+  if (phoneLabel) phoneLabel.textContent = t.signup_phone || phoneLabel.textContent;
+  const phoneInput = document.getElementById('phone_input');
+  if (phoneInput && t.signup_placeholder_phone) phoneInput.placeholder = t.signup_placeholder_phone;
 }
 
 function initSignup() {
@@ -37,9 +45,13 @@ function initSignup() {
 function handleSignup() {
   const emailInput = document.getElementById('email_input');
   const pwInput = document.getElementById('pw_input');
+  const addrInput = document.getElementById('addr_input');
+  const phoneInput = document.getElementById('phone_input');
   const statusEl = document.getElementById('signup_status');
   const email = emailInput.value.trim();
   const password = pwInput.value;
+  const address = addrInput ? addrInput.value.trim() : '';
+  const phone = phoneInput ? phoneInput.value.trim() : '';
   statusEl.textContent = '';
 
   if (!/^[^@]+@[^@]+\.[^@]+$/.test(email)) {
@@ -67,7 +79,7 @@ function handleSignup() {
   fetch('/api/signup', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ email, password })
+    body: JSON.stringify({ email, password, address, phone })
   })
     .then(r => r.json())
     .then(data => {

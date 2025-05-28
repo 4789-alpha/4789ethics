@@ -3,6 +3,8 @@ gatekeeper:
   allow_control: false
   local_only: true
   private_identity: "singularity"
+  address: ""
+  phone: ""
   temp_token_duration: 86400 # seconds
   authorized_temp:
     - example_phone
