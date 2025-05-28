@@ -121,21 +121,13 @@ function help(text) {
   return `<span class="help-icon" title="${safe}">?</span>`;
 }
 
-// Retrieve stored OP level from localStorage
-function getStoredOpLevel() {
-  try {
-    const sig = JSON.parse(localStorage.getItem("ethicom_signature") || "{}");
-    return sig.op_level || null;
-  } catch (err) {
-    return null;
-  }
-}
-
-// Convert OP-level string to numeric value (OP-8 → 8)
-function opLevelToNumber(level) {
-  if (!level) return 0;
-  const n = parseFloat(String(level).replace("OP-", ""));
-  return isNaN(n) ? 0 : n;
+// Use shared OP helpers
+let opLevelToNumber;
+let getStoredOpLevel;
+if (typeof module !== 'undefined' && module.exports) {
+  ({ opLevelToNumber, getStoredOpLevel } = require('../utils/op-level.js'));
+} else if (typeof window !== 'undefined') {
+  ({ opLevelToNumber, getStoredOpLevel } = window);
 }
 
 function showLoadingBadge(level) {
