@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { opLevelToNumber } = require('../utils/op-level.js');
 
 function parseUserState(filePath) {
   const p = filePath || path.join(__dirname, '..', 'app', 'user_state.yaml');
@@ -17,12 +18,6 @@ function parseUserState(filePath) {
     if (et) ethicsTest = et[1].replace(/['"]/g, '') === 'true';
   });
   return { op_level: opLevel, ethics_confirmed: ethicsConfirmed, ethics_test_passed: ethicsTest };
-}
-
-function opLevelToNumber(level) {
-  if (!level) return 0;
-  const n = parseFloat(String(level).replace('OP-', ''));
-  return isNaN(n) ? 0 : n;
 }
 
 function apiAccessAllowed(minLevel = 'OP-3', userStatePath) {

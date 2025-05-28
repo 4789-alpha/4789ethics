@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { opLevelToNumber } = require('../utils/op-level.js');
 
 function loadRatings(filePath) {
   const p = filePath || path.join(__dirname, '..', 'evidence', 'person-ratings.json');
@@ -11,11 +12,6 @@ function ratingToValue(r) {
   if (r === 'yes') return 1;
   if (r === 'unclear') return 0.5;
   return 0;
-}
-
-function opLevelToNumber(level) {
-  const n = parseFloat(String(level).replace('OP-', ''));
-  return isNaN(n) ? 0 : n;
 }
 
 function computePersonScores(list) {
