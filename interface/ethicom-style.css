@@ -526,7 +526,6 @@ body.simple-mode {
   font-size: 1.1em;
 }
 body.simple-mode .badge-gallery,
-body.simple-mode #theme_selection,
 body.simple-mode #dev_toggle {
   display: none;
 }

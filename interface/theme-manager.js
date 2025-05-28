@@ -28,8 +28,6 @@ function applyTheme(theme) {
 
 function initThemeSelection() {
   const select = document.getElementById('theme_select');
-  const slider = document.getElementById('theme_slider');
-  const label = document.getElementById('theme_slider_label');
   const customBtn = document.getElementById('custom_theme_btn');
   const tannaCard = document.getElementById('tanna_color');
   const themes = ['tanna-dark','tanna','transparent','ocean','desert','custom'];
@@ -44,26 +42,6 @@ function initThemeSelection() {
       localStorage.setItem('ethicom_theme', theme);
       applyTheme(theme);
       if (tannaCard) tannaCard.style.display = theme === 'tanna' ? 'block' : 'none';
-      const idx = themes.indexOf(theme);
-      if (slider && idx >= 0) {
-        slider.value = idx;
-        if (label) label.textContent = labels[idx];
-      }
-    });
-  }
-  if (slider) {
-    slider.max = themes.length - 1;
-    const cur = themes.indexOf(theme);
-    slider.value = cur >= 0 ? cur : 0;
-    if (label) label.textContent = labels[slider.value];
-    slider.addEventListener('input', e => {
-      const idx = parseInt(e.target.value, 10);
-      theme = themes[idx] || themes[0];
-      if (label) label.textContent = labels[idx] || labels[0];
-      localStorage.setItem('ethicom_theme', theme);
-      applyTheme(theme);
-      if (tannaCard) tannaCard.style.display = theme === 'tanna' ? 'block' : 'none';
-      if (select) select.value = theme;
     });
   }
   if (customBtn) {
@@ -259,11 +237,8 @@ function openColorSettingsPopin(){
       const val=e.target.value;
       localStorage.setItem('ethicom_theme',val);
       applyTheme(val);
-      const idx=themes.indexOf(val);
-      const slider=document.getElementById('theme_slider');
-      const label=document.getElementById('theme_slider_label');
-      if(slider&&idx>=0){slider.value=idx;if(label) label.textContent=labels[idx];}
-    });
+    const idx=themes.indexOf(val);
+  });
   }
 
   initSliderSet('text_r_p','text_g_p','text_b_p','text_r_p_val','text_g_p_val','text_b_p_val','text_preview_p','ethicom_text_color','--text-color');
@@ -311,14 +286,5 @@ document.addEventListener('keydown', e => {
     applyTheme(next);
     const select = document.getElementById('theme_select');
     if (select) select.value = next;
-    const slider = document.getElementById('theme_slider');
-    const label = document.getElementById('theme_slider_label');
-    const themes = ['tanna-dark','tanna','transparent','ocean','desert','custom'];
-    const labels = ['Dark Tanna','Tanna','Transparent','Sea Blue','Desert','Custom'];
-    const idx = themes.indexOf(next);
-    if (slider && idx >= 0) {
-      slider.value = idx;
-      if (label) label.textContent = labels[idx];
-    }
   }
 });
