@@ -35,8 +35,21 @@ function initLogoBackground() {
     return isNaN(h) ? 0 : h - 120;
   }
 
+  function getBgHue() {
+    const style = getComputedStyle(document.documentElement);
+    const c = style.getPropertyValue('--bg-color');
+    return colorToHue(c);
+  }
+
+  let symbolHue = parseInt(localStorage.getItem('ethicom_bg_symbol_hue') || '0', 10);
+
   let themeHue = getThemeHueDiff();
-  document.addEventListener('themeChanged', () => { themeHue = getThemeHueDiff(); });
+  let bgHue = getBgHue();
+  document.addEventListener('themeChanged', () => {
+    themeHue = getThemeHueDiff();
+    bgHue = getBgHue();
+    symbolHue = parseInt(localStorage.getItem('ethicom_bg_symbol_hue') || '0', 10);
+  });
 
   const canvas = document.createElement('canvas');
   container.appendChild(canvas);
@@ -238,7 +251,12 @@ function initLogoBackground() {
         ctx.translate(s.x, s.y);
         if (s.rotation) ctx.rotate(s.rotation);
         ctx.globalAlpha = s.alpha;
-        const totalHue = themeHue + s.hue;
+        const baseHue = themeHue + s.hue + symbolHue;
+        let totalHue = baseHue;
+        if (!isNaN(bgHue)) {
+          const diff = Math.abs((baseHue - bgHue + 360) % 360);
+          if (diff < 15) totalHue = (baseHue + 30) % 360;
+        }
         ctx.filter = totalHue ? `hue-rotate(${totalHue}deg)` : 'none';
 
         const start = -s.radius * s.scale;
