@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="ethicom-style.css" />
   <script src="ethicom-utils.js"></script>
   <script src="accessibility.js"></script>
+  <script src="slow-mode.js"></script>
   <style>
     .op-list { list-style: none; padding: 0; }
     .op-list li { margin-bottom: 0.6em; display: flex; align-items: center; gap: 0.4em; }
@@ -22,10 +23,10 @@
   <header>
     <h1>Ethicom</h1>
     <p class="tagline">Responsibility with System</p>
-    <nav>
+    <nav aria-label="Main navigation">
       <a href="../home.html">Home</a>
       <a href="../bewertung.html">Bewertung</a>
-      <a href="settings.html" class="icon-only">⚙</a>
+      <a href="settings.html" class="icon-only" aria-label="Settings">⚙</a>
       <a href="login.html">Login</a>
       <a href="../wings/ratings.html">Ratings</a>
       <a href="connect.html">Connect</a>

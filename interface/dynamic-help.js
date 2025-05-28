@@ -104,7 +104,23 @@ function setHelpSection(opLevel) {
   }
 
   const data = helpMap[opLevel] || helpMap.default;
-  section.appendChild(buildDetails(data.title, data.items));
+  const details = buildDetails(data.title, data.items);
+  if (window.slowMode && window.slowMode.enabled) {
+    const list = details.querySelector('ol');
+    const items = Array.from(list.children);
+    list.innerHTML = '';
+    function step(i){
+      if(i>=items.length) return;
+      const li = items[i];
+      li.textContent += ' – take a moment to reflect.';
+      list.appendChild(li);
+      setTimeout(() => step(i+1), 800);
+    }
+    step(0);
+    section.appendChild(details);
+  } else {
+    section.appendChild(details);
+  }
 }
 
 window.addEventListener('DOMContentLoaded', () => setHelpSection('default'));

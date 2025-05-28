@@ -22,7 +22,11 @@ function initSideDrop(url) {
   if (badge) {
     const badgeClone = badge.cloneNode(true);
     badgeClone.id = 'side_drop_badge';
+    badgeClone.tabIndex = 0;
     badgeClone.addEventListener('click', toggleSideDrop);
+    badgeClone.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleSideDrop(); }
+    });
     header.appendChild(badgeClone);
   }
 
@@ -35,6 +39,9 @@ function initSideDrop(url) {
   }
   closeBtn.className = 'accent-button';
   closeBtn.addEventListener('click', toggleSideDrop);
+  closeBtn.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleSideDrop(); }
+  });
   header.appendChild(closeBtn);
 
   container.appendChild(header);
