@@ -1,11 +1,12 @@
 
 // ethicom-utils.js – Hilfsfunktionen für Interface-Anzeige
 (function() {
+  const FG_OPACITY_MAX = 80;
   function setForegroundOpacity(percent) {
     let p = parseInt(percent, 10);
     if (isNaN(p)) p = 0;
     if (p < 0) p = 0;
-    if (p > 100) p = 100;
+    if (p > FG_OPACITY_MAX) p = FG_OPACITY_MAX;
     document.documentElement.style.setProperty('--foreground-opacity', (p / 100).toString());
   }
   function applyTextColor(obj) {
@@ -16,7 +17,8 @@
   window.setForegroundOpacity = setForegroundOpacity;
   window.applyTextColor = applyTextColor;
   document.addEventListener('DOMContentLoaded', () => {
-    const stored = parseInt(localStorage.getItem('ethicom_fg_opacity') || '0', 10);
+    let stored = parseInt(localStorage.getItem('ethicom_fg_opacity') || '0', 10);
+    if (stored > FG_OPACITY_MAX) stored = FG_OPACITY_MAX;
     setForegroundOpacity(stored);
     try {
       const tc = JSON.parse(localStorage.getItem('ethicom_text_color') || 'null');

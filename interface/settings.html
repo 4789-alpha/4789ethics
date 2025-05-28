@@ -86,7 +86,7 @@
       <summary>Foreground Transparency</summary>
       <div id="foreground_opacity">
         <label for="fg_opacity">Foreground transparency: <span id="fg_opacity_val">0</span>%</label>
-        <input type="range" id="fg_opacity" min="0" max="100" step="1" value="0" />
+        <input type="range" id="fg_opacity" min="0" max="80" step="1" value="0" />
       </div>
     </details>
     <details class="card">
@@ -296,7 +296,8 @@
       const fgSlider = document.getElementById('fg_opacity');
       const fgVal = document.getElementById('fg_opacity_val');
       if (fgSlider && fgVal) {
-        const storedFg = parseInt(localStorage.getItem('ethicom_fg_opacity') || '0', 10);
+        let storedFg = parseInt(localStorage.getItem('ethicom_fg_opacity') || '0', 10);
+        if (storedFg > 80) storedFg = 80;
         fgSlider.value = storedFg;
         fgVal.textContent = storedFg;
         fgSlider.addEventListener('input', e => {
