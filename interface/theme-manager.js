@@ -206,6 +206,7 @@ function resetSlidersFromTheme(){
 }
 
 function openColorSettingsPopin(){
+  const prevFocus=document.activeElement;
   const overlay=document.createElement('div');
   overlay.style.position='fixed';overlay.style.top=0;overlay.style.left=0;
   overlay.style.right=0;overlay.style.bottom=0;overlay.style.background='rgba(0,0,0,0.5)';
@@ -214,6 +215,7 @@ function openColorSettingsPopin(){
   overlay.style.alignItems='center';
   overlay.style.justifyContent='center';
   overlay.style.padding='1em';
+  overlay.tabIndex=-1;
 
 
   const box=document.createElement('div');
@@ -272,7 +274,14 @@ function openColorSettingsPopin(){
   overlay.appendChild(closeBtn);
   document.body.appendChild(overlay);
 
-  closeBtn.addEventListener('click',()=>overlay.remove());
+  function closePopin(){
+    overlay.remove();
+    if(prevFocus&&typeof prevFocus.focus==='function') prevFocus.focus();
+  }
+  closeBtn.addEventListener('click',closePopin);
+  closeBtn.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();closePopin();}});
+  overlay.addEventListener('keydown',e=>{if(e.key==='Escape'){e.preventDefault();closePopin();}});
+  setTimeout(()=>closeBtn.focus(),0);
 
   const themes=['tanna-dark','tanna','transparent','ocean','desert','custom'];
   const labels=['Dark Tanna','Tanna','Transparent','Sea Blue','Desert','Custom'];
