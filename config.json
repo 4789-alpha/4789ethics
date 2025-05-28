@@ -1,0 +1,12 @@
+{
+  "port": 8080,
+  "baseUrl": "http://localhost:8080",
+  "paths": {
+    "users": "app/users.json",
+    "evaluations": "app/evaluations.json",
+    "connections": "app/connections.json",
+    "oauthConfig": "app/oauth_config.yaml",
+    "gatekeeperConfig": "app/gatekeeper_config.yaml",
+    "gatekeeperDevices": "app/gatekeeper_devices.json"
+  }
+}
