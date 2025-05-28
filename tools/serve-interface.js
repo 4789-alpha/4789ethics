@@ -96,6 +96,7 @@ const oauthCfg = parseOAuthConfig(paths.oauthConfig ? path.join(repoRoot, paths.
 const oauthStates = new Set();
 const gateCfgPath = path.join(repoRoot, paths.gatekeeperConfig || 'app/gatekeeper_config.yaml');
 const gateStore = path.join(repoRoot, paths.gatekeeperDevices || 'app/gatekeeper_devices.json');
+const gateLogPath = path.join(repoRoot, paths.gatekeeperLog || 'app/gatekeeper_log.json');
 
 const mime = {
   '.html': 'text/html',
@@ -488,7 +489,13 @@ function handleTempToken(req, res) {
   const cfg = parseConfig(gateCfgPath) || {};
   const dur = parseInt(cfg.temp_token_duration || '86400', 10);
   const idHash = cfg.private_identity ? crypto.createHash('sha256').update(String(cfg.private_identity)).digest('hex') : null;
-  const token = issueTempToken(cfg.controller || 'gstekeeper.local', gateStore, idHash, dur);
+  const token = issueTempToken(
+    cfg.controller || 'gstekeeper.local',
+    gateStore,
+    idHash,
+    dur,
+    gateLogPath
+  );
   res.writeHead(200, { 'Content-Type': 'application/json' });
   res.end(JSON.stringify({ token: token, expires_in: dur }));
 }

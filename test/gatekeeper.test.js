@@ -112,3 +112,27 @@ test('denies control with mismatched address', () => {
   assert.strictEqual(gateCheck(file, store), false);
   fs.rmSync(dir, { recursive: true, force: true });
 });
+
+test('logs token issuance', () => {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'gate-'));
+  const store = path.join(dir, 'devices.json');
+  const logFile = path.join(dir, 'log.json');
+  issueTempToken('gstekeeper.local', store, null, 10, logFile);
+  const data = JSON.parse(fs.readFileSync(logFile, 'utf8'));
+  assert.strictEqual(data.length, 1);
+  assert.strictEqual(data[0].action, 'issue_token');
+  fs.rmSync(dir, { recursive: true, force: true });
+});
+
+test('logs gate check result', () => {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'gate-'));
+  const file = path.join(dir, 'config.yaml');
+  const store = path.join(dir, 'devices.json');
+  const logFile = path.join(dir, 'log.json');
+  fs.writeFileSync(file, createConfig('true'));
+  assert.strictEqual(gateCheck(file, store, undefined, logFile), true);
+  const data = JSON.parse(fs.readFileSync(logFile, 'utf8'));
+  assert.strictEqual(data.length, 1);
+  assert.strictEqual(data[0].action, 'gate_check');
+  fs.rmSync(dir, { recursive: true, force: true });
+});
