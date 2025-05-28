@@ -1499,4 +1499,47 @@
     ],
     "correct": "Klein schneiden, Gräten zupfen, evtl. Hackfleisch"
   }
+,
+  {
+    "id": 210,
+    "question": "Wie lange dauert die Schonzeit der Äsche im Kanton Bern?",
+    "choices": [
+      "01. März – 31. Mai",
+      "01. März – 31. August",
+      "01. Oktober – 31. Dezember",
+      "Keine Schonzeit",
+      "Ganzjährig geschützt"
+    ],
+    "correct": "01. März – 31. August",
+    "explanation": "Im Kanton Bern wurde die Schonzeit der Äsche verlängert und dauert nun vom 1. März bis zum 31. August, um den Bestand zu schützen.",
+    "kantone": ["BE"]
+  },
+  {
+    "id": 211,
+    "question": "Welche Mindestfanglänge gilt im Kanton Bern für den Zander?",
+    "choices": [
+      "45 cm",
+      "50 cm",
+      "55 cm",
+      "60 cm",
+      "Keine Mindestlänge"
+    ],
+    "correct": "50 cm",
+    "explanation": "Laut aktueller Berner Fischereiverordnung beträgt das Mindestmass für Zander 50 cm.",
+    "kantone": ["BE"]
+  },
+  {
+    "id": 212,
+    "question": "Welche Aussage zur Felchen-Fischerei im Kanton Bern ist korrekt?",
+    "choices": [
+      "Es besteht keine Fangzahlbeschränkung",
+      "Felchen dürfen nur mit der Hegene gefangen werden",
+      "Felchen haben eine Fangzeit von Sonnenaufgang bis -untergang",
+      "Der Fang ist auf 10 Stück pro Tag begrenzt",
+      "Felchen dürfen nicht vom Ufer aus gefangen werden"
+    ],
+    "correct": "Der Fang ist auf 10 Stück pro Tag begrenzt",
+    "explanation": "Im Kanton Bern gilt eine Tageshöchstfangzahl von 10 Felchen pro Angler.",
+    "kantone": ["BE"]
+  }
 ]
