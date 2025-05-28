@@ -57,8 +57,8 @@
       <summary>Background</summary>
       <div id="background_settings">
         <div id="background_count">
-          <label for="bg_symbol_count">Tanna symbols in background: <span id="bg_symbol_count_val">40</span></label>
-          <input type="range" id="bg_symbol_count" min="10" max="400" step="10" value="40" />
+          <label for="bg_fill_ratio">Tanna background fill: <span id="bg_fill_ratio_val">40</span>%</label>
+          <input type="range" id="bg_fill_ratio" min="20" max="99" step="1" value="40" />
         </div>
         <div id="same_level_count" style="display:none;">
           <label for="bg_same_level_count">Your level Tannas: <span id="bg_same_level_val">1</span></label>
@@ -220,15 +220,15 @@
       }
       if(tr&&tg&&tb){const s=JSON.parse(localStorage.getItem('ethicom_tanna_color')||'{"r":34,"g":139,"b":34}');tr.value=s.r;tg.value=s.g;tb.value=s.b;upd();[tr,tg,tb].forEach(el=>el.addEventListener('input',upd));}
 
-      const slider = document.getElementById('bg_symbol_count');
-      const val = document.getElementById('bg_symbol_count_val');
+      const slider = document.getElementById('bg_fill_ratio');
+      const val = document.getElementById('bg_fill_ratio_val');
       if (slider && val) {
-        const stored = parseInt(localStorage.getItem('ethicom_bg_count') || '40', 10);
+        const stored = parseInt(localStorage.getItem('ethicom_bg_fill') || '40', 10);
         slider.value = stored;
         val.textContent = stored;
         slider.addEventListener('input', e => val.textContent = e.target.value);
         slider.addEventListener('change', e => {
-          localStorage.setItem('ethicom_bg_count', e.target.value);
+          localStorage.setItem('ethicom_bg_fill', e.target.value);
           alert('Reload the page to apply.');
         });
       }

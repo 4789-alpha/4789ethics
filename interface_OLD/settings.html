@@ -59,8 +59,8 @@
       <button id="custom_theme_btn" style="display:none;margin-top:0.5em;" class="accent-button">Create Custom Scheme</button>
     </div>
     <div id="background_count" class="card">
-      <label for="bg_symbol_count">Tanna symbols in background: <span id="bg_symbol_count_val">40</span></label>
-      <input type="range" id="bg_symbol_count" min="10" max="400" step="10" value="40"/>
+      <label for="bg_fill_ratio">Tanna background fill: <span id="bg_fill_ratio_val">40</span>%</label>
+      <input type="range" id="bg_fill_ratio" min="20" max="99" step="1" value="40"/>
     </div>
     <div id="touch_features" class="card">
       <h3 data-ui="touch_settings_title">Touch Features</h3>
@@ -121,17 +121,17 @@
       if (aw) aw.addEventListener('change', e => attentionSettings.toggleWiggle(e.target.checked));
       if (ab) ab.addEventListener('change', e => attentionSettings.toggleBeep(e.target.checked));
 
-      const countSlider = document.getElementById('bg_symbol_count');
-      const countVal = document.getElementById('bg_symbol_count_val');
+      const countSlider = document.getElementById('bg_fill_ratio');
+      const countVal = document.getElementById('bg_fill_ratio_val');
       if (countSlider && countVal) {
-        const stored = parseInt(localStorage.getItem('ethicom_bg_count') || '40', 10);
+        const stored = parseInt(localStorage.getItem('ethicom_bg_fill') || '40', 10);
         countSlider.value = stored;
         countVal.textContent = stored;
         countSlider.addEventListener('input', e => {
           countVal.textContent = e.target.value;
         });
         countSlider.addEventListener('change', e => {
-          localStorage.setItem('ethicom_bg_count', e.target.value);
+          localStorage.setItem('ethicom_bg_fill', e.target.value);
           alert('Reload the page to apply.');
         });
       }
