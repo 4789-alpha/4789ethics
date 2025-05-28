@@ -41,6 +41,7 @@ See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
 - [OP Function Bundles](#op-function-bundles)
 - [Currency Synchronization](#currency-synchronization)
 - [Wiki Image Loader](#wiki-image-loader)
+- [Stereo Anaglyph Generator](#stereo-anaglyph-generator)
 - [Source Manager](#source-manager)
 - [Roadmap](#roadmap)
 - [Local Deployment](#local-deployment)
@@ -244,9 +245,11 @@ README is used.
 
 Local control can be toggled via `tools/gatekeeper.js`. The script reads
 `app/gatekeeper_config.yaml` and only allows actions when `allow_control` is set
-to `true` for the controller `gstekeeper.local`. This keeps remote commands gated and
-limited to the local environment.
-`gstekeeper.local` holds back every personal ID/information and has permission to share anonymous and signed data as a sign of trust.
+to `true` for the controller `gstekeeper.local`. The optional
+`private_identity` value is hashed and stored with the device hash in
+`app/gatekeeper_devices.json`. This keeps remote commands gated and
+limited to the local environment. `gstekeeper.local` holds back every personal
+ID and may share only signed, anonymous data as a sign of trust.
 The gatekeeper runs on any platform that can execute Node.js. Copy the repository or the
 `tools` and `app` folders to a USB drive and run `node tools/gatekeeper.js` on Windows,
 macOS, Linux or mobile shells such as Termux. Even older hardware is sufficient—if Node.js
@@ -254,6 +257,7 @@ works, the gatekeeper does too. A decade-old laptop with a single-core CPU and a
 512 MB of RAM is usually enough as long as Node.js 18 or later runs. Use it responsibly as
 noted in `DISCLAIMERS.md`.
 Confirmed devices are stored hashed in `app/gatekeeper_devices.json`. Once the same controller is used again, no further confirmation is needed.
+The private identity is hashed too and remains local-only. Only you have access to the unhashed string.
 Registrierungsdaten werden offline gehasht gespeichert. Keine Gewährleistung für absolute Anonymität.
 **4789**
 
@@ -294,6 +298,14 @@ Run `node tools/fetch-wiki-images.js` to download public thumbnails from
 Wikipedia. The script saves each file in `sources/images/persons/` and updates
 `sources/persons/human-op0-candidates.json`. Review the licenses of all
 downloaded images as noted in `LICENSE.txt` and `DISCLAIMERS.md`.
+
+### Stereo Anaglyph Generator
+[⇧](#contents)
+
+Run `node tools/stereo-anaglyph.js <left> <right> <output> [foreground|full]` to
+combine two slightly shifted images into a single anaglyph. Pass `foreground`
+to align near objects; omit it or use `full` for a general merge. The script
+expects PNG or JPEG inputs and writes the result to the specified output path.
 
 ### Source Manager
 [⇧](#contents)

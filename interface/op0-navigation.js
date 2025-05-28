@@ -24,6 +24,7 @@
       `<a href="${base}wings/ratings.html">Ratings</a>`+
       `<a href="${base}interface/signup.html">Signup</a>`+
       `<a href="${base}interface/genealogie.html">Genealogie</a>`+
+      `<a href="${base}interface/hermes.html">Hermes</a>`+
       `<a href="${base}interface/shneiderman.html">Shneiderman</a>`+
       `<a href="${base}interface/nielsen.html">Nielsen</a>`+
       `<a href="${base}interface/norman.html">Norman</a>`+
