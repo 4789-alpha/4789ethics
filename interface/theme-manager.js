@@ -166,8 +166,9 @@ function openColorSettingsPopin(){
   box.className='card';
   box.style.background='#fff';box.style.color='#000';
   box.style.maxHeight='90vh';box.style.overflowY='auto';
+  box.style.position='relative';
 
-  box.innerHTML=`<button id="color_popin_close" style="float:right">X</button>
+  box.innerHTML=`<button id="color_popin_close" style="position:absolute;top:0.5em;right:0.5em;z-index:1">X</button>
 <details class="card"><summary>Fonts</summary>
  <div id="text_color_pop">
   <label>R: <input type="range" id="text_r_p" min="0" max="255"> <span id="text_r_p_val"></span></label><br/>
