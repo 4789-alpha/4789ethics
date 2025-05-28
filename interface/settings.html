@@ -354,6 +354,15 @@
             });
         });
       }
+
+      const all = document.querySelectorAll('.settings-grid details');
+      all.forEach(det => {
+        det.addEventListener('toggle', () => {
+          if (det.open) {
+            all.forEach(other => { if (other !== det) other.open = false; });
+          }
+        });
+      });
     });
   </script>
 </body>
