@@ -28,8 +28,6 @@ function applyTheme(theme) {
 
 function initThemeSelection() {
   const select = document.getElementById('theme_select');
-  const slider = document.getElementById('theme_slider');
-  const label = document.getElementById('theme_slider_label');
   const customBtn = document.getElementById('custom_theme_btn');
   const tannaCard = document.getElementById('tanna_color');
   const themes = ['tanna-dark','tanna','transparent','ocean','desert','custom'];
@@ -286,6 +284,8 @@ function openColorSettingsPopin(){
       const val=e.target.value;
       localStorage.setItem('ethicom_theme',val);
       applyTheme(val);
+    const idx=themes.indexOf(val);
+  });
       resetSlidersFromTheme();
       const idx=themes.indexOf(val);
       const slider=document.getElementById('theme_slider');
@@ -340,15 +340,6 @@ document.addEventListener('keydown', e => {
     resetSlidersFromTheme();
     const select = document.getElementById('theme_select');
     if (select) select.value = next;
-    const slider = document.getElementById('theme_slider');
-    const label = document.getElementById('theme_slider_label');
-    const themes = ['tanna-dark','tanna','transparent','ocean','desert','custom'];
-    const labels = ['Dark Tanna','Tanna','Transparent','Sea Blue','Desert','Custom'];
-    const idx = themes.indexOf(next);
-    if (slider && idx >= 0) {
-      slider.value = idx;
-      if (label) label.textContent = labels[idx];
-    }
   }
 });
 
