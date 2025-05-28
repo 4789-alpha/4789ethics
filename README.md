@@ -297,6 +297,13 @@ Registrierungsdaten werden offline gehasht gespeichert. Keine Gewährleistung f�
 Adressen und Telefonnummern werden ebenfalls offline gehasht gespeichert.
 **4789**
 
+### Gatekeeper Image
+[⇧](#contents)
+
+Run `node tools/generate-gatekeeper-image.js <dir> <seconds>` to create a minimal folder
+with `gatekeeper.js`, `gatekeeper_config.yaml` and a temporary token.
+Copy that folder to another device and run `node gatekeeper.js <token>` for delegated control during that time.
+
 ### API Access Control
 [⇧](#contents)
 
