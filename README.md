@@ -105,7 +105,7 @@ README.md -> GET_STARTED.md -> index.html
 | [interface/ethicom.html](interface/ethicom.html) | Main evaluation module |
 | [interface/page-flow-demo.html](interface/page-flow-demo.html) | Demo of horizontal flow |
 | [bewertung.html](bewertung.html) | Swipe-based person rating |
-| [interface/settings.html](interface/settings.html) | Language, theme, and Tanna logo settings |
+| [interface/settings.html](interface/settings.html) | Language, theme, Tanna logo, and low motion settings |
 | [interface/signup.html](interface/signup.html) | Registration form |
 | [interface/tanna-template.html](interface/tanna-template.html) | Base template |
 | [interface/tanna-template-dark.html](interface/tanna-template-dark.html) | Template in dark theme |
