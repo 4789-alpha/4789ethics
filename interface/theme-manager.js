@@ -197,9 +197,18 @@ function openColorSettingsPopin(){
   box.style.maxHeight='90vh';box.style.overflowY='auto';
   box.style.position='relative';
 
-  box.innerHTML=`
-<details class="card"><summary>Fonts</summary>
- <div id="text_color_pop">
+  box.innerHTML=`<div id="theme_scheme_wrap" style="margin-bottom:0.5em;"><label for="theme_select_pop">Color Scheme:</label>
+  <select id="theme_select_pop">
+    <option value="tanna-dark">Dark Tanna</option>
+    <option value="tanna">Tanna</option>
+    <option value="transparent">Transparent</option>
+    <option value="ocean">Sea Blue</option>
+    <option value="desert">Desert</option>
+    <option value="custom">Custom</option>
+  </select></div>`+
+  `
+  <details class="card"><summary>Fonts</summary>
+   <div id="text_color_pop">
   <label>R: <input type="range" id="text_r_p" min="0" max="255"> <span id="text_r_p_val"></span></label><br/>
   <label>G: <input type="range" id="text_g_p" min="0" max="255"> <span id="text_g_p_val"></span></label><br/>
   <label>B: <input type="range" id="text_b_p" min="0" max="255"> <span id="text_b_p_val"></span></label>
@@ -239,6 +248,23 @@ function openColorSettingsPopin(){
   document.body.appendChild(overlay);
 
   closeBtn.addEventListener('click',()=>overlay.remove());
+
+  const themes=['tanna-dark','tanna','transparent','ocean','desert','custom'];
+  const labels=['Dark Tanna','Tanna','Transparent','Sea Blue','Desert','Custom'];
+  const scheme=document.getElementById('theme_select_pop');
+  if(scheme){
+    const stored=localStorage.getItem('ethicom_theme')||'tanna-dark';
+    scheme.value=stored;
+    scheme.addEventListener('change',e=>{
+      const val=e.target.value;
+      localStorage.setItem('ethicom_theme',val);
+      applyTheme(val);
+      const idx=themes.indexOf(val);
+      const slider=document.getElementById('theme_slider');
+      const label=document.getElementById('theme_slider_label');
+      if(slider&&idx>=0){slider.value=idx;if(label) label.textContent=labels[idx];}
+    });
+  }
 
   initSliderSet('text_r_p','text_g_p','text_b_p','text_r_p_val','text_g_p_val','text_b_p_val','text_preview_p','ethicom_text_color','--text-color');
   initSliderSet('bg_r','bg_g','bg_b','bg_r_val','bg_g_val','bg_b_val','bg_preview','ethicom_bg_color','--bg-color');
