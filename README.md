@@ -45,6 +45,7 @@ See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
 - [Source Manager](#source-manager)
 - [Roadmap](#roadmap)
 - [Local Deployment](#local-deployment)
+- [Keyboard Shortcuts](#keyboard-shortcuts)
 - [Running Tests](#running-tests)
 - [Contributing](#contributing)
 
@@ -357,8 +358,10 @@ pip install -r requirements.txt
 Serve the Ethicom interface locally with:
 
 ```bash
-node tools/serve-interface.js
+node tools/serve-interface.js [--port <number>]
 ```
+
+Run `node tools/serve-interface.js --help` to see all options.
 
 Then open `http://localhost:8080/ethicom.html` in your browser.
 Opening the HTML file directly (e.g. via `file://`) bypasses the local server and
@@ -367,6 +370,16 @@ the provided `localhost` address so that translation files load correctly.
 When deploying on another domain, set the environment variable `BASE_URL`
 to that public origin (e.g. `https://4789-alpha.github.io`) so that OAuth
 redirects work properly.
+
+### Keyboard Shortcuts
+[⇧](#contents)
+
+Cards in the Ethicom interface react to arrow keys and swipe gestures:
+
+- **Left** → sets the rating to *Unclear*
+- **Up** → sets the rating to *Yes*
+- **Down** → sets the rating to *No*
+- **Right** → shows an info alert about the selected name
 
 ### Running Tests
 [⇧](#contents)

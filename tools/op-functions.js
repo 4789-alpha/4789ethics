@@ -40,8 +40,13 @@ function getOpFunction(name, userStatePath) {
 }
 
 if (require.main === module) {
-  const name = process.argv[2] || 'info';
-  const fn = getOpFunction(name);
+  const [arg1, arg2] = process.argv.slice(2);
+  if (arg1 === '--help' || arg1 === '-h') {
+    console.log('Usage: node tools/op-functions.js <function> [statePath]');
+    process.exit(0);
+  }
+  const name = arg1 || 'info';
+  const fn = getOpFunction(name, arg2);
   if (fn) {
     console.log(fn());
   } else {

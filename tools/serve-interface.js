@@ -78,12 +78,25 @@ function verifyTotp(secret, code) {
 
 const root = path.join(__dirname, '..', 'interface');
 const repoRoot = path.join(__dirname, '..');
-const port = process.env.PORT || 8080;
+const args = process.argv.slice(2);
+function getArg(name) {
+  const idx = args.findIndex(a => a === name || a.startsWith(name + '='));
+  if (idx === -1) return null;
+  const val = args[idx].includes('=') ? args[idx].split('=')[1] : args[idx + 1];
+  return val || null;
+}
+if (args.includes('--help') || args.includes('-h')) {
+  console.log('Usage: node tools/serve-interface.js [--port <number>] [--oauth <file>]');
+  console.log('Starts a local server for the Ethicom interface.');
+  console.log('Set BASE_URL to your public origin when testing OAuth.');
+  process.exit(0);
+}
+const port = parseInt(getArg('--port') || process.env.PORT || '8080', 10);
 const baseUrl = process.env.BASE_URL || `http://localhost:${port}`;
 const usersFile = path.join(__dirname, '..', 'app', 'users.json');
 const evalFile = path.join(__dirname, '..', 'app', 'evaluations.json');
 const connFile = path.join(__dirname, '..', 'app', 'connections.json');
-const oauthCfg = parseOAuthConfig();
+const oauthCfg = parseOAuthConfig(getArg('--oauth'));
 const oauthStates = new Set();
 const gateCfgPath = path.join(__dirname, '..', 'app', 'gatekeeper_config.yaml');
 const gateStore = path.join(__dirname, '..', 'app', 'gatekeeper_devices.json');
