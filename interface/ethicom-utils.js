@@ -14,8 +14,56 @@
     const css = `rgb(${obj.r},${obj.g},${obj.b})`;
     document.documentElement.style.setProperty('--text-color', css);
   }
+
+  function applyStoredColors() {
+    try {
+      const bg = JSON.parse(localStorage.getItem('ethicom_bg_color') || 'null');
+      if (bg) {
+        document.documentElement.style.setProperty(
+          '--bg-color',
+          `rgb(${bg.r},${bg.g},${bg.b})`
+        );
+      }
+    } catch {}
+
+    try {
+      const mod = JSON.parse(
+        localStorage.getItem('ethicom_module_color') || 'null'
+      );
+      if (mod) {
+        document.documentElement.style.setProperty(
+          '--module-color',
+          `rgb(${mod.r},${mod.g},${mod.b})`
+        );
+      }
+    } catch {}
+
+    try {
+      const tanna = JSON.parse(
+        localStorage.getItem('ethicom_tanna_color') || 'null'
+      );
+      if (
+        tanna &&
+        (document.body.classList.contains('theme-tanna') ||
+          document.body.classList.contains('theme-tanna-dark'))
+      ) {
+        const css = `rgb(${tanna.r},${tanna.g},${tanna.b})`;
+        document.documentElement.style.setProperty('--primary-color', css);
+        document.documentElement.style.setProperty('--accent-color', css);
+        const h = `rgba(${Math.round(tanna.r * 0.2)},${Math.round(
+          tanna.g * 0.2
+        )},${Math.round(tanna.b * 0.2)},0.9)`;
+        const n = `rgba(${Math.round(tanna.r * 0.3)},${Math.round(
+          tanna.g * 0.3
+        )},${Math.round(tanna.b * 0.3)},0.9)`;
+        document.documentElement.style.setProperty('--header-bg', h);
+        document.documentElement.style.setProperty('--nav-bg', n);
+      }
+    } catch {}
+  }
   window.setForegroundOpacity = setForegroundOpacity;
   window.applyTextColor = applyTextColor;
+  window.applyStoredColors = applyStoredColors;
   document.addEventListener('DOMContentLoaded', () => {
     let stored = parseInt(localStorage.getItem('ethicom_fg_opacity') || '0', 10);
     if (stored > FG_OPACITY_MAX) stored = FG_OPACITY_MAX;
@@ -24,6 +72,7 @@
       const tc = JSON.parse(localStorage.getItem('ethicom_text_color') || 'null');
       if (tc) applyTextColor(tc);
     } catch {}
+    applyStoredColors();
   });
 })();
 

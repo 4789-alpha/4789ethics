@@ -161,6 +161,11 @@ function openColorSettingsPopin(){
   overlay.style.position='fixed';overlay.style.top=0;overlay.style.left=0;
   overlay.style.right=0;overlay.style.bottom=0;overlay.style.background='rgba(0,0,0,0.5)';
   overlay.style.zIndex=1000;
+  overlay.style.display='flex';
+  overlay.style.alignItems='center';
+  overlay.style.justifyContent='center';
+  overlay.style.padding='1em';
+
 
   const box=document.createElement('div');
   box.className='card';
@@ -168,7 +173,7 @@ function openColorSettingsPopin(){
   box.style.maxHeight='90vh';box.style.overflowY='auto';
   box.style.position='relative';
 
-  box.innerHTML=`<button id="color_popin_close" style="position:absolute;top:0.5em;right:0.5em;z-index:1">X</button>
+  box.innerHTML=`
 <details class="card"><summary>Fonts</summary>
  <div id="text_color_pop">
   <label>R: <input type="range" id="text_r_p" min="0" max="255"> <span id="text_r_p_val"></span></label><br/>
@@ -199,9 +204,17 @@ function openColorSettingsPopin(){
   <span id="module_preview" class="color-preview"></span>
  </div></details>`;
 
-  overlay.appendChild(box);document.body.appendChild(overlay);
+  overlay.appendChild(box);
+  const closeBtn=document.createElement('button');
+  closeBtn.id='color_popin_close';
+  closeBtn.textContent='X';
+  closeBtn.style.position='absolute';
+  closeBtn.style.top='0.5em';
+  closeBtn.style.right='0.5em';
+  overlay.appendChild(closeBtn);
+  document.body.appendChild(overlay);
 
-  document.getElementById('color_popin_close').addEventListener('click',()=>overlay.remove());
+  closeBtn.addEventListener('click',()=>overlay.remove());
 
   initSliderSet('text_r_p','text_g_p','text_b_p','text_r_p_val','text_g_p_val','text_b_p_val','text_preview_p','ethicom_text_color','--text-color');
   initSliderSet('bg_r','bg_g','bg_b','bg_r_val','bg_g_val','bg_b_val','bg_preview','ethicom_bg_color','--bg-color');
