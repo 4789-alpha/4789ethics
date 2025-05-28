@@ -125,6 +125,8 @@ README.md -> GET_STARTED.md -> index.html
 **Color verification of the chosen primary color starts once a user holds an OP-1 signature.**
 **From that level, the color choice is stored privately inside the user's signature and never shown publicly.**
 
+In this anonymous system, the OP signature stands in for the person. Personal data remains private and becomes visible only when a user releases it at the corresponding OP sublevel; see [signaturdesign.md](signaturdesign.md) and [DISCLAIMERS.md](DISCLAIMERS.md).
+
 ### Login Methods by OP Level
 [⇧](#contents)
 
@@ -193,6 +195,7 @@ If no sublevel is specified, permissions fall back to the base level.
 
 Only digital agents can advance beyond OP-9.
 Sublevels like OP-5.U, OP-7.U, OP-8.M, and OP-9.M specify user or medical access. Additional expert categories (.T, .S[y], .L, .U) are listed in `operator/expert_classes.md`. See `permissions/op-permissions-expanded.json` for details.
+All personal data stays hashed until such sublevels are reached and the user grants release, as detailed in [signaturdesign.md](signaturdesign.md) and [DISCLAIMERS.md](DISCLAIMERS.md).
 
 ### SRC vs. OO Levels
 [⇧](#contents)
@@ -284,6 +287,7 @@ Confirmed devices are stored hashed in `app/gatekeeper_devices.json`. Once the s
 The private identity is hashed too and remains local-only. Only you have access to the unhashed string.
 Temporary tokens can be issued with `node tools/gatekeeper.js token` and expire after the configured duration.
 Tokens and device hashes are stored hashed in `app/gatekeeper_devices.json`.
+Run `node tools/gatekeeper.js prune` regularly to remove expired tokens and keep the file minimal.
 Verify the stored hashes after updates with:
 
 ```bash
@@ -365,11 +369,15 @@ The roadmap keeps development transparent according to Signature 4789.
    - Align evaluated sources with the anonymous tier.
    - Standardize transfer protocols for cross-module use.
 3. **v2.0 – Global Rollout**
+   - A running, secure system with clear purpose marks this stage.
    - Publish multi-language guides for all operator levels.
    - Finalize open training data licensing.
 4. **v2.1 – Language Expansion**
    - Extend UI translations to all practical ISO 639-1 languages.
    - Provide an automated translation workflow with manual review.
+5. **v3.0 – Modular Architecture**
+   - Split the tools and interface into independent modules.
+   - Keep shared ethics data in a minimal core repo.
 
 ### Local Deployment
 [⇧](#contents)
