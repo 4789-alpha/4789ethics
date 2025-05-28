@@ -44,6 +44,7 @@ function initLogoBackground() {
   }
 
   let symbolHue = parseInt(localStorage.getItem('ethicom_bg_symbol_hue') || '0', 10);
+  const lowMotion = localStorage.getItem('ethicom_bg_low_motion') === 'true';
 
   let themeHue = getThemeHueDiff();
   let bgHue = getBgHue();
@@ -103,7 +104,7 @@ function initLogoBackground() {
   const avgArea = avgSize * avgSize;
   const maxSymbols = Math.floor(canvas.width * canvas.height / avgArea);
   const total = Math.max(20, Math.floor(maxSymbols * fillRatio));
-  const collisionsEnabled = true;
+  const collisionsEnabled = !lowMotion;
   for (let i = 0; i < total; i++) {
     const lvl = levels[i % levels.length];
     const img = images[lvl >= 8 ? 7 : lvl];
@@ -115,10 +116,10 @@ function initLogoBackground() {
     const subSize = size / count;
     const x = Math.random() * (canvas.width - size) + radius;
     const y = Math.random() * (canvas.height - size) + radius;
-    const angle = Math.random() * Math.PI * 2;
-    const speed = 0.5 + Math.random() * 1.5;
-    const dx = Math.cos(angle) * speed;
-    const dy = Math.sin(angle) * speed;
+      const angle = Math.random() * Math.PI * 2;
+      const speed = (0.5 + Math.random() * 1.5) * (lowMotion ? 0.4 : 1);
+      const dx = Math.cos(angle) * speed;
+      const dy = Math.sin(angle) * speed;
     symbols.push({
       img,
       lvl,
