@@ -18,6 +18,7 @@ This structure must be carried – not quoted.
 Use it only if you reflect, respond, and act with consequence.
 
 For a brief tour of the main files, see [GET_STARTED.md](GET_STARTED.md).
+Eine Kurzanleitung in einfacher Sprache findest du in [ANLEITUNG_EINFACH_DE.md](ANLEITUNG_EINFACH_DE.md).
 
 **License:** Open-Ethics (see `LICENSE.txt`)
 No manipulation. No simulation. No flattening of responsibility.
