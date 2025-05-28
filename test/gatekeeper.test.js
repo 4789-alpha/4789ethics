@@ -4,6 +4,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const os = require('node:os');
 const { gateCheck, issueTempToken, verifyTempToken } = require('../tools/gatekeeper.js');
+const crypto = require('node:crypto');
 
 function createConfig(allow, id = 'singularity') {
   return `gatekeeper:\n  controller: "gstekeeper.local"\n  allow_control: ${allow}\n  local_only: true\n  private_identity: "${id}"`;
@@ -80,5 +81,34 @@ test('temp token expires', () => {
   data['gstekeeper.local'].tokens[tokHash] = Date.now() - 1000;
   fs.writeFileSync(store, JSON.stringify(data));
   assert.strictEqual(verifyTempToken('gstekeeper.local', store, token), false);
+  fs.rmSync(dir, { recursive: true, force: true });
+});
+
+test('stores hashed address and phone', () => {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'gate-'));
+  const file = path.join(dir, 'config.yaml');
+  const store = path.join(dir, 'devices.json');
+  const cfg = `gatekeeper:\n  controller: "gstekeeper.local"\n  allow_control: true\n  local_only: true\n  private_identity: "id"\n  address: "Street 1"\n  phone: "+123"`;
+  fs.writeFileSync(file, cfg);
+  assert.strictEqual(gateCheck(file, store), true);
+  const data = JSON.parse(fs.readFileSync(store, 'utf8'));
+  const entry = data['gstekeeper.local'];
+  const addrHash = crypto.createHash('sha256').update('Street 1').digest('hex');
+  const phoneHash = crypto.createHash('sha256').update('+123').digest('hex');
+  assert.strictEqual(entry.address, addrHash);
+  assert.strictEqual(entry.phone, phoneHash);
+  fs.rmSync(dir, { recursive: true, force: true });
+});
+
+test('denies control with mismatched address', () => {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'gate-'));
+  const file = path.join(dir, 'config.yaml');
+  const store = path.join(dir, 'devices.json');
+  const cfgA = `gatekeeper:\n  controller: "gstekeeper.local"\n  allow_control: true\n  local_only: true\n  private_identity: "id"\n  address: "A"`;
+  fs.writeFileSync(file, cfgA);
+  assert.strictEqual(gateCheck(file, store), true);
+  const cfgB = `gatekeeper:\n  controller: "gstekeeper.local"\n  allow_control: true\n  local_only: true\n  private_identity: "id"\n  address: "B"`;
+  fs.writeFileSync(file, cfgB);
+  assert.strictEqual(gateCheck(file, store), false);
   fs.rmSync(dir, { recursive: true, force: true });
 });

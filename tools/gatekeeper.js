@@ -21,7 +21,7 @@ function parseConfig(filePath) {
       }
       inList = false;
     }
-    const m = trimmed.match(/^(controller|allow_control|local_only|private_identity|temp_token_duration):\s*(.*)$/);
+    const m = trimmed.match(/^(controller|allow_control|local_only|private_identity|address|phone|temp_token_duration):\s*(.*)$/);
     if (m) {
       cfg[m[1]] = m[2].replace(/['"]/g, '');
       return;
@@ -62,21 +62,26 @@ function writeDevices(devices, filePath) {
   fs.writeFileSync(filePath, JSON.stringify(devices, null, 2));
 }
 
-function deviceRecognized(controller, storePath, idHash) {
+function deviceRecognized(controller, storePath, idHash, addrHash, phoneHash) {
   const devices = readDevices(storePath);
   const entry = devices[controller];
-  if (!entry || (idHash && entry.identity !== idHash)) return false;
+  if (!entry) return false;
+  if (idHash && entry.identity && entry.identity !== idHash) return false;
+  if (addrHash && entry.address && entry.address !== addrHash) return false;
+  if (phoneHash && entry.phone && entry.phone !== phoneHash) return false;
   const hash = deviceHash();
   return Array.isArray(entry.devices) && entry.devices.includes(hash);
 }
 
-function rememberDevice(controller, storePath, idHash) {
+function rememberDevice(controller, storePath, idHash, addrHash, phoneHash) {
   const hash = deviceHash();
   const devices = readDevices(storePath);
   if (!devices[controller]) {
-    devices[controller] = { identity: idHash || null, devices: [], tokens: {} };
+    devices[controller] = { identity: idHash || null, address: addrHash || null, phone: phoneHash || null, devices: [], tokens: {} };
   }
   if (idHash) devices[controller].identity = idHash;
+  if (addrHash) devices[controller].address = addrHash;
+  if (phoneHash) devices[controller].phone = phoneHash;
   const list = devices[controller].devices;
   if (!Array.isArray(list)) devices[controller].devices = [];
   if (!devices[controller].devices.includes(hash)) {
@@ -122,18 +127,22 @@ function gateCheck(configPath, devicesPath, tempToken) {
   const deviceFile = devicesPath || path.join(__dirname, '..', 'app', 'gatekeeper_devices.json');
   const controllerOK = cfg.controller === 'gstekeeper.local';
   const idHash = identityHash(cfg.private_identity);
+  const addrHash = identityHash(cfg.address);
+  const phoneHash = identityHash(cfg.phone);
   const local = cfg.local_only === 'true';
   const existing = readDevices(deviceFile)[cfg.controller];
-  if (existing && idHash && existing.identity && existing.identity !== idHash) {
-    return false;
+  if (existing) {
+    if (idHash && existing.identity && existing.identity !== idHash) return false;
+    if (addrHash && existing.address && existing.address !== addrHash) return false;
+    if (phoneHash && existing.phone && existing.phone !== phoneHash) return false;
   }
 
-  if (controllerOK && local && deviceRecognized(cfg.controller, deviceFile, idHash)) {
+  if (controllerOK && local && deviceRecognized(cfg.controller, deviceFile, idHash, addrHash, phoneHash)) {
     return true;
   }
 
   if (tempToken && verifyTempToken(cfg.controller, deviceFile, tempToken)) {
-    rememberDevice(cfg.controller, deviceFile, idHash);
+    rememberDevice(cfg.controller, deviceFile, idHash, addrHash, phoneHash);
     return true;
   }
 
@@ -141,7 +150,7 @@ function gateCheck(configPath, devicesPath, tempToken) {
   const result = allowed && controllerOK && local;
 
   if (result) {
-    rememberDevice(cfg.controller, deviceFile, idHash);
+    rememberDevice(cfg.controller, deviceFile, idHash, addrHash, phoneHash);
   }
 
   return result;

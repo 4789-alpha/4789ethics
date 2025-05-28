@@ -290,6 +290,7 @@ Verify the stored hashes after updates with:
 node tools/verify-gatekeeper.js
 ```
 Registrierungsdaten werden offline gehasht gespeichert. Keine Gewährleistung für absolute Anonymität.
+Adressen und Telefonnummern werden ebenfalls offline gehasht gespeichert.
 **4789**
 
 ### API Access Control
