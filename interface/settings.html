@@ -70,7 +70,7 @@
       <div id="background_settings">
         <div id="background_count">
           <label for="bg_fill_ratio">Tanna background fill: <span id="bg_fill_ratio_val">40</span>%</label>
-          <input type="range" id="bg_fill_ratio" min="20" max="99" step="1" value="40" />
+          <input type="range" id="bg_fill_ratio" min="20" max="95" step="1" value="40" />
             <small class="note">Reload to apply.</small>
         </div>
         <div id="same_level_count" style="display:none;">
@@ -246,7 +246,8 @@
       const slider = document.getElementById('bg_fill_ratio');
       const val = document.getElementById('bg_fill_ratio_val');
       if (slider && val) {
-        const stored = parseInt(localStorage.getItem('ethicom_bg_fill') || '40', 10);
+        let stored = parseInt(localStorage.getItem('ethicom_bg_fill') || '40', 10);
+        stored = Math.min(stored, parseInt(slider.max, 10));
         slider.value = stored;
         val.textContent = stored;
         slider.addEventListener('input', e => val.textContent = e.target.value);
