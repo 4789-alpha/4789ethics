@@ -6,8 +6,27 @@ async function initFischeBern() {
     const tbody = document.createElement('tbody');
     list.forEach(f => {
       const row = document.createElement('tr');
-      const img = f.image ? `<img class="fish-image" src="../../${f.image}" alt="${f.name}">` : '';
-      row.innerHTML = `<td>${f.name}</td><td>${img}</td><td>${f.scientific_name}</td><td>${f.type}</td><td>${f.habitat}</td><td>${f.max_cm}</td><td>${f.spawn}</td>`;
+
+      const nameCell = document.createElement('td');
+      nameCell.textContent = f.name;
+      row.appendChild(nameCell);
+
+      const imgCell = document.createElement('td');
+      if (f.image) {
+        const imgElem = document.createElement('img');
+        imgElem.className = 'fish-image';
+        imgElem.src = `../../${f.image}`;
+        imgElem.alt = f.name;
+        imgCell.appendChild(imgElem);
+      }
+      row.appendChild(imgCell);
+
+      [f.scientific_name, f.type, f.habitat, f.max_cm, f.spawn].forEach(value => {
+        const cell = document.createElement('td');
+        cell.textContent = value;
+        row.appendChild(cell);
+      });
+
       tbody.appendChild(row);
     });
     table.appendChild(tbody);

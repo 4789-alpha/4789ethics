@@ -20,7 +20,19 @@ async function initFischEditor() {
     tbody.innerHTML = '';
     list.forEach(f => {
       const row = document.createElement('tr');
-      row.innerHTML = `<td>${f.name}</td><td>${f.scientific_name}</td><td>${f.type}</td><td>${f.habitat}</td><td>${f.max_cm}</td><td>${f.spawn}</td>`;
+      const cells = [
+        f.name,
+        f.scientific_name,
+        f.type,
+        f.habitat,
+        f.max_cm,
+        f.spawn
+      ];
+      cells.forEach(value => {
+        const cell = document.createElement('td');
+        cell.textContent = value;
+        row.appendChild(cell);
+      });
       tbody.appendChild(row);
     });
   }
