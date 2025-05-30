@@ -6,6 +6,7 @@ This folder stores two JSON sources for fish data and placeholder images.
   Fields: `name`, `scientific_name`, `type`, `habitat`, `max_cm`, `spawn`, and optional `image` referencing `ch/`.
 - `swiss-fish.json` – national overview with
   `scientific_name`, `name`, `origin`, `status`, and `in_bern`.
+  Optional `image` fields link to icons under `ch/`.
   The status values follow the usual IUCN codes (LC, EN, VU, etc.).
 
 The `ch/` subfolder contains empty `.png` files used as placeholders for future icons.
