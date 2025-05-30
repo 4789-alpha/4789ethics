@@ -31,6 +31,7 @@
       `<a href="${base}interface/norman.html">Norman</a>`+
       `<a href="${base}interface/material.html">Material</a>`+
       `<a href="${base}interface/apple-hig.html">Apple\u00a0HIG</a>`+
+      `<a href="${base}interface/navigator.html">Navigator</a>`+
       `<a href="${base}README.html">README</a>`+
       '</nav>';
     document.body.insertAdjacentHTML('afterbegin', navHtml);

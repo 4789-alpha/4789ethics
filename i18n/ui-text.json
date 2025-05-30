@@ -103,6 +103,7 @@
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
     "connect_error": "Request failed.",
+    "nav_navigator": "Navigator",
     "nav_story": "Story"
   },
   "de": {
@@ -208,6 +209,7 @@
     "connect_approve": "Bestätigen",
     "connect_request_sent": "Anfrage gesendet.",
     "connect_error": "Anfrage fehlgeschlagen.",
+    "nav_navigator": "Navigator",
     "nav_story": "Geschichte"
   },
   "fr": {
