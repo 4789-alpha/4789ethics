@@ -6,6 +6,8 @@ function initLogoBackground() {
   const storedRest = parseFloat(localStorage.getItem('ethicom_bg_restitution'));
   if (!Number.isNaN(storedRest)) RESTITUTION = storedRest;
 
+  const MIN_VELOCITY = 0.05;
+
   function rgbToHue(r, g, b) {
     r /= 255; g /= 255; b /= 255;
     const max = Math.max(r, g, b), min = Math.min(r, g, b);
@@ -248,6 +250,14 @@ function initLogoBackground() {
 
       s.dx *= RESTITUTION;
       s.dy *= RESTITUTION;
+
+      if (Math.hypot(s.dx, s.dy) < MIN_VELOCITY) {
+        const angle = Math.random() * Math.PI * 2;
+        const baseSpeed = 0.5 + Math.random() * 1.5;
+        const speed = baseSpeed * (lowMotion ? 0.4 : 1);
+        s.dx = Math.cos(angle) * speed;
+        s.dy = Math.sin(angle) * speed;
+      }
 
       if (s.rotFrames > 0) {
         s.rotation += s.rotSpeed;
