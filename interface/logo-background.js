@@ -80,7 +80,7 @@ function initLogoBackground() {
   }
   if (levels.length === 0) levels.push(0);
   const maxLvl = Math.max(...levels);
-  const minScale = 0.3;
+  const minScale = 0.5;
   const FADE_MS = 1000;
   const imgBase = window.location.pathname.includes('/interface/')
     ? '../op-logo/'
@@ -200,7 +200,7 @@ function initLogoBackground() {
               const base = 0.2 + Math.random() * 0.3;
               const factor = 1 - s.lvl / (maxLvl + 1);
               s.rotSpeed = base * factor;
-              s.rotFrames = 180;
+              s.rotFrames = 60;
               s.scaleDir = -1;
               s.fadeOut = true;
               s.fadeStart = performance.now();
@@ -208,7 +208,7 @@ function initLogoBackground() {
               const base = 0.2 + Math.random() * 0.3;
               const factor = 1 - o.lvl / (maxLvl + 1);
               o.rotSpeed = base * factor;
-              o.rotFrames = 180;
+              o.rotFrames = 60;
               o.scaleDir = -1;
               o.fadeOut = true;
               o.fadeStart = performance.now();
@@ -229,7 +229,7 @@ function initLogoBackground() {
 
         if (s.scaleDir !== 0) {
           if (s.scaleDir === -1) {
-            s.scale -= 0.2;
+            s.scale -= 0.1;
             if (s.scale <= minScale) {
               s.scale = minScale;
               s.scaleDir = s.fadeOut ? 0 : 1;
