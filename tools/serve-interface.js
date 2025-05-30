@@ -538,6 +538,22 @@ const server = http.createServer((req, res) => {
   if (req.method === 'GET' && urlPath === '/api/sources') {
     return handleSources(req, res);
   }
+  if (req.method === 'GET' && urlPath.startsWith('/api/explorer')) {
+    const u = new URL(req.url, baseUrl);
+    const rel = u.searchParams.get('path') || '';
+    const safe = path.normalize(rel).replace(/^(\.\.\/?)+/, '');
+    const target = path.join(root, safe);
+    return fs.promises.readdir(target, { withFileTypes: true })
+      .then(entries => {
+        const data = entries.map(e => ({ name: e.name, dir: e.isDirectory() }));
+        res.writeHead(200, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify(data));
+      })
+      .catch(() => {
+        res.statusCode = 404;
+        res.end(JSON.stringify({ error: 'Not found' }));
+      });
+  }
   if (req.method === 'GET' && urlPath === '/config.json') {
     return serveFile(path.join(repoRoot, 'config.json'), res);
   }
