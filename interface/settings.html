@@ -94,6 +94,11 @@
           <input type="range" id="bg_symbol_size" min="50" max="200" step="10" value="100" />
             <small class="note">Reload to apply.</small>
         </div>
+        <div id="bg_damping_wrap">
+          <label for="bg_damping">Tanna damping: <span id="bg_damping_val">1</span></label>
+          <input type="range" id="bg_damping" min="0" max="1" step="0.05" value="1" />
+            <small class="note">Reload to apply.</small>
+        </div>
       </div>
     </details>
     <details class="card">
@@ -297,6 +302,19 @@
           sizeSlider.addEventListener('input', e => sizeVal.textContent = e.target.value);
           sizeSlider.addEventListener('change', e => {
             localStorage.setItem('ethicom_bg_symbol_size', e.target.value);
+            alert('Reload the page to apply.');
+          });
+        }
+
+      const dampSlider = document.getElementById('bg_damping');
+      const dampVal = document.getElementById('bg_damping_val');
+        if (dampSlider && dampVal) {
+          const storedDamp = parseFloat(localStorage.getItem('ethicom_bg_restitution') || '1');
+          dampSlider.value = storedDamp;
+          dampVal.textContent = storedDamp;
+          dampSlider.addEventListener('input', e => dampVal.textContent = e.target.value);
+          dampSlider.addEventListener('change', e => {
+            localStorage.setItem('ethicom_bg_restitution', e.target.value);
             alert('Reload the page to apply.');
           });
         }

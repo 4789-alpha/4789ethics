@@ -2,7 +2,9 @@ function initLogoBackground() {
   const container = document.getElementById('op_background');
   if (!container) return;
 
-  const RESTITUTION = 0.9;
+  let RESTITUTION = 1;
+  const storedRest = parseFloat(localStorage.getItem('ethicom_bg_restitution'));
+  if (!Number.isNaN(storedRest)) RESTITUTION = storedRest;
 
   function rgbToHue(r, g, b) {
     r /= 255; g /= 255; b /= 255;
