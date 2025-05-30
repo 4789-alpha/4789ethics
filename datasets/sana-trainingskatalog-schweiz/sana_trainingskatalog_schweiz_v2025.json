@@ -78,6 +78,76 @@
       "correct": "Patente von VD, FR oder NE sind gültig",
       "explanation": "Der Neuenburgersee wird von den Kantonen VD, FR und NE gemeinsam bewirtschaftet. Ein Patent eines dieser Kantone berechtigt zum Angeln im gesamten See.",
       "kantone": ["VD", "FR", "NE"]
+    },
+    {
+      "id": 250,
+      "question": "Welche Fischart hat ein unterständiges Maul und lebt bevorzugt am Gewässergrund?",
+      "choices": [
+        "Egli",
+        "Barbe",
+        "Rotfeder",
+        "Felche",
+        "Hecht"
+      ],
+      "correct": "Barbe",
+      "explanation": "Die Barbe hat ein unterständiges Maul mit Barteln und sucht am Gewässergrund nach Nahrung.",
+      "kantone": ["alle"]
+    },
+    {
+      "id": 251,
+      "question": "Woran erkennt man die Rotfeder im Unterschied zum Rotauge?",
+      "choices": [
+        "Rotfeder hat grössere Schuppen",
+        "Rotauge hat goldene Iris",
+        "Rotfeder hat rötlich gefärbte Brustflossen und eine nach oben gerichtete Maulspalte",
+        "Rotfeder hat Punkte auf dem Rücken",
+        "Rotauge hat keine Rückenflosse"
+      ],
+      "correct": "Rotfeder hat rötlich gefärbte Brustflossen und eine nach oben gerichtete Maulspalte",
+      "explanation": "Die Rotfeder unterscheidet sich durch die Position der Maulspalte und Flossenfärbung deutlich vom Rotauge.",
+      "kantone": ["alle"]
+    },
+    {
+      "id": 252,
+      "question": "Welche der folgenden Merkmale trifft auf die Groppe zu?",
+      "choices": [
+        "Langgestreckter Körper, silbrige Schuppen, grosses Maul",
+        "Zwei Rückenflossen, Fettflosse, standorttreu",
+        "Keine Schwimmblase, grosser Kopf, lebt versteckt unter Steinen",
+        "Fettflosse, Wanderfisch, flacher Schwanz",
+        "Bläulich leuchtender Rücken, lebt in Schwärmen"
+      ],
+      "correct": "Keine Schwimmblase, grosser Kopf, lebt versteckt unter Steinen",
+      "explanation": "Die Groppe (Cottus gobio) ist grundständig, besitzt keine Schwimmblase und bevorzugt strukturreiche Kaltwasserregionen.",
+      "kantone": ["alle"]
+    },
+    {
+      "id": 253,
+      "question": "Wie unterscheidet sich der Bachsaibling von der Bachforelle?",
+      "choices": [
+        "Bachsaibling hat gelbe Punkte und Milchflecken auf dunklem Grund",
+        "Bachsaibling ist ein Raubfisch, Forelle nicht",
+        "Forelle hat Barteln, der Saibling nicht",
+        "Bachforelle hat keine Rückenflosse",
+        "Saiblinge leben nur im Meer"
+      ],
+      "correct": "Bachsaibling hat gelbe Punkte und Milchflecken auf dunklem Grund",
+      "explanation": "Der Bachsaibling besitzt helle Flecken auf dunklem Grund (umgekehrte Pigmentierung zur Forelle).",
+      "kantone": ["alle"]
+    },
+    {
+      "id": 254,
+      "question": "Welcher dieser Fische hat keine Fettflosse?",
+      "choices": [
+        "Äsche",
+        "Seeforelle",
+        "Egli",
+        "Bachsaibling",
+        "Trüsche"
+      ],
+      "correct": "Egli",
+      "explanation": "Der Egli (Flussbarsch) gehört zu den Barschartigen und besitzt keine Fettflosse im Gegensatz zu Salmoniden.",
+      "kantone": ["alle"]
     }
   ],
   "extensions": {
