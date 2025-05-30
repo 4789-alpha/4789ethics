@@ -141,6 +141,7 @@ function initLogoBackground() {
       scaleDir: 0,
       fadeOut: false,
       fadeStart: 0,
+      collisionCount: 0,
     });
   }
 
@@ -196,6 +197,32 @@ function initLogoBackground() {
           const minDist = s.radius * s.scale + o.radius * o.scale;
           if (dist < minDist) {
             resolveCollision(s, o);
+            if (s.lvl === maxLvl) {
+              s.collisionCount++;
+              if (s.collisionCount % 100 === 0) {
+                const base = 0.2 + Math.random() * 0.3;
+                const factor = 1 - s.lvl / (maxLvl + 1);
+                s.rotSpeed = base * factor;
+                s.rotFrames = 180;
+                s.scaleDir = -1;
+                s.fadeOut = true;
+                s.fadeStart = performance.now();
+                s.collisionCount = 0;
+              }
+            }
+            if (o.lvl === maxLvl) {
+              o.collisionCount++;
+              if (o.collisionCount % 100 === 0) {
+                const base = 0.2 + Math.random() * 0.3;
+                const factor = 1 - o.lvl / (maxLvl + 1);
+                o.rotSpeed = base * factor;
+                o.rotFrames = 180;
+                o.scaleDir = -1;
+                o.fadeOut = true;
+                o.fadeStart = performance.now();
+                o.collisionCount = 0;
+              }
+            }
             if (s.lvl < o.lvl) {
               const base = 0.2 + Math.random() * 0.3;
               const factor = 1 - s.lvl / (maxLvl + 1);
