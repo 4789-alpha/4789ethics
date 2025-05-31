@@ -160,3 +160,34 @@ function openColorSettingsWizard(){
 }
 
 window.openColorSettingsWizard = openColorSettingsWizard;
+
+function openColorSettingsWizardCLI(){
+  const themes=['tanna-dark','tanna','transparent','ocean','desert','custom'];
+  let theme=prompt('Color Scheme ('+themes.join(', ')+'):',localStorage.getItem('ethicom_theme')||'tanna-dark');
+  if(theme&&themes.includes(theme)){
+    localStorage.setItem('ethicom_theme',theme);
+    if(typeof applyTheme==='function') applyTheme(theme);
+  }
+
+  function parse(v){return cwParseCol(v);} // reuse parser
+  function ask(key,cssVar,label,apply){
+    let def=parse(getComputedStyle(document.documentElement).getPropertyValue(cssVar));
+    try{const s=JSON.parse(localStorage.getItem(key)||'null');if(s) def=s;}catch{}
+    const ans=prompt(label+' color as r,g,b',`${def.r},${def.g},${def.b}`);
+    if(!ans) return;
+    const m=ans.match(/^(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*(\d{1,3})$/);
+    if(!m){alert('Invalid format. Use r,g,b');return;}
+    const c={r:Math.min(255,+m[1]),g:Math.min(255,+m[2]),b:Math.min(255,+m[3])};
+    localStorage.setItem(key,JSON.stringify(c));
+    document.documentElement.style.setProperty(cssVar,`rgb(${c.r},${c.g},${c.b})`);
+    if(apply) apply(c);
+  }
+
+  ask('ethicom_text_color','--text-color','Text');
+  ask('ethicom_bg_color','--bg-color','Background');
+  ask('ethicom_tanna_color','--primary-color','Tanna Symbol',cwApplyTanna);
+  ask('ethicom_module_color','--module-color','Module');
+  alert('Colors updated');
+}
+
+window.openColorSettingsWizardCLI = openColorSettingsWizardCLI;
