@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bewertung</title>
+  <title>Personenbewertung</title>
   <link rel="stylesheet" href="interface/ethicom-style.css" />
   <script src="utils/op-level.js"></script>
   <script src="interface/ethicom-utils.js"></script>
@@ -16,14 +16,15 @@
   <script src="interface/op0-navigation.js"></script>
   <script src="interface/side-drop.js"></script>
   <script src="interface/op-side-nav.js"></script>
+  <script src="interface/bewertung.js"></script>
   <script src="interface/module-logo.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main_content">Skip to main content</a>
   <div id="op_background"></div>
   <header>
-    <h1>Bewertung</h1>
-    <p class="tagline">Modul-Auswahl</p>
+    <h1>Personenbewertung</h1>
+    <p class="tagline">OP-0 Personenbewertung</p>
     <nav>
       <a href="home.html">Home</a>
       <a href="bewertung.html" aria-current="page">Bewertung</a>
@@ -35,24 +36,13 @@
     </nav>
   </header>
   <main id="main_content">
-    <section class="card">
-      <h2>Personenbewertung</h2>
-      <p>Bewertung einzelner Personen per Swipe-Interface.</p>
-      <p><a href="personenbewertung.html">Zum Interface</a></p>
-    </section>
-    <section class="card">
-      <h2>Organisationsbewertung</h2>
-      <p>Bewertung von Organisationen anhand veröffentlichter Quellen.</p>
-      <p><a href="org-bewertung.html">Zum Interface</a></p>
-    </section>
-    <section class="card">
-      <h2>Fish-Interface</h2>
-      <p>Regionale Fischdaten und Bearbeitung.</p>
-      <p><a href="interface/fish.html">Zum Interface</a></p>
-    </section>
+    <p class="hint">Nach oben wischen: <strong>ethisch</strong>. Nach unten: <strong>unethisch</strong>. Links für <strong>unsicher</strong>. Rechts ruft weiterführende Infos auf.</p>
+    <section id="rating_container" class="card swipe-card"></section>
+    <pre id="output" style="white-space:pre-wrap;"></pre>
   </main>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      initBewertung();
       initSideDrop('interface/op-navigation.html');
       const menu = document.getElementById('side_menu');
       if(menu) menu.addEventListener('click', e => { e.preventDefault(); toggleSideDrop(); });
