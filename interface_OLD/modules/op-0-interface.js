@@ -1,5 +1,15 @@
 // op-0-interface.js – OP-0: Anonyme Bewertung (keine Signatur, minimale Verantwortung)
 
+function vibrateHeartbeat() {
+  if (
+    window.touchSettings &&
+    window.touchSettings.state.haptics &&
+    navigator.vibrate
+  ) {
+    navigator.vibrate([60, 40, 60]);
+  }
+}
+
 async function initOP0Interface() {
   const container = document.getElementById("op_interface");
   if (!container) return;
@@ -67,4 +77,5 @@ function submitOP0Vote(id) {
     };
     recordEvidence(JSON.stringify(evalData), 'user');
   }
+  vibrateHeartbeat();
 }
