@@ -118,7 +118,7 @@ README.md -> GET_STARTED.md -> index.html
 | [wings/index.html](wings/index.html) | Mobile interface "Wings" |
 | [wings/ratings.html](wings/ratings.html) | Library of all ratings with search |
 | `interface_OLD/` | Historical demo of the first interface generation |
-**Settings are stored per device using browser localStorage and are not synced globally.**
+**Settings are stored per device using browser localStorage and are not synced globally. Color adjustments made in the settings page apply automatically on every page.**
 **Ratings from OP-1 onward are stored globally with the assigned signature ID. The email used during signup is hashed and never exposed.**
 **Optional GitHub login authenticates via GitHub's OAuth flow. The returned username is hashed and stored offline.**
 **Optional Google login authenticates via Google's OAuth flow. The returned email address is hashed and stored offline.**

@@ -17,6 +17,15 @@
 
   function applyStoredColors() {
     try {
+      const custom = JSON.parse(localStorage.getItem('ethicom_colors') || '{}');
+      if (custom && typeof custom === 'object') {
+        Object.entries(custom).forEach(([name, val]) => {
+          document.documentElement.style.setProperty(name, String(val));
+        });
+      }
+    } catch {}
+
+    try {
       const bg = JSON.parse(localStorage.getItem('ethicom_bg_color') || 'null');
       if (bg) {
         document.documentElement.style.setProperty(
