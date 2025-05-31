@@ -74,6 +74,13 @@
     } catch {}
     applyStoredColors();
   });
+  document.addEventListener('themeChanged', () => {
+    try {
+      const tc = JSON.parse(localStorage.getItem('ethicom_text_color') || 'null');
+      if (tc) applyTextColor(tc);
+    } catch {}
+    applyStoredColors();
+  });
 })();
 
 function getReadmePath(lang) {
