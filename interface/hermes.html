@@ -57,7 +57,6 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       getLanguage();
-      applyTheme('tanna-dark');
       renderBadge(getStoredOpLevel() || 'OP-0', getStoredOpLevel() || 'OP-0');
       if (typeof initHermes === 'function') initHermes();
       initSideDrop('op-navigation.html');
