@@ -130,7 +130,10 @@ function openColorSettingsWizard(){
       const css = `rgb(${v.r},${v.g},${v.b})`;
       if (k==='ethicom_tanna_color') cwApplyTanna(v);
       else if (k==='ethicom_text_color') document.documentElement.style.setProperty('--text-color',css);
-      else if (k==='ethicom_bg_color') document.documentElement.style.setProperty('--bg-color',css);
+        else if (k==='ethicom_bg_color') {
+          document.documentElement.style.setProperty('--bg-color',css);
+          if (document.body) document.body.style.setProperty('--bg-color',css);
+        }
       else if (k==='ethicom_module_color') document.documentElement.style.setProperty('--module-color',css);
     });
     overlay.remove();

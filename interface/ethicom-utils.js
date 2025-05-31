@@ -28,10 +28,9 @@
     try {
       const bg = JSON.parse(localStorage.getItem('ethicom_bg_color') || 'null');
       if (bg) {
-        document.documentElement.style.setProperty(
-          '--bg-color',
-          `rgb(${bg.r},${bg.g},${bg.b})`
-        );
+        const val = `rgb(${bg.r},${bg.g},${bg.b})`;
+        document.documentElement.style.setProperty('--bg-color', val);
+        if (document.body) document.body.style.setProperty('--bg-color', val);
       }
     } catch {}
 
