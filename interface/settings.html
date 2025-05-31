@@ -151,12 +151,12 @@
         const wrap=document.getElementById('color_scheme');
         if(!wrap) return;
         const vars={
-          '--highlight-text-color':'Highlight','--text-color':'Text','--header-text-color':'Header Text',
+          '--highlight-text-color':'Text','--text-color':'Text','--header-text-color':'Header Text',
           '--nav-text-color':'Nav Text','--bg-color':'Background','--card-bg':'Card',
           '--header-bg':'Header BG','--nav-bg':'Nav BG','--card-alpha-bg':'Card Alpha',
           '--primary-color':'Primary','--accent-color':'Accent'
         };
-        const textVars=new Set(['--text-color','--header-text-color','--nav-text-color','--highlight-text-color']);
+        const textVars=new Set(['--text-color','--header-text-color','--nav-text-color']);
         const stored=JSON.parse(localStorage.getItem('ethicom_colors')||'{}');
         wrap.innerHTML='';
         for(const [name,label] of Object.entries(vars)){
