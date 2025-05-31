@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="ethicom-style.css" />
   <script src="../utils/op-level.js"></script>
   <script src="ethicom-utils.js"></script>
+  <script src="color-utils.js"></script>
   <script src="language-selector.js"></script>
   <script src="theme-manager.js"></script>
   <script src="color-wizard.js"></script>
@@ -146,16 +147,6 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       initLanguageDropdown('lang_select');
-      function parseCol(v){
-        v=(v||'').trim();
-        if(v.startsWith('#')){
-          if(v.length===4) v='#'+v[1]+v[1]+v[2]+v[2]+v[3]+v[3];
-          const n=parseInt(v.slice(1),16);
-          return {r:(n>>16)&255,g:(n>>8)&255,b:n&255};
-        }
-        const m=v.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)/);
-        return m?{r:+m[1],g:+m[2],b:+m[3]}:{r:0,g:0,b:0};
-      }
       function initColorSliders(){
         const wrap=document.getElementById('color_scheme');
         if(!wrap) return;
@@ -169,7 +160,7 @@
         const stored=JSON.parse(localStorage.getItem('ethicom_colors')||'{}');
         wrap.innerHTML='';
         for(const [name,label] of Object.entries(vars)){
-          const base=parseCol(stored[name]||getComputedStyle(document.documentElement).getPropertyValue(name));
+          const base=parseColor(stored[name]||getComputedStyle(document.documentElement).getPropertyValue(name));
           const b=document.createElement('div');
           const sample=textVars.has(name)?'Text':'';
           b.innerHTML=`<strong>${label}</strong><br>
@@ -233,17 +224,7 @@
         trv.textContent=c.r;
         tgv.textContent=c.g;
         tbv.textContent=c.b;
-        localStorage.setItem('ethicom_tanna_color',JSON.stringify(c));
-        if(document.body.classList.contains('theme-tanna') ||
-           document.body.classList.contains('theme-tanna-dark')){
-          const css=`rgb(${c.r},${c.g},${c.b})`;
-          document.documentElement.style.setProperty('--primary-color',css);
-          document.documentElement.style.setProperty('--accent-color',css);
-          const h=`rgba(${Math.round(c.r*0.2)},${Math.round(c.g*0.2)},${Math.round(c.b*0.2)},0.9)`;
-          const n=`rgba(${Math.round(c.r*0.3)},${Math.round(c.g*0.3)},${Math.round(c.b*0.3)},0.9)`;
-          document.documentElement.style.setProperty('--header-bg',h);
-          document.documentElement.style.setProperty('--nav-bg',n);
-        }
+        applyTannaColor(c);
         if(tp) tp.style.backgroundColor=`rgb(${c.r},${c.g},${c.b})`;
         warn.style.display=contrast(c)<2?'inline':'none';
       }
