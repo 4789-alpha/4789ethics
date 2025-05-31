@@ -90,6 +90,25 @@
     } catch {}
     applyStoredColors();
   });
+  window.addEventListener('storage', e => {
+    if (!e.key) return;
+    const colorKeys = [
+      'ethicom_colors',
+      'ethicom_bg_color',
+      'ethicom_module_color',
+      'ethicom_tanna_color',
+      'ethicom_text_color'
+    ];
+    if (colorKeys.includes(e.key)) {
+      try {
+        const tc = JSON.parse(localStorage.getItem('ethicom_text_color') || 'null');
+        if (tc) applyTextColor(tc);
+      } catch {}
+      applyStoredColors();
+    } else if (e.key === 'ethicom_theme' && typeof applyTheme === 'function') {
+      applyTheme(e.newValue || 'tanna-dark');
+    }
+  });
 })();
 
 function getReadmePath(lang) {
