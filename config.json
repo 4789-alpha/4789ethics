@@ -1,6 +1,7 @@
 {
   "port": 8080,
   "baseUrl": "http://localhost:8080",
+  "debug": true,
   "paths": {
     "users": "app/users.json",
     "evaluations": "app/evaluations.json",
