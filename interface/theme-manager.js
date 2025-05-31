@@ -164,8 +164,11 @@ function initSliderSet(rId,gId,bId,rvId,gvId,bvId,previewId,storeKey,setCSS){
     if(previewId) prev.style.backgroundColor=`rgb(${c.r},${c.g},${c.b})`;
     localStorage.setItem(storeKey,JSON.stringify(c));
     const css=`rgb(${c.r},${c.g},${c.b})`;
-    if(typeof setCSS ==='string') document.documentElement.style.setProperty(setCSS,css);
-    else if(setCSS.apply) setCSS.apply(c,css);
+    if(typeof setCSS ==='string') {
+      document.documentElement.style.setProperty(setCSS,css);
+      if (setCSS === '--bg-color' && document.body)
+        document.body.style.setProperty('--bg-color', css);
+    } else if(setCSS.apply) setCSS.apply(c,css);
   }
   [r,g,b].forEach(el=>el.addEventListener('input',upd));
   upd();
@@ -184,8 +187,11 @@ function updateSliderSet(rId,gId,bId,rvId,gvId,bvId,previewId,storeKey,setCSS){
   if(previewId) prev.style.backgroundColor=`rgb(${c.r},${c.g},${c.b})`;
   localStorage.setItem(storeKey,JSON.stringify(c));
   const css=`rgb(${c.r},${c.g},${c.b})`;
-  if(typeof setCSS==='string') document.documentElement.style.setProperty(setCSS,css);
-  else if(setCSS.apply) setCSS.apply(c,css);
+  if(typeof setCSS==='string') {
+    document.documentElement.style.setProperty(setCSS,css);
+    if (setCSS === '--bg-color' && document.body)
+      document.body.style.setProperty('--bg-color', css);
+  } else if(setCSS.apply) setCSS.apply(c,css);
 }
 
 function resetSlidersFromTheme(){
