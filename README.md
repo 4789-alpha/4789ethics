@@ -104,7 +104,9 @@ README.md -> GET_STARTED.md -> index.html
 | [interface/chat.html](interface/chat.html) | Chat interface |
 | [interface/ethicom.html](interface/ethicom.html) | Main evaluation module |
 | [interface/page-flow-demo.html](interface/page-flow-demo.html) | Demo of horizontal flow |
-| [bewertung.html](bewertung.html) | Swipe-based person rating |
+| [bewertung.html](bewertung.html) | Entry page for rating modules |
+| [personenbewertung.html](personenbewertung.html) | Swipe-based person rating |
+| [org-bewertung.html](org-bewertung.html) | Preview for organisation ratings |
 | [interface/settings.html](interface/settings.html) | Language, theme, Tanna logo, and low motion settings |
 | [interface/signup.html](interface/signup.html) | Registration form |
 | [interface/tanna-template.html](interface/tanna-template.html) | Base template |
