@@ -203,7 +203,7 @@ function initLogoBackground() {
             resolveCollision(s, o);
             if (s.lvl === maxLvl) {
               s.collisionCount++;
-              if (s.collisionCount % 100 === 0) {
+              if (s.collisionCount % 10000 === 0) {
                 const base = 0.2 + Math.random() * 0.3;
                 const factor = 1 - s.lvl / (maxLvl + 1);
                 s.rotSpeed = base * factor;
@@ -216,7 +216,7 @@ function initLogoBackground() {
             }
             if (o.lvl === maxLvl) {
               o.collisionCount++;
-              if (o.collisionCount % 100 === 0) {
+              if (o.collisionCount % 10000 === 0) {
                 const base = 0.2 + Math.random() * 0.3;
                 const factor = 1 - o.lvl / (maxLvl + 1);
                 o.rotSpeed = base * factor;
