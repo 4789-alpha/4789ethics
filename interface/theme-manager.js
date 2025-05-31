@@ -75,16 +75,6 @@ function initThemeSelection() {
   }
 }
 
-function parseCol(v){
-  v=(v||'').trim();
-  if(v.startsWith('#')){
-    if(v.length===4) v='#'+v[1]+v[1]+v[2]+v[2]+v[3]+v[3];
-    const n=parseInt(v.slice(1),16);
-    return {r:(n>>16)&255,g:(n>>8)&255,b:n&255};
-  }
-  const m=v.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)/);
-  return m?{r:+m[1],g:+m[2],b:+m[3]}:{r:0,g:0,b:0};
-}
 
 function createCustomTheme() {
   const overlay = document.createElement('div');
@@ -111,7 +101,7 @@ function createCustomTheme() {
   const groups = [];
   const stored = JSON.parse(localStorage.getItem('ethicom_custom_theme') || '{}');
   for(const [name,label] of Object.entries(vars)){
-    const base = parseCol(stored[name] || getComputedStyle(document.documentElement).getPropertyValue(name));
+    const base = parseColor(stored[name] || getComputedStyle(document.documentElement).getPropertyValue(name));
     const wrap = document.createElement('div');
     wrap.innerHTML = `<strong>${label}</strong><br>
       <label>R: <input type="range" min="0" max="255" value="${base.r}"> <span>${base.r}</span></label><br>
@@ -163,7 +153,7 @@ function initSliderSet(rId,gId,bId,rvId,gvId,bvId,previewId,storeKey,setCSS){
   const rv=document.getElementById(rvId),gv=document.getElementById(gvId),bv=document.getElementById(bvId);
   const prev=document.getElementById(previewId);
   if(!r||!g||!b) return;
-  const def=parseCol(getComputedStyle(document.documentElement).getPropertyValue(setCSS.var||setCSS));
+  const def=parseColor(getComputedStyle(document.documentElement).getPropertyValue(setCSS.var||setCSS));
   let cur;
   try{cur=JSON.parse(localStorage.getItem(storeKey)||'null');}catch{}
   if(!cur) cur=def;
@@ -186,7 +176,7 @@ function updateSliderSet(rId,gId,bId,rvId,gvId,bvId,previewId,storeKey,setCSS){
   const rv=document.getElementById(rvId),gv=document.getElementById(gvId),bv=document.getElementById(bvId);
   const prev=document.getElementById(previewId);
   if(!r||!g||!b) return;
-  const c=parseCol(getComputedStyle(document.documentElement).getPropertyValue(setCSS.var||setCSS));
+  const c=parseColor(getComputedStyle(document.documentElement).getPropertyValue(setCSS.var||setCSS));
   r.value=c.r;g.value=c.g;b.value=c.b;
   if(rv) rv.textContent=c.r;
   if(gv) gv.textContent=c.g;
@@ -307,16 +297,7 @@ function openColorSettingsPopin(){
   initSliderSet('bg_r','bg_g','bg_b','bg_r_val','bg_g_val','bg_b_val','bg_preview','ethicom_bg_color','--bg-color');
 
   function applyTanna(c){
-    localStorage.setItem('ethicom_tanna_color',JSON.stringify(c));
-    if(document.body.classList.contains('theme-tanna')||document.body.classList.contains('theme-tanna-dark')){
-      const css=`rgb(${c.r},${c.g},${c.b})`;
-      document.documentElement.style.setProperty('--primary-color',css);
-      document.documentElement.style.setProperty('--accent-color',css);
-      const h=`rgba(${Math.round(c.r*0.2)},${Math.round(c.g*0.2)},${Math.round(c.b*0.2)},0.9)`;
-      const n=`rgba(${Math.round(c.r*0.3)},${Math.round(c.g*0.3)},${Math.round(c.b*0.3)},0.9)`;
-      document.documentElement.style.setProperty('--header-bg',h);
-      document.documentElement.style.setProperty('--nav-bg',n);
-    }
+    applyTannaColor(c);
   }
 
   function applyTannaCSS(c,css){
