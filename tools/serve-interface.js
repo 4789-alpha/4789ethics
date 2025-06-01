@@ -193,7 +193,8 @@ function handleGithubStart(req, res) {
   }
   const state = crypto.randomBytes(8).toString('hex');
   oauthStates.add(state);
-  const url = `https://github.com/login/oauth/authorize?client_id=${oauthCfg.github.client_id}&state=${state}`;
+  const redirect = encodeURIComponent(`${baseUrl}/auth/github/callback`);
+  const url = `https://github.com/login/oauth/authorize?client_id=${oauthCfg.github.client_id}&state=${state}&redirect_uri=${redirect}`;
   res.writeHead(302, { Location: url });
   res.end();
 }
