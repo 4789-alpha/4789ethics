@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "id": "EXAMPLE",
+    "emailHash": "",
+    "pwHash": "",
+    "salt": "",
+    "op_level": "OP-1",
+    "totpSecret": "",
+    "addrHash": null,
+    "phoneHash": null,
+    "auth_verified": false,
+    "level_change_ts": null
+  }
+]

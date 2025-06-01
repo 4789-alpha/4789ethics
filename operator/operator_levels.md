@@ -18,6 +18,10 @@
 | OP-11 | digital Yokozuna-Schwingerkönig-Mode |
 | OP-12 | fully digital, first non-human stage |
 
+Upgrades to **OP-4** require verified authentication. If `auth_verified` remains
+false for more than 96 hours after `level_change_ts`, the user reverts to OP-3.
+Such demotions are recorded in `app/demotion_log.json`.
+
 Additional OP-9 sublevels may be created, starting with **OP-9.B**. Expert
 categories such as `.T` for translator or `.S[y]` for scientific fields are
 listed in [expert_classes.md](expert_classes.md).
