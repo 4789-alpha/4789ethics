@@ -348,3 +348,24 @@ function saveCurrentAsCustom(){
 }
 
 window.addEventListener('beforeunload',saveCurrentAsCustom);
+
+function exportColorSettings(){
+  const keys=['ethicom_theme','ethicom_custom_theme','ethicom_text_color','ethicom_bg_color','ethicom_tanna_color','ethicom_module_color'];
+  const out={};
+  keys.forEach(k=>{const v=localStorage.getItem(k); if(v) out[k]=v;});
+  return JSON.stringify(out);
+}
+
+function importColorSettings(str){
+  if(!str) return;
+  try{
+    const obj=JSON.parse(str);
+    Object.entries(obj).forEach(([k,v])=>localStorage.setItem(k,v));
+    if(obj.ethicom_theme) applyTheme(obj.ethicom_theme);
+    resetSlidersFromTheme();
+    if(typeof applyStoredColors==='function') applyStoredColors();
+  }catch{}
+}
+
+window.exportColorSettings=exportColorSettings;
+window.importColorSettings=importColorSettings;
