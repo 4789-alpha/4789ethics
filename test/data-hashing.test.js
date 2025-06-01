@@ -66,6 +66,44 @@ test('registration hashes email and password as noted in DISCLAIMERS lines 9-10'
   }
 });
 
+test('signup with nickname stores alias with level', () => {
+  const usersPath = path.join(__dirname, '..', 'app', 'users.json');
+  const backup = fs.existsSync(usersPath) ? fs.readFileSync(usersPath, 'utf8') : null;
+  try {
+    fs.writeFileSync(usersPath, '[]');
+    const { handleSignup } = require('../tools/serve-interface.js');
+    const body = JSON.stringify({ email: 'n@example.com', password: 'safePass123', nickname: 'nick' });
+    const req = new events.EventEmitter();
+    const res = { status: 0, writeHead(code) { this.status = code; }, end() {} };
+    handleSignup(req, res);
+    req.emit('data', body);
+    req.emit('end');
+    assert.strictEqual(res.status, 200);
+    const stored = JSON.parse(fs.readFileSync(usersPath, 'utf8'))[0];
+    assert.strictEqual(stored.alias, 'nick@OP-1');
+  } finally {
+    restore(usersPath, backup);
+    delete require.cache[require.resolve('../tools/serve-interface.js')];
+  }
+});
+
+test('setOpLevel updates alias for user', () => {
+  const usersPath = path.join(__dirname, '..', 'app', 'users.json');
+  const backup = fs.existsSync(usersPath) ? fs.readFileSync(usersPath, 'utf8') : null;
+  try {
+    const user = { id: 'SIG-ABC123', op_level: 'OP-1', alias: 'nick@OP-1' };
+    fs.writeFileSync(usersPath, JSON.stringify([user], null, 2));
+    const { setOpLevel } = require('../tools/serve-interface.js');
+    const ok = setOpLevel('SIG-ABC123', 'OP-2');
+    assert.strictEqual(ok, true);
+    const stored = JSON.parse(fs.readFileSync(usersPath, 'utf8'))[0];
+    assert.strictEqual(stored.alias, 'nick@OP-2');
+  } finally {
+    restore(usersPath, backup);
+    delete require.cache[require.resolve('../tools/serve-interface.js')];
+  }
+});
+
 
 test('OAuth login stores hashed identifiers and tokens as noted in DISCLAIMERS lines 12-13', async () => {
   const usersPath = path.join(__dirname, '..', 'app', 'users.json');
