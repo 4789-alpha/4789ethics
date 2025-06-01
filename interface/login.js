@@ -69,7 +69,7 @@ function handleLogin() {
       return r.json();
     })
     .then(data => {
-      const sig = { email, id: data.id, op_level: data.op_level };
+      const sig = { email, id: data.id, op_level: data.op_level, alias: data.alias };
       localStorage.setItem('ethicom_signature', JSON.stringify(sig));
       statusEl.textContent = uiText.login_saved || 'Login successful. ID stored.';
       setTimeout(() => { window.location.href = 'ethicom.html'; }, 500);

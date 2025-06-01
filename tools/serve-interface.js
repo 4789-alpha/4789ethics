@@ -148,6 +148,24 @@ function checkPendingDemotions(userPath, logPath) {
     }
   }
   if (changed) writeJson(userPath || usersFile, users);
+function updateAlias(user) {
+  if (user && user.nickname) {
+    user.alias = `${user.nickname}@${user.op_level}`;
+  }
+  if (!user.alias) return;
+  const name = user.alias.split('@')[0];
+  user.alias = `${name}@${user.op_level}`;
+}
+
+function setOpLevel(id, level, authCode) {
+  const users = readJson(usersFile);
+  const user = users.find(u => u.id === id);
+  if (!user) return false;
+  if (user.totpSecret && !verifyTotp(user.totpSecret, authCode)) return false;
+  user.op_level = level;
+  updateAlias(user);
+  writeJson(usersFile, users);
+  return true;
 }
 
 function handleSignup(req, res) {
@@ -155,7 +173,7 @@ function handleSignup(req, res) {
   req.on('data', c => { body += c; });
   req.on('end', () => {
     try {
-      const { email, password, address, phone } = JSON.parse(body);
+      const { email, password, address, phone, nickname } = JSON.parse(body);
       if (!/^[^@]+@[^@]+\.[^@]+$/.test(email) || !password || password.length < 8) {
         res.writeHead(400); res.end('Invalid data'); return;
       }
@@ -168,6 +186,7 @@ function handleSignup(req, res) {
       const secret = generateTotpSecret();
       const users = readJson(usersFile);
       users.push({
+      const user = {
         id,
         emailHash,
         pwHash,
@@ -179,9 +198,19 @@ function handleSignup(req, res) {
         auth_verified: false,
         level_change_ts: new Date().toISOString()
       });
+        nickname: nickname || null,
+        totpSecret: secret,
+        addrHash,
+        phoneHash
+      };
+      updateAlias(user);
+      const alias = nickname ? `${nickname}@OP-1` : undefined;
+      const user = { id, emailHash, pwHash, salt, op_level: 'OP-1', totpSecret: secret, addrHash, phoneHash };
+      if (alias) user.alias = alias;
+      users.push(user);
       writeJson(usersFile, users);
       res.writeHead(200, { 'Content-Type': 'application/json' });
-      res.end(JSON.stringify({ id, secret }));
+      res.end(JSON.stringify({ id, secret, alias: user.alias }));
     } catch {
       res.writeHead(400); res.end('Bad Request');
     }
@@ -224,8 +253,10 @@ function handleLogin(req, res) {
           writeJson(usersFile, users);
         }
       }
+      updateAlias(user);
+      writeJson(usersFile, users);
       res.writeHead(200, { 'Content-Type': 'application/json' });
-      res.end(JSON.stringify({ id: user.id, op_level: user.op_level }));
+      res.end(JSON.stringify({ id: user.id, op_level: user.op_level, alias: user.alias }));
     } catch {
       res.writeHead(400); res.end('Bad Request');
     }
@@ -672,6 +703,7 @@ if (require.main === module) {
 } else {
   module.exports = {
     handleSignup,
+    updateAlias,
     handleEvaluation,
     handleLogin,
     handleSources,
@@ -685,5 +717,7 @@ if (require.main === module) {
     handleTempToken,
     handleLevelUpgrade,
     checkPendingDemotions
+    updateAlias,
+    setOpLevel
   };
 }
