@@ -30,6 +30,13 @@ function applySignupTexts() {
   if (addrLabel) addrLabel.textContent = t.signup_address || addrLabel.textContent;
   const addrInput = document.getElementById('addr_input');
   if (addrInput && t.signup_placeholder_address) addrInput.placeholder = t.signup_placeholder_address;
+  const countryLabel = document.querySelector('label[for="country_input"]');
+  if (countryLabel) countryLabel.textContent = t.signup_country || 'Country/Region:';
+  const countryInput = document.getElementById('country_input');
+  if (countryInput) {
+    if (t.signup_placeholder_country) countryInput.placeholder = t.signup_placeholder_country;
+    else countryInput.placeholder = 'CH';
+  }
   const phoneLabel = document.querySelector('label[for="phone_input"]');
   if (phoneLabel) phoneLabel.textContent = t.signup_phone || phoneLabel.textContent;
   const phoneInput = document.getElementById('phone_input');
@@ -51,12 +58,14 @@ function handleSignup() {
   const pwInput = document.getElementById('pw_input');
   const addrInput = document.getElementById('addr_input');
   const phoneInput = document.getElementById('phone_input');
+  const countryInput = document.getElementById('country_input');
   const nickInput = document.getElementById('nick_input');
   const statusEl = document.getElementById('signup_status');
   const email = emailInput.value.trim();
   const password = pwInput.value;
   const address = addrInput ? addrInput.value.trim() : '';
   const phone = phoneInput ? phoneInput.value.trim() : '';
+  const country = countryInput ? countryInput.value.trim() : '';
   const nickname = nickInput ? nickInput.value.trim() : '';
   statusEl.textContent = '';
 
@@ -85,7 +94,7 @@ function handleSignup() {
   fetch('/api/signup', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ email, password, address, phone, nickname })
+    body: JSON.stringify({ email, password, address, phone, country, nickname })
   })
     .then(r => r.json())
     .then(data => {

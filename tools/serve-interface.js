@@ -173,7 +173,7 @@ function handleSignup(req, res) {
   req.on('data', c => { body += c; });
   req.on('end', () => {
     try {
-      const { email, password, address, phone, nickname } = JSON.parse(body);
+      const { email, password, address, phone, country, nickname } = JSON.parse(body);
       if (!/^[^@]+@[^@]+\.[^@]+$/.test(email) || !password || password.length < 8) {
         res.writeHead(400); res.end('Invalid data'); return;
       }
@@ -183,30 +183,24 @@ function handleSignup(req, res) {
       const pwHash = crypto.createHash('sha256').update(password + salt).digest('hex');
       const addrHash = address ? crypto.createHash('sha256').update(address).digest('hex') : null;
       const phoneHash = phone ? crypto.createHash('sha256').update(phone).digest('hex') : null;
+      const countryHash = country ? crypto.createHash('sha256').update(country).digest('hex') : null;
       const secret = generateTotpSecret();
       const users = readJson(usersFile);
-      users.push({
       const user = {
         id,
         emailHash,
         pwHash,
         salt,
         op_level: 'OP-1',
-        totpSecret: secret,
-        addrHash,
-        phoneHash,
-        auth_verified: false,
-        level_change_ts: new Date().toISOString()
-      });
         nickname: nickname || null,
         totpSecret: secret,
         addrHash,
-        phoneHash
+        phoneHash,
+        countryHash,
+        auth_verified: false,
+        level_change_ts: new Date().toISOString()
       };
       updateAlias(user);
-      const alias = nickname ? `${nickname}@OP-1` : undefined;
-      const user = { id, emailHash, pwHash, salt, op_level: 'OP-1', totpSecret: secret, addrHash, phoneHash };
-      if (alias) user.alias = alias;
       users.push(user);
       writeJson(usersFile, users);
       res.writeHead(200, { 'Content-Type': 'application/json' });
@@ -716,8 +710,7 @@ if (require.main === module) {
     handleConnectList,
     handleTempToken,
     handleLevelUpgrade,
-    checkPendingDemotions
-    updateAlias,
+    checkPendingDemotions,
     setOpLevel
   };
 }
