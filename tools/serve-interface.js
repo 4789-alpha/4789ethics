@@ -126,6 +126,9 @@ function writeJson(file, data) {
 }
 
 function updateAlias(user) {
+  if (user && user.nickname) {
+    user.alias = `${user.nickname}@${user.op_level}`;
+  }
   if (!user.alias) return;
   const name = user.alias.split('@')[0];
   user.alias = `${name}@${user.op_level}`;
@@ -159,13 +162,25 @@ function handleSignup(req, res) {
       const phoneHash = phone ? crypto.createHash('sha256').update(phone).digest('hex') : null;
       const secret = generateTotpSecret();
       const users = readJson(usersFile);
+      const user = {
+        id,
+        emailHash,
+        pwHash,
+        salt,
+        op_level: 'OP-1',
+        nickname: nickname || null,
+        totpSecret: secret,
+        addrHash,
+        phoneHash
+      };
+      updateAlias(user);
       const alias = nickname ? `${nickname}@OP-1` : undefined;
       const user = { id, emailHash, pwHash, salt, op_level: 'OP-1', totpSecret: secret, addrHash, phoneHash };
       if (alias) user.alias = alias;
       users.push(user);
       writeJson(usersFile, users);
       res.writeHead(200, { 'Content-Type': 'application/json' });
-      res.end(JSON.stringify({ id, secret }));
+      res.end(JSON.stringify({ id, secret, alias: user.alias }));
     } catch {
       res.writeHead(400); res.end('Bad Request');
     }
@@ -199,8 +214,10 @@ function handleLogin(req, res) {
       if (user.totpSecret && !verifyTotp(user.totpSecret, auth_code)) {
         res.writeHead(403); res.end('Invalid credentials'); return;
       }
+      updateAlias(user);
+      writeJson(usersFile, users);
       res.writeHead(200, { 'Content-Type': 'application/json' });
-      res.end(JSON.stringify({ id: user.id, op_level: user.op_level }));
+      res.end(JSON.stringify({ id: user.id, op_level: user.op_level, alias: user.alias }));
     } catch {
       res.writeHead(400); res.end('Bad Request');
     }
@@ -610,6 +627,7 @@ if (require.main === module) {
 } else {
   module.exports = {
     handleSignup,
+    updateAlias,
     handleEvaluation,
     handleLogin,
     handleSources,
