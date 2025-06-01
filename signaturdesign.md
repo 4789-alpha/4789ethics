@@ -29,6 +29,8 @@ Ab **OP-1** kann eine Signatur einen kurzen Nickname enthalten. Diese Option erl
 Bei der Registrierung wird eine zufällige, 12‑stellige Signatur (z.B. `SIG-XXXXXXXXXXXX`) erzeugt. Die E‑Mail-Adresse wird gehasht auf dem Server gespeichert und bleibt verborgen. Nur die Signatur-ID erscheint später in den globalen Bewertungsdateien.
 
 Aus Nickname und OP-Stufe entsteht ein Alias in der Form `<Nickname>@<OP-Stufe>` (z.B. `milla@OP-3`). Steigt die OP-Stufe, wird der Alias entsprechend angepasst.
+Wenn ein Nickname angegeben wird, entsteht daraus automatisch ein Alias in der Form `nickname@OP-Stufe` (etwa `alex@OP-1`). 
+Dieses Alias wird nur intern gespeichert und passt sich an, sobald sich die Operatorstufe ändert.
 
 ## Interne Speicherung und Gatekeeper
 

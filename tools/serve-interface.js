@@ -129,6 +129,20 @@ function updateAlias(user) {
   if (user && user.nickname) {
     user.alias = `${user.nickname}@${user.op_level}`;
   }
+  if (!user.alias) return;
+  const name = user.alias.split('@')[0];
+  user.alias = `${name}@${user.op_level}`;
+}
+
+function setOpLevel(id, level, authCode) {
+  const users = readJson(usersFile);
+  const user = users.find(u => u.id === id);
+  if (!user) return false;
+  if (user.totpSecret && !verifyTotp(user.totpSecret, authCode)) return false;
+  user.op_level = level;
+  updateAlias(user);
+  writeJson(usersFile, users);
+  return true;
 }
 
 function handleSignup(req, res) {
@@ -160,6 +174,9 @@ function handleSignup(req, res) {
         phoneHash
       };
       updateAlias(user);
+      const alias = nickname ? `${nickname}@OP-1` : undefined;
+      const user = { id, emailHash, pwHash, salt, op_level: 'OP-1', totpSecret: secret, addrHash, phoneHash };
+      if (alias) user.alias = alias;
       users.push(user);
       writeJson(usersFile, users);
       res.writeHead(200, { 'Content-Type': 'application/json' });
@@ -621,6 +638,8 @@ if (require.main === module) {
     handleConnectRequest,
     handleConnectApprove,
     handleConnectList,
-    handleTempToken
+    handleTempToken,
+    updateAlias,
+    setOpLevel
   };
 }
