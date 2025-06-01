@@ -15,3 +15,4 @@ environment variables where applicable.
 | `paths.gatekeeperConfig` | `app/gatekeeper_config.yaml` | Gatekeeper policy configuration. |
 | `paths.gatekeeperDevices` | `app/gatekeeper_devices.json` | Persistence for recognized devices and tokens. |
 | `paths.gatekeeperLog` | `app/gatekeeper_log.json` | History of gatekeeper events. |
+| `paths.demotionLog` | `app/demotion_log.json` | Records automatic OP-level demotions. |

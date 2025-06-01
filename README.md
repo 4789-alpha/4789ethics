@@ -187,6 +187,10 @@ OP‑0 users remain anonymous and may submit one rating per visit without later 
 | <a id="op-11"></a> OP-11 | digital Yokozuna-Schwingerkönig mode |
 | <a id="op-12"></a> OP-12 | fully digital, first non-human stage |
 
+Upgrades to **OP-4** require a verified authenticator. If `auth_verified` stays
+false for more than four days after `level_change_ts`, the user is automatically
+demoted back to OP‑3. All demotions are stored in `app/demotion_log.json`.
+
 OP-9.A is reserved for the original programmer and is no longer awarded.
 New sublevels begin alphabetically with OP-9.B. Only OP-9.A currently
 holds a veto right. Further veto rights are planned when the system is
