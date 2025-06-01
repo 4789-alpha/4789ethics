@@ -422,6 +422,10 @@ When deploying on another domain, set the environment variable `BASE_URL`
 to that public origin (e.g. `https://4789-alpha.github.io`) so that OAuth
 redirects work properly.
 
+On GitHub Pages the `/auth/google` path only shows brief instructions.
+Start the local server with `BASE_URL` set to your public origin to enable
+the actual Google login flow.
+
 ### Optional Setup Helper
 [⇧](#contents)
 
