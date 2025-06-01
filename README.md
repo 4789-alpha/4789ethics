@@ -421,6 +421,8 @@ the provided `localhost` address so that translation files load correctly.
 When deploying on another domain, set the environment variable `BASE_URL`
 to that public origin (e.g. `https://4789-alpha.github.io`) so that OAuth
 redirects work properly.
+Configure your GitHub OAuth application to use `${BASE_URL}/auth/github/callback`
+as the callback URL and put your credentials in `app/oauth_config.yaml`.
 
 ### Optional Setup Helper
 [⇧](#contents)
