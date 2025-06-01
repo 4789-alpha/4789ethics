@@ -125,12 +125,18 @@ function writeJson(file, data) {
   fs.writeFileSync(file, JSON.stringify(data, null, 2));
 }
 
+function updateAlias(user) {
+  if (user && user.nickname) {
+    user.alias = `${user.nickname}@${user.op_level}`;
+  }
+}
+
 function handleSignup(req, res) {
   let body = '';
   req.on('data', c => { body += c; });
   req.on('end', () => {
     try {
-      const { email, password, address, phone } = JSON.parse(body);
+      const { email, password, address, phone, nickname } = JSON.parse(body);
       if (!/^[^@]+@[^@]+\.[^@]+$/.test(email) || !password || password.length < 8) {
         res.writeHead(400); res.end('Invalid data'); return;
       }
@@ -142,10 +148,22 @@ function handleSignup(req, res) {
       const phoneHash = phone ? crypto.createHash('sha256').update(phone).digest('hex') : null;
       const secret = generateTotpSecret();
       const users = readJson(usersFile);
-      users.push({ id, emailHash, pwHash, salt, op_level: 'OP-1', totpSecret: secret, addrHash, phoneHash });
+      const user = {
+        id,
+        emailHash,
+        pwHash,
+        salt,
+        op_level: 'OP-1',
+        nickname: nickname || null,
+        totpSecret: secret,
+        addrHash,
+        phoneHash
+      };
+      updateAlias(user);
+      users.push(user);
       writeJson(usersFile, users);
       res.writeHead(200, { 'Content-Type': 'application/json' });
-      res.end(JSON.stringify({ id, secret }));
+      res.end(JSON.stringify({ id, secret, alias: user.alias }));
     } catch {
       res.writeHead(400); res.end('Bad Request');
     }
@@ -179,8 +197,10 @@ function handleLogin(req, res) {
       if (user.totpSecret && !verifyTotp(user.totpSecret, auth_code)) {
         res.writeHead(403); res.end('Invalid credentials'); return;
       }
+      updateAlias(user);
+      writeJson(usersFile, users);
       res.writeHead(200, { 'Content-Type': 'application/json' });
-      res.end(JSON.stringify({ id: user.id, op_level: user.op_level }));
+      res.end(JSON.stringify({ id: user.id, op_level: user.op_level, alias: user.alias }));
     } catch {
       res.writeHead(400); res.end('Bad Request');
     }
@@ -590,6 +610,7 @@ if (require.main === module) {
 } else {
   module.exports = {
     handleSignup,
+    updateAlias,
     handleEvaluation,
     handleLogin,
     handleSources,

@@ -28,6 +28,8 @@ Jede zusätzliche Ebene (x, y, z, …) entspricht einer weiteren Array-Schicht b
 Ab **OP-1** kann eine Signatur einen kurzen Nickname enthalten. Diese Option erleichtert die Zuordnung einzelner Bewertungen. OP-0 bleibt weiterhin anonym.
 Bei der Registrierung wird eine zufällige, 12‑stellige Signatur (z.B. `SIG-XXXXXXXXXXXX`) erzeugt. Die E‑Mail-Adresse wird gehasht auf dem Server gespeichert und bleibt verborgen. Nur die Signatur-ID erscheint später in den globalen Bewertungsdateien.
 
+Aus Nickname und OP-Stufe entsteht ein Alias in der Form `<Nickname>@<OP-Stufe>` (z.B. `milla@OP-3`). Steigt die OP-Stufe, wird der Alias entsprechend angepasst.
+
 ## Interne Speicherung und Gatekeeper
 
 Alle Bewertungen werden intern abgelegt und sind nicht öffentlich abrufbar. Ab **OP-7** archiviert ein Gatekeeper die Signaturangaben. Gespeichert werden lediglich die reduzierten Bewertungsaspekte *Qualität* und *Ethik*.
