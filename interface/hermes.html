@@ -58,6 +58,7 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       getLanguage();
+      checkLanguageSetup();
       renderBadge(getStoredOpLevel() || 'OP-0', getStoredOpLevel() || 'OP-0');
       if (typeof initHermes === 'function') initHermes();
       initSideDrop('op-navigation.html');
