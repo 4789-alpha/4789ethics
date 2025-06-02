@@ -270,7 +270,7 @@ details.card > *:not(summary) {
 .swipe-card.swipe-up { transform: translateY(-80px); }
 .swipe-card.swipe-down { transform: translateY(80px); }
 
-input,
+input:not([type=checkbox]):not([type=radio]),
 select,
 textarea {
   width: 100%;
@@ -281,6 +281,14 @@ textarea {
   border-radius: 4px;
   background: #fff;
   color: #000;
+}
+
+input[type=checkbox],
+input[type=radio] {
+  width: auto;
+  margin-right: 0.5em;
+  padding: 0;
+  vertical-align: middle;
 }
 
 input[type=range] {
