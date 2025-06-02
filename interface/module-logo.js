@@ -14,11 +14,14 @@ function getLogoPath(opLevel) {
 function insertModuleLogo() {
   const header = document.querySelector('header');
   if (!header) return;
+  const custom = header.getAttribute('data-logo');
   const level = typeof getStoredOpLevel === 'function'
     ? (getStoredOpLevel() || 'OP-0')
     : 'OP-0';
-  const src = getLogoPath(level);
-  const fallback = src.includes('../') ? '../op-logo/tanna_op0.png' : 'op-logo/tanna_op0.png';
+  const src = custom || getLogoPath(level);
+  const fallback = custom
+    ? src
+    : src.includes('../') ? '../op-logo/tanna_op0.png' : 'op-logo/tanna_op0.png';
   const h1 = header.querySelector('h1');
   const size = h1 ? getComputedStyle(h1).fontSize : '1em';
   header.classList.add('with-logo');
