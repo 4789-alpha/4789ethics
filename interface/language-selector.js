@@ -32,16 +32,21 @@ function getLanguage() {
 }
 
 function getUiTextPath() {
-  return window.location.pathname.includes("/interface/")
+  const p = window.location.pathname;
+  return (p.includes("/interface/") || p.includes("/wings/") || p.includes("/docs/"))
     ? "../i18n/ui-text.json"
     : "i18n/ui-text.json";
 }
 
 function updateReadmeLinks(lang) {
-  const prefix = window.location.pathname.includes('/interface/') ? '..' : '.';
+  const p = window.location.pathname;
+  const docsPrefix = (p.includes('/interface/') || p.includes('/wings/'))
+    ? '..'
+    : (p.includes('/docs/') ? '.' : 'docs');
+  const rootPrefix = (p.includes('/interface/') || p.includes('/wings/') || p.includes('/docs/')) ? '..' : '.';
   const base = lang === 'en'
-    ? `${prefix}/README.html`
-    : `${prefix}/i18n/README.${lang}.md`;
+    ? `${docsPrefix}/README.html`
+    : `${rootPrefix}/i18n/README.${lang}.md`;
   document.querySelectorAll('a.readme-link').forEach(a => {
     const anchor = a.getAttribute('href').split('#')[1];
     a.href = anchor ? `${base}#${anchor}` : base;

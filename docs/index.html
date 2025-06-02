@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>BSVRB – Start</title>
-  <link rel="stylesheet" href="interface/ethicom-style.css" />
-  <script src="utils/op-level.js"></script>
-  <script src="interface/ethicom-utils.js"></script>
-  <script src="interface/accessibility.js"></script>
-  <script src="interface/theme-manager.js"></script>
-  <script src="interface/logo-background.js"></script>
-  <script src="interface/module-logo.js"></script>
+  <title>BSVRB</title>
+  <link rel="stylesheet" href="../interface/ethicom-style.css" />
+  <script src="../utils/op-level.js"></script>
+  <script src="../interface/ethicom-utils.js"></script>
+  <script src="../interface/accessibility.js"></script>
+  <script src="../interface/color-utils.js"></script>
+  <script src="../interface/color-auth.js"></script>
+  <script src="../interface/language-selector.js"></script>
+  <script src="../interface/dynamic-info.js"></script>
+  <script src="../interface/op-overview.js"></script>
+  <script src="../interface/theme-manager.js"></script>
+  <script src="../interface/logo-background.js"></script>
+  <script src="../interface/touch-features.js"></script>
+  <script src="../interface/side-drop.js"></script>
+  <script src="../interface/op-side-nav.js"></script>
+  <script src="../interface/op0-navigation.js"></script>
+  <script src="../interface/module-logo.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main_content">Skip to main content</a>
@@ -21,11 +30,11 @@
     <nav>
       <a href="home.html">Home</a>
       <a href="bewertung.html">Bewertung</a>
-      <a href="interface/settings.html" class="icon-only">⚙</a>
-      <a href="interface/login.html">Login</a>
-      <a href="wings/ratings.html">Ratings</a>
-      <a href="interface/signup.html">Signup</a>
-      <a href="interface/genealogie.html">Genealogie</a>
+      <a href="../interface/settings.html" class="icon-only">⚙</a>
+      <a href="../interface/login.html">Login</a>
+      <a href="../wings/ratings.html">Ratings</a>
+      <a href="../interface/signup.html">Signup</a>
+      <a href="../interface/genealogie.html">Genealogie</a>
       <a href="README.html" class="readme-link">README</a>
     </nav>
   </header>
@@ -96,6 +105,8 @@
   </main>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      getLanguage();
+      localStorage.setItem('visited_start', 'true');
       initSideDrop('interface/op-navigation.html');
       const menu = document.getElementById('side_menu');
       if(menu) menu.addEventListener('click', e => { e.preventDefault(); toggleSideDrop(); });

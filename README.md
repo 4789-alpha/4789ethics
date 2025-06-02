@@ -33,10 +33,10 @@ See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
 
 1. Read `GET_STARTED.md` for the main files.
 2. Run `node tools/serve-interface.js` to start the local server.
-3. Open `http://localhost:8080/index.html`.
+3. Open `http://localhost:8080/docs/index.html`.
 
 ```
-README.md -> GET_STARTED.md -> index.html
+README.md -> GET_STARTED.md -> docs/index.html
                    |             |
                    v             +--> settings.html
               ethicom.html
@@ -90,7 +90,8 @@ README.md -> GET_STARTED.md -> index.html
 | `op-logo/` | Stages of the Tanna symbol |
 | `wings/` | Minimal mobile interface |
 | `evidence/` | Datasets such as `person-ratings.json` |
-| `interface_OLD/` | Legacy version of the first interface |
+| `docs/` | Public HTML pages |
+| `legacy/interface_OLD/` | Legacy version of the first interface |
 | `references/` | Reference tables and scores |
 
 
@@ -99,14 +100,14 @@ README.md -> GET_STARTED.md -> index.html
 
 | File | Description |
 |------|-------------|
-| [index.html](index.html) | Start page linking to Ethicom and ratings |
+| [docs/index.html](docs/index.html) | Start page linking to Ethicom and ratings |
 | [interface/about.html](interface/about.html) | Explains the 4789 module |
 | [interface/chat.html](interface/chat.html) | Chat interface |
 | [interface/ethicom.html](interface/ethicom.html) | Main evaluation module |
 | [interface/page-flow-demo.html](interface/page-flow-demo.html) | Demo of horizontal flow |
-| [bewertung.html](bewertung.html) | Entry page for rating modules |
-| [personenbewertung.html](personenbewertung.html) | Swipe-based person rating |
-| [org-bewertung.html](org-bewertung.html) | Preview for organisation ratings |
+| [docs/bewertung.html](docs/bewertung.html) | Entry page for rating modules |
+| [docs/personenbewertung.html](docs/personenbewertung.html) | Swipe-based person rating |
+| [docs/org-bewertung.html](docs/org-bewertung.html) | Preview for organisation ratings |
 | [interface/settings.html](interface/settings.html) | Language, theme, Tanna logo, and low motion settings |
 | [interface/signup.html](interface/signup.html) | Registration form |
 | [interface/offline-signup.html](interface/offline-signup.html) | Offline local signup |
@@ -120,7 +121,7 @@ README.md -> GET_STARTED.md -> index.html
 | [interface/features_de.md](interface/features_de.md) | Funktionale Übersicht zum Interface |
 | [wings/index.html](wings/index.html) | Mobile interface "Wings" |
 | [wings/ratings.html](wings/ratings.html) | Library of all ratings with search |
-| `interface_OLD/` | Historical demo of the first interface generation |
+| `legacy/interface_OLD/` | Historical demo of the first interface generation |
 **Settings are stored per device using browser localStorage and are not synced globally. Color adjustments made in the settings page apply automatically on every page.**
 **Ratings from OP-1 onward are stored globally with the assigned signature ID. The email used during signup is hashed and never exposed.**
 **Optional GitHub login authenticates via GitHub's OAuth flow. The returned username is hashed and stored offline.**
