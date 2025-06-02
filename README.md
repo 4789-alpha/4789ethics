@@ -109,6 +109,7 @@ README.md -> GET_STARTED.md -> index.html
 | [org-bewertung.html](org-bewertung.html) | Preview for organisation ratings |
 | [interface/settings.html](interface/settings.html) | Language, theme, Tanna logo, and low motion settings |
 | [interface/signup.html](interface/signup.html) | Registration form |
+| [interface/offline-signup.html](interface/offline-signup.html) | Offline local signup |
 | [interface/tanna-template.html](interface/tanna-template.html) | Base template |
 | [interface/tanna-template-dark.html](interface/tanna-template-dark.html) | Template in dark theme |
 | [interface/tanna-template-light.html](interface/tanna-template-light.html) | Template in light theme |
