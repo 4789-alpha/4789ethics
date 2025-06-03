@@ -67,6 +67,7 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       getLanguage();
+      checkLanguageSetup();
       if (typeof renderOpOverview === 'function') renderOpOverview();
       initSideDrop('op-navigation.html');
       const menu = document.getElementById('side_menu');

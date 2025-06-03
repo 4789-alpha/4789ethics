@@ -13,7 +13,7 @@ function isEmpty(val) {
 
 const results = {};
 for (const [lang, obj] of Object.entries(data)) {
-  if (lang === 'de') continue;
+  if (lang === 'de' || lang.startsWith('de-')) continue;
   const missing = [];
   const same = [];
   for (const k of keys) {
