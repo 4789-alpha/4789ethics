@@ -87,8 +87,8 @@ function initLogoBackground() {
   const minScale = 0.5;
   const FADE_MS = 1000;
   const imgBase = window.location.pathname.includes('/interface/')
-    ? '../op-logo/'
-    : 'op-logo/';
+    ? '../sources/images/op-logo/'
+    : 'sources/images/op-logo/';
   const images = levels.map(lvl => {
     const img = new Image();
     const src = lvl >= 8 ? 7 : lvl;

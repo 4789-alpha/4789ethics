@@ -80,7 +80,7 @@
       const srcNum = base >= 8 ? 7 : base;
       const hue = base >= 8 ? (base - 7) * 30 : 0;
       document.querySelectorAll('.start-op-logo').forEach(img => {
-        img.src = `op-logo/tanna_op${srcNum}.png`;
+        img.src = `sources/images/op-logo/tanna_op${srcNum}.png`;
         img.alt = level;
         img.setAttribute('aria-label', level);
         img.style.filter = base >= 8 ?

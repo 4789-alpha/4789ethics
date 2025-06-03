@@ -6,8 +6,8 @@ function getLogoPath(opLevel) {
   const n = Number.isFinite(num) ? num : 0;
   const prefix = window.location.pathname.includes('/interface/') ||
                  window.location.pathname.includes('/wings/')
-                   ? '../op-logo/'
-                   : 'op-logo/';
+                   ? '../sources/images/op-logo/'
+                   : 'sources/images/op-logo/';
   return `${prefix}tanna_op${n}.png`;
 }
 
@@ -18,10 +18,8 @@ function insertModuleLogo() {
   const level = typeof getStoredOpLevel === 'function'
     ? (getStoredOpLevel() || 'OP-0')
     : 'OP-0';
-  const src = custom || getLogoPath(level);
-  const fallback = custom
-    ? src
-    : src.includes('../') ? '../op-logo/tanna_op0.png' : 'op-logo/tanna_op0.png';
+  const src = getLogoPath(level);
+  const fallback = src.includes('../') ? '../sources/images/op-logo/tanna_op0.png' : 'sources/images/op-logo/tanna_op0.png';
   const h1 = header.querySelector('h1');
   const size = h1 ? getComputedStyle(h1).fontSize : '1em';
   header.classList.add('with-logo');
