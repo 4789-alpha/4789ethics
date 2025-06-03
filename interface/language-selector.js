@@ -31,6 +31,54 @@ function getLanguage() {
   return lang;
 }
 
+function showLanguageSetup() {
+  if (document.getElementById('language_setup_overlay')) return;
+  const overlay = document.createElement('div');
+  overlay.id = 'language_setup_overlay';
+  overlay.style.position = 'fixed';
+  overlay.style.top = 0;
+  overlay.style.left = 0;
+  overlay.style.right = 0;
+  overlay.style.bottom = 0;
+  overlay.style.background = 'rgba(0,0,0,0.8)';
+  overlay.style.zIndex = 1000;
+  const modal = document.createElement('div');
+  modal.className = 'card';
+  modal.style.maxWidth = '400px';
+  modal.style.margin = '10% auto';
+  modal.style.background = '#fff';
+  modal.style.padding = '1em';
+  modal.innerHTML = `
+    <label for="lang_setup_select">Language:</label>
+    <select id="lang_setup_select"></select>
+    <button id="lang_setup_save">OK</button>
+    <p style="font-size:0.8em;">Change later in Settings.</p>`;
+  overlay.appendChild(modal);
+  document.body.appendChild(overlay);
+  initLanguageDropdown('lang_setup_select');
+  document.getElementById('lang_setup_save').addEventListener('click', () => {
+    const select = document.getElementById('lang_setup_select');
+    const lang = select.value.replace(/\*$/, '');
+    localStorage.setItem('ethicom_lang', lang);
+    document.documentElement.lang = lang;
+    if (typeof updateReadmeLinks === 'function') updateReadmeLinks(lang);
+    overlay.remove();
+    if (typeof applyTexts === 'function' || typeof applySignupTexts === 'function') {
+      fetch(getUiTextPath())
+        .then(r => r.json())
+        .then(texts => {
+          const t = texts[lang] || texts.en || {};
+          if (typeof applyTexts === 'function') applyTexts(t);
+          if (typeof applySignupTexts === 'function') { window.uiText = t; applySignupTexts(); }
+        });
+    }
+  });
+}
+
+function checkLanguageSetup() {
+  if (!localStorage.getItem('ethicom_lang')) showLanguageSetup();
+}
+
 function getUiTextPath() {
   return window.location.pathname.includes("/interface/")
     ? "../i18n/ui-text.json"
