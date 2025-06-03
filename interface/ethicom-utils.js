@@ -17,12 +17,20 @@
 
   function applyStoredColors() {
     try {
+      const custom = JSON.parse(localStorage.getItem('ethicom_colors') || '{}');
+      if (custom && typeof custom === 'object') {
+        Object.entries(custom).forEach(([name, val]) => {
+          document.documentElement.style.setProperty(name, String(val));
+        });
+      }
+    } catch {}
+
+    try {
       const bg = JSON.parse(localStorage.getItem('ethicom_bg_color') || 'null');
       if (bg) {
-        document.documentElement.style.setProperty(
-          '--bg-color',
-          `rgb(${bg.r},${bg.g},${bg.b})`
-        );
+        const val = `rgb(${bg.r},${bg.g},${bg.b})`;
+        document.documentElement.style.setProperty('--bg-color', val);
+        if (document.body) document.body.style.setProperty('--bg-color', val);
       }
     } catch {}
 
@@ -73,6 +81,32 @@
       if (tc) applyTextColor(tc);
     } catch {}
     applyStoredColors();
+  });
+  document.addEventListener('themeChanged', () => {
+    try {
+      const tc = JSON.parse(localStorage.getItem('ethicom_text_color') || 'null');
+      if (tc) applyTextColor(tc);
+    } catch {}
+    applyStoredColors();
+  });
+  window.addEventListener('storage', e => {
+    if (!e.key) return;
+    const colorKeys = [
+      'ethicom_colors',
+      'ethicom_bg_color',
+      'ethicom_module_color',
+      'ethicom_tanna_color',
+      'ethicom_text_color'
+    ];
+    if (colorKeys.includes(e.key)) {
+      try {
+        const tc = JSON.parse(localStorage.getItem('ethicom_text_color') || 'null');
+        if (tc) applyTextColor(tc);
+      } catch {}
+      applyStoredColors();
+    } else if (e.key === 'ethicom_theme' && typeof applyTheme === 'function') {
+      applyTheme(e.newValue || 'tanna-dark');
+    }
   });
 })();
 

@@ -22,6 +22,11 @@ fields:
 
 `in_bern` indicates whether the species also appears in `bern-fische.json`.
 
+The page `fischeSchweiz.html` renders the national list for convenient browsing.
+
+The page `gewaesserBern.html` shows a simplified map of the canton Bern with
+lakes and the river Aare based on `sources/maps/bern-waters.json`.
+
 The goal is to promote respectful and transparent handling of fish populations
 worldwide. Contributions should follow the 4789 principles and the
 Open-Ethics License.

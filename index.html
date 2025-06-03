@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>4789 Index</title>
+  <title>BSVRB</title>
   <link rel="stylesheet" href="interface/ethicom-style.css" />
   <script src="utils/op-level.js"></script>
   <script src="interface/ethicom-utils.js"></script>
   <script src="interface/accessibility.js"></script>
+  <script src="interface/color-utils.js"></script>
   <script src="interface/color-auth.js"></script>
   <script src="interface/language-selector.js"></script>
   <script src="interface/dynamic-info.js"></script>
@@ -24,34 +25,65 @@
   <a class="skip-link" href="#main_content">Skip to main content</a>
   <div id="op_background"></div>
   <header>
-    <h1>Index</h1>
+    <h1>BSVRB</h1>
+    <p class="tagline">Bündnis für sinnvolle Verantwortung in regionalen Belangen</p>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="bewertung.html">Bewertung</a>
+      <a href="interface/settings.html" class="icon-only">⚙</a>
+      <a href="interface/login.html">Login</a>
+      <a href="wings/ratings.html">Ratings</a>
+      <a href="interface/signup.html">Signup</a>
+      <a href="interface/genealogie.html">Genealogie</a>
+      <a href="README.html" class="readme-link">README</a>
+    </nav>
   </header>
-  <section class="hero">
-    <p class="tagline">Ethik-Kompass für technologische Projekte</p>
-  </section>
-  <nav>
-    <a href="home.html" aria-current="page">Home</a>
-    <a href="bewertung.html">Bewertung</a>
-    <a href="interface/settings.html" class="icon-only">⚙</a>
-    <a href="interface/login.html">Login</a>
-    <a href="wings/ratings.html">Ratings</a>
-    <a href="interface/signup.html">Signup</a>
-    <a href="interface/genealogie.html">Genealogie</a>
-    <a href="interface/hermes.html">Hermes</a>
-    <a href="interface/shneiderman.html">Shneiderman</a>
-    <a href="interface/nielsen.html">Nielsen</a>
-    <a href="interface/norman.html">Norman</a>
-    <a href="interface/material.html">Material</a>
-    <a href="interface/op-story.html">OP Story</a>
-    <a href="interface/tanna-animation.html">Tanna Animation</a>
-    <a href="interface/apple-hig.html">Apple&nbsp;HIG</a>
-    <a href="README.html" class="readme-link">README</a>
-  </nav>
   <main id="main_content">
     <section class="card">
-      <h2>Willkommen</h2>
-      <p>Diese Seite führt zur Ethicom-Oberfläche. Sie folgt dem Corporate Design von Signature 4789.</p>
+      <h2>1. Gesellschaft / Bewegung / Plattform</h2>
+      <ul>
+        <li>Bündnis für sinnvolle Verantwortung in regionalen Belangen</li>
+        <li>Bewegung für soziale Vielfalt und respektvolle Begegnung</li>
+        <li>Berner Struktur für verbindende regionale Beiträge</li>
+      </ul>
     </section>
+    <section class="card">
+      <h2>2. Bildung / Zukunft / Ethik</h2>
+      <ul>
+        <li>Bildungsstelle für Selbstverantwortung, Vielfalt, Respekt &amp; Bewusstsein</li>
+        <li>Berner Schule für vorausschauendes, resilientes Bewusstsein</li>
+        <li>Bildungs-Syndikat für Vernunft und regionale Bildung</li>
+      </ul>
+    </section>
+    <section class="card">
+      <h2>3. Technik / Innovation / Forschung</h2>
+      <ul>
+        <li>Bionik-Systeme für vernetzte regionale Bewegungen</li>
+        <li>Berner Studio für visionäre robotische Begleiter (z.&nbsp;B. Aarulon, Mechafisch)</li>
+        <li>Baukasten-System für variable, regionale Beteiligung</li>
+      </ul>
+    </section>
+    <section class="card">
+      <h2>4. Gesellschaft + Genuss</h2>
+      <ul>
+        <li>Bier, Solidarität, Vielfalt, Region, Begegnung</li>
+        <li>Brauchbare Strukturen für Verantwortung, Respekt und Beziehung</li>
+        <li>Bündnis für Substanz, Vielfalt, Rausch &amp; Bewusstsein (sanft anarchisch)</li>
+      </ul>
+    </section>
+    <section class="card">
+      <h2>5. Für Kultur, Natur, Mensch &amp; Region</h2>
+      <ul>
+        <li>Begegnungsstätte für Sinnsuchende, Verbindende, Regional Bewusste</li>
+        <li>Bündnis Schweizer Volkskultur &amp; regionale Biodiversität</li>
+        <li>Berner Szene für Veränderung, Ruhe &amp; Beteiligung</li>
+      </ul>
+    </section>
+    <section class="card">
+      <h2>Qualitätskontrolle / Verantwortungssystem</h2>
+      <p><a href="bsvrb-quality.html">Details</a></p>
+    </section>
+
     <section class="card">
       <h2>Disclaimers</h2>
       <ul>
@@ -62,26 +94,20 @@
       </ul>
     </section>
     <section class="card">
-      <h2>Direkt loslegen</h2>
-      <p>Starte die Bewertung über <a href="interface/ethicom.html">Ethicom</a>. Eine Vorschau für OP‑0 ist ohne Anmeldung möglich.</p>
+      <h2>Hinweis zur Codex-Umgebung</h2>
+      <p>
+        Das Terminal im Codex‑Container ist minimal ausgestattet.
+        Interaktive Editoren wie <code>nano</code> oder <code>vim</code> stehen nicht zur Verfügung. Nach dem Start besteht keine
+        Netzwerkanbindung, daher lassen sich keine Pakete über <code>apt</code> nachträglich installieren.
+        Codeänderungen erfolgen über Befehle wie <code>cat</code> und <code>echo</code> oder über den integrierten Codex-Editor.
+      </p>
     </section>
-    <section id="op_overview" class="card"></section>
   </main>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       getLanguage();
+      checkLanguageSetup();
       localStorage.setItem('visited_start', 'true');
-      const level = window.getStoredOpLevel ? window.getStoredOpLevel() || 'OP-0' : 'OP-0';
-      const base = parseInt(String(level).replace('OP-', '').split('.')[0], 10);
-      const srcNum = base >= 8 ? 7 : base;
-      const hue = base >= 8 ? (base - 7) * 30 : 0;
-      document.querySelectorAll('.start-op-logo').forEach(img => {
-        img.src = `op-logo/tanna_op${srcNum}.png`;
-        img.alt = level;
-        img.setAttribute('aria-label', level);
-        img.style.filter = base >= 8 ?
-          `hue-rotate(-80deg) saturate(0.7) hue-rotate(${hue}deg)` : '';
-      });
       initSideDrop('interface/op-navigation.html');
       const menu = document.getElementById('side_menu');
       if(menu) menu.addEventListener('click', e => { e.preventDefault(); toggleSideDrop(); });
@@ -90,4 +116,3 @@
   <div id="side_drop"></div>
 </body>
 </html>
-

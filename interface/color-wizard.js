@@ -1,27 +1,8 @@
 // Stepwise color settings wizard
 
-function cwParseCol(v){
-  v = (v || '').trim();
-  if (v.startsWith('#')) {
-    if (v.length === 4) v = '#' + v[1] + v[1] + v[2] + v[2] + v[3] + v[3];
-    const n = parseInt(v.slice(1), 16);
-    return { r: (n >> 16) & 255, g: (n >> 8) & 255, b: n & 255 };
-  }
-  const m = v.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)/);
-  return m ? { r: +m[1], g: +m[2], b: +m[3] } : { r: 0, g: 0, b: 0 };
-}
 
 function cwApplyTanna(c){
-  if (document.body.classList.contains('theme-tanna') ||
-      document.body.classList.contains('theme-tanna-dark')) {
-    const css = `rgb(${c.r},${c.g},${c.b})`;
-    document.documentElement.style.setProperty('--primary-color', css);
-    document.documentElement.style.setProperty('--accent-color', css);
-    const h = `rgba(${Math.round(c.r*0.2)},${Math.round(c.g*0.2)},${Math.round(c.b*0.2)},0.9)`;
-    const n = `rgba(${Math.round(c.r*0.3)},${Math.round(c.g*0.3)},${Math.round(c.b*0.3)},0.9)`;
-    document.documentElement.style.setProperty('--header-bg', h);
-    document.documentElement.style.setProperty('--nav-bg', n);
-  }
+  applyTannaColor(c);
 }
 
 function cwApplyTannaCSS(c, css){
@@ -35,7 +16,7 @@ function cwApplyTannaCSS(c, css){
 }
 
 function cwBuildColorStep(title, storeKey, cssVar, prefix, applyFn){
-  const def = cwParseCol(getComputedStyle(document.documentElement).getPropertyValue(cssVar.var||cssVar));
+  const def = parseColor(getComputedStyle(document.documentElement).getPropertyValue(cssVar.var||cssVar));
   let cur;
   try { cur = JSON.parse(localStorage.getItem(storeKey) || 'null'); } catch {}
   if (!cur) cur = def;
@@ -149,7 +130,10 @@ function openColorSettingsWizard(){
       const css = `rgb(${v.r},${v.g},${v.b})`;
       if (k==='ethicom_tanna_color') cwApplyTanna(v);
       else if (k==='ethicom_text_color') document.documentElement.style.setProperty('--text-color',css);
-      else if (k==='ethicom_bg_color') document.documentElement.style.setProperty('--bg-color',css);
+        else if (k==='ethicom_bg_color') {
+          document.documentElement.style.setProperty('--bg-color',css);
+          if (document.body) document.body.style.setProperty('--bg-color',css);
+        }
       else if (k==='ethicom_module_color') document.documentElement.style.setProperty('--module-color',css);
     });
     overlay.remove();
@@ -160,3 +144,34 @@ function openColorSettingsWizard(){
 }
 
 window.openColorSettingsWizard = openColorSettingsWizard;
+
+function openColorSettingsWizardCLI(){
+  const themes=['tanna-dark','tanna','transparent','ocean','desert','custom'];
+  let theme=prompt('Color Scheme ('+themes.join(', ')+'):',localStorage.getItem('ethicom_theme')||'tanna-dark');
+  if(theme&&themes.includes(theme)){
+    localStorage.setItem('ethicom_theme',theme);
+    if(typeof applyTheme==='function') applyTheme(theme);
+  }
+
+  function parse(v){return parseColor(v);} // reuse parser
+  function ask(key,cssVar,label,apply){
+    let def=parse(getComputedStyle(document.documentElement).getPropertyValue(cssVar));
+    try{const s=JSON.parse(localStorage.getItem(key)||'null');if(s) def=s;}catch{}
+    const ans=prompt(label+' color as r,g,b',`${def.r},${def.g},${def.b}`);
+    if(!ans) return;
+    const m=ans.match(/^(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*(\d{1,3})$/);
+    if(!m){alert('Invalid format. Use r,g,b');return;}
+    const c={r:Math.min(255,+m[1]),g:Math.min(255,+m[2]),b:Math.min(255,+m[3])};
+    localStorage.setItem(key,JSON.stringify(c));
+    document.documentElement.style.setProperty(cssVar,`rgb(${c.r},${c.g},${c.b})`);
+    if(apply) apply(c);
+  }
+
+  ask('ethicom_text_color','--text-color','Text');
+  ask('ethicom_bg_color','--bg-color','Background');
+  ask('ethicom_tanna_color','--primary-color','Tanna Symbol',cwApplyTanna);
+  ask('ethicom_module_color','--module-color','Module');
+  alert('Colors updated');
+}
+
+window.openColorSettingsWizardCLI = openColorSettingsWizardCLI;

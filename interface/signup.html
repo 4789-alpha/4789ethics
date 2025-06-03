@@ -8,6 +8,7 @@
   <script src="language-selector.js"></script>
   <script src="../utils/op-level.js"></script>
   <script src="ethicom-utils.js"></script>
+  <script src="color-utils.js"></script>
   <script src="accessibility.js"></script>
   <script src="slow-mode.js"></script>
   <script src="signup.js"></script>
@@ -50,17 +51,24 @@
     <label for="pw_input" data-ui="signup_password">Password:</label>
     <input type="password" id="pw_input" placeholder="At least 8 characters" />
 
+    <label for="nick_input" data-ui="signup_nick">Nickname:</label>
+    <input type="text" id="nick_input" placeholder="Optional nickname" />
+
     <label for="addr_input" data-ui="signup_address">Address:</label>
     <input type="text" id="addr_input" placeholder="Optional address" />
 
+    <label for="country_input">Country/Region:</label>
+    <input type="text" id="country_input" placeholder="CH" />
+
     <label for="phone_input" data-ui="signup_phone">Phone:</label>
-    <input type="tel" id="phone_input" placeholder="+49123456789" />
+    <input type="tel" id="phone_input" placeholder="+41123456789" />
 
     <button id="signup_btn" onclick="handleSignup()">Create Account</button>
     <pre id="signup_status" style="white-space:pre-wrap;margin-top:1em;"></pre>
   </main>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      checkLanguageSetup();
       initLanguageDropdown('lang_select');
       applyStoredModuleOrder();
       initSignup();

@@ -1,3 +1,13 @@
+function vibrateHeartbeat() {
+  if (
+    window.touchSettings &&
+    window.touchSettings.state.haptics &&
+    navigator.vibrate
+  ) {
+    navigator.vibrate([60, 40, 60]);
+  }
+}
+
 function initOP0HumanInterface() {
   const container = document.getElementById("op_interface");
   if (!container) return;
@@ -93,4 +103,5 @@ function submitOP0HumanEval() {
   } else if (typeof recordEvidence === "function") {
     recordEvidence(JSON.stringify(evalData), "user");
   }
+  vibrateHeartbeat();
 }

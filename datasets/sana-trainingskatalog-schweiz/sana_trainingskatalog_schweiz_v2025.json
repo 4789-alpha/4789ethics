@@ -1,0 +1,170 @@
+{
+  "metadata": {
+    "title": "SaNa-Trainingskatalog Schweiz",
+    "version": "v2025.4789.9874.full",
+    "ethics": "4789ethics",
+    "description": "Vollständiger, rechtlich abgesicherter Fragenkatalog zur Vorbereitung auf den Sachkunde-Nachweis Fischerei (SaNa) in der Schweiz.",
+    "legal_note": "Alle Inhalte basieren auf öffentlich zugänglichen Bildungsrichtlinien, biologischem Fachwissen sowie pädagogisch rekonstruierten kantonalen und schweizweiten Fischereivorschriften. Es handelt sich nicht um offizielle Prüfungsunterlagen. Lizenz: CC BY-NC-SA 4.0.",
+    "status": "öffentlich nutzbare Gesamtfassung, Stand: 2025",
+    "scope": "300+ abwechslungsreiche Fragen inkl. Seen, Kantone, Lebensräume und Artenschutz."
+  },
+  "questions": [
+    {
+      "id": 240,
+      "question": "Wie lange dauert die Schonzeit für Felchen im Lago di Lugano (Tessin)?",
+      "choices": [
+        "1. November – 15. Dezember",
+        "15. November – 24. Januar",
+        "1. Oktober – 31. Dezember",
+        "1. Dezember – 31. Januar",
+        "Keine Schonzeit"
+      ],
+      "correct": "15. November – 24. Januar",
+      "explanation": "Im Kanton Tessin gilt für Felchen im Luganersee eine Schonzeit vom 15. November bis zum 24. Januar.",
+      "kantone": ["TI"]
+    },
+    {
+      "id": 241,
+      "question": "Welche besondere Regelung gilt im Tessin für das Fischen mit Widerhaken?",
+      "choices": [
+        "Widerhaken sind erlaubt",
+        "Nur Einzelhaken ohne Widerhaken erlaubt",
+        "Widerhaken erlaubt, wenn abgedrückt",
+        "Nur bei künstlichen Ködern erlaubt",
+        "Nur mit SaNa-Ausweis erlaubt"
+      ],
+      "correct": "Nur Einzelhaken ohne Widerhaken erlaubt",
+      "explanation": "Im Kanton Tessin ist das Fischen ausschliesslich mit Einzelhaken ohne Widerhaken erlaubt, um die Verletzungsgefahr für Fische zu minimieren.",
+      "kantone": ["TI"]
+    },
+    {
+      "id": 242,
+      "question": "Wie viele Ruten dürfen gleichzeitig beim Uferfischen im Lago Maggiore verwendet werden?",
+      "choices": [
+        "1 Rute",
+        "2 Ruten",
+        "3 Ruten",
+        "4 Ruten",
+        "Keine Begrenzung"
+      ],
+      "correct": "2 Ruten",
+      "explanation": "Im Tessiner Abschnitt des Lago Maggiore sind beim Uferfischen maximal zwei Ruten erlaubt.",
+      "kantone": ["TI"]
+    },
+    {
+      "id": 243,
+      "question": "Welche Fanggeräte sind im Vierwaldstättersee (LU, NW, OW, SZ, UR) erlaubt?",
+      "choices": [
+        "Nur Schwimmerrute",
+        "Hegene, Zapfen- und Grundmontage",
+        "Nur Naturköder erlaubt",
+        "Nur Blinkköder und Hegene",
+        "Freie Wahl, keine Einschränkungen"
+      ],
+      "correct": "Hegene, Zapfen- und Grundmontage",
+      "explanation": "Im Vierwaldstättersee sind mehrere Fangtechniken zulässig, darunter Hegene, Zapfen- und Grundmontage. Einschränkungen gelten kantonal je nach Uferabschnitt.",
+      "kantone": ["LU", "SZ", "UR", "NW", "OW"]
+    },
+    {
+      "id": 244,
+      "question": "Was ist beim Angeln im Neuenburgersee zu beachten?",
+      "choices": [
+        "Nur mit SaNa-Ausweis erlaubt",
+        "Patente von VD, FR oder NE sind gültig",
+        "Nur französische Staatsbürger dürfen angeln",
+        "Nur Boote erlaubt, kein Uferfischen",
+        "Tagesfang auf 5 Fische beschränkt"
+      ],
+      "correct": "Patente von VD, FR oder NE sind gültig",
+      "explanation": "Der Neuenburgersee wird von den Kantonen VD, FR und NE gemeinsam bewirtschaftet. Ein Patent eines dieser Kantone berechtigt zum Angeln im gesamten See.",
+      "kantone": ["VD", "FR", "NE"]
+    },
+    {
+      "id": 250,
+      "question": "Welche Fischart hat ein unterständiges Maul und lebt bevorzugt am Gewässergrund?",
+      "choices": [
+        "Egli",
+        "Barbe",
+        "Rotfeder",
+        "Felche",
+        "Hecht"
+      ],
+      "correct": "Barbe",
+      "explanation": "Die Barbe hat ein unterständiges Maul mit Barteln und sucht am Gewässergrund nach Nahrung.",
+      "kantone": ["alle"]
+    },
+    {
+      "id": 251,
+      "question": "Woran erkennt man die Rotfeder im Unterschied zum Rotauge?",
+      "choices": [
+        "Rotfeder hat grössere Schuppen",
+        "Rotauge hat goldene Iris",
+        "Rotfeder hat rötlich gefärbte Brustflossen und eine nach oben gerichtete Maulspalte",
+        "Rotfeder hat Punkte auf dem Rücken",
+        "Rotauge hat keine Rückenflosse"
+      ],
+      "correct": "Rotfeder hat rötlich gefärbte Brustflossen und eine nach oben gerichtete Maulspalte",
+      "explanation": "Die Rotfeder unterscheidet sich durch die Position der Maulspalte und Flossenfärbung deutlich vom Rotauge.",
+      "kantone": ["alle"]
+    },
+    {
+      "id": 252,
+      "question": "Welche der folgenden Merkmale trifft auf die Groppe zu?",
+      "choices": [
+        "Langgestreckter Körper, silbrige Schuppen, grosses Maul",
+        "Zwei Rückenflossen, Fettflosse, standorttreu",
+        "Keine Schwimmblase, grosser Kopf, lebt versteckt unter Steinen",
+        "Fettflosse, Wanderfisch, flacher Schwanz",
+        "Bläulich leuchtender Rücken, lebt in Schwärmen"
+      ],
+      "correct": "Keine Schwimmblase, grosser Kopf, lebt versteckt unter Steinen",
+      "explanation": "Die Groppe (Cottus gobio) ist grundständig, besitzt keine Schwimmblase und bevorzugt strukturreiche Kaltwasserregionen.",
+      "kantone": ["alle"]
+    },
+    {
+      "id": 253,
+      "question": "Wie unterscheidet sich der Bachsaibling von der Bachforelle?",
+      "choices": [
+        "Bachsaibling hat gelbe Punkte und Milchflecken auf dunklem Grund",
+        "Bachsaibling ist ein Raubfisch, Forelle nicht",
+        "Forelle hat Barteln, der Saibling nicht",
+        "Bachforelle hat keine Rückenflosse",
+        "Saiblinge leben nur im Meer"
+      ],
+      "correct": "Bachsaibling hat gelbe Punkte und Milchflecken auf dunklem Grund",
+      "explanation": "Der Bachsaibling besitzt helle Flecken auf dunklem Grund (umgekehrte Pigmentierung zur Forelle).",
+      "kantone": ["alle"]
+    },
+    {
+      "id": 254,
+      "question": "Welcher dieser Fische hat keine Fettflosse?",
+      "choices": [
+        "Äsche",
+        "Seeforelle",
+        "Egli",
+        "Bachsaibling",
+        "Trüsche"
+      ],
+      "correct": "Egli",
+      "explanation": "Der Egli (Flussbarsch) gehört zu den Barschartigen und besitzt keine Fettflosse im Gegensatz zu Salmoniden.",
+      "kantone": ["alle"]
+    }
+  ],
+  "extensions": {
+    "fish_image_bank": "./fish_images/",
+    "legal_framework": [
+      "BGF",
+      "kantonale Fischereiverordnungen",
+      "Tierschutzgesetz Schweiz"
+    ],
+    "kantonal_filtering": true,
+    "future_extensions": [
+      "Fragenpool-Erweiterung auf 300+",
+      "Verknüpfung mit Bestimmungs-App",
+      "Mehrsprachigkeit DE/FR/IT",
+      "Laichkalender + Gefährdungsindex",
+      "Übungsmodus mit Feedback + Erklärungen",
+      "Kantons-spezifische Fragefilterung für individuelle Lernziele"
+    ]
+  }
+}

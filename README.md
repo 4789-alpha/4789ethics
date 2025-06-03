@@ -87,7 +87,7 @@ README.md -> GET_STARTED.md -> index.html
 | `test/` | Node.js test suite |
 | `tools/` | Utility scripts (e.g., trust-demotion engine, reliability monitor, correction engine, Python API example) |
 | `use_cases/` | Example scenarios and dissemination ideas |
-| `op-logo/` | Stages of the Tanna symbol |
+| `sources/images/op-logo/` | Stages of the Tanna symbol |
 | `wings/` | Minimal mobile interface |
 | `evidence/` | Datasets such as `person-ratings.json` |
 | `interface_OLD/` | Legacy version of the first interface |
@@ -104,9 +104,12 @@ README.md -> GET_STARTED.md -> index.html
 | [interface/chat.html](interface/chat.html) | Chat interface |
 | [interface/ethicom.html](interface/ethicom.html) | Main evaluation module |
 | [interface/page-flow-demo.html](interface/page-flow-demo.html) | Demo of horizontal flow |
-| [bewertung.html](bewertung.html) | Swipe-based person rating |
+| [bewertung.html](bewertung.html) | Entry page for rating modules |
+| [personenbewertung.html](personenbewertung.html) | Swipe-based person rating |
+| [org-bewertung.html](org-bewertung.html) | Preview for organisation ratings |
 | [interface/settings.html](interface/settings.html) | Language, theme, Tanna logo, and low motion settings |
 | [interface/signup.html](interface/signup.html) | Registration form |
+| [interface/offline-signup.html](interface/offline-signup.html) | Offline local signup |
 | [interface/tanna-template.html](interface/tanna-template.html) | Base template |
 | [interface/tanna-template-dark.html](interface/tanna-template-dark.html) | Template in dark theme |
 | [interface/tanna-template-light.html](interface/tanna-template-light.html) | Template in light theme |
@@ -118,12 +121,16 @@ README.md -> GET_STARTED.md -> index.html
 | [wings/index.html](wings/index.html) | Mobile interface "Wings" |
 | [wings/ratings.html](wings/ratings.html) | Library of all ratings with search |
 | `interface_OLD/` | Historical demo of the first interface generation |
-**Settings are stored per device using browser localStorage and are not synced globally.**
+**Settings are stored per device using browser localStorage and are not synced globally. Color adjustments made in the settings page apply automatically on every page.**
 **Ratings from OP-1 onward are stored globally with the assigned signature ID. The email used during signup is hashed and never exposed.**
 **Optional GitHub login authenticates via GitHub's OAuth flow. The returned username is hashed and stored offline.**
 **Optional Google login authenticates via Google's OAuth flow. The returned email address is hashed and stored offline.**
 **Color verification of the chosen primary color starts once a user holds an OP-1 signature.**
 **From that level, the color choice is stored privately inside the user's signature and never shown publicly.**
+**Custom color schemes can be exported via `exportColorSettings()` and imported via `importColorSettings(json)` in the browser console.**
+**Providing a nickname during signup creates an alias formatted as `nickname@OP-x`, which updates when the OP level changes.**
+
+Users may add a nickname during signup. The server combines it with the OP level to form an alias like `<nick>@OP-1`. This alias updates whenever the OP level changes.
 
 In this anonymous system, the OP signature stands in for the person. Personal data remains private and becomes visible only when a user releases it at the corresponding OP sublevel; see [signaturdesign.md](signaturdesign.md) and [DISCLAIMERS.md](DISCLAIMERS.md).
 
@@ -185,6 +192,10 @@ OP‑0 users remain anonymous and may submit one rating per visit without later 
 | <a id="op-11"></a> OP-11 | digital Yokozuna-Schwingerkönig mode |
 | <a id="op-12"></a> OP-12 | fully digital, first non-human stage |
 
+Upgrades to **OP-4** require a verified authenticator. If `auth_verified` stays
+false for more than four days after `level_change_ts`, the user is automatically
+demoted back to OP‑3. All demotions are stored in `app/demotion_log.json`.
+
 OP-9.A is reserved for the original programmer and is no longer awarded.
 New sublevels begin alphabetically with OP-9.B. Only OP-9.A currently
 holds a veto right. Further veto rights are planned when the system is
@@ -239,7 +250,8 @@ npm run verify
 Translations for the evaluation interface are defined in `i18n/ui-text.json`. To
 include another language, add a new JSON object using the two-letter ISO 639-1
 code as the key and provide translations for all fields found under the `"de"`
-entry. The interface will automatically recognize the new language.
+entry. Full translations are available for English (`en`) and Swiss German
+(`de-ch`). The interface will automatically recognize any new language.
 Word collections for additional languages can be gathered with
 `tools/language-corpus.js`. The script updates `i18n/language-corpus.json`
 based on plain text input. To verify which interface languages are still
@@ -419,6 +431,12 @@ the provided `localhost` address so that translation files load correctly.
 When deploying on another domain, set the environment variable `BASE_URL`
 to that public origin (e.g. `https://4789-alpha.github.io`) so that OAuth
 redirects work properly.
+Configure your GitHub OAuth application to use `${BASE_URL}/auth/github/callback`
+as the callback URL and put your credentials in `app/oauth_config.yaml`.
+
+On GitHub Pages the `/auth/google` path only shows brief instructions.
+Start the local server with `BASE_URL` set to your public origin to enable
+the actual Google login flow.
 
 ### Optional Setup Helper
 [⇧](#contents)

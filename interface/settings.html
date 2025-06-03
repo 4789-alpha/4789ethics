@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="ethicom-style.css" />
   <script src="../utils/op-level.js"></script>
   <script src="ethicom-utils.js"></script>
+  <script src="color-utils.js"></script>
   <script src="language-selector.js"></script>
   <script src="theme-manager.js"></script>
   <script src="color-wizard.js"></script>
@@ -64,13 +65,14 @@
       <div id="color_scheme"></div>
       <button id="color_settings_btn" class="accent-button" type="button" onclick="openColorSettingsPopin()">Adjust Colors</button>
       <button id="color_wizard_btn" class="accent-button" type="button" onclick="openColorSettingsWizard()">Color Wizard</button>
+      <button id="color_cli_wizard_btn" class="accent-button" type="button" onclick="openColorSettingsWizardCLI()">Text Wizard</button>
     </details>
     <details class="card">
       <summary>Background</summary>
       <div id="background_settings">
         <div id="background_count">
           <label for="bg_fill_ratio">Tanna background fill: <span id="bg_fill_ratio_val">40</span>%</label>
-          <input type="range" id="bg_fill_ratio" min="20" max="99" step="1" value="40" />
+          <input type="range" id="bg_fill_ratio" min="20" max="95" step="1" value="40" />
             <small class="note">Reload to apply.</small>
         </div>
         <div id="same_level_count" style="display:none;">
@@ -78,8 +80,8 @@
           <input type="range" id="bg_same_level_count" min="1" max="10" step="1" value="1" />
             <small class="note">Reload to apply.</small>
         </div>
-        <div id="bg_collisions">
-          <label>Tanna collisions always enabled</label>
+        <div id="bg_collisions_wrap">
+          <label><input type="checkbox" id="bg_collisions"/> Enable collisions</label>
         </div>
         <div id="bg_low_motion_wrap">
           <label><input type="checkbox" id="bg_low_motion"/> Low motion background</label>
@@ -92,6 +94,11 @@
         <div id="bg_symbol_size_wrap">
           <label for="bg_symbol_size">Tanna size: <span id="bg_symbol_size_val">100</span>%</label>
           <input type="range" id="bg_symbol_size" min="50" max="200" step="10" value="100" />
+            <small class="note">Reload to apply.</small>
+        </div>
+        <div id="bg_damping_wrap">
+          <label for="bg_damping">Tanna damping: <span id="bg_damping_val">1</span></label>
+          <input type="range" id="bg_damping" min="0" max="1" step="0.05" value="1" />
             <small class="note">Reload to apply.</small>
         </div>
       </div>
@@ -139,31 +146,22 @@
   </main>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      checkLanguageSetup();
       initLanguageDropdown('lang_select');
-      function parseCol(v){
-        v=(v||'').trim();
-        if(v.startsWith('#')){
-          if(v.length===4) v='#'+v[1]+v[1]+v[2]+v[2]+v[3]+v[3];
-          const n=parseInt(v.slice(1),16);
-          return {r:(n>>16)&255,g:(n>>8)&255,b:n&255};
-        }
-        const m=v.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)/);
-        return m?{r:+m[1],g:+m[2],b:+m[3]}:{r:0,g:0,b:0};
-      }
       function initColorSliders(){
         const wrap=document.getElementById('color_scheme');
         if(!wrap) return;
         const vars={
-          '--highlight-text-color':'Highlight','--text-color':'Text','--header-text-color':'Header Text',
+          '--highlight-text-color':'Text','--text-color':'Text','--header-text-color':'Header Text',
           '--nav-text-color':'Nav Text','--bg-color':'Background','--card-bg':'Card',
           '--header-bg':'Header BG','--nav-bg':'Nav BG','--card-alpha-bg':'Card Alpha',
           '--primary-color':'Primary','--accent-color':'Accent'
         };
-        const textVars=new Set(['--text-color','--header-text-color','--nav-text-color','--highlight-text-color']);
+        const textVars=new Set(['--text-color','--header-text-color','--nav-text-color']);
         const stored=JSON.parse(localStorage.getItem('ethicom_colors')||'{}');
         wrap.innerHTML='';
         for(const [name,label] of Object.entries(vars)){
-          const base=parseCol(stored[name]||getComputedStyle(document.documentElement).getPropertyValue(name));
+          const base=parseColor(stored[name]||getComputedStyle(document.documentElement).getPropertyValue(name));
           const b=document.createElement('div');
           const sample=textVars.has(name)?'Text':'';
           b.innerHTML=`<strong>${label}</strong><br>
@@ -227,17 +225,7 @@
         trv.textContent=c.r;
         tgv.textContent=c.g;
         tbv.textContent=c.b;
-        localStorage.setItem('ethicom_tanna_color',JSON.stringify(c));
-        if(document.body.classList.contains('theme-tanna') ||
-           document.body.classList.contains('theme-tanna-dark')){
-          const css=`rgb(${c.r},${c.g},${c.b})`;
-          document.documentElement.style.setProperty('--primary-color',css);
-          document.documentElement.style.setProperty('--accent-color',css);
-          const h=`rgba(${Math.round(c.r*0.2)},${Math.round(c.g*0.2)},${Math.round(c.b*0.2)},0.9)`;
-          const n=`rgba(${Math.round(c.r*0.3)},${Math.round(c.g*0.3)},${Math.round(c.b*0.3)},0.9)`;
-          document.documentElement.style.setProperty('--header-bg',h);
-          document.documentElement.style.setProperty('--nav-bg',n);
-        }
+        applyTannaColor(c);
         if(tp) tp.style.backgroundColor=`rgb(${c.r},${c.g},${c.b})`;
         warn.style.display=contrast(c)<2?'inline':'none';
       }
@@ -246,7 +234,8 @@
       const slider = document.getElementById('bg_fill_ratio');
       const val = document.getElementById('bg_fill_ratio_val');
       if (slider && val) {
-        const stored = parseInt(localStorage.getItem('ethicom_bg_fill') || '40', 10);
+        let stored = parseInt(localStorage.getItem('ethicom_bg_fill') || '40', 10);
+        stored = Math.min(stored, parseInt(slider.max, 10));
         slider.value = stored;
         val.textContent = stored;
         slider.addEventListener('input', e => val.textContent = e.target.value);
@@ -297,6 +286,27 @@
           sizeSlider.addEventListener('change', e => {
             localStorage.setItem('ethicom_bg_symbol_size', e.target.value);
             alert('Reload the page to apply.');
+          });
+        }
+
+      const dampSlider = document.getElementById('bg_damping');
+      const dampVal = document.getElementById('bg_damping_val');
+        if (dampSlider && dampVal) {
+          const storedDamp = parseFloat(localStorage.getItem('ethicom_bg_restitution') || '1');
+          dampSlider.value = storedDamp;
+          dampVal.textContent = storedDamp;
+          dampSlider.addEventListener('input', e => dampVal.textContent = e.target.value);
+          dampSlider.addEventListener('change', e => {
+            localStorage.setItem('ethicom_bg_restitution', e.target.value);
+            alert('Reload the page to apply.');
+          });
+        }
+
+        const collChk = document.getElementById('bg_collisions');
+        if (collChk) {
+          collChk.checked = localStorage.getItem('ethicom_bg_collisions') !== 'false';
+          collChk.addEventListener('change', e => {
+            localStorage.setItem('ethicom_bg_collisions', e.target.checked ? 'true' : 'false');
           });
         }
 

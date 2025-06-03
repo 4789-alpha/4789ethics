@@ -3,6 +3,10 @@
     "positive": ["good", "happy", "excellent", "love", "great"],
     "negative": ["bad", "sad", "terrible", "hate", "awful"]
   },
+  "de-ch": {
+    "positive": ["gut", "glücklich", "hervorragend", "liebe", "toll"],
+    "negative": ["schlecht", "traurig", "schrecklich", "hasse", "furchtbar"]
+  },
   "de": {
     "positive": ["gut", "glücklich", "hervorragend", "liebe", "toll"],
     "negative": ["schlecht", "traurig", "schrecklich", "hasse", "furchtbar"]

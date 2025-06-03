@@ -2,7 +2,11 @@ function initLogoBackground() {
   const container = document.getElementById('op_background');
   if (!container) return;
 
-  const RESTITUTION = 0.9;
+  let RESTITUTION = 1;
+  const storedRest = parseFloat(localStorage.getItem('ethicom_bg_restitution'));
+  if (!Number.isNaN(storedRest)) RESTITUTION = storedRest;
+
+  const MIN_VELOCITY = 0.05;
 
   function rgbToHue(r, g, b) {
     r /= 255; g /= 255; b /= 255;
@@ -80,11 +84,11 @@ function initLogoBackground() {
   }
   if (levels.length === 0) levels.push(0);
   const maxLvl = Math.max(...levels);
-  const minScale = 0.3;
+  const minScale = 0.5;
   const FADE_MS = 1000;
   const imgBase = window.location.pathname.includes('/interface/')
-    ? '../op-logo/'
-    : 'op-logo/';
+    ? '../sources/images/op-logo/'
+    : 'sources/images/op-logo/';
   const images = levels.map(lvl => {
     const img = new Image();
     const src = lvl >= 8 ? 7 : lvl;
@@ -104,7 +108,8 @@ function initLogoBackground() {
   const avgArea = avgSize * avgSize;
   const maxSymbols = Math.floor(canvas.width * canvas.height / avgArea);
   const total = Math.max(20, Math.floor(maxSymbols * fillRatio));
-  const collisionsEnabled = !lowMotion;
+  const collisionsEnabled = !lowMotion &&
+    localStorage.getItem('ethicom_bg_collisions') !== 'false';
   for (let i = 0; i < total; i++) {
     const lvl = levels[i % levels.length];
     const img = images[lvl >= 8 ? 7 : lvl];
@@ -141,6 +146,7 @@ function initLogoBackground() {
       scaleDir: 0,
       fadeOut: false,
       fadeStart: 0,
+      collisionCount: 0,
     });
   }
 
@@ -196,11 +202,37 @@ function initLogoBackground() {
           const minDist = s.radius * s.scale + o.radius * o.scale;
           if (dist < minDist) {
             resolveCollision(s, o);
+            if (s.lvl === maxLvl) {
+              s.collisionCount++;
+              if (s.collisionCount % 10000 === 0) {
+                const base = 0.2 + Math.random() * 0.3;
+                const factor = 1 - s.lvl / (maxLvl + 1);
+                s.rotSpeed = base * factor;
+                s.rotFrames = 180;
+                s.scaleDir = -1;
+                s.fadeOut = true;
+                s.fadeStart = performance.now();
+                s.collisionCount = 0;
+              }
+            }
+            if (o.lvl === maxLvl) {
+              o.collisionCount++;
+              if (o.collisionCount % 10000 === 0) {
+                const base = 0.2 + Math.random() * 0.3;
+                const factor = 1 - o.lvl / (maxLvl + 1);
+                o.rotSpeed = base * factor;
+                o.rotFrames = 180;
+                o.scaleDir = -1;
+                o.fadeOut = true;
+                o.fadeStart = performance.now();
+                o.collisionCount = 0;
+              }
+            }
             if (s.lvl < o.lvl) {
               const base = 0.2 + Math.random() * 0.3;
               const factor = 1 - s.lvl / (maxLvl + 1);
               s.rotSpeed = base * factor;
-              s.rotFrames = 180;
+              s.rotFrames = 60;
               s.scaleDir = -1;
               s.fadeOut = true;
               s.fadeStart = performance.now();
@@ -208,7 +240,7 @@ function initLogoBackground() {
               const base = 0.2 + Math.random() * 0.3;
               const factor = 1 - o.lvl / (maxLvl + 1);
               o.rotSpeed = base * factor;
-              o.rotFrames = 180;
+              o.rotFrames = 60;
               o.scaleDir = -1;
               o.fadeOut = true;
               o.fadeStart = performance.now();
@@ -220,6 +252,14 @@ function initLogoBackground() {
       s.dx *= RESTITUTION;
       s.dy *= RESTITUTION;
 
+      if (Math.hypot(s.dx, s.dy) < MIN_VELOCITY) {
+        const angle = Math.random() * Math.PI * 2;
+        const baseSpeed = 0.5 + Math.random() * 1.5;
+        const speed = baseSpeed * (lowMotion ? 0.4 : 1);
+        s.dx = Math.cos(angle) * speed;
+        s.dy = Math.sin(angle) * speed;
+      }
+
       if (s.rotFrames > 0) {
         s.rotation += s.rotSpeed;
         s.rotFrames--;
@@ -229,7 +269,7 @@ function initLogoBackground() {
 
         if (s.scaleDir !== 0) {
           if (s.scaleDir === -1) {
-            s.scale -= 0.2;
+            s.scale -= 0.1;
             if (s.scale <= minScale) {
               s.scale = minScale;
               s.scaleDir = s.fadeOut ? 0 : 1;

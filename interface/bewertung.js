@@ -5,6 +5,16 @@ let ratingInfo = {};
 let detailsMap = {};
 let candidateList = [];
 
+function vibrateHeartbeat() {
+  if (
+    window.touchSettings &&
+    window.touchSettings.state.haptics &&
+    navigator.vibrate
+  ) {
+    navigator.vibrate([60, 40, 60]);
+  }
+}
+
 async function loadRatingTexts() {
   try {
     const txt = await fetch('i18n/ui-text.json').then(r => r.json());
@@ -212,6 +222,7 @@ function submitBewertung() {
   const lvl = parseInt(evalData.op_level.replace('OP-', '').split('.')[0], 10) || 0;
   if (lvl > ratingInfo[human_id].max) ratingInfo[human_id].max = lvl;
   alert(ratingTexts.rating_saved || 'Rating saved.');
+  vibrateHeartbeat();
 }
 
 if (typeof module !== 'undefined') {

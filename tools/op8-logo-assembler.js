@@ -4,7 +4,7 @@ const path = require('path');
 
 async function assembleOp8(outputPath) {
   const repoRoot = path.join(__dirname, '..');
-  const op7Path = path.join(repoRoot, 'op-logo', 'tanna_op7.png');
+  const op7Path = path.join(repoRoot, 'sources', 'images', 'op-logo', 'tanna_op7.png');
   if (!fs.existsSync(op7Path)) {
     console.error('tanna_op7.png not found.');
     process.exit(1);
@@ -30,7 +30,7 @@ async function assembleOp8(outputPath) {
 }
 
 if (require.main === module) {
-  const out = process.argv[2] || path.join(__dirname, '..', 'op-logo', 'tanna_op8.png');
+  const out = process.argv[2] || path.join(__dirname, '..', 'sources', 'images', 'op-logo', 'tanna_op8.png');
   assembleOp8(out).catch(err => {
     console.error(err);
     process.exit(1);

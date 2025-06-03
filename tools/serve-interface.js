@@ -97,6 +97,7 @@ const oauthStates = new Set();
 const gateCfgPath = path.join(repoRoot, paths.gatekeeperConfig || 'app/gatekeeper_config.yaml');
 const gateStore = path.join(repoRoot, paths.gatekeeperDevices || 'app/gatekeeper_devices.json');
 const gateLogPath = path.join(repoRoot, paths.gatekeeperLog || 'app/gatekeeper_log.json');
+const demotionLog = path.join(repoRoot, paths.demotionLog || 'app/demotion_log.json');
 
 const mime = {
   '.html': 'text/html',
@@ -125,12 +126,54 @@ function writeJson(file, data) {
   fs.writeFileSync(file, JSON.stringify(data, null, 2));
 }
 
+function logDemotion(userId, filePath) {
+  const logFile = filePath || demotionLog;
+  const list = readJson(logFile);
+  list.push({ id: userId, timestamp: new Date().toISOString() });
+  writeJson(logFile, list);
+}
+
+function checkPendingDemotions(userPath, logPath) {
+  const users = readJson(userPath || usersFile);
+  let changed = false;
+  for (const u of users) {
+    if (u.op_level === 'OP-4' && u.auth_verified === false && u.level_change_ts) {
+      const diff = Date.now() - new Date(u.level_change_ts).getTime();
+      if (diff > 96 * 3600 * 1000) {
+        u.op_level = 'OP-3';
+        u.level_change_ts = new Date().toISOString();
+        logDemotion(u.id, logPath);
+        changed = true;
+      }
+    }
+  }
+  if (changed) writeJson(userPath || usersFile, users);
+function updateAlias(user) {
+  if (user && user.nickname) {
+    user.alias = `${user.nickname}@${user.op_level}`;
+  }
+  if (!user.alias) return;
+  const name = user.alias.split('@')[0];
+  user.alias = `${name}@${user.op_level}`;
+}
+
+function setOpLevel(id, level, authCode) {
+  const users = readJson(usersFile);
+  const user = users.find(u => u.id === id);
+  if (!user) return false;
+  if (user.totpSecret && !verifyTotp(user.totpSecret, authCode)) return false;
+  user.op_level = level;
+  updateAlias(user);
+  writeJson(usersFile, users);
+  return true;
+}
+
 function handleSignup(req, res) {
   let body = '';
   req.on('data', c => { body += c; });
   req.on('end', () => {
     try {
-      const { email, password, address, phone } = JSON.parse(body);
+      const { email, password, address, phone, country, nickname } = JSON.parse(body);
       if (!/^[^@]+@[^@]+\.[^@]+$/.test(email) || !password || password.length < 8) {
         res.writeHead(400); res.end('Invalid data'); return;
       }
@@ -140,12 +183,28 @@ function handleSignup(req, res) {
       const pwHash = crypto.createHash('sha256').update(password + salt).digest('hex');
       const addrHash = address ? crypto.createHash('sha256').update(address).digest('hex') : null;
       const phoneHash = phone ? crypto.createHash('sha256').update(phone).digest('hex') : null;
+      const countryHash = country ? crypto.createHash('sha256').update(country).digest('hex') : null;
       const secret = generateTotpSecret();
       const users = readJson(usersFile);
-      users.push({ id, emailHash, pwHash, salt, op_level: 'OP-1', totpSecret: secret, addrHash, phoneHash });
+      const user = {
+        id,
+        emailHash,
+        pwHash,
+        salt,
+        op_level: 'OP-1',
+        nickname: nickname || null,
+        totpSecret: secret,
+        addrHash,
+        phoneHash,
+        countryHash,
+        auth_verified: false,
+        level_change_ts: new Date().toISOString()
+      };
+      updateAlias(user);
+      users.push(user);
       writeJson(usersFile, users);
       res.writeHead(200, { 'Content-Type': 'application/json' });
-      res.end(JSON.stringify({ id, secret }));
+      res.end(JSON.stringify({ id, secret, alias: user.alias }));
     } catch {
       res.writeHead(400); res.end('Bad Request');
     }
@@ -179,8 +238,19 @@ function handleLogin(req, res) {
       if (user.totpSecret && !verifyTotp(user.totpSecret, auth_code)) {
         res.writeHead(403); res.end('Invalid credentials'); return;
       }
+      if (user.op_level === 'OP-4' && user.auth_verified === false && user.level_change_ts) {
+        const diff = Date.now() - new Date(user.level_change_ts).getTime();
+        if (diff > 96 * 3600 * 1000) {
+          user.op_level = 'OP-3';
+          user.level_change_ts = new Date().toISOString();
+          logDemotion(user.id);
+          writeJson(usersFile, users);
+        }
+      }
+      updateAlias(user);
+      writeJson(usersFile, users);
       res.writeHead(200, { 'Content-Type': 'application/json' });
-      res.end(JSON.stringify({ id: user.id, op_level: user.op_level }));
+      res.end(JSON.stringify({ id: user.id, op_level: user.op_level, alias: user.alias }));
     } catch {
       res.writeHead(400); res.end('Bad Request');
     }
@@ -193,7 +263,8 @@ function handleGithubStart(req, res) {
   }
   const state = crypto.randomBytes(8).toString('hex');
   oauthStates.add(state);
-  const url = `https://github.com/login/oauth/authorize?client_id=${oauthCfg.github.client_id}&state=${state}`;
+  const redirect = encodeURIComponent(`${baseUrl}/auth/github/callback`);
+  const url = `https://github.com/login/oauth/authorize?client_id=${oauthCfg.github.client_id}&state=${state}&redirect_uri=${redirect}`;
   res.writeHead(302, { Location: url });
   res.end();
 }
@@ -260,7 +331,9 @@ function handleGithubCallback(req, res) {
               id: 'SIG-' + crypto.randomBytes(6).toString('hex').toUpperCase(),
               op_level: 'OP-1',
               githubHash: ghHash,
-              tokenHash
+              tokenHash,
+              auth_verified: false,
+              level_change_ts: new Date().toISOString()
             };
             users.push(user);
           } else {
@@ -354,7 +427,9 @@ function handleGoogleCallback(req, res) {
               id: 'SIG-' + crypto.randomBytes(6).toString('hex').toUpperCase(),
               op_level: 'OP-1',
               googleHash: gHash,
-              tokenHash
+              tokenHash,
+              auth_verified: false,
+              level_change_ts: new Date().toISOString()
             };
             users.push(user);
           } else {
@@ -485,6 +560,36 @@ function handleConnectList(req, res) {
   res.end(JSON.stringify({ pending: pending, connections: conns }));
 }
 
+function handleLevelUpgrade(req, res) {
+  let body = '';
+  req.on('data', c => { body += c; });
+  req.on('end', () => {
+    try {
+      const { id, level } = JSON.parse(body);
+      const users = readJson(usersFile);
+      const user = users.find(u => u.id === id);
+      if (!user || !level) { res.writeHead(400); res.end('Invalid'); return; }
+      user.op_level = level;
+      let warning = null;
+      if (level === 'OP-4') {
+        if (!user.auth_verified) {
+          if (!user.level_change_ts) user.level_change_ts = new Date().toISOString();
+          warning = 'auth not verified';
+        } else {
+          user.level_change_ts = new Date().toISOString();
+        }
+      } else {
+        user.level_change_ts = new Date().toISOString();
+      }
+      writeJson(usersFile, users);
+      res.writeHead(200, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ id: user.id, op_level: user.op_level, warning }));
+    } catch {
+      res.writeHead(400); res.end('Bad Request');
+    }
+  });
+}
+
 function handleTempToken(req, res) {
   const cfg = parseConfig(gateCfgPath) || {};
   const dur = parseInt(cfg.temp_token_duration || '86400', 10);
@@ -507,6 +612,9 @@ const server = http.createServer((req, res) => {
   }
   if (req.method === 'POST' && urlPath === '/api/login') {
     return handleLogin(req, res);
+  }
+  if (req.method === 'POST' && urlPath === '/api/upgrade') {
+    return handleLevelUpgrade(req, res);
   }
   if (req.method === 'GET' && urlPath === '/auth/github') {
     return handleGithubStart(req, res);
@@ -537,6 +645,22 @@ const server = http.createServer((req, res) => {
   }
   if (req.method === 'GET' && urlPath === '/api/sources') {
     return handleSources(req, res);
+  }
+  if (req.method === 'GET' && urlPath.startsWith('/api/explorer')) {
+    const u = new URL(req.url, baseUrl);
+    const rel = u.searchParams.get('path') || '';
+    const safe = path.normalize(rel).replace(/^(\.\.\/?)+/, '');
+    const target = path.join(root, safe);
+    return fs.promises.readdir(target, { withFileTypes: true })
+      .then(entries => {
+        const data = entries.map(e => ({ name: e.name, dir: e.isDirectory() }));
+        res.writeHead(200, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify(data));
+      })
+      .catch(() => {
+        res.statusCode = 404;
+        res.end(JSON.stringify({ error: 'Not found' }));
+      });
   }
   if (req.method === 'GET' && urlPath === '/config.json') {
     return serveFile(path.join(repoRoot, 'config.json'), res);
@@ -573,6 +697,7 @@ if (require.main === module) {
 } else {
   module.exports = {
     handleSignup,
+    updateAlias,
     handleEvaluation,
     handleLogin,
     handleSources,
@@ -583,6 +708,9 @@ if (require.main === module) {
     handleConnectRequest,
     handleConnectApprove,
     handleConnectList,
-    handleTempToken
+    handleTempToken,
+    handleLevelUpgrade,
+    checkPendingDemotions,
+    setOpLevel
   };
 }

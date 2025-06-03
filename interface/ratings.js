@@ -59,7 +59,7 @@ async function initRatings() {
       const srcNum = base >= 8 ? 7 : base;
       let html = '<span class="op-logo-group">';
       for (let i = 0; i < count; i++) {
-        html += `<img class="citation-logo" src="../op-logo/tanna_op${srcNum}.png" alt="Logo ${level}" style="filter: hue-rotate(-80deg) saturate(0.7) hue-rotate(${hue}deg);">`;
+        html += `<img class="citation-logo" src="../sources/images/op-logo/tanna_op${srcNum}.png" alt="Logo ${level}" style="filter: hue-rotate(-80deg) saturate(0.7) hue-rotate(${hue}deg);">`;
       }
       html += '</span>';
       return html;

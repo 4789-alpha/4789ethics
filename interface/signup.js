@@ -16,16 +16,27 @@ function applySignupTexts() {
   if (emailLabel) emailLabel.textContent = t.signup_email || emailLabel.textContent;
   const pwLabel = document.querySelector('label[for="pw_input"]');
   if (pwLabel) pwLabel.textContent = t.signup_password || pwLabel.textContent;
+  const nickLabel = document.querySelector('label[for="nick_input"]');
+  if (nickLabel) nickLabel.textContent = t.signup_nick || nickLabel.textContent;
   const signupBtn = document.getElementById('signup_btn');
   if (signupBtn) signupBtn.textContent = t.signup_btn || signupBtn.textContent;
   const emailInput = document.getElementById('email_input');
   if (emailInput && t.signup_placeholder_email) emailInput.placeholder = t.signup_placeholder_email;
   const pwInput = document.getElementById('pw_input');
   if (pwInput && t.signup_placeholder_pw) pwInput.placeholder = t.signup_placeholder_pw;
+  const nickInput = document.getElementById('nick_input');
+  if (nickInput && t.signup_placeholder_nick) nickInput.placeholder = t.signup_placeholder_nick;
   const addrLabel = document.querySelector('label[for="addr_input"]');
   if (addrLabel) addrLabel.textContent = t.signup_address || addrLabel.textContent;
   const addrInput = document.getElementById('addr_input');
   if (addrInput && t.signup_placeholder_address) addrInput.placeholder = t.signup_placeholder_address;
+  const countryLabel = document.querySelector('label[for="country_input"]');
+  if (countryLabel) countryLabel.textContent = t.signup_country || 'Country/Region:';
+  const countryInput = document.getElementById('country_input');
+  if (countryInput) {
+    if (t.signup_placeholder_country) countryInput.placeholder = t.signup_placeholder_country;
+    else countryInput.placeholder = 'CH';
+  }
   const phoneLabel = document.querySelector('label[for="phone_input"]');
   if (phoneLabel) phoneLabel.textContent = t.signup_phone || phoneLabel.textContent;
   const phoneInput = document.getElementById('phone_input');
@@ -47,11 +58,15 @@ function handleSignup() {
   const pwInput = document.getElementById('pw_input');
   const addrInput = document.getElementById('addr_input');
   const phoneInput = document.getElementById('phone_input');
+  const countryInput = document.getElementById('country_input');
+  const nickInput = document.getElementById('nick_input');
   const statusEl = document.getElementById('signup_status');
   const email = emailInput.value.trim();
   const password = pwInput.value;
   const address = addrInput ? addrInput.value.trim() : '';
   const phone = phoneInput ? phoneInput.value.trim() : '';
+  const country = countryInput ? countryInput.value.trim() : '';
+  const nickname = nickInput ? nickInput.value.trim() : '';
   statusEl.textContent = '';
 
   if (!/^[^@]+@[^@]+\.[^@]+$/.test(email)) {
@@ -79,16 +94,17 @@ function handleSignup() {
   fetch('/api/signup', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ email, password, address, phone })
+    body: JSON.stringify({ email, password, address, phone, country, nickname })
   })
     .then(r => r.json())
     .then(data => {
-      const sig = { email, id: data.id, op_level: 'OP-1' };
+      const sig = { email, id: data.id, op_level: 'OP-1', nickname, alias: data.alias };
       localStorage.setItem('ethicom_signature', JSON.stringify(sig));
       const msgSaved = uiText.signup_saved || 'Signup complete. ID stored.';
+      const msgAlias = (uiText.signup_alias || 'Alias: {alias}').replace('{alias}', data.alias);
       const msgSecret = (uiText.signup_secret || 'Authenticator secret: {secret}')
         .replace('{secret}', data.secret);
-      statusEl.textContent = msgSaved + '\n' + msgSecret;
+      statusEl.textContent = msgSaved + '\n' + msgAlias + '\n' + msgSecret;
     })
     .catch(() => {
       statusEl.textContent = 'Signup failed.';

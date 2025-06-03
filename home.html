@@ -9,6 +9,7 @@
   <script src="interface/ethicom-utils.js"></script>
   <script src="interface/accessibility.js"></script>
   <script src="interface/color-auth.js"></script>
+  <script src="interface/color-utils.js"></script>
   <script src="interface/language-selector.js"></script>
   <script src="interface/dynamic-info.js"></script>
   <script src="interface/op-overview.js"></script>
@@ -56,6 +57,14 @@
       </ul>
     </section>
     <section class="card">
+      <h2>Hinweis zur Codex-Umgebung</h2>
+      <p>
+        Das Terminal im Codex‑Container ist minimal ausgestattet.
+        Interaktive Editoren wie <code>nano</code> oder <code>vim</code> stehen nicht zur Verfügung. Nach dem Start besteht keine
+        Netzwerkanbindung, daher lassen sich keine Pakete über <code>apt</code> nachträglich installieren. Codeänderungen erfolgen über Befehle wie <code>cat</code> und <code>echo</code> oder über den integrierten Codex-Editor.
+      </p>
+    </section>
+    <section class="card">
       <h2>Direkt loslegen</h2>
       <p>Starte die Bewertung über <a href="interface/ethicom.html">Ethicom</a>. Eine Vorschau für OP‑0 ist ohne Anmeldung möglich.</p>
     </section>
@@ -64,13 +73,14 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       getLanguage();
+      checkLanguageSetup();
       localStorage.setItem('visited_start', 'true');
       const level = window.getStoredOpLevel ? window.getStoredOpLevel() || 'OP-0' : 'OP-0';
       const base = parseInt(String(level).replace('OP-', '').split('.')[0], 10);
       const srcNum = base >= 8 ? 7 : base;
       const hue = base >= 8 ? (base - 7) * 30 : 0;
       document.querySelectorAll('.start-op-logo').forEach(img => {
-        img.src = `op-logo/tanna_op${srcNum}.png`;
+        img.src = `sources/images/op-logo/tanna_op${srcNum}.png`;
         img.alt = level;
         img.setAttribute('aria-label', level);
         img.style.filter = base >= 8 ?
