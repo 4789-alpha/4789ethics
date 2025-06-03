@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PKB – Kunst- und Kulturabteilung BSVRB</title>
+  <link rel="stylesheet" href="interface/ethicom-style.css" />
+  <script src="interface/color-utils.js"></script>
+  <script src="interface/theme-manager.js"></script>
+  <script src="interface/accessibility.js"></script>
+  <script src="interface/logo-background.js"></script>
+  <script src="interface/module-logo.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main_content">Skip to main content</a>
+  <div id="op_background"></div>
+  <header data-logo="sources/images/institutions/logo-pkb.svg">
+    <h1>Kunst- und Kulturabteilung BSVRB</h1>
+    <p class="tagline">Vorbereitung zur Gründung – Pro Cultura Bernensis</p>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="bewertung.html">Bewertung</a>
+      <a href="interface/settings.html" class="icon-only">⚙</a>
+      <a href="interface/login.html">Login</a>
+      <a href="wings/ratings.html">Ratings</a>
+      <a href="interface/signup.html">Signup</a>
+      <a href="interface/genealogie.html">Genealogie</a>
+      <a href="README.html" class="readme-link">README</a>
+    </nav>
+  </header>
+  <main id="main_content">
+    <section class="card">
+      <h2>Statuten des Vereins <em>Pro Cultura Bernensis (PKB)</em></h2>
+      <p>Version 1.0 – gültig ab [Datum]</p>
+      <h3>Art. 1 – Name, Sitz und Zweck</h3>
+      <ol>
+        <li>Unter dem Namen <strong>Pro Cultura Bernensis (PKB)</strong> besteht ein gemeinnütziger Verein gemäss Art. 60 ff. ZGB.</li>
+        <li>Der Verein hat seinen Sitz im Kanton Bern und fördert Kunst und Kultur.</li>
+        <li>Er ist politisch und konfessionell neutral.</li>
+      </ol>
+      <h3>Art. 2 – Aufgaben</h3>
+      <ol>
+        <li>Unterstützung von kulturellen Veranstaltungen und Projekten.</li>
+        <li>Pflege des Austauschs zwischen Kunstschaffenden und Bevölkerung.</li>
+        <li>Bewahrung des regionalen Kulturerbes.</li>
+      </ol>
+    </section>
+    <section class="card">
+      <h2>Disclaimers</h2>
+      <ul>
+        <li>Diese Struktur wird ohne Gewährleistung bereitgestellt.</li>
+        <li>Die Nutzung erfolgt auf eigene Verantwortung.</li>
+        <li>4789 ist ein Standard für Verantwortung, keine Person.</li>
+        <li>Nutzung nur reflektiert und mit Konsequenz.</li>
+      </ul>
+    </section>
+  </main>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      initSideDrop('interface/op-navigation.html');
+      const menu = document.getElementById('side_menu');
+      if(menu) menu.addEventListener('click', e => { e.preventDefault(); toggleSideDrop(); });
+    });
+  </script>
+  <div id="side_drop"></div>
+</body>
+</html>

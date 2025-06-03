@@ -1,12 +1,18 @@
 // language-selector.js – 4789: bewusste Sprachwahl ohne Priorisierung
 
+
 function askLanguageChoice() {
-  const lang = prompt("Please enter your preferred language code (e.g. en, de, fr, sw, hi, ar…):")
+  const lang = prompt(
+    "Please enter your preferred language code (e.g. en, de, fr, de-ch):"
+  )
     ?.trim()
     .toLowerCase();
 
-  if (!lang || lang.length !== 2) {
-    alert("Invalid language code. Please enter a valid ISO-639-1 code (e.g. 'en', 'fr', 'sw').");
+  const valid = /^[a-z]{2}(-[a-z]{2})?$/.test(lang || "");
+  if (!valid) {
+    alert(
+      "Invalid language code. Use ISO-639-1 or a language-region code like 'de-ch'."
+    );
     return null;
   }
 
@@ -15,13 +21,13 @@ function askLanguageChoice() {
 }
 
 function getLanguage() {
-  const stored = localStorage.getItem("ethicom_lang");
-  const lang = stored || "de";
-  if (lang) {
-    document.documentElement.lang = lang;
-    localStorage.setItem("ethicom_lang", lang);
+  let lang = localStorage.getItem("ethicom_lang");
+  if (!lang) {
+    lang = (navigator.language || "de-CH").toLowerCase();
   }
-  if (typeof updateReadmeLinks === 'function') updateReadmeLinks(lang);
+  document.documentElement.lang = lang;
+  localStorage.setItem("ethicom_lang", lang);
+  if (typeof updateReadmeLinks === "function") updateReadmeLinks(lang);
   return lang;
 }
 
