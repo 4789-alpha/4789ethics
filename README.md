@@ -87,7 +87,7 @@ README.md -> GET_STARTED.md -> index.html
 | `test/` | Node.js test suite |
 | `tools/` | Utility scripts (e.g., trust-demotion engine, reliability monitor, correction engine, Python API example) |
 | `use_cases/` | Example scenarios and dissemination ideas |
-| `op-logo/` | Stages of the Tanna symbol |
+| `sources/images/op-logo/` | Stages of the Tanna symbol |
 | `wings/` | Minimal mobile interface |
 | `evidence/` | Datasets such as `person-ratings.json` |
 | `interface_OLD/` | Legacy version of the first interface |
