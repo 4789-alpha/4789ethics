@@ -14,6 +14,7 @@ function getLogoPath(opLevel) {
 function insertModuleLogo() {
   const header = document.querySelector('header');
   if (!header) return;
+  const custom = header.getAttribute('data-logo');
   const level = typeof getStoredOpLevel === 'function'
     ? (getStoredOpLevel() || 'OP-0')
     : 'OP-0';

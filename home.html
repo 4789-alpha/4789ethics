@@ -73,6 +73,7 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       getLanguage();
+      checkLanguageSetup();
       localStorage.setItem('visited_start', 'true');
       const level = window.getStoredOpLevel ? window.getStoredOpLevel() || 'OP-0' : 'OP-0';
       const base = parseInt(String(level).replace('OP-', '').split('.')[0], 10);

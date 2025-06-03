@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin – BSVRB</title>
+</head>
+<body>
+  <h2>👋 Willkommen im Adminbereich</h2>
+  <p>Nur sichtbar mit gültigem Token.</p>
+  <button onclick="logout()">Logout</button>
+
+  <script>
+    // Token prüfen
+    const token = localStorage.getItem("jwt");
+    if (!token) {
+      window.location.href = "login.html";
+    }
+
+    // Optional: Token-Validierung beim Server (empfohlen später)
+    // fetch("/api/check", { headers: { Authorization: "Bearer " + token } })
+
+    function logout() {
+      localStorage.removeItem("jwt");
+      alert("Logout erfolgreich.");
+      window.location.href = "login.html";
+    }
+  </script>
+</body>
+</html>
