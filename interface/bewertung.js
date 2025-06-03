@@ -27,7 +27,7 @@ async function loadRatingTexts() {
 
 async function loadRatings() {
   try {
-    const list = await fetch('../evidence/person-ratings.json').then(r => r.json());
+    const list = await fetch('evidence/person-ratings.json').then(r => r.json());
     ratingInfo = {};
     list.forEach(r => {
       const num = parseInt(String(r.op_level).replace('OP-', '').split('.')[0], 10) || 0;
