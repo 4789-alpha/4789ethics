@@ -111,14 +111,10 @@
 })();
 
 function getReadmePath(lang) {
-  const p = window.location.pathname;
-  const docsPrefix = (p.includes('/interface/') || p.includes('/wings/'))
-    ? '..'
-    : (p.includes('/docs/') ? '.' : 'docs');
-  const rootPrefix = (p.includes('/interface/') || p.includes('/wings/') || p.includes('/docs/')) ? '..' : '.';
+  const prefix = window.location.pathname.includes('/interface/') ? '..' : '.';
   return lang === 'en'
-    ? `${docsPrefix}/README.html`
-    : `${rootPrefix}/i18n/README.${lang}.md`;
+    ? `${prefix}/README.html`
+    : `${prefix}/i18n/README.${lang}.md`;
 }
 
 function renderBadge(currentRank, maxRank) {

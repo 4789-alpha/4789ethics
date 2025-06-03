@@ -17,7 +17,7 @@ function vibrateHeartbeat() {
 
 async function loadRatingTexts() {
   try {
-    const txt = await fetch('../i18n/ui-text.json').then(r => r.json());
+    const txt = await fetch('i18n/ui-text.json').then(r => r.json());
     const lang = (typeof getLanguage === 'function' ? getLanguage() : document.documentElement.lang) || 'de';
     ratingTexts = txt[lang] || txt.en || {};
   } catch {
