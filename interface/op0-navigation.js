@@ -14,9 +14,7 @@
   }
   function insertNav(){
     if(document.querySelector('nav')) return;
-    const base = (location.pathname.includes('/interface/') || location.pathname.includes('/wings/'))
-      ? '../docs/'
-      : '';
+    const base = (location.pathname.includes('/interface/') || location.pathname.includes('/wings/')) ? '../' : '';
     const navHtml =
       '<nav class="op0-nav">'+
       `<a href="${base}home.html">Home</a>`+
