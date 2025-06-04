@@ -4,8 +4,8 @@
 function getReadmePath(lang) {
   const prefix = window.location.pathname.includes('/interface/') ? '..' : '.';
   return lang === 'en'
-    ? `${prefix}/README.md`
-    : `${prefix}/i18n/README.${lang}.md`;
+    ? `${prefix}/README.html`
+    : `${prefix}/i18n/README.${lang}.html`;
 }
 
 function renderBadge(currentRank, maxRank) {
