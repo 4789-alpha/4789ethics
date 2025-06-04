@@ -174,7 +174,7 @@ function handleSignup(req, res) {
   req.on('data', c => { body += c; });
   req.on('end', () => {
     try {
-      const { email, password, address, phone, country, nickname } = JSON.parse(body);
+      const { email, password, address, phone, country, nickname, id_number } = JSON.parse(body);
       if (!/^[^@]+@[^@]+\.[^@]+$/.test(email) || !password || password.length < 8) {
         res.writeHead(400); res.end('Invalid data'); return;
       }
@@ -185,8 +185,12 @@ function handleSignup(req, res) {
       const addrHash = address ? crypto.createHash('sha256').update(address).digest('hex') : null;
       const phoneHash = phone ? crypto.createHash('sha256').update(phone).digest('hex') : null;
       const countryHash = country ? crypto.createHash('sha256').update(country).digest('hex') : null;
+      const idHash = id_number ? crypto.createHash('sha256').update(id_number).digest('hex') : null;
       const secret = generateTotpSecret();
       const users = readJson(usersFile);
+      if (idHash && users.some(u => u.idHash === idHash)) {
+        res.writeHead(409); res.end('ID already exists'); return;
+      }
       const user = {
         id,
         emailHash,
@@ -198,6 +202,7 @@ function handleSignup(req, res) {
         addrHash,
         phoneHash,
         countryHash,
+        idHash,
         auth_verified: false,
         level_change_ts: new Date().toISOString()
       };

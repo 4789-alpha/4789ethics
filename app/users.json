@@ -8,6 +8,8 @@
     "totpSecret": "",
     "addrHash": null,
     "phoneHash": null,
+    "countryHash": null,
+    "idHash": null,
     "auth_verified": false,
     "level_change_ts": null
   }

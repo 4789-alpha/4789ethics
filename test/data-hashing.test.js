@@ -87,6 +87,30 @@ test('signup with nickname stores alias with level', () => {
   }
 });
 
+test('duplicate id_number rejects signup', () => {
+  const usersPath = path.join(__dirname, '..', 'app', 'users.json');
+  const backup = fs.existsSync(usersPath) ? fs.readFileSync(usersPath, 'utf8') : null;
+  try {
+    fs.writeFileSync(usersPath, '[]');
+    const { handleSignup } = require('../tools/serve-interface.js');
+    const body1 = JSON.stringify({ email: 'a@example.com', password: 'pw123456', id_number: 'ID-42' });
+    const body2 = JSON.stringify({ email: 'b@example.com', password: 'pw654321', id_number: 'ID-42' });
+    const req1 = new events.EventEmitter();
+    const res1 = { status: 0, writeHead(c){this.status=c;}, end(){} };
+    handleSignup(req1, res1); req1.emit('data', body1); req1.emit('end');
+    assert.strictEqual(res1.status, 200);
+    const req2 = new events.EventEmitter();
+    const res2 = { status: 0, writeHead(c){this.status=c;}, end(){} };
+    handleSignup(req2, res2); req2.emit('data', body2); req2.emit('end');
+    assert.strictEqual(res2.status, 409);
+    const stored = JSON.parse(fs.readFileSync(usersPath, 'utf8'));
+    assert.strictEqual(stored.length, 1);
+  } finally {
+    restore(usersPath, backup);
+    delete require.cache[require.resolve('../tools/serve-interface.js')];
+  }
+});
+
 test('setOpLevel updates alias for user', () => {
   const usersPath = path.join(__dirname, '..', 'app', 'users.json');
   const backup = fs.existsSync(usersPath) ? fs.readFileSync(usersPath, 'utf8') : null;
