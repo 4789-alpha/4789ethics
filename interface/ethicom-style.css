@@ -704,8 +704,8 @@ body.left-layout main {
 .side-registers {
   position: fixed;
   left: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  bottom: 1em;
+  transform: none;
   display: flex;
   flex-direction: column;
   background: var(--card-bg);
