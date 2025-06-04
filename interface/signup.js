@@ -115,7 +115,13 @@ function handleSignup() {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ email, password, address, phone, country, nickname })
   })
-    .then(r => r.json())
+    .then(async r => {
+      if (!r.ok) {
+        const txt = await r.text();
+        throw new Error(txt || 'Signup failed.');
+      }
+      return r.json();
+    })
     .then(data => {
       const sig = { email, id: data.id, op_level: 'OP-1', nickname, alias: data.alias };
       localStorage.setItem('ethicom_signature', JSON.stringify(sig));
@@ -125,8 +131,8 @@ function handleSignup() {
         .replace('{secret}', data.secret);
       statusEl.textContent = msgSaved + '\n' + msgAlias + '\n' + msgSecret;
     })
-    .catch(() => {
-      statusEl.textContent = 'Signup failed.';
+    .catch(err => {
+      statusEl.textContent = err.message || 'Signup failed.';
     });
 }
 
