@@ -17,21 +17,11 @@
     const base = (location.pathname.includes('/interface/') || location.pathname.includes('/wings/')) ? '../' : '';
     const navHtml =
       '<nav class="op0-nav">'+
-      `<a href="${base}home.html">Home</a>`+
-      `<a href="${base}bewertung.html">Bewertung</a>`+
-      `<a href="${base}interface/settings.html">Settings</a>`+
-      `<a href="${base}interface/login.html">Login</a>`+
-      `<a href="${base}wings/ratings.html">Ratings</a>`+
+      `<a href="${base}home.html" class="icon-only" aria-label="Home">\u{1F3E0}</a>`+
+      `<a href="${base}interface/settings.html" class="icon-only" aria-label="Settings">\u2699</a>`+
+      `<a href="${base}interface/login.html" class="icon-only" aria-label="Login">\u{1F511}</a>`+
       `<a href="${base}interface/signup.html">Signup</a>`+
-      `<a href="${base}interface/op-story.html">OP Story</a>`+
-      `<a href="${base}interface/hermes.html">Hermes</a>`+
-      `<a href="${base}interface/shneiderman.html">Shneiderman</a>`+
-      `<a href="${base}interface/nielsen.html">Nielsen</a>`+
-      `<a href="${base}interface/norman.html">Norman</a>`+
-      `<a href="${base}interface/material.html">Material</a>`+
-      `<a href="${base}interface/apple-hig.html">Apple\u00a0HIG</a>`+
-      `<a href="${base}interface/navigator.html">Navigator</a>`+
-      `<a href="${base}README.html">README</a>`+
+      `<a href="${base}README.html" class="icon-only readme-link" aria-label="Help">?</a>`+
       '</nav>';
     document.body.insertAdjacentHTML('afterbegin', navHtml);
   }

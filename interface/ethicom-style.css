@@ -184,6 +184,9 @@ nav a[aria-current="page"] {
   color: var(--accent-color);
   text-decoration: underline;
 }
+.icon-only {
+  font-size: 1.2em;
+}
 
 header h1 {
   margin: 0;
@@ -695,5 +698,28 @@ body.left-layout main {
   color: var(--highlight-text-color) !important;
   position: relative;
   z-index: 1;
+}
+
+/* Side registers for logged-in users */
+.side-registers {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  background: var(--card-bg);
+  border-right: 1px solid var(--nav-bg);
+}
+.side-registers a {
+  display: block;
+  padding: 0.5em 1em;
+  width: 12em;
+  text-decoration: none;
+  color: var(--text-color);
+  border-bottom: 1px solid var(--nav-bg);
+}
+.side-registers a:last-child {
+  border-bottom: none;
 }
 
