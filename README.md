@@ -434,6 +434,13 @@ redirects work properly.
 Configure your GitHub OAuth application to use `${BASE_URL}/auth/github/callback`
 as the callback URL and put your credentials in `app/oauth_config.yaml`.
 
+To register a user from the terminal run:
+
+```bash
+node tools/signup-cli.js <email> <password> [--nick=<alias>]
+```
+The script prints the assigned ID, alias and TOTP secret.
+
 On GitHub Pages the `/auth/google` path only shows brief instructions.
 Start the local server with `BASE_URL` set to your public origin to enable
 the actual Google login flow.
