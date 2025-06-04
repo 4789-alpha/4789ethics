@@ -5,7 +5,23 @@ const secureHosts = [
   'posteo.de'
 ];
 
+const countryPhoneMap = {
+  CH: '+41',
+  DE: '+49',
+  AT: '+43',
+  US: '+1',
+  FR: '+33'
+};
+
 let uiText = {};
+
+function updatePhonePlaceholder() {
+  const phoneInput = document.getElementById('phone_input');
+  const countryInput = document.getElementById('country_input');
+  if (!phoneInput || !countryInput) return;
+  const prefix = countryPhoneMap[countryInput.value];
+  if (prefix) phoneInput.placeholder = prefix + '123456789';
+}
 
 function applySignupTexts() {
   document.documentElement.lang = localStorage.getItem('ethicom_lang') || 'de';
@@ -33,14 +49,14 @@ function applySignupTexts() {
   const countryLabel = document.querySelector('label[for="country_input"]');
   if (countryLabel) countryLabel.textContent = t.signup_country || 'Country/Region:';
   const countryInput = document.getElementById('country_input');
-  if (countryInput) {
-    if (t.signup_placeholder_country) countryInput.placeholder = t.signup_placeholder_country;
-    else countryInput.placeholder = 'CH';
+  if (countryInput && t.signup_placeholder_country) {
+    countryInput.value = t.signup_placeholder_country;
   }
   const phoneLabel = document.querySelector('label[for="phone_input"]');
   if (phoneLabel) phoneLabel.textContent = t.signup_phone || phoneLabel.textContent;
   const phoneInput = document.getElementById('phone_input');
   if (phoneInput && t.signup_placeholder_phone) phoneInput.placeholder = t.signup_placeholder_phone;
+  updatePhonePlaceholder();
 }
 
 function initSignup() {
@@ -50,6 +66,9 @@ function initSignup() {
     .then(data => {
       uiText = data[lang] || data.en || {};
       applySignupTexts();
+      const countryInput = document.getElementById('country_input');
+      if (countryInput) countryInput.addEventListener('change', updatePhonePlaceholder);
+      updatePhonePlaceholder();
     });
 }
 
