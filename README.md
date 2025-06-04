@@ -115,7 +115,6 @@ README.md -> GET_STARTED.md -> index.html
 | [interface_OLD/tanna-template-light.html](interface_OLD/tanna-template-light.html) | Legacy light template |
 | [interface_OLD/tools.html](interface_OLD/tools.html) | Legacy utility collection |
 | [interface/donate.html](interface/donate.html) | Donation interface (requires OP‑9.A confirmation) |
-| [interface/genealogie.html](interface/genealogie.html) | Optional genealogy module |
 | [interface_OLD/README.html](interface_OLD/README.html) | Legacy interface docs |
 | [interface/features_de.md](interface/features_de.md) | Funktionale Übersicht zum Interface |
 | [wings/index.html](wings/index.html) | Mobile interface "Wings" |
