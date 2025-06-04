@@ -1,5 +1,7 @@
 // Stepwise color settings wizard
 
+let tempColors = {};
+
 
 function cwApplyTanna(c){
   applyTannaColor(c);
@@ -52,7 +54,7 @@ function cwBuildColorStep(title, storeKey, cssVar, prefix, applyFn){
 function openColorSettingsWizard(){
   const overlay = document.createElement('div');
   overlay.style.position='fixed'; overlay.style.top=0; overlay.style.left=0;
-  overlay.style.right=0; overlay.style.bottom=0; overlay.style.background='rgba(0,0,0,0.5)';
+  overlay.style.right=0; overlay.style.bottom=0; overlay.style.background='transparent';
   overlay.style.zIndex=1000; overlay.style.display='flex'; overlay.style.alignItems='center';
   overlay.style.justifyContent='center'; overlay.style.padding='1em';
 
@@ -78,7 +80,7 @@ function openColorSettingsWizard(){
   cancelBtn.addEventListener('click', () => overlay.remove());
 
   const tempTheme = localStorage.getItem('ethicom_theme') || 'tanna-dark';
-  const tempColors = {};
+  tempColors = {};
 
   const steps = [];
   // Step 0 Theme
