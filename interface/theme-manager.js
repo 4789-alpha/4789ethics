@@ -1,6 +1,16 @@
 function applyTheme(theme) {
   const body = document.body;
-  body.classList.remove('theme-dark', 'theme-tanna', 'theme-ocean', 'theme-desert', 'theme-transparent', 'theme-custom', 'theme-high-contrast');
+  body.classList.remove(
+    'theme-dark',
+    'theme-tanna',
+    'theme-tanna-dark',
+    'theme-tanna-light',
+    'theme-ocean',
+    'theme-desert',
+    'theme-transparent',
+    'theme-custom',
+    'theme-high-contrast'
+  );
   document.documentElement.style.removeProperty('--primary-color');
   document.documentElement.style.removeProperty('--accent-color');
   if (theme === 'custom') {
