@@ -32,7 +32,8 @@ See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
 **Audience:** Developers, educators, and curious readers.
 
 1. Read `GET_STARTED.md` for the main files.
-2. Run `node tools/serve-interface.js` to start the local server.
+2. Run `node tools/serve-interface.js` to start the local server. For GitHub
+   Pages deployments you can simply execute `npm run serve-gh`.
 3. Open `http://localhost:8080/index.html`.
 
 ```
@@ -423,6 +424,7 @@ Serve the Ethicom interface locally with:
 ```bash
 node tools/serve-interface.js
 ```
+For GitHub Pages use `npm run serve-gh` to set up OAuth redirects.
 
 Then open `http://localhost:8080/ethicom.html` in your browser.
 Opening the HTML file directly (e.g. via `file://`) bypasses the local server and
@@ -430,7 +432,8 @@ causes the language list to remain empty. Always access the interface through
 the provided `localhost` address so that translation files load correctly.
 When deploying on another domain, set the environment variable `BASE_URL`
 to that public origin (e.g. `https://4789-alpha.github.io`) so that OAuth
-redirects work properly.
+redirects work properly. Start the server with `npm run serve-gh` to
+apply this setting automatically.
 Configure your GitHub OAuth application to use `${BASE_URL}/auth/github/callback`
 as the callback URL and put your credentials in `app/oauth_config.yaml`.
 
@@ -442,8 +445,7 @@ node tools/signup-cli.js <email> <password> [--nick=<alias>]
 The script prints the assigned ID, alias and TOTP secret.
 
 On GitHub Pages the `/auth/google` path only shows brief instructions.
-Start the local server with `BASE_URL` set to your public origin to enable
-the actual Google login flow.
+Run `npm run serve-gh` locally to enable the actual Google login flow.
 
 ### Optional Setup Helper
 [⇧](#contents)
