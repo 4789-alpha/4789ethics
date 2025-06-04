@@ -100,23 +100,23 @@ README.md -> GET_STARTED.md -> index.html
 | File | Description |
 |------|-------------|
 | [index.html](index.html) | Start page linking to Ethicom and ratings |
-| [interface/about.html](interface/about.html) | Explains the 4789 module |
-| [interface/chat.html](interface/chat.html) | Chat interface |
+| [interface_OLD/about.html](interface_OLD/about.html) | Legacy page explaining the 4789 module |
+| [interface_OLD/chat.html](interface_OLD/chat.html) | Legacy chat interface |
 | [interface/ethicom.html](interface/ethicom.html) | Main evaluation module |
-| [interface/page-flow-demo.html](interface/page-flow-demo.html) | Demo of horizontal flow |
+| [interface_OLD/page-flow-demo.html](interface_OLD/page-flow-demo.html) | Legacy demo of horizontal flow |
 | [bewertung.html](bewertung.html) | Entry page for rating modules |
 | [personenbewertung.html](personenbewertung.html) | Swipe-based person rating |
 | [org-bewertung.html](org-bewertung.html) | Preview for organisation ratings |
 | [interface/settings.html](interface/settings.html) | Language, theme, Tanna logo, and low motion settings |
 | [interface/signup.html](interface/signup.html) | Registration form |
 | [interface/offline-signup.html](interface/offline-signup.html) | Offline local signup |
-| [interface/tanna-template.html](interface/tanna-template.html) | Base template |
-| [interface/tanna-template-dark.html](interface/tanna-template-dark.html) | Template in dark theme |
-| [interface/tanna-template-light.html](interface/tanna-template-light.html) | Template in light theme |
-| [interface/tools.html](interface/tools.html) | Utility collection |
+| [interface_OLD/tanna-template.html](interface_OLD/tanna-template.html) | Legacy base template |
+| [interface_OLD/tanna-template-dark.html](interface_OLD/tanna-template-dark.html) | Legacy dark template |
+| [interface_OLD/tanna-template-light.html](interface_OLD/tanna-template-light.html) | Legacy light template |
+| [interface_OLD/tools.html](interface_OLD/tools.html) | Legacy utility collection |
 | [interface/donate.html](interface/donate.html) | Donation interface (requires OP‑9.A confirmation) |
 | [interface/genealogie.html](interface/genealogie.html) | Optional genealogy module |
-| [interface/README.html](interface/README.html) | HTML version of the interface docs |
+| [interface_OLD/README.html](interface_OLD/README.html) | Legacy interface docs |
 | [interface/features_de.md](interface/features_de.md) | Funktionale Übersicht zum Interface |
 | [wings/index.html](wings/index.html) | Mobile interface "Wings" |
 | [wings/ratings.html](wings/ratings.html) | Library of all ratings with search |
