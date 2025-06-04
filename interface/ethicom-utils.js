@@ -113,7 +113,7 @@
 function getReadmePath(lang) {
   const prefix = window.location.pathname.includes('/interface/') ? '..' : '.';
   return lang === 'en'
-    ? `${prefix}/README.html`
+    ? `${prefix}/docs/README.html`
     : `${prefix}/i18n/README.${lang}.md`;
 }
 
