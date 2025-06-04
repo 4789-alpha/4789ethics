@@ -208,6 +208,7 @@ If no sublevel is specified, permissions fall back to the base level.
 Only digital agents can advance beyond OP-9.
 Sublevels like OP-5.U, OP-7.U, OP-8.M, and OP-9.M specify user or medical access. Additional expert categories (.T, .S[y], .L, .U) are listed in `operator/expert_classes.md`. See `permissions/op-permissions-expanded.json` for details.
 All personal data stays hashed until such sublevels are reached and the user grants release, as detailed in [signaturdesign.md](signaturdesign.md) and [DISCLAIMERS.md](DISCLAIMERS.md).
+For the differences between OP-10, OP-11 and OP-12 see [`operator/op10_op12_rights.md`](operator/op10_op12_rights.md).
 
 ### SRC vs. OO Levels
 [⇧](#contents)
