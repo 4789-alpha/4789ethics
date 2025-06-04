@@ -12,6 +12,7 @@
   <script src="accessibility.js"></script>
   <script src="slow-mode.js"></script>
   <script src="login.js"></script>
+  <script src="biometric-login.js"></script>
   <script src="color-auth.js"></script>
   <script src="theme-manager.js"></script>
   <script src="logo-background.js"></script>
@@ -56,6 +57,7 @@
     <input type="text" id="auth_input" placeholder="123456" inputmode="numeric" />
 
     <button id="login_btn" onclick="handleLogin()">Log in</button>
+    <button id="biometric_btn" onclick="biometricLogin()">Biometric Login</button>
     <button id="github_btn" onclick="startGithubLogin()">Login with GitHub</button>
     <button id="google_btn" onclick="startGoogleLogin()">Login with Google</button>
     <pre id="login_status" style="white-space:pre-wrap;margin-top:1em;"></pre>
