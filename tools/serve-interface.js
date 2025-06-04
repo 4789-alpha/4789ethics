@@ -148,6 +148,7 @@ function checkPendingDemotions(userPath, logPath) {
     }
   }
   if (changed) writeJson(userPath || usersFile, users);
+}
 function updateAlias(user) {
   if (user && user.nickname) {
     user.alias = `${user.nickname}@${user.op_level}`;

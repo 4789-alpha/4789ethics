@@ -128,6 +128,7 @@ README.md -> GET_STARTED.md -> index.html
 **Color verification of the chosen primary color starts once a user holds an OP-1 signature.**
 **From that level, the color choice is stored privately inside the user's signature and never shown publicly.**
 **Custom color schemes can be exported via `exportColorSettings()` and imported via `importColorSettings(json)` in the browser console.**
+**The settings page includes a Color Wizard and Text Wizard for step-by-step or command-line color selection.**
 **Providing a nickname during signup creates an alias formatted as `nickname@OP-x`, which updates when the OP level changes.**
 
 Users may add a nickname during signup. The server combines it with the OP level to form an alias like `<nick>@OP-1`. This alias updates whenever the OP level changes.
