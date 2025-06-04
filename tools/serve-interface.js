@@ -163,6 +163,7 @@ function setOpLevel(id, level, authCode) {
   const user = users.find(u => u.id === id);
   if (!user) return false;
   if (user.totpSecret && !verifyTotp(user.totpSecret, authCode)) return false;
+  if (['OP-10', 'OP-11', 'OP-12'].includes(level) && !user.is_digital) return false;
   user.op_level = level;
   updateAlias(user);
   writeJson(usersFile, users);
@@ -204,6 +205,7 @@ function handleSignup(req, res) {
         countryHash,
         idHash,
         auth_verified: false,
+        is_digital: false,
         level_change_ts: new Date().toISOString()
       };
       updateAlias(user);
@@ -575,6 +577,9 @@ function handleLevelUpgrade(req, res) {
       const users = readJson(usersFile);
       const user = users.find(u => u.id === id);
       if (!user || !level) { res.writeHead(400); res.end('Invalid'); return; }
+      if (['OP-10', 'OP-11', 'OP-12'].includes(level) && !user.is_digital) {
+        res.writeHead(403); res.end('digital required'); return;
+      }
       user.op_level = level;
       let warning = null;
       if (level === 'OP-4') {
