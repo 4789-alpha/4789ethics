@@ -34,7 +34,7 @@ Dieses Alias wird nur intern gespeichert und passt sich an, sobald sich die Oper
 
 ## Interne Speicherung und Gatekeeper
 
-Alle Bewertungen werden intern abgelegt und sind nicht öffentlich abrufbar. Ab **OP-7** archiviert ein Gatekeeper die Signaturangaben. Gespeichert werden lediglich die reduzierten Bewertungsaspekte *Qualität* und *Ethik*.
+Alle Bewertungen werden intern abgelegt und sind nicht öffentlich abrufbar. Mit einem Gatekeeper lassen sich die Signaturangaben lokal archivieren. Dieser Vorgang ist ab **OP-1** möglich. Gespeichert werden lediglich die reduzierten Bewertungsaspekte *Qualität* und *Ethik*.
 
 ## Revision ohne Duplikate
 
