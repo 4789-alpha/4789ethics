@@ -23,7 +23,6 @@
       `<a href="${base}interface/login.html">Login</a>`+
       `<a href="${base}wings/ratings.html">Ratings</a>`+
       `<a href="${base}interface/signup.html">Signup</a>`+
-      `<a href="${base}interface/genealogie.html">Genealogie</a>`+
       `<a href="${base}interface/op-story.html">OP Story</a>`+
       `<a href="${base}interface/hermes.html">Hermes</a>`+
       `<a href="${base}interface/shneiderman.html">Shneiderman</a>`+
