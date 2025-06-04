@@ -444,8 +444,17 @@ node tools/signup-cli.js <email> <password> [--nick=<alias>]
 ```
 The script prints the assigned ID, alias and TOTP secret.
 
-On GitHub Pages the `/auth/google` path only shows brief instructions.
-Run `npm run serve-gh` locally to enable the actual Google login flow.
+On GitHub Pages the `/auth/github` and `/auth/google` paths only show brief
+instructions. Start the local server with `BASE_URL` set to your public origin
+to enable the actual login flows.
+
+For a minimal alternative run the GitHub device flow from the terminal:
+
+```bash
+node tools/github-device-login.js
+```
+Follow the printed instructions to authorize and store your ID locally.
+
 
 ### Optional Setup Helper
 [⇧](#contents)
