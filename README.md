@@ -64,6 +64,7 @@ README.md -> GET_STARTED.md -> index.html
 - [Source Manager](#source-manager)
 - [Roadmap](#roadmap)
 - [Local Deployment](#local-deployment)
+- [Automated Server Setup](#automated-server-setup)
 - [Automated Gatekeeper Setup](#automated-gatekeeper-setup)
 - [Running Tests](#running-tests)
 - [Contributing](#contributing)
@@ -467,6 +468,13 @@ Run `python3 install.py` and follow the prompts to update `app/app_settings.yaml
 The script lets you configure the default interface language, offline mode and
 the port used by `tools/serve-interface.js`. All values are stored locally so
 the helper works without network access.
+
+### Automated Server Setup
+[⇧](#contents)
+
+Run `tools/auto-server-setup.sh` to install Node.js 18 if needed and launch the
+local server. The script shows key lines from `DISCLAIMERS.md` before starting
+`tools/serve-interface.js`.
 
 ### Automated Gatekeeper Setup
 [⇧](#contents)
