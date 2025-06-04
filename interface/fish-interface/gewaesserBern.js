@@ -38,7 +38,7 @@ async function initGewaesserBern() {
       }
     });
   } catch (e) {
-    svg.textContent = 'Fehler beim Laden der Karte.';
+    svg.textContent = 'Karte konnte nicht geladen werden. Bitte erneut versuchen.';
   }
 }
 

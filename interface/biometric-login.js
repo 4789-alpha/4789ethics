@@ -17,7 +17,7 @@
       });
       if (statusEl) statusEl.textContent = 'Biometric check successful.';
     } catch (e) {
-      if (statusEl) statusEl.textContent = 'Biometric check failed.';
+      if (statusEl) statusEl.textContent = 'Biometric check failed. Please try again.';
     }
   }
   window.biometricLogin = biometricLogin;

@@ -52,7 +52,7 @@ async function loadArticle(file) {
       container.textContent = md;
     }
   } catch {
-    container.textContent = 'Fehler beim Laden.';
+    container.textContent = 'Inhalt konnte nicht geladen werden. Bitte Verbindung prüfen.';
   }
 }
 
