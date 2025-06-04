@@ -616,6 +616,20 @@ function handleTempToken(req, res) {
   res.end(JSON.stringify({ token: token, expires_in: dur }));
 }
 
+// Simple example route to allow GET and POST for testing
+function handleData(req, res) {
+  if (req.method === 'GET') {
+    res.writeHead(200, { 'Content-Type': 'text/plain' });
+    res.end('GET erlaubt');
+  } else if (req.method === 'POST') {
+    res.writeHead(200, { 'Content-Type': 'text/plain' });
+    res.end('POST erlaubt');
+  } else {
+    res.writeHead(405);
+    res.end('Not Allowed');
+  }
+}
+
 const server = http.createServer((req, res) => {
   let urlPath = decodeURIComponent(req.url.split('?')[0]);
   if (req.method === 'POST' && urlPath === '/api/signup') {
@@ -653,6 +667,9 @@ const server = http.createServer((req, res) => {
   }
   if (req.method === 'GET' && urlPath === '/api/gatekeeper/token') {
     return handleTempToken(req, res);
+  }
+  if ((req.method === 'GET' || req.method === 'POST') && urlPath === '/api/data') {
+    return handleData(req, res);
   }
   if (req.method === 'GET' && urlPath === '/api/sources') {
     return handleSources(req, res);
@@ -720,6 +737,7 @@ if (require.main === module) {
     handleConnectApprove,
     handleConnectList,
     handleTempToken,
+    handleData,
     handleLevelUpgrade,
     checkPendingDemotions,
     setOpLevel
