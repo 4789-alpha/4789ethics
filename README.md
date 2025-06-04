@@ -64,6 +64,7 @@ README.md -> GET_STARTED.md -> index.html
 - [Source Manager](#source-manager)
 - [Roadmap](#roadmap)
 - [Local Deployment](#local-deployment)
+- [Automated Gatekeeper Setup](#automated-gatekeeper-setup)
 - [Running Tests](#running-tests)
 - [Contributing](#contributing)
 
@@ -466,6 +467,12 @@ Run `python3 install.py` and follow the prompts to update `app/app_settings.yaml
 The script lets you configure the default interface language, offline mode and
 the port used by `tools/serve-interface.js`. All values are stored locally so
 the helper works without network access.
+
+### Automated Gatekeeper Setup
+[⇧](#contents)
+
+Run `tools/auto-gatekeeper-setup.sh` to install Node.js 18 on Debian/Ubuntu or macOS (with Homebrew) if needed.
+The script displays key lines from `DISCLAIMERS.md` and creates a minimal gatekeeper folder.
 
 ### Running Tests
 [⇧](#contents)
