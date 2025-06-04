@@ -36,7 +36,7 @@ function sendRequest(){
   })
   .then(r=>{ if(!r.ok) throw new Error('fail'); return r.json(); })
   .then(()=>{ status.textContent = uiText.connect_request_sent || 'Request sent.'; load(); })
-  .catch(()=>{ status.textContent = uiText.connect_error || 'Request failed.'; });
+  .catch(()=>{ status.textContent = uiText.connect_error || 'Request failed. Please check your connection.'; });
 }
 
 function approve(reqId){

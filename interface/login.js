@@ -55,7 +55,7 @@ function handleLogin() {
   if (!password.endsWith(suffix)) password += suffix;
 
   if (!/^[^@]+@[^@]+\.[^@]+$/.test(email)) {
-    statusEl.textContent = uiText.login_invalid || 'Login failed.';
+    statusEl.textContent = uiText.login_invalid || 'Login failed. Please check your credentials.';
     return;
   }
 
@@ -75,7 +75,7 @@ function handleLogin() {
       setTimeout(() => { window.location.href = 'ethicom.html'; }, 500);
     })
     .catch(() => {
-      statusEl.textContent = uiText.login_invalid || 'Login failed.';
+      statusEl.textContent = uiText.login_invalid || 'Login failed. Please check your credentials.';
     });
 }
 

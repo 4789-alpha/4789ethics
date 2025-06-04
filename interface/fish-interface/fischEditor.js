@@ -10,7 +10,7 @@ async function initFischEditor() {
   try {
     list = await fetch('../../sources/fish/bern-fische.json').then(r => r.json());
   } catch (e) {
-    table.innerHTML = '<tr><td colspan="6">Fehler beim Laden der Daten.</td></tr>';
+    table.innerHTML = '<tr><td colspan="6">Daten konnten nicht geladen werden. Bitte Seite neu laden.</td></tr>';
   }
 
   const tbody = document.createElement('tbody');

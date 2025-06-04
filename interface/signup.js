@@ -118,7 +118,7 @@ function handleSignup() {
     .then(async r => {
       if (!r.ok) {
         const txt = await r.text();
-        throw new Error(txt || 'Signup failed.');
+        throw new Error(txt || 'Signup failed. Please check the form.');
       }
       return r.json();
     })
@@ -132,7 +132,7 @@ function handleSignup() {
       statusEl.textContent = msgSaved + '\n' + msgAlias + '\n' + msgSecret;
     })
     .catch(err => {
-      statusEl.textContent = err.message || 'Signup failed.';
+      statusEl.textContent = err.message || 'Signup failed. Please check the form.';
     });
 }
 

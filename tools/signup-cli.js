@@ -28,7 +28,7 @@ function main() {
     if (data.alias) console.log('Alias:', data.alias);
     console.log('TOTP secret:', data.secret);
   } else {
-    console.error('Signup failed:', res.body || res.status);
+    console.error('Signup failed. Please check the provided data:', res.body || res.status);
     process.exit(1);
   }
 }

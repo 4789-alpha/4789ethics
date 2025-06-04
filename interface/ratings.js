@@ -139,9 +139,9 @@ async function initRatings() {
     }
   } catch (e) {
     library.innerHTML =
-      'Fehler beim Laden der Bibliothek. ' +
-      'Bitte rufen Sie die Seite \u00fcber <code>npm run serve-gh</code> ' +
-      `unter <a href="${baseUrl}/ethicom.html">${baseUrl}</a> auf.`;
+      'Bibliothek konnte nicht geladen werden. ' +
+      'Bitte starten Sie die Seite mit <code>npm run serve-gh</code> ' +
+      `und öffnen Sie <a href="${baseUrl}/ethicom.html">${baseUrl}</a>.`;
   }
 }
 

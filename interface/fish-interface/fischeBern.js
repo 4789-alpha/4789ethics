@@ -31,7 +31,7 @@ async function initFischeBern() {
     });
     table.appendChild(tbody);
   } catch (e) {
-    table.innerHTML = '<tr><td colspan="7">Fehler beim Laden der Daten.</td></tr>';
+    table.innerHTML = '<tr><td colspan="7">Daten konnten nicht geladen werden. Bitte Seite neu laden.</td></tr>';
   }
 }
 
