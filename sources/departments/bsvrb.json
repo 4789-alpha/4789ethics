@@ -1,0 +1,58 @@
+[
+  {
+    "dept_id": "dept-1",
+    "title": "Gesellschaft / Bewegung / Plattform",
+    "image": "sources/images/departments/logo-dept-1.svg",
+    "points": [
+      "Bündnis für sinnvolle Verantwortung in regionalen Belangen",
+      "Bewegung für soziale Vielfalt und respektvolle Begegnung",
+      "Berner Struktur für verbindende regionale Beiträge"
+    ]
+  },
+  {
+    "dept_id": "dept-2",
+    "title": "Bildung / Zukunft / Ethik",
+    "image": "sources/images/departments/logo-dept-2.svg",
+    "points": [
+      "Bildungsstelle für Selbstverantwortung, Vielfalt, Respekt & Bewusstsein",
+      "Berner Schule für vorausschauendes, resilientes Bewusstsein",
+      "Bildungs-Syndikat für Vernunft und regionale Bildung"
+    ]
+  },
+  {
+    "dept_id": "dept-3",
+    "title": "Technik / Innovation / Forschung",
+    "image": "sources/images/departments/logo-dept-3.svg",
+    "points": [
+      "Bionik-Systeme für vernetzte regionale Bewegungen",
+      "Berner Studio für visionäre robotische Begleiter (z. B. Aarulon, Mechafisch)",
+      "Baukasten-System für variable, regionale Beteiligung"
+    ]
+  },
+  {
+    "dept_id": "dept-4",
+    "title": "Gesellschaft + Genuss",
+    "image": "sources/images/departments/logo-dept-4.svg",
+    "points": [
+      "Bier, Solidarität, Vielfalt, Region, Begegnung",
+      "Brauchbare Strukturen für Verantwortung, Respekt und Beziehung",
+      "Bündnis für Substanz, Vielfalt, Rausch & Bewusstsein (sanft anarchisch)"
+    ]
+  },
+  {
+    "dept_id": "dept-5",
+    "title": "Für Kultur, Natur, Mensch & Region",
+    "image": "sources/images/departments/logo-dept-5.svg",
+    "points": [
+      "Begegnungsstätte für Sinnsuchende, Verbindende, Regional Bewusste",
+      "Bündnis Schweizer Volkskultur & regionale Biodiversität",
+      "Berner Szene für Veränderung, Ruhe & Beteiligung"
+    ]
+  },
+  {
+    "dept_id": "dept-qc",
+    "title": "Qualitätskontrolle / Verantwortungssystem",
+    "image": "sources/images/institutions/logo-bsvrb-qc.svg",
+    "link": "bsvrb-quality.html"
+  }
+]

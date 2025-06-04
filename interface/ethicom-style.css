@@ -203,6 +203,12 @@ header .title-logo {
   margin-left: 0.4em;
 }
 
+.inline-logo {
+  height: 1em;
+  vertical-align: baseline;
+  margin-right: 0.4em;
+}
+
 .hero {
   text-align: center;
   margin: 1.5em auto;
