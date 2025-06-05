@@ -24,6 +24,7 @@
       <a href="interface/login.html" class="icon-only" aria-label="Login">🔑</a>
       <a href="interface/signup.html">Signup</a>
       <a href="README.html" class="icon-only readme-link" aria-label="Help">?</a>
+      <button id="side_menu" type="button" class="icon-only" aria-label="Menu">☰</button>
   </nav>
   <main id="main_content">
     <details class="card">
@@ -86,7 +87,7 @@
       getLanguage();
       checkLanguageSetup();
       localStorage.setItem('visited_start', 'true');
-      initSideDrop('interface/op-navigation.html');
+      initSideDrop('interface/nav-menu.html');
       const menu = document.getElementById('side_menu');
       if(menu) menu.addEventListener('click', e => { e.preventDefault(); toggleSideDrop(); });
     });

@@ -25,6 +25,7 @@
     <a href="signup.html" aria-current="page">Signup</a>
       <a href="hermes.html">Hermes</a>
     <a href="../README.html" class="readme-link">README</a>
+    <button id="side_menu" type="button" class="icon-only" aria-label="Menu">☰</button>
   </nav>
   <main id="main_content">
     <div id="lang_selection" class="card" style="margin-bottom:1em;">
@@ -65,7 +66,7 @@
       initLanguageDropdown('lang_select');
       applyStoredModuleOrder();
       initSignup();
-      initSideDrop('op-navigation.html');
+      initSideDrop('nav-menu.html');
       const menu=document.getElementById('side_menu');
       if(menu) menu.addEventListener('click',e=>{e.preventDefault();toggleSideDrop();});
     });
