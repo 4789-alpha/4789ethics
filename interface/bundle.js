@@ -2241,9 +2241,10 @@ function initLogoBackground() {
   const maxLvl = Math.max(...levels);
   const minScale = 0.5;
   const FADE_MS = 1000;
-  const imgBase = window.location.pathname.includes('/interface/')
-    ? '../sources/images/op-logo/'
-    : 'sources/images/op-logo/';
+  const imgBase = window.location.pathname.includes('/interface/') ||
+                  window.location.pathname.includes('/wings/')
+                    ? '../sources/images/op-logo/'
+                    : 'sources/images/op-logo/';
   const images = levels.map(lvl => {
     const img = new Image();
     const src = lvl >= 8 ? 7 : lvl;
@@ -3381,7 +3382,10 @@ window.addEventListener('DOMContentLoaded', () => {
 function startTannaAnimation(id, fps = 4) {
   const img = document.getElementById(id);
   if (!img) return;
-  const prefix = window.location.pathname.includes('/interface/') ? '../sources/images/op-logo/' : 'sources/images/op-logo/';
+  const prefix = window.location.pathname.includes('/interface/') ||
+                 window.location.pathname.includes('/wings/')
+                   ? '../sources/images/op-logo/'
+                   : 'sources/images/op-logo/';
   const frames = [];
   for (let i = 0; i <= 7; i++) frames.push(`${prefix}tanna_op${i}.png`);
   let idx = 0;

@@ -1,7 +1,10 @@
 function startTannaAnimation(id, fps = 4) {
   const img = document.getElementById(id);
   if (!img) return;
-  const prefix = window.location.pathname.includes('/interface/') ? '../sources/images/op-logo/' : 'sources/images/op-logo/';
+  const prefix = window.location.pathname.includes('/interface/') ||
+                 window.location.pathname.includes('/wings/')
+                   ? '../sources/images/op-logo/'
+                   : 'sources/images/op-logo/';
   const frames = [];
   for (let i = 0; i <= 7; i++) frames.push(`${prefix}tanna_op${i}.png`);
   let idx = 0;
