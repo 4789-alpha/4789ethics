@@ -1,8 +1,9 @@
 ## Ethics Structure 4789
 [⇧](#contents)
 
-This repository contains the complete structural ethics framework developed under Signature 4789.  
+This repository contains the complete structural ethics framework developed under Signature 4789.
 It is not tied to a person, but to a standard: responsibility over convenience: **4789**
+**BSVRB.ch hosts this repository – it is more than just the ethicom interface.**
 
 **What this is:**
 - A full operator model (OP 0–9.x)
