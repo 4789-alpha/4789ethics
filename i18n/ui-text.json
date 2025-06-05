@@ -209,7 +209,7 @@
     "login_btn": "Einloggen",
     "login_github": "GitHub-Login",
     "login_google": "Google-Login",
-    "login_invalid": "Anmeldung fehlgeschlagen. Bitte Eingaben pr\u00fcfen.",
+    "login_invalid": "Anmeldung fehlgeschlagen. Bitte Eingaben prüfen.",
     "login_saved": "Anmeldung erfolgreich. ID gespeichert.",
     "connect_title": "Verbinden",
     "connect_request": "Verbindung anfragen",
@@ -218,7 +218,7 @@
     "connect_connections": "Verbindungen",
     "connect_approve": "Bestätigen",
     "connect_request_sent": "Anfrage gesendet.",
-    "connect_error": "Anfrage fehlgeschlagen. Bitte Verbindung pr\u00fcfen.",
+    "connect_error": "Anfrage fehlgeschlagen. Bitte Verbindung prüfen.",
     "nav_navigator": "Navigator",
     "nav_story": "Geschichte"
   },
@@ -241,7 +241,6 @@
     "signup_email": "E-Mail:",
     "signup_password": "Passwort:",
     "signup_btn": "Konto erstellen",
-
     "signup_placeholder_email": "name@beispiel.ch",
     "signup_placeholder_pw": "Mindestens 8 Zeichen",
     "signup_address": "Adresse:",
@@ -321,7 +320,7 @@
     "login_btn": "Einloggen",
     "login_github": "GitHub-Login",
     "login_google": "Google-Login",
-    "login_invalid": "Anmeldung fehlgeschlagen. Bitte Eingaben pr\u00fcfen.",
+    "login_invalid": "Anmeldung fehlgeschlagen. Bitte Eingaben prüfen.",
     "login_saved": "Anmeldung erfolgreich. ID gespeichert.",
     "connect_title": "Verbinden",
     "connect_request": "Verbindung anfragen",
@@ -330,7 +329,7 @@
     "connect_connections": "Verbindungen",
     "connect_approve": "Bestätigen",
     "connect_request_sent": "Anfrage gesendet.",
-    "connect_error": "Anfrage fehlgeschlagen. Bitte Verbindung pr\u00fcfen.",
+    "connect_error": "Anfrage fehlgeschlagen. Bitte Verbindung prüfen.",
     "nav_navigator": "Navigator",
     "nav_story": "Geschichte"
   },
@@ -359,9 +358,9 @@
     "signup_phone": "Phone:",
     "signup_nick": "Nickname:",
     "signup_placeholder_nick": "Optional nickname",
-    "signup_alias": "Alias: {alias}",
+    "signup_alias": "Alias (public): {alias}",
     "signup_placeholder_address": "Optional address",
-    "signup_placeholder_phone": "+49123456789",
+    "signup_placeholder_phone": "+12025550123",
     "signup_country": "Pays/Région:",
     "signup_placeholder_country": "FR",
     "signup_invalid_email": "Format d'adresse invalide.",
@@ -443,7 +442,8 @@
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
     "connect_error": "Request failed.",
-    "nav_story": "Story"
+    "nav_story": "Story",
+    "nav_navigator": "Navigator Menu"
   },
   "es": {
     "title": "Ethicom: Evaluación Humana",
@@ -475,9 +475,9 @@
     "signup_phone": "Phone:",
     "signup_nick": "Nickname:",
     "signup_placeholder_nick": "Optional nickname",
-    "signup_alias": "Alias: {alias}",
+    "signup_alias": "Alias (public): {alias}",
     "signup_placeholder_address": "Optional address",
-    "signup_placeholder_phone": "+49123456789",
+    "signup_placeholder_phone": "+12025550123",
     "signup_invalid_email": "Formato de correo electrónico no válido.",
     "signup_unsupported": "Proveedor de correo no soportado. Usa un host seguro.",
     "signup_insecure_warn": "Proveedor de correo inseguro. Permitido solo hasta OP-5.",
@@ -552,7 +552,10 @@
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
     "connect_error": "Request failed.",
-    "nav_story": "Story"
+    "nav_story": "Story",
+    "nav_navigator": "Navigator Menu",
+    "signup_country": "Country/Region:",
+    "signup_placeholder_country": "US"
   },
   "pt": {
     "title": "Ethicom: Avaliação Humana",
@@ -589,9 +592,9 @@
     "signup_phone": "Phone:",
     "signup_nick": "Nickname:",
     "signup_placeholder_nick": "Optional nickname",
-    "signup_alias": "Alias: {alias}",
+    "signup_alias": "Alias (public): {alias}",
     "signup_placeholder_address": "Optional address",
-    "signup_placeholder_phone": "+49123456789",
+    "signup_placeholder_phone": "+12025550123",
     "signup_invalid_email": "Formato de email inválido.",
     "signup_unsupported": "Provedor de email não suportado. Use um host seguro.",
     "signup_insecure_warn": "Host de email inseguro. Permitido apenas até OP-5.",
@@ -660,7 +663,10 @@
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
     "connect_error": "Request failed.",
-    "nav_story": "Story"
+    "nav_story": "Story",
+    "nav_navigator": "Navigator Menu",
+    "signup_country": "Country/Region:",
+    "signup_placeholder_country": "US"
   },
   "zh": {
     "title": "Ethicom：人工评估",
@@ -697,9 +703,9 @@
     "signup_phone": "Phone:",
     "signup_nick": "Nickname:",
     "signup_placeholder_nick": "Optional nickname",
-    "signup_alias": "Alias: {alias}",
+    "signup_alias": "Alias (public): {alias}",
     "signup_placeholder_address": "Optional address",
-    "signup_placeholder_phone": "+49123456789",
+    "signup_placeholder_phone": "+12025550123",
     "signup_invalid_email": "Invalid email format.",
     "signup_unsupported": "Email provider not supported. Use a secure host.",
     "signup_pw_short": "Password must be at least 8 characters.",
@@ -769,7 +775,10 @@
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
     "connect_error": "Request failed.",
-    "nav_story": "Story"
+    "nav_story": "Story",
+    "nav_navigator": "Navigator Menu",
+    "signup_country": "Country/Region:",
+    "signup_placeholder_country": "US"
   },
   "hi": {
     "title": "Ethicom: मानवीय मूल्यांकन",
@@ -796,9 +805,9 @@
     "signup_phone": "Phone:",
     "signup_nick": "Nickname:",
     "signup_placeholder_nick": "Optional nickname",
-    "signup_alias": "Alias: {alias}",
+    "signup_alias": "Alias (public): {alias}",
     "signup_placeholder_address": "Optional address",
-    "signup_placeholder_phone": "+49123456789",
+    "signup_placeholder_phone": "+12025550123",
     "signup_invalid_email": "Invalid email format.",
     "signup_unsupported": "Email provider not supported. Use a secure host.",
     "signup_pw_short": "Password must be at least 8 characters.",
@@ -877,7 +886,10 @@
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
     "connect_error": "Request failed.",
-    "nav_story": "Story"
+    "nav_story": "Story",
+    "nav_navigator": "Navigator Menu",
+    "signup_country": "Country/Region:",
+    "signup_placeholder_country": "US"
   },
   "ar": {
     "title": "إيثيكوم: التقييم البشري",
@@ -904,9 +916,9 @@
     "signup_phone": "Phone:",
     "signup_nick": "Nickname:",
     "signup_placeholder_nick": "Optional nickname",
-    "signup_alias": "Alias: {alias}",
+    "signup_alias": "Alias (public): {alias}",
     "signup_placeholder_address": "Optional address",
-    "signup_placeholder_phone": "+49123456789",
+    "signup_placeholder_phone": "+12025550123",
     "signup_invalid_email": "Invalid email format.",
     "signup_unsupported": "Email provider not supported. Use a secure host.",
     "signup_pw_short": "Password must be at least 8 characters.",
@@ -985,7 +997,10 @@
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
     "connect_error": "Request failed.",
-    "nav_story": "Story"
+    "nav_story": "Story",
+    "nav_navigator": "Navigator Menu",
+    "signup_country": "Country/Region:",
+    "signup_placeholder_country": "US"
   },
   "ja": {
     "title": "Ethicom：人間による評価",
@@ -1012,9 +1027,9 @@
     "signup_phone": "Phone:",
     "signup_nick": "Nickname:",
     "signup_placeholder_nick": "Optional nickname",
-    "signup_alias": "Alias: {alias}",
+    "signup_alias": "Alias (public): {alias}",
     "signup_placeholder_address": "Optional address",
-    "signup_placeholder_phone": "+49123456789",
+    "signup_placeholder_phone": "+12025550123",
     "signup_invalid_email": "Invalid email format.",
     "signup_unsupported": "Email provider not supported. Use a secure host.",
     "signup_pw_short": "Password must be at least 8 characters.",
@@ -1093,7 +1108,10 @@
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
     "connect_error": "Request failed.",
-    "nav_story": "Story"
+    "nav_story": "Story",
+    "nav_navigator": "Navigator Menu",
+    "signup_country": "Country/Region:",
+    "signup_placeholder_country": "US"
   },
   "sw": {
     "title": "Ethicom: Tathmini ya Kibinadamu",
@@ -1120,9 +1138,9 @@
     "signup_phone": "Phone:",
     "signup_nick": "Nickname:",
     "signup_placeholder_nick": "Optional nickname",
-    "signup_alias": "Alias: {alias}",
+    "signup_alias": "Alias (public): {alias}",
     "signup_placeholder_address": "Optional address",
-    "signup_placeholder_phone": "+49123456789",
+    "signup_placeholder_phone": "+12025550123",
     "signup_invalid_email": "Invalid email format.",
     "signup_unsupported": "Email provider not supported. Use a secure host.",
     "signup_pw_short": "Password must be at least 8 characters.",
@@ -1201,7 +1219,10 @@
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
     "connect_error": "Request failed.",
-    "nav_story": "Story"
+    "nav_story": "Story",
+    "nav_navigator": "Navigator Menu",
+    "signup_country": "Country/Region:",
+    "signup_placeholder_country": "US"
   },
   "ru": {
     "title": "Ethicom: Оценка человеком",
@@ -1228,9 +1249,9 @@
     "signup_phone": "Phone:",
     "signup_nick": "Nickname:",
     "signup_placeholder_nick": "Optional nickname",
-    "signup_alias": "Alias: {alias}",
+    "signup_alias": "Alias (public): {alias}",
     "signup_placeholder_address": "Optional address",
-    "signup_placeholder_phone": "+49123456789",
+    "signup_placeholder_phone": "+12025550123",
     "signup_invalid_email": "Invalid email format.",
     "signup_unsupported": "Email provider not supported. Use a secure host.",
     "signup_pw_short": "Password must be at least 8 characters.",
@@ -1309,7 +1330,10 @@
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
     "connect_error": "Request failed.",
-    "nav_story": "Story"
+    "nav_story": "Story",
+    "nav_navigator": "Navigator Menu",
+    "signup_country": "Country/Region:",
+    "signup_placeholder_country": "US"
   },
   "it": {
     "title": "Ethicom: Valutazione Umana",
@@ -1346,9 +1370,9 @@
     "signup_phone": "Phone:",
     "signup_nick": "Nickname:",
     "signup_placeholder_nick": "Optional nickname",
-    "signup_alias": "Alias: {alias}",
+    "signup_alias": "Alias (public): {alias}",
     "signup_placeholder_address": "Optional address",
-    "signup_placeholder_phone": "+49123456789",
+    "signup_placeholder_phone": "+12025550123",
     "signup_invalid_email": "Formato email non valido.",
     "signup_unsupported": "Provider email non supportato. Usa un host sicuro.",
     "signup_insecure_warn": "Provider email non sicuro. Consentito solo fino a OP-5.",
@@ -1418,7 +1442,10 @@
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
     "connect_error": "Request failed.",
-    "nav_story": "Story"
+    "nav_story": "Story",
+    "nav_navigator": "Navigator Menu",
+    "signup_country": "Country/Region:",
+    "signup_placeholder_country": "US"
   },
   "ko": {
     "title": "Ethicom: 인간 평가",
@@ -1445,9 +1472,9 @@
     "signup_phone": "Phone:",
     "signup_nick": "Nickname:",
     "signup_placeholder_nick": "Optional nickname",
-    "signup_alias": "Alias: {alias}",
+    "signup_alias": "Alias (public): {alias}",
     "signup_placeholder_address": "Optional address",
-    "signup_placeholder_phone": "+49123456789",
+    "signup_placeholder_phone": "+12025550123",
     "signup_invalid_email": "Invalid email format.",
     "signup_unsupported": "Email provider not supported. Use a secure host.",
     "signup_pw_short": "Password must be at least 8 characters.",
@@ -1526,7 +1553,10 @@
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
     "connect_error": "Request failed.",
-    "nav_story": "Story"
+    "nav_story": "Story",
+    "nav_navigator": "Navigator Menu",
+    "signup_country": "Country/Region:",
+    "signup_placeholder_country": "US"
   },
   "fa": {
     "title": "ایتیکام: ارزیابی انسانی",
@@ -1553,9 +1583,9 @@
     "signup_phone": "Phone:",
     "signup_nick": "Nickname:",
     "signup_placeholder_nick": "Optional nickname",
-    "signup_alias": "Alias: {alias}",
+    "signup_alias": "Alias (public): {alias}",
     "signup_placeholder_address": "Optional address",
-    "signup_placeholder_phone": "+49123456789",
+    "signup_placeholder_phone": "+12025550123",
     "signup_invalid_email": "Invalid email format.",
     "signup_unsupported": "Email provider not supported. Use a secure host.",
     "signup_pw_short": "Password must be at least 8 characters.",
@@ -1634,7 +1664,10 @@
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
     "connect_error": "Request failed.",
-    "nav_story": "Story"
+    "nav_story": "Story",
+    "nav_navigator": "Navigator Menu",
+    "signup_country": "Country/Region:",
+    "signup_placeholder_country": "US"
   },
   "pl": {
     "title": "Ethicom: Ocena Ludzka",
@@ -1661,9 +1694,9 @@
     "signup_phone": "Phone:",
     "signup_nick": "Nickname:",
     "signup_placeholder_nick": "Optional nickname",
-    "signup_alias": "Alias: {alias}",
+    "signup_alias": "Alias (public): {alias}",
     "signup_placeholder_address": "Optional address",
-    "signup_placeholder_phone": "+49123456789",
+    "signup_placeholder_phone": "+12025550123",
     "signup_invalid_email": "Invalid email format.",
     "signup_unsupported": "Email provider not supported. Use a secure host.",
     "signup_pw_short": "Password must be at least 8 characters.",
@@ -1742,7 +1775,10 @@
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
     "connect_error": "Request failed.",
-    "nav_story": "Story"
+    "nav_story": "Story",
+    "nav_navigator": "Navigator Menu",
+    "signup_country": "Country/Region:",
+    "signup_placeholder_country": "US"
   },
   "am": {
     "title": "Ethicom: Human Evaluation",
@@ -1769,9 +1805,9 @@
     "signup_phone": "Phone:",
     "signup_nick": "Nickname:",
     "signup_placeholder_nick": "Optional nickname",
-    "signup_alias": "Alias: {alias}",
+    "signup_alias": "Alias (public): {alias}",
     "signup_placeholder_address": "Optional address",
-    "signup_placeholder_phone": "+49123456789",
+    "signup_placeholder_phone": "+12025550123",
     "signup_invalid_email": "Invalid email format.",
     "signup_unsupported": "Email provider not supported. Use a secure host.",
     "signup_pw_short": "Password must be at least 8 characters.",
@@ -1850,7 +1886,10 @@
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
     "connect_error": "Request failed.",
-    "nav_story": "Story"
+    "nav_story": "Story",
+    "nav_navigator": "Navigator Menu",
+    "signup_country": "Country/Region:",
+    "signup_placeholder_country": "US"
   },
   "af": {
     "title": "Ethicom: Human Evaluation",
@@ -1877,9 +1916,9 @@
     "signup_phone": "Phone:",
     "signup_nick": "Nickname:",
     "signup_placeholder_nick": "Optional nickname",
-    "signup_alias": "Alias: {alias}",
+    "signup_alias": "Alias (public): {alias}",
     "signup_placeholder_address": "Optional address",
-    "signup_placeholder_phone": "+49123456789",
+    "signup_placeholder_phone": "+12025550123",
     "signup_invalid_email": "Invalid email format.",
     "signup_unsupported": "Email provider not supported. Use a secure host.",
     "signup_pw_short": "Password must be at least 8 characters.",
@@ -1958,7 +1997,10 @@
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
     "connect_error": "Request failed.",
-    "nav_story": "Story"
+    "nav_story": "Story",
+    "nav_navigator": "Navigator Menu",
+    "signup_country": "Country/Region:",
+    "signup_placeholder_country": "US"
   },
   "bn": {
     "title": "Ethicom: Human Evaluation",
@@ -1985,9 +2027,9 @@
     "signup_phone": "Phone:",
     "signup_nick": "Nickname:",
     "signup_placeholder_nick": "Optional nickname",
-    "signup_alias": "Alias: {alias}",
+    "signup_alias": "Alias (public): {alias}",
     "signup_placeholder_address": "Optional address",
-    "signup_placeholder_phone": "+49123456789",
+    "signup_placeholder_phone": "+12025550123",
     "signup_invalid_email": "Invalid email format.",
     "signup_unsupported": "Email provider not supported. Use a secure host.",
     "signup_pw_short": "Password must be at least 8 characters.",
@@ -2066,7 +2108,10 @@
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
     "connect_error": "Request failed.",
-    "nav_story": "Story"
+    "nav_story": "Story",
+    "nav_navigator": "Navigator Menu",
+    "signup_country": "Country/Region:",
+    "signup_placeholder_country": "US"
   },
   "ha": {
     "title": "Ethicom: Human Evaluation",
@@ -2093,9 +2138,9 @@
     "signup_phone": "Phone:",
     "signup_nick": "Nickname:",
     "signup_placeholder_nick": "Optional nickname",
-    "signup_alias": "Alias: {alias}",
+    "signup_alias": "Alias (public): {alias}",
     "signup_placeholder_address": "Optional address",
-    "signup_placeholder_phone": "+49123456789",
+    "signup_placeholder_phone": "+12025550123",
     "signup_invalid_email": "Invalid email format.",
     "signup_unsupported": "Email provider not supported. Use a secure host.",
     "signup_pw_short": "Password must be at least 8 characters.",
@@ -2174,7 +2219,10 @@
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
     "connect_error": "Request failed.",
-    "nav_story": "Story"
+    "nav_story": "Story",
+    "nav_navigator": "Navigator Menu",
+    "signup_country": "Country/Region:",
+    "signup_placeholder_country": "US"
   },
   "id": {
     "title": "Ethicom: Human Evaluation",
@@ -2201,9 +2249,9 @@
     "signup_phone": "Phone:",
     "signup_nick": "Nickname:",
     "signup_placeholder_nick": "Optional nickname",
-    "signup_alias": "Alias: {alias}",
+    "signup_alias": "Alias (public): {alias}",
     "signup_placeholder_address": "Optional address",
-    "signup_placeholder_phone": "+49123456789",
+    "signup_placeholder_phone": "+12025550123",
     "signup_invalid_email": "Invalid email format.",
     "signup_unsupported": "Email provider not supported. Use a secure host.",
     "signup_pw_short": "Password must be at least 8 characters.",
@@ -2282,7 +2330,10 @@
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
     "connect_error": "Request failed.",
-    "nav_story": "Story"
+    "nav_story": "Story",
+    "nav_navigator": "Navigator Menu",
+    "signup_country": "Country/Region:",
+    "signup_placeholder_country": "US"
   },
   "ig": {
     "title": "Ethicom: Human Evaluation",
@@ -2309,9 +2360,9 @@
     "signup_phone": "Phone:",
     "signup_nick": "Nickname:",
     "signup_placeholder_nick": "Optional nickname",
-    "signup_alias": "Alias: {alias}",
+    "signup_alias": "Alias (public): {alias}",
     "signup_placeholder_address": "Optional address",
-    "signup_placeholder_phone": "+49123456789",
+    "signup_placeholder_phone": "+12025550123",
     "signup_invalid_email": "Invalid email format.",
     "signup_unsupported": "Email provider not supported. Use a secure host.",
     "signup_pw_short": "Password must be at least 8 characters.",
@@ -2390,7 +2441,10 @@
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
     "connect_error": "Request failed.",
-    "nav_story": "Story"
+    "nav_story": "Story",
+    "nav_navigator": "Navigator Menu",
+    "signup_country": "Country/Region:",
+    "signup_placeholder_country": "US"
   },
   "om": {
     "title": "Ethicom: Human Evaluation",
@@ -2417,9 +2471,9 @@
     "signup_phone": "Phone:",
     "signup_nick": "Nickname:",
     "signup_placeholder_nick": "Optional nickname",
-    "signup_alias": "Alias: {alias}",
+    "signup_alias": "Alias (public): {alias}",
     "signup_placeholder_address": "Optional address",
-    "signup_placeholder_phone": "+49123456789",
+    "signup_placeholder_phone": "+12025550123",
     "signup_invalid_email": "Invalid email format.",
     "signup_unsupported": "Email provider not supported. Use a secure host.",
     "signup_pw_short": "Password must be at least 8 characters.",
@@ -2498,7 +2552,10 @@
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
     "connect_error": "Request failed.",
-    "nav_story": "Story"
+    "nav_story": "Story",
+    "nav_navigator": "Navigator Menu",
+    "signup_country": "Country/Region:",
+    "signup_placeholder_country": "US"
   },
   "rm": {
     "title": "Ethicom: Human Evaluation",
@@ -2525,9 +2582,9 @@
     "signup_phone": "Phone:",
     "signup_nick": "Nickname:",
     "signup_placeholder_nick": "Optional nickname",
-    "signup_alias": "Alias: {alias}",
+    "signup_alias": "Alias (public): {alias}",
     "signup_placeholder_address": "Optional address",
-    "signup_placeholder_phone": "+49123456789",
+    "signup_placeholder_phone": "+12025550123",
     "signup_invalid_email": "Invalid email format.",
     "signup_unsupported": "Email provider not supported. Use a secure host.",
     "signup_pw_short": "Password must be at least 8 characters.",
@@ -2606,7 +2663,10 @@
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
     "connect_error": "Request failed.",
-    "nav_story": "Story"
+    "nav_story": "Story",
+    "nav_navigator": "Navigator Menu",
+    "signup_country": "Country/Region:",
+    "signup_placeholder_country": "US"
   },
   "ta": {
     "title": "Ethicom: Human Evaluation",
@@ -2633,9 +2693,9 @@
     "signup_phone": "Phone:",
     "signup_nick": "Nickname:",
     "signup_placeholder_nick": "Optional nickname",
-    "signup_alias": "Alias: {alias}",
+    "signup_alias": "Alias (public): {alias}",
     "signup_placeholder_address": "Optional address",
-    "signup_placeholder_phone": "+49123456789",
+    "signup_placeholder_phone": "+12025550123",
     "signup_invalid_email": "Invalid email format.",
     "signup_unsupported": "Email provider not supported. Use a secure host.",
     "signup_pw_short": "Password must be at least 8 characters.",
@@ -2714,7 +2774,10 @@
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
     "connect_error": "Request failed.",
-    "nav_story": "Story"
+    "nav_story": "Story",
+    "nav_navigator": "Navigator Menu",
+    "signup_country": "Country/Region:",
+    "signup_placeholder_country": "US"
   },
   "te": {
     "title": "Ethicom: Human Evaluation",
@@ -2741,9 +2804,9 @@
     "signup_phone": "Phone:",
     "signup_nick": "Nickname:",
     "signup_placeholder_nick": "Optional nickname",
-    "signup_alias": "Alias: {alias}",
+    "signup_alias": "Alias (public): {alias}",
     "signup_placeholder_address": "Optional address",
-    "signup_placeholder_phone": "+49123456789",
+    "signup_placeholder_phone": "+12025550123",
     "signup_invalid_email": "Invalid email format.",
     "signup_unsupported": "Email provider not supported. Use a secure host.",
     "signup_pw_short": "Password must be at least 8 characters.",
@@ -2822,7 +2885,10 @@
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
     "connect_error": "Request failed.",
-    "nav_story": "Story"
+    "nav_story": "Story",
+    "nav_navigator": "Navigator Menu",
+    "signup_country": "Country/Region:",
+    "signup_placeholder_country": "US"
   },
   "th": {
     "title": "Ethicom: Human Evaluation",
@@ -2849,9 +2915,9 @@
     "signup_phone": "Phone:",
     "signup_nick": "Nickname:",
     "signup_placeholder_nick": "Optional nickname",
-    "signup_alias": "Alias: {alias}",
+    "signup_alias": "Alias (public): {alias}",
     "signup_placeholder_address": "Optional address",
-    "signup_placeholder_phone": "+49123456789",
+    "signup_placeholder_phone": "+12025550123",
     "signup_invalid_email": "Invalid email format.",
     "signup_unsupported": "Email provider not supported. Use a secure host.",
     "signup_pw_short": "Password must be at least 8 characters.",
@@ -2930,7 +2996,10 @@
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
     "connect_error": "Request failed.",
-    "nav_story": "Story"
+    "nav_story": "Story",
+    "nav_navigator": "Navigator Menu",
+    "signup_country": "Country/Region:",
+    "signup_placeholder_country": "US"
   },
   "tr": {
     "title": "Ethicom: Human Evaluation",
@@ -2957,9 +3026,9 @@
     "signup_phone": "Phone:",
     "signup_nick": "Nickname:",
     "signup_placeholder_nick": "Optional nickname",
-    "signup_alias": "Alias: {alias}",
+    "signup_alias": "Alias (public): {alias}",
     "signup_placeholder_address": "Optional address",
-    "signup_placeholder_phone": "+49123456789",
+    "signup_placeholder_phone": "+12025550123",
     "signup_invalid_email": "Invalid email format.",
     "signup_unsupported": "Email provider not supported. Use a secure host.",
     "signup_pw_short": "Password must be at least 8 characters.",
@@ -3038,7 +3107,10 @@
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
     "connect_error": "Request failed.",
-    "nav_story": "Story"
+    "nav_story": "Story",
+    "nav_navigator": "Navigator Menu",
+    "signup_country": "Country/Region:",
+    "signup_placeholder_country": "US"
   },
   "ur": {
     "title": "Ethicom: Human Evaluation",
@@ -3065,9 +3137,9 @@
     "signup_phone": "Phone:",
     "signup_nick": "Nickname:",
     "signup_placeholder_nick": "Optional nickname",
-    "signup_alias": "Alias: {alias}",
+    "signup_alias": "Alias (public): {alias}",
     "signup_placeholder_address": "Optional address",
-    "signup_placeholder_phone": "+49123456789",
+    "signup_placeholder_phone": "+12025550123",
     "signup_invalid_email": "Invalid email format.",
     "signup_unsupported": "Email provider not supported. Use a secure host.",
     "signup_pw_short": "Password must be at least 8 characters.",
@@ -3147,7 +3219,10 @@
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
     "connect_error": "Request failed.",
-    "nav_story": "Story"
+    "nav_story": "Story",
+    "nav_navigator": "Navigator Menu",
+    "signup_country": "Country/Region:",
+    "signup_placeholder_country": "US"
   },
   "vi": {
     "title": "Ethicom: Human Evaluation",
@@ -3174,9 +3249,9 @@
     "signup_phone": "Phone:",
     "signup_nick": "Nickname:",
     "signup_placeholder_nick": "Optional nickname",
-    "signup_alias": "Alias: {alias}",
+    "signup_alias": "Alias (public): {alias}",
     "signup_placeholder_address": "Optional address",
-    "signup_placeholder_phone": "+49123456789",
+    "signup_placeholder_phone": "+12025550123",
     "signup_invalid_email": "Invalid email format.",
     "signup_unsupported": "Email provider not supported. Use a secure host.",
     "signup_pw_short": "Password must be at least 8 characters.",
@@ -3255,7 +3330,10 @@
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
     "connect_error": "Request failed.",
-    "nav_story": "Story"
+    "nav_story": "Story",
+    "nav_navigator": "Navigator Menu",
+    "signup_country": "Country/Region:",
+    "signup_placeholder_country": "US"
   },
   "xh": {
     "title": "Ethicom: Human Evaluation",
@@ -3282,9 +3360,9 @@
     "signup_phone": "Phone:",
     "signup_nick": "Nickname:",
     "signup_placeholder_nick": "Optional nickname",
-    "signup_alias": "Alias: {alias}",
+    "signup_alias": "Alias (public): {alias}",
     "signup_placeholder_address": "Optional address",
-    "signup_placeholder_phone": "+49123456789",
+    "signup_placeholder_phone": "+12025550123",
     "signup_invalid_email": "Invalid email format.",
     "signup_unsupported": "Email provider not supported. Use a secure host.",
     "signup_pw_short": "Password must be at least 8 characters.",
@@ -3363,7 +3441,10 @@
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
     "connect_error": "Request failed.",
-    "nav_story": "Story"
+    "nav_story": "Story",
+    "nav_navigator": "Navigator Menu",
+    "signup_country": "Country/Region:",
+    "signup_placeholder_country": "US"
   },
   "yo": {
     "title": "Ethicom: Human Evaluation",
@@ -3390,9 +3471,9 @@
     "signup_phone": "Phone:",
     "signup_nick": "Nickname:",
     "signup_placeholder_nick": "Optional nickname",
-    "signup_alias": "Alias: {alias}",
+    "signup_alias": "Alias (public): {alias}",
     "signup_placeholder_address": "Optional address",
-    "signup_placeholder_phone": "+49123456789",
+    "signup_placeholder_phone": "+12025550123",
     "signup_invalid_email": "Invalid email format.",
     "signup_unsupported": "Email provider not supported. Use a secure host.",
     "signup_pw_short": "Password must be at least 8 characters.",
@@ -3471,7 +3552,10 @@
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
     "connect_error": "Request failed.",
-    "nav_story": "Story"
+    "nav_story": "Story",
+    "nav_navigator": "Navigator Menu",
+    "signup_country": "Country/Region:",
+    "signup_placeholder_country": "US"
   },
   "zu": {
     "title": "Ethicom: Human Evaluation",
@@ -3498,9 +3582,9 @@
     "signup_phone": "Phone:",
     "signup_nick": "Nickname:",
     "signup_placeholder_nick": "Optional nickname",
-    "signup_alias": "Alias: {alias}",
+    "signup_alias": "Alias (public): {alias}",
     "signup_placeholder_address": "Optional address",
-    "signup_placeholder_phone": "+49123456789",
+    "signup_placeholder_phone": "+12025550123",
     "signup_invalid_email": "Invalid email format.",
     "signup_unsupported": "Email provider not supported. Use a secure host.",
     "signup_pw_short": "Password must be at least 8 characters.",
@@ -3579,7 +3663,10 @@
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
     "connect_error": "Request failed.",
-    "nav_story": "Story"
+    "nav_story": "Story",
+    "nav_navigator": "Navigator Menu",
+    "signup_country": "Country/Region:",
+    "signup_placeholder_country": "US"
   },
   "nl": {
     "title": "Ethicom: Menselijke Evaluatie",
@@ -3606,9 +3693,9 @@
     "signup_phone": "Phone:",
     "signup_nick": "Nickname:",
     "signup_placeholder_nick": "Optional nickname",
-    "signup_alias": "Alias: {alias}",
+    "signup_alias": "Alias (public): {alias}",
     "signup_placeholder_address": "Optional address",
-    "signup_placeholder_phone": "+49123456789",
+    "signup_placeholder_phone": "+12025550123",
     "signup_invalid_email": "Invalid email format.",
     "signup_unsupported": "Email provider not supported. Use a secure host.",
     "signup_pw_short": "Password must be at least 8 characters.",
@@ -3687,6 +3774,9 @@
     "connect_approve": "Approve",
     "connect_request_sent": "Request sent.",
     "connect_error": "Request failed.",
-    "nav_story": "Story"
+    "nav_story": "Story",
+    "nav_navigator": "Navigator Menu",
+    "signup_country": "Country/Region:",
+    "signup_placeholder_country": "US"
   }
 }
