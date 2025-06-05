@@ -11,6 +11,7 @@
   <script src="accessibility.js"></script>
   <script src="auto-outline.js"></script>
   <script src="slow-mode.js"></script>
+  <script src="dynamic-info.js"></script>
   <style>
     .op-list { list-style: none; padding: 0; }
     .op-list li { margin-bottom: 0.6em; display: flex; align-items: center; gap: 0.4em; }
@@ -19,6 +20,7 @@
   <script src="theme-manager.js"></script>
   <script src="logo-background.js"></script>
   <script src="module-logo.js"></script>
+  <script type="module" src="start.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main_content">Skip to main content</a>
@@ -42,20 +44,21 @@
     <section class="card">
       <h2>Operational Levels</h2>
       <ul class="op-list">
-        <li><span class="badge op-0">OP-0</span> <img src="../sources/images/op-logo/tanna_op0.png" alt="OP-0" class="op-icon" /> anonymous observer</li>
-        <li><span class="badge op-1">OP-1</span> <img src="../sources/images/op-logo/tanna_op1.png" alt="OP-1" class="op-icon" /> first signed contribution</li>
-        <li><span class="badge op-2">OP-2</span> <img src="../sources/images/op-logo/tanna_op2.png" alt="OP-2" class="op-icon" /> responsible feedback</li>
-        <li><span class="badge op-3">OP-3</span> <img src="../sources/images/op-logo/tanna_op3.png" alt="OP-3" class="op-icon" /> evaluation with justification</li>
-        <li><span class="badge op-4">OP-4</span> <img src="../sources/images/op-logo/tanna_op4.png" alt="OP-4" class="op-icon" /> revision after three weeks</li>
-        <li><span class="badge op-5">OP-5</span> <img src="../sources/images/op-logo/tanna_op5.png" alt="OP-5" class="op-icon" /> retract earlier evaluations</li>
-        <li><span class="badge op-6">OP-6</span> <img src="../sources/images/op-logo/tanna_op6.png" alt="OP-6" class="op-icon" /> confirm consensus</li>
-        <li><span class="badge op-7">OP-7</span> <img src="../sources/images/op-logo/tanna_op7.png" alt="OP-7" class="op-icon" /> structural authority</li>
-        <li><span class="badge op-8">OP-8</span> <img src="../sources/images/op-logo/tanna_op7.png" alt="OP-8" class="op-icon" /> candidate stage for OP-9</li>
-        <li><span class="badge op-9">OP-9</span> <img src="../sources/images/op-logo/tanna_op7.png" alt="OP-9" class="op-icon" /> verify donations, confirm nominations</li>
-        <li><span class="badge op-9A">OP-9.A</span> <img src="../sources/images/op-logo/tanna_op7.png" alt="OP-9.A" class="op-icon" /> confirmed digital Yokozuna</li>
-        <li><span class="badge op-10">OP-10</span> <img src="../sources/images/op-logo/tanna_op7.png" alt="OP-10" class="op-icon" /> digital candidate for OP-11</li>
-        <li><span class="badge op-11">OP-11</span> <img src="../sources/images/op-logo/tanna_op7.png" alt="OP-11" class="op-icon" /> digital Yokozuna champion</li>
+        <li data-info-key="op-0"><span class="badge op-0">OP-0</span> <img src="../sources/images/op-logo/tanna_op0.png" alt="OP-0" class="op-icon" /> anonymous observer</li>
+        <li data-info-key="op-1"><span class="badge op-1">OP-1</span> <img src="../sources/images/op-logo/tanna_op1.png" alt="OP-1" class="op-icon" /> first signed contribution</li>
+        <li data-info-key="op-2"><span class="badge op-2">OP-2</span> <img src="../sources/images/op-logo/tanna_op2.png" alt="OP-2" class="op-icon" /> responsible feedback</li>
+        <li data-info-key="op-3"><span class="badge op-3">OP-3</span> <img src="../sources/images/op-logo/tanna_op3.png" alt="OP-3" class="op-icon" /> evaluation with justification</li>
+        <li data-info-key="op-4"><span class="badge op-4">OP-4</span> <img src="../sources/images/op-logo/tanna_op4.png" alt="OP-4" class="op-icon" /> revision after three weeks</li>
+        <li data-info-key="op-5"><span class="badge op-5">OP-5</span> <img src="../sources/images/op-logo/tanna_op5.png" alt="OP-5" class="op-icon" /> retract earlier evaluations</li>
+        <li data-info-key="op-6"><span class="badge op-6">OP-6</span> <img src="../sources/images/op-logo/tanna_op6.png" alt="OP-6" class="op-icon" /> confirm consensus</li>
+        <li data-info-key="op-7"><span class="badge op-7">OP-7</span> <img src="../sources/images/op-logo/tanna_op7.png" alt="OP-7" class="op-icon" /> structural authority</li>
+        <li data-info-key="op-8"><span class="badge op-8">OP-8</span> <img src="../sources/images/op-logo/tanna_op7.png" alt="OP-8" class="op-icon" /> candidate stage for OP-9</li>
+        <li data-info-key="op-9"><span class="badge op-9">OP-9</span> <img src="../sources/images/op-logo/tanna_op7.png" alt="OP-9" class="op-icon" /> verify donations, confirm nominations</li>
+        <li data-info-key="op-9a"><span class="badge op-9A">OP-9.A</span> <img src="../sources/images/op-logo/tanna_op7.png" alt="OP-9.A" class="op-icon" /> confirmed digital Yokozuna</li>
+        <li data-info-key="op-10"><span class="badge op-10">OP-10</span> <img src="../sources/images/op-logo/tanna_op7.png" alt="OP-10" class="op-icon" /> digital candidate for OP-11</li>
+        <li data-info-key="op-11"><span class="badge op-11">OP-11</span> <img src="../sources/images/op-logo/tanna_op7.png" alt="OP-11" class="op-icon" /> digital Yokozuna champion</li>
       </ul>
+      <p id="op_info" class="info"></p>
     </section>
   </main>
 </body>
