@@ -79,7 +79,7 @@ function openColorSettingsWizard(){
 
   cancelBtn.addEventListener('click', () => overlay.remove());
 
-  const tempTheme = localStorage.getItem('ethicom_theme') || 'tanna-dark';
+  const tempTheme = localStorage.getItem('ethicom_theme') || 'dark';
   tempColors = {};
 
   const steps = [];
@@ -87,6 +87,7 @@ function openColorSettingsWizard(){
   const step0 = document.createElement('div');
   step0.innerHTML = `<label for="cw_theme_select">Color Scheme:</label>
     <select id="cw_theme_select">
+      <option value="dark">Dark</option>
       <option value="tanna-dark">Dark Tanna</option>
       <option value="tanna">Tanna</option>
       <option value="transparent">Transparent</option>
@@ -156,8 +157,8 @@ function openColorSettingsWizard(){
 window.openColorSettingsWizard = openColorSettingsWizard;
 
 function openColorSettingsWizardCLI(){
-  const themes=['tanna-dark','tanna','transparent','ocean','desert','custom'];
-  let theme=prompt('Color Scheme ('+themes.join(', ')+'):',localStorage.getItem('ethicom_theme')||'tanna-dark');
+  const themes=['dark','tanna-dark','tanna','transparent','ocean','desert','custom'];
+  let theme=prompt('Color Scheme ('+themes.join(', ')+'):',localStorage.getItem('ethicom_theme')||'dark');
   if(theme&&themes.includes(theme)){
     localStorage.setItem('ethicom_theme',theme);
     if(typeof applyTheme==='function') applyTheme(theme);

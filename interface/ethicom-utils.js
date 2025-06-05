@@ -118,7 +118,7 @@
       } catch {}
       applyStoredColors();
     } else if (e.key === 'ethicom_theme' && typeof applyTheme === 'function') {
-      applyTheme(e.newValue || 'tanna-dark');
+      applyTheme(e.newValue || 'dark');
     }
   });
 })();
