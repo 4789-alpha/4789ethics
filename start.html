@@ -28,6 +28,10 @@
     <a href="README.html" class="icon-only readme-link" aria-label="Help">?</a>
   </nav>
   <main id="main_content">
+    <div id="lang_selection" class="card" style="margin-bottom:1em;">
+      <label for="lang_select" data-ui="choose_language_label">Language:</label>
+      <select id="lang_select"></select>
+    </div>
     <section class="card">
       <h2>Interfaces</h2>
       <ul class="op-list">
@@ -58,5 +62,12 @@
       </ul>
     </section>
   </main>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      getLanguage();
+      checkLanguageSetup();
+      initLanguageDropdown('lang_select');
+    });
+  </script>
 </body>
 </html>

@@ -26,6 +26,10 @@
     </nav>
   </header>
   <main id="main_content">
+    <div id="lang_selection" class="card" style="margin-bottom:1em;">
+      <label for="lang_select" data-ui="choose_language_label">Language:</label>
+      <select id="lang_select"></select>
+    </div>
     <section id="hermes_tree" class="card"></section>
     <section id="op_interface" class="card">
       <div id="hermes_content">Wähle einen Artikel.</div>
@@ -44,6 +48,7 @@
     document.addEventListener('DOMContentLoaded', () => {
       getLanguage();
       checkLanguageSetup();
+      initLanguageDropdown('lang_select');
       renderBadge(getStoredOpLevel() || 'OP-0', getStoredOpLevel() || 'OP-0');
       if (typeof initHermes === 'function') initHermes();
       initSideDrop('op-navigation.html');

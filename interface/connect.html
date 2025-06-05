@@ -15,6 +15,10 @@
     <h1 data-ui="connect_title">Connect</h1>
   </header>
   <main id="main_content">
+    <div id="lang_selection" class="card" style="margin-bottom:1em;">
+      <label for="lang_select" data-ui="choose_language_label">Language:</label>
+      <select id="lang_select"></select>
+    </div>
     <label for="sig_input" data-ui="connect_enter_sig">Target signature:</label>
     <input id="sig_input" />
     <button id="request_btn" data-ui="connect_request">Request connection</button>
@@ -24,5 +28,12 @@
     <h2 data-ui="connect_connections">Your connections</h2>
     <ul id="conn_list"></ul>
   </main>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      getLanguage();
+      checkLanguageSetup();
+      initLanguageDropdown('lang_select');
+    });
+  </script>
 </body>
 </html>
