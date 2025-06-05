@@ -8,6 +8,7 @@
   },
   "scripts": {
     "verify": "node tools/check-file-integrity.js",
-    "serve-gh": "BASE_URL=https://4789-alpha.github.io node tools/serve-interface.js"
+    "serve-gh": "BASE_URL=https://4789-alpha.github.io node tools/serve-interface.js",
+    "bundle-interface": "node tools/bundle-interface.js"
   }
 }

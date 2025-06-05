@@ -5,26 +5,9 @@
   <title>Wings</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="../interface/ethicom-style.css">
+<script src="../interface/bundle.js" defer></script>
   <link rel="stylesheet" href="wings-style.css" />
   <script src="../utils/op-level.js"></script>
-  <script src="../interface/ethicom-utils.js"></script>
-  <script src="../interface/accessibility.js"></script>
-<script src="../interface/auto-outline.js"></script>
-  <script src="../interface/interface-loader.js"></script>
-  <script src="../interface/language-selector.js"></script>
-  <script src="../interface/translation-manager.js"></script>
-  <script src="../interface/color-utils.js"></script>
-  <script src="../interface/theme-manager.js"></script>
-  <script src="../interface/dynamic-help.js"></script>
-  <script src="../interface/dynamic-info.js"></script>
-  <script src="../interface/disclaimer.js"></script>
-  <script src="../interface/color-auth.js"></script>
-  <script src="../interface/logo-background.js"></script>
-  <script src="../interface/op0-navigation.js"></script>
-  <script src="../interface/touch-features.js"></script>
-  <script src="../interface/side-drop.js"></script>
-  <script src="../interface/op-side-nav.js"></script>
-  <script src="../interface/module-logo.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main_content">Skip to main content</a>
@@ -45,7 +28,7 @@
     <a href="../interface/settings.html" data-ui="nav_settings" class="icon-only" title="Settings" aria-label="Settings">⚙</a>
     <a href="index.html" aria-current="page">Wings</a>
     <a href="../README.md" target="_blank" data-ui="nav_readme" class="readme-link">README</a>
-    <a href="#" id="side_menu" class="icon-only">☰</a>
+    <button id="side_menu" type="button" class="icon-only" aria-label="Menu">☰</button>
   </nav>
   <main id="main_content">
     <div id="lang_selection" class="card" style="margin-bottom:1em;">
@@ -90,7 +73,7 @@
       });
       initSideDrop('../interface/op-navigation.html');
       const menu = document.getElementById('side_menu');
-      if (menu) menu.addEventListener('click', e => { e.preventDefault(); toggleSideDrop(); });
+      if (menu) menu.addEventListener('click', () => { toggleSideDrop(); });
     });
 
   </script>
