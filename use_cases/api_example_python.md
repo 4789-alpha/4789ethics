@@ -35,7 +35,7 @@ If you have a GitHub personal access token, you can call the Azure-hosted models
    export GITHUB_TOKEN=<your-token>
    ```
 
-3. Run a basic sample:
+3. Run a basic sample (see `tools/azure_chat_example.py`):
 
    ```python
    import os
@@ -53,6 +53,8 @@ If you have a GitHub personal access token, you can call the Azure-hosted models
            SystemMessage("You are a helpful assistant."),
            UserMessage("What is the capital of France?"),
        ],
+       temperature=1.0,
+       top_p=1.0,
        model="openai/gpt-4.1",
    )
 
