@@ -13,6 +13,7 @@
     if (!obj) return;
     const css = `rgb(${obj.r},${obj.g},${obj.b})`;
     document.documentElement.style.setProperty('--text-color', css);
+    if (document.body) document.body.style.setProperty('--text-color', css);
   }
 
   function applyStoredColors() {
