@@ -3,6 +3,9 @@ window.addEventListener('DOMContentLoaded', () => {
   const token = localStorage.getItem('jwt');
   if(!token) return;
 
+  const existing = document.getElementById('user_registers');
+  if (existing) existing.remove();
+
   const modules = [
     { name: 'Bewertung', href: 'bewertung.html' },
     { name: 'Ethicom', href: 'interface/ethicom.html' },
