@@ -28,6 +28,6 @@ if (list.some(d => d.dept_id === id)) {
 list.push({ dept_id: id, title, image: `sources/images/departments/${imgName}`, points: [] });
 fs.writeFileSync(dataPath, JSON.stringify(list, null, 2) + '\n');
 
-const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='120' height='60'><rect width='120' height='60' fill='#ddd'/><text x='60' y='35' font-size='12' text-anchor='middle' fill='#333'>${id}</text></svg>\n`;
+const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='120' height='60'><text x='60' y='35' font-size='12' text-anchor='middle' fill='#333'>${id}</text></svg>\n`;
 fs.writeFileSync(path.join(imgDir, imgName), svg);
 console.log('Created department', id);
