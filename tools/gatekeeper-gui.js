@@ -16,10 +16,13 @@ const logPath = path.join(__dirname, '..', 'app', 'gatekeeper_log.json');
 const htmlPath = path.join(__dirname, '..', 'interface', 'gatekeeper.html');
 
 function serveFile(p, res) {
-  fs.createReadStream(p).on('error', () => {
+  const stream = fs.createReadStream(p);
+  stream.on('error', () => {
     res.statusCode = 404;
     res.end('Not found');
-  }).pipe(res);
+  });
+  res.writeHead(200, { 'Cache-Control': 'public, max-age=31536000' });
+  stream.pipe(res);
 }
 
 const server = http.createServer((req, res) => {
