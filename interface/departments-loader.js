@@ -28,7 +28,10 @@ function loadDepartments(){
         container.appendChild(details);
       });
     })
-    .catch(() => { container.textContent = 'Konnte Abteilungen nicht laden.'; });
+    .catch(err => {
+      console.error(err);
+      container.textContent = 'Konnte Abteilungen nicht laden. Please check your network connection or open the page via a web server.';
+    });
 }
 
 document.addEventListener('DOMContentLoaded', loadDepartments);
