@@ -38,7 +38,7 @@
     <a href="../index.html">Home</a>
     <a href="index.html">Wings</a>
     <a href="../bewertung.html" data-ui="nav_ratings">Full View</a>
-    <a href="#" id="side_menu" class="icon-only">☰</a>
+    <button id="side_menu" type="button" class="icon-only" aria-label="Menu">☰</button>
   </nav>
   <main id="main_content">
     <div id="lang_selection" class="card" style="margin-bottom:1em;">
@@ -72,7 +72,7 @@
       initRatings();
       initSideDrop('../interface/op-navigation.html');
       const menu=document.getElementById('side_menu');
-      if(menu) menu.addEventListener('click',e=>{e.preventDefault();toggleSideDrop();});
+      if(menu) menu.addEventListener('click',()=>{toggleSideDrop();});
     });
   </script>
   <div id="side_drop"></div>
