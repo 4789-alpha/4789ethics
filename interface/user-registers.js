@@ -1,4 +1,5 @@
 window.addEventListener('DOMContentLoaded', () => {
+  localStorage.setItem('last_page', location.pathname.replace(/^\//, ''));
   const token = localStorage.getItem('jwt');
   if(!token) return;
 
@@ -15,4 +16,14 @@ window.addEventListener('DOMContentLoaded', () => {
   const base = location.pathname.includes('/interface/') || location.pathname.includes('/wings/') ? '../' : '';
   aside.innerHTML = modules.map(m => `<a href="${base}${m.href}">${m.name}</a>`).join('');
   document.body.prepend(aside);
+
+  const info = document.getElementById('user_info');
+  if (info) {
+    try {
+      const sig = JSON.parse(localStorage.getItem('ethicom_signature') || '{}');
+      const name = sig.nickname || sig.alias || sig.email || 'User';
+      const last = localStorage.getItem('last_page') || '';
+      info.textContent = `${name} – letzte Seite: ${last}`;
+    } catch {}
+  }
 });
