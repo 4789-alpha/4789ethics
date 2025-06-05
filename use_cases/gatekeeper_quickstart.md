@@ -19,3 +19,5 @@ node tools/gatekeeper-gui.js
 and open the shown URL (default `http://localhost:8675/gatekeeper.html`).
 
 All device and identity information is stored hashed as noted in `DISCLAIMERS.md`.
+The gatekeeper neither performs DNA analysis nor checks your geolocation. Only
+the hashed strings from `gatekeeper_config.yaml` are used for confirmation.
