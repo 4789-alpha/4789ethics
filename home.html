@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Home</title>
+  <title>BSVRB</title>
   <link rel="stylesheet" href="interface/ethicom-style.css" />
   <script src="utils/op-level.js"></script>
   <script src="interface/ethicom-utils.js"></script>
   <script src="interface/accessibility.js"></script>
   <script src="interface/auto-outline.js"></script>
-  <script src="interface/color-auth.js"></script>
   <script src="interface/color-utils.js"></script>
+  <script src="interface/color-auth.js"></script>
   <script src="interface/language-selector.js"></script>
   <script src="interface/dynamic-info.js"></script>
   <script src="interface/op-overview.js"></script>
@@ -26,24 +26,66 @@
 <body>
   <a class="skip-link" href="#main_content">Skip to main content</a>
   <div id="op_background"></div>
-  <header>
-    <h1>Home</h1>
+  <header data-logo="sources/images/institutions/logo-bsvrb.png">
+    <a href="index.html"><img src="sources/images/institutions/logo-bsvrb.png" alt="BSVRB" class="title-logo"></a>
+    <h1>BSVRB</h1>
   </header>
   <section class="hero">
-    <p class="tagline">Ethik-Kompass für technologische Projekte</p>
+    <p class="tagline">Bündnis für sinnvolle Vernetzung in regionalen Belangen</p>
   </section>
   <nav>
-    <a href="home.html" class="icon-only" aria-label="Home" aria-current="page">🏠</a>
-    <a href="interface/settings.html" class="icon-only" aria-label="Settings">⚙</a>
-    <a href="interface/login.html" class="icon-only" aria-label="Login">🔑</a>
-    <a href="interface/signup.html">Signup</a>
-    <a href="README.html" class="icon-only readme-link" aria-label="Help">?</a>
+      <a href="home.html" class="icon-only" aria-label="Home">🏠</a>
+      <a href="interface/settings.html" class="icon-only" aria-label="Settings">⚙</a>
+      <a href="interface/login.html" class="icon-only" aria-label="Login">🔑</a>
+      <a href="interface/signup.html">Signup</a>
+      <a href="README.html" class="icon-only readme-link" aria-label="Help">?</a>
   </nav>
   <main id="main_content">
+    <details class="card">
+      <summary><a href="bsvrb-dept-1.html"><img src="sources/images/departments/logo-dept-1.png" alt="" class="inline-logo">1. Gesellschaft / Bewegung / Plattform</a></summary>
+      <ul>
+        <li>Bündnis für sinnvolle Vernetzung in regionalen Belangen</li>
+        <li>Bewegung für soziale Vielfalt und respektvolle Begegnung</li>
+        <li>Berner Struktur für verbindende regionale Beiträge</li>
+      </ul>
+    </details>
+    <details class="card">
+      <summary><a href="bsvrb-dept-2.html"><img src="sources/images/departments/logo-dept-2.png" alt="" class="inline-logo">2. Bildung / Zukunft / Ethik</a></summary>
+      <ul>
+        <li>Bildungsstelle für Selbstverantwortung, Vielfalt, Respekt &amp; Bewusstsein</li>
+        <li>Berner Schule für vorausschauendes, resilientes Bewusstsein</li>
+        <li>Bildungs-Syndikat für Vernunft und regionale Bildung</li>
+      </ul>
+    </details>
+    <details class="card">
+      <summary><a href="bsvrb-dept-3.html"><img src="sources/images/departments/logo-dept-3.png" alt="" class="inline-logo">3. Technik / Innovation / Forschung</a></summary>
+      <ul>
+        <li>Bionik-Systeme für vernetzte regionale Bewegungen</li>
+        <li>Berner Studio für visionäre robotische Begleiter (z.&nbsp;B. Aarulon, Mechafisch)</li>
+        <li>Baukasten-System für variable, regionale Beteiligung</li>
+      </ul>
+    </details>
+    <details class="card">
+      <summary><a href="bsvrb-dept-4.html"><img src="sources/images/departments/logo-dept-4.png" alt="" class="inline-logo">4. Gesellschaft + Genuss</a></summary>
+      <ul>
+        <li>Bier, Solidarität, Vielfalt, Region, Begegnung</li>
+        <li>Brauchbare Strukturen für Verantwortung, Respekt und Beziehung</li>
+        <li>Bündnis für Substanz, Vielfalt, Rausch &amp; Bewusstsein (sanft anarchisch)</li>
+      </ul>
+    </details>
+    <details class="card">
+      <summary><a href="bsvrb-dept-5.html"><img src="sources/images/departments/logo-dept-5.png" alt="" class="inline-logo">5. Für Kultur, Natur, Mensch &amp; Region</a></summary>
+      <ul>
+        <li>Begegnungsstätte für Sinnsuchende, Verbindende, Regional Bewusste</li>
+        <li>Bündnis Schweizer Volkskultur &amp; regionale Biodiversität</li>
+        <li>Berner Szene für Veränderung, Ruhe &amp; Beteiligung</li>
+      </ul>
+    </details>
     <section class="card">
-      <h2>Willkommen</h2>
-      <p>Diese Seite führt zur Ethicom-Oberfläche. Sie folgt dem Corporate Design von Signature 4789.</p>
+      <h2>Qualitätskontrolle / Verantwortungssystem</h2>
+      <p><a href="bsvrb-quality.html">Details</a></p>
     </section>
+
     <section class="card">
       <h2>Disclaimers</h2>
       <ul>
@@ -53,28 +95,12 @@
         <li>Nutzung nur reflektiert und mit Konsequenz.</li>
       </ul>
     </section>
-    <section class="card">
-      <h2>Direkt loslegen</h2>
-      <p>Starte die Bewertung über <a href="interface/ethicom.html">Ethicom</a>. Eine Vorschau für OP‑0 ist ohne Anmeldung möglich.</p>
-    </section>
-    <section id="op_overview" class="card"></section>
   </main>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       getLanguage();
       checkLanguageSetup();
       localStorage.setItem('visited_start', 'true');
-      const level = window.getStoredOpLevel ? window.getStoredOpLevel() || 'OP-0' : 'OP-0';
-      const base = parseInt(String(level).replace('OP-', '').split('.')[0], 10);
-      const srcNum = base >= 8 ? 7 : base;
-      const hue = base >= 8 ? (base - 7) * 30 : 0;
-      document.querySelectorAll('.start-op-logo').forEach(img => {
-        img.src = `sources/images/op-logo/tanna_op${srcNum}.png`;
-        img.alt = level;
-        img.setAttribute('aria-label', level);
-        img.style.filter = base >= 8 ?
-          `hue-rotate(-80deg) saturate(0.7) hue-rotate(${hue}deg)` : '';
-      });
       initSideDrop('interface/op-navigation.html');
       const menu = document.getElementById('side_menu');
       if(menu) menu.addEventListener('click', e => { e.preventDefault(); toggleSideDrop(); });
@@ -83,4 +109,3 @@
   <div id="side_drop"></div>
 </body>
 </html>
-
