@@ -164,7 +164,7 @@ header {
 nav {
   background: var(--nav-bg);
   text-align: center;
-  padding: 0.5em 0;
+  padding: 0.25em 0; /* reduced height under logo */
   position: relative;
   z-index: 1;
 }
