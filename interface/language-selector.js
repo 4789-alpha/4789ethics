@@ -123,6 +123,11 @@ function initLanguageDropdown(selectId = "lang_select", textPath = getUiTextPath
         localStorage.setItem("ethicom_lang", lang);
         applyLanguage(lang);
       });
+    })
+    .catch(() => {
+      displayLangNotice(
+        'Start the interface with `node tools/serve-interface.js`. Then open `http://localhost:8080/ethicom.html` in your browser. Opening the HTML file directly (e.g. via `file://`) bypasses the local server and causes the language list to remain empty. Always access the interface through the provided `localhost` address so that translation files load correctly.'
+      );
     });
 }
 
