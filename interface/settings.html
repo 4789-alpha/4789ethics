@@ -362,6 +362,9 @@
             .then(d => {
               tokenDisplay.textContent = d.token;
               localStorage.setItem('gate_temp_token', JSON.stringify({ token: d.token, expires: Date.now() + d.expires_in * 1000 }));
+            })
+            .catch(() => {
+              tokenDisplay.textContent = 'Token request failed. Please check your connection.';
             });
         });
       }
