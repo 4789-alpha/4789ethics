@@ -32,13 +32,15 @@ function getLanguage() {
 }
 
 function getUiTextPath() {
-  return window.location.pathname.includes("/interface/")
-    ? "../i18n/ui-text.json"
-    : "i18n/ui-text.json";
+  return window.location.pathname.includes('/interface/') ||
+    window.location.pathname.includes('/wings/')
+    ? '../i18n/ui-text.json'
+    : 'i18n/ui-text.json';
 }
 
 function updateReadmeLinks(lang) {
-  const prefix = window.location.pathname.includes('/interface/') ? '..' : '.';
+  const prefix = window.location.pathname.includes('/interface/') ||
+    window.location.pathname.includes('/wings/') ? '..' : '.';
   const base = lang === 'en'
     ? `${prefix}/README.html`
     : `${prefix}/i18n/README.${lang}.md`;
