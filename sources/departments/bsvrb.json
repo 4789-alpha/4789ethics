@@ -50,6 +50,15 @@
     ]
   },
   {
+    "dept_id": "beatclub",
+    "title": "Beatclub Basel",
+    "image": "sources/images/departments/logo-dept-5.png",
+    "link": "beatclub-basel.html",
+    "points": [
+      "Bier, Solidarität, Vielfalt, Rave & Beats"
+    ]
+  },
+  {
     "dept_id": "dept-qc",
     "title": "Qualitätskontrolle / Verantwortungssystem",
     "image": "sources/images/institutions/logo-bsvrb-qc.png",
