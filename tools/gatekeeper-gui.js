@@ -27,20 +27,13 @@ const mime = {
 };
 
 function serveFile(p, res) {
-  const ext = path.extname(p).toLowerCase();
-  const type = mime[ext] || 'application/octet-stream';
-  const s = fs.createReadStream(p);
-  s.on('error', () => {
+  const stream = fs.createReadStream(p);
+  stream.on('error', () => {
     res.statusCode = 404;
     res.end('Not found');
   });
-  s.on('open', () => {
-    res.writeHead(200, {
-      'Content-Type': type,
-      'Cache-Control': 'public, max-age=31536000'
-    });
-  });
-  s.pipe(res);
+  res.writeHead(200, { 'Cache-Control': 'public, max-age=31536000' });
+  stream.pipe(res);
 }
 
 const server = http.createServer((req, res) => {
