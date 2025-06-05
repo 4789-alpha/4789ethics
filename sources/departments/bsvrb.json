@@ -3,6 +3,7 @@
     "dept_id": "dept-1",
     "title": "Gesellschaft / Bewegung / Plattform",
     "image": "sources/images/departments/logo-dept-1.png",
+    "alt": "Logo f\u00fcr Gesellschaft / Bewegung / Plattform",
     "points": [
       "Bündnis für sinnvolle Verantwortung in regionalen Belangen",
       "Bewegung für soziale Vielfalt und respektvolle Begegnung",
@@ -13,6 +14,7 @@
     "dept_id": "dept-2",
     "title": "Bildung / Zukunft / Ethik",
     "image": "sources/images/departments/logo-dept-2.png",
+    "alt": "Logo f\u00fcr Bildung / Zukunft / Ethik",
     "points": [
       "Bildungsstelle für Selbstverantwortung, Vielfalt, Respekt & Bewusstsein",
       "Berner Schule für vorausschauendes, resilientes Bewusstsein",
@@ -23,6 +25,7 @@
     "dept_id": "dept-3",
     "title": "Technik / Innovation / Forschung",
     "image": "sources/images/departments/logo-dept-3.png",
+    "alt": "Logo f\u00fcr Technik / Innovation / Forschung",
     "points": [
       "Bionik-Systeme für vernetzte regionale Bewegungen",
       "Berner Studio für visionäre robotische Begleiter (z. B. Aarulon, Mechafisch)",
@@ -33,6 +36,7 @@
     "dept_id": "dept-4",
     "title": "Gesellschaft + Genuss",
     "image": "sources/images/departments/logo-dept-4.png",
+    "alt": "Logo f\u00fcr Gesellschaft + Genuss",
     "points": [
       "Bier, Solidarität, Vielfalt, Region, Begegnung",
       "Brauchbare Strukturen für Verantwortung, Respekt und Beziehung",
@@ -43,6 +47,7 @@
     "dept_id": "dept-5",
     "title": "Für Kultur, Natur, Mensch & Region",
     "image": "sources/images/departments/logo-dept-5.png",
+    "alt": "Logo f\u00fcr Kultur, Natur, Mensch & Region",
     "points": [
       "Begegnungsstätte für Sinnsuchende, Verbindende, Regional Bewusste",
       "Bündnis Schweizer Volkskultur & regionale Biodiversität",
@@ -53,6 +58,7 @@
     "dept_id": "beatclub",
     "title": "Beatclub Basel",
     "image": "sources/images/departments/logo-dept-5.png",
+    "alt": "Logo des Beatclub Basel",
     "link": "beatclub-basel.html",
     "points": [
       "Bier, Solidarität, Vielfalt, Rave & Beats"
@@ -62,6 +68,7 @@
     "dept_id": "dept-qc",
     "title": "Qualitätskontrolle / Verantwortungssystem",
     "image": "sources/images/institutions/logo-bsvrb-qc.png",
+    "alt": "Logo der Qualit\u00e4tskontrolle des BSVRB",
     "link": "bsvrb-quality.html"
   }
 ]
