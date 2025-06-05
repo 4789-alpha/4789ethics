@@ -26,8 +26,8 @@ function insertModuleLogo() {
   header.style.backgroundImage = `url('${src}')`;
   header.style.backgroundRepeat = 'no-repeat';
   header.style.backgroundPosition = '0.5em center';
-  header.style.backgroundSize = `auto ${size}`;
-  header.style.paddingLeft = `calc(${size} + 1em)`;
+  header.style.backgroundSize = `auto calc(${size} * 1.5)`;
+  header.style.paddingLeft = `calc(${size} * 1.5 + 1em)`;
 
   if (!h1) return;
   const img = new Image();
