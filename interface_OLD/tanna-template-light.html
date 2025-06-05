@@ -14,7 +14,7 @@
 </head>
 <body>
   <a class="skip-link" href="#main_content">Skip to main content</a>
-  <a href="#" id="side_menu" class="icon-only">☰</a>
+  <button id="side_menu" type="button" class="icon-only" aria-label="Menu">☰</button>
   <div id="op_background"></div>
   <header>
     <h1>Template</h1>
@@ -28,7 +28,7 @@
       applyTheme('tanna-light');
       initSideDrop('op-navigation.html');
       const menu=document.getElementById('side_menu');
-      if(menu) menu.addEventListener('click',e=>{e.preventDefault();toggleSideDrop();});
+      if(menu) menu.addEventListener('click',()=>{toggleSideDrop();});
     });
   </script>
   <div id="side_drop"></div>
