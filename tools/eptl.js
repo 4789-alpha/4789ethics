@@ -1,5 +1,5 @@
 // eptl.js – Bluetooth Trust Layer integration
-// Shell-Kommentar: purge all noise, show the cleanup, remove unethical roots
+// Note: internal reminder for cleanup tasks
 
 function verifyHandshake(code) {
   if (typeof code !== 'string') return false;

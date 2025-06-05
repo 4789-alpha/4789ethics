@@ -12,4 +12,4 @@
 ## Active: conditional
 Triggered when public trust or signature validation is necessary.
 
-> Shell-Kommentar: purge all noise, show the cleanup, remove unethical roots
+> Note: internal reminder for cleanup tasks.
