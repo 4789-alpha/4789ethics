@@ -201,13 +201,13 @@ header.with-logo {
 }
 
 header .title-logo {
-  height: 1em;
+  height: 2em;
   vertical-align: middle;
   margin-left: 0.4em;
 }
 
 .inline-logo {
-  height: 1em;
+  height: 2em;
   vertical-align: baseline;
   margin-right: 0.4em;
 }
