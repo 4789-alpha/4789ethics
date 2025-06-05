@@ -35,9 +35,16 @@ function initLogoBackground() {
   }
 
   function getThemeHueDiff() {
-    const style = getComputedStyle(document.documentElement);
-    const c = style.getPropertyValue('--primary-color');
-    const h = colorToHue(c);
+    let color;
+    try {
+      const stored = JSON.parse(localStorage.getItem('ethicom_tanna_color') || 'null');
+      if (stored) color = `rgb(${stored.r},${stored.g},${stored.b})`;
+    } catch {}
+    if (!color) {
+      const style = getComputedStyle(document.documentElement);
+      color = style.getPropertyValue('--primary-color');
+    }
+    const h = colorToHue(color);
     return isNaN(h) ? 0 : h - 120;
   }
 
@@ -56,6 +63,21 @@ function initLogoBackground() {
     themeHue = getThemeHueDiff();
     bgHue = getBgHue();
     symbolHue = parseInt(localStorage.getItem('ethicom_bg_symbol_hue') || '0', 10);
+  });
+
+  window.addEventListener('storage', e => {
+    if (!e.key) return;
+    const keys = [
+      'ethicom_tanna_color',
+      'ethicom_bg_symbol_hue',
+      'ethicom_bg_color',
+      'ethicom_theme'
+    ];
+    if (keys.includes(e.key)) {
+      themeHue = getThemeHueDiff();
+      bgHue = getBgHue();
+      symbolHue = parseInt(localStorage.getItem('ethicom_bg_symbol_hue') || '0', 10);
+    }
   });
 
   const canvas = document.createElement('canvas');
