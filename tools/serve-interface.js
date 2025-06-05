@@ -6,6 +6,7 @@ const { spawn } = require('child_process');
 const crypto = require('crypto');
 const { search, loadSources } = require('./source-search.js');
 const { issueTempToken, parseConfig } = require('./gatekeeper.js');
+const { opLevelToNumber } = require('../utils/op-level.js');
 
 const base32Alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ234567';
 
@@ -74,6 +75,20 @@ function verifyTotp(secret, code) {
   const t = Math.floor(Date.now() / 30000);
   const c = String(code).padStart(6, '0');
   return [t - 1, t, t + 1].some(step => totpCode(secret, step) === c);
+}
+
+const classicNames = {
+  CH: ['Raf', 'Lio', 'Mia'],
+  DE: ['Max', 'Ben', 'Mia'],
+  AT: ['Leo', 'Ina', 'Tob'],
+  FR: ['Lou', 'Cam', 'Ari'],
+  US: ['Sam', 'Alex', 'Pat'],
+  DEFAULT: ['Alex', 'Raf', 'Sam']
+};
+
+function suggestNickname(country) {
+  const list = classicNames[country] || classicNames.DEFAULT;
+  return list[0];
 }
 
 const root = path.join(__dirname, '..', 'interface');
@@ -175,7 +190,7 @@ function handleSignup(req, res) {
   req.on('data', c => { body += c; });
   req.on('end', () => {
     try {
-      const { email, password, address, phone, country, nickname, id_number } = JSON.parse(body);
+      const { email, password, address, phone, country, id_number } = JSON.parse(body);
       if (!/^[^@]+@[^@]+\.[^@]+$/.test(email) || !password || password.length < 8) {
         res.writeHead(400); res.end('Invalid data'); return;
       }
@@ -192,13 +207,14 @@ function handleSignup(req, res) {
       if (idHash && users.some(u => u.idHash === idHash)) {
         res.writeHead(409); res.end('ID already exists'); return;
       }
+      const autoNick = suggestNickname(country);
       const user = {
         id,
         emailHash,
         pwHash,
         salt,
         op_level: 'OP-1',
-        nickname: nickname || null,
+        nickname: autoNick,
         totpSecret: secret,
         addrHash,
         phoneHash,
@@ -212,7 +228,7 @@ function handleSignup(req, res) {
       users.push(user);
       writeJson(usersFile, users);
       res.writeHead(200, { 'Content-Type': 'application/json' });
-      res.end(JSON.stringify({ id, secret, alias: user.alias }));
+      res.end(JSON.stringify({ id, secret, alias: user.alias, nickname: user.nickname }));
     } catch {
       res.writeHead(400); res.end('Bad Request');
     }
@@ -258,7 +274,7 @@ function handleLogin(req, res) {
       updateAlias(user);
       writeJson(usersFile, users);
       res.writeHead(200, { 'Content-Type': 'application/json' });
-      res.end(JSON.stringify({ id: user.id, op_level: user.op_level, alias: user.alias }));
+      res.end(JSON.stringify({ id: user.id, op_level: user.op_level, alias: user.alias, nickname: user.nickname }));
     } catch {
       res.writeHead(400); res.end('Bad Request');
     }
@@ -740,6 +756,7 @@ if (require.main === module) {
     handleData,
     handleLevelUpgrade,
     checkPendingDemotions,
-    setOpLevel
+    setOpLevel,
+    suggestNickname
   };
 }
