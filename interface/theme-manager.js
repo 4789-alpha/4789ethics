@@ -176,7 +176,9 @@ function initSliderSet(rId,gId,bId,rvId,gvId,bvId,previewId,storeKey,setCSS){
     const css=`rgb(${c.r},${c.g},${c.b})`;
     if(typeof setCSS ==='string') {
       document.documentElement.style.setProperty(setCSS,css);
-      if (setCSS === '--bg-color' && document.body)
+      if (document.body && setCSS === '--text-color')
+        document.body.style.setProperty('--text-color', css);
+      else if (setCSS === '--bg-color' && document.body)
         document.body.style.setProperty('--bg-color', css);
     } else if(setCSS.apply) setCSS.apply(c,css);
   }
@@ -199,7 +201,9 @@ function updateSliderSet(rId,gId,bId,rvId,gvId,bvId,previewId,storeKey,setCSS){
   const css=`rgb(${c.r},${c.g},${c.b})`;
   if(typeof setCSS==='string') {
     document.documentElement.style.setProperty(setCSS,css);
-    if (setCSS === '--bg-color' && document.body)
+    if (document.body && setCSS === '--text-color')
+      document.body.style.setProperty('--text-color', css);
+    else if (setCSS === '--bg-color' && document.body)
       document.body.style.setProperty('--bg-color', css);
   } else if(setCSS.apply) setCSS.apply(c,css);
 }

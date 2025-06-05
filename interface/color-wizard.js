@@ -131,7 +131,10 @@ function openColorSettingsWizard(){
       localStorage.setItem(k, JSON.stringify(v));
       const css = `rgb(${v.r},${v.g},${v.b})`;
       if (k==='ethicom_tanna_color') cwApplyTanna(v);
-      else if (k==='ethicom_text_color') document.documentElement.style.setProperty('--text-color',css);
+      else if (k==='ethicom_text_color') {
+        document.documentElement.style.setProperty('--text-color',css);
+        if (document.body) document.body.style.setProperty('--text-color',css);
+      }
         else if (k==='ethicom_bg_color') {
           document.documentElement.style.setProperty('--bg-color',css);
           if (document.body) document.body.style.setProperty('--bg-color',css);
@@ -165,7 +168,9 @@ function openColorSettingsWizardCLI(){
     if(!m){alert('Invalid format. Use r,g,b');return;}
     const c={r:Math.min(255,+m[1]),g:Math.min(255,+m[2]),b:Math.min(255,+m[3])};
     localStorage.setItem(key,JSON.stringify(c));
-    document.documentElement.style.setProperty(cssVar,`rgb(${c.r},${c.g},${c.b})`);
+    const css=`rgb(${c.r},${c.g},${c.b})`;
+    document.documentElement.style.setProperty(cssVar,css);
+    if(cssVar==='--text-color' && document.body) document.body.style.setProperty('--text-color',css);
     if(apply) apply(c);
   }
 
