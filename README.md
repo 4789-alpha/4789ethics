@@ -76,7 +76,8 @@ README.md -> GET_STARTED.md -> index.html
 | Directory | Purpose |
 |-----------|---------|
 | `app/` | Application settings, language rules, and user state |
-| `ethics_modules/` | Core YAML and markdown modules for the ethics framework, including `structure_9874`, `ske_module`, and `public_trust_i` |
+| `ethics_modules/` | Core YAML and markdown modules for the ethics framework (e.g., `structure_9874`, `ske_module`, `public_trust_i`) |
+| [ethics_modules/README.md](ethics_modules/README.md) | Index of all modules with one-sentence summaries |
 | `interface/` | Front-end files for the evaluation interface |
 | `i18n/` | UI translations referenced by the interface |
 | `manifests/` | Structural manifests and integrity data |
