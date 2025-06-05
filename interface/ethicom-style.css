@@ -215,7 +215,8 @@ header .op-status-link img {
 }
 
 header .title-logo {
-  height: 3em;
+  /* Increased height for better visibility on bsvrb.ch */
+  height: 4em;
   vertical-align: middle;
   margin-left: 0.4em;
 }
