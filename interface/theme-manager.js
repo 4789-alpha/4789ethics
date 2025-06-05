@@ -40,9 +40,9 @@ function initThemeSelection() {
   const select = document.getElementById('theme_select');
   const customBtn = document.getElementById('custom_theme_btn');
   const tannaCard = document.getElementById('tanna_color');
-  const themes = ['tanna-dark','tanna','transparent','ocean','desert','custom'];
-  const labels = ['Dark Tanna','Tanna','Transparent','Sea Blue','Desert','Custom'];
-  let theme = localStorage.getItem('ethicom_theme') || 'tanna-dark';
+  const themes = ['dark','tanna-dark','tanna','transparent','ocean','desert','custom'];
+  const labels = ['Dark','Dark Tanna','Tanna','Transparent','Sea Blue','Desert','Custom'];
+  let theme = localStorage.getItem('ethicom_theme') || 'dark';
   applyTheme(theme);
   if (tannaCard) tannaCard.style.display = theme === 'tanna' ? 'block' : 'none';
   if (select) {
@@ -238,6 +238,7 @@ function openColorSettingsPopin(){
 
   box.innerHTML=`<div id="theme_scheme_wrap" style="margin-bottom:0.5em;"><label for="theme_select_pop">Color Scheme:</label>
   <select id="theme_select_pop">
+    <option value="dark">Dark</option>
     <option value="tanna-dark">Dark Tanna</option>
     <option value="tanna">Tanna</option>
     <option value="transparent">Transparent</option>
@@ -302,11 +303,11 @@ function openColorSettingsPopin(){
   overlay.addEventListener('keydown',e=>{if(e.key==='Escape'){e.preventDefault();closePopin();}});
   setTimeout(()=>closeBtn.focus(),0);
 
-  const themes=['tanna-dark','tanna','transparent','ocean','desert','custom'];
-  const labels=['Dark Tanna','Tanna','Transparent','Sea Blue','Desert','Custom'];
+  const themes=['dark','tanna-dark','tanna','transparent','ocean','desert','custom'];
+  const labels=['Dark','Dark Tanna','Tanna','Transparent','Sea Blue','Desert','Custom'];
   const scheme=document.getElementById('theme_select_pop');
   if(scheme){
-    const stored=localStorage.getItem('ethicom_theme')||'tanna-dark';
+    const stored=localStorage.getItem('ethicom_theme')||'dark';
     scheme.value=stored;
     scheme.addEventListener('change',e=>{
       const val=e.target.value;
