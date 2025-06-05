@@ -68,6 +68,7 @@ README.md -> GET_STARTED.md -> index.html
 - [Local Deployment](#local-deployment)
 - [Automated Server Setup](#automated-server-setup)
 - [Automated Gatekeeper Setup](#automated-gatekeeper-setup)
+- [Automated Data Setup](#automated-data-setup)
 - [Running Tests](#running-tests)
 - [Contributing](#contributing)
 
@@ -496,6 +497,13 @@ local server. The script shows key lines from `DISCLAIMERS.md` before starting
 
 Run `tools/auto-gatekeeper-setup.sh` to install Node.js 18 on Debian/Ubuntu or macOS (with Homebrew) if needed.
 The script displays key lines from `DISCLAIMERS.md` and creates a minimal gatekeeper folder.
+
+### Automated Data Setup
+[⇧](#contents)
+
+Run `tools/auto-data-setup.sh` to install Node.js 18 if needed and fetch optional
+offline data. The script installs Python and JavaScript dependencies, downloads
+currency rates and pulls candidate images from Wikipedia.
 
 ### Running Tests
 [⇧](#contents)
