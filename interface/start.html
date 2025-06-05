@@ -32,6 +32,10 @@
     </nav>
   </header>
   <main id="main_content">
+    <div id="lang_selection" class="card" style="margin-bottom:1em;">
+      <label for="lang_select" data-ui="choose_language_label">Language:</label>
+      <select id="lang_select"></select>
+    </div>
     <section class="card">
       <h2>Operational Levels</h2>
       <ul class="op-list">
@@ -52,5 +56,12 @@
       <p id="op_info" class="info"></p>
     </section>
   </main>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      getLanguage();
+      checkLanguageSetup();
+      initLanguageDropdown('lang_select');
+    });
+  </script>
 </body>
 </html>
