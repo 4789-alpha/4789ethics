@@ -20,6 +20,7 @@
     <a href="interface/login.html" class="icon-only" aria-label="Login">🔑</a>
     <a href="interface/signup.html">Signup</a>
     <a aria-current="page" class="icon-only readme-link" aria-label="Help">?</a>
+    <button id="side_menu" type="button" class="icon-only" aria-label="Menu">☰</button>
   </nav>
   <section id="user_info" class="card" aria-live="polite"></section>
   <main id="main_content">
@@ -68,6 +69,9 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       initLogoBackground();
+      initSideDrop('interface/nav-menu.html');
+      const menu = document.getElementById('side_menu');
+      if (menu) menu.addEventListener('click', e => { e.preventDefault(); toggleSideDrop(); });
       fetch('README.md')
         .then(r => r.text())
         .then(t => {
@@ -80,5 +84,6 @@
         });
     });
   </script>
+  <div id="side_drop"></div>
 </body>
 </html>

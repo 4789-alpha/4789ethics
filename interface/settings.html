@@ -25,6 +25,7 @@
     <a href="signup.html">Signup</a>
       <a href="hermes.html">Hermes</a>
     <a href="../README.html" class="readme-link">README</a>
+    <button id="side_menu" type="button" class="icon-only" aria-label="Menu">☰</button>
   </nav>
   <main id="main_content">
     <p class="note">Settings are saved locally. Some options apply after reload.</p>
@@ -374,7 +375,11 @@
           }
         });
       });
+      initSideDrop('nav-menu.html');
+      const menu = document.getElementById('side_menu');
+      if (menu) menu.addEventListener('click', e => { e.preventDefault(); toggleSideDrop(); });
     });
   </script>
+  <div id="side_drop"></div>
 </body>
 </html>
