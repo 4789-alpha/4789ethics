@@ -200,6 +200,18 @@ header.with-logo {
   background-position: 0.5em center;
 }
 
+header .op-status-link {
+  position: absolute;
+  top: 0.4em;
+  right: 0.5em;
+  line-height: 1;
+}
+
+header .op-status-link img {
+  height: 2em;
+  width: auto;
+}
+
 header .title-logo {
   height: 3em;
   vertical-align: middle;
