@@ -16,7 +16,7 @@ function loadDepartments(){
         const details = document.createElement('details');
         details.className = 'card';
         const summary = document.createElement('summary');
-        summary.innerHTML = `<a href="bsvrb-${d.dept_id}.html"><img src="${d.image}" alt="" class="inline-logo">${d.title}</a>`;
+        summary.innerHTML = `<a href="${d.link || `bsvrb-${d.dept_id}.html`}"><img src="${d.image}" alt="" class="inline-logo">${d.title}</a>`;
         details.appendChild(summary);
         const ul = document.createElement('ul');
         (d.points || []).forEach(p => {
