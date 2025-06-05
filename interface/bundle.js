@@ -1590,7 +1590,8 @@ document.addEventListener('DOMContentLoaded', initEthicom);
 })();
 
 function getReadmePath(lang) {
-  const prefix = window.location.pathname.includes('/interface/') ? '..' : '.';
+  const prefix = window.location.pathname.includes('/interface/') ||
+    window.location.pathname.includes('/wings/') ? '..' : '.';
   return lang === 'en'
     ? `${prefix}/README.html`
     : `${prefix}/i18n/README.${lang}.md`;
@@ -1943,13 +1944,15 @@ function getLanguage() {
 }
 
 function getUiTextPath() {
-  return window.location.pathname.includes("/interface/")
-    ? "../i18n/ui-text.json"
-    : "i18n/ui-text.json";
+  return window.location.pathname.includes('/interface/') ||
+    window.location.pathname.includes('/wings/')
+    ? '../i18n/ui-text.json'
+    : 'i18n/ui-text.json';
 }
 
 function updateReadmeLinks(lang) {
-  const prefix = window.location.pathname.includes('/interface/') ? '..' : '.';
+  const prefix = window.location.pathname.includes('/interface/') ||
+    window.location.pathname.includes('/wings/') ? '..' : '.';
   const base = lang === 'en'
     ? `${prefix}/README.html`
     : `${prefix}/i18n/README.${lang}.md`;
@@ -2035,6 +2038,7 @@ function initLanguageDropdown(selectId = "lang_select", textPath = getUiTextPath
     });
 }
 
+// Ensure a language is set and supported
 function checkLanguageSetup() {
   const supported = ["de-ch", "en"];
   let lang = localStorage.getItem("ethicom_lang") || (navigator.language || "de-CH").toLowerCase();

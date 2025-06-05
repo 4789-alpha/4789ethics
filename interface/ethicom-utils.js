@@ -124,7 +124,8 @@
 })();
 
 function getReadmePath(lang) {
-  const prefix = window.location.pathname.includes('/interface/') ? '..' : '.';
+  const prefix = window.location.pathname.includes('/interface/') ||
+    window.location.pathname.includes('/wings/') ? '..' : '.';
   return lang === 'en'
     ? `${prefix}/README.html`
     : `${prefix}/i18n/README.${lang}.md`;
