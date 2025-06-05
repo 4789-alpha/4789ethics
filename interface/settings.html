@@ -73,9 +73,11 @@
         </div>
         <div id="bg_collisions_wrap">
           <label><input type="checkbox" id="bg_collisions"/> Enable collisions</label>
+          <small class="note">Reload to apply.</small>
         </div>
         <div id="bg_low_motion_wrap">
           <label><input type="checkbox" id="bg_low_motion"/> Low motion background</label>
+          <small class="note">Reload to apply.</small>
         </div>
         <div id="bg_symbol_hue_wrap">
           <label for="bg_symbol_hue">Tanna hue offset: <span id="bg_symbol_hue_val">0</span>&deg;</label>
@@ -106,7 +108,8 @@
       <div id="touch_features">
         <label><input type="checkbox" id="touch_gestures"/> Enable gestures</label><br/>
         <label><input type="checkbox" id="touch_longpress"/> Enable quick menus</label><br/>
-        <label><input type="checkbox" id="touch_drawing"/> Enable drawing</label><br/>
+        <label><input type="checkbox" id="touch_drawing"/> Enable drawing</label>
+        <small class="note">Reload to apply.</small><br/>
         <label><input type="checkbox" id="touch_bigbuttons"/> Larger buttons</label><br/>
         <label><input type="checkbox" id="touch_haptics"/> Haptic feedback</label>
       </div>
@@ -114,10 +117,12 @@
     <details class="card">
       <summary>Attention Alerts</summary>
       <div id="attention_features">
-        <label><input type="checkbox" id="attention_wiggle"/> Wiggle when idle</label><br/>
+        <label><input type="checkbox" id="attention_wiggle"/> Wiggle when idle</label>
+        <small class="note">Reload to apply.</small><br/>
         <label><input type="checkbox" id="attention_beep"/> Beep when idle</label>
-      </div>
-    </details>
+        <small class="note">Reload to apply.</small>
+     </div>
+   </details>
     <details class="card">
       <summary>Accessibility Setup</summary>
       <div id="access_setup"></div>
@@ -201,26 +206,6 @@
       if (aw) aw.addEventListener('change', e => attentionSettings.toggleWiggle(e.target.checked));
       if (ab) ab.addEventListener('change', e => attentionSettings.toggleBeep(e.target.checked));
 
-      const tr = document.getElementById('tanna_r');
-      const tg = document.getElementById('tanna_g');
-      const tb = document.getElementById('tanna_b');
-      const trv = document.getElementById('tanna_r_val');
-      const tgv = document.getElementById('tanna_g_val');
-      const tbv = document.getElementById('tanna_b_val');
-      const tp = document.getElementById('tanna_preview');
-      const warn = document.getElementById('tanna_contrast');
-      function lum(v){v/=255;return v<=0.03928?v/12.92:Math.pow((v+0.055)/1.055,2.4);}
-      function contrast(c){const l1=0.2126*lum(c.r)+0.7152*lum(c.g)+0.0722*lum(c.b);const l2=0.2126*lum(34)+0.7152*lum(139)+0.0722*lum(34);return (Math.max(l1,l2)+0.05)/(Math.min(l1,l2)+0.05);}
-      function upd(){
-        const c={r:+tr.value,g:+tg.value,b:+tb.value};
-        trv.textContent=c.r;
-        tgv.textContent=c.g;
-        tbv.textContent=c.b;
-        applyTannaColor(c);
-        if(tp) tp.style.backgroundColor=`rgb(${c.r},${c.g},${c.b})`;
-        warn.style.display=contrast(c)<2?'inline':'none';
-      }
-      if(tr&&tg&&tb){const s=JSON.parse(localStorage.getItem('ethicom_tanna_color')||'{"r":34,"g":139,"b":34}');tr.value=s.r;tg.value=s.g;tb.value=s.b;upd();[tr,tg,tb].forEach(el=>el.addEventListener('input',upd));}
 
       const slider = document.getElementById('bg_fill_ratio');
       const val = document.getElementById('bg_fill_ratio_val');
@@ -309,34 +294,6 @@
           });
         }
 
-      const txr = document.getElementById('text_r');
-      const txg = document.getElementById('text_g');
-      const txb = document.getElementById('text_b');
-      const txrv = document.getElementById('text_r_val');
-      const txgv = document.getElementById('text_g_val');
-      const txbv = document.getElementById('text_b_val');
-      const textPrev = document.getElementById('text_preview');
-      function updText(){
-        const c={r:+txr.value,g:+txg.value,b:+txb.value};
-        txrv.textContent=c.r;
-        txgv.textContent=c.g;
-        txbv.textContent=c.b;
-        document.documentElement.style.setProperty('--text-color',`rgb(${c.r},${c.g},${c.b})`);
-        localStorage.setItem('ethicom_text_color',JSON.stringify(c));
-        if(textPrev) textPrev.style.backgroundColor=`rgb(${c.r},${c.g},${c.b})`;
-      }
-      if(txr&&txg&&txb){
-        let def;
-        try{def=JSON.parse(localStorage.getItem('ethicom_text_color')||'null');}catch{}
-        if(!def){
-          const comp=getComputedStyle(document.documentElement).getPropertyValue('--text-color').trim();
-          const m=comp.match(/rgb\((\d+),\s*(\d+),\s*(\d+)\)/);
-          def=m?{r:+m[1],g:+m[2],b:+m[3]}:{r:224,g:224,b:224};
-        }
-        txr.value=def.r;txg.value=def.g;txb.value=def.b;
-        updText();
-        [txr,txg,txb].forEach(el=>el.addEventListener('input',updText));
-      }
 
       const fgSlider = document.getElementById('fg_opacity');
       const fgVal = document.getElementById('fg_opacity_val');
