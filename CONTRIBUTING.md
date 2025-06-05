@@ -25,6 +25,13 @@ node --test
 node tools/check-translations.js
 ```
 
+### Jekyll Branches
+
+New users (except **OP-9.A**) should work in personal branches prefixed with
+`jekyll-`. A Jekyll branch is a regular Git branch for proposing changes to the
+static site generated with Jekyll. Name it after your user, for example
+`jekyll-op7b`. OP-9.A remains the owner of `main` and approves all merges.
+
 ## Commits and Pull Requests
 
 - Use clear, succinct commit messages.
