@@ -1,24 +1,12 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Personenbewertung</title>
-  <link rel="stylesheet" href="interface/ethicom-style.css" />
+  <link rel="stylesheet" href="interface/ethicom-style.css">
+<script src="interface/bundle.js" defer></script>
   <script src="utils/op-level.js"></script>
-  <script src="interface/ethicom-utils.js"></script>
-  <script src="interface/accessibility.js"></script>
-  <script src="interface/auto-outline.js"></script>
-  <script src="interface/language-selector.js"></script>
-  <script src="interface/theme-manager.js"></script>
-  <script src="interface/color-auth.js"></script>
-  <script src="interface/logo-background.js"></script>
-  <script src="interface/touch-features.js"></script>
-  <script src="interface/op0-navigation.js"></script>
-  <script src="interface/side-drop.js"></script>
-  <script src="interface/op-side-nav.js"></script>
-  <script src="interface/bewertung.js"></script>
-  <script src="interface/module-logo.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main_content">Skip to main content</a>
@@ -33,6 +21,7 @@
       <a href="wings/ratings.html">Ratings</a>
       <a href="interface/signup.html">Signup</a>
       <a href="README.html" class="readme-link">README</a>
+      <button id="side_menu" type="button" class="icon-only" aria-label="Menu">☰</button>
     </nav>
   </header>
   <main id="main_content">
@@ -43,7 +32,7 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       initBewertung();
-      initSideDrop('interface/op-navigation.html');
+      initSideDrop('interface/nav-menu.html');
       const menu = document.getElementById('side_menu');
       if(menu) menu.addEventListener('click', e => { e.preventDefault(); toggleSideDrop(); });
     });

@@ -15,11 +15,25 @@ const storePath = path.join(__dirname, '..', 'app', 'gatekeeper_devices.json');
 const logPath = path.join(__dirname, '..', 'app', 'gatekeeper_log.json');
 const htmlPath = path.join(__dirname, '..', 'interface', 'gatekeeper.html');
 
+const mime = {
+  '.html': 'text/html',
+  '.js': 'application/javascript',
+  '.css': 'text/css',
+  '.json': 'application/json',
+  '.png': 'image/png',
+  '.jpg': 'image/jpeg',
+  '.gif': 'image/gif',
+  '.svg': 'image/svg+xml'
+};
+
 function serveFile(p, res) {
-  fs.createReadStream(p).on('error', () => {
+  const stream = fs.createReadStream(p);
+  stream.on('error', () => {
     res.statusCode = 404;
     res.end('Not found');
-  }).pipe(res);
+  });
+  res.writeHead(200, { 'Cache-Control': 'public, max-age=31536000' });
+  stream.pipe(res);
 }
 
 const server = http.createServer((req, res) => {
