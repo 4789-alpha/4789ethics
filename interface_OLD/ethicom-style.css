@@ -205,8 +205,8 @@ textarea {
   margin-bottom: 0.8em;
   border: 1px solid #555;
   border-radius: 4px;
-  background: #fff;
-  color: #000;
+  background: var(--module-color);
+  color: var(--text-color);
 }
 
 button {
