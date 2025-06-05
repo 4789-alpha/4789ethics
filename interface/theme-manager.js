@@ -107,7 +107,9 @@ function createCustomTheme() {
     '--text-color': 'Text',
     '--primary-color': 'Primary',
     '--accent-color': 'Accent',
-    '--header-bg': 'Header'
+    '--header-bg': 'Header',
+    '--nav-bg': 'Navigation',
+    '--module-color': 'Module'
   };
   const groups = [];
   const stored = JSON.parse(localStorage.getItem('ethicom_custom_theme') || '{}');
@@ -367,7 +369,7 @@ document.addEventListener('keydown', e => {
 
 function saveCurrentAsCustom(){
   if(localStorage.getItem('ethicom_theme')!=='custom') return;
-  const vars=['--bg-color','--text-color','--primary-color','--accent-color'];
+  const vars=['--bg-color','--text-color','--primary-color','--accent-color','--header-bg','--nav-bg','--module-color'];
   const custom={};
   vars.forEach(v=>custom[v]=getComputedStyle(document.documentElement).getPropertyValue(v).trim());
   localStorage.setItem('ethicom_custom_theme',JSON.stringify(custom));
@@ -376,7 +378,7 @@ function saveCurrentAsCustom(){
 window.addEventListener('beforeunload',saveCurrentAsCustom);
 
 function exportColorSettings(){
-  const keys=['ethicom_theme','ethicom_custom_theme','ethicom_text_color','ethicom_bg_color','ethicom_tanna_color','ethicom_module_color'];
+  const keys=['ethicom_theme','ethicom_custom_theme','ethicom_text_color','ethicom_bg_color','ethicom_tanna_color','ethicom_module_color','ethicom_header_color'];
   const out={};
   keys.forEach(k=>{const v=localStorage.getItem(k); if(v) out[k]=v;});
   return JSON.stringify(out);
