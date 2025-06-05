@@ -386,6 +386,11 @@ organized and easy to review.
 
 Run `node tools/correction-engine.js` to flag evaluations contradicted by higher OP-level ratings. The script outputs suggested demotions or rating changes as JSON.
 
+### Web Content Analyzer
+[⇧](#contents)
+
+Run `python3 tools/web_analyzer.py <url>` to fetch a public webpage and produce an anonymized word-frequency model. The script filters personal data according to `LICENSE.txt` and `DISCLAIMERS.md`.
+
 
 ## Roadmap
 [⇧](#contents)
