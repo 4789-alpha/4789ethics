@@ -202,14 +202,16 @@ header.with-logo {
 
 header .op-status-link {
   position: absolute;
-  top: 0.4em;
-  right: 0.5em;
+  top: 0;
+  left: 0;
+  right: auto;
   line-height: 1;
+  display: block;
+  height: 100%;
 }
 
 header .op-status-link img {
-  height: 2em;
-  width: auto;
+  display: none;
 }
 
 header .title-logo {

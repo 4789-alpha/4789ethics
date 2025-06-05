@@ -29,7 +29,7 @@ function insertModuleLogo() {
   header.style.backgroundSize = `auto calc(${size} * 1.5)`;
   header.style.paddingLeft = `calc(${size} * 1.5 + 1em)`;
 
-  // Insert clickable OP status logo in the top-right corner
+  // Make the OP logo area on the left clickable
   const link = document.createElement('a');
   link.className = 'op-status-link';
   const base = window.location.pathname.includes('/interface/') ||
@@ -37,11 +37,9 @@ function insertModuleLogo() {
                  ? '../'
                  : '';
   link.href = `${base}interface/start.html`;
-  const logoImg = new Image();
-  logoImg.src = src;
-  logoImg.alt = 'OP Status';
-  logoImg.onerror = () => { logoImg.src = fallback; };
-  link.appendChild(logoImg);
+  link.setAttribute('aria-label', 'OP Status');
+  link.style.width = `calc(${size} * 1.5 + 1em)`;
+  link.style.height = '100%';
   header.appendChild(link);
 
   if (!h1) return;
