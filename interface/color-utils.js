@@ -21,6 +21,7 @@ function applyTannaColor(c){
     document.documentElement.style.setProperty('--header-bg', h);
     document.documentElement.style.setProperty('--nav-bg', n);
   }
+  document.dispatchEvent(new CustomEvent('themeChanged'));
 }
 
 if(typeof window !== 'undefined'){
