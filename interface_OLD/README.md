@@ -163,7 +163,7 @@ auf Tanna. Zwei Varianten mit höherem Kontrast stehen ebenfalls zur Verfügung:
 <head>
   <meta charset="utf-8" />
   <title>Neue Seite</title>
-  <link rel="stylesheet" href="ethicom-style.css" />
+  <link rel="stylesheet" href="ethicom-style.css">
   <script src="theme-manager.js"></script>
   <script src="../interface/logo-background.js"></script>
 </head>
