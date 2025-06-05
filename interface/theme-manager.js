@@ -40,6 +40,8 @@ function initThemeSelection() {
   const select = document.getElementById('theme_select');
   const customBtn = document.getElementById('custom_theme_btn');
   const tannaCard = document.getElementById('tanna_color');
+  const slider = document.getElementById('theme_slider');
+  const label = document.getElementById('theme_slider_label');
   const themes = ['dark','tanna-dark','tanna','transparent','ocean','desert','custom'];
   const labels = ['Dark','Dark Tanna','Tanna','Transparent','Sea Blue','Desert','Custom'];
   let theme = localStorage.getItem('ethicom_theme') || 'dark';
