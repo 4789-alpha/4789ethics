@@ -21,6 +21,7 @@
       <a href="wings/ratings.html">Ratings</a>
       <a href="interface/signup.html">Signup</a>
       <a href="README.html" class="readme-link">README</a>
+      <button id="side_menu" type="button" class="icon-only" aria-label="Menu">☰</button>
     </nav>
   </header>
   <main id="main_content">
@@ -31,7 +32,7 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       initBewertung();
-      initSideDrop('interface/op-navigation.html');
+      initSideDrop('interface/nav-menu.html');
       const menu = document.getElementById('side_menu');
       if(menu) menu.addEventListener('click', e => { e.preventDefault(); toggleSideDrop(); });
     });
