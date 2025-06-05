@@ -512,7 +512,7 @@ body::before {
   inset: 0;
   pointer-events: none;
   background: rgba(0, 0, 0, var(--foreground-opacity));
-  z-index: -1;
+  z-index: 0;
 }
 
 /* Modified logo used in citation view */
