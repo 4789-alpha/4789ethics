@@ -59,6 +59,20 @@ function applySignupTexts() {
   updatePhonePlaceholder();
 }
 
+function hideNickInputIfNoob() {
+  const level = getStoredOpLevel() || 'OP-1';
+  const levelNum = opLevelToNumber(level);
+  if (levelNum < 2) {
+    const nickLabel = document.querySelector('label[for="nick_input"]');
+    const nickInput = document.getElementById('nick_input');
+    if (nickLabel) nickLabel.style.display = 'none';
+    if (nickInput) {
+      nickInput.style.display = 'none';
+      nickInput.disabled = true;
+    }
+  }
+}
+
 function initSignup() {
   const lang = getLanguage();
   fetch('../i18n/ui-text.json')
@@ -69,6 +83,7 @@ function initSignup() {
       const countryInput = document.getElementById('country_input');
       if (countryInput) countryInput.addEventListener('change', updatePhonePlaceholder);
       updatePhonePlaceholder();
+      hideNickInputIfNoob();
     });
 }
 
@@ -123,7 +138,8 @@ function handleSignup() {
       return r.json();
     })
     .then(data => {
-      const sig = { email, id: data.id, op_level: 'OP-1', nickname, alias: data.alias };
+      const nick = data.nickname || nickname;
+      const sig = { email, id: data.id, op_level: 'OP-1', nickname: nick, alias: data.alias };
       localStorage.setItem('ethicom_signature', JSON.stringify(sig));
       const msgSaved = uiText.signup_saved || 'Signup complete. ID stored.';
       const msgAlias = (uiText.signup_alias || 'Alias: {alias}').replace('{alias}', data.alias);
