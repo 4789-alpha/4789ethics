@@ -48,6 +48,17 @@
     } catch {}
 
     try {
+      const header = JSON.parse(
+        localStorage.getItem('ethicom_header_color') || 'null'
+      );
+      if (header) {
+        const css = `rgb(${header.r},${header.g},${header.b})`;
+        document.documentElement.style.setProperty('--header-bg', css);
+        document.documentElement.style.setProperty('--nav-bg', css);
+      }
+    } catch {}
+
+    try {
       const tanna = JSON.parse(
         localStorage.getItem('ethicom_tanna_color') || 'null'
       );
@@ -97,7 +108,8 @@
       'ethicom_bg_color',
       'ethicom_module_color',
       'ethicom_tanna_color',
-      'ethicom_text_color'
+      'ethicom_text_color',
+      'ethicom_header_color'
     ];
     if (colorKeys.includes(e.key)) {
       try {
