@@ -35,6 +35,8 @@ See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
 1. Read `GET_STARTED.md` for the main files.
 2. Run `node tools/serve-interface.js` to start the local server. For GitHub
    Pages deployments you can simply execute `npm run serve-gh`.
+   Opening an HTML file directly (via `file://`) disables translations and
+   settings. See [Local Deployment](#local-deployment) for details.
 3. Open `http://localhost:8080/index.html`.
 
 ```
