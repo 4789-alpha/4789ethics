@@ -106,7 +106,8 @@ function createCustomTheme() {
     '--bg-color': 'Background',
     '--text-color': 'Text',
     '--primary-color': 'Primary',
-    '--accent-color': 'Accent'
+    '--accent-color': 'Accent',
+    '--header-bg': 'Header'
   };
   const groups = [];
   const stored = JSON.parse(localStorage.getItem('ethicom_custom_theme') || '{}');
@@ -209,6 +210,7 @@ function resetSlidersFromTheme(){
   updateSliderSet('bg_r','bg_g','bg_b','bg_r_val','bg_g_val','bg_b_val','bg_preview','ethicom_bg_color','--bg-color');
   updateSliderSet('tanna_r_p','tanna_g_p','tanna_b_p','tanna_r_p_val','tanna_g_p_val','tanna_b_p_val','tanna_preview_p','ethicom_tanna_color',{var:'--primary-color',apply:applyTannaCSS});
   updateSliderSet('module_r','module_g','module_b','module_r_val','module_g_val','module_b_val','module_preview','ethicom_module_color','--module-color');
+  updateSliderSet('header_r','header_g','header_b','header_r_val','header_g_val','header_b_val','header_preview','ethicom_header_color','--header-bg');
 }
 
 function openColorSettingsPopin(){
@@ -262,12 +264,19 @@ function openColorSettingsPopin(){
   <span id="tanna_preview_p" class="color-preview"></span><br/>
   <span id="tanna_contrast_p" style="color:red;display:none;">Low contrast with logos</span>
  </div></details>
-<details class="card"><summary>Module Color</summary>
+ <details class="card"><summary>Module Color</summary>
  <div id="module_color_pop">
   <label>R: <input type="range" id="module_r" min="0" max="255"> <span id="module_r_val"></span></label><br/>
   <label>G: <input type="range" id="module_g" min="0" max="255"> <span id="module_g_val"></span></label><br/>
   <label>B: <input type="range" id="module_b" min="0" max="255"> <span id="module_b_val"></span></label>
   <span id="module_preview" class="color-preview"></span>
+ </div></details>
+<details class="card"><summary>Header</summary>
+ <div id="header_color_pop">
+  <label>R: <input type="range" id="header_r" min="0" max="255"> <span id="header_r_val"></span></label><br/>
+  <label>G: <input type="range" id="header_g" min="0" max="255"> <span id="header_g_val"></span></label><br/>
+  <label>B: <input type="range" id="header_b" min="0" max="255"> <span id="header_b_val"></span></label>
+  <span id="header_preview" class="color-preview"></span>
  </div></details>`;
 
   overlay.appendChild(box);
@@ -330,6 +339,7 @@ function openColorSettingsPopin(){
   initSliderSet('tanna_r_p','tanna_g_p','tanna_b_p','tanna_r_p_val','tanna_g_p_val','tanna_b_p_val','tanna_preview_p','ethicom_tanna_color',{var:'--primary-color',apply:applyTannaCSS});
 
   initSliderSet('module_r','module_g','module_b','module_r_val','module_g_val','module_b_val','module_preview','ethicom_module_color','--module-color');
+  initSliderSet('header_r','header_g','header_b','header_r_val','header_g_val','header_b_val','header_preview','ethicom_header_color','--header-bg');
 }
 
 window.applyTheme = applyTheme;

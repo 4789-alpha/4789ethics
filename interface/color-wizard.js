@@ -107,6 +107,7 @@ function openColorSettingsWizard(){
   steps.push(cwBuildColorStep('Background','ethicom_bg_color','--bg-color','cw_bg'));
   steps.push(cwBuildColorStep('Tanna Symbol','ethicom_tanna_color',{var:'--primary-color'},'cw_tanna',cwApplyTannaCSS));
   steps.push(cwBuildColorStep('Module Color','ethicom_module_color','--module-color','cw_module'));
+  steps.push(cwBuildColorStep('Header','ethicom_header_color','--header-bg','cw_header',(c,css)=>document.documentElement.style.setProperty('--nav-bg',css)));
 
   const confirmStep = document.createElement('div');
   confirmStep.innerHTML = '<p>Save these colors?</p>';
@@ -137,6 +138,10 @@ function openColorSettingsWizard(){
           if (document.body) document.body.style.setProperty('--bg-color',css);
         }
       else if (k==='ethicom_module_color') document.documentElement.style.setProperty('--module-color',css);
+      else if (k==='ethicom_header_color') {
+        document.documentElement.style.setProperty('--header-bg',css);
+        document.documentElement.style.setProperty('--nav-bg',css);
+      }
     });
     overlay.remove();
   });
@@ -173,6 +178,7 @@ function openColorSettingsWizardCLI(){
   ask('ethicom_bg_color','--bg-color','Background');
   ask('ethicom_tanna_color','--primary-color','Tanna Symbol',cwApplyTanna);
   ask('ethicom_module_color','--module-color','Module');
+  ask('ethicom_header_color','--header-bg','Header',c=>document.documentElement.style.setProperty('--nav-bg',`rgb(${c.r},${c.g},${c.b})`));
   alert('Colors updated');
 }
 
