@@ -229,8 +229,10 @@ function handleSignup(req, res) {
       writeJson(usersFile, users);
       res.writeHead(200, { 'Content-Type': 'application/json' });
       res.end(JSON.stringify({ id, secret, alias: user.alias, nickname: user.nickname }));
-    } catch {
-      res.writeHead(400); res.end('Bad Request');
+    } catch (err) {
+      console.error('Signup error:', err);
+      res.writeHead(400);
+      res.end('Bad Request: ' + err.message);
     }
   });
 }
@@ -275,8 +277,10 @@ function handleLogin(req, res) {
       writeJson(usersFile, users);
       res.writeHead(200, { 'Content-Type': 'application/json' });
       res.end(JSON.stringify({ id: user.id, op_level: user.op_level, alias: user.alias, nickname: user.nickname }));
-    } catch {
-      res.writeHead(400); res.end('Bad Request');
+    } catch (err) {
+      console.error('Login error:', err);
+      res.writeHead(400);
+      res.end('Bad Request: ' + err.message);
     }
   });
 }
@@ -499,8 +503,10 @@ function handleEvaluation(req, res) {
       writeJson(evalFile, evals);
       res.writeHead(200, { 'Content-Type': 'application/json' });
       res.end(JSON.stringify({ success: true }));
-    } catch {
-      res.writeHead(400); res.end('Bad Request');
+    } catch (err) {
+      console.error('Evaluation error:', err);
+      res.writeHead(400);
+      res.end('Bad Request: ' + err.message);
     }
   });
 }
@@ -542,8 +548,10 @@ function handleConnectRequest(req, res) {
       }
       res.writeHead(200, { 'Content-Type': 'application/json' });
       res.end(JSON.stringify({ success: true }));
-    } catch {
-      res.writeHead(400); res.end('Bad Request');
+    } catch (err) {
+      console.error('Connect request error:', err);
+      res.writeHead(400);
+      res.end('Bad Request: ' + err.message);
     }
   });
 }
@@ -563,8 +571,10 @@ function handleConnectApprove(req, res) {
         res.writeHead(200, { 'Content-Type': 'application/json' });
         res.end(JSON.stringify({ success: true }));
       } else { res.writeHead(404); res.end('Not found'); }
-    } catch {
-      res.writeHead(400); res.end('Bad Request');
+    } catch (err) {
+      console.error('Connect approve error:', err);
+      res.writeHead(400);
+      res.end('Bad Request: ' + err.message);
     }
   });
 }
@@ -611,8 +621,10 @@ function handleLevelUpgrade(req, res) {
       writeJson(usersFile, users);
       res.writeHead(200, { 'Content-Type': 'application/json' });
       res.end(JSON.stringify({ id: user.id, op_level: user.op_level, warning }));
-    } catch {
-      res.writeHead(400); res.end('Bad Request');
+    } catch (err) {
+      console.error('Level upgrade error:', err);
+      res.writeHead(400);
+      res.end('Bad Request: ' + err.message);
     }
   });
 }
