@@ -8,7 +8,20 @@ function initSideDrop(url) {
     typeof opLevelToNumber === 'function'
       ? opLevelToNumber(getStoredOpLevel())
       : 0;
-  if (level < 6) return; // side drop only from OP‑6 interface
+  const menuBtn = document.getElementById('side_menu');
+  if (level < 6) {
+    if (menuBtn) {
+      const notice =
+        typeof uiText !== 'undefined' && uiText.side_menu_need_op6
+          ? uiText.side_menu_need_op6
+          : 'OP-6 required.';
+      menuBtn.setAttribute('title', notice);
+      menuBtn.setAttribute('aria-label', notice);
+      menuBtn.setAttribute('aria-disabled', 'true');
+      menuBtn.disabled = true;
+    }
+    return; // side drop only from OP‑6 interface
+  }
 
   sideDropUrl = url;
   const container = document.getElementById('side_drop');
