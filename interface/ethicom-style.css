@@ -716,6 +716,18 @@ body.left-layout main {
   position: relative;
   z-index: 1;
 }
+/* Enhanced layout for department overview */
+#departments_section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5em;
+}
+#departments_section details.card summary {
+  font-size: 1.2em;
+}
+#departments_section img.inline-logo {
+  height: 4em;
+}
 
 /* Side registers for logged-in users */
 .side-registers {
