@@ -82,7 +82,8 @@
       "4789 is a standard for responsibility, not a person or belief system.",
       "Use only with reflection and consequence; no manipulation or uncontrolled automation.",
       "If a contradiction arises, apply self-reflection (structure_9874).",
-      "Humor is allowed if responsibility and clarity remain."
+      "Humor is allowed if responsibility and clarity remain.",
+      "Each user’s TOTP secret is stored as plain text."
     ],
     "btn_disclaimer_accept": "I understand",
     "attention_toggle_wiggle": "Wiggle when idle",
@@ -195,7 +196,8 @@
       "4789 ist ein Standard für Verantwortung, keine Person oder Ideologie.",
       "Nutzung nur reflektiert und mit Konsequenz; keine Manipulation oder unkontrollierte Automatisierung.",
       "Bei Widerspruch gilt Selbstreflexion nach structure_9874.md.",
-      "Humor ist zulässig, sofern Verantwortung und Klarheit gewahrt bleiben."
+      "Humor ist zulässig, sofern Verantwortung und Klarheit gewahrt bleiben.",
+      "TOTP-Geheimnisse werden im Klartext gespeichert."
     ],
     "btn_disclaimer_accept": "Verstanden",
     "attention_toggle_wiggle": "Beim Warten wackeln",
@@ -307,7 +309,8 @@
       "4789 ist ein Standard für Verantwortung, keine Person oder Ideologie.",
       "Nutzung nur reflektiert und mit Konsequenz; keine Manipulation oder unkontrollierte Automatisierung.",
       "Bei Widerspruch gilt Selbstreflexion nach structure_9874.md.",
-      "Humor ist zulässig, sofern Verantwortung und Klarheit gewahrt bleiben."
+      "Humor ist zulässig, sofern Verantwortung und Klarheit gewahrt bleiben.",
+      "TOTP-Geheimnisse werden im Klartext gespeichert."
     ],
     "btn_disclaimer_accept": "Verstanden",
     "attention_toggle_wiggle": "Beim Warten wackeln",
@@ -411,7 +414,8 @@
       "4789 est une norme de responsabilité, pas une personne ou une idéologie.",
       "Utilisez-la uniquement de manière réfléchie et avec conséquence; aucune manipulation ni automatisation incontrôlée.",
       "En cas de contradiction, appliquez l'autoréflexion (structure_9874).",
-      "L'humour est autorisé tant que la responsabilité et la clarté sont préservées."
+      "L'humour est autorisé tant que la responsabilité et la clarté sont préservées.",
+      "Le secret TOTP de chaque utilisateur est stocké en texte clair."
     ],
     "btn_disclaimer_accept": "Compris",
     "nav_tools": "Outils",
@@ -524,7 +528,8 @@
       "4789 es un estándar de responsabilidad, no una persona ni un sistema de creencias.",
       "Úsalo solo con reflexión y consecuencia; nada de manipulación ni automatización sin control.",
       "Si surge una contradicción, aplica autorreflexión (structure_9874).",
-      "El humor es bienvenido siempre que haya responsabilidad y claridad."
+      "El humor es bienvenido siempre que haya responsabilidad y claridad.",
+      "El secreto TOTP de cada usuario se almacena en texto plano."
     ],
     "btn_disclaimer_accept": "Entiendo",
     "simple_toggle_label": "Alternar modo simple",
@@ -584,7 +589,8 @@
       "4789 é um padrão de responsabilidade, não uma pessoa ou crença.",
       "Use apenas com reflexão e consequência; sem manipulação ou automação descontrolada.",
       "Se surgir uma contradição, aplique auto-reflexão (structure_9874).",
-      "O humor é permitido se a responsabilidade e a clareza forem mantidas."
+      "O humor é permitido se a responsabilidade e a clareza forem mantidas.",
+      "O segredo TOTP de cada usuário é armazenado em texto simples."
     ],
     "btn_disclaimer_accept": "Entendi",
     "signup_title": "Cadastro",
@@ -696,7 +702,8 @@
       "4789 是责任标准，不代表个人或信仰体系。",
       "仅在反思并承担后果的情况下使用；禁止操纵或不受控的自动化。",
       "如有矛盾，请进行自我反思（structure_9874）。",
-      "在保持责任和清晰度的前提下，可适当幽默。"
+      "在保持责任和清晰度的前提下，可适当幽默。",
+      "每个用户的 TOTP 密钥以明文存储。"
     ],
     "btn_disclaimer_accept": "理解",
     "signup_title": "Sign up",
@@ -864,7 +871,8 @@
       "4789 is a standard for responsibility, not a person or belief system.",
       "Use only with reflection and consequence; no manipulation or uncontrolled automation.",
       "If a contradiction arises, apply self-reflection (structure_9874).",
-      "Humor is allowed if responsibility and clarity remain."
+      "Humor is allowed if responsibility and clarity remain.",
+      "Each user’s TOTP secret is stored as plain text."
     ],
     "btn_disclaimer_accept": "I understand",
     "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
@@ -976,7 +984,8 @@
       "4789 is a standard for responsibility, not a person or belief system.",
       "Use only with reflection and consequence; no manipulation or uncontrolled automation.",
       "If a contradiction arises, apply self-reflection (structure_9874).",
-      "Humor is allowed if responsibility and clarity remain."
+      "Humor is allowed if responsibility and clarity remain.",
+      "Each user’s TOTP secret is stored as plain text."
     ],
     "btn_disclaimer_accept": "I understand",
     "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
@@ -1088,7 +1097,8 @@
       "4789 is a standard for responsibility, not a person or belief system.",
       "Use only with reflection and consequence; no manipulation or uncontrolled automation.",
       "If a contradiction arises, apply self-reflection (structure_9874).",
-      "Humor is allowed if responsibility and clarity remain."
+      "Humor is allowed if responsibility and clarity remain.",
+      "Each user’s TOTP secret is stored as plain text."
     ],
     "btn_disclaimer_accept": "I understand",
     "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
@@ -1200,7 +1210,8 @@
       "4789 is a standard for responsibility, not a person or belief system.",
       "Use only with reflection and consequence; no manipulation or uncontrolled automation.",
       "If a contradiction arises, apply self-reflection (structure_9874).",
-      "Humor is allowed if responsibility and clarity remain."
+      "Humor is allowed if responsibility and clarity remain.",
+      "Each user’s TOTP secret is stored as plain text."
     ],
     "btn_disclaimer_accept": "I understand",
     "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
@@ -1312,7 +1323,8 @@
       "4789 is a standard for responsibility, not a person or belief system.",
       "Use only with reflection and consequence; no manipulation or uncontrolled automation.",
       "If a contradiction arises, apply self-reflection (structure_9874).",
-      "Humor is allowed if responsibility and clarity remain."
+      "Humor is allowed if responsibility and clarity remain.",
+      "Each user’s TOTP secret is stored as plain text."
     ],
     "btn_disclaimer_accept": "I understand",
     "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
@@ -1369,7 +1381,8 @@
       "4789 è uno standard di responsabilità, non una persona o un sistema di credenze.",
       "Usare solo con riflessione e conseguenze; nessuna manipolazione o automazione incontrollata.",
       "Se sorge una contraddizione, applicare l'auto-riflessione (structure_9874).",
-      "L'umorismo è consentito se la responsabilità e la chiarezza rimangono."
+      "L'umorismo è consentito se la responsabilità e la chiarezza rimangono.",
+      "Il segreto TOTP di ogni utente è memorizzato in chiaro."
     ],
     "btn_disclaimer_accept": "Ho capito",
     "signup_title": "Registrazione",
@@ -1537,7 +1550,8 @@
       "4789 is a standard for responsibility, not a person or belief system.",
       "Use only with reflection and consequence; no manipulation or uncontrolled automation.",
       "If a contradiction arises, apply self-reflection (structure_9874).",
-      "Humor is allowed if responsibility and clarity remain."
+      "Humor is allowed if responsibility and clarity remain.",
+      "Each user’s TOTP secret is stored as plain text."
     ],
     "btn_disclaimer_accept": "I understand",
     "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
@@ -1649,7 +1663,8 @@
       "4789 is a standard for responsibility, not a person or belief system.",
       "Use only with reflection and consequence; no manipulation or uncontrolled automation.",
       "If a contradiction arises, apply self-reflection (structure_9874).",
-      "Humor is allowed if responsibility and clarity remain."
+      "Humor is allowed if responsibility and clarity remain.",
+      "Each user’s TOTP secret is stored as plain text."
     ],
     "btn_disclaimer_accept": "I understand",
     "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
@@ -1761,7 +1776,8 @@
       "4789 is a standard for responsibility, not a person or belief system.",
       "Use only with reflection and consequence; no manipulation or uncontrolled automation.",
       "If a contradiction arises, apply self-reflection (structure_9874).",
-      "Humor is allowed if responsibility and clarity remain."
+      "Humor is allowed if responsibility and clarity remain.",
+      "Each user’s TOTP secret is stored as plain text."
     ],
     "btn_disclaimer_accept": "I understand",
     "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
@@ -1873,7 +1889,8 @@
       "4789 is a standard for responsibility, not a person or belief system.",
       "Use only with reflection and consequence; no manipulation or uncontrolled automation.",
       "If a contradiction arises, apply self-reflection (structure_9874).",
-      "Humor is allowed if responsibility and clarity remain."
+      "Humor is allowed if responsibility and clarity remain.",
+      "Each user’s TOTP secret is stored as plain text."
     ],
     "btn_disclaimer_accept": "I understand",
     "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
@@ -1985,7 +2002,8 @@
       "4789 is a standard for responsibility, not a person or belief system.",
       "Use only with reflection and consequence; no manipulation or uncontrolled automation.",
       "If a contradiction arises, apply self-reflection (structure_9874).",
-      "Humor is allowed if responsibility and clarity remain."
+      "Humor is allowed if responsibility and clarity remain.",
+      "Each user’s TOTP secret is stored as plain text."
     ],
     "btn_disclaimer_accept": "I understand",
     "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
@@ -2097,7 +2115,8 @@
       "4789 is a standard for responsibility, not a person or belief system.",
       "Use only with reflection and consequence; no manipulation or uncontrolled automation.",
       "If a contradiction arises, apply self-reflection (structure_9874).",
-      "Humor is allowed if responsibility and clarity remain."
+      "Humor is allowed if responsibility and clarity remain.",
+      "Each user’s TOTP secret is stored as plain text."
     ],
     "btn_disclaimer_accept": "I understand",
     "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
@@ -2209,7 +2228,8 @@
       "4789 is a standard for responsibility, not a person or belief system.",
       "Use only with reflection and consequence; no manipulation or uncontrolled automation.",
       "If a contradiction arises, apply self-reflection (structure_9874).",
-      "Humor is allowed if responsibility and clarity remain."
+      "Humor is allowed if responsibility and clarity remain.",
+      "Each user’s TOTP secret is stored as plain text."
     ],
     "btn_disclaimer_accept": "I understand",
     "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
@@ -2321,7 +2341,8 @@
       "4789 is a standard for responsibility, not a person or belief system.",
       "Use only with reflection and consequence; no manipulation or uncontrolled automation.",
       "If a contradiction arises, apply self-reflection (structure_9874).",
-      "Humor is allowed if responsibility and clarity remain."
+      "Humor is allowed if responsibility and clarity remain.",
+      "Each user’s TOTP secret is stored as plain text."
     ],
     "btn_disclaimer_accept": "I understand",
     "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
@@ -2433,7 +2454,8 @@
       "4789 is a standard for responsibility, not a person or belief system.",
       "Use only with reflection and consequence; no manipulation or uncontrolled automation.",
       "If a contradiction arises, apply self-reflection (structure_9874).",
-      "Humor is allowed if responsibility and clarity remain."
+      "Humor is allowed if responsibility and clarity remain.",
+      "Each user’s TOTP secret is stored as plain text."
     ],
     "btn_disclaimer_accept": "I understand",
     "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
@@ -2545,7 +2567,8 @@
       "4789 is a standard for responsibility, not a person or belief system.",
       "Use only with reflection and consequence; no manipulation or uncontrolled automation.",
       "If a contradiction arises, apply self-reflection (structure_9874).",
-      "Humor is allowed if responsibility and clarity remain."
+      "Humor is allowed if responsibility and clarity remain.",
+      "Each user’s TOTP secret is stored as plain text."
     ],
     "btn_disclaimer_accept": "I understand",
     "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
@@ -2657,7 +2680,8 @@
       "4789 is a standard for responsibility, not a person or belief system.",
       "Use only with reflection and consequence; no manipulation or uncontrolled automation.",
       "If a contradiction arises, apply self-reflection (structure_9874).",
-      "Humor is allowed if responsibility and clarity remain."
+      "Humor is allowed if responsibility and clarity remain.",
+      "Each user’s TOTP secret is stored as plain text."
     ],
     "btn_disclaimer_accept": "I understand",
     "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
@@ -2769,7 +2793,8 @@
       "4789 is a standard for responsibility, not a person or belief system.",
       "Use only with reflection and consequence; no manipulation or uncontrolled automation.",
       "If a contradiction arises, apply self-reflection (structure_9874).",
-      "Humor is allowed if responsibility and clarity remain."
+      "Humor is allowed if responsibility and clarity remain.",
+      "Each user’s TOTP secret is stored as plain text."
     ],
     "btn_disclaimer_accept": "I understand",
     "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
@@ -2881,7 +2906,8 @@
       "4789 is a standard for responsibility, not a person or belief system.",
       "Use only with reflection and consequence; no manipulation or uncontrolled automation.",
       "If a contradiction arises, apply self-reflection (structure_9874).",
-      "Humor is allowed if responsibility and clarity remain."
+      "Humor is allowed if responsibility and clarity remain.",
+      "Each user’s TOTP secret is stored as plain text."
     ],
     "btn_disclaimer_accept": "I understand",
     "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
@@ -2993,7 +3019,8 @@
       "4789 is a standard for responsibility, not a person or belief system.",
       "Use only with reflection and consequence; no manipulation or uncontrolled automation.",
       "If a contradiction arises, apply self-reflection (structure_9874).",
-      "Humor is allowed if responsibility and clarity remain."
+      "Humor is allowed if responsibility and clarity remain.",
+      "Each user’s TOTP secret is stored as plain text."
     ],
     "btn_disclaimer_accept": "I understand",
     "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
@@ -3105,7 +3132,8 @@
       "4789 is a standard for responsibility, not a person or belief system.",
       "Use only with reflection and consequence; no manipulation or uncontrolled automation.",
       "If a contradiction arises, apply self-reflection (structure_9874).",
-      "Humor is allowed if responsibility and clarity remain."
+      "Humor is allowed if responsibility and clarity remain.",
+      "Each user’s TOTP secret is stored as plain text."
     ],
     "btn_disclaimer_accept": "I understand",
     "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
@@ -3217,7 +3245,8 @@
       "4789 is a standard for responsibility, not a person or belief system.",
       "Use only with reflection and consequence; no manipulation or uncontrolled automation.",
       "If a contradiction arises, apply self-reflection (structure_9874).",
-      "Humor is allowed if responsibility and clarity remain."
+      "Humor is allowed if responsibility and clarity remain.",
+      "Each user’s TOTP secret is stored as plain text."
     ],
     "btn_disclaimer_accept": "I understand",
     "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
@@ -3330,7 +3359,8 @@
       "4789 is a standard for responsibility, not a person or belief system.",
       "Use only with reflection and consequence; no manipulation or uncontrolled automation.",
       "If a contradiction arises, apply self-reflection (structure_9874).",
-      "Humor is allowed if responsibility and clarity remain."
+      "Humor is allowed if responsibility and clarity remain.",
+      "Each user’s TOTP secret is stored as plain text."
     ],
     "btn_disclaimer_accept": "I understand",
     "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
@@ -3442,7 +3472,8 @@
       "4789 is a standard for responsibility, not a person or belief system.",
       "Use only with reflection and consequence; no manipulation or uncontrolled automation.",
       "If a contradiction arises, apply self-reflection (structure_9874).",
-      "Humor is allowed if responsibility and clarity remain."
+      "Humor is allowed if responsibility and clarity remain.",
+      "Each user’s TOTP secret is stored as plain text."
     ],
     "btn_disclaimer_accept": "I understand",
     "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
@@ -3554,7 +3585,8 @@
       "4789 is a standard for responsibility, not a person or belief system.",
       "Use only with reflection and consequence; no manipulation or uncontrolled automation.",
       "If a contradiction arises, apply self-reflection (structure_9874).",
-      "Humor is allowed if responsibility and clarity remain."
+      "Humor is allowed if responsibility and clarity remain.",
+      "Each user’s TOTP secret is stored as plain text."
     ],
     "btn_disclaimer_accept": "I understand",
     "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
@@ -3666,7 +3698,8 @@
       "4789 is a standard for responsibility, not a person or belief system.",
       "Use only with reflection and consequence; no manipulation or uncontrolled automation.",
       "If a contradiction arises, apply self-reflection (structure_9874).",
-      "Humor is allowed if responsibility and clarity remain."
+      "Humor is allowed if responsibility and clarity remain.",
+      "Each user’s TOTP secret is stored as plain text."
     ],
     "btn_disclaimer_accept": "I understand",
     "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
@@ -3778,7 +3811,8 @@
       "4789 is a standard for responsibility, not a person or belief system.",
       "Use only with reflection and consequence; no manipulation or uncontrolled automation.",
       "If a contradiction arises, apply self-reflection (structure_9874).",
-      "Humor is allowed if responsibility and clarity remain."
+      "Humor is allowed if responsibility and clarity remain.",
+      "Each user’s TOTP secret is stored as plain text."
     ],
     "btn_disclaimer_accept": "I understand",
     "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
