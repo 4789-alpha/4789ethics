@@ -2036,7 +2036,7 @@ function initLanguageDropdown(selectId = "lang_select", textPath = getUiTextPath
       }
 
       applyLanguage(current);
-      select.addEventListener("change", e => {
+  select.addEventListener("change", e => {
         const lang = e.target.value.replace(/\*$/, "");
         localStorage.setItem("ethicom_lang", lang);
         applyLanguage(lang);
@@ -2046,6 +2046,14 @@ function initLanguageDropdown(selectId = "lang_select", textPath = getUiTextPath
       displayLangNotice(
         'Start the interface with `node tools/serve-interface.js`. Then open `http://localhost:8080/ethicom.html` in your browser. Opening the HTML file directly (e.g. via `file://`) bypasses the local server and causes the language list to remain empty. Always access the interface through the provided `localhost` address so that translation files load correctly.'
       );
+      const select = document.getElementById(selectId);
+      if (select) {
+        select.innerHTML = '<option value="en">en</option>';
+        select.value = 'en';
+      }
+      localStorage.setItem('ethicom_lang', 'en');
+      if (typeof applyTexts === 'function') applyTexts({});
+      if (typeof updateReadmeLinks === 'function') updateReadmeLinks('en');
     });
 }
 
@@ -3416,6 +3424,43 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+
+//----- status-bar.js -----
+function checkServerStatus(url = 'config.json') {
+  return fetch(url, { method: 'HEAD', cache: 'no-cache' })
+    .then(r => r.ok)
+    .catch(() => false);
+}
+
+function showStatus(msg, online) {
+  const bar = document.getElementById('status_bar') || createStatusBar();
+  bar.textContent = msg;
+  bar.className = online ? 'status-bar status-online' : 'status-bar status-offline';
+  bar.style.display = 'block';
+}
+
+function createStatusBar() {
+  const bar = document.createElement('div');
+  bar.id = 'status_bar';
+  bar.className = 'status-bar';
+  document.body.prepend(bar);
+  return bar;
+}
+
+async function initStatusBar() {
+  if (location.protocol === 'file:') {
+    showStatus('Server offline', false);
+    return;
+  }
+  const online = await checkServerStatus();
+  if (!online) showStatus('Server offline', false);
+}
+
+if (typeof window !== 'undefined') {
+  window.addEventListener('DOMContentLoaded', initStatusBar);
+  window.showStatus = showStatus;
+}
 
 
 //----- tanna-animation.js -----

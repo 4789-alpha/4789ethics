@@ -424,6 +424,21 @@ button:hover {
   font-weight: bold;
 }
 
+#status_bar {
+  display: none;
+  text-align: center;
+  font-weight: bold;
+  padding: 0.3em;
+}
+
+.status-online {
+  background: #cfc;
+}
+
+.status-offline {
+  background: #fcc;
+}
+
 #loading_badge {
   display: none;
   text-align: center;
