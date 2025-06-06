@@ -1037,8 +1037,10 @@ function loadDepartments(){
     })
     .catch(err => {
       console.error(err);
-      if(!fallback) {
-        container.textContent = 'Konnte Abteilungen nicht laden. Please check your network connection or open the page via a web server.';
+      const msg = `Konnte Abteilungen nicht laden: ${err.message}. ` +
+        'Prüfen Sie die Netzwerkverbindung oder öffnen Sie die Seite über einen Web-Server.';
+      if (!fallback) {
+        container.textContent = msg;
       }
     });
 }
@@ -2710,8 +2712,9 @@ function renderOpOverview() {
         applyInfoTexts(container);
       }
     })
-    .catch(() => {
-      container.textContent = 'Konnte OP-Daten nicht laden.';
+    .catch(err => {
+      console.error(err);
+      container.textContent = `Konnte OP-Daten nicht laden: ${err.message}. Pr\u00fcfen Sie die Netzwerkverbindung oder \u00f6ffnen Sie die Seite \u00fcber einen Web-Server.`;
     });
 }
 
