@@ -193,7 +193,15 @@ function handleSignup(req, res) {
   req.on('data', c => { body += c; });
   req.on('end', () => {
     try {
-      const { email, password, address, phone, country, id_number } = JSON.parse(body);
+      const {
+        email,
+        password,
+        address,
+        phone,
+        country,
+        id_number,
+        nickname
+      } = JSON.parse(body);
       if (!/^[^@]+@[^@]+\.[^@]+$/.test(email) || !password || password.length < 8) {
         res.writeHead(400); res.end('Invalid data'); return;
       }
@@ -217,7 +225,7 @@ function handleSignup(req, res) {
         pwHash,
         salt,
         op_level: 'OP-1',
-        nickname: autoNick,
+        nickname: nickname || autoNick,
         totpSecret: secret,
         addrHash,
         phoneHash,

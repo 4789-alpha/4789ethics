@@ -66,12 +66,12 @@ test('registration hashes email and password as noted in DISCLAIMERS lines 9-10'
   }
 });
 
-test('signup assigns classic nickname for OP-1', () => {
+test('signup uses provided nickname for OP-1', () => {
   const usersPath = path.join(__dirname, '..', 'app', 'users.json');
   const backup = fs.existsSync(usersPath) ? fs.readFileSync(usersPath, 'utf8') : null;
   try {
     fs.writeFileSync(usersPath, '[]');
-    const { handleSignup, suggestNickname } = require('../tools/serve-interface.js');
+    const { handleSignup } = require('../tools/serve-interface.js');
     const body = JSON.stringify({ email: 'n@example.com', password: 'safePass123', nickname: 'nick', country: 'DE' });
     const req = new events.EventEmitter();
     const res = { status: 0, writeHead(code) { this.status = code; }, end() {} };
@@ -80,8 +80,7 @@ test('signup assigns classic nickname for OP-1', () => {
     req.emit('end');
     assert.strictEqual(res.status, 200);
     const stored = JSON.parse(fs.readFileSync(usersPath, 'utf8'))[0];
-    const expected = `${suggestNickname('DE')}@OP-1`;
-    assert.strictEqual(stored.alias, expected);
+    assert.strictEqual(stored.alias, 'nick@OP-1');
   } finally {
     restore(usersPath, backup);
     delete require.cache[require.resolve('../tools/serve-interface.js')];
