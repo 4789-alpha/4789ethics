@@ -133,9 +133,10 @@ function initLanguageDropdown(selectId = "lang_select", textPath = getUiTextPath
 
 // Ensure a language is set and supported
 function checkLanguageSetup() {
-  const supported = ["de-ch", "en"];
-  let lang = localStorage.getItem("ethicom_lang") || (navigator.language || "de-CH").toLowerCase();
-  if (!supported.includes(lang)) {
+  let lang =
+    localStorage.getItem("ethicom_lang") ||
+    (navigator.language || "de-CH").toLowerCase();
+  if (!/^[a-z]{2}(?:-[a-z]{2})?$/.test(lang)) {
     lang = askLanguageChoice() || "de-ch";
   }
   document.documentElement.lang = lang;
