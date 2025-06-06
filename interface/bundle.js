@@ -1006,11 +1006,11 @@ document.addEventListener('DOMContentLoaded', init);
 //----- departments-loader.js -----
 function loadDepartments(){
   const container = document.getElementById('departments_section');
+  const fallback = document.getElementById('departments_fallback');
   if(!container) return;
   fetch('sources/departments/bsvrb.json')
     .then(r => r.json())
     .then(list => {
-      container.innerHTML = '';
       list.forEach(d => {
         if(d.dept_id === 'dept-qc'){
           const sec = document.createElement('section');
@@ -1033,8 +1033,14 @@ function loadDepartments(){
         details.appendChild(ul);
         container.appendChild(details);
       });
+      if(fallback) fallback.classList.add('hidden');
     })
-    .catch(() => { container.textContent = 'Konnte Abteilungen nicht laden.'; });
+    .catch(err => {
+      console.error(err);
+      if(!fallback) {
+        container.textContent = 'Konnte Abteilungen nicht laden. Please check your network connection or open the page via a web server.';
+      }
+    });
 }
 
 document.addEventListener('DOMContentLoaded', loadDepartments);
@@ -3045,7 +3051,20 @@ function initSideDrop(url) {
     typeof opLevelToNumber === 'function'
       ? opLevelToNumber(getStoredOpLevel())
       : 0;
-  if (level < 6) return; // side drop only from OP‑6 interface
+  const menuBtn = document.getElementById('side_menu');
+  if (level < 6) {
+    if (menuBtn) {
+      const notice =
+        typeof uiText !== 'undefined' && uiText.side_menu_need_op6
+          ? uiText.side_menu_need_op6
+          : 'OP-6 required.';
+      menuBtn.setAttribute('title', notice);
+      menuBtn.setAttribute('aria-label', notice);
+      menuBtn.setAttribute('aria-disabled', 'true');
+      menuBtn.disabled = true;
+    }
+    return; // side drop only from OP‑6 interface
+  }
 
   sideDropUrl = url;
   const container = document.getElementById('side_drop');
