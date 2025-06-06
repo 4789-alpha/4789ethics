@@ -1,10 +1,10 @@
 function loadDepartments(){
   const container = document.getElementById('departments_section');
+  const fallback = document.getElementById('departments_fallback');
   if(!container) return;
   fetch('sources/departments/bsvrb.json')
     .then(r => r.json())
     .then(list => {
-      container.innerHTML = '';
       list.forEach(d => {
         if(d.dept_id === 'dept-qc'){
           const sec = document.createElement('section');
@@ -27,10 +27,13 @@ function loadDepartments(){
         details.appendChild(ul);
         container.appendChild(details);
       });
+      if(fallback) fallback.classList.add('hidden');
     })
     .catch(err => {
       console.error(err);
-      container.textContent = 'Konnte Abteilungen nicht laden. Please check your network connection or open the page via a web server.';
+      if(!fallback) {
+        container.textContent = 'Konnte Abteilungen nicht laden. Please check your network connection or open the page via a web server.';
+      }
     });
 }
 
