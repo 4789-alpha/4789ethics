@@ -120,6 +120,20 @@
   --module-color: #ffff00;
 }
 
+.theme-accessible {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --header-text-color: #000000;
+  --nav-text-color: #000000;
+  --primary-color: #0072b2;
+  --card-bg: #f7f7f7;
+  --header-bg: #e0e0e0;
+  --nav-bg: #e0e0e0;
+  --card-alpha-bg: rgba(255, 255, 255, 0.95);
+  --accent-color: #d55e00;
+  --module-color: #0072b2;
+}
+
 .theme-transparent {
   --bg-color: transparent;
   --text-color: #e0e0e0;

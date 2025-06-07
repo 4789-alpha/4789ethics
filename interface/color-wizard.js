@@ -93,6 +93,7 @@ function openColorSettingsWizard(){
       <option value="transparent">Transparent</option>
       <option value="ocean">Sea Blue</option>
       <option value="desert">Desert</option>
+      <option value="accessible">Accessible</option>
       <option value="custom">Custom</option>
     </select>`;
   const themeSelect = step0.querySelector('#cw_theme_select');
@@ -157,7 +158,7 @@ function openColorSettingsWizard(){
 window.openColorSettingsWizard = openColorSettingsWizard;
 
 function openColorSettingsWizardCLI(){
-  const themes=['dark','tanna-dark','tanna','transparent','ocean','desert','custom'];
+  const themes=['dark','tanna-dark','tanna','transparent','ocean','desert','accessible','custom'];
   let theme=prompt('Color Scheme ('+themes.join(', ')+'):',localStorage.getItem('ethicom_theme')||'tanna-dark');
   if(theme&&themes.includes(theme)){
     localStorage.setItem('ethicom_theme',theme);
