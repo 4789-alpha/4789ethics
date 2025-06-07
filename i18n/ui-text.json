@@ -101,7 +101,6 @@
     "login_google": "Login with Google",
     "login_invalid": "Login failed.",
     "login_saved": "Login successful. ID stored.",
-    "translation_notice": "Language not fully implemented. Contributions welcome.",
     "connect_title": "Connect",
     "connect_request": "Request connection",
     "connect_enter_sig": "Target signature:",
