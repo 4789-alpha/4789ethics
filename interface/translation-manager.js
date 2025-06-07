@@ -15,6 +15,7 @@ function getSignatureId() {
 function loadUiTexts() {
   return fetch("../i18n/ui-text.json")
     .then(r => r.json())
+    .catch(() => ({}))
     .then(data => {
       uiTexts = data;
       // merge pending translations
