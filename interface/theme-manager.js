@@ -9,7 +9,8 @@ function applyTheme(theme) {
     'theme-desert',
     'theme-transparent',
     'theme-custom',
-    'theme-high-contrast'
+    'theme-high-contrast',
+    'theme-accessible'
   );
   document.documentElement.style.removeProperty('--primary-color');
   document.documentElement.style.removeProperty('--accent-color');
@@ -42,8 +43,8 @@ function initThemeSelection() {
   const tannaCard = document.getElementById('tanna_color');
   const slider = document.getElementById('theme_slider');
   const label = document.getElementById('theme_slider_label');
-  const themes = ['dark','tanna-dark','tanna','transparent','ocean','desert','custom'];
-  const labels = ['Dark','Dark Tanna','Tanna','Transparent','Sea Blue','Desert','Custom'];
+  const themes = ['dark','tanna-dark','tanna','transparent','ocean','desert','accessible','custom'];
+  const labels = ['Dark','Dark Tanna','Tanna','Transparent','Sea Blue','Desert','Accessible','Custom'];
   let theme = localStorage.getItem('ethicom_theme') || 'tanna-dark';
   applyTheme(theme);
   if (tannaCard) tannaCard.style.display = theme === 'tanna' ? 'block' : 'none';
@@ -248,6 +249,7 @@ function openColorSettingsPopin(){
     <option value="transparent">Transparent</option>
     <option value="ocean">Sea Blue</option>
     <option value="desert">Desert</option>
+    <option value="accessible">Accessible</option>
     <option value="custom">Custom</option>
   </select></div>`+
   `
@@ -307,8 +309,8 @@ function openColorSettingsPopin(){
   overlay.addEventListener('keydown',e=>{if(e.key==='Escape'){e.preventDefault();closePopin();}});
   setTimeout(()=>closeBtn.focus(),0);
 
-  const themes=['dark','tanna-dark','tanna','transparent','ocean','desert','custom'];
-  const labels=['Dark','Dark Tanna','Tanna','Transparent','Sea Blue','Desert','Custom'];
+  const themes=['dark','tanna-dark','tanna','transparent','ocean','desert','accessible','custom'];
+  const labels=['Dark','Dark Tanna','Tanna','Transparent','Sea Blue','Desert','Accessible','Custom'];
   const scheme=document.getElementById('theme_select_pop');
   if(scheme){
     const stored=localStorage.getItem('ethicom_theme')||'tanna-dark';
