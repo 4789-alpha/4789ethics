@@ -20,7 +20,7 @@ Nicht Geschwindigkeit entscheidet, sondern ob man würdig besteht.
 | `map/` | GPX-Dateien und Leaflet-Kartenansicht |
 | `app/` | Flutter-App mit GPS, Entscheidung und Protokoll |
 | `media/` | Logo, Marker und visuelle Elemente |
-| `docs/` | Spielerhandbuch, Codex-Hinweise und Beispiele |
+| `docs/` | Spielerhandbuch, Codex-Hinweise, Beispiele und weitere Dokumente |
 | `index.html` & `style.css` | Landing-Page und Styles |
 | `logs/` | Gespeicherte Entscheidungen und Bewegungen |
 

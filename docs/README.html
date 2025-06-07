@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>README – Ethics Structure 4789</title>
+  <link rel="stylesheet" href="interface/ethicom-style.css">
+<script src="interface/bundle.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main_content">Skip to main content</a>
+  <div id="op_background"></div>
+  <header>
+    <h1>Ethics Structure 4789</h1>
+    <p class="tagline">Responsibility over convenience</p>
+  </header>
+  <nav>
+    <a href="home.html" class="icon-only" aria-label="Home">🏠</a>
+    <a href="interface/settings.html" class="icon-only" aria-label="Settings">⚙</a>
+    <a href="interface/login.html" class="icon-only" aria-label="Login">🔑</a>
+    <a href="interface/signup.html">Signup</a>
+    <a aria-current="page" class="icon-only readme-link" aria-label="Help">?</a>
+    <button id="side_menu" type="button" class="icon-only" aria-label="Menu">☰</button>
+  </nav>
+  <section id="user_info" class="card" aria-live="polite"></section>
+  <main id="main_content">
+    <section class="card">
+      <h2>Overview</h2>
+      <p>This repository contains the ethics framework under Signature 4789.</p>
+    </section>
+    <section class="card">
+      <h2>Core Features</h2>
+      <ul>
+        <li>Full operator model (OP 0–9.x)</li>
+        <li>Self-reflection system (Signature 9874)</li>
+        <li>Ethics-first tools for digital systems</li>
+      </ul>
+    </section>
+      <section class="card">
+        <h2>Not Included</h2>
+        <ul>
+          <li>Belief system</li>
+          <li>Rulebook</li>
+          <li>Tool for control or moralism</li>
+        </ul>
+      </section>
+      <section class="card">
+        <h2>OP Function Bundles</h2>
+        <p>
+          Helper functions in <code>tools/op-functions.js</code> require a specific
+          operator level. The links below may not work if your OP level is too
+          low.
+        </p>
+        <ul>
+          <li><code>info</code> – OP-1</li>
+          <li><code>log</code> – OP-2</li>
+          <li><code>analyze</code> – OP-4</li>
+          <li><code>recommendation_for_interface</code> – OP-5</li>
+          <li><code>optimize</code> – OP-7</li>
+        </ul>
+      </section>
+    <section class="card">
+      <p>For complete details see <a href="README.md">README.md</a>.</p>
+      <article id="readme_content" class="markdown-content">
+        Loading README...
+      </article>
+    </section>
+  </main>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      initLogoBackground();
+      initSideDrop('interface/nav-menu.html');
+      const menu = document.getElementById('side_menu');
+      if (menu) menu.addEventListener('click', e => { e.preventDefault(); toggleSideDrop(); });
+      fetch('README.md')
+        .then(r => r.text())
+        .then(t => {
+          const container = document.getElementById('readme_content');
+          if (container) container.innerHTML = renderMarkdown(t);
+        })
+        .catch(() => {
+          const container = document.getElementById('readme_content');
+          if (container) container.textContent = 'Failed to load README.';
+        });
+    });
+  </script>
+  <div id="side_drop"></div>
+</body>
+</html>
