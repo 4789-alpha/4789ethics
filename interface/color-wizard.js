@@ -79,7 +79,7 @@ function openColorSettingsWizard(){
 
   cancelBtn.addEventListener('click', () => overlay.remove());
 
-  const tempTheme = localStorage.getItem('ethicom_theme') || 'dark';
+  const tempTheme = localStorage.getItem('ethicom_theme') || 'tanna-dark';
   tempColors = {};
 
   const steps = [];
@@ -158,7 +158,7 @@ window.openColorSettingsWizard = openColorSettingsWizard;
 
 function openColorSettingsWizardCLI(){
   const themes=['dark','tanna-dark','tanna','transparent','ocean','desert','custom'];
-  let theme=prompt('Color Scheme ('+themes.join(', ')+'):',localStorage.getItem('ethicom_theme')||'dark');
+  let theme=prompt('Color Scheme ('+themes.join(', ')+'):',localStorage.getItem('ethicom_theme')||'tanna-dark');
   if(theme&&themes.includes(theme)){
     localStorage.setItem('ethicom_theme',theme);
     if(typeof applyTheme==='function') applyTheme(theme);
