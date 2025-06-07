@@ -17,7 +17,7 @@ modules:
   - meta
 
 limen:
-  name: "Mühlethurnen-Korridor"
+  name: "Korridor"
   typ: "natürlich"
   vektor: "start=46.8392,7.5010 / end=46.8297,7.4894"
   breite: 300
