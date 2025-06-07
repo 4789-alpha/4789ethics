@@ -65,6 +65,16 @@
     ]
   },
   {
+    "dept_id": "grimmhorn",
+    "title": "Grimmhorn",
+    "image": "sources/images/departments/logo-dept-5.png",
+    "alt": "Logo von Grimmhorn",
+    "link": "grimmhorn.html",
+    "points": [
+      "Raum für laute Experimente"
+    ]
+  },
+  {
     "dept_id": "dept-qc",
     "title": "Qualitätskontrolle / Verantwortungssystem",
     "image": "sources/images/institutions/logo-bsvrb-qc.png",
