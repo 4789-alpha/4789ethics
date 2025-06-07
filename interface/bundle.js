@@ -2340,6 +2340,7 @@ function initLogoBackground() {
       fadeOut: false,
       fadeStart: 0,
       collisionCount: 0,
+      highlightUntil: 0,
     });
   }
 
@@ -2395,6 +2396,9 @@ function initLogoBackground() {
           const minDist = s.radius * s.scale + o.radius * o.scale;
           if (dist < minDist) {
             resolveCollision(s, o);
+            const now = performance.now();
+            s.highlightUntil = now + 200;
+            o.highlightUntil = now + 200;
             if (s.lvl === maxLvl) {
               s.collisionCount++;
               if (s.collisionCount % 10000 === 0) {
@@ -2512,6 +2516,14 @@ function initLogoBackground() {
             s.subSize * s.scale,
             s.subSize * s.scale
           );
+        }
+        if (s.highlightUntil > performance.now()) {
+          ctx.strokeStyle = getComputedStyle(document.documentElement)
+            .getPropertyValue('--accent-color') || '#ff0';
+          ctx.lineWidth = 2;
+          ctx.beginPath();
+          ctx.arc(0, 0, s.radius * s.scale, 0, Math.PI * 2);
+          ctx.stroke();
         }
         ctx.filter = 'none';
         ctx.restore();
