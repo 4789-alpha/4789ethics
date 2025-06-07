@@ -88,6 +88,14 @@ protokoll:
   notfall:
     erlauben: true
 
+anzeige:
+  start_karte: true
+  fokus: "limen.startpunkt"
+  overlays:
+    - route
+    - engstellen
+    - gefahrensymbole
+
 meta:
   erstellt: "2025-06-07"
   autor: "R. Lauper / Aarulon"
