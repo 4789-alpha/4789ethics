@@ -1,2 +1,94 @@
 # Verax Game Codex
-# Rules and settings will be added here.
+# Rules and settings for the Verax field module.
+
+verax:
+  version: "1.0"
+  betreiber: "BSVRB"
+  departement: "4 – Gesellschaft & Genuss"
+  codex_kompatibel: true
+
+modules:
+  - limen
+  - umwelt
+  - bewegung
+  - entscheidung
+  - inventar
+  - protokoll
+  - meta
+
+limen:
+  name: "Mühlethurnen-Korridor"
+  typ: "natürlich"
+  vektor: "start=46.8392,7.5010 / end=46.8297,7.4894"
+  breite: 300
+  engstellen:
+    - name: "Mungge-Stai"
+      typ: "Aufstieg"
+      versuche: 3
+      bedingung: "Nebel aktiv"
+    - name: "Gürbe-Furt"
+      typ: "Bachüberquerung"
+      versuche: 2
+
+umwelt:
+  wetter:
+    quelle: "api" # optional "lokal"
+    aktiv: true
+  zeit:
+    modus: "echtzeit"
+  licht:
+    aktiviert: true
+  temperatur:
+    limit: 5
+
+bewegung:
+  gps_aktiv: true
+  interpretation:
+    - bedingung: "geschwindigkeit > 8 km/h"
+      bedeutung: "Flucht oder Angriff"
+    - bedingung: "bewegung = stillstand > 90s"
+      bedeutung: "Beobachtung oder Tarnung"
+    - bedingung: "richtung = vom hindernis weg"
+      bedeutung: "Ausweichen / Umgehung"
+    - bedingung: "richtung = hindernis + 3s sprint"
+      bedeutung: "Konfrontation"
+
+entscheidung:
+  - punkt: "Tierspur erkannt"
+    optionen:
+      - verfolgen
+      - auslassen
+      - tarnen
+    dokumentation: true
+  - punkt: "verletztes Tier"
+    optionen:
+      - erlösen
+      - beobachten
+      - fliehen
+    kommentar_erlaubt: true
+
+inventar:
+  erlaubt:
+    - sackmesser
+    - rucksack_max_5
+    - verax_device
+    - "symbolwaffe (speer, bogen, schleuder)"
+    - "fischerrute (symbolisch/funktional)"
+  verboten:
+    - gps-navigation
+    - metallwaffen
+    - verpackte nahrung
+
+protokoll:
+  start: automatisch
+  entscheidungen:
+    speichern: true
+  bewegungsdaten:
+    speichern: optional
+  notfall:
+    erlauben: true
+
+meta:
+  erstellt: "2025-06-07"
+  autor: "R. Lauper / Aarulon"
+  lizenz: "BSVRB intern"
