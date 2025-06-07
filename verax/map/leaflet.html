@@ -1,10 +1,51 @@
 <!DOCTYPE html>
-<html lang="de">
+<html>
 <head>
-<meta charset="UTF-8">
-<title>Verax Map</title>
+  <meta charset="utf-8" />
+  <title>VERAX Karte</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.5.1/gpx.min.js"></script>
+  <style>
+    body, html { margin: 0; padding: 0; }
+    #map { height: 100vh; width: 100vw; }
+  </style>
 </head>
 <body>
-<!-- Leaflet map placeholder -->
+  <div id="map"></div>
+  <script>
+    const map = L.map('map').setView([46.8345, 7.4953], 14);
+
+    // Tile-Layer (OSM international)
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 18,
+      attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    // GPX-Track laden (Pfad anpassen)
+    const gpxTrack = new L.GPX('/verax/map/limen-muehlethurnen.gpx', {
+      async: true
+    }).on('loaded', function(e) {
+      map.fitBounds(e.target.getBounds());
+    }).addTo(map);
+
+    // GPS-Ortung aktivieren
+    function onLocationFound(e) {
+      const radius = e.accuracy;
+      L.marker(e.latlng).addTo(map)
+        .bindPopup("Du bist hier (±" + Math.round(radius) + " m)").openPopup();
+      L.circle(e.latlng, radius).addTo(map);
+    }
+
+    function onLocationError(e) {
+      alert("GPS-Fehler: " + e.message);
+    }
+
+    map.on('locationfound', onLocationFound);
+    map.on('locationerror', onLocationError);
+
+    map.locate({setView: true, maxZoom: 16, watch: true, enableHighAccuracy: true});
+  </script>
 </body>
 </html>
