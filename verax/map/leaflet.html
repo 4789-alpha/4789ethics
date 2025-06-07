@@ -1,18 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
   <meta charset="utf-8" />
   <title>VERAX Karte</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../../interface/ethicom-style.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.5.1/gpx.min.js"></script>
+  <script src="../../interface/theme-manager.js"></script>
+  <script src="../../interface/logo-background.js"></script>
+  <script src="../../interface/module-logo.js"></script>
   <style>
     body, html { margin: 0; padding: 0; }
     #map { height: 100vh; width: 100vw; }
   </style>
 </head>
 <body>
+  <div id="op_background" aria-hidden="true"></div>
+  <header>
+    <h1>VERAX Karte</h1>
+  </header>
   <div id="map"></div>
   <script>
     const map = L.map('map').setView([46.8345, 7.4953], 14);
@@ -46,6 +54,11 @@
     map.on('locationerror', onLocationError);
 
     map.locate({setView: true, maxZoom: 16, watch: true, enableHighAccuracy: true});
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      applyTheme('tanna-dark');
+    });
   </script>
 </body>
 </html>
