@@ -1,0 +1,12 @@
+entscheidung:
+  - punkt: "verletztes Tier"
+    steuerung: "lautstärketasten"
+    mapping:
+      laut:
+        kurz: "zurückweichen"
+        lang: "erlösen"
+      leise:
+        kurz: "beobachten"
+        lang: "ausnehmen"
+    kommentar_erlaubt: true
+    dokumentieren: true

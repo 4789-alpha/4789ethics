@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<gpx version="1.1" creator="Verax">
-  <!-- GPX data placeholder -->
+<gpx version="1.1" creator="VERAX">
+  <rte>
+    <name>Limen-Muehlethurnen</name>
+    <rtept lat="46.8345" lon="7.4953"><desc>Startpunkt</desc></rtept>
+    <rtept lat="46.8330" lon="7.4930"><desc>Engstelle: Bach</desc></rtept>
+    <rtept lat="46.8310" lon="7.4900"><desc>Endpunkt</desc></rtept>
+  </rte>
 </gpx>

@@ -1,5 +1,7 @@
 # Verax – Entscheidung in Bewegung
 
+Dies ist ein vollständiges Demo-Paket für die strukturierte Bewegungssimulation im BSVRB-Kontext.
+
 VERAX ist ein realweltliches Spielsystem, das Bewegung, Ethik und Entscheidungsfähigkeit in einem natürlichen Raum verbindet. Es entstand aus der Arbeit des BSVRB (Departement 4 – Gesellschaft & Genuss) und setzt auf Wahrhaftigkeit statt Wettkampf.
 
 ## Grundidee
