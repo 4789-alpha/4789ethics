@@ -280,7 +280,12 @@
 
         const collChk = document.getElementById('bg_collisions');
         if (collChk) {
-          collChk.checked = localStorage.getItem('ethicom_bg_collisions') !== 'false';
+          let collValue = localStorage.getItem('ethicom_bg_collisions');
+          if (collValue === null) {
+            collValue = 'true';
+            localStorage.setItem('ethicom_bg_collisions', 'true');
+          }
+          collChk.checked = collValue !== 'false';
           collChk.addEventListener('change', e => {
             localStorage.setItem('ethicom_bg_collisions', e.target.checked ? 'true' : 'false');
           });
