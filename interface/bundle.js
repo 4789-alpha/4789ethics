@@ -810,7 +810,7 @@ function openColorSettingsWizard(){
 
   cancelBtn.addEventListener('click', () => overlay.remove());
 
-  const tempTheme = localStorage.getItem('ethicom_theme') || 'dark';
+  const tempTheme = localStorage.getItem('ethicom_theme') || 'tanna-dark';
   tempColors = {};
 
   const steps = [];
@@ -890,7 +890,7 @@ window.openColorSettingsWizard = openColorSettingsWizard;
 
 function openColorSettingsWizardCLI(){
   const themes=['dark','tanna-dark','tanna','transparent','ocean','desert','accessible','custom'];
-  let theme=prompt('Color Scheme ('+themes.join(', ')+'):',localStorage.getItem('ethicom_theme')||'dark');
+  let theme=prompt('Color Scheme ('+themes.join(', ')+'):',localStorage.getItem('ethicom_theme')||'tanna-dark');
   if(theme&&themes.includes(theme)){
     localStorage.setItem('ethicom_theme',theme);
     if(typeof applyTheme==='function') applyTheme(theme);
@@ -2255,9 +2255,21 @@ function initLogoBackground() {
   container.appendChild(canvas);
   const ctx = canvas.getContext('2d');
 
+  const overlay = document.createElement('canvas');
+  overlay.style.position = 'fixed';
+  overlay.style.inset = '0';
+  overlay.style.pointerEvents = 'none';
+  overlay.style.zIndex = '1';
+  overlay.style.width = '100%';
+  overlay.style.height = '100%';
+  document.body.appendChild(overlay);
+  const octx = overlay.getContext('2d');
+
   function resize() {
     canvas.width = container.clientWidth || window.innerWidth;
     canvas.height = container.clientHeight || window.innerHeight;
+    overlay.width = canvas.width;
+    overlay.height = canvas.height;
   }
   window.addEventListener('resize', resize);
   resize();
@@ -2378,6 +2390,7 @@ function initLogoBackground() {
 
   function step() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    octx.clearRect(0, 0, overlay.width, overlay.height);
 
     for (let i = 0; i < symbols.length; i++) {
       const s = symbols[i];
@@ -2519,12 +2532,15 @@ function initLogoBackground() {
           );
         }
         if (s.highlightUntil > performance.now()) {
-          ctx.strokeStyle = getComputedStyle(document.documentElement)
+          octx.save();
+          octx.translate(s.x, s.y);
+          octx.strokeStyle = getComputedStyle(document.documentElement)
             .getPropertyValue('--accent-color') || '#ff0';
-          ctx.lineWidth = 2;
-          ctx.beginPath();
-          ctx.arc(0, 0, s.radius * s.scale, 0, Math.PI * 2);
-          ctx.stroke();
+          octx.lineWidth = 2;
+          octx.beginPath();
+          octx.arc(0, 0, s.radius * s.scale, 0, Math.PI * 2);
+          octx.stroke();
+          octx.restore();
         }
         ctx.filter = 'none';
         ctx.restore();
@@ -3514,7 +3530,8 @@ function applyTheme(theme) {
     'theme-desert',
     'theme-transparent',
     'theme-custom',
-    'theme-high-contrast'
+    'theme-high-contrast',
+    'theme-accessible'
   );
   document.documentElement.style.removeProperty('--primary-color');
   document.documentElement.style.removeProperty('--accent-color');
@@ -3547,44 +3564,52 @@ function initThemeSelection() {
   const tannaCard = document.getElementById('tanna_color');
   const slider = document.getElementById('theme_slider');
   const label = document.getElementById('theme_slider_label');
-  const themes = ['dark','tanna-dark','tanna','transparent','ocean','desert','accessible','custom'];
-  const labels = ['Dark','Dark Tanna','Tanna','Transparent','Sea Blue','Desert','Accessible','Custom'];
-  let theme = localStorage.getItem('ethicom_theme') || 'dark';
+  const themes = ['tanna-dark','tanna','transparent','ocean','desert','accessible','custom'];
+  const labels = ['Dark Tanna','Tanna','Transparent','Sea Blue','Desert','Accessible','Custom'];
+
+  let theme = localStorage.getItem('ethicom_theme') || 'tanna-dark';
   applyTheme(theme);
   if (tannaCard) tannaCard.style.display = theme === 'tanna' ? 'block' : 'none';
   if (select) {
     select.value = theme;
-    select.addEventListener('change', e => {
-      theme = e.target.value;
-      localStorage.setItem('ethicom_theme', theme);
-      applyTheme(theme);
-      resetSlidersFromTheme();
-      if (tannaCard) tannaCard.style.display = theme === 'tanna' ? 'block' : 'none';
-      const idx = themes.indexOf(theme);
-      if (slider && idx >= 0) {
-        slider.value = idx;
-        if (label) label.textContent = labels[idx];
-      }
-    });
+    if (opLevel >= 3) {
+      select.addEventListener('change', e => {
+        theme = e.target.value;
+        localStorage.setItem('ethicom_theme', theme);
+        applyTheme(theme);
+        resetSlidersFromTheme();
+        if (tannaCard) tannaCard.style.display = theme === 'tanna' ? 'block' : 'none';
+        const idx = themes.indexOf(theme);
+        if (slider && idx >= 0) {
+          slider.value = idx;
+          if (label) label.textContent = labels[idx];
+        }
+      });
+    } else {
+      select.disabled = true;
+    }
   }
   if (slider) {
     slider.max = themes.length - 1;
     const cur = themes.indexOf(theme);
     slider.value = cur >= 0 ? cur : 0;
     if (label) label.textContent = labels[slider.value];
-    slider.addEventListener('input', e => {
-      const idx = parseInt(e.target.value, 10);
-      theme = themes[idx] || themes[0];
-      if (label) label.textContent = labels[idx] || labels[0];
-      localStorage.setItem('ethicom_theme', theme);
-      applyTheme(theme);
-      resetSlidersFromTheme();
-      if (tannaCard) tannaCard.style.display = theme === 'tanna' ? 'block' : 'none';
-      if (select) select.value = theme;
-    });
+    if (opLevel >= 3) {
+      slider.addEventListener('input', e => {
+        const idx = parseInt(e.target.value, 10);
+        theme = themes[idx] || themes[0];
+        if (label) label.textContent = labels[idx] || labels[0];
+        localStorage.setItem('ethicom_theme', theme);
+        applyTheme(theme);
+        resetSlidersFromTheme();
+        if (tannaCard) tannaCard.style.display = theme === 'tanna' ? 'block' : 'none';
+        if (select) select.value = theme;
+      });
+    } else {
+      slider.disabled = true;
+    }
   }
   if (customBtn) {
-    const opLevel = window.opLevelToNumber ? window.opLevelToNumber(window.getStoredOpLevel()) : 0;
     if (opLevel >= 4) {
       customBtn.style.display = 'block';
       customBtn.addEventListener('click', createCustomTheme);
@@ -3817,7 +3842,7 @@ function openColorSettingsPopin(){
   const labels=['Dark','Dark Tanna','Tanna','Transparent','Sea Blue','Desert','Accessible','Custom'];
   const scheme=document.getElementById('theme_select_pop');
   if(scheme){
-    const stored=localStorage.getItem('ethicom_theme')||'dark';
+    const stored=localStorage.getItem('ethicom_theme')||'tanna-dark';
     scheme.value=stored;
     scheme.addEventListener('change',e=>{
       const val=e.target.value;
@@ -4093,6 +4118,7 @@ function getSignatureId() {
 function loadUiTexts() {
   return fetch("../i18n/ui-text.json")
     .then(r => r.json())
+    .catch(() => ({}))
     .then(data => {
       uiTexts = data;
       // merge pending translations

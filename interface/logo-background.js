@@ -84,9 +84,21 @@ function initLogoBackground() {
   container.appendChild(canvas);
   const ctx = canvas.getContext('2d');
 
+  const overlay = document.createElement('canvas');
+  overlay.style.position = 'fixed';
+  overlay.style.inset = '0';
+  overlay.style.pointerEvents = 'none';
+  overlay.style.zIndex = '1';
+  overlay.style.width = '100%';
+  overlay.style.height = '100%';
+  document.body.appendChild(overlay);
+  const octx = overlay.getContext('2d');
+
   function resize() {
     canvas.width = container.clientWidth || window.innerWidth;
     canvas.height = container.clientHeight || window.innerHeight;
+    overlay.width = canvas.width;
+    overlay.height = canvas.height;
   }
   window.addEventListener('resize', resize);
   resize();
@@ -207,6 +219,7 @@ function initLogoBackground() {
 
   function step() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    octx.clearRect(0, 0, overlay.width, overlay.height);
 
     for (let i = 0; i < symbols.length; i++) {
       const s = symbols[i];
@@ -348,12 +361,15 @@ function initLogoBackground() {
           );
         }
         if (s.highlightUntil > performance.now()) {
-          ctx.strokeStyle = getComputedStyle(document.documentElement)
+          octx.save();
+          octx.translate(s.x, s.y);
+          octx.strokeStyle = getComputedStyle(document.documentElement)
             .getPropertyValue('--accent-color') || '#ff0';
-          ctx.lineWidth = 2;
-          ctx.beginPath();
-          ctx.arc(0, 0, s.radius * s.scale, 0, Math.PI * 2);
-          ctx.stroke();
+          octx.lineWidth = 2;
+          octx.beginPath();
+          octx.arc(0, 0, s.radius * s.scale, 0, Math.PI * 2);
+          octx.stroke();
+          octx.restore();
         }
         ctx.filter = 'none';
         ctx.restore();
