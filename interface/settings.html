@@ -226,6 +226,12 @@
       const sameSlider = document.getElementById('bg_same_level_count');
       const sameVal = document.getElementById('bg_same_level_val');
       const lvlNum = typeof getStoredOpLevel === 'function' ? opLevelToNumber(getStoredOpLevel()) : 0;
+      const themeWrap = document.getElementById('theme_selection');
+      const colorWrap = document.getElementById('color_settings');
+      if (lvlNum < 3) {
+        if (themeWrap) themeWrap.style.display = 'none';
+        if (colorWrap) colorWrap.style.display = 'none';
+      }
       if (sameWrap) sameWrap.style.display = lvlNum >= 1 ? 'block' : 'none';
       if (lvlNum >= 1 && sameSlider && sameVal) {
         const storedSame = parseInt(localStorage.getItem('ethicom_same_level_count') || '1', 10);
