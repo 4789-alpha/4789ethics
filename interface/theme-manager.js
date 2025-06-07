@@ -44,7 +44,7 @@ function initThemeSelection() {
   const label = document.getElementById('theme_slider_label');
   const themes = ['dark','tanna-dark','tanna','transparent','ocean','desert','custom'];
   const labels = ['Dark','Dark Tanna','Tanna','Transparent','Sea Blue','Desert','Custom'];
-  let theme = localStorage.getItem('ethicom_theme') || 'dark';
+  let theme = localStorage.getItem('ethicom_theme') || 'tanna-dark';
   applyTheme(theme);
   if (tannaCard) tannaCard.style.display = theme === 'tanna' ? 'block' : 'none';
   if (select) {
@@ -311,7 +311,7 @@ function openColorSettingsPopin(){
   const labels=['Dark','Dark Tanna','Tanna','Transparent','Sea Blue','Desert','Custom'];
   const scheme=document.getElementById('theme_select_pop');
   if(scheme){
-    const stored=localStorage.getItem('ethicom_theme')||'dark';
+    const stored=localStorage.getItem('ethicom_theme')||'tanna-dark';
     scheme.value=stored;
     scheme.addEventListener('change',e=>{
       const val=e.target.value;
