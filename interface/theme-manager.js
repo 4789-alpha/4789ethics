@@ -1,3 +1,12 @@
+
+function getOpLevel() {
+  return typeof window !== 'undefined' &&
+    typeof window.opLevelToNumber === 'function' &&
+    typeof window.getStoredOpLevel === 'function'
+      ? window.opLevelToNumber(window.getStoredOpLevel())
+      : 0;
+}
+
 function applyTheme(theme) {
   const body = document.body;
   body.classList.remove(
@@ -51,49 +60,54 @@ function initThemeSelection() {
   if (tannaCard) tannaCard.style.display = theme === 'tanna' ? 'block' : 'none';
   if (select) {
     select.value = theme;
-    if (opLevel >= 3) {
-      select.addEventListener('change', e => {
-        theme = e.target.value;
-        localStorage.setItem('ethicom_theme', theme);
-        applyTheme(theme);
-        resetSlidersFromTheme();
-        if (tannaCard) tannaCard.style.display = theme === 'tanna' ? 'block' : 'none';
-        const idx = themes.indexOf(theme);
-        if (slider && idx >= 0) {
-          slider.value = idx;
-          if (label) label.textContent = labels[idx];
-        }
-      });
-    } else {
-      select.disabled = true;
-    }
+    select.addEventListener('change', e => {
+      if (getOpLevel() < 3) return;
+      theme = e.target.value;
+      localStorage.setItem('ethicom_theme', theme);
+      applyTheme(theme);
+      resetSlidersFromTheme();
+      if (tannaCard) tannaCard.style.display = theme === 'tanna' ? 'block' : 'none';
+      const idx = themes.indexOf(theme);
+      if (slider && idx >= 0) {
+        slider.value = idx;
+        if (label) label.textContent = labels[idx];
+      }
+    });
   }
   if (slider) {
     slider.max = themes.length - 1;
     const cur = themes.indexOf(theme);
     slider.value = cur >= 0 ? cur : 0;
     if (label) label.textContent = labels[slider.value];
-    if (opLevel >= 3) {
-      slider.addEventListener('input', e => {
-        const idx = parseInt(e.target.value, 10);
-        theme = themes[idx] || themes[0];
-        if (label) label.textContent = labels[idx] || labels[0];
-        localStorage.setItem('ethicom_theme', theme);
-        applyTheme(theme);
-        resetSlidersFromTheme();
-        if (tannaCard) tannaCard.style.display = theme === 'tanna' ? 'block' : 'none';
-        if (select) select.value = theme;
-      });
-    } else {
-      slider.disabled = true;
-    }
+    slider.addEventListener('input', e => {
+      if (getOpLevel() < 3) return;
+      const idx = parseInt(e.target.value, 10);
+      theme = themes[idx] || themes[0];
+      if (label) label.textContent = labels[idx] || labels[0];
+      localStorage.setItem('ethicom_theme', theme);
+      applyTheme(theme);
+      resetSlidersFromTheme();
+      if (tannaCard) tannaCard.style.display = theme === 'tanna' ? 'block' : 'none';
+      if (select) select.value = theme;
+    });
   }
   if (customBtn) {
-    if (opLevel >= 4) {
-      customBtn.style.display = 'block';
-      customBtn.addEventListener('click', createCustomTheme);
-    }
+    customBtn.addEventListener('click', e => {
+      if (getOpLevel() >= 4) createCustomTheme(e);
+    });
   }
+
+  function updateAccess() {
+    const level = getOpLevel();
+    if (select) select.disabled = level < 3;
+    if (slider) slider.disabled = level < 3;
+    if (customBtn) customBtn.style.display = level >= 4 ? 'block' : 'none';
+  }
+
+  updateAccess();
+  window.addEventListener('storage', e => {
+    if (e.key === 'ethicom_signature') updateAccess();
+  });
 }
 
 
