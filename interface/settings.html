@@ -72,10 +72,6 @@
           <input type="range" id="bg_same_level_count" min="1" max="10" step="1" value="1" />
             <small class="note">Reload to apply.</small>
         </div>
-        <div id="bg_collisions_wrap">
-          <label><input type="checkbox" id="bg_collisions"/> Enable collisions</label>
-          <small class="note">Reload to apply.</small>
-        </div>
         <div id="bg_low_motion_wrap">
           <label><input type="checkbox" id="bg_low_motion"/> Low motion background</label>
           <small class="note">Reload to apply.</small>
@@ -284,30 +280,12 @@
             alert('Reload the page to apply.');
           });
         }
-
-        const collChk = document.getElementById('bg_collisions');
-        if (collChk) {
-          let collValue = localStorage.getItem('ethicom_bg_collisions');
-          if (collValue === null) {
-            collValue = 'true';
-            localStorage.setItem('ethicom_bg_collisions', 'true');
-          }
-          collChk.checked = collValue !== 'false';
-          collChk.addEventListener('change', e => {
-            localStorage.setItem('ethicom_bg_collisions', e.target.checked ? 'true' : 'false');
-          });
-        }
-
-
         const lowMotionChk = document.getElementById('bg_low_motion');
         if (lowMotionChk) {
           lowMotionChk.checked = localStorage.getItem('ethicom_bg_low_motion') === 'true';
           lowMotionChk.addEventListener('change', e => {
             localStorage.setItem('ethicom_bg_low_motion', e.target.checked ? 'true' : 'false');
           });
-        }
-
-
       const fgSlider = document.getElementById('fg_opacity');
       const fgVal = document.getElementById('fg_opacity_val');
       if (fgSlider && fgVal) {
