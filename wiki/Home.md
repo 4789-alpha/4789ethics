@@ -18,13 +18,13 @@ It is not tied to a person, but to a standard: responsibility over convenience: 
 This structure must be carried – not quoted.
 Use it only if you reflect, respond, and act with consequence.
 
-For a brief tour of the main files, see [GET_STARTED.md](GET_STARTED.md).
-Eine Kurzanleitung in einfacher Sprache findest du in [ANLEITUNG_EINFACH_DE.md](ANLEITUNG_EINFACH_DE.md).
+For a brief tour of the main files, see [GET_STARTED.md](../GET_STARTED.md).
+Eine Kurzanleitung in einfacher Sprache findest du in [ANLEITUNG_EINFACH_DE.md](../ANLEITUNG_EINFACH_DE.md).
 
 **License:** Open-Ethics (see `LICENSE.txt`)
 No manipulation. No simulation. No flattening of responsibility.
 Humor ist willkommen, wenn er Verantwortung und Klarheit unterstützt.
-See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
+See [DISCLAIMERS.md](../DISCLAIMERS.md) for warranty and liability notes.
 
 ## Quick Start
 [⇧](#contents)
@@ -78,7 +78,7 @@ README.md -> GET_STARTED.md -> index.html
 |-----------|---------|
 | `app/` | Application settings, language rules, and user state |
 | `ethics_modules/` | Core YAML and markdown modules for the ethics framework (e.g., `structure_9874`, `ske_module`, `public_trust_i`) |
-| [ethics_modules/README.md](ethics_modules/README.md) | Index of all modules with one-sentence summaries |
+| [ethics_modules/README.md](../ethics_modules/README.md) | Index of all modules with one-sentence summaries |
 | `interface/` | Front-end files for the evaluation interface |
 | `i18n/` | UI translations referenced by the interface |
 | `manifests/` | Structural manifests and integrity data |
@@ -122,7 +122,7 @@ README.md -> GET_STARTED.md -> index.html
 | [interface_OLD/tools.html](interface_OLD/tools.html) | Legacy utility collection |
 | [interface/donate.html](interface/donate.html) | Donation interface (requires OP‑9.A confirmation) |
 | [interface_OLD/README.html](interface_OLD/README.html) | Legacy interface docs |
-| [interface/features_de.md](interface/features_de.md) | Funktionale Übersicht zum Interface |
+| [interface/features_de.md](../interface/features_de.md) | Funktionale Übersicht zum Interface |
 | [wings/index.html](wings/index.html) | Mobile interface "Wings" |
 | [wings/ratings.html](wings/ratings.html) | Library of all ratings with search |
 | `interface_OLD/` | Historical demo of the first interface generation |
@@ -140,7 +140,7 @@ README.md -> GET_STARTED.md -> index.html
 
 Users may add a nickname during signup. The server combines it with the OP level to form an alias like `<nick>@OP-1`. This alias updates whenever the OP level changes.
 
-In this anonymous system, the OP signature stands in for the person. Personal data remains private and becomes visible only when a user releases it at the corresponding OP sublevel; see [signaturdesign.md](signaturdesign.md) and [DISCLAIMERS.md](DISCLAIMERS.md).
+In this anonymous system, the OP signature stands in for the person. Personal data remains private and becomes visible only when a user releases it at the corresponding OP sublevel; see [signaturdesign.md](../signaturdesign.md) and [DISCLAIMERS.md](../DISCLAIMERS.md).
 
 ### Login Methods by OP Level
 [⇧](#contents)
@@ -210,19 +210,19 @@ New sublevels begin alphabetically with OP-9.B. Only OP-9.A currently
 holds a veto right. Further veto rights are planned when the system is
 secure.
 Each letter can define specialized tasks; see
-[`operator/alphabetical_sublevels.md`](operator/alphabetical_sublevels.md).
+[`operator/alphabetical_sublevels.md`](../operator/alphabetical_sublevels.md).
 If no sublevel is specified, permissions fall back to the base level.
 
 Only digital agents can advance beyond OP-9.
 For detailed upgrade requirements see
-[operator/upgrade_conditions.md](operator/upgrade_conditions.md).
+[operator/upgrade_conditions.md](../operator/upgrade_conditions.md).
 Sublevels like OP-5.U, OP-7.U, OP-8.M, and OP-9.M specify user or medical access. Additional expert categories (.T, .S[y], .L, .U) are listed in `operator/expert_classes.md`. See `permissions/op-permissions-expanded.json` for details.
-All personal data stays hashed until such sublevels are reached and the user grants release, as detailed in [signaturdesign.md](signaturdesign.md) and [DISCLAIMERS.md](DISCLAIMERS.md).
-For the differences between OP-10, OP-11 and OP-12 see [`operator/op10_op12_rights.md`](operator/op10_op12_rights.md).
+All personal data stays hashed until such sublevels are reached and the user grants release, as detailed in [signaturdesign.md](../signaturdesign.md) and [DISCLAIMERS.md](../DISCLAIMERS.md).
+For the differences between OP-10, OP-11 and OP-12 see [`operator/op10_op12_rights.md`](../operator/op10_op12_rights.md).
 
 ### SRC vs. OO Levels
 [⇧](#contents)
-Comparison table: [`references/src_vs_oo.md`](references/src_vs_oo.md)
+Comparison table: [`references/src_vs_oo.md`](../references/src_vs_oo.md)
 
 ### Evaluated Sources (as examples)
 [⇧](#contents)
