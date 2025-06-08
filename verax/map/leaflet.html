@@ -41,8 +41,9 @@
     // GPS-Ortung aktivieren
     function onLocationFound(e) {
       const radius = e.accuracy;
-      L.marker(e.latlng).addTo(map)
-        .bindPopup("±" + Math.round(radius) + " m").openPopup();
+      L.marker(e.latlng)
+        .addTo(map)
+        .bindPopup("±" + Math.round(radius) + " m");
       L.circle(e.latlng, radius).addTo(map);
     }
 
