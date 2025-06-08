@@ -2,6 +2,7 @@
 
 - Diese Struktur wird ohne Gewährleistung bereitgestellt. Fehler oder Auslassungen sind möglich.
 - Die Nutzung erfolgt auf eigene Verantwortung. Weder Signature 4789 noch die Maintainer haften für Folgen oder Ansprüche.
+- Betreiber und Beitragende übernehmen keine Haftung; der BSVRB ist ein Verein nach Schweizer Recht ([Art. 60 ff. ZGB](https://www.fedlex.admin.ch/eli/cc/24/233_245_233/de)).
 - 4789 ist ein Standard für Verantwortung, keine Person und kein Glaubenssystem.
 - Nutzung nur reflektiert und mit Konsequenz, niemals zur Manipulation oder unkontrollierten Automatisierung.
 - Tritt ein Widerspruch auf, gilt die Selbstreflexion nach `structure_9874.md`.
