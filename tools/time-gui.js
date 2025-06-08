@@ -1,7 +1,6 @@
 const http = require('http');
 const path = require('path');
 const fs = require('fs');
-const { spawn } = require('child_process');
 const readline = require('readline');
 
 const disclaimers = [
@@ -41,19 +40,6 @@ rl.question('Fortfahren? (yes/no) ', answer => {
 
   server.listen(port, () => {
     const url = `http://localhost:${port}/time-tool.html`;
-    console.log(`Tool GUI at ${url}`);
-    let cmd, args;
-    if (process.platform === 'win32') {
-      cmd = 'cmd';
-      args = ['/c', 'start', '', url];
-    } else if (process.platform === 'darwin') {
-      cmd = 'open';
-      args = [url];
-    } else {
-      cmd = 'xdg-open';
-      args = [url];
-    }
-    const opener = spawn(cmd, args, { stdio: 'ignore', detached: true });
-    opener.unref();
+    console.log(`Time GUI at ${url}`);
   });
 });
