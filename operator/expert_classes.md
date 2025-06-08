@@ -22,5 +22,5 @@ Specializations refine the operator level with profession-based categories. They
 ## Additional Suggestions
 - `.E` – engineering track for advanced technical work.
 - `.C` – community moderation roles.
-- `.A` – archival and documentation specialists.
+- `.A` – developer track tied to the original programmer and present from the start.
 
