@@ -21,7 +21,7 @@ Use it only if you reflect, respond, and act with consequence.
 For a brief tour of the main files, see [GET_STARTED.md](GET_STARTED.md).
 Eine Kurzanleitung in einfacher Sprache findest du in [ANLEITUNG_EINFACH_DE.md](ANLEITUNG_EINFACH_DE.md).
 
-**License:** Open-Ethics (see `LICENSE.txt`)
+**License:** Open-Ethics (see [LICENSE.txt](LICENSE.txt))
 No manipulation. No simulation. No flattening of responsibility.
 Humor ist willkommen, wenn er Verantwortung und Klarheit unterstützt.
 See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
@@ -32,7 +32,7 @@ See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
 **Purpose:** Provide a clear framework for ethical projects.
 **Audience:** Developers, educators, and curious readers.
 
-1. Read `GET_STARTED.md` for the main files.
+1. Read [GET_STARTED.md](GET_STARTED.md) for the main files.
 2. Start the interface with `npm start` (opens a browser automatically) or run
    `node tools/serve-interface.js`. For GitHub Pages deployments you can use
    `npm run serve-gh`.
@@ -523,4 +523,4 @@ node tools/check-translations.js
 ### Contributing
 [⇧](#contents)
 
-To suggest improvements or translations, read `CONTRIBUTING.md`. All changes must follow the Open-Ethics License and be made with intention.
+To suggest improvements or translations, read [CONTRIBUTING.md](CONTRIBUTING.md). All changes must follow the Open-Ethics License and be made with intention.
