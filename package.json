@@ -11,6 +11,7 @@
     "start": "node tools/start-server.js",
     "serve-gh": "BASE_URL=https://4789-alpha.github.io node tools/serve-interface.js",
     "bundle-interface": "node tools/bundle-interface.js",
-    "generate-wiki": "node tools/generate-wiki.js"
+    "generate-wiki": "node tools/generate-wiki.js",
+    "test": "node --test && node tools/check-translations.js"
   }
 }
