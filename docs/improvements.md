@@ -22,7 +22,7 @@ Diese Liste enthält konkrete Vorschläge zur Verbesserung der Benutzerfreundlic
 ## 4. Barrierefreiheit (Accessibility)
 - [ ] Texte screenreaderfreundlich gestalten.
 - [ ] Kontrastreiche Farben im Terminal, optional deaktivierbar.
-- [ ] Text-to-Speech-Ausgabe (pyttsx3/edge-tts) als Option.
+- [x] Text-to-Speech-Ausgabe (pyttsx3/edge-tts) als Option.
 - [ ] Vollständige Bedienung per Tastatur sicherstellen.
 - [ ] Langsam-Modus: aktivierbare Pausen und ausführlichere Erklärungen.
 

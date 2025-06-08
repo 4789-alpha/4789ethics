@@ -97,7 +97,7 @@ README.md -> GET_STARTED.md -> index.html
 | `sources/images/` | Pictures for institutions (`institutions/`), persons (`persons/`), and fish (`fish/`) |
 | `sources/fish/ch/` | Text placeholders for Swiss fish images (e.g., `esox_ch.png`) |
 | `test/` | Node.js test suite |
-| `tools/` | Utility scripts (e.g., trust-demotion engine, reliability monitor, correction engine, Python API example) |
+| `tools/` | Utility scripts (e.g., trust-demotion engine, reliability monitor, correction engine, Python API example, `text_to_speech.py`) |
 | `use_cases/` | Example scenarios and dissemination ideas |
 | `sources/images/op-logo/` | Stages of the Tanna symbol |
 | `wings/` | Minimal mobile interface |
