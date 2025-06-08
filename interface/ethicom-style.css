@@ -13,6 +13,7 @@
   --nav-bg: rgba(51, 51, 51, 0.9);
   --card-alpha-bg: rgba(43, 43, 43, 0.92);
   --accent-color: #ccaa22;
+  --collision-color: var(--accent-color);
   --module-color: #228B22;
   --highlight-text-color: var(--accent-color);
   --foreground-opacity: 0;
@@ -45,6 +46,7 @@
   --nav-bg: rgba(51, 51, 51, 0.9);
   --card-alpha-bg: rgba(255, 255, 255, 0.92);
   --accent-color: #228B22;
+  --collision-color: #ffff00;
   --module-color: #228B22;
 }
 
@@ -60,6 +62,7 @@
   --nav-bg: rgba(0, 0, 0, 0.85);
   --card-alpha-bg: rgba(34, 34, 34, 0.9);
   --accent-color: #33cc33;
+  --collision-color: #ffff00;
   --module-color: #228B22;
   --foreground-opacity: 0;
 }
@@ -75,6 +78,7 @@
   --nav-bg: rgba(34, 34, 34, 0.95);
   --card-alpha-bg: rgba(255, 255, 255, 0.95);
   --accent-color: #228B22;
+  --collision-color: #ffff00;
   --module-color: #228B22;
 }
 

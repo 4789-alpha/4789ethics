@@ -364,8 +364,10 @@ function initLogoBackground() {
         if (s.highlightUntil > performance.now()) {
           octx.save();
           octx.translate(s.x, s.y);
-          octx.strokeStyle = getComputedStyle(document.documentElement)
-            .getPropertyValue('--accent-color') || '#ff0';
+          const style = getComputedStyle(document.documentElement);
+          octx.strokeStyle =
+            style.getPropertyValue('--collision-color') ||
+            style.getPropertyValue('--accent-color') || '#ff0';
           octx.lineWidth = 2;
           octx.beginPath();
           octx.arc(0, 0, s.radius * s.scale, 0, Math.PI * 2);
