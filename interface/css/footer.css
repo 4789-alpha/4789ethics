@@ -1,0 +1,6 @@
+footer {
+  background: var(--nav-bg);
+  color: var(--nav-text-color);
+  text-align: center;
+  padding: 1em;
+}
