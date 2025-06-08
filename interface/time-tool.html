@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Time Tool</title>
+  <link rel="stylesheet" href="ethicom-style.css">
+  <script src="disclaimer.js"></script>
+</head>
+<body>
+  <main>
+    <button id="time_btn" class="accent-button">Get Server Time</button>
+    <p id="time_out" class="note"></p>
+  </main>
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    showDisclaimers({
+      disclaimer_title: 'Hinweise',
+      disclaimer_items: [
+        'Diese Struktur wird ohne Gew\u00e4hrleistung bereitgestellt.',
+        'Die Nutzung erfolgt auf eigene Verantwortung.',
+        '4789 ist ein Standard f\u00fcr Verantwortung, keine Person und kein Glaubenssystem.',
+        'Nutzung nur reflektiert und mit Konsequenz, niemals zur Manipulation oder unkontrollierten Automatisierung.'
+      ],
+      btn_disclaimer_accept: 'Verstanden'
+    });
+    const timeBtn = document.getElementById('time_btn');
+    const out = document.getElementById('time_out');
+    timeBtn.addEventListener('click', () => {
+      fetch('/time').then(r => r.json()).then(d => {
+        out.textContent = d.time;
+      });
+    });
+  });
+  </script>
+</body>
+</html>
