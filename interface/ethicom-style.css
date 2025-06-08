@@ -298,6 +298,18 @@ details.card > *:not(summary) {
   grid-column: 1 / -1;
 }
 
+/* Generic grid layout for cards */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5em;
+  align-content: start;
+}
+
+.cards-grid > .card {
+  margin-bottom: 0;
+}
+
 .module {
   background-color: var(--module-color);
   color: var(--text-color);
