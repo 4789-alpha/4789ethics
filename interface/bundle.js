@@ -2172,6 +2172,7 @@ window.addEventListener('DOMContentLoaded', initLogin);
 function initLogoBackground() {
   const container = document.getElementById('op_background');
   if (!container) return;
+  localStorage.setItem('ethicom_bg_collisions', 'true');
 
   let RESTITUTION = 1;
   const storedRest = parseFloat(localStorage.getItem('ethicom_bg_restitution'));
@@ -2314,8 +2315,7 @@ function initLogoBackground() {
   const avgArea = avgSize * avgSize;
   const maxSymbols = Math.floor(canvas.width * canvas.height / avgArea);
   const total = Math.max(20, Math.floor(maxSymbols * fillRatio));
-  const collisionsEnabled =
-    localStorage.getItem('ethicom_bg_collisions') !== 'false';
+  const collisionsEnabled = true;
   for (let i = 0; i < total; i++) {
     const lvl = levels[i % levels.length];
     const img = images[lvl >= 8 ? 7 : lvl];
