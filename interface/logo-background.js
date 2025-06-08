@@ -2,6 +2,7 @@ function initLogoBackground() {
   const container = document.getElementById('op_background');
   if (!container) return;
 
+
   let RESTITUTION = 1;
   const storedRest = parseFloat(localStorage.getItem('ethicom_bg_restitution'));
   if (!Number.isNaN(storedRest)) RESTITUTION = storedRest;
@@ -88,7 +89,7 @@ function initLogoBackground() {
   overlay.style.position = 'fixed';
   overlay.style.inset = '0';
   overlay.style.pointerEvents = 'none';
-  overlay.style.zIndex = '1';
+  overlay.style.zIndex = '0';
   overlay.style.width = '100%';
   overlay.style.height = '100%';
   document.body.appendChild(overlay);
