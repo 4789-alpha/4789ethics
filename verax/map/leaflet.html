@@ -42,7 +42,7 @@
     function onLocationFound(e) {
       const radius = e.accuracy;
       L.marker(e.latlng).addTo(map)
-        .bindPopup("Du bist hier (±" + Math.round(radius) + " m)").openPopup();
+        .bindPopup("±" + Math.round(radius) + " m").openPopup();
       L.circle(e.latlng, radius).addTo(map);
     }
 
