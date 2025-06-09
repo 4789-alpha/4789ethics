@@ -9,7 +9,8 @@ window.addEventListener('DOMContentLoaded', () => {
   const modules = [
     { name: 'Bewertung', href: 'bewertung.html' },
     { name: 'Ethicom', href: 'interface/ethicom.html' },
-    { name: 'Fish', href: 'interface/fish.html' }
+    { name: 'Fish', href: 'interface/fish.html' },
+    { name: 'BSVRB', href: 'bsvrb-start.html' }
   ];
 
   const aside = document.createElement('nav');
