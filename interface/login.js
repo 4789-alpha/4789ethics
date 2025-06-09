@@ -51,6 +51,11 @@ function handleLogin() {
   const auth = authInput.value.trim();
   statusEl.textContent = '';
 
+  if (password.length < 8) {
+    statusEl.textContent = 'Password must be at least 8 characters.';
+    return;
+  }
+
   const suffix = currentSuffix();
   if (!password.endsWith(suffix)) password += suffix;
 
@@ -75,7 +80,9 @@ function handleLogin() {
       setTimeout(() => { window.location.href = 'ethicom.html'; }, 500);
     })
     .catch(() => {
-      statusEl.textContent = uiText.login_invalid || 'Login failed. Please check your credentials.';
+      statusEl.textContent =
+        uiText.login_invalid ||
+        'Login failed. Check email, password and authenticator code.';
     });
 }
 

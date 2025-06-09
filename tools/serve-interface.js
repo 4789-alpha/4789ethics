@@ -8,6 +8,16 @@ const { search, loadSources } = require('./source-search.js');
 const { issueTempToken, parseConfig } = require('./gatekeeper.js');
 const { opLevelToNumber } = require('../utils/op-level.js');
 
+const nodeMajor = parseInt(process.versions.node.split('.')[0], 10);
+if (nodeMajor < 18) {
+  console.warn('Node.js 18+ required. Current:', process.versions.node);
+}
+try {
+  require.resolve('canvas');
+} catch {
+  console.warn('Optional dependency "canvas" missing. Some tools may fail.');
+}
+
 const base32Alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ234567';
 
 function base32Encode(buf) {
