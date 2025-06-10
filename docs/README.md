@@ -43,11 +43,13 @@ See [DISCLAIMERS.md](../DISCLAIMERS.md) for warranty and liability notes.
    For GitHub Pages use `npm run serve-gh`.
    Pass a page name to `npm start` to open it directly,
    for example `npm start signup.html`.
-   Opening an HTML file directly (via `file://`) disables translations.
+   If you open an HTML file directly (via `file://`), translations will not load.
    See [Local Deployment](#local-deployment) for details.
 3. Optionally compile the Flutter launcher in `launcher/` to start the server
    without the terminal (`flutter run launcher`).
 4. The interface opens at `http://localhost:8080/index.html`.
+
+### Workflow
 
 ```
 README.md -> GET_STARTED.md -> index.html
