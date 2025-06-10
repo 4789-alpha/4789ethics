@@ -4,7 +4,8 @@
   "description": "Utility scripts for the Ethics Structure 4789 project",
   "main": "tools/serve-interface.js",
   "dependencies": {
-    "canvas": "^2.11.2"
+    "canvas": "^2.11.2",
+    "express": "^4.19.2"
   },
   "scripts": {
     "verify": "node tools/check-file-integrity.js",
