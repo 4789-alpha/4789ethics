@@ -277,7 +277,7 @@ button:hover {
   inset: 0;
   z-index: -1;
   overflow: hidden;
-  opacity: 0.08;
+  opacity: 1;
   pointer-events: none;
   animation: backgroundSway 30s ease-in-out infinite;
 }
