@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background:#000;
+  color:#39ff14;
+  display:flex;
+  flex-direction:column;
+  min-height:100vh;
+}
+#chat {
+  flex:1;
+  padding:1em;
+  overflow-y:auto;
+}
+#input-area {
+  display:flex;
+  padding:0.5em;
+  background:#111;
+}
+#input-area input{
+  flex:1;
+}
