@@ -11,7 +11,6 @@ Diese Sammlung heisst "Ethics Structure 4789". Sie hilft, Verantwortung vor Bequ
 
 ## Bitte beachte
 
-- Projekt nicht zur Manipulation oder unkontrollierten Automatisierung verwenden.
 - Humor ist erlaubt, solange er Verantwortung und Klarheit bewahrt.
 - Wenn dir etwas unklar ist, prüfe dich selbst mit `structure_9874.md`.
 
