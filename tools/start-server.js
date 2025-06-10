@@ -10,6 +10,16 @@ const disclaimers = [
 ];
 
 disclaimers.forEach(l => console.log(l));
+const args = process.argv.slice(2);
+let env = { ...process.env };
+if (args[0] && args[0].startsWith('http')) {
+  env.BASE_URL = args.shift();
+} else if (args[0] === 'gh') {
+  env.BASE_URL = 'https://4789-alpha.github.io';
+  args.shift();
+}
+const page = args[0] || 'index.html';
+
 const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
 rl.question('Fortfahren? (yes/no) ', answer => {
   rl.close();
@@ -18,9 +28,9 @@ rl.question('Fortfahren? (yes/no) ', answer => {
     process.exit(1);
   }
 
-  const server = spawn('node', [path.join(__dirname, 'serve-interface.js')], { stdio: 'inherit' });
+  const server = spawn('node', [path.join(__dirname, 'serve-interface.js')], { stdio: 'inherit', env });
 
-  const url = 'http://localhost:8080/index.html';
+  const url = /^https?:\/\//.test(page) ? page : `http://localhost:8080/${page}`;
   let cmd, args;
   if (process.platform === 'win32') {
     cmd = 'cmd';
