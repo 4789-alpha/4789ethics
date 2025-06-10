@@ -1,6 +1,6 @@
 gatekeeper:
   controller: "gatekeeper.local"
-  allow_control: false
+  allow_control: true
   local_only: true
   private_identity: "singularity"
   address: ""
