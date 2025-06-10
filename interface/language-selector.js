@@ -87,7 +87,7 @@ const offlineUiText = {
       "Use only with reflection and consequence; no manipulation or uncontrolled automation.",
       "If a contradiction arises, apply self-reflection (structure_9874).",
       "Humor is allowed if responsibility and clarity remain.",
-      "Each user’s TOTP secret is stored as plain text."
+      "Each user’s TOTP secret is stored encrypted."
     ],
     "btn_disclaimer_accept": "I understand",
     "attention_toggle_wiggle": "Wiggle when idle",

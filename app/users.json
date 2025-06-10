@@ -5,7 +5,7 @@
     "pwHash": "",
     "salt": "",
     "op_level": "OP-1",
-    "totpSecret": "",
+    "totpSecretEnc": "",
     "addrHash": null,
     "phoneHash": null,
     "countryHash": null,
