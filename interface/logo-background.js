@@ -122,7 +122,8 @@ function initLogoBackground() {
   const minScale = 0.5;
   const FADE_MS = 1000;
   const imgBase = window.location.pathname.includes('/interface/') ||
-                  window.location.pathname.includes('/wings/')
+                  window.location.pathname.includes('/wings/') ||
+                  window.location.pathname.includes('/bsvrb.ch/')
                     ? '../sources/images/op-logo/'
                     : 'sources/images/op-logo/';
   const images = levels.map(lvl => {
