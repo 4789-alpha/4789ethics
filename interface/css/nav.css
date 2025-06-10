@@ -49,14 +49,19 @@ header .op-status-link {
   position: absolute;
   top: 0;
   left: 0;
-  right: auto;
+  display: flex;
+  align-items: center;
   line-height: 1;
-  display: block;
   height: 100%;
+  padding-left: 0.4em;
 }
 
 header .op-status-link img {
   display: none;
+}
+
+header .op-status-link .badge {
+  margin: 0;
 }
 
 header .title-logo {

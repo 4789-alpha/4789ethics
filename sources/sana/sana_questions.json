@@ -935,7 +935,7 @@
     "choices": [
       "Weniger sichtbar",
       "Besser zu knüpfen",
-      "Reißt zuerst, schont den Fisch"
+      "Reisst zuerst, schont den Fisch"
     ],
     "correct": "Weniger sichtbar"
   },
@@ -1554,7 +1554,7 @@
       "Keine Schonzeit"
     ],
     "correct": "01. März – 31. Mai",
-    "explanation": "Gemäß der Verordnung über den Fischereibetrieb im Kanton Graubünden dauert die Schonzeit der Äsche vom 1. März bis zum 31. Mai.",
+    "explanation": "Gemäss der Verordnung über den Fischereibetrieb im Kanton Graubünden dauert die Schonzeit der Äsche vom 1. März bis zum 31. Mai.",
     "kantone": ["GR"]
   },
   {
@@ -1568,7 +1568,7 @@
       "Keine Mindestlänge"
     ],
     "correct": "50 cm",
-    "explanation": "Laut den Fischereibetriebsvorschriften des Kantons Graubünden beträgt das Mindestmaß für Zander 50 cm.",
+    "explanation": "Laut den Fischereibetriebsvorschriften des Kantons Graubünden beträgt das Mindestmass für Zander 50 cm.",
     "kantone": ["GR"]
   },
   {
