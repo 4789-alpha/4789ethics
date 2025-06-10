@@ -5,14 +5,10 @@ Diese Liste enthält konkrete Vorschläge zur Verbesserung der Benutzerfreundlic
 ---
 
 ## 1. Einstieg & Zugänglichkeit
-- [x] README.md ergänzen: Klarer Überblick über Zweck, Zielgruppe und Einstiegspunkt.
-- [x] Barrierefreie Sprache verwenden: kurze Sätze, aktive Form.
-- [x] Visuelle Einstiegshilfe: ASCII-Flowchart oder einfache UI-Skizze in Textform.
 
 ## 2. Struktur & Navigation
 - [ ] Einführungsscript (setup.sh/install.py): Interaktive Erstkonfiguration.
 - [ ] Konsistente, sprechende Ordnerstruktur.
-- [x] Zentrale config.json mit dokumentierten Defaultwerten.
 
 ## 3. Login & Benutzerführung
 - [ ] Optionales Loginmodul mit lokalem Userprofil.
@@ -22,7 +18,6 @@ Diese Liste enthält konkrete Vorschläge zur Verbesserung der Benutzerfreundlic
 ## 4. Barrierefreiheit (Accessibility)
 - [ ] Texte screenreaderfreundlich gestalten.
 - [ ] Kontrastreiche Farben im Terminal, optional deaktivierbar.
-- [x] Text-to-Speech-Ausgabe (pyttsx3/edge-tts) als Option.
 - [ ] Vollständige Bedienung per Tastatur sicherstellen.
 - [ ] Langsam-Modus: aktivierbare Pausen und ausführlichere Erklärungen.
 
@@ -35,7 +30,6 @@ Diese Liste enthält konkrete Vorschläge zur Verbesserung der Benutzerfreundlic
 ## 6. Weiterführende Verbesserungen
 - [ ] API-Dokumentation mit OpenAPI/YAML.
 - [ ] Eingebaute Hilfe via --help oder Hotkeys.
-- [ ] Version und Build sichtbar im Interface anzeigen.
 - [ ] GitHub Actions für automatisierte Tests und Deployments.
 - [ ] Dependabot für Abhängigkeits-Updates.
 - [ ] Codecov oder Coveralls für Testabdeckung.

@@ -1921,6 +1921,123 @@ function loadInterfaceForOP(op_level) {
 //----- language-selector.js -----
 // language-selector.js – 4789: bewusste Sprachwahl ohne Priorisierung
 
+// Minimal English texts for offline OP-0 use
+const offlineUiText = {
+  "en": {
+    "title": "Ethicom: Human Evaluation",
+    "label_source": "Source (URL or Title)",
+    "label_srclvl": "Ethical Level (SRC)",
+    "label_aspects": "Optional Aspects",
+    "label_comment": "Comment",
+    "btn_generate": "Show My Evaluation",
+    "btn_download": "Download as File",
+    "aspects": [
+      "Transparency",
+      "Repairability",
+      "System Reflection",
+      "Error Handling",
+      "Purpose Clarity"
+    ],
+    "signup_title": "Sign up",
+    "signup_email": "Email:",
+    "signup_password": "Password:",
+    "signup_btn": "Create Account",
+    "signup_placeholder_email": "name@provider.com",
+    "signup_placeholder_pw": "At least 8 characters",
+    "signup_address": "Address:",
+    "signup_phone": "Phone:",
+    "signup_nick": "Nickname:",
+    "signup_placeholder_nick": "Optional nickname",
+    "signup_alias": "Alias (public): {alias}",
+    "signup_placeholder_address": "Optional address",
+    "signup_placeholder_phone": "+12025550123",
+    "signup_country": "Country/Region:",
+    "signup_placeholder_country": "US",
+    "signup_invalid_email": "Invalid email format.",
+    "signup_unsupported": "Email provider not supported. Use a secure host.",
+    "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
+    "signup_pw_short": "Password must be at least 8 characters.",
+    "signup_saved": "Signup complete. ID stored.",
+    "signup_secret": "Authenticator secret: {secret}",
+    "help_title": "Help – Operator Conduct",
+    "help_items": [
+      "Always check if your actions meet the ethics of responsibility.",
+      "Use only the tools assigned to your OP level.",
+      "Document decisions in the manifest for verification.",
+      "Nominations and feedback are structured and without personal pressure.",
+      "Consult a higher structure (from OP-7) if unsure.",
+      "Responsibility outweighs convenience.",
+      "Create signatures locally and confirm them structurally.",
+      "Withdrawals or corrections are part of the process, not weakness.",
+      "Maintain transparency at every step, even with anonymous use."
+    ],
+    "access_title": "Accessibility Setup",
+    "access_label_vision": "Can you see the screen?",
+    "access_label_hearing": "Can you hear from this device?",
+    "access_label_speech": "Can you speak?",
+    "access_label_simple": "Simplified interface?",
+    "access_opt_yes": "Yes",
+    "access_save_btn": "Save Setup",
+    "access_opt_no": "No",
+    "access_opt_yes_nospeech": "Yes, but cannot speak",
+    "access_saved": "Accessibility preferences saved.",
+    "nav_start": "Start",
+    "nav_ratings": "Ratings",
+    "nav_signup": "Signup",
+    "nav_readme": "README",
+    "nav_tools": "Tools",
+    "nav_settings": "Settings",
+    "label_choose_language": "Choose your language (ISO 639-1):",
+    "status_verifying_sig": "Verifying signature...",
+    "status_sig_missing": "Signature not found or incomplete.",
+    "status_sig_invalid": "Signature invalid or password incorrect.",
+    "status_sig_valid": "Signature valid: {level}",
+    "status_loading_op0": "Loading OP-0...",
+    "rating_yes": "Yes",
+    "rating_partial": "Partly",
+    "rating_no": "No",
+    "simple_toggle_label": "Toggle Simple Mode",
+    "simple_mode_on": "Simple mode is active.",
+    "simple_mode_off": "Simple mode is off.",
+    "disclaimer_title": "Disclaimers",
+    "disclaimer_items": [
+      "This structure is provided without warranty.",
+      "Use is at your own risk.",
+      "The operators and contributors accept no liability; BSVRB is an association under Swiss law (Swiss Civil Code art. 60 ff.: https://www.fedlex.admin.ch/eli/cc/24/233_245_233/en).",
+      "4789 is a standard for responsibility, not a person or belief system.",
+      "Use only with reflection and consequence; no manipulation or uncontrolled automation.",
+      "If a contradiction arises, apply self-reflection (structure_9874).",
+      "Humor is allowed if responsibility and clarity remain.",
+      "Each user’s TOTP secret is stored encrypted."
+    ],
+    "btn_disclaimer_accept": "I understand",
+    "attention_toggle_wiggle": "Wiggle when idle",
+    "attention_toggle_beep": "Beep when idle",
+    "side_close": "Close",
+    "side_menu_need_op6": "OP-6 required.",
+    "rating_saved": "Rating saved.",
+    "login_title": "Login",
+    "login_email": "Email:",
+    "login_password": "Password:",
+    "login_time_hint": "Current time: {time}",
+    "login_auth": "Authenticator code:",
+    "login_btn": "Log in",
+    "login_github": "Login with GitHub",
+    "login_google": "Login with Google",
+    "login_invalid": "Login failed.",
+    "login_saved": "Login successful. ID stored.",
+    "connect_title": "Connect",
+    "connect_request": "Request connection",
+    "connect_enter_sig": "Target signature:",
+    "connect_pending": "Pending requests",
+    "connect_connections": "Your connections",
+    "connect_approve": "Approve",
+    "connect_request_sent": "Request sent.",
+    "connect_error": "Request failed.",
+    "nav_navigator": "Navigator Menu",
+    "nav_story": "Story"
+  }
+};
 
 function askLanguageChoice() {
   const lang = prompt(
@@ -2046,17 +2163,32 @@ function initLanguageDropdown(selectId = "lang_select", textPath = getUiTextPath
       });
     })
     .catch(() => {
-      displayLangNotice(
-        'Start the interface with `node tools/serve-interface.js`. Then open `http://localhost:8080/ethicom.html` in your browser. Opening the HTML file directly (e.g. via `file://`) bypasses the local server and causes the language list to remain empty. Always access the interface through the provided `localhost` address so that translation files load correctly.'
-      );
-      const select = document.getElementById(selectId);
-      if (select) {
-        select.innerHTML = '<option value="en">en</option>';
-        select.value = 'en';
+      const texts = typeof offlineUiText !== 'undefined' ? offlineUiText : null;
+      if (texts) {
+        const select = document.getElementById(selectId);
+        if (select) {
+          select.innerHTML = Object.keys(texts)
+            .sort()
+            .map(c => `<option value="${c}">${c}</option>`)
+            .join('');
+          select.value = 'en';
+        }
+        localStorage.setItem('ethicom_lang', 'en');
+        if (typeof applyTexts === 'function') applyTexts(texts.en || {});
+        if (typeof updateReadmeLinks === 'function') updateReadmeLinks('en');
+      } else {
+        displayLangNotice(
+          'Start the interface with `node tools/serve-interface.js`. Then open `http://localhost:8080/ethicom.html` in your browser. Opening the HTML file directly (e.g. via `file://`) bypasses the local server and causes the language list to remain empty. Always access the interface through the provided `localhost` address so that translation files load correctly.'
+        );
+        const select = document.getElementById(selectId);
+        if (select) {
+          select.innerHTML = '<option value="en">en</option>';
+          select.value = 'en';
+        }
+        localStorage.setItem('ethicom_lang', 'en');
+        if (typeof applyTexts === 'function') applyTexts({});
+        if (typeof updateReadmeLinks === 'function') updateReadmeLinks('en');
       }
-      localStorage.setItem('ethicom_lang', 'en');
-      if (typeof applyTexts === 'function') applyTexts({});
-      if (typeof updateReadmeLinks === 'function') updateReadmeLinks('en');
     });
 }
 
@@ -2129,6 +2261,11 @@ function handleLogin() {
   const auth = authInput.value.trim();
   statusEl.textContent = '';
 
+  if (password.length < 8) {
+    statusEl.textContent = 'Password must be at least 8 characters.';
+    return;
+  }
+
   const suffix = currentSuffix();
   if (!password.endsWith(suffix)) password += suffix;
 
@@ -2153,7 +2290,9 @@ function handleLogin() {
       setTimeout(() => { window.location.href = 'ethicom.html'; }, 500);
     })
     .catch(() => {
-      statusEl.textContent = uiText.login_invalid || 'Login failed. Please check your credentials.';
+      statusEl.textContent =
+        uiText.login_invalid ||
+        'Login failed. Check email, password and authenticator code.';
     });
 }
 
@@ -2260,7 +2399,7 @@ function initLogoBackground() {
   overlay.style.position = 'fixed';
   overlay.style.inset = '0';
   overlay.style.pointerEvents = 'none';
-  overlay.style.zIndex = '1';
+  overlay.style.zIndex = '0';
   overlay.style.width = '100%';
   overlay.style.height = '100%';
   document.body.appendChild(overlay);
@@ -2536,7 +2675,8 @@ function initLogoBackground() {
           octx.save();
           octx.translate(s.x, s.y);
           const style = getComputedStyle(document.documentElement);
-          octx.strokeStyle = style.getPropertyValue('--collision-color') ||
+          octx.strokeStyle =
+            style.getPropertyValue('--collision-color') ||
             style.getPropertyValue('--accent-color') || '#ff0';
           octx.lineWidth = 2;
           octx.beginPath();
@@ -2628,6 +2768,11 @@ function insertModuleLogo() {
   link.setAttribute('aria-label', 'OP Status');
   link.style.width = `calc(${size} * 1.5 + 1em)`;
   link.style.height = '100%';
+
+  const badge = document.createElement('span');
+  badge.className = `badge op-${level.replace('OP-', '').replace('.', '')}`;
+  badge.textContent = level;
+  link.appendChild(badge);
   header.appendChild(link);
 
   if (!h1) return;
@@ -3083,6 +3228,25 @@ function renderMarkdown(md) {
 }
 
 
+//----- session.js -----
+// Simple session timeout logic
+(function() {
+  const SESSION_MINUTES = 30;
+  let lastAction = Date.now();
+  function reset() { lastAction = Date.now(); }
+  function check() {
+    if (Date.now() - lastAction > SESSION_MINUTES * 60 * 1000) {
+      localStorage.removeItem('ethicom_signature');
+      window.location.href = 'login.html';
+    }
+  }
+  document.addEventListener('mousemove', reset);
+  document.addEventListener('keydown', reset);
+  setInterval(check, 60 * 1000);
+})();
+
+
+
 //----- side-drop.js -----
 // side-drop.js – simple slide-out menu for OP badge
 let sideDropUrl = null;
@@ -3319,6 +3483,8 @@ function applySignupTexts() {
   if (phoneLabel) phoneLabel.textContent = t.signup_phone || phoneLabel.textContent;
   const phoneInput = document.getElementById('phone_input');
   if (phoneInput && t.signup_placeholder_phone) phoneInput.placeholder = t.signup_placeholder_phone;
+  const serverNotice = document.getElementById('server_notice');
+  if (serverNotice && t.signup_server_notice) serverNotice.textContent = t.signup_server_notice;
   updatePhonePlaceholder();
 }
 
@@ -3521,6 +3687,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 //----- theme-manager.js -----
+
+function getOpLevel() {
+  return typeof window !== 'undefined' &&
+    typeof window.opLevelToNumber === 'function' &&
+    typeof window.getStoredOpLevel === 'function'
+      ? window.opLevelToNumber(window.getStoredOpLevel())
+      : 0;
+}
+
 function applyTheme(theme) {
   const body = document.body;
   body.classList.remove(
@@ -3570,53 +3745,73 @@ function initThemeSelection() {
   const labels = ['Dark Tanna','Tanna','Transparent','Sea Blue','Desert','Accessible','Custom'];
 
   let theme = localStorage.getItem('ethicom_theme') || 'tanna-dark';
+  if (getOpLevel() === 0) {
+    theme = 'tanna-dark';
+  }
   applyTheme(theme);
   if (tannaCard) tannaCard.style.display = theme === 'tanna' ? 'block' : 'none';
   if (select) {
     select.value = theme;
-    if (opLevel >= 3) {
-      select.addEventListener('change', e => {
-        theme = e.target.value;
-        localStorage.setItem('ethicom_theme', theme);
-        applyTheme(theme);
-        resetSlidersFromTheme();
-        if (tannaCard) tannaCard.style.display = theme === 'tanna' ? 'block' : 'none';
-        const idx = themes.indexOf(theme);
-        if (slider && idx >= 0) {
-          slider.value = idx;
-          if (label) label.textContent = labels[idx];
-        }
-      });
-    } else {
-      select.disabled = true;
-    }
+    select.addEventListener('change', e => {
+      if (getOpLevel() < 3) return;
+      theme = e.target.value;
+      localStorage.setItem('ethicom_theme', theme);
+      applyTheme(theme);
+      resetSlidersFromTheme();
+      if (tannaCard) tannaCard.style.display = theme === 'tanna' ? 'block' : 'none';
+      const idx = themes.indexOf(theme);
+      if (slider && idx >= 0) {
+        slider.value = idx;
+        if (label) label.textContent = labels[idx];
+      }
+    });
   }
   if (slider) {
     slider.max = themes.length - 1;
     const cur = themes.indexOf(theme);
     slider.value = cur >= 0 ? cur : 0;
     if (label) label.textContent = labels[slider.value];
-    if (opLevel >= 3) {
-      slider.addEventListener('input', e => {
-        const idx = parseInt(e.target.value, 10);
-        theme = themes[idx] || themes[0];
-        if (label) label.textContent = labels[idx] || labels[0];
-        localStorage.setItem('ethicom_theme', theme);
-        applyTheme(theme);
-        resetSlidersFromTheme();
-        if (tannaCard) tannaCard.style.display = theme === 'tanna' ? 'block' : 'none';
-        if (select) select.value = theme;
-      });
-    } else {
-      slider.disabled = true;
-    }
+    slider.addEventListener('input', e => {
+      if (getOpLevel() < 3) return;
+      const idx = parseInt(e.target.value, 10);
+      theme = themes[idx] || themes[0];
+      if (label) label.textContent = labels[idx] || labels[0];
+      localStorage.setItem('ethicom_theme', theme);
+      applyTheme(theme);
+      resetSlidersFromTheme();
+      if (tannaCard) tannaCard.style.display = theme === 'tanna' ? 'block' : 'none';
+      if (select) select.value = theme;
+    });
   }
   if (customBtn) {
-    if (opLevel >= 4) {
-      customBtn.style.display = 'block';
-      customBtn.addEventListener('click', createCustomTheme);
+    customBtn.addEventListener('click', e => {
+      if (getOpLevel() >= 4) createCustomTheme(e);
+    });
+  }
+
+  function updateAccess() {
+    const level = getOpLevel();
+    if (select) select.disabled = level < 3;
+    if (slider) slider.disabled = level < 3;
+    if (customBtn) customBtn.style.display = level >= 4 ? 'block' : 'none';
+    if (level === 0) {
+      theme = 'tanna-dark';
+      applyTheme(theme);
+      resetSlidersFromTheme();
+      if (select) select.value = theme;
+      if (slider) {
+        const idx = themes.indexOf(theme);
+        slider.value = idx >= 0 ? idx : 0;
+        if (label) label.textContent = labels[slider.value];
+      }
+      if (tannaCard) tannaCard.style.display = 'none';
     }
   }
+
+  updateAccess();
+  window.addEventListener('storage', e => {
+    if (e.key === 'ethicom_signature') updateAccess();
+  });
 }
 
 
@@ -4434,7 +4629,8 @@ window.addEventListener('DOMContentLoaded', () => {
   const modules = [
     { name: 'Bewertung', href: 'bewertung.html' },
     { name: 'Ethicom', href: 'interface/ethicom.html' },
-    { name: 'Fish', href: 'interface/fish.html' }
+    { name: 'Fish', href: 'interface/fish.html' },
+    { name: 'BSVRB', href: 'index.html' }
   ];
 
   const aside = document.createElement('nav');
@@ -4455,4 +4651,20 @@ window.addEventListener('DOMContentLoaded', () => {
     } catch {}
   }
 });
+
+
+//----- version.js -----
+window.APP_VERSION = '1.0.0';
+window.APP_COMMIT = '466236e';
+
+function displayVersionInfo() {
+  var el = document.getElementById('version_footer');
+  if (el) {
+    el.textContent = 'Version ' + window.APP_VERSION + ' (' + window.APP_COMMIT + ')';
+  }
+}
+
+if (typeof window !== 'undefined') {
+  window.addEventListener('DOMContentLoaded', displayVersionInfo);
+}
 
