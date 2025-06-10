@@ -1721,20 +1721,38 @@ function hideLoadingBadge() {
 
 window.getStoredOpLevel = getStoredOpLevel;
 window.opLevelToNumber = opLevelToNumber;
-window.getReadmePath = getReadmePath;
-window.showLoadingBadge = showLoadingBadge;
-window.hideLoadingBadge = hideLoadingBadge;
+  window.getReadmePath = getReadmePath;
+  window.showLoadingBadge = showLoadingBadge;
+  window.hideLoadingBadge = hideLoadingBadge;
 
-// Check if user confirmed responsibility via "Sana"
-function getSanaConfirmed() {
-  try {
-    return localStorage.getItem('sana_confirmed') === 'true';
-  } catch (err) {
-    return false;
+  // Check if user confirmed responsibility via "Sana"
+  function getSanaConfirmed() {
+    try {
+      return localStorage.getItem('sana_confirmed') === 'true';
+    } catch (err) {
+      return false;
+    }
   }
-}
 
-window.getSanaConfirmed = getSanaConfirmed;
+  window.getSanaConfirmed = getSanaConfirmed;
+
+  // Show or hide navigation links based on the required OP level
+  function applyOpLevelVisibility(root = document) {
+    const currentLevel =
+      typeof opLevelToNumber === 'function' &&
+      typeof getStoredOpLevel === 'function'
+        ? opLevelToNumber(getStoredOpLevel())
+        : 0;
+    root.querySelectorAll('[data-min-op]').forEach(el => {
+      const required = opLevelToNumber(el.dataset.minOp);
+      if (currentLevel < required) {
+        el.style.display = 'none';
+      }
+    });
+  }
+
+  window.applyOpLevelVisibility = applyOpLevelVisibility;
+  document.addEventListener('DOMContentLoaded', () => applyOpLevelVisibility());
 
 
 
