@@ -5,7 +5,7 @@ This repository contains the complete structural ethics framework developed unde
 It is not tied to a person, but to a standard: responsibility over convenience: **4789**
 **BSVRB.ch hosts this repository – it is more than just the ethicom interface.**
 **All functions are accessible on [bsvrb.ch](https://www.bsvrb.ch) and run according to your OP level.**
-**Open [`bsvrb-start.html`](../bsvrb-start.html) from the register to run them in the browser.**
+**Open [`index.html`](../index.html) from the register to run them in the browser.**
 
 **What this is:**
 - A full operator model (OP 0–9.x)
@@ -108,7 +108,6 @@ README.md -> GET_STARTED.md -> index.html
 | File | Description |
 |------|-------------|
 | [index.html](index.html) | Start page linking to Ethicom and ratings |
-| [bsvrb-start.html](bsvrb-start.html) | BSVRB landing page with department links |
 | [interface_OLD/about.html](interface_OLD/about.html) | Legacy page explaining the 4789 module |
 | [interface_OLD/chat.html](interface_OLD/chat.html) | Legacy chat interface |
 | [interface/ethicom.html](interface/ethicom.html) | Main evaluation module |
