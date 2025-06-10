@@ -5,7 +5,6 @@ They are derived from the 4789 standard for responsibility over convenience.
 
 ## 1. Ethical Use
 - Follow the Open‑Ethics License in `LICENSE.txt`.
-- Do not create features meant for control, exploitation, or unreflected automation.
 - Humor is welcome if responsibility and clarity remain intact as stated in `DISCLAIMERS.md`.
 
 ## 2. Working Principles
