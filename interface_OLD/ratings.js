@@ -105,7 +105,7 @@ async function initRatings() {
   } catch (e) {
     library.innerHTML =
       'Fehler beim Laden der Bibliothek. ' +
-      'Bitte rufen Sie die Seite \u00fcber <code>node tools/serve-interface.js</code> ' +
+      'Bitte rufen Sie die Seite über <code>node tools/serve-interface.js</code> ' +
       'unter <a href="http://localhost:8080/ethicom.html">localhost</a> auf.';
   }
 }

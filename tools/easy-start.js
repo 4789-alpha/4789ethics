@@ -3,9 +3,9 @@ const path = require('path');
 const readline = require('readline');
 
 const disclaimers = [
-  'Diese Struktur wird ohne Gew\u00e4hrleistung bereitgestellt.',
+  'Diese Struktur wird ohne Gewährleistung bereitgestellt.',
   'Die Nutzung erfolgt auf eigene Verantwortung.',
-  '4789 ist ein Standard f\u00fcr Verantwortung, keine Person und kein Glaubenssystem.',
+  '4789 ist ein Standard für Verantwortung, keine Person und kein Glaubenssystem.',
   'Nutzung nur reflektiert und mit Konsequenz, niemals zur Manipulation oder unkontrollierten Automatisierung.'
 ];
 

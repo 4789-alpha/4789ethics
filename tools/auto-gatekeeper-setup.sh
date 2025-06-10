@@ -2,16 +2,16 @@
 # Automatic gatekeeper installation helper.
 set -e
 
-echo "Diese Struktur wird ohne Gew\u00e4hrleistung bereitgestellt."
+echo "Diese Struktur wird ohne Gewährleistung bereitgestellt."
 echo "Die Nutzung erfolgt auf eigene Verantwortung."
-echo "4789 ist ein Standard f\u00fcr Verantwortung, keine Person und kein Glaubenssystem."
+echo "4789 ist ein Standard für Verantwortung, keine Person und kein Glaubenssystem."
 echo "Nutzung nur reflektiert und mit Konsequenz, niemals zur Manipulation oder unkontrollierten Automatisierung."
 printf "Fortfahren? (yes/no) "
 read answer
 [ "$answer" = "yes" ] || { echo "Abbruch."; exit 1; }
 
 need_node() {
-  echo "Node.js 18+ wird ben\u00f6tigt."
+  echo "Node.js 18+ wird benötigt."
   if [ "$(uname)" = "Darwin" ]; then
     if command -v brew >/dev/null 2>&1; then
       echo "Installing Node.js via Homebrew..."
@@ -26,7 +26,7 @@ need_node() {
     curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
     sudo apt-get install -y nodejs
   else
-    echo "Automatic Node.js installation nicht unterst\u00fctzt."
+    echo "Automatic Node.js installation nicht unterstützt."
     exit 1
   fi
 }
