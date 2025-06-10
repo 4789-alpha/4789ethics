@@ -27,6 +27,10 @@ The page `fischeSchweiz.html` renders the national list for convenient browsing.
 The page `gewaesserBern.html` shows a simplified map of the canton Bern with
 lakes and the river Aare based on `sources/maps/bern-waters.json`.
 
+The page `gewaesserCH.html` displays a zoomable Leaflet map with
+regal and pacht waters for all Swiss cantons using
+`sources/maps/swiss-waters.json`.
+
 The goal is to promote respectful and transparent handling of fish populations
 worldwide. Contributions should follow the 4789 principles and the
 Open-Ethics License.
