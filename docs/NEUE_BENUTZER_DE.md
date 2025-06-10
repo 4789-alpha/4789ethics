@@ -6,6 +6,7 @@ Diese kurze Anleitung zeigt, wie du die Struktur 4789 lokal starten kannst.
 2. Node.js ≥18 installieren und `npm install` ausführen.
    Alternativ `tools/guided-install.sh` nutzen.
 3. Server mit `npm start` oder `node tools/start-server.js` starten.
+   Optional kannst du einen Seitennamen anhängen, z.B. `npm start signup.html`.
 4. Im Browser `http://localhost:8080/index.html` öffnen.
 5. Für die Registrierung [signup.html](../signup.html) aufrufen.
 6. Zusätzliche Einstellungen mit `python3 install.py` vornehmen.

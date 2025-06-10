@@ -40,7 +40,8 @@ See [DISCLAIMERS.md](../DISCLAIMERS.md) for warranty and liability notes.
    `node tools/serve-interface.js`. If you only have the website, download
    [`tools/easy-start.js`](https://www.bsvrb.ch/tools/easy-start.js) and run it
    with Node. For GitHub Pages deployments you can use
-   `npm run serve-gh`.
+   `npm run serve-gh`. Pass a page name to `npm start` to open it directly,
+   for example `npm start signup.html`.
    Opening an HTML file directly (via `file://`) disables translations and
    settings. See [Local Deployment](#local-deployment) for details.
 3. Optionally compile the Flutter launcher in `launcher/` to start the server
