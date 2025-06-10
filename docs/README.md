@@ -510,6 +510,19 @@ local server. The script shows key lines from `DISCLAIMERS.md` before starting
 Run `tools/auto-gatekeeper-setup.sh` to install Node.js 18 on Debian/Ubuntu or macOS (with Homebrew) if needed.
 The script displays key lines from `DISCLAIMERS.md` and creates a minimal gatekeeper folder.
 
+### Smartphone Setup
+[⇧](#contents)
+
+Install Termux (Android) or a comparable shell capable of running Node.js.
+Clone this repository or copy it to your phone and then run:
+
+```bash
+pkg install git nodejs  # on Termux
+tools/auto-gatekeeper-setup.sh
+node tools/gatekeeper-gui.js
+```
+Open the printed URL in the mobile browser and follow the on‑screen steps.
+
 ### Automated Data Setup
 [⇧](#contents)
 
