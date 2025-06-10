@@ -8,3 +8,4 @@ Hostpoint offers simple static site hosting similar to Netlify. You can upload t
 4. Save and deploy.
 
 This is one of several ways to host the interface. Adjust to your environment.
+
