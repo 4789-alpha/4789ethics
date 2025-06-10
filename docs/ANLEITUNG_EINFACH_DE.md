@@ -14,3 +14,9 @@ Diese Sammlung heißt "Ethics Structure 4789". Sie hilft, Verantwortung vor Bequ
 - Projekt nicht zur Manipulation oder unkontrollierten Automatisierung verwenden.
 - Humor ist erlaubt, solange er Verantwortung und Klarheit bewahrt.
 - Wenn dir etwas unklar ist, prüfe dich selbst mit `structure_9874.md`.
+
+## Lokaler Betrieb
+
+1. Einmal `npm install` ausführen.
+2. `node tools/start-server.js` starten (oder `npm start`). Die Seite öffnet sich automatisch unter `http://localhost:8080/index.html`.
+3. Mit `python3 install.py` stellst du Sprache, Port und Offline-Modus ein. Die Werte liegen in `app/app_settings.yaml`.
