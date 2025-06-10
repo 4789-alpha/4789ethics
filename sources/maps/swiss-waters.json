@@ -1,0 +1,30 @@
+{
+  "cantons": [
+    {"abbr":"ZH","name":"Zürich","type":"regal","lat":47.38,"lng":8.54},
+    {"abbr":"BE","name":"Bern","type":"pacht","lat":46.95,"lng":7.45},
+    {"abbr":"LU","name":"Luzern","type":"pacht","lat":47.05,"lng":8.30},
+    {"abbr":"UR","name":"Uri","type":"regal","lat":46.88,"lng":8.65},
+    {"abbr":"SZ","name":"Schwyz","type":"pacht","lat":47.02,"lng":8.65},
+    {"abbr":"OW","name":"Obwalden","type":"pacht","lat":46.87,"lng":8.28},
+    {"abbr":"NW","name":"Nidwalden","type":"regal","lat":46.95,"lng":8.38},
+    {"abbr":"GL","name":"Glarus","type":"pacht","lat":46.98,"lng":9.05},
+    {"abbr":"ZG","name":"Zug","type":"pacht","lat":47.17,"lng":8.52},
+    {"abbr":"FR","name":"Fribourg","type":"regal","lat":46.80,"lng":7.15},
+    {"abbr":"SO","name":"Solothurn","type":"pacht","lat":47.21,"lng":7.53},
+    {"abbr":"BS","name":"Basel-Stadt","type":"regal","lat":47.56,"lng":7.59},
+    {"abbr":"BL","name":"Basel-Landschaft","type":"pacht","lat":47.46,"lng":7.62},
+    {"abbr":"SH","name":"Schaffhausen","type":"regal","lat":47.70,"lng":8.62},
+    {"abbr":"AR","name":"Appenzell Ausserrhoden","type":"pacht","lat":47.37,"lng":9.30},
+    {"abbr":"AI","name":"Appenzell Innerrhoden","type":"pacht","lat":47.33,"lng":9.42},
+    {"abbr":"SG","name":"St. Gallen","type":"regal","lat":47.23,"lng":9.37},
+    {"abbr":"GR","name":"Graubünden","type":"regal","lat":46.77,"lng":9.53},
+    {"abbr":"TG","name":"Thurgau","type":"pacht","lat":47.57,"lng":8.90},
+    {"abbr":"AG","name":"Aargau","type":"regal","lat":47.39,"lng":8.05},
+    {"abbr":"TI","name":"Ticino","type":"pacht","lat":46.20,"lng":8.80},
+    {"abbr":"VD","name":"Vaud","type":"regal","lat":46.62,"lng":6.65},
+    {"abbr":"VS","name":"Valais","type":"regal","lat":46.23,"lng":7.35},
+    {"abbr":"NE","name":"Neuchâtel","type":"regal","lat":46.99,"lng":6.93},
+    {"abbr":"GE","name":"Genève","type":"regal","lat":46.20,"lng":6.14},
+    {"abbr":"JU","name":"Jura","type":"pacht","lat":47.36,"lng":7.24}
+  ]
+}

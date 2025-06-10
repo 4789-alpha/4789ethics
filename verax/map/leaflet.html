@@ -24,6 +24,7 @@
   <div id="map"></div>
   <script>
     const map = L.map('map').setView([46.8345, 7.4953], 14);
+    L.control.zoom({ position: 'topright' }).addTo(map);
 
     // Tile-Layer (OSM international)
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
