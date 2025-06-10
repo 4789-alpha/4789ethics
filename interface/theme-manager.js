@@ -56,6 +56,9 @@ function initThemeSelection() {
   const labels = ['Dark Tanna','Tanna','Transparent','Sea Blue','Desert','Accessible','Custom'];
 
   let theme = localStorage.getItem('ethicom_theme') || 'tanna-dark';
+  if (getOpLevel() === 0) {
+    theme = 'tanna-dark';
+  }
   applyTheme(theme);
   if (tannaCard) tannaCard.style.display = theme === 'tanna' ? 'block' : 'none';
   if (select) {
@@ -102,6 +105,18 @@ function initThemeSelection() {
     if (select) select.disabled = level < 3;
     if (slider) slider.disabled = level < 3;
     if (customBtn) customBtn.style.display = level >= 4 ? 'block' : 'none';
+    if (level === 0) {
+      theme = 'tanna-dark';
+      applyTheme(theme);
+      resetSlidersFromTheme();
+      if (select) select.value = theme;
+      if (slider) {
+        const idx = themes.indexOf(theme);
+        slider.value = idx >= 0 ? idx : 0;
+        if (label) label.textContent = labels[slider.value];
+      }
+      if (tannaCard) tannaCard.style.display = 'none';
+    }
   }
 
   updateAccess();
