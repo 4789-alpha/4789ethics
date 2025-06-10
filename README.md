@@ -22,6 +22,7 @@ Use it only if you reflect, respond, and act with consequence.
 
 For a brief tour of the main files, see [GET_STARTED.md](GET_STARTED.md).
 Eine Kurzanleitung in einfacher Sprache findest du in [ANLEITUNG_EINFACH_DE.md](ANLEITUNG_EINFACH_DE.md).
+Eine Schritt-für-Schritt-Anleitung für neue Nutzer steht in [docs/NEUE_BENUTZER_DE.md](docs/NEUE_BENUTZER_DE.md).
 
 **License:** Open-Ethics (see [LICENSE.txt](LICENSE.txt))
 No manipulation. No simulation. No flattening of responsibility.
