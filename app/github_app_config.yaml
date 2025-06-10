@@ -1,0 +1,3 @@
+app_id: "YOUR_GITHUB_APP_ID"
+installation_id: "YOUR_INSTALLATION_ID"
+private_key: "PATH_TO_PRIVATE_KEY_PEM"

@@ -489,6 +489,13 @@ node tools/github-device-login.js
 ```
 Follow the printed instructions to authorize and store your ID locally.
 
+To retrieve an installation token for a GitHub App run:
+
+```bash
+node tools/github-app-token.js
+```
+The script reads `app/github_app_config.yaml` and prints a short-lived token.
+
 
 ### Optional Setup Helper
 [⇧](#contents)
