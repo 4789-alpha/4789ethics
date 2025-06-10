@@ -126,6 +126,7 @@ README.md -> GET_STARTED.md -> index.html
 | [personenbewertung.html](personenbewertung.html) | Swipe-based person rating |
 | [org-bewertung.html](org-bewertung.html) | Preview for organisation ratings |
 | [interface/settings.html](interface/settings.html) | Language, theme, Tanna logo, and low motion settings |
+| [docs/tanna-collisions.md](docs/tanna-collisions.md) | How to enable Tanna background collisions |
 | [interface/signup.html](interface/signup.html) | Registration form |
 | [interface/offline-signup.html](interface/offline-signup.html) | Offline local signup |
 | [interface_OLD/tanna-template.html](interface_OLD/tanna-template.html) | Legacy base template |
