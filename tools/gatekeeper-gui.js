@@ -2,6 +2,7 @@ const http = require('http');
 const path = require('path');
 const fs = require('fs');
 const crypto = require('crypto');
+const { spawn } = require('child_process');
 const {
   gateCheck,
   issueTempToken,
@@ -14,6 +15,8 @@ const cfgPath = path.join(__dirname, '..', 'app', 'gatekeeper_config.yaml');
 const storePath = path.join(__dirname, '..', 'app', 'gatekeeper_devices.json');
 const logPath = path.join(__dirname, '..', 'app', 'gatekeeper_log.json');
 const htmlPath = path.join(__dirname, '..', 'interface', 'gatekeeper.html');
+
+let serverProcess = null;
 
 const mime = {
   '.html': 'text/html',
@@ -59,6 +62,43 @@ const server = http.createServer((req, res) => {
     pruneExpiredTokens(storePath);
     res.writeHead(200, { 'Content-Type': 'text/plain' });
     res.end('pruned');
+    return;
+  }
+  if (req.method === 'POST' && urlPath === '/install') {
+    const npm = process.platform === 'win32' ? 'npm.cmd' : 'npm';
+    const child = spawn(npm, ['install'], { stdio: 'inherit' });
+    child.on('exit', code => {
+      res.writeHead(200, { 'Content-Type': 'text/plain' });
+      res.end(code === 0 ? 'done' : 'error');
+    });
+    return;
+  }
+  if (req.method === 'POST' && urlPath === '/tests') {
+    const run = spawn('node', ['--test'], { stdio: 'inherit' });
+    run.on('exit', code => {
+      if (code === 0) {
+        const chk = spawn('node', ['tools/check-translations.js'], { stdio: 'inherit' });
+        chk.on('exit', code2 => {
+          res.writeHead(200, { 'Content-Type': 'text/plain' });
+          res.end(code2 === 0 ? 'ok' : 'fail');
+        });
+      } else {
+        res.writeHead(200, { 'Content-Type': 'text/plain' });
+        res.end('fail');
+      }
+    });
+    return;
+  }
+  if (req.method === 'POST' && urlPath === '/start-server') {
+    if (serverProcess) {
+      res.writeHead(200, { 'Content-Type': 'text/plain' });
+      res.end('already running');
+      return;
+    }
+    serverProcess = spawn('node', [path.join(__dirname, 'serve-interface.js')], { stdio: 'inherit' });
+    serverProcess.on('exit', () => { serverProcess = null; });
+    res.writeHead(200, { 'Content-Type': 'text/plain' });
+    res.end('started');
     return;
   }
   if (req.method === 'GET' && urlPath === '/check') {

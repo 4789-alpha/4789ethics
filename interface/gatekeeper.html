@@ -6,6 +6,7 @@
   <title>Gatekeeper</title>
   <link rel="stylesheet" href="ethicom-style.css">
 <script src="bundle.js" defer></script>
+<script src="disclaimer.js"></script>
 </head>
 <body>
   <header><h1>Gatekeeper</h1></header>
@@ -16,15 +17,38 @@
     <p id="tok_out" class="note"></p>
     <button id="prune_btn" class="accent-button">Prune Tokens</button>
     <p id="prune_out" class="note"></p>
+    <hr>
+    <button id="install_btn" class="accent-button">Install Dependencies</button>
+    <p id="install_out" class="note"></p>
+    <button id="tests_btn" class="accent-button">Run Tests</button>
+    <p id="tests_out" class="note"></p>
+    <button id="start_btn" class="accent-button">Start Server</button>
+    <p id="start_out" class="note"></p>
   </main>
   <script>
   document.addEventListener('DOMContentLoaded', () => {
+    showDisclaimers({
+      disclaimer_title: 'Hinweise',
+      disclaimer_items: [
+        'Diese Struktur wird ohne Gew\xE4hrleistung bereitgestellt.',
+        'Die Nutzung erfolgt auf eigene Verantwortung.',
+        '4789 ist ein Standard f\xFCr Verantwortung, keine Person und kein Glaubenssystem.',
+        'Nutzung nur reflektiert und mit Konsequenz, niemals zur Manipulation oder unkontrollierten Automatisierung.'
+      ],
+      btn_disclaimer_accept: 'Verstanden'
+    });
     const checkBtn = document.getElementById('check_btn');
     const resP = document.getElementById('check_result');
     const tokBtn = document.getElementById('tok_btn');
     const tokOut = document.getElementById('tok_out');
     const pruneBtn = document.getElementById('prune_btn');
     const pruneOut = document.getElementById('prune_out');
+    const installBtn = document.getElementById('install_btn');
+    const installOut = document.getElementById('install_out');
+    const testsBtn = document.getElementById('tests_btn');
+    const testsOut = document.getElementById('tests_out');
+    const startBtn = document.getElementById('start_btn');
+    const startOut = document.getElementById('start_out');
 
     checkBtn.addEventListener('click', () => {
       fetch('/check').then(r => r.json()).then(d => {
@@ -42,6 +66,30 @@
       fetch('/prune', {method:'POST'}).then(r => r.text()).then(t => {
         pruneOut.textContent = t;
       });
+    });
+
+    installBtn.addEventListener('click', () => {
+      installOut.textContent = 'Running...';
+      fetch('/install', {method:'POST'})
+        .then(r => r.text())
+        .then(t => { installOut.textContent = t; })
+        .catch(() => { installOut.textContent = 'Error'; });
+    });
+
+    testsBtn.addEventListener('click', () => {
+      testsOut.textContent = 'Running...';
+      fetch('/tests', {method:'POST'})
+        .then(r => r.text())
+        .then(t => { testsOut.textContent = t; })
+        .catch(() => { testsOut.textContent = 'Error'; });
+    });
+
+    startBtn.addEventListener('click', () => {
+      startOut.textContent = 'Starting...';
+      fetch('/start-server', {method:'POST'})
+        .then(r => r.text())
+        .then(t => { startOut.textContent = t; })
+        .catch(() => { startOut.textContent = 'Error'; });
     });
   });
   </script>
