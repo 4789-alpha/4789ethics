@@ -4,9 +4,9 @@ This file tracks pending improvements and roadmap actions.
 
 ## Accessibility and Setup
 - [x] Extend `README.md` with a quick start and clear entry point.
-- [ ] Use short, active sentences for better readability.
-- [ ] Add a simple ASCII diagram of the workflow.
-- [ ] Provide a setup script for initial configuration.
+- [x] Use short, active sentences for better readability.
+- [x] Add a simple ASCII diagram of the workflow.
+- [x] Provide a setup script for initial configuration (`tools/guided-install.sh`).
 - [ ] Document a consistent folder structure.
 - [ ] Keep default settings in `config.json`.
 
