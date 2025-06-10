@@ -5,14 +5,14 @@ Diese Liste enthält konkrete Vorschläge zur Verbesserung der Benutzerfreundlic
 ---
 
 ## 1. Einstieg & Zugänglichkeit
-- [ ] README.md ergänzen: Klarer Überblick über Zweck, Zielgruppe und Einstiegspunkt.
-- [ ] Barrierefreie Sprache verwenden: kurze Sätze, aktive Form.
-- [ ] Visuelle Einstiegshilfe: ASCII-Flowchart oder einfache UI-Skizze in Textform.
+- [x] README.md ergänzen: Klarer Überblick über Zweck, Zielgruppe und Einstiegspunkt.
+- [x] Barrierefreie Sprache verwenden: kurze Sätze, aktive Form.
+- [x] Visuelle Einstiegshilfe: ASCII-Flowchart oder einfache UI-Skizze in Textform.
 
 ## 2. Struktur & Navigation
 - [ ] Einführungsscript (setup.sh/install.py): Interaktive Erstkonfiguration.
 - [ ] Konsistente, sprechende Ordnerstruktur.
-- [ ] Zentrale config.json mit dokumentierten Defaultwerten.
+- [x] Zentrale config.json mit dokumentierten Defaultwerten.
 
 ## 3. Login & Benutzerführung
 - [ ] Optionales Loginmodul mit lokalem Userprofil.
