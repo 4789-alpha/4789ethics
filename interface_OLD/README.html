@@ -4,11 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>README</title>
-  <link rel="stylesheet" href="ethicom-style.css">
-  <script src="side-drop.js"></script>
-  <script src="op-side-nav.js"></script>
-  <script src="../interface/logo-background.js"></script>
-  <script src="../interface/module-logo.js"></script>
+  <link rel="stylesheet" href="../interface/ethicom-style.css">
+  <script src="../interface/bundle.js" defer></script>
+  <script src="../utils/op-level.js"></script>
   <style>body{white-space:pre-wrap;font-family:monospace;color:#fff;background:#000;padding:1em;}</style>
 </head>
 <body>
@@ -40,7 +38,6 @@ For OP-6 and above, the generator can optionally store a hashed passport or ID l
 ## Interface Overview
 
 - `ethicom.html` → loads modular interface per OP-level
-- `ethicom-style.css` → dark mode, badge colors, minimal energy
 - `signature-generator.js` → local signature creation (e.g. `SIG-XXXX-XXXX-XXXX`); for OP-6+ it can store a hashed passport/ID locally
 - `signature-verifier.js` → hash & password check before activation
 - `interface-loader.js` → loads correct module for OP-0 to OP-12 and extra tools
@@ -90,7 +87,6 @@ The range from OP-0 to OP-3 forms the editing stage (*Bearbeitungsstufe*) where 
 ```plaintext
 interface/
 ├── ethicom.html
-├── ethicom-style.css
 ├── signature-generator.js
 ├── signature-verifier.js
 ├── interface-loader.js
