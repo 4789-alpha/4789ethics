@@ -9,8 +9,7 @@ This project welcomes ethical improvements and translations. Before changing the
 Apply changes with intention and in alignment with the Open‑Ethics License:
 
 ```
-Freely usable for ethically consistent, non-manipulative systems.
-No use permitted for control, exploitation, or unreflected automation.
+Freely usable for ethically consistent systems.
 ```
 
 Use it. Adapt it. But never without consequence.
