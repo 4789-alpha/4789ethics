@@ -11,9 +11,9 @@ This file tracks pending improvements and roadmap actions.
 - [ ] Keep default settings in `config.json`.
 
 ## User Handling
-- [ ] Offer optional local login.
-- [ ] Store personal preferences in `userprofile.json` or similar.
-- [ ] Show a personalized greeting after login.
+- [x] Offer optional local login.
+- [x] Store personal preferences in `userprofile.json` or similar.
+- [x] Show a personalized greeting after login.
 
 ## Accessibility Features
 - [ ] Improve screen reader labels.
