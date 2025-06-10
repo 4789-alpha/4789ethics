@@ -3,6 +3,9 @@ async function initFischeSchweiz() {
   if (!table) return;
   try {
     const list = await fetch('../../sources/fish/swiss-fish.json').then(r => r.json());
+    const bernData = await fetch('../../sources/fish/bern-fische.json').then(r => r.json());
+    const sizeMap = {};
+    bernData.forEach(f => { sizeMap[f.scientific_name] = f.max_cm; });
     const tbody = document.createElement('tbody');
     list.forEach(f => {
       const row = document.createElement('tr');
@@ -33,6 +36,10 @@ async function initFischeSchweiz() {
       statusCell.textContent = f.status;
       row.appendChild(statusCell);
 
+      const sizeCell = document.createElement('td');
+      sizeCell.textContent = sizeMap[f.scientific_name] || '';
+      row.appendChild(sizeCell);
+
       const bernCell = document.createElement('td');
       bernCell.textContent = f.in_bern ? '✓' : '';
       row.appendChild(bernCell);
@@ -41,7 +48,7 @@ async function initFischeSchweiz() {
     });
     table.appendChild(tbody);
   } catch (e) {
-    table.innerHTML = '<tr><td colspan="6">Daten konnten nicht geladen werden. Bitte Seite neu laden.</td></tr>';
+    table.innerHTML = '<tr><td colspan="7">Daten konnten nicht geladen werden. Bitte Seite neu laden.</td></tr>';
   }
 }
 
