@@ -138,10 +138,11 @@ const mime = {
 function serveFile(filePath, res) {
   const ext = path.extname(filePath).toLowerCase();
   const type = mime[ext] || 'application/octet-stream';
-  res.writeHead(200, {
-    'Content-Type': type,
+  const headers = {
+    'Content-Type': type + (type.startsWith('text/') ? '; charset=utf-8' : ''),
     'Cache-Control': 'public, max-age=31536000'
-  });
+  };
+  res.writeHead(200, headers);
   fs.createReadStream(filePath).pipe(res);
 }
 
