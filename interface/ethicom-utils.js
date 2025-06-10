@@ -261,3 +261,21 @@ function getSanaConfirmed() {
 
 window.getSanaConfirmed = getSanaConfirmed;
 
+// Show or hide navigation links based on the required OP level
+function applyOpLevelVisibility(root = document) {
+  const currentLevel =
+    typeof opLevelToNumber === 'function' &&
+    typeof getStoredOpLevel === 'function'
+      ? opLevelToNumber(getStoredOpLevel())
+      : 0;
+  root.querySelectorAll('[data-min-op]').forEach(el => {
+    const required = opLevelToNumber(el.dataset.minOp);
+    if (currentLevel < required) {
+      el.style.display = 'none';
+    }
+  });
+}
+
+window.applyOpLevelVisibility = applyOpLevelVisibility;
+document.addEventListener('DOMContentLoaded', () => applyOpLevelVisibility());
+
