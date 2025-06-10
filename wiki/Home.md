@@ -465,7 +465,7 @@ To register a user from the terminal run:
 ```bash
 node tools/signup-cli.js <email> <password> [--nick=<alias>]
 ```
-The script prints the assigned ID, alias and TOTP secret.
+The script prints the assigned ID, alias and TOTP secret (encrypted in storage).
 
 On GitHub Pages the `/auth/github` and `/auth/google` paths only show brief
 instructions. Start the local server with `BASE_URL` set to your public origin

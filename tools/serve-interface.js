@@ -49,6 +49,30 @@ function base32Decode(str) {
   return Buffer.from(out.slice(0, idx));
 }
 
+const totpKey = crypto
+  .createHash('sha256')
+  .update(process.env.TOTP_SECRET_KEY || 'default_totp_key')
+  .digest();
+
+function encryptTotpSecret(secret) {
+  const iv = crypto.randomBytes(12);
+  const cipher = crypto.createCipheriv('aes-256-gcm', totpKey, iv);
+  const enc = Buffer.concat([cipher.update(secret, 'utf8'), cipher.final()]);
+  const tag = cipher.getAuthTag();
+  return Buffer.concat([iv, tag, enc]).toString('base64');
+}
+
+function decryptTotpSecret(data) {
+  const buf = Buffer.from(data, 'base64');
+  const iv = buf.slice(0, 12);
+  const tag = buf.slice(12, 28);
+  const enc = buf.slice(28);
+  const decipher = crypto.createDecipheriv('aes-256-gcm', totpKey, iv);
+  decipher.setAuthTag(tag);
+  const dec = Buffer.concat([decipher.update(enc), decipher.final()]);
+  return dec.toString('utf8');
+}
+
 function parseOAuthConfig(filePath) {
   const cfgPath = filePath || path.join(__dirname, '..', 'app', 'oauth_config.yaml');
   if (!fs.existsSync(cfgPath)) return null;
@@ -191,7 +215,8 @@ function setOpLevel(id, level, authCode) {
   const users = readJson(usersFile);
   const user = users.find(u => u.id === id);
   if (!user) return false;
-  if (user.totpSecret && !verifyTotp(user.totpSecret, authCode)) return false;
+  if (user.totpSecretEnc &&
+      !verifyTotp(decryptTotpSecret(user.totpSecretEnc), authCode)) return false;
   if (['OP-10', 'OP-11', 'OP-12'].includes(level) && !user.is_digital) return false;
   user.op_level = level;
   updateAlias(user);
@@ -225,6 +250,7 @@ function handleSignup(req, res) {
       const countryHash = country ? crypto.createHash('sha256').update(country).digest('hex') : null;
       const idHash = id_number ? crypto.createHash('sha256').update(id_number).digest('hex') : null;
       const secret = generateTotpSecret();
+      const encSecret = encryptTotpSecret(secret);
       const users = readJson(usersFile);
       if (idHash && users.some(u => u.idHash === idHash)) {
         res.writeHead(409); res.end('ID already exists'); return;
@@ -237,7 +263,7 @@ function handleSignup(req, res) {
         salt,
         op_level: 'OP-1',
         nickname: nickname || autoNick,
-        totpSecret: secret,
+        totpSecretEnc: encSecret,
         addrHash,
         phoneHash,
         countryHash,
@@ -283,7 +309,8 @@ function handleLogin(req, res) {
       const basePw = password.slice(0, -4);
       const pwHash = crypto.createHash('sha256').update(basePw + user.salt).digest('hex');
       if (pwHash !== user.pwHash) { res.writeHead(403); res.end('Invalid credentials'); return; }
-      if (user.totpSecret && !verifyTotp(user.totpSecret, auth_code)) {
+      if (user.totpSecretEnc &&
+          !verifyTotp(decryptTotpSecret(user.totpSecretEnc), auth_code)) {
         res.writeHead(403); res.end('Invalid credentials'); return;
       }
       if (user.op_level === 'OP-4' && user.auth_verified === false && user.level_change_ts) {
