@@ -56,6 +56,8 @@ function applySignupTexts() {
   if (phoneLabel) phoneLabel.textContent = t.signup_phone || phoneLabel.textContent;
   const phoneInput = document.getElementById('phone_input');
   if (phoneInput && t.signup_placeholder_phone) phoneInput.placeholder = t.signup_placeholder_phone;
+  const serverNotice = document.getElementById('server_notice');
+  if (serverNotice && t.signup_server_notice) serverNotice.textContent = t.signup_server_notice;
   updatePhonePlaceholder();
 }
 
