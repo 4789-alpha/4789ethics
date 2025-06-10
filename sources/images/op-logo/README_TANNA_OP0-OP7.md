@@ -6,6 +6,9 @@ This folder contains PNG files representing the geometrically and visually refin
 of the TANNA symbol from OP-0 to OP-7. Each stage represents an abstract layer or growth level
 in a logical, graphical, or systemic tree schema. For OP-8 and higher the design reuses the OP-7 logo,
 repeating it horizontally and shifting the hue to indicate progression.
+These PNGs are used by [`interface/module-logo.js`](../../../interface/module-logo.js) to show the current OP badge in the page header. The badge is positioned in the top-left corner via the `.op-status-link` rule in [`interface/css/nav.css`](../../../interface/css/nav.css).
+
+
 
 ---
 
