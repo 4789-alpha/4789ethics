@@ -22,7 +22,24 @@ function initLogin() {
     .then(data => {
       uiText = data[lang] || data.en || {};
       applyLoginTexts();
+      loadProfile();
     });
+}
+
+function loadProfile() {
+  fetch('/api/profile')
+    .then(r => r.json())
+    .then(p => {
+      if (p.lang) {
+        localStorage.setItem('ethicom_lang', p.lang);
+      }
+      if (p.alias) {
+        const statusEl = document.getElementById('login_status');
+        const msg = (uiText.login_welcome || 'Welcome back, {name}.').replace('{name}', p.alias);
+        statusEl.textContent = msg;
+      }
+    })
+    .catch(() => {});
 }
 
 function handleLogin() {
@@ -57,6 +74,11 @@ function handleLogin() {
     .then(data => {
       const sig = { email, id: data.id, op_level: data.op_level, alias: data.alias };
       localStorage.setItem('ethicom_signature', JSON.stringify(sig));
+      fetch('/api/profile', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ alias: data.alias, lang: getLanguage() })
+      }).catch(() => {});
       statusEl.textContent = uiText.login_saved || 'Login successful. ID stored.';
       setTimeout(() => { window.location.href = 'ethicom.html'; }, 500);
     })

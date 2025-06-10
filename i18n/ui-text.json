@@ -112,7 +112,8 @@
     "connect_error": "Request failed.",
     "nav_navigator": "Navigator Menu",
     "nav_story": "Story",
-    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable."
+    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
+    "login_welcome": "Welcome back, {name}."
   },
   "de": {
     "title": "Ethicom: Bewertung durch Menschen",
@@ -227,7 +228,8 @@
     "connect_error": "Anfrage fehlgeschlagen. Bitte Verbindung prüfen.",
     "nav_navigator": "Navigator",
     "nav_story": "Geschichte",
-    "signup_server_notice": "Nur mit lokalem Server nutzbar. Offline-signup.html verwenden, falls nötig."
+    "signup_server_notice": "Nur mit lokalem Server nutzbar. Offline-signup.html verwenden, falls nötig.",
+    "login_welcome": "Willkommen zurück, {name}."
   },
   "de-ch": {
     "title": "Ethicom: Bewertung durch Menschen",
@@ -342,7 +344,8 @@
     "connect_error": "Anfrage fehlgeschlagen. Bitte Verbindung prüfen.",
     "nav_navigator": "Navigator",
     "nav_story": "Geschichte",
-    "signup_server_notice": "Nur mit lokalem Server nutzbar. Offline-signup.html verwenden, falls nötig."
+    "signup_server_notice": "Nur mit lokalem Server nutzbar. Offline-signup.html verwenden, falls nötig.",
+    "login_welcome": "Willkommen zurück, {name}."
   },
   "fr": {
     "title": "Ethicom : Évaluation humaine",
@@ -457,7 +460,8 @@
     "connect_error": "Request failed.",
     "nav_story": "Story",
     "nav_navigator": "Navigator Menu",
-    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable."
+    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
+    "login_welcome": "Welcome back, {name}."
   },
   "es": {
     "title": "Ethicom: Evaluación Humana",
@@ -572,7 +576,8 @@
     "nav_navigator": "Navigator Menu",
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
-    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable."
+    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
+    "login_welcome": "Welcome back, {name}."
   },
   "pt": {
     "title": "Ethicom: Avaliação Humana",
@@ -686,7 +691,8 @@
     "nav_navigator": "Navigator Menu",
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
-    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable."
+    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
+    "login_welcome": "Welcome back, {name}."
   },
   "zh": {
     "title": "Ethicom：人工评估",
@@ -801,7 +807,8 @@
     "nav_navigator": "Navigator Menu",
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
-    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable."
+    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
+    "login_welcome": "Welcome back, {name}."
   },
   "hi": {
     "title": "Ethicom: मानवीय मूल्यांकन",
@@ -915,7 +922,8 @@
     "nav_navigator": "Navigator Menu",
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
-    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable."
+    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
+    "login_welcome": "Welcome back, {name}."
   },
   "ar": {
     "title": "إيثيكوم: التقييم البشري",
@@ -1029,7 +1037,8 @@
     "nav_navigator": "Navigator Menu",
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
-    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable."
+    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
+    "login_welcome": "Welcome back, {name}."
   },
   "ja": {
     "title": "Ethicom：人間による評価",
@@ -1143,7 +1152,8 @@
     "nav_navigator": "Navigator Menu",
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
-    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable."
+    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
+    "login_welcome": "Welcome back, {name}."
   },
   "sw": {
     "title": "Ethicom: Tathmini ya Kibinadamu",
@@ -1257,7 +1267,8 @@
     "nav_navigator": "Navigator Menu",
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
-    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable."
+    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
+    "login_welcome": "Welcome back, {name}."
   },
   "ru": {
     "title": "Ethicom: Оценка человеком",
@@ -1371,7 +1382,8 @@
     "nav_navigator": "Navigator Menu",
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
-    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable."
+    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
+    "login_welcome": "Welcome back, {name}."
   },
   "it": {
     "title": "Ethicom: Valutazione Umana",
@@ -1486,7 +1498,8 @@
     "nav_navigator": "Navigator Menu",
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
-    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable."
+    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
+    "login_welcome": "Welcome back, {name}."
   },
   "ko": {
     "title": "Ethicom: 인간 평가",
@@ -1600,7 +1613,8 @@
     "nav_navigator": "Navigator Menu",
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
-    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable."
+    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
+    "login_welcome": "Welcome back, {name}."
   },
   "fa": {
     "title": "ایتیکام: ارزیابی انسانی",
@@ -1714,7 +1728,8 @@
     "nav_navigator": "Navigator Menu",
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
-    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable."
+    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
+    "login_welcome": "Welcome back, {name}."
   },
   "pl": {
     "title": "Ethicom: Ocena Ludzka",
@@ -1828,7 +1843,8 @@
     "nav_navigator": "Navigator Menu",
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
-    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable."
+    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
+    "login_welcome": "Welcome back, {name}."
   },
   "am": {
     "title": "Ethicom: Human Evaluation",
@@ -1942,7 +1958,8 @@
     "nav_navigator": "Navigator Menu",
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
-    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable."
+    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
+    "login_welcome": "Welcome back, {name}."
   },
   "af": {
     "title": "Ethicom: Human Evaluation",
@@ -2056,7 +2073,8 @@
     "nav_navigator": "Navigator Menu",
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
-    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable."
+    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
+    "login_welcome": "Welcome back, {name}."
   },
   "bn": {
     "title": "Ethicom: Human Evaluation",
@@ -2170,7 +2188,8 @@
     "nav_navigator": "Navigator Menu",
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
-    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable."
+    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
+    "login_welcome": "Welcome back, {name}."
   },
   "ha": {
     "title": "Ethicom: Human Evaluation",
@@ -2284,7 +2303,8 @@
     "nav_navigator": "Navigator Menu",
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
-    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable."
+    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
+    "login_welcome": "Welcome back, {name}."
   },
   "id": {
     "title": "Ethicom: Human Evaluation",
@@ -2398,7 +2418,8 @@
     "nav_navigator": "Navigator Menu",
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
-    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable."
+    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
+    "login_welcome": "Welcome back, {name}."
   },
   "ig": {
     "title": "Ethicom: Human Evaluation",
@@ -2512,7 +2533,8 @@
     "nav_navigator": "Navigator Menu",
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
-    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable."
+    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
+    "login_welcome": "Welcome back, {name}."
   },
   "om": {
     "title": "Ethicom: Human Evaluation",
@@ -2626,7 +2648,8 @@
     "nav_navigator": "Navigator Menu",
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
-    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable."
+    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
+    "login_welcome": "Welcome back, {name}."
   },
   "rm": {
     "title": "Ethicom: Human Evaluation",
@@ -2740,7 +2763,8 @@
     "nav_navigator": "Navigator Menu",
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
-    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable."
+    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
+    "login_welcome": "Welcome back, {name}."
   },
   "ta": {
     "title": "Ethicom: Human Evaluation",
@@ -2854,7 +2878,8 @@
     "nav_navigator": "Navigator Menu",
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
-    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable."
+    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
+    "login_welcome": "Welcome back, {name}."
   },
   "te": {
     "title": "Ethicom: Human Evaluation",
@@ -2968,7 +2993,8 @@
     "nav_navigator": "Navigator Menu",
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
-    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable."
+    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
+    "login_welcome": "Welcome back, {name}."
   },
   "th": {
     "title": "Ethicom: Human Evaluation",
@@ -3082,7 +3108,8 @@
     "nav_navigator": "Navigator Menu",
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
-    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable."
+    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
+    "login_welcome": "Welcome back, {name}."
   },
   "tr": {
     "title": "Ethicom: Human Evaluation",
@@ -3196,7 +3223,8 @@
     "nav_navigator": "Navigator Menu",
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
-    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable."
+    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
+    "login_welcome": "Welcome back, {name}."
   },
   "ur": {
     "title": "Ethicom: Human Evaluation",
@@ -3311,7 +3339,8 @@
     "nav_navigator": "Navigator Menu",
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
-    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable."
+    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
+    "login_welcome": "Welcome back, {name}."
   },
   "vi": {
     "title": "Ethicom: Human Evaluation",
@@ -3425,7 +3454,8 @@
     "nav_navigator": "Navigator Menu",
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
-    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable."
+    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
+    "login_welcome": "Welcome back, {name}."
   },
   "xh": {
     "title": "Ethicom: Human Evaluation",
@@ -3539,7 +3569,8 @@
     "nav_navigator": "Navigator Menu",
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
-    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable."
+    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
+    "login_welcome": "Welcome back, {name}."
   },
   "yo": {
     "title": "Ethicom: Human Evaluation",
@@ -3653,7 +3684,8 @@
     "nav_navigator": "Navigator Menu",
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
-    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable."
+    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
+    "login_welcome": "Welcome back, {name}."
   },
   "zu": {
     "title": "Ethicom: Human Evaluation",
@@ -3767,7 +3799,8 @@
     "nav_navigator": "Navigator Menu",
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
-    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable."
+    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
+    "login_welcome": "Welcome back, {name}."
   },
   "nl": {
     "title": "Ethicom: Menselijke Evaluatie",
@@ -3881,6 +3914,7 @@
     "nav_navigator": "Navigator Menu",
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
-    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable."
+    "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
+    "login_welcome": "Welcome back, {name}."
   }
 }

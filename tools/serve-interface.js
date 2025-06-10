@@ -141,6 +141,7 @@ const paths = cfg.paths || {};
 const usersFile = path.join(repoRoot, paths.users || 'app/users.json');
 const evalFile = path.join(repoRoot, paths.evaluations || 'app/evaluations.json');
 const connFile = path.join(repoRoot, paths.connections || 'app/connections.json');
+const profileFile = path.join(repoRoot, paths.userprofile || 'app/userprofile.json');
 const oauthCfg = parseOAuthConfig(paths.oauthConfig ? path.join(repoRoot, paths.oauthConfig) : undefined);
 const oauthStates = new Set();
 const gateCfgPath = path.join(repoRoot, paths.gatekeeperConfig || 'app/gatekeeper_config.yaml');
@@ -177,6 +178,15 @@ function readJson(file) {
 
 function writeJson(file, data) {
   fs.writeFileSync(file, JSON.stringify(data, null, 2));
+}
+
+function readProfile() {
+  if (!fs.existsSync(profileFile)) return {};
+  try { return JSON.parse(fs.readFileSync(profileFile, 'utf8')); } catch { return {}; }
+}
+
+function writeProfile(data) {
+  writeJson(profileFile, data);
 }
 
 function logDemotion(userId, filePath) {
@@ -637,6 +647,33 @@ function handleConnectList(req, res) {
   res.end(JSON.stringify({ pending: pending, connections: conns }));
 }
 
+function handleProfile(req, res) {
+  if (req.method === 'GET') {
+    const data = readProfile();
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify(data));
+  } else if (req.method === 'POST') {
+    let body = '';
+    req.on('data', c => { body += c; });
+    req.on('end', () => {
+      try {
+        const incoming = JSON.parse(body);
+        const cur = readProfile();
+        const merged = { ...cur, ...incoming };
+        writeProfile(merged);
+        res.writeHead(200, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ success: true }));
+      } catch (err) {
+        res.writeHead(400);
+        res.end('Bad Request');
+      }
+    });
+  } else {
+    res.writeHead(405);
+    res.end('Not Allowed');
+  }
+}
+
 function handleLevelUpgrade(req, res) {
   let body = '';
   req.on('data', c => { body += c; });
@@ -739,6 +776,9 @@ const server = http.createServer((req, res) => {
   if (req.method === 'GET' && urlPath === '/api/gatekeeper/token') {
     return handleTempToken(req, res);
   }
+  if (urlPath === '/api/profile') {
+    return handleProfile(req, res);
+  }
   if ((req.method === 'GET' || req.method === 'POST') && urlPath === '/api/data') {
     return handleData(req, res);
   }
@@ -808,6 +848,7 @@ if (require.main === module) {
     handleConnectApprove,
     handleConnectList,
     handleTempToken,
+    handleProfile,
     handleData,
     handleLevelUpgrade,
     checkPendingDemotions,
