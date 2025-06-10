@@ -5,3 +5,5 @@
 - Connect to real-use decision protocols
 
 - Deploy interface on Netsly for quick sharing
+
+- Deploy interface on Hostpoint for regular hosting
