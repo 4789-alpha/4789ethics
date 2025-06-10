@@ -2745,7 +2745,7 @@ function renderOpOverview() {
     })
     .catch(err => {
       console.error(err);
-      container.textContent = `Konnte OP-Daten nicht laden: ${err.message}. Pr\u00fcfen Sie die Netzwerkverbindung oder \u00f6ffnen Sie die Seite \u00fcber einen Web-Server.`;
+      container.textContent = `Konnte OP-Daten nicht laden: ${err.message}. Prüfen Sie die Netzwerkverbindung oder öffnen Sie die Seite über einen Web-Server.`;
     });
 }
 
