@@ -1,5 +1,4 @@
-## Ethics Structure 4789
-[⇧](#contents)
+# README
 
 This repository contains the complete structural ethics framework developed under Signature 4789.
 It is not tied to a person, but to a standard: responsibility over convenience: **4789**
@@ -35,6 +34,7 @@ See [DISCLAIMERS.md](../DISCLAIMERS.md) for warranty and liability notes.
 **Audience:** Developers, educators, and curious readers.
 
 1. Read [GET_STARTED.md](../GET_STARTED.md) for the main files.
+   Ensure Node.js 18 or later is installed.
 2. Start the interface with `npm start` or use
    `npm run easy-start` to install dependencies automatically. You can also run
    `node tools/serve-interface.js`. If you only have the website, download
