@@ -130,6 +130,8 @@ README.md -> GET_STARTED.md -> index.html
 | [interface/settings.html](interface/settings.html) | Language, theme, Tanna logo, and low motion settings |
 | [interface/signup.html](interface/signup.html) | Registration form |
 | [interface/offline-signup.html](interface/offline-signup.html) | Offline local signup |
+
+Signup requires the local server started via `node tools/serve-interface.js`.
 | [interface_OLD/tanna-template.html](interface_OLD/tanna-template.html) | Legacy base template |
 | [interface_OLD/tanna-template-dark.html](interface_OLD/tanna-template-dark.html) | Legacy dark template |
 | [interface_OLD/tanna-template-light.html](interface_OLD/tanna-template-light.html) | Legacy light template |

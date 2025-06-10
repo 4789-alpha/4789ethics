@@ -129,6 +129,8 @@ README.md -> GET_STARTED.md -> index.html
 | [docs/tanna-collisions.md](docs/tanna-collisions.md) | How to enable Tanna background collisions |
 | [interface/signup.html](interface/signup.html) | Registration form |
 | [interface/offline-signup.html](interface/offline-signup.html) | Offline local signup |
+
+Signup requires the local server started via `node tools/serve-interface.js`.
 | [interface_OLD/tanna-template.html](interface_OLD/tanna-template.html) | Legacy base template |
 | [interface_OLD/tanna-template-dark.html](interface_OLD/tanna-template-dark.html) | Legacy dark template |
 | [interface_OLD/tanna-template-light.html](interface_OLD/tanna-template-light.html) | Legacy light template |
