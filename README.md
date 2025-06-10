@@ -31,7 +31,7 @@ Eine Kurzanleitung in einfacher Sprache findest du in [ANLEITUNG_EINFACH_DE.md](
 Eine Schritt-für-Schritt-Anleitung für neue Nutzer steht in [docs/NEUE_BENUTZER_DE.md](docs/NEUE_BENUTZER_DE.md).
 
 **License:** Open-Ethics (see [LICENSE.txt](LICENSE.txt))
-No manipulation. No simulation. No flattening of responsibility.
+No flattening of responsibility.
 Humor ist willkommen, wenn er Verantwortung und Klarheit unterstützt.
 See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
 
