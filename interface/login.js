@@ -1,14 +1,5 @@
 let uiText = {};
 
-function currentSuffix() {
-  const now = new Date();
-  now.setHours(now.getHours() + 4);
-  now.setMinutes(now.getMinutes() + 44);
-  const h = String(now.getHours() % 24).padStart(2, '0');
-  const m = String(now.getMinutes()).padStart(2, '0');
-  return h + m;
-}
-
 function applyLoginTexts() {
   document.documentElement.lang = localStorage.getItem('ethicom_lang') || 'de';
   const t = uiText;
@@ -22,13 +13,6 @@ function applyLoginTexts() {
   if (authLabel) authLabel.textContent = t.login_auth || authLabel.textContent;
   const loginBtn = document.getElementById('login_btn');
   if (loginBtn) loginBtn.textContent = t.login_btn || loginBtn.textContent;
-  const hint = document.getElementById('time_hint');
-  if (hint && t.login_time_hint) {
-    const now = new Date();
-    const h = String(now.getHours()).padStart(2, '0');
-    const m = String(now.getMinutes()).padStart(2, '0');
-    hint.textContent = t.login_time_hint.replace('{time}', `${h}:${m}`);
-  }
 }
 
 function initLogin() {
@@ -55,9 +39,6 @@ function handleLogin() {
     statusEl.textContent = 'Password must be at least 8 characters.';
     return;
   }
-
-  const suffix = currentSuffix();
-  if (!password.endsWith(suffix)) password += suffix;
 
   if (!/^[^@]+@[^@]+\.[^@]+$/.test(email)) {
     statusEl.textContent = uiText.login_invalid || 'Login failed. Please check your credentials.';

@@ -298,16 +298,10 @@ function handleLogin(req, res) {
       const emailHash = crypto.createHash('sha256').update(email).digest('hex');
       const user = users.find(u => u.emailHash === emailHash);
       if (!user) { res.writeHead(403); res.end('Invalid credentials'); return; }
-      const now = new Date();
-      now.setHours(now.getHours() + 4);
-      now.setMinutes(now.getMinutes() + 44);
-      const suffix = String(now.getHours() % 24).padStart(2, '0') +
-        String(now.getMinutes()).padStart(2, '0');
-      if (password.length < 4 || !password.endsWith(suffix)) {
+      if (password.length < 8) {
         res.writeHead(403); res.end('Invalid credentials'); return;
       }
-      const basePw = password.slice(0, -4);
-      const pwHash = crypto.createHash('sha256').update(basePw + user.salt).digest('hex');
+      const pwHash = crypto.createHash('sha256').update(password + user.salt).digest('hex');
       if (pwHash !== user.pwHash) { res.writeHead(403); res.end('Invalid credentials'); return; }
       if (user.totpSecretEnc &&
           !verifyTotp(decryptTotpSecret(user.totpSecretEnc), auth_code)) {
