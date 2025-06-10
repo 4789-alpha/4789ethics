@@ -7,6 +7,12 @@ It is not tied to a person, but to a standard: responsibility over convenience: 
 **All functions are accessible on [bsvrb.ch](https://www.bsvrb.ch) and run according to your OP level.**
 **Open [`index.html`](index.html) from the register to run them in the browser.**
 
+### Kurzüberblick
+
+- **Zweck:** Diese Sammlung bietet klare Werkzeuge für verantwortungsvolle digitale Projekte.
+- **Zielgruppe:** Entwicklerinnen, Lehrpersonen und alle Interessierten.
+- **Einstiegspunkt:** Öffne [GET_STARTED.md](GET_STARTED.md) und danach [index.html](index.html).
+
 **What this is:**
 - A full operator model (OP 0–9.x)
 - A self-reflection system (Signature **9874**)
@@ -54,10 +60,22 @@ See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
    [Hostpoint](interface/deploy_hostpoint.md).
 
 ```
-README.md -> GET_STARTED.md -> index.html
-                   |             |
-                   v             +--> settings.html
-              ethicom.html
+    +-----------+
+    | README.md |
+    +-----------+
+          |
+          v
+    +---------------+
+    | GET_STARTED.md|
+    +---------------+
+          |
+          v
+    +-------------+
+    | index.html  |
+    +-------------+
+      |         |
+      v         v
+ settings.html  ethicom.html
 ```
 
 ## Contents

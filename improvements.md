@@ -5,9 +5,9 @@ Diese Liste enthält konkrete Vorschläge zur Verbesserung der Benutzerfreundlic
 ---
 
 ## 1. Einstieg & Zugänglichkeit
-- [ ] README.md ergänzen: Klarer Überblick über Zweck, Zielgruppe und Einstiegspunkt.
+- [x] README.md ergänzen: Klarer Überblick über Zweck, Zielgruppe und Einstiegspunkt.
 - [ ] Barrierefreie Sprache verwenden: kurze Sätze, aktive Form.
-- [ ] Visuelle Einstiegshilfe: ASCII-Flowchart oder einfache UI-Skizze in Textform.
+- [x] Visuelle Einstiegshilfe: ASCII-Flowchart oder einfache UI-Skizze in Textform.
 
 ## 2. Struktur & Navigation
 - [ ] Einführungsscript (setup.sh/install.py): Interaktive Erstkonfiguration.
