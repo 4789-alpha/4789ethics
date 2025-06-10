@@ -2,10 +2,37 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>Aarulon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aarulon.L</title>
+  <link rel="stylesheet" href="../interface/ethicom-style.css">
+  <link rel="stylesheet" href="aari/styles/aari.css">
+  <style>
+    :root {
+      --collision-color: #39ff14;
+      --bg-color: #000;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --collision-color: #b000b0;
+        --bg-color: #fff;
+      }
+    }
+    body {
+      margin: 0;
+      background: var(--bg-color);
+      font-family: system-ui, sans-serif;
+    }
+    #chat-container { padding: 1em; }
+  </style>
 </head>
 <body>
-  <h1>Aarulon Einstiegspunkt</h1>
+  <div id="op_background"></div>
+  <div id="chat-container">
+    <div id="chat-output"></div>
+    <input id="chat-input" placeholder="Schreibe Aarulon.L" />
+    <button id="chat-send">Senden</button>
+  </div>
+  <script src="../interface/bundle.js" defer></script>
   <script src="aari/chat.js"></script>
   <script src="aari/scan.js"></script>
   <script src="aari/upload.js"></script>
