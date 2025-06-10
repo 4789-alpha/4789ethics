@@ -187,6 +187,6 @@ Die beiden neuen Vorlagen setzen `applyTheme('tanna-dark')` bzw.
 Der animierte Hintergrund dient als verborgenes Wasserzeichen. Die sichtbaren
 Tanna-Symbole richten sich nach dem gespeicherten OP-Level: Auf OP‑0-Seiten
 erscheinen nur OP‑0-Symbole, bei OP‑1 kommen die OP‑1-Symbole hinzu und so
-weiter. Stößt ein Symbol niedrigerer Stufe auf ein höheres, dreht es sich kurz,
-verkleinert sich und blendet aus, bevor es wieder in Normalgröße sichtbar wird.
+weiter. Stösst ein Symbol niedrigerer Stufe auf ein höheres, dreht es sich kurz,
+verkleinert sich und blendet aus, bevor es wieder in Normalgrösse sichtbar wird.
 
