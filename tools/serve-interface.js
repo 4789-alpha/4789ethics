@@ -136,6 +136,14 @@ try {
 
 const port = process.env.PORT || cfg.port || 8080;
 const baseUrl = process.env.BASE_URL || cfg.baseUrl || `http://localhost:${port}`;
+
+if (process.argv.includes('--help') || process.argv.includes('-h')) {
+  console.log('Usage: node tools/serve-interface.js');
+  console.log('Starts a local server for the Ethicom interface.');
+  console.log(`Set PORT or cfg.port to change the port (default ${port}).`);
+  console.log('BASE_URL overrides the public origin for OAuth.');
+  process.exit(0);
+}
 const paths = cfg.paths || {};
 
 const usersFile = path.join(repoRoot, paths.users || 'app/users.json');
