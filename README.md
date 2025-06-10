@@ -35,6 +35,7 @@ See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
 **Audience:** Developers, educators, and curious readers.
 
 1. Read [GET_STARTED.md](GET_STARTED.md) for the main files.
+   Ensure Node.js 18 or later is installed.
 2. Start the interface with `npm start` or use
    `npm run easy-start` to install dependencies automatically. You can also run
    `node tools/serve-interface.js`. If you only have the website, download
