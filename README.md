@@ -521,6 +521,12 @@ To retrieve an installation token for a GitHub App run:
 node tools/github-app-token.js
 ```
 The script reads `app/github_app_config.yaml` and prints a short-lived token.
+For OPauth verification run:
+
+```bash
+node tools/github-opauth-token.js <email> <TOTP>
+```
+It validates your stored OPauth credentials before printing the same token.
 
 
 ### Optional Setup Helper
