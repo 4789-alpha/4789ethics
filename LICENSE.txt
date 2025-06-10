@@ -1,6 +1,6 @@
 Open-Ethics License
 
 Freely usable for ethically consistent systems.
-No use permitted for exploitation or unreflected automation.
+No use permitted for exploitation.
 
 Origin: Signature 4789
