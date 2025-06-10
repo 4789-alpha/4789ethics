@@ -43,15 +43,16 @@ See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
 
 1. Read [GET_STARTED.md](GET_STARTED.md) for the main files.
    Ensure Node.js 18 or later is installed.
-2. Start the interface with `npm start` or use
-   `npm run easy-start` to install dependencies automatically. You can also run
-   `node tools/serve-interface.js`. If you only have the website, download
-   [`tools/easy-start.js`](https://www.bsvrb.ch/tools/easy-start.js) and run it
-   with Node. For GitHub Pages deployments you can use
-   `npm run serve-gh`. Pass a page name to `npm start` to open it directly,
+2. Start the interface with `npm start`.
+   Run `npm run easy-start` for an automatic install.
+   You can also use `node tools/serve-interface.js`.
+   If you only have the HTML files, download
+   [`tools/easy-start.js`](https://www.bsvrb.ch/tools/easy-start.js) and run it with Node.
+   For GitHub Pages use `npm run serve-gh`.
+   Pass a page name to `npm start` to open it directly,
    for example `npm start signup.html`.
-   Opening an HTML file directly (via `file://`) disables translations and
-   settings. See [Local Deployment](#local-deployment) for details.
+   Opening an HTML file directly (via `file://`) disables translations.
+   See [Local Deployment](#local-deployment) for details.
 3. Optionally compile the Flutter launcher in `launcher/` to start the server
    without the terminal (`flutter run launcher`).
 4. The interface opens at `http://localhost:8080/index.html`.

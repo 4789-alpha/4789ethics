@@ -4,9 +4,7 @@ const path = require('path');
 const https = require('https');
 const crypto = require('crypto');
 const { parseAppConfig, createJwt } = require('./github-app-token.js');
-
 const githubAppCfg = parseAppConfig();
-
 function base32Decode(str) {
   const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ234567';
   const clean = str.toUpperCase().replace(/[^A-Z2-7]/g, '');

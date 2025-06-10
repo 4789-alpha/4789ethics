@@ -63,6 +63,8 @@ if (user.op_level >= 5) {
 ```
 
 - Das Side-Drop-Menü steht erst ab OP-6 zur Verfügung.
+- Alternativ kann ein Element das Attribut `data-min-op="OP-x"` erhalten.
+  Das Skript `applyOpLevelVisibility()` blendet solche Links automatisch aus.
 
 ## 5. Fortschrittsanzeige
 
