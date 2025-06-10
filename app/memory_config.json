@@ -1,0 +1,11 @@
+{
+  "total_units": 100,
+  "users": {
+    "userA": { "active": true, "units": 0 },
+    "userB": { "active": true, "units": 0 }
+  },
+  "gatekeepers": {
+    "gateA": { "active": true, "active_since": "2025-06-01T12:00:00Z" },
+    "gateB": { "active": true, "active_since": "2025-06-10T12:00:00Z" }
+  }
+}
