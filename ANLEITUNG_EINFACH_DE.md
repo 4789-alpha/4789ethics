@@ -1,6 +1,6 @@
 # Kurzanleitung in einfacher Sprache
 
-Diese Sammlung heißt "Ethics Structure 4789". Sie hilft, Verantwortung vor Bequemlichkeit zu stellen.
+Diese Sammlung heisst "Ethics Structure 4789". Sie hilft, Verantwortung vor Bequemlichkeit zu stellen.
 
 ## So fängst du an
 
