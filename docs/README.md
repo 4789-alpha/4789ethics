@@ -79,6 +79,7 @@ README.md -> GET_STARTED.md -> index.html
 - [Automated Server Setup](#automated-server-setup)
 - [Automated Gatekeeper Setup](#automated-gatekeeper-setup)
 - [Automated Data Setup](#automated-data-setup)
+- [Guided Installation](#guided-installation)
 - [Running Tests](#running-tests)
 - [Contributing](#contributing)
 
@@ -529,6 +530,13 @@ Open the printed URL in the mobile browser and follow the on‑screen steps.
 Run `tools/auto-data-setup.sh` to install Node.js 18 if needed and fetch optional
 offline data. The script installs Python and JavaScript dependencies, downloads
 currency rates and pulls candidate images from Wikipedia.
+
+### Guided Installation
+[⇧](#contents)
+
+Run `tools/guided-install.sh` for a step-by-step setup. The script checks Node.js,
+installs dependencies and optionally runs `install.py` as well as the data
+fetchers.
 
 ### Running Tests
 [⇧](#contents)
