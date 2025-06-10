@@ -17,7 +17,7 @@
     const base = (location.pathname.includes('/interface/') || location.pathname.includes('/wings/')) ? '../' : '';
     const navHtml =
       '<nav class="op0-nav">'+
-      `<a href="${base}home.html" class="icon-only" aria-label="Home">\u{1F3E0}</a>`+
+      `<a href="${base}index.html" class="icon-only" aria-label="Home">\u{1F3E0}</a>`+
       `<a href="${base}interface/settings.html" class="icon-only" aria-label="Settings">\u2699</a>`+
       `<a href="${base}interface/login.html" class="icon-only" aria-label="Login">\u{1F511}</a>`+
       `<a href="${base}interface/signup.html">Signup</a>`+
