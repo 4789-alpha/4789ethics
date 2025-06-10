@@ -1,8 +1,11 @@
 # Deploying the Interface on Hostpoint
 
-Hostpoint can serve the static files from this repository without extra build steps.
-Upload `index.html` and the `interface/` directory to your web root and set that directory as the publish path.
-The interface is pre-built, so no build command is needed.
+Hostpoint offers simple static site hosting similar to Netlify. You can upload the built interface files and run them directly.
 
-The gatekeeper server should run on your own device (for example a Raspberry Pi, laptop or phone) as explained in `README.md`.
-Only start it on Hostpoint if the host supports Node.js 18 or later and you explicitly allow remote control in `app/gatekeeper_config.yaml`.
+1. Create a new static site in your Hostpoint control panel.
+2. Upload the repository files or link your fork via Git if available.
+3. Ensure `index.html` is in the root so the main page loads automatically.
+4. Save and deploy.
+
+This is one of several ways to host the interface. Adjust to your environment.
+
