@@ -93,6 +93,7 @@ See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
 - [Generating Interface README](#generating-interface-readme)
 - [Gatekeeper Control](#gatekeeper-control)
 - [API Access Control](#api-access-control)
+- [Mechatronic Control](#mechatronic-control)
 - [OP Function Bundles](#op-function-bundles)
 - [Currency Synchronization](#currency-synchronization)
 - [Wiki Image Loader](#wiki-image-loader)
@@ -377,6 +378,19 @@ Copy that folder to another device and run `node gatekeeper.js <token>` for dele
 the operator level and confirmation flags from `app/user_state.yaml` and grants
 access only when the specified OP level is met and the user has confirmed
 ethical intent.
+
+### Mechatronic Control
+[⇧](#contents)
+
+`tools/mechatronic-control.js` verifies the operator level and gatekeeper
+status before allowing any automated action. Run
+
+```bash
+node tools/mechatronic-control.js OP-6 <token>
+```
+
+to attempt a mechatronic command. Replace `<token>` with a temporary gatekeeper
+token when required.
 
 ### OP Function Bundles
 [⇧](#contents)
