@@ -130,7 +130,7 @@ See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
 | `test/` | Node.js test suite |
 | `tools/` | Utility scripts (e.g., trust-demotion engine, reliability monitor, correction engine, Python API example, `text_to_speech.py`) |
 | `use_cases/` | Example scenarios and dissemination ideas |
-| `sources/images/op-logo/` | Stages of the Tanna symbol |
+| [sources/images/op-logo/](sources/images/op-logo/README_TANNA_OP0-OP7.md) | Stages of the Tanna symbol |
 | `wings/` | Minimal mobile interface |
 | `evidence/` | Datasets such as `person-ratings.json` |
 | `interface_OLD/` | Legacy version of the first interface |
