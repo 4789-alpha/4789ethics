@@ -36,6 +36,10 @@ Diese Liste enthält konkrete Vorschläge zur Verbesserung der Benutzerfreundlic
 - [ ] API-Dokumentation mit OpenAPI/YAML.
 - [ ] Eingebaute Hilfe via --help oder Hotkeys.
 - [ ] Version und Build sichtbar im Interface anzeigen.
+- [ ] GitHub Actions für automatisierte Tests und Deployments.
+- [ ] Dependabot für Abhängigkeits-Updates.
+- [ ] Codecov oder Coveralls für Testabdeckung.
+- [ ] Snyk oder GitHub Advanced Security für Sicherheits-Scans.
 
 ---
 
