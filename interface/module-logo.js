@@ -40,6 +40,11 @@ function insertModuleLogo() {
   link.setAttribute('aria-label', 'OP Status');
   link.style.width = `calc(${size} * 1.5 + 1em)`;
   link.style.height = '100%';
+
+  const badge = document.createElement('span');
+  badge.className = `badge op-${level.replace('OP-', '').replace('.', '')}`;
+  badge.textContent = level;
+  link.appendChild(badge);
   header.appendChild(link);
 
   if (!h1) return;
