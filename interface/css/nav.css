@@ -17,7 +17,6 @@ nav {
 nav a {
   color: var(--nav-text-color);
   margin: 0 0.8em;
-  text-decoration: none;
 }
 
 nav a:hover,
@@ -127,5 +126,5 @@ header .title-logo {
 
 /* OP-0 navigation bar */
 .op0-nav { display:flex; justify-content:space-around; background: var(--nav-bg); padding:0.5rem; }
-.op0-nav a { font-weight:bold; text-decoration:none; color: var(--nav-text-color); }
+.op0-nav a { font-weight:bold; color: var(--nav-text-color); }
 

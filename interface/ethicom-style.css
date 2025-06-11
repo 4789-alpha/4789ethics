@@ -180,6 +180,11 @@ body {
   animation: fadeInPage 0.6s ease-in-out;
 }
 
+a {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
 
 .ethic{color:var(--ethical-color);}
 .tech{color:var(--technical-color);}
