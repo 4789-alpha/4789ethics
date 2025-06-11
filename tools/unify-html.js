@@ -18,7 +18,7 @@ function relPath(file, target) {
 }
 
 function process(file) {
-  const skip = ['interface/op-navigation.html','interface/nav-menu.html','interface_OLD/op-navigation.html','aari/index.html'];
+  const skip = ['interface/op-navigation.html','interface/nav-menu.html','aari/index.html'];
   const rel = path.relative(root, file).replace(/\\/g,'/');
   if (skip.includes(rel)) return;
   let text = fs.readFileSync(file, 'utf8');

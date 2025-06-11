@@ -134,7 +134,6 @@ See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
 | [sources/images/op-logo/](sources/images/op-logo/README_TANNA_OP0-OP7.md) | Stages of the Tanna symbol |
 | `wings/` | Minimal mobile interface |
 | `evidence/` | Datasets such as `person-ratings.json` |
-| `interface_OLD/` | Legacy version of the first interface |
 | `references/` | Reference tables and scores |
 
 
@@ -144,10 +143,7 @@ See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
 | File | Description |
 |------|-------------|
 | [index.html](index.html) | Start page linking to Ethicom and ratings |
-| [interface_OLD/about.html](interface_OLD/about.html) | Legacy page explaining the 4789 module |
-| [interface_OLD/chat.html](interface_OLD/chat.html) | Legacy chat interface |
 | [interface/ethicom.html](interface/ethicom.html) | Main evaluation module |
-| [interface_OLD/page-flow-demo.html](interface_OLD/page-flow-demo.html) | Legacy demo of horizontal flow |
 | [bewertung.html](bewertung.html) | Entry page for rating modules |
 | [personenbewertung.html](personenbewertung.html) | Swipe-based person rating |
 | [org-bewertung.html](org-bewertung.html) | Preview for organisation ratings |
@@ -156,16 +152,10 @@ See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
 | [interface/offline-signup.html](interface/offline-signup.html) | Offline local signup |
 
 Signup requires the local server started via `node tools/serve-interface.js`.
-| [interface_OLD/tanna-template.html](interface_OLD/tanna-template.html) | Legacy base template |
-| [interface_OLD/tanna-template-dark.html](interface_OLD/tanna-template-dark.html) | Legacy dark template |
-| [interface_OLD/tanna-template-light.html](interface_OLD/tanna-template-light.html) | Legacy light template |
-| [interface_OLD/tools.html](interface_OLD/tools.html) | Legacy utility collection |
 | [interface/donate.html](interface/donate.html) | Donation interface (requires OP‑9.A confirmation) |
-| [interface_OLD/README.html](interface_OLD/README.html) | Legacy interface docs |
 | [interface/features_de.md](interface/features_de.md) | Funktionale Übersicht zum Interface |
 | [wings/index.html](wings/index.html) | Mobile interface "Wings" |
 | [wings/ratings.html](wings/ratings.html) | Library of all ratings with search |
-| `interface_OLD/` | Historical demo of the first interface generation |
 **Settings are stored per device using browser localStorage and are not synced globally. Color adjustments made in the settings page apply automatically on every page.**
 **Ratings from OP-1 onward are stored globally with the assigned signature ID. The email used during signup is hashed and never exposed.**
 **Optional GitHub login authenticates via GitHub's OAuth flow. The returned username is hashed and stored offline.**
