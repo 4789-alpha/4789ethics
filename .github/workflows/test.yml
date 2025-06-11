@@ -11,7 +11,12 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libcairo2-dev libjpeg-dev libpango1.0-dev libgif-dev librsvg2-dev build-essential
       - run: npm install
+      - run: rm -rf node_modules
       - run: node --test
       - run: node tools/check-translations.js
       - run: node tools/check-file-integrity.js
