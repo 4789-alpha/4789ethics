@@ -22,6 +22,7 @@ Merge them back into `main` once they pass review and all checks:
 ```bash
 node --test
 node tools/check-translations.js
+node tools/check-file-integrity.js
 ```
 
 ### Jekyll Branches

@@ -19,6 +19,7 @@ After making changes, run the following commands:
 ```bash
 node --test
 node tools/check-translations.js
+node tools/check-file-integrity.js
 ```
 
 If a command fails due to missing network access, note this in the PR description.
