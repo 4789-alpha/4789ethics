@@ -589,7 +589,10 @@ Ensure Node.js 18 or later is installed, then run:
 ```bash
 node --test
 node tools/check-translations.js
+node tools/check-file-integrity.js
 ```
+
+Or simply run `npm test` to execute all three checks at once.
 
 
 ### Contributing
