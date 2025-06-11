@@ -21,6 +21,8 @@ Beispiel: Für OP-9 (Signatur 4789) sind zehn verschachtelte Arrays erforderlich
 4789[x][y][z][a][b][c][d][e][f][g]
 ```
 
+Eine Referenzimplementierung findet sich in `utils/nested-rating.js`.
+
 Jede zusätzliche Ebene (x, y, z, …) entspricht einer weiteren Array-Schicht bis die Ziel-OP-Stufe erreicht ist. Danach folgt eine abschliessende Ebene zur Sicherung der Bewertung.
 
 ## Nickname pro Signatur

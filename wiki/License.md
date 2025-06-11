@@ -1,9 +1,1 @@
-```
-Open-Ethics License
-
-Freely usable for ethically consistent, non-manipulative systems.
-No use permitted for control, exploitation, or unreflected automation.
-
-Origin: Signature 4789
-
-```
+[Open-Ethics License](../LICENSE.txt)
