@@ -134,6 +134,7 @@ See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
 | [sources/images/op-logo/](sources/images/op-logo/README_TANNA_OP0-OP7.md) | Stages of the Tanna symbol |
 | `wings/` | Minimal mobile interface |
 | `evidence/` | Datasets such as `person-ratings.json` |
+| `anon_inputs/` | Anonymized user inputs aggregated by `anon-input-sync.js` |
 | `references/` | Reference tables and scores |
 
 
