@@ -59,6 +59,7 @@ See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
 5. For quick static hosting, deploy the interface on
    [Netsly](interface/deploy_netsly.md) or
    [Hostpoint](interface/deploy_hostpoint.md).
+6. For the minimal Python helper see [docs/how_to_use.md](docs/how_to_use.md).
 
 ```
     +-----------+
