@@ -9,12 +9,16 @@
   <script src="utils/op-level.js"></script>
 </head>
 <body>
-  <h2>Login</h2>
-  <form id="loginForm">
-    <input type="email" id="email" placeholder="E-Mail" required />
-    <input type="password" id="password" placeholder="Passwort" required />
-    <button type="submit">Login</button>
-  </form>
+  <a class="skip-link" href="#main_content">Skip to main content</a>
+  <div id="op_background"></div>
+  <main id="main_content">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <input type="email" id="email" placeholder="E-Mail" required />
+      <input type="password" id="password" placeholder="Passwort" required />
+      <button type="submit">Login</button>
+    </form>
+  </main>
 
   <script>
     document.getElementById("loginForm").addEventListener("submit", async function (e) {
