@@ -8,6 +8,8 @@ const events = require('node:events');
 
 const { issueTempToken, gateCheck } = require('../tools/gatekeeper.js');
 
+const disclaimersText = fs.readFileSync(path.join(__dirname, '..', 'DISCLAIMERS.md'), 'utf8');
+
 function sha(str) {
   return crypto.createHash('sha256').update(str).digest('hex');
 }
@@ -39,7 +41,7 @@ function stubHttps(token, login) {
 }
 
 
-test('registration hashes email and password as noted in DISCLAIMERS lines 9-10', () => {
+test('registration hashes email and password as noted in the DISCLAIMERS', () => {
   const usersPath = path.join(__dirname, '..', 'app', 'users.json');
   const backup = fs.existsSync(usersPath) ? fs.readFileSync(usersPath, 'utf8') : null;
   const oauthPath = path.join(__dirname, '..', 'app', 'oauth_config.yaml');
@@ -59,6 +61,7 @@ test('registration hashes email and password as noted in DISCLAIMERS lines 9-10'
     assert.ok(!('email' in stored));
     const expectedPwHash = sha('safePass123' + stored.salt);
     assert.strictEqual(stored.pwHash, expectedPwHash);
+    assert.ok(/Registrierungsdaten.*offline gehasht/.test(disclaimersText));
   } finally {
     restore(usersPath, backup);
     restore(oauthPath, oauthBackup);
@@ -129,7 +132,7 @@ test('setOpLevel updates alias for user', () => {
 });
 
 
-test('OAuth login stores hashed identifiers and tokens as noted in DISCLAIMERS lines 12-13', async () => {
+test('OAuth login stores hashed identifiers and tokens as noted in the DISCLAIMERS', async () => {
   const usersPath = path.join(__dirname, '..', 'app', 'users.json');
   const oauthPath = path.join(__dirname, '..', 'app', 'oauth_config.yaml');
   const backupUsers = fs.existsSync(usersPath) ? fs.readFileSync(usersPath, 'utf8') : null;
@@ -158,6 +161,7 @@ test('OAuth login stores hashed identifiers and tokens as noted in DISCLAIMERS l
     assert.strictEqual(stored.githubHash, sha('tester'));
     assert.strictEqual(stored.tokenHash, sha('tok123'));
     assert.ok(!('github' in stored));
+    assert.ok(/GitHub-Login.*offline gehasht/.test(disclaimersText));
   } finally {
     restore(usersPath, backupUsers);
     restore(oauthPath, backupOauth);
@@ -166,7 +170,7 @@ test('OAuth login stores hashed identifiers and tokens as noted in DISCLAIMERS l
 });
 
 
-test('gatekeeper stores device hashes and no biometric file exists as stated in DISCLAIMERS lines 10-14', () => {
+test('gatekeeper stores device hashes and no biometric file exists as stated in the DISCLAIMERS', () => {
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'gate-'));
   const cfgFile = path.join(dir, 'cfg.yaml');
   const storeFile = path.join(dir, 'devices.json');
@@ -181,6 +185,9 @@ test('gatekeeper stores device hashes and no biometric file exists as stated in 
   assert.strictEqual(tokHash.length, 64);
   const files = fs.readdirSync(dir).filter(f => f.includes('biometric'));
   assert.strictEqual(files.length, 0);
+  assert.ok(/Gerätedaten.*gehasht/.test(disclaimersText));
+  assert.ok(/Gatekeeper-Tokens.*gehasht/.test(disclaimersText));
+  assert.ok(/Biometrische Merkmale.*nicht zentral gespeichert/.test(disclaimersText));
   fs.rmSync(dir, { recursive: true, force: true });
 });
 
