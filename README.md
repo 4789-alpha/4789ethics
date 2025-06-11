@@ -130,8 +130,8 @@ See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
 | `sources/images/` | Pictures for institutions (`institutions/`), persons (`persons/`), and fish (`fish/`) |
 | `sources/fish/ch/` | Text placeholders for Swiss fish images (e.g., `esox_ch.png`) |
 | `test/` | Node.js test suite |
-| `tools/` | Utility scripts (e.g., trust-demotion engine, reliability monitor, correction engine, Python API example, `text_to_speech.py`) |
-| `use_cases/` | Example scenarios and dissemination ideas |
+| `tools/` | Utility scripts (e.g., trust-demotion engine, reliability monitor, correction engine, Python API example, `text_to_speech.py`, `telegram-bot.js`) |
+| `use_cases/` | Example scenarios and dissemination ideas (e.g., `telegram_bot.md`) |
 | [sources/images/op-logo/](sources/images/op-logo/README_TANNA_OP0-OP7.md) | Stages of the Tanna symbol |
 | `wings/` | Minimal mobile interface |
 | `evidence/` | Datasets such as `person-ratings.json` |
