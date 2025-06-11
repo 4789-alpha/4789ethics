@@ -8,9 +8,13 @@
   <script src="utils/op-level.js"></script>
 </head>
 <body>
-  <h2>👋 Willkommen im Adminbereich</h2>
-  <p>Nur sichtbar mit gültigem Token.</p>
-  <button onclick="logout()">Logout</button>
+  <a class="skip-link" href="#main_content">Skip to main content</a>
+  <div id="op_background"></div>
+  <main id="main_content">
+    <h2>👋 Willkommen im Adminbereich</h2>
+    <p>Nur sichtbar mit gültigem Token.</p>
+    <button onclick="logout()">Logout</button>
+  </main>
 
   <script>
     // Token prüfen
