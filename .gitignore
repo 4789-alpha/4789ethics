@@ -16,3 +16,4 @@ Thumbs.db
 # Python bytecode
 __pycache__/
 *.py[cod]
+aari/config.json

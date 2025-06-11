@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Aarulon Interface</title>
+</head>
+<body>
+  <h1>Aarulon Interface</h1>
+  <input id="prompt" type="text" placeholder="Frag mich etwas!">
+  <button onclick="sendePrompt()">Fragen</button>
+  <pre id="antwort"></pre>
+
+  <script>
+    async function sendePrompt() {
+      const prompt = document.getElementById("prompt").value;
+      const response = await fetch("/api/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ prompt })
+      });
+      const result = await response.json();
+      document.getElementById("antwort").textContent = result.antwort;
+    }
+  </script>
+</body>
+</html>
