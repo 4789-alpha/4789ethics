@@ -470,8 +470,6 @@ body.left-layout main {
   display: block;
   padding: 0.5em 1em;
   width: 12em;
-  text-decoration: none;
-  color: var(--text-color);
   border-bottom: 1px solid var(--nav-bg);
 }
 .side-registers a:last-child {

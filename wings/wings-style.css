@@ -29,7 +29,6 @@ nav {
 
 nav a {
   color: var(--text-color);
-  text-decoration: none;
 }
 
 /* Accessibility: hide skip link off-screen until focus */
