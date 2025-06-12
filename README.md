@@ -49,7 +49,8 @@ See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
 3. Run `node tools/migrate-json-to-db.js` once to import existing JSON data into the SQLite database.
    If you only have the HTML files, download
    [`tools/easy-start.js`](https://www.bsvrb.ch/tools/easy-start.js) and run it with Node.
-   For GitHub Pages use `npm run serve-gh`.
+  For GitHub Pages use `npm run serve-gh`.
+  For the official domain run `npm run serve-bsvrb`.
    Pass a page name to `npm start` to open it directly,
    for example `npm start signup.html`.
    Opening an HTML file directly (via `file://`) disables translations.
@@ -523,6 +524,7 @@ When deploying on another domain, set the environment variable `BASE_URL`
 to that public origin (e.g. `https://4789-alpha.github.io`) so that OAuth
 redirects work properly. Start the server with `npm run serve-gh` to
 apply this setting automatically.
+Use `npm run serve-bsvrb` for the official domain.
 Configure your GitHub OAuth application to use `${BASE_URL}/auth/github/callback`
 as the callback URL and put your credentials in `app/oauth_config.yaml`.
 

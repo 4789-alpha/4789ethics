@@ -3163,6 +3163,7 @@ async function initRatings() {
     library.innerHTML =
       'Bibliothek konnte nicht geladen werden. ' +
       'Bitte starten Sie die Seite mit <code>npm run serve-gh</code> ' +
+      'oder <code>npm run serve-bsvrb</code> ' +
       `und öffnen Sie <a href="${baseUrl}/ethicom.html">${baseUrl}</a>.`;
   }
 }
