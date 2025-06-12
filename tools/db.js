@@ -113,13 +113,35 @@ function replaceProfile(obj) {
 
 function getUsers() { return db.prepare('SELECT * FROM users').all(); }
 function getUser(id) { return db.prepare('SELECT * FROM users WHERE id=?').get(id); }
-function createUser(user) { db.prepare(`INSERT INTO users (
-  id,emailHash,pwHash,salt,op_level,nickname,alias,totpSecretEnc,addrHash,
-  phoneHash,countryHash,idHash,auth_verified,level_change_ts,is_digital,
-  githubHash,googleHash,tokenHash)
-  VALUES (@id,@emailHash,@pwHash,@salt,@op_level,@nickname,@alias,@totpSecretEnc,@addrHash,
-    @phoneHash,@countryHash,@idHash,@auth_verified,@level_change_ts,@is_digital,
-    @githubHash,@googleHash,@tokenHash)`).run(user); syncFile(usersFile, getUsers()); }
+function createUser(user) {
+  const defaults = {
+    emailHash: null,
+    pwHash: null,
+    salt: null,
+    nickname: null,
+    alias: null,
+    totpSecretEnc: null,
+    addrHash: null,
+    phoneHash: null,
+    countryHash: null,
+    idHash: null,
+    auth_verified: 0,
+    level_change_ts: null,
+    is_digital: 0,
+    githubHash: null,
+    googleHash: null,
+    tokenHash: null
+  };
+  const u = { ...defaults, ...user };
+  db.prepare(`INSERT INTO users (
+    id,emailHash,pwHash,salt,op_level,nickname,alias,totpSecretEnc,addrHash,
+    phoneHash,countryHash,idHash,auth_verified,level_change_ts,is_digital,
+    githubHash,googleHash,tokenHash)
+    VALUES (@id,@emailHash,@pwHash,@salt,@op_level,@nickname,@alias,@totpSecretEnc,@addrHash,
+      @phoneHash,@countryHash,@idHash,@auth_verified,@level_change_ts,@is_digital,
+      @githubHash,@googleHash,@tokenHash)`).run(u);
+  syncFile(usersFile, getUsers());
+}
 function updateUser(user) {
   const fields = Object.keys(user).filter(f => f !== 'id');
   if (fields.length === 0) return;
