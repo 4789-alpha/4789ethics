@@ -2223,6 +2223,23 @@ function checkLanguageSetup() {
   if (typeof updateReadmeLinks === "function") updateReadmeLinks(lang);
 }
 
+function ensureLanguageDropdown() {
+  var select = document.getElementById("lang_select");
+  if (!select) {
+    var box = document.createElement("div");
+    box.id = "lang_selection";
+    box.style.position = "fixed";
+    box.style.top = "0.5em";
+    box.style.right = "0.5em";
+    box.innerHTML =
+      '<label for="lang_select" data-ui="choose_language_label">Language:</label> <select id="lang_select"></select>';
+    document.body.prepend(box);
+    select = box.querySelector("#lang_select");
+  }
+  checkLanguageSetup();
+  initLanguageDropdown("lang_select");
+}
+
 
 
 //----- login.js -----
@@ -4665,6 +4682,9 @@ function displayVersionInfo() {
 }
 
 if (typeof window !== 'undefined') {
-  window.addEventListener('DOMContentLoaded', displayVersionInfo);
+  window.addEventListener('DOMContentLoaded', function() {
+    displayVersionInfo();
+    ensureLanguageDropdown();
+  });
 }
 
