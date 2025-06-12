@@ -581,6 +581,10 @@ local server. The script shows key lines from `DISCLAIMERS.md` before starting
 Run `tools/auto-gatekeeper-setup.sh` to install Node.js 18 on Debian/Ubuntu or macOS (with Homebrew) if needed.
 The script displays key lines from `DISCLAIMERS.md` and creates a minimal gatekeeper folder.
 
+The start page also offers a download link to `personal-gatekeeper.zip`.  Extract
+the archive and run `node gatekeeper.js <token>` inside the folder to launch your
+gatekeeper.
+
 ### Smartphone Setup
 [⇧](#contents)
 
