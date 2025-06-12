@@ -13,7 +13,8 @@ disclaimers.forEach(l => console.log(l));
 const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
 rl.question('Fortfahren? (yes/no) ', answer => {
   rl.close();
-  if (answer.trim() !== 'yes') {
+  const ok = ['yes', 'y', 'ja', 'j', 'si', 'sí', 'sim', 'oui', 'da', 'hai', 'ok', 'okay'];
+  if (!ok.includes(answer.trim().toLowerCase())) {
     console.log('Abbruch.');
     process.exit(1);
   }

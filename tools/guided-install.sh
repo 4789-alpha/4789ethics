@@ -10,7 +10,11 @@ echo "Nutzung nur reflektiert und mit Konsequenz, niemals zur Manipulation oder 
 
 printf "Fortfahren? (yes/no) "
 read answer
-[ "$answer" = "yes" ] || { echo "Abbruch."; exit 1; }
+answer=$(printf "%s" "$answer" | tr '[:upper:]' '[:lower:]')
+case "$answer" in
+  yes|y|ja|j|si|sí|sim|oui|da|hai|ok|okay) ;;
+  *) echo "Abbruch."; exit 1;;
+esac
 
 need_node() {
   echo "Node.js 18+ wird ben\u00f6tigt."

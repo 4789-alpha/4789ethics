@@ -6,6 +6,7 @@ const { spawn } = require('child_process');
 const crypto = require('crypto');
 const { search, loadSources } = require('./source-search.js');
 const { issueTempToken, parseConfig } = require('./gatekeeper.js');
+const db = require('./db.js');
 const { opLevelToNumber } = require('../utils/op-level.js');
 
 const nodeMajor = parseInt(process.versions.node.split('.')[0], 10);
@@ -190,12 +191,11 @@ function writeJson(file, data) {
 }
 
 function readProfile() {
-  if (!fs.existsSync(profileFile)) return {};
-  try { return JSON.parse(fs.readFileSync(profileFile, 'utf8')); } catch { return {}; }
+  return db.getProfile();
 }
 
 function writeProfile(data) {
-  writeJson(profileFile, data);
+  db.setProfile(data);
 }
 
 function logDemotion(userId, filePath) {
@@ -206,8 +206,24 @@ function logDemotion(userId, filePath) {
 }
 
 function checkPendingDemotions(userPath, logPath) {
-  const users = readJson(userPath || usersFile);
-  let changed = false;
+  if (userPath || logPath) {
+    const users = readJson(userPath || usersFile);
+    let changed = false;
+    for (const u of users) {
+      if (u.op_level === 'OP-4' && u.auth_verified === false && u.level_change_ts) {
+        const diff = Date.now() - new Date(u.level_change_ts).getTime();
+        if (diff > 96 * 3600 * 1000) {
+          u.op_level = 'OP-3';
+          u.level_change_ts = new Date().toISOString();
+          logDemotion(u.id, logPath);
+          changed = true;
+        }
+      }
+    }
+    if (changed) writeJson(userPath || usersFile, users);
+    return;
+  }
+  const users = db.getUsers();
   for (const u of users) {
     if (u.op_level === 'OP-4' && u.auth_verified === false && u.level_change_ts) {
       const diff = Date.now() - new Date(u.level_change_ts).getTime();
@@ -215,11 +231,10 @@ function checkPendingDemotions(userPath, logPath) {
         u.op_level = 'OP-3';
         u.level_change_ts = new Date().toISOString();
         logDemotion(u.id, logPath);
-        changed = true;
+        db.updateUser(u);
       }
     }
   }
-  if (changed) writeJson(userPath || usersFile, users);
 }
 function updateAlias(user) {
   if (user && user.nickname) {
@@ -231,7 +246,7 @@ function updateAlias(user) {
 }
 
 function setOpLevel(id, level, authCode) {
-  const users = readJson(usersFile);
+  const users = db.getUsers();
   const user = users.find(u => u.id === id);
   if (!user) return false;
   if (user.totpSecretEnc &&
@@ -239,7 +254,7 @@ function setOpLevel(id, level, authCode) {
   if (['OP-10', 'OP-11', 'OP-12'].includes(level) && !user.is_digital) return false;
   user.op_level = level;
   updateAlias(user);
-  writeJson(usersFile, users);
+  db.updateUser(user);
   return true;
 }
 
@@ -270,7 +285,7 @@ function handleSignup(req, res) {
       const idHash = id_number ? crypto.createHash('sha256').update(id_number).digest('hex') : null;
       const secret = generateTotpSecret();
       const encSecret = encryptTotpSecret(secret);
-      const users = readJson(usersFile);
+      const users = db.getUsers();
       if (idHash && users.some(u => u.idHash === idHash)) {
         res.writeHead(409); res.end('ID already exists'); return;
       }
@@ -292,8 +307,7 @@ function handleSignup(req, res) {
         level_change_ts: new Date().toISOString()
       };
       updateAlias(user);
-      users.push(user);
-      writeJson(usersFile, users);
+      db.createUser(user);
       res.writeHead(200, { 'Content-Type': 'application/json' });
       res.end(JSON.stringify({ id, secret, alias: user.alias, nickname: user.nickname }));
     } catch (err) {
@@ -313,7 +327,7 @@ function handleLogin(req, res) {
       if (!/^[^@]+@[^@]+\.[^@]+$/.test(email) || !password) {
         res.writeHead(400); res.end('Invalid data'); return;
       }
-      const users = readJson(usersFile);
+      const users = db.getUsers();
       const emailHash = crypto.createHash('sha256').update(email).digest('hex');
       const user = users.find(u => u.emailHash === emailHash);
       if (!user) { res.writeHead(403); res.end('Invalid credentials'); return; }
@@ -332,11 +346,11 @@ function handleLogin(req, res) {
           user.op_level = 'OP-3';
           user.level_change_ts = new Date().toISOString();
           logDemotion(user.id);
-          writeJson(usersFile, users);
+          db.updateUser(user);
         }
       }
       updateAlias(user);
-      writeJson(usersFile, users);
+      db.updateUser(user);
       res.writeHead(200, { 'Content-Type': 'application/json' });
       res.end(JSON.stringify({ id: user.id, op_level: user.op_level, alias: user.alias, nickname: user.nickname }));
     } catch (err) {
@@ -425,11 +439,12 @@ function handleGithubCallback(req, res) {
               auth_verified: false,
               level_change_ts: new Date().toISOString()
             };
-            users.push(user);
+            db.createUser(user);
           } else {
             user.tokenHash = tokenHash;
+            db.updateUser(user);
           }
-          writeJson(usersFile, users);
+          // ensure sync to JSON
           res.writeHead(200, { 'Content-Type': 'text/html' });
           res.end(`<script>
             const sig = { id: '${user.id}', op_level: '${user.op_level}', private: { github: '${login}' } };
@@ -521,11 +536,12 @@ function handleGoogleCallback(req, res) {
               auth_verified: false,
               level_change_ts: new Date().toISOString()
             };
-            users.push(user);
+            db.createUser(user);
           } else {
             user.tokenHash = tokenHash;
+            db.updateUser(user);
           }
-          writeJson(usersFile, users);
+          // ensure sync to JSON
           res.writeHead(200, { 'Content-Type': 'text/html' });
           res.end(`<script>
             const sig = { id: '${user.id}', op_level: '${user.op_level}', private: { google: '${email}' } };
@@ -551,18 +567,16 @@ function handleEvaluation(req, res) {
       const data = JSON.parse(body);
       const { signature, source_id, rating, comment, op_level } = data;
       const levelNum = parseFloat(String(op_level).replace('OP-', '')) || 0;
-      const evals = readJson(evalFile);
-      const idx = evals.findIndex(e => e.signature === signature && e.source_id === source_id);
-      if (idx >= 0) {
+      const existing = db.getEvaluations().find(e => e.signature === signature && e.source_id === source_id);
+      if (existing) {
         if (levelNum >= 4) {
-          evals[idx] = { ...evals[idx], rating, comment, revised: new Date().toISOString() };
+          db.createOrUpdateEvaluation({ signature, source_id, rating, comment, revised: new Date().toISOString(), timestamp: existing.timestamp });
         } else {
           res.writeHead(403); res.end('Revision not allowed'); return;
         }
       } else {
-        evals.push({ signature, source_id, rating, comment, timestamp: new Date().toISOString() });
+        db.createOrUpdateEvaluation({ signature, source_id, rating, comment, timestamp: new Date().toISOString(), revised: null });
       }
-      writeJson(evalFile, evals);
       res.writeHead(200, { 'Content-Type': 'application/json' });
       res.end(JSON.stringify({ success: true }));
     } catch (err) {
@@ -598,15 +612,14 @@ function handleConnectRequest(req, res) {
   req.on('end', () => {
     try {
       const { id, target_id } = JSON.parse(body);
-      const users = readJson(usersFile);
+      const users = db.getUsers();
       const from = users.find(u => u.id === id);
       const to = users.find(u => u.id === target_id);
       if (!from || !to) { res.writeHead(400); res.end('Invalid'); return; }
-      const cons = readJson(connFile);
+      const cons = db.getConnections();
       const exists = cons.find(c => c.requester === id && c.target === target_id);
       if (!exists) {
-        cons.push({ requester: id, target: target_id, approved: false, timestamp: new Date().toISOString() });
-        writeJson(connFile, cons);
+        db.createConnection({ requester: id, target: target_id, approved: 0, timestamp: new Date().toISOString(), approved_at: null });
       }
       res.writeHead(200, { 'Content-Type': 'application/json' });
       res.end(JSON.stringify({ success: true }));
@@ -624,12 +637,12 @@ function handleConnectApprove(req, res) {
   req.on('end', () => {
     try {
       const { id, requester_id } = JSON.parse(body);
-      const cons = readJson(connFile);
+      const cons = db.getConnections();
       const conn = cons.find(c => c.requester === requester_id && c.target === id);
       if (conn) {
-        conn.approved = true;
+        conn.approved = 1;
         conn.approved_at = new Date().toISOString();
-        writeJson(connFile, cons);
+        db.updateConnection(conn);
         res.writeHead(200, { 'Content-Type': 'application/json' });
         res.end(JSON.stringify({ success: true }));
       } else { res.writeHead(404); res.end('Not found'); }
@@ -644,8 +657,8 @@ function handleConnectApprove(req, res) {
 function handleConnectList(req, res) {
   const url = new URL(req.url, 'http://localhost');
   const id = url.searchParams.get('id');
-  const cons = readJson(connFile);
-  const users = readJson(usersFile);
+  const cons = db.getConnections();
+  const users = db.getUsers();
   const pending = cons.filter(c => c.target === id && !c.approved).map(c => ({ requester: c.requester }));
   const conns = cons.filter(c => (c.requester === id || c.target === id) && c.approved).map(c => {
     const otherId = c.requester === id ? c.target : c.requester;
@@ -725,7 +738,7 @@ function handleLevelUpgrade(req, res) {
   req.on('end', () => {
     try {
       const { id, level } = JSON.parse(body);
-      const users = readJson(usersFile);
+      const users = db.getUsers();
       const user = users.find(u => u.id === id);
       if (!user || !level) { res.writeHead(400); res.end('Invalid'); return; }
       if (['OP-10', 'OP-11', 'OP-12'].includes(level) && !user.is_digital) {
@@ -743,7 +756,7 @@ function handleLevelUpgrade(req, res) {
       } else {
         user.level_change_ts = new Date().toISOString();
       }
-      writeJson(usersFile, users);
+      db.updateUser(user);
       res.writeHead(200, { 'Content-Type': 'application/json' });
       res.end(JSON.stringify({ id: user.id, op_level: user.op_level, warning }));
     } catch (err) {

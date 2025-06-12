@@ -20,7 +20,7 @@
     // Token prüfen
     const token = localStorage.getItem("jwt");
     if (!token) {
-      window.location.href = "login.html";
+      window.location.href = "interface/login.html";
     }
 
     // Optional: Token-Validierung beim Server (empfohlen später)
@@ -29,7 +29,7 @@
     function logout() {
       localStorage.removeItem("jwt");
       alert("Logout erfolgreich.");
-      window.location.href = "login.html";
+      window.location.href = "interface/login.html";
     }
   </script>
 </body>
