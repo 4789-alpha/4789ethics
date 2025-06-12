@@ -85,21 +85,10 @@ function initLogoBackground() {
   container.appendChild(canvas);
   const ctx = canvas.getContext('2d');
 
-  const overlay = document.createElement('canvas');
-  overlay.style.position = 'fixed';
-  overlay.style.inset = '0';
-  overlay.style.pointerEvents = 'none';
-  overlay.style.zIndex = '0';
-  overlay.style.width = '100%';
-  overlay.style.height = '100%';
-  document.body.appendChild(overlay);
-  const octx = overlay.getContext('2d');
 
   function resize() {
     canvas.width = container.clientWidth || window.innerWidth;
     canvas.height = container.clientHeight || window.innerHeight;
-    overlay.width = canvas.width;
-    overlay.height = canvas.height;
   }
   window.addEventListener('resize', resize);
   resize();
@@ -120,7 +109,7 @@ function initLogoBackground() {
   if (levels.length === 0) levels.push(0);
   const maxLvl = Math.max(...levels);
   const minScale = 0.5;
-  const FADE_MS = 1000;
+  const FADE_MS = 0;
   const imgBase = window.location.pathname.includes('/interface/') ||
                   window.location.pathname.includes('/wings/') ||
                   window.location.pathname.includes('/bsvrb.ch/')
@@ -220,7 +209,6 @@ function initLogoBackground() {
 
   function step() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    octx.clearRect(0, 0, overlay.width, overlay.height);
 
     for (let i = 0; i < symbols.length; i++) {
       const s = symbols[i];
@@ -325,16 +313,21 @@ function initLogoBackground() {
         }
 
         if (s.fadeOut) {
-          const elapsed = performance.now() - s.fadeStart;
-          if (elapsed < FADE_MS / 2) {
-            s.alpha = 1 - elapsed / (FADE_MS / 2);
-          } else if (elapsed < FADE_MS) {
-            s.alpha = (elapsed - FADE_MS / 2) / (FADE_MS / 2);
-            s.scaleDir = 1;
+          if (FADE_MS > 0) {
+            const elapsed = performance.now() - s.fadeStart;
+            if (elapsed < FADE_MS / 2) {
+              s.alpha = 1 - elapsed / (FADE_MS / 2);
+            } else if (elapsed < FADE_MS) {
+              s.alpha = (elapsed - FADE_MS / 2) / (FADE_MS / 2);
+              s.scaleDir = 1;
+            } else {
+              s.alpha = 1;
+              s.fadeOut = false;
+              s.scaleDir = 0;
+            }
           } else {
             s.alpha = 1;
             s.fadeOut = false;
-            s.scaleDir = 0;
           }
         }
 
@@ -360,19 +353,6 @@ function initLogoBackground() {
             s.subSize * s.scale,
             s.subSize * s.scale
           );
-        }
-        if (s.highlightUntil > performance.now()) {
-          octx.save();
-          octx.translate(s.x, s.y);
-          const style = getComputedStyle(document.documentElement);
-          octx.strokeStyle =
-            style.getPropertyValue('--collision-color') ||
-            style.getPropertyValue('--accent-color') || '#ff0';
-          octx.lineWidth = 2;
-          octx.beginPath();
-          octx.arc(0, 0, s.radius * s.scale, 0, Math.PI * 2);
-          octx.stroke();
-          octx.restore();
         }
         ctx.filter = 'none';
         ctx.restore();
