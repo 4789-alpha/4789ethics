@@ -1,4 +1,11 @@
-const { createCanvas, loadImage } = require('canvas');
+let createCanvas, loadImage;
+try {
+  ({ createCanvas, loadImage } = require('canvas'));
+} catch {
+  console.error('The "canvas" package is required for op8-logo-assembler.');
+  console.error('Install it with "npm install canvas" and ensure native libs build.');
+  process.exit(1);
+}
 const fs = require('fs');
 const path = require('path');
 

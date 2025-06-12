@@ -1,4 +1,11 @@
-const { createCanvas, loadImage } = require('canvas');
+let createCanvas, loadImage;
+try {
+  ({ createCanvas, loadImage } = require('canvas'));
+} catch {
+  console.error('The "canvas" package is required for stereo-anaglyph.');
+  console.error('Install it with "npm install canvas" and ensure native libs build.');
+  process.exit(1);
+}
 const fs = require('fs');
 
 async function stereoToAnaglyph(leftPath, rightPath, outputPath, options = {}) {

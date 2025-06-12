@@ -477,7 +477,9 @@ npm install
 ```
 
 Some tools rely on the `canvas` package. On Linux, you may need system packages
-such as `libcairo2-dev` and `build-essential` to compile it.
+such as `libcairo2-dev` and `build-essential` to compile it. If `canvas`
+fails to build on your platform, you can skip installing it and those tools
+will remain disabled.
 
 For optional Python utilities run:
 
