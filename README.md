@@ -108,6 +108,7 @@ See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
 - [Automated Server Setup](#automated-server-setup)
 - [Automated Gatekeeper Setup](#automated-gatekeeper-setup)
 - [Automated Data Setup](#automated-data-setup)
+- [Automated Module Setup](#automated-module-setup)
 - [Guided Installation](#guided-installation)
 - [Running Tests](#running-tests)
 - [Contributing](#contributing)
@@ -589,6 +590,13 @@ Install `clang make pkg-config libjpeg-turbo cairo pango freetype libpng librsvg
 Run `tools/auto-data-setup.sh` to install Node.js 18 if needed and fetch optional
 offline data. The script installs Python and JavaScript dependencies, downloads
 currency rates and pulls candidate images from Wikipedia.
+
+### Automated Module Setup
+[⇧](#contents)
+
+Run `tools/auto-module-setup.sh` to bundle all interface scripts and update the
+HTML pages. The helper ensures new modules are automatically integrated after a
+single command.
 
 ### Guided Installation
 [⇧](#contents)
