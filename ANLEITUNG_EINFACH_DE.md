@@ -19,3 +19,4 @@ Diese Sammlung heisst "Ethics Structure 4789". Sie hilft, Verantwortung vor Bequ
 1. Einmal `npm install` ausführen oder `tools/guided-install.sh` nutzen.
 2. `node tools/start-server.js` starten (oder `npm start`). Du kannst einen Seitennamen anhängen, z.B. `npm start signup.html`. Die Seite öffnet sich automatisch unter `http://localhost:8080/index.html`.
 3. Mit `python3 install.py` stellst du Sprache, Port und Offline-Modus ein. Die Werte liegen in `app/app_settings.yaml`.
+4. Überprüfe dort auch `startup_op_level: 0`, damit du auf `localhost` im Modus **OP‑0** beginnst.
