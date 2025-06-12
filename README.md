@@ -642,7 +642,7 @@ fetchers.
 ### Running Tests
 [⇧](#contents)
 
-Ensure Node.js 18 or later is installed, then run:
+Ensure Node.js 18 or later is installed and run `npm install` to install the dependencies (e.g., `better-sqlite3`), then run:
 
 ```bash
 node --test
