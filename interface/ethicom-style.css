@@ -15,7 +15,7 @@
   --header-bg: rgba(34, 34, 34, 0.9);
   --nav-bg: rgba(51, 51, 51, 0.9);
   --card-alpha-bg: rgba(43, 43, 43, 0.92);
-  --accent-color: #ccaa22;
+  --accent-color: #ffcc33;
   --collision-color: var(--accent-color);
   --module-color: #228B22;
   --highlight-text-color: var(--accent-color);
@@ -36,7 +36,7 @@
   --header-bg: rgba(34, 34, 34, 0.9);
   --nav-bg: rgba(51, 51, 51, 0.9);
   --card-alpha-bg: rgba(43, 43, 43, 0.92);
-  --accent-color: #ccaa22;
+  --accent-color: #ffcc33;
   --module-color: #228B22;
   --foreground-opacity: 0;
 }
@@ -51,7 +51,7 @@
   --header-bg: rgba(34, 34, 34, 0.9);
   --nav-bg: rgba(51, 51, 51, 0.9);
   --card-alpha-bg: rgba(255, 255, 255, 0.92);
-  --accent-color: #228B22;
+  --accent-color: #3cb341;
   --collision-color: #ffff00;
   --module-color: #228B22;
 }
@@ -83,7 +83,7 @@
   --header-bg: rgba(34, 34, 34, 0.95);
   --nav-bg: rgba(34, 34, 34, 0.95);
   --card-alpha-bg: rgba(255, 255, 255, 0.95);
-  --accent-color: #228B22;
+  --accent-color: #3cb341;
   --collision-color: #ffff00;
   --module-color: #228B22;
 }
@@ -154,7 +154,7 @@
   --header-bg: rgba(34, 34, 34, 0.7);
   --nav-bg: rgba(51, 51, 51, 0.7);
   --card-alpha-bg: rgba(43, 43, 43, 0.75);
-  --accent-color: #ccaa22;
+  --accent-color: #ffcc33;
   --module-color: #228B22;
 }
 
