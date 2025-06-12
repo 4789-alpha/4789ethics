@@ -46,6 +46,7 @@ See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
 2. Start the interface with `npm start`.
    Run `npm run easy-start` for an automatic install.
    You can also use `node tools/serve-interface.js`.
+3. Run `node tools/migrate-json-to-db.js` once to import existing JSON data into the SQLite database.
    If you only have the HTML files, download
    [`tools/easy-start.js`](https://www.bsvrb.ch/tools/easy-start.js) and run it with Node.
    For GitHub Pages use `npm run serve-gh`.
@@ -53,13 +54,13 @@ See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
    for example `npm start signup.html`.
    Opening an HTML file directly (via `file://`) disables translations.
    See [Local Deployment](#local-deployment) for details.
-3. Optionally compile the Flutter launcher in `launcher/` to start the server
+4. Optionally compile the Flutter launcher in `launcher/` to start the server
    without the terminal (`flutter run launcher`).
-4. The interface opens at `http://localhost:8080/index.html`.
-5. For quick static hosting, deploy the interface on
+5. The interface opens at `http://localhost:8080/index.html`.
+6. For quick static hosting, deploy the interface on
    [Netsly](interface/deploy_netsly.md) or
    [Hostpoint](interface/deploy_hostpoint.md).
-6. For the minimal Python helper see [docs/how_to_use.md](docs/how_to_use.md).
+7. For the minimal Python helper see [docs/how_to_use.md](docs/how_to_use.md).
 
 ```
     +-----------+
