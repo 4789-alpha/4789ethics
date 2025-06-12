@@ -17,12 +17,12 @@ This file tracks pending improvements and roadmap actions.
 
 ## Accessibility Features
 - [ ] Improve screen reader labels.
-- [ ] Offer high-contrast terminal colors that can be disabled.
-- [ ] Ensure full keyboard navigation.
-- [ ] Add a slow mode with pauses and explanations.
+- [x] Offer high-contrast terminal colors that can be disabled.
+- [x] Ensure full keyboard navigation.
+- [x] Add a slow mode with pauses and explanations.
 
 ## Language and Feedback
-- [ ] Allow global language switching via `locales/*.json`.
+- [x] Allow global language switching via `locales/*.json`.
 - [ ] Provide options for formal, informal or neutral address.
 - [x] Give clearer error messages with hints.
 - [ ] Add optional humorous responses.
