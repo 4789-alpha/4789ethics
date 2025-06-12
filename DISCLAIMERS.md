@@ -12,6 +12,7 @@
 - Adressen und Telefonnummern werden offline gehasht gespeichert.
 - Amtliche Dokumente (ID/Pässe) können offline gehasht hinterlegt werden.
 - Temporäre Gatekeeper-Tokens werden ebenfalls gehasht gespeichert.
+- Das im Archiv `personal-gatekeeper.zip` bereitgestellte Token dient nur zur Vereinfachung und wird nach der Verwendung durch den Gatekeeper gehasht.
 - Beim optionalen GitHub-Login erfolgt die Anmeldung über GitHub. Der zurückgegebene Benutzername wird offline gehasht gespeichert.
 - Beim optionalen Google-Login erfolgt die Anmeldung über Google. Die zurückgegebene E-Mail-Adresse wird offline gehasht gespeichert.
 - Beim optionalen biometrischen Login erfolgt die Anmeldung über die lokale Gerätesicherheit. Biometrische Merkmale werden nicht zentral gespeichert.
