@@ -48,7 +48,7 @@ rl.question('Fortfahren? (yes/no) ', answer => {
   }
   const opener = spawn(cmd, args, { stdio: 'ignore', detached: true });
   opener.on('error', () => {
-    console.log('Bitte \u00f6ffne den Browser manuell: ' + url);
+    console.log('Bitte öffne den Browser manuell: ' + url);
   });
   opener.unref();
 
