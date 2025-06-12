@@ -455,6 +455,20 @@ body.left-layout main {
   height: 4em;
 }
 
+/* Highlight department links to ensure they look clickable */
+#departments_section a,
+#departments_fallback a {
+  font-weight: bold;
+  text-decoration: underline;
+  color: var(--accent-color);
+}
+
+#departments_section a:hover,
+#departments_fallback a:hover {
+  color: var(--highlight-text-color);
+}
+
+
 /* Side registers for logged-in users */
 .side-registers {
   position: fixed;
