@@ -568,6 +568,9 @@ tools/auto-gatekeeper-setup.sh
 node tools/gatekeeper-gui.js
 ```
 Open the printed URL in the mobile browser and follow the on‑screen steps.
+Termux lacks a pre‑built binary for the `canvas` package.
+Install `clang make pkg-config libjpeg-turbo cairo pango freetype libpng librsvg` to compile it.
+`canvas` is only required for the image tools; gatekeeper functions run without it.
 
 ### Automated Data Setup
 [⇧](#contents)
