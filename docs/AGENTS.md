@@ -26,6 +26,6 @@ If a command fails due to missing network access, note this in the PR descriptio
 
 ## 4. Commits and Pull Requests
 - Use clear, succinct commit messages.
-- Do not rewrite history or amend prior commits.
+- Rewriting history or amending commits is allowed when commit messages require improvement.
 - Summaries must reference changed files and mention test results.
 
