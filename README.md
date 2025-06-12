@@ -596,6 +596,7 @@ Open the printed URL in the mobile browser and follow the on‑screen steps.
 Termux lacks a pre‑built binary for the `canvas` package.
 Install `clang make pkg-config libjpeg-turbo cairo pango freetype libpng librsvg` to compile it.
 `canvas` is only required for the image tools; gatekeeper functions run without it.
+To start the interface on mobile, run `npm start` and open `http://localhost:8080/index.html` manually if no browser launches automatically.
 
 ### Automated Data Setup
 [⇧](#contents)
