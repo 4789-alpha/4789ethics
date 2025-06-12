@@ -150,6 +150,7 @@ const paths = cfg.paths || {};
 const usersFile = path.join(repoRoot, paths.users || 'app/users.json');
 const evalFile = path.join(repoRoot, paths.evaluations || 'app/evaluations.json');
 const connFile = path.join(repoRoot, paths.connections || 'app/connections.json');
+const messagesFile = path.join(repoRoot, paths.messages || 'app/messages.json');
 const profileFile = path.join(repoRoot, paths.userprofile || 'app/userprofile.json');
 const oauthCfg = parseOAuthConfig(paths.oauthConfig ? path.join(repoRoot, paths.oauthConfig) : undefined);
 const oauthStates = new Set();
@@ -668,6 +669,42 @@ function handleConnectList(req, res) {
   res.end(JSON.stringify({ pending: pending, connections: conns }));
 }
 
+function handleChatSend(req, res) {
+  let body = '';
+  req.on('data', c => { body += c; });
+  req.on('end', () => {
+    try {
+      const { from, to, text } = JSON.parse(body);
+      if (!from || !to || !text) { res.writeHead(400); res.end('Invalid'); return; }
+      const cons = readJson(connFile);
+      const ok = cons.some(c => c.approved && ((c.requester === from && c.target === to) || (c.requester === to && c.target === from)));
+      if (!ok) { res.writeHead(403); res.end('Not connected'); return; }
+      const msgs = readJson(messagesFile);
+      msgs.push({ from, to, text, timestamp: new Date().toISOString() });
+      writeJson(messagesFile, msgs);
+      res.writeHead(200, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ success: true }));
+    } catch (err) {
+      res.writeHead(400);
+      res.end('Bad Request');
+    }
+  });
+}
+
+function handleChatList(req, res) {
+  const url = new URL(req.url, 'http://localhost');
+  const user = url.searchParams.get('user');
+  const target = url.searchParams.get('target');
+  if (!user || !target) { res.writeHead(400); res.end('Invalid'); return; }
+  const cons = readJson(connFile);
+  const ok = cons.some(c => c.approved && ((c.requester === user && c.target === target) || (c.requester === target && c.target === user)));
+  if (!ok) { res.writeHead(403); res.end('Not connected'); return; }
+  const msgs = readJson(messagesFile);
+  const list = msgs.filter(m => (m.from === user && m.to === target) || (m.from === target && m.to === user));
+  res.writeHead(200, { 'Content-Type': 'application/json' });
+  res.end(JSON.stringify({ messages: list }));
+}
+
 function handleProfile(req, res) {
   if (req.method === 'GET') {
     const data = readProfile();
@@ -794,6 +831,12 @@ const server = http.createServer((req, res) => {
   if (req.method === 'GET' && urlPath === '/api/connect/list') {
     return handleConnectList(req, res);
   }
+  if (req.method === 'POST' && urlPath === '/api/chat/send') {
+    return handleChatSend(req, res);
+  }
+  if (req.method === 'GET' && urlPath === '/api/chat/list') {
+    return handleChatList(req, res);
+  }
   if (req.method === 'GET' && urlPath === '/api/gatekeeper/token') {
     return handleTempToken(req, res);
   }
@@ -868,6 +911,8 @@ if (require.main === module) {
     handleConnectRequest,
     handleConnectApprove,
     handleConnectList,
+    handleChatSend,
+    handleChatList,
     handleTempToken,
     handleProfile,
     handleData,
