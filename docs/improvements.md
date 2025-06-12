@@ -6,8 +6,7 @@ Diese Liste enthält konkrete Vorschläge zur Verbesserung der Benutzerfreundlic
 
 ## 1. Einstieg & Zugänglichkeit
 
-## 2. Struktur & Navigation
-- [ ] Einführungsscript (setup.sh/install.py): Interaktive Erstkonfiguration.
+- [x] Einführungsscript (setup.sh/install.py): Interaktive Erstkonfiguration.
 - [ ] Konsistente, sprechende Ordnerstruktur.
 
 ## 3. Login & Benutzerführung
@@ -17,14 +16,14 @@ Diese Liste enthält konkrete Vorschläge zur Verbesserung der Benutzerfreundlic
 
 ## 4. Barrierefreiheit (Accessibility)
 - [ ] Texte screenreaderfreundlich gestalten.
-- [ ] Kontrastreiche Farben im Terminal, optional deaktivierbar.
-- [ ] Vollständige Bedienung per Tastatur sicherstellen.
-- [ ] Langsam-Modus: aktivierbare Pausen und ausführlichere Erklärungen.
+- [x] Kontrastreiche Farben im Terminal, optional deaktivierbar.
+- [x] Vollständige Bedienung per Tastatur sicherstellen.
+- [x] Langsam-Modus: aktivierbare Pausen und ausführlichere Erklärungen.
 
 ## 5. Sprachführung & Dialoge
-- [ ] Globale Sprachumschaltung via locales/*.json.
+- [x] Globale Sprachumschaltung via locales/*.json.
 - [ ] Einstellung für Du/Sie oder neutrale Ansprache.
-- [ ] Fehlermeldungen mit klaren Hinweisen zur Lösung.
+- [x] Fehlermeldungen mit klaren Hinweisen zur Lösung.
 - [ ] Optionale humorvolle Rückmeldungen ohne Klarheit zu verlieren.
 
 ## 6. Weiterführende Verbesserungen
