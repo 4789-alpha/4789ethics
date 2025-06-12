@@ -94,6 +94,7 @@ See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
 - [Generating Interface README](#generating-interface-readme)
 - [Gatekeeper Control](#gatekeeper-control)
 - [API Access Control](#api-access-control)
+- [Chat Interface](#chat-interface)
 - [Mechatronic Control](#mechatronic-control)
 - [OP Function Bundles](#op-function-bundles)
 - [Currency Synchronization](#currency-synchronization)
@@ -370,6 +371,13 @@ Copy that folder to another device and run `node gatekeeper.js <token>` for dele
 the operator level and confirmation flags from `app/user_state.yaml` and grants
 access only when the specified OP level is met and the user has confirmed
 ethical intent.
+
+### Chat Interface
+[⇧](#contents)
+
+Connected users may exchange short messages via `chat.html`. Only approved
+connections can send or receive texts. The interface lists your connections and
+allows sending short notes.
 
 ### Mechatronic Control
 [⇧](#contents)

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chat</title>
+  <link rel="stylesheet" href="/ethicom-style.css">
+  <script src="/bundle.js" defer></script>
+  <script src="../utils/op-level.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main_content">Skip to main content</a>
+  <div id="op_background"></div>
+  <header>
+    <h1>Chat</h1>
+  </header>
+  <nav aria-label="Main navigation">
+    <a href="../index.html">Home</a>
+    <a href="settings.html" class="icon-only" aria-label="Settings">⚙</a>
+    <a href="login.html">Login</a>
+    <a href="signup.html">Signup</a>
+    <a href="../README.html" class="readme-link">README</a>
+    <button id="side_menu" type="button" class="icon-only" aria-label="Menu" data-min-op="OP-6">☰</button>
+  </nav>
+  <main id="main_content">
+    <section class="card">
+      <div id="chat_history" class="chat-history"></div>
+      <div class="chat-input-row">
+        <select id="chat_target"></select>
+        <input id="chat_message" placeholder="Message" />
+        <button id="chat_send" class="accent-button">Send</button>
+      </div>
+    </section>
+  </main>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      initSideDrop('nav-menu.html');
+      const menu=document.getElementById('side_menu');
+      if(menu) menu.addEventListener('click',e=>{e.preventDefault();toggleSideDrop();});
+      if (typeof initChatInterface === 'function') initChatInterface();
+    });
+  </script>
+  <div id="side_drop"></div>
+</body>
+</html>
