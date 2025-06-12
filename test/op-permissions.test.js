@@ -42,8 +42,10 @@ test('denies OP-10 upgrade when user is not digital', () => {
   const usersPath = path.join(__dirname, '..', 'app', 'users.json');
   const backup = fs.existsSync(usersPath) ? fs.readFileSync(usersPath, 'utf8') : null;
   try {
-    const user = { id: 'U2', op_level: 'OP-9', auth_verified: true, level_change_ts: null, is_digital: false };
-    fs.writeFileSync(usersPath, JSON.stringify([user], null, 2));
+    fs.writeFileSync(usersPath, '[]');
+    const db = require('../tools/db.js');
+    db.loadFromJson();
+    db.createUser({ id: 'U2', emailHash: 'e', pwHash: 'p', salt: 's', op_level: 'OP-9', auth_verified: 1, level_change_ts: null, is_digital: 0, nickname: 'u2', alias: 'u2@OP-9' });
     delete require.cache[require.resolve('../tools/serve-interface.js')];
     const { handleLevelUpgrade } = require('../tools/serve-interface.js');
     const req = new (require('node:events')).EventEmitter();
@@ -64,8 +66,10 @@ test('allows OP-10 upgrade when digital flag is set', () => {
   const usersPath = path.join(__dirname, '..', 'app', 'users.json');
   const backup = fs.existsSync(usersPath) ? fs.readFileSync(usersPath, 'utf8') : null;
   try {
-    const user = { id: 'U3', op_level: 'OP-9', auth_verified: true, level_change_ts: null, is_digital: true };
-    fs.writeFileSync(usersPath, JSON.stringify([user], null, 2));
+    fs.writeFileSync(usersPath, '[]');
+    const db = require('../tools/db.js');
+    db.loadFromJson();
+    db.createUser({ id: 'U3', emailHash: 'e', pwHash: 'p', salt: 's', op_level: 'OP-9', auth_verified: 1, level_change_ts: null, is_digital: 1, nickname: 'u3', alias: 'u3@OP-9' });
     delete require.cache[require.resolve('../tools/serve-interface.js')];
     const { handleLevelUpgrade } = require('../tools/serve-interface.js');
     const req = new (require('node:events')).EventEmitter();

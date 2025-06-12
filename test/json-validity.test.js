@@ -7,6 +7,7 @@ function getJsonFiles(dir) {
   const files = [];
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
     const p = path.join(dir, entry.name);
+    if (entry.isDirectory() && entry.name === 'node_modules') continue;
     if (entry.isDirectory()) {
       files.push(...getJsonFiles(p));
     } else if (entry.name.endsWith('.json')) {
