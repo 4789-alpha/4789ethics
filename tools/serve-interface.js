@@ -302,8 +302,8 @@ function handleSignup(req, res) {
         phoneHash,
         countryHash,
         idHash,
-        auth_verified: false,
-        is_digital: false,
+        auth_verified: 0,
+        is_digital: 0,
         level_change_ts: new Date().toISOString()
       };
       updateAlias(user);
