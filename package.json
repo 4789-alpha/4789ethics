@@ -4,6 +4,7 @@
   "description": "Utility scripts for the Ethics Structure 4789 project",
   "main": "tools/serve-interface.js",
   "dependencies": {
+    "better-sqlite3": "^11.10.0",
     "express": "^4.19.2",
     "node-telegram-bot-api": "^0.66.0"
   },
