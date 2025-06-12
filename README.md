@@ -92,6 +92,7 @@ See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
 - [Person Image Sources](#person-image-sources)
 - [File Integrity](#file-integrity)
 - [Adding Languages](#adding-languages)
+- [Semantic Word Lists](#semantic-word-lists)
 - [Generating Interface README](#generating-interface-readme)
 - [Gatekeeper Control](#gatekeeper-control)
 - [API Access Control](#api-access-control)
@@ -310,6 +311,16 @@ node tools/check-translations.js
 
 This prints a list of language codes and the fields that still require translation or are unchanged from German. In the interface dropdown, languages with missing fields show an asterisk (`*`) so users know the translation is not complete.
 When a partially translated language is selected, the interface displays a notice and falls back to English for missing text. Contributions for additional translations are welcome.
+
+
+### Semantic Word Lists
+[⇧](#contents)
+
+The sentiment tools use `i18n/semantic-words.json` with `positive` and `negative` arrays for each language. Open the Semantic Manager from the language settings to add or edit entries. Changes are stored locally until two signatures confirm them. Verify the file structure with:
+
+```bash
+node --test
+```
 
 ### Generating Interface README
 [⇧](#contents)
