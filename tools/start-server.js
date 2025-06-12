@@ -39,11 +39,17 @@ rl.question('Fortfahren? (yes/no) ', answer => {
   } else if (process.platform === 'darwin') {
     cmd = 'open';
     args = [url];
+  } else if (process.env.PREFIX && process.env.PREFIX.includes('com.termux')) {
+    cmd = 'termux-open-url';
+    args = [url];
   } else {
     cmd = 'xdg-open';
     args = [url];
   }
   const opener = spawn(cmd, args, { stdio: 'ignore', detached: true });
+  opener.on('error', () => {
+    console.log('Bitte \u00f6ffne den Browser manuell: ' + url);
+  });
   opener.unref();
 
   server.on('exit', code => process.exit(code));
