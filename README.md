@@ -360,6 +360,7 @@ Temporary tokens can be issued with `node tools/gatekeeper.js token` and expire 
 Tokens and device hashes are stored hashed in `app/gatekeeper_devices.json`.
 Run `node tools/gatekeeper.js prune` regularly to remove expired tokens and keep the file minimal.
 Monitor repeated failed attempts with `node tools/watchdog.js`. The script reads `app/gatekeeper_log.json` and warns when too many denials occur. Calm the watchdog with `node tools/watchdog.js feed` which appends a success entry.
+View recent log entries with `node tools/read-gatekeeper-log.js` to diagnose failures.
 Verify the stored hashes after updates with:
 
 ```bash

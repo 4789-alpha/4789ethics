@@ -165,6 +165,7 @@ function pruneExpiredTokens(storePath, now = Date.now()) {
 function gateCheck(configPath, devicesPath, tempToken, logPath) {
   const cfg = parseConfig(configPath);
   if (!cfg) {
+    appendLog({ action: 'gate_check', controller: 'unknown', success: false, reason: 'config_missing' }, logPath);
     console.log('Gatekeeper: configuration missing.');
     return false;
   }
@@ -175,10 +176,15 @@ function gateCheck(configPath, devicesPath, tempToken, logPath) {
   const phoneHash = identityHash(cfg.phone);
   const local = cfg.local_only === 'true';
   const existing = readDevices(deviceFile)[cfg.controller];
+  let reason = '';
   if (existing) {
-    if (idHash && existing.identity && existing.identity !== idHash) return false;
-    if (addrHash && existing.address && existing.address !== addrHash) return false;
-    if (phoneHash && existing.phone && existing.phone !== phoneHash) return false;
+    if (idHash && existing.identity && existing.identity !== idHash) reason = 'identity_mismatch';
+    if (!reason && addrHash && existing.address && existing.address !== addrHash) reason = 'address_mismatch';
+    if (!reason && phoneHash && existing.phone && existing.phone !== phoneHash) reason = 'phone_mismatch';
+    if (reason) {
+      appendLog({ action: 'gate_check', controller: cfg.controller, success: false, reason }, logPath);
+      return false;
+    }
   }
 
   if (controllerOK && local && deviceRecognized(cfg.controller, deviceFile, idHash, addrHash, phoneHash)) {
@@ -197,9 +203,16 @@ function gateCheck(configPath, devicesPath, tempToken, logPath) {
 
   if (result) {
     rememberDevice(cfg.controller, deviceFile, idHash, addrHash, phoneHash);
+  } else {
+    if (!allowed) reason = 'disabled';
+    else if (!controllerOK) reason = 'wrong_controller';
+    else if (!local) reason = 'not_local';
+    else if (!reason) reason = tempToken ? 'token_invalid' : 'device_unknown';
   }
 
-  appendLog({ action: 'gate_check', controller: cfg.controller, success: result }, logPath);
+  const entry = { action: 'gate_check', controller: cfg.controller, success: result };
+  if (reason) entry.reason = reason;
+  appendLog(entry, logPath);
   return result;
 }
 
