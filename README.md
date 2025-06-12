@@ -598,6 +598,26 @@ Install `clang make pkg-config libjpeg-turbo cairo pango freetype libpng librsvg
 `canvas` is only required for the image tools; gatekeeper functions run without it.
 To start the interface on mobile, run `npm start` and open `http://localhost:8080/index.html` manually if no browser launches automatically.
 
+### Smartphone Auto-Start
+[⇧](#contents)
+
+Create your personal gatekeeper on the website and download the generated archive.
+Extract the folder with `gatekeeper.js`, `gatekeeper_config.yaml` and `temp_token.txt`
+to `~/gatekeeper` on your phone.
+
+Install the Termux:Boot add-on and copy `tools/android-boot-gatekeeper.sh`
+to `~/.termux/boot/`:
+
+```bash
+mkdir -p ~/.termux/boot
+cp tools/android-boot-gatekeeper.sh ~/.termux/boot/
+chmod +x ~/.termux/boot/android-boot-gatekeeper.sh
+```
+
+Adjust `GATEKEEPER_DIR` inside the script if the folder is stored elsewhere.
+After the next reboot the gatekeeper starts automatically and logs to
+`gatekeeper_boot.log`.
+
 ### Automated Data Setup
 [⇧](#contents)
 
