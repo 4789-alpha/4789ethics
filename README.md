@@ -360,6 +360,7 @@ Temporary tokens can be issued with `node tools/gatekeeper.js token` and expire 
 Tokens and device hashes are stored hashed in `app/gatekeeper_devices.json`.
 Run `node tools/gatekeeper.js prune` regularly to remove expired tokens and keep the file minimal.
 Monitor repeated failed attempts with `node tools/watchdog.js`. The script reads `app/gatekeeper_log.json` and warns when too many denials occur. Calm the watchdog with `node tools/watchdog.js feed` which appends a success entry.
+View recent log entries with `node tools/read-gatekeeper-log.js` to diagnose failures.
 Verify the stored hashes after updates with:
 
 ```bash
@@ -581,6 +582,10 @@ local server. The script shows key lines from `DISCLAIMERS.md` before starting
 Run `tools/auto-gatekeeper-setup.sh` to install Node.js 18 on Debian/Ubuntu or macOS (with Homebrew) if needed.
 The script displays key lines from `DISCLAIMERS.md` and creates a minimal gatekeeper folder.
 
+Run `node tools/create-personal-gatekeeper.js` to generate the archive. The start
+page then offers a download link to `personal-gatekeeper.zip`. Extract the
+folder and run `node gatekeeper.js <token>` inside to launch your gatekeeper.
+
 ### Smartphone Setup
 [⇧](#contents)
 
@@ -642,7 +647,7 @@ fetchers.
 ### Running Tests
 [⇧](#contents)
 
-Ensure Node.js 18 or later is installed, then run:
+Ensure Node.js 18 or later is installed and run `npm install` to install the dependencies (e.g., `better-sqlite3`), then run:
 
 ```bash
 node --test
