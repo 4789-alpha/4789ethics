@@ -893,7 +893,8 @@ const server = http.createServer((req, res) => {
     });
     return;
   }
-  const filePath = path.join(root, urlPath);
+  const safePath = urlPath.replace(/^\/+/, '');
+  const filePath = path.join(root, safePath);
   fs.stat(filePath, (err, stats) => {
     if (!err && stats.isFile()) {
       serveFile(filePath, res);
