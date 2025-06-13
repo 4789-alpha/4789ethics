@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tanna Kollisionsanimationen</title>
+  <link rel="stylesheet" href="interface/ethicom-style.css">
+  <script src="interface/bundle.js" defer></script>
+  <script src="utils/op-level.js"></script>
+  <script>
+    localStorage.setItem('ethicom_signature', JSON.stringify({ op_level: 'OP-7' }));
+    localStorage.setItem('ethicom_bg_fill', '90');
+    localStorage.setItem('ethicom_bg_symbol_size', '120');
+  </script>
+  <style>
+    html, body, #op_background { height: 100%; margin: 0; }
+  </style>
+</head>
+<body>
+  <div id="op_background"></div>
+</body>
+</html>
