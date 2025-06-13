@@ -2639,6 +2639,8 @@ function initLogoBackground() {
 
   function step() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    const style = getComputedStyle(document.documentElement);
+    const collisionColor = style.getPropertyValue('--collision-color').trim() || '#ffff00';
 
     for (let i = 0; i < symbols.length; i++) {
       const s = symbols[i];
@@ -2808,6 +2810,16 @@ function initLogoBackground() {
         }
         ctx.filter = 'none';
         ctx.restore();
+
+        if (s.highlightUntil > performance.now()) {
+          ctx.save();
+          ctx.lineWidth = 2;
+          ctx.strokeStyle = collisionColor;
+          ctx.beginPath();
+          ctx.arc(s.x, s.y, s.radius * s.scale + 4, 0, Math.PI * 2);
+          ctx.stroke();
+          ctx.restore();
+        }
       }
 
     requestAnimationFrame(step);
