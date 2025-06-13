@@ -22,5 +22,10 @@
   </nav>
   <main id="main_content"></main>
   <footer id="version_footer" class="text-xs text-center my-4"></footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof initLogoBackground === 'function') initLogoBackground();
+    });
+  </script>
 </body>
 </html>
