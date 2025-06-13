@@ -21,3 +21,9 @@ and open the shown URL (default `http://localhost:8675/gatekeeper.html`).
 All device and identity information is stored hashed as noted in `DISCLAIMERS.md`.
 The gatekeeper neither performs DNA analysis nor checks your geolocation. Only
 the hashed strings from `gatekeeper_config.yaml` are used for confirmation.
+
+To use the gatekeeper from another device, copy the same configuration and start
+it with a token created on your first device. After confirmation the device hash
+is stored in `app/gatekeeper_devices.json`. Each confirmed device can then
+communicate bidirectionally with the gatekeeper and is recognized via the hashed
+`private_identity`.
