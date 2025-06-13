@@ -2,19 +2,30 @@
 # Guided installation helper for Ethics Structure 4789
 set -e
 
+# Always operate from the repository root so relative paths work regardless
+# of the current directory.
+cd "$(dirname "$0")/.."
+
 # Basic disclaimers
 echo "Diese Struktur wird ohne Gewährleistung bereitgestellt. Fehler oder Auslassungen sind möglich."
 echo "Die Nutzung erfolgt auf eigene Verantwortung. Weder Signature 4789 noch die Maintainer haften für Folgen oder Anspr\u00fcche."
 echo "4789 ist ein Standard f\u00fcr Verantwortung, keine Person und kein Glaubenssystem."
 echo "Nutzung nur reflektiert und mit Konsequenz, niemals zur Manipulation oder unkontrollierten Automatisierung."
 
+# Helper to detect affirmative answers in multiple languages
+is_yes() {
+  case "$(printf "%s" "$1" | tr '[:upper:]' '[:lower:]')" in
+    yes|y|ja|j|si|sí|sim|oui|da|hai|ok|okay) return 0 ;;
+    *) return 1 ;;
+  esac
+}
+
 printf "Fortfahren? (yes/no) "
 read answer
-answer=$(printf "%s" "$answer" | tr '[:upper:]' '[:lower:]')
-case "$answer" in
-  yes|y|ja|j|si|sí|sim|oui|da|hai|ok|okay) ;;
-  *) echo "Abbruch."; exit 1;;
-esac
+if ! is_yes "$answer"; then
+  echo "Abbruch."
+  exit 1
+fi
 
 need_node() {
   echo "Node.js 18+ wird ben\u00f6tigt."
@@ -51,19 +62,19 @@ npm install
 
 printf "Python-Abh\u00e4ngigkeiten installieren? (yes/no) "
 read answer
-if [ "$answer" = "yes" ]; then
+if is_yes "$answer"; then
   pip install -r requirements.txt
 fi
 
 printf "Offline-Konfiguration starten? (yes/no) "
 read answer
-if [ "$answer" = "yes" ]; then
+if is_yes "$answer"; then
   python3 install.py
 fi
 
 printf "Optionale Daten abrufen? (yes/no) "
 read answer
-if [ "$answer" = "yes" ]; then
+if is_yes "$answer"; then
   node tools/currency-sync.js
   node tools/fetch-wiki-images.js
 fi
