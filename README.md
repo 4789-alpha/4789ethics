@@ -35,6 +35,11 @@ No flattening of responsibility.
 Humor ist willkommen, wenn er Verantwortung und Klarheit unterstützt.
 See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
 
+## Vision und Aufbau
+Unsere Vision ist ein dezentrales System, das Verantwortung und Transparenz
+vereint. Die Module `core/`, `gatekeeper/`, `kalmia/`, `users/` und `ui/`
+bilden gemeinsam den Kern von MYRIA.
+
 ## Quick Start
 [⇧](#contents)
 
