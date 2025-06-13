@@ -34,7 +34,7 @@ Diese Liste enthält konkrete Vorschläge zur Verbesserung der Benutzerfreundlic
 - [ ] Codecov oder Coveralls für Testabdeckung.
 - [ ] Snyk oder GitHub Advanced Security für Sicherheits-Scans.
 - [ ] DNA-Daten aus PDF extrahieren und in `gatekeeper/` integrieren.
-- [ ] OP-Logo-Kollisionen im Hintergrund stets sichtbar halten; Logo-Farbe vom Hintergrund abheben und davor platzieren.
+- [x] OP-Logo-Kollisionen im Hintergrund stets sichtbar halten; Logo-Farbe vom Hintergrund abheben und davor platzieren.
 
 ---
 
