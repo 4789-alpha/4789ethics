@@ -378,6 +378,14 @@ node tools/verify-gatekeeper.js
 ```
 For a simple web interface run `node tools/gatekeeper-gui.js` and open the printed
 URL (default `http://localhost:8675/gatekeeper.html`).
+
+### Home Network Pairing
+[⇧](#contents)
+
+Pick a device that stays connected to your home network as the gatekeeper. Start it with
+`node gatekeeper.js <token>` while your end device is on the same Wi‑Fi and open the printed URL once.
+Both device hashes are stored in `app/gatekeeper_devices.json`. After this initial handshake you can reach
+your personalized pages from anywhere, and the gatekeeper confirms their authenticity using the stored token.
 Registrierungsdaten werden offline gehasht gespeichert. Keine Gewährleistung für absolute Anonymität.
 Adressen und Telefonnummern werden ebenfalls offline gehasht gespeichert.
 **4789**
