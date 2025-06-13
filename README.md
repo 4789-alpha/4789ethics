@@ -79,7 +79,7 @@ See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
     +-------------+
       |         |
       v         v
- settings.html  ethicom.html
+ settings_OLD.html (deprecated)  ethicom.html
 ```
 
 ## Contents
@@ -154,7 +154,7 @@ See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
 | [bewertung.html](bewertung.html) | Entry page for rating modules |
 | [personenbewertung.html](personenbewertung.html) | Swipe-based person rating |
 | [org-bewertung.html](org-bewertung.html) | Preview for organisation ratings |
-| [interface/settings.html](interface/settings.html) | Language, theme, Tanna logo, and low motion settings |
+| [interface/settings_OLD.html](interface/settings_OLD.html) | Language, theme, Tanna logo, and low motion settings |
 | [interface/signup.html](interface/signup.html) | Registration form |
 | [interface/offline-signup.html](interface/offline-signup.html) | Offline local signup |
 
@@ -277,7 +277,7 @@ Use the `image_url` field in `sources/persons/human-op0-candidates.json` to reco
 [⇧](#contents)
 
 **ethicom.html**
-SHA-256: e562c07f46ff6714b7fd1b467b7bbaa059150a997e747bd429270802f108096a
+SHA-256: 38ebbdd1d3363432e9e9cda982e7aca6391786d779ff52e4566a8f0c8a0754d7
 Verified 2025-05-21 by Signature 4789
 
 **ethicom-consensus.js**
