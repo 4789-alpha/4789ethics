@@ -323,6 +323,9 @@ The sentiment tools use `i18n/semantic-words.json` with `positive` and `negative
 node --test
 ```
 
+If you have not installed the Node.js dependencies yet, run `npm install` first
+(see the [Running Tests](#running-tests) section).
+
 ### Generating Interface README
 [⇧](#contents)
 
