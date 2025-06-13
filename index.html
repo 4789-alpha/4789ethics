@@ -7,6 +7,11 @@
   <link rel="stylesheet" href="interface/ethicom-style.css">
   <script src="interface/bundle.js" defer></script>
   <script src="utils/op-level.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./service-worker.js');
+    }
+  </script>
   <link rel="icon" href="sources/images/institutions/logo-bsvrb.svg" sizes="32x32">
 </head>
 <body class="home">
@@ -15,6 +20,9 @@
   <header>
     <a href="index.html"><img src="sources/images/institutions/logo-bsvrb.png" alt="BSVRB" class="title-logo"></a>
   </header>
+  <div id="offline_fallback" style="display:none;text-align:center;">
+    <img id="tanna_animation" src="sources/images/op-logo/tanna_op0.png" alt="Tanna animation" style="max-width:80%;height:auto;">
+  </div>
   <nav aria-label="Main">
     <a aria-current="page" class="icon-only" aria-label="Home">🏠</a>
     <a href="signup.html" class="icon-only" aria-label="Signup or Login">🔑</a>
@@ -22,5 +30,23 @@
   </nav>
   <main id="main_content"></main>
   <footer id="version_footer" class="text-xs text-center my-4"></footer>
+  <script>
+    async function serverOnline() {
+      try {
+        const r = await fetch('config.json', {method:'HEAD', cache:'no-cache'});
+        return r.ok;
+      } catch {
+        return false;
+      }
+    }
+    window.addEventListener('load', async () => {
+      if (!await serverOnline()) {
+        const el = document.getElementById('offline_fallback');
+        if (el) el.style.display = 'block';
+        if (typeof startTannaAnimation === 'function')
+          startTannaAnimation('tanna_animation');
+      }
+    });
+  </script>
 </body>
 </html>
