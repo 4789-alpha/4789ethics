@@ -4,8 +4,6 @@ Diese kurze Anleitung zeigt, wie du die Struktur 4789 lokal starten kannst.
 
 1. [README.md](../README.md) lesen, um Zweck und Aufbau zu verstehen.
 2. Node.js ≥18 installieren und `npm install` ausführen.
-   Falls du ein Offline-Archiv von `better-sqlite3` benötigst,
-   lädt `tools/fetch-better-sqlite3.sh` das Paket aus dem npm-Registry herunter.
    Alternativ kannst du `tools/guided-install.sh` nutzen.
 3. Einmalig `node tools/migrate-json-to-db.js` ausführen, um vorhandene JSON-Daten in die SQLite-Datenbank zu übernehmen.
 4. Server mit `npm start` oder `node tools/start-server.js` starten.

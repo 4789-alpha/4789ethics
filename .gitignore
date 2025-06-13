@@ -20,4 +20,3 @@ app/data.db
 __pycache__/
 *.py[cod]
 aari/config.json
-downloads/better-sqlite3-*.tgz

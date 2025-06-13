@@ -657,7 +657,7 @@ fetchers.
 ### Running Tests
 [⇧](#contents)
 
-Ensure Node.js 18 or later is installed and run `npm install` to install the dependencies. Run `tools/fetch-better-sqlite3.sh` to download the `better-sqlite3` archive from the npm registry for offline setups.
+Ensure Node.js 18 or later is installed and run `npm install` to install the dependencies.
 Then run:
 
 ```bash
