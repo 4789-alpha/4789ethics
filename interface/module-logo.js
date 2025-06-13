@@ -36,7 +36,7 @@ function insertModuleLogo() {
                window.location.pathname.includes('/wings/')
                  ? '../'
                  : '';
-  link.href = `${base}interface/start.html`;
+  link.href = `${base}index.html`;
   link.setAttribute('aria-label', 'OP Status');
   link.style.width = `calc(${size} * 1.5 + 1em)`;
   link.style.height = '100%';
