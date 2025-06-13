@@ -161,7 +161,7 @@ See [docs/FOLDER_STRUCTURE.md](docs/FOLDER_STRUCTURE.md) for a concise directory
 | [bewertung.html](bewertung.html) | Entry page for rating modules |
 | [personenbewertung.html](personenbewertung.html) | Swipe-based person rating |
 | [org-bewertung.html](org-bewertung.html) | Preview for organisation ratings |
-| [interface/settings_OLD.html](interface/settings_OLD.html) | Language, theme, Tanna logo, and low motion settings |
+| [interface/settings_OLD.html](interface/settings_OLD.html) | Language, theme, Tanna logo, and low motion settings (visible from OP-2) |
 | [interface/signup.html](interface/signup.html) | Registration form |
 | [interface/offline-signup.html](interface/offline-signup.html) | Offline local signup |
 
@@ -284,7 +284,7 @@ Use the `image_url` field in `sources/persons/human-op0-candidates.json` to reco
 [⇧](#contents)
 
 **ethicom.html**
-SHA-256: 38ebbdd1d3363432e9e9cda982e7aca6391786d779ff52e4566a8f0c8a0754d7
+SHA-256: 334ba96685c105f4037866fcb54ce604671cad4e5cc0665da06b844ee418cc1a
 Verified 2025-05-21 by Signature 4789
 
 **ethicom-consensus.js**
