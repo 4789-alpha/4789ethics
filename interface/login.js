@@ -13,6 +13,22 @@ function applyLoginTexts() {
   if (authLabel) authLabel.textContent = t.login_auth || authLabel.textContent;
   const loginBtn = document.getElementById('login_btn');
   if (loginBtn) loginBtn.textContent = t.login_btn || loginBtn.textContent;
+  const formalityLabel = document.querySelector('label[for="formality_select"]');
+  if (formalityLabel) {
+    const lang = document.documentElement.lang || 'de';
+    if (lang.startsWith('de')) formalityLabel.textContent = 'Ansprache:';
+    else formalityLabel.textContent = 'Address formality:';
+  }
+}
+
+function makeWelcome(name, formality) {
+  const lang = document.documentElement.lang || 'de';
+  if (lang.startsWith('de')) {
+    if (formality === 'sie') return `Sch\u00f6n, dass Sie wieder da sind, ${name}.`;
+    if (formality === 'neutral') return `Willkommen zur\u00fcck, ${name}.`;
+    return `Sch\u00f6n, dass du wieder da bist, ${name}.`;
+  }
+  return (uiText.login_welcome || 'Welcome back, {name}.').replace('{name}', name);
 }
 
 function initLogin() {
@@ -33,10 +49,11 @@ function loadProfile() {
       if (p.lang) {
         localStorage.setItem('ethicom_lang', p.lang);
       }
+      const sel = document.getElementById('formality_select');
+      if (sel && p.formality) sel.value = p.formality;
       if (p.alias) {
         const statusEl = document.getElementById('login_status');
-        const msg = (uiText.login_welcome || 'Welcome back, {name}.').replace('{name}', p.alias);
-        statusEl.textContent = msg;
+        statusEl.textContent = makeWelcome(p.alias, p.formality);
       }
     })
     .catch(() => {});
@@ -74,10 +91,11 @@ function handleLogin() {
     .then(data => {
       const sig = { email, id: data.id, op_level: data.op_level, alias: data.alias };
       localStorage.setItem('ethicom_signature', JSON.stringify(sig));
+      const formality = document.getElementById('formality_select')?.value || 'du';
       fetch('/api/profile', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ alias: data.alias, lang: getLanguage() })
+        body: JSON.stringify({ alias: data.alias, lang: getLanguage(), formality })
       }).catch(() => {});
       statusEl.textContent = uiText.login_saved || 'Login successful. ID stored.';
       setTimeout(() => { window.location.href = 'ethicom.html'; }, 500);
