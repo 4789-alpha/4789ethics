@@ -874,7 +874,18 @@ const server = http.createServer((req, res) => {
       'Content-Type': 'application/zip',
       'Content-Disposition': 'attachment; filename="ethics-structure.zip"'
     });
-    const git = spawn('git', ['-C', repoRoot, 'archive', '--format=zip', 'HEAD']);
+    const git = spawn('git', [
+      '-C', repoRoot,
+      'archive',
+      '--format=zip',
+      'HEAD',
+      ':!*.png',
+      ':!*.jpg',
+      ':!*.jpeg',
+      ':!*.gif',
+      ':!*.svg',
+      ':!*.webp'
+    ]);
     git.stdout.pipe(res);
     git.on('error', () => {
       res.statusCode = 500;
