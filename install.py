@@ -2,6 +2,7 @@
 """Offline setup helper for the 4789 interface."""
 import os
 import re
+import sys
 
 SETTINGS_FILE = os.path.join('app', 'app_settings.yaml')
 
@@ -56,6 +57,10 @@ def update_yaml_value(key, value):
 
 
 def main():
+    if any(a in ('-h', '--help') for a in sys.argv[1:]):
+        print('Usage: install.py')
+        print('Interactive setup for 4789 interface settings.')
+        sys.exit(0)
     lang = prompt("Default interface language", read_current("default_language", "auto"))
     port = prompt("Interface port", read_current("interface_port", "8080"))
     offline = prompt("Offline mode (true/false)", read_current("offline_mode", "true"))

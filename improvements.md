@@ -15,7 +15,7 @@ Diese Liste enthält konkrete Vorschläge zur Verbesserung der Benutzerfreundlic
 - [x] Rückmeldung nach Login personalisieren („Willkommen zurück…“).
 
 ## 4. Barrierefreiheit (Accessibility)
-- [ ] Texte screenreaderfreundlich gestalten.
+- [x] Texte screenreaderfreundlich gestalten.
 - [x] Kontrastreiche Farben im Terminal, optional deaktivierbar.
 - [x] Vollständige Bedienung per Tastatur sicherstellen.
 - [x] Langsam-Modus: aktivierbare Pausen und ausführlichere Erklärungen.
@@ -27,8 +27,8 @@ Diese Liste enthält konkrete Vorschläge zur Verbesserung der Benutzerfreundlic
 - [ ] Optionale humorvolle Rückmeldungen ohne Klarheit zu verlieren.
 
 ## 6. Weiterführende Verbesserungen
-- [ ] API-Dokumentation mit OpenAPI/YAML.
-- [ ] Eingebaute Hilfe via --help oder Hotkeys.
+- [x] API-Dokumentation mit OpenAPI/YAML.
+- [x] Eingebaute Hilfe via --help oder Hotkeys.
 - [ ] GitHub Actions für automatisierte Tests und Deployments.
 - [ ] Dependabot für Abhängigkeits-Updates.
 - [ ] Codecov oder Coveralls für Testabdeckung.

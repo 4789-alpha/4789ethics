@@ -1,0 +1,29 @@
+openapi: 3.0.0
+info:
+  title: 4789ethics API
+  version: 1.0.0
+paths:
+  /api/signup:
+    post:
+      summary: Create a new user account
+      responses:
+        '200':
+          description: Signup successful
+  /api/login:
+    post:
+      summary: Log into an existing account
+      responses:
+        '200':
+          description: Login successful
+  /api/chat/list:
+    get:
+      summary: List recent chat messages
+      responses:
+        '200':
+          description: A list of messages
+  /api/chat/send:
+    post:
+      summary: Send a chat message
+      responses:
+        '200':
+          description: Message accepted
