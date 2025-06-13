@@ -33,6 +33,7 @@ Diese Liste enthält konkrete Vorschläge zur Verbesserung der Benutzerfreundlic
 - [ ] Dependabot für Abhängigkeits-Updates.
 - [ ] Codecov oder Coveralls für Testabdeckung.
 - [ ] Snyk oder GitHub Advanced Security für Sicherheits-Scans.
+- [ ] DNA-Daten aus PDF extrahieren und in `gatekeeper/` integrieren.
 
 ---
 

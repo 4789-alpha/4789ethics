@@ -1,0 +1,4 @@
+# Standard layout for data segments
+id: null           # unique shard identifier
+created: null      # timestamp in ISO8601
+replicas: 3        # minimal geographic redundancy

@@ -1,0 +1,9 @@
+{
+  "name": "Raphael",
+  "birth": {
+    "date": "1985-04-16",
+    "place": "Basel"
+  },
+  "DNA": "sample",
+  "behavior": "default"
+}
