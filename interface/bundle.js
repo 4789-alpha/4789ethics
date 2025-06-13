@@ -488,6 +488,64 @@ if (typeof module !== 'undefined') {
 })();
 
 
+//----- chat-interface.js -----
+let chatTexts = {};
+
+function sig(){
+  try{ return JSON.parse(localStorage.getItem('ethicom_signature')||'{}'); }catch{return {};}}
+
+function loadConnections(){
+  const sel = document.getElementById('chat_target');
+  if(!sel) return;
+  const id = sig().id;
+  if(!id) return;
+  fetch('/api/connect/list?id='+encodeURIComponent(id))
+    .then(r=>r.json())
+    .then(data=>{
+      sel.innerHTML = data.connections.map(c=>`<option value="${c.id}">${c.id} (${c.op_level})</option>`).join('');
+    });
+}
+
+function loadMessages(){
+  const hist = document.getElementById('chat_history');
+  const target = document.getElementById('chat_target').value;
+  const id = sig().id;
+  if(!hist || !target || !id) return;
+  fetch(`/api/chat/list?user=${encodeURIComponent(id)}&target=${encodeURIComponent(target)}`)
+    .then(r=>r.json())
+    .then(data=>{
+      hist.innerHTML = data.messages.map(m=>`<div><strong>${m.from===id?'You':m.from}:</strong> ${m.text}</div>`).join('');
+      hist.scrollTop = hist.scrollHeight;
+    });
+}
+
+function sendMessage(){
+  const msgEl = document.getElementById('chat_message');
+  const target = document.getElementById('chat_target').value;
+  const id = sig().id;
+  const text = msgEl.value.trim();
+  if(!text || !id || !target) return;
+  fetch('/api/chat/send', {
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body: JSON.stringify({ from:id, to:target, text })
+  }).then(()=>{
+    msgEl.value='';
+    loadMessages();
+  });
+}
+
+function initChatInterface(){
+  loadConnections();
+  document.getElementById('chat_send').addEventListener('click', sendMessage);
+  document.getElementById('chat_target').addEventListener('change', loadMessages);
+  setInterval(loadMessages, 5000);
+  loadMessages();
+}
+
+if(typeof window!=='undefined') window.initChatInterface=initChatInterface;
+
+
 //----- color-auth.js -----
 const colorLocales = {
   en: {
@@ -1721,38 +1779,38 @@ function hideLoadingBadge() {
 
 window.getStoredOpLevel = getStoredOpLevel;
 window.opLevelToNumber = opLevelToNumber;
-  window.getReadmePath = getReadmePath;
-  window.showLoadingBadge = showLoadingBadge;
-  window.hideLoadingBadge = hideLoadingBadge;
+window.getReadmePath = getReadmePath;
+window.showLoadingBadge = showLoadingBadge;
+window.hideLoadingBadge = hideLoadingBadge;
 
-  // Check if user confirmed responsibility via "Sana"
-  function getSanaConfirmed() {
-    try {
-      return localStorage.getItem('sana_confirmed') === 'true';
-    } catch (err) {
-      return false;
+// Check if user confirmed responsibility via "Sana"
+function getSanaConfirmed() {
+  try {
+    return localStorage.getItem('sana_confirmed') === 'true';
+  } catch (err) {
+    return false;
+  }
+}
+
+window.getSanaConfirmed = getSanaConfirmed;
+
+// Show or hide navigation links based on the required OP level
+function applyOpLevelVisibility(root = document) {
+  const currentLevel =
+    typeof opLevelToNumber === 'function' &&
+    typeof getStoredOpLevel === 'function'
+      ? opLevelToNumber(getStoredOpLevel())
+      : 0;
+  root.querySelectorAll('[data-min-op]').forEach(el => {
+    const required = opLevelToNumber(el.dataset.minOp);
+    if (currentLevel < required) {
+      el.style.display = 'none';
     }
-  }
+  });
+}
 
-  window.getSanaConfirmed = getSanaConfirmed;
-
-  // Show or hide navigation links based on the required OP level
-  function applyOpLevelVisibility(root = document) {
-    const currentLevel =
-      typeof opLevelToNumber === 'function' &&
-      typeof getStoredOpLevel === 'function'
-        ? opLevelToNumber(getStoredOpLevel())
-        : 0;
-    root.querySelectorAll('[data-min-op]').forEach(el => {
-      const required = opLevelToNumber(el.dataset.minOp);
-      if (currentLevel < required) {
-        el.style.display = 'none';
-      }
-    });
-  }
-
-  window.applyOpLevelVisibility = applyOpLevelVisibility;
-  document.addEventListener('DOMContentLoaded', () => applyOpLevelVisibility());
+window.applyOpLevelVisibility = applyOpLevelVisibility;
+document.addEventListener('DOMContentLoaded', () => applyOpLevelVisibility());
 
 
 
@@ -2224,9 +2282,9 @@ function checkLanguageSetup() {
 }
 
 function ensureLanguageDropdown() {
-  var select = document.getElementById("lang_select");
+  let select = document.getElementById("lang_select");
   if (!select) {
-    var box = document.createElement("div");
+    const box = document.createElement("div");
     box.id = "lang_selection";
     box.style.position = "fixed";
     box.style.top = "0.5em";
@@ -2238,6 +2296,10 @@ function ensureLanguageDropdown() {
   }
   checkLanguageSetup();
   initLanguageDropdown("lang_select");
+}
+
+if (typeof window !== "undefined") {
+  window.addEventListener("DOMContentLoaded", ensureLanguageDropdown);
 }
 
 
@@ -2267,7 +2329,24 @@ function initLogin() {
     .then(data => {
       uiText = data[lang] || data.en || {};
       applyLoginTexts();
+      loadProfile();
     });
+}
+
+function loadProfile() {
+  fetch('/api/profile')
+    .then(r => r.json())
+    .then(p => {
+      if (p.lang) {
+        localStorage.setItem('ethicom_lang', p.lang);
+      }
+      if (p.alias) {
+        const statusEl = document.getElementById('login_status');
+        const msg = (uiText.login_welcome || 'Welcome back, {name}.').replace('{name}', p.alias);
+        statusEl.textContent = msg;
+      }
+    })
+    .catch(() => {});
 }
 
 function handleLogin() {
@@ -2302,6 +2381,11 @@ function handleLogin() {
     .then(data => {
       const sig = { email, id: data.id, op_level: data.op_level, alias: data.alias };
       localStorage.setItem('ethicom_signature', JSON.stringify(sig));
+      fetch('/api/profile', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ alias: data.alias, lang: getLanguage() })
+      }).catch(() => {});
       statusEl.textContent = uiText.login_saved || 'Login successful. ID stored.';
       setTimeout(() => { window.location.href = 'ethicom.html'; }, 500);
     })
@@ -2411,21 +2495,10 @@ function initLogoBackground() {
   container.appendChild(canvas);
   const ctx = canvas.getContext('2d');
 
-  const overlay = document.createElement('canvas');
-  overlay.style.position = 'fixed';
-  overlay.style.inset = '0';
-  overlay.style.pointerEvents = 'none';
-  overlay.style.zIndex = '0';
-  overlay.style.width = '100%';
-  overlay.style.height = '100%';
-  document.body.appendChild(overlay);
-  const octx = overlay.getContext('2d');
 
   function resize() {
     canvas.width = container.clientWidth || window.innerWidth;
     canvas.height = container.clientHeight || window.innerHeight;
-    overlay.width = canvas.width;
-    overlay.height = canvas.height;
   }
   window.addEventListener('resize', resize);
   resize();
@@ -2446,7 +2519,7 @@ function initLogoBackground() {
   if (levels.length === 0) levels.push(0);
   const maxLvl = Math.max(...levels);
   const minScale = 0.5;
-  const FADE_MS = 1000;
+  const FADE_MS = 0;
   const imgBase = window.location.pathname.includes('/interface/') ||
                   window.location.pathname.includes('/wings/') ||
                   window.location.pathname.includes('/bsvrb.ch/')
@@ -2503,6 +2576,8 @@ function initLogoBackground() {
       rotation: 0,
       rotSpeed: 0,
       rotFrames: 0,
+      boostFactor: 1,
+      boostFrames: 0,
       alpha: 1,
       scale: 1,
       scaleDir: 0,
@@ -2546,7 +2621,6 @@ function initLogoBackground() {
 
   function step() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    octx.clearRect(0, 0, overlay.width, overlay.height);
 
     for (let i = 0; i < symbols.length; i++) {
       const s = symbols[i];
@@ -2603,6 +2677,12 @@ function initLogoBackground() {
               s.scaleDir = -1;
               s.fadeOut = true;
               s.fadeStart = performance.now();
+              if (s.boostFrames === 0) {
+                s.dx *= 1.5;
+                s.dy *= 1.5;
+              }
+              s.boostFactor = 1.5;
+              s.boostFrames = 20;
             } else if (o.lvl < s.lvl) {
               const base = 0.2 + Math.random() * 0.3;
               const factor = 1 - o.lvl / (maxLvl + 1);
@@ -2611,6 +2691,12 @@ function initLogoBackground() {
               o.scaleDir = -1;
               o.fadeOut = true;
               o.fadeStart = performance.now();
+              if (o.boostFrames === 0) {
+                o.dx *= 1.5;
+                o.dy *= 1.5;
+              }
+              o.boostFactor = 1.5;
+              o.boostFrames = 20;
             }
           }
         }
@@ -2618,6 +2704,15 @@ function initLogoBackground() {
 
       s.dx *= RESTITUTION;
       s.dy *= RESTITUTION;
+
+      if (s.boostFrames > 0) {
+        s.boostFrames--;
+        if (s.boostFrames === 0) {
+          s.dx /= s.boostFactor;
+          s.dy /= s.boostFactor;
+          s.boostFactor = 1;
+        }
+      }
 
       if (Math.hypot(s.dx, s.dy) < MIN_VELOCITY) {
         const angle = Math.random() * Math.PI * 2;
@@ -2644,23 +2739,29 @@ function initLogoBackground() {
           } else if (s.scaleDir === 1) {
             s.scale += 0.02;
             if (s.scale >= 1) {
-              s.scale = 1;
+              const variance = (Math.random() - 0.5) * 0.0228;
+              s.scale = 1 + variance;
               s.scaleDir = 0;
             }
           }
         }
 
         if (s.fadeOut) {
-          const elapsed = performance.now() - s.fadeStart;
-          if (elapsed < FADE_MS / 2) {
-            s.alpha = 1 - elapsed / (FADE_MS / 2);
-          } else if (elapsed < FADE_MS) {
-            s.alpha = (elapsed - FADE_MS / 2) / (FADE_MS / 2);
-            s.scaleDir = 1;
+          if (FADE_MS > 0) {
+            const elapsed = performance.now() - s.fadeStart;
+            if (elapsed < FADE_MS / 2) {
+              s.alpha = 1 - elapsed / (FADE_MS / 2);
+            } else if (elapsed < FADE_MS) {
+              s.alpha = (elapsed - FADE_MS / 2) / (FADE_MS / 2);
+              s.scaleDir = 1;
+            } else {
+              s.alpha = 1;
+              s.fadeOut = false;
+              s.scaleDir = 0;
+            }
           } else {
             s.alpha = 1;
             s.fadeOut = false;
-            s.scaleDir = 0;
           }
         }
 
@@ -2686,19 +2787,6 @@ function initLogoBackground() {
             s.subSize * s.scale,
             s.subSize * s.scale
           );
-        }
-        if (s.highlightUntil > performance.now()) {
-          octx.save();
-          octx.translate(s.x, s.y);
-          const style = getComputedStyle(document.documentElement);
-          octx.strokeStyle =
-            style.getPropertyValue('--collision-color') ||
-            style.getPropertyValue('--accent-color') || '#ff0';
-          octx.lineWidth = 2;
-          octx.beginPath();
-          octx.arc(0, 0, s.radius * s.scale, 0, Math.PI * 2);
-          octx.stroke();
-          octx.restore();
         }
         ctx.filter = 'none';
         ctx.restore();
@@ -2917,7 +3005,7 @@ document.addEventListener('DOMContentLoaded', renderOpOverview);
 function setupOpSideNav(container){
   const list = container.querySelector('#op_side_nav');
   if(!list) return;
-  const levels=['OP-0','OP-1','OP-2','OP-3','OP-4','OP-5','OP-5.U','OP-6','OP-7','OP-7.U','OP-8','OP-8.M','OP-9','OP-9.M','OP-9.A','OP-10','OP-11','OP-12'];
+  const levels=['OP-0','OP-1','OP-2','OP-3','OP-4','OP-5','OP-5.U','OP-6','OP-7','OP-7.U','OP-8','OP-8.M','OP-9','OP-9.M','OP-9.A','OP-10','OP-11','OP-12','chat'];
   list.innerHTML = levels.map(l => `<li><button class="accent-button" data-level="${l}">${l}</button></li>`).join('');
   list.querySelectorAll('button').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -3242,6 +3330,156 @@ function renderMarkdown(md) {
   if (inList) html += '</ul>';
   if (inCode) html += '</code></pre>';
   return html;
+}
+
+
+//----- semantic-manager.js -----
+// semantic-manager.js – manage positive and negative word lists
+
+let lexicon = {};
+let pending = JSON.parse(localStorage.getItem('ethicom_pending_semantic') || '{}');
+
+function getSignatureId() {
+  try {
+    const sig = JSON.parse(localStorage.getItem('ethicom_signature') || '{}');
+    return sig.id || null;
+  } catch {
+    return null;
+  }
+}
+
+function loadLexicon() {
+  return fetch('../i18n/semantic-words.json')
+    .then(r => r.json())
+    .catch(() => ({}))
+    .then(data => {
+      lexicon = data;
+      Object.keys(pending).forEach(code => {
+        if (pending[code] && pending[code].words) {
+          lexicon[code] = pending[code].words;
+        }
+      });
+      return lexicon;
+    });
+}
+
+function savePending(code, obj) {
+  const sig = getSignatureId();
+  const entry = pending[code] || { words: obj, signatures: [], confirmed: false };
+  entry.words = obj;
+  if (sig && !entry.signatures.includes(sig)) entry.signatures.push(sig);
+  entry.confirmed = entry.signatures.length >= 2;
+  pending[code] = entry;
+  localStorage.setItem('ethicom_pending_semantic', JSON.stringify(pending));
+}
+
+function confirmPending(code) {
+  if (!pending[code]) return;
+  const sig = getSignatureId();
+  if (sig && !pending[code].signatures.includes(sig)) {
+    pending[code].signatures.push(sig);
+  }
+  pending[code].confirmed = pending[code].signatures.length >= 2;
+  localStorage.setItem('ethicom_pending_semantic', JSON.stringify(pending));
+}
+
+function showEditor(code, data) {
+  const overlay = document.createElement('div');
+  overlay.style.position = 'fixed';
+  overlay.style.left = 0;
+  overlay.style.top = 0;
+  overlay.style.right = 0;
+  overlay.style.bottom = 0;
+  overlay.style.background = 'rgba(0,0,0,0.5)';
+  overlay.style.overflow = 'auto';
+  overlay.style.zIndex = 1000;
+
+  const form = document.createElement('div');
+  form.className = 'card';
+  form.style.background = '#fff';
+  form.style.color = '#000';
+  const sigCount = pending[code]?.signatures?.length || 0;
+  form.innerHTML = `
+    <h3>Edit semantic words for ${code}</h3>
+    <p class="info" data-info="translation_sig_count" data-count="${sigCount}"></p>
+    <label>Positive words (comma separated):<br>
+      <input id="sem_pos" value="${(data.positive || []).join(', ')}"></label><br>
+    <label>Negative words (comma separated):<br>
+      <input id="sem_neg" value="${(data.negative || []).join(', ')}"></label><br>
+    <button id="sem_save">Save</button>
+    <button id="sem_cancel">Cancel</button>
+  `;
+  overlay.appendChild(form);
+  if (typeof applyInfoTexts === 'function') applyInfoTexts(form);
+  document.body.appendChild(overlay);
+
+  document.getElementById('sem_cancel').addEventListener('click', () => overlay.remove());
+  document.getElementById('sem_save').addEventListener('click', () => {
+    const obj = {
+      positive: document.getElementById('sem_pos').value.split(/,\s*/),
+      negative: document.getElementById('sem_neg').value.split(/,\s*/)
+    };
+    savePending(code, obj);
+    lexicon[code] = obj;
+    overlay.remove();
+    alert('Semantic words saved locally. Another user can confirm them.');
+  });
+}
+
+function checkPending() {
+  const lang = localStorage.getItem('ethicom_lang');
+  if (lang && pending[lang] && !pending[lang].confirmed) {
+    const needed = 2 - (pending[lang].signatures?.length || 0);
+    const box = document.createElement('div');
+    box.className = 'card';
+    box.innerHTML = `
+      <p>Unconfirmed semantic words for ${lang} found. ${needed} more confirmation(s) required.</p>
+      <button id="sem_yes">Confirm</button>
+      <button id="sem_edit">Edit</button>
+    `;
+    document.body.insertBefore(box, document.body.firstChild);
+    document.getElementById('sem_yes').addEventListener('click', () => {
+      confirmPending(lang);
+      box.remove();
+    });
+    document.getElementById('sem_edit').addEventListener('click', () => {
+      box.remove();
+      showEditor(lang, pending[lang].words);
+    });
+  }
+}
+
+function initSemanticManager() {
+  loadLexicon().then(() => {
+    const container = document.getElementById('semantic_manager');
+    if (!container) return;
+    const select = document.createElement('select');
+    Object.keys(lexicon)
+      .sort()
+      .forEach(code => {
+        const opt = document.createElement('option');
+        opt.value = code;
+        opt.textContent = code;
+        select.appendChild(opt);
+      });
+    select.value = localStorage.getItem('ethicom_lang') || 'en';
+    const btn = document.createElement('button');
+    btn.textContent = 'Edit Word Lists';
+    container.appendChild(select);
+    container.appendChild(btn);
+
+    btn.addEventListener('click', () => {
+      const code = select.value.trim();
+      const data = lexicon[code] || { positive: [], negative: [] };
+      showEditor(code, data);
+    });
+
+    checkPending();
+  });
+}
+
+if (typeof module !== 'undefined') {
+  module.exports = { loadLexicon };
 }
 
 
@@ -4672,7 +4910,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 //----- version.js -----
 window.APP_VERSION = '1.0.0';
-window.APP_COMMIT = '466236e';
+window.APP_COMMIT = 'dceb819';
 
 function displayVersionInfo() {
   var el = document.getElementById('version_footer');
@@ -4682,9 +4920,6 @@ function displayVersionInfo() {
 }
 
 if (typeof window !== 'undefined') {
-  window.addEventListener('DOMContentLoaded', function() {
-    displayVersionInfo();
-    ensureLanguageDropdown();
-  });
+  window.addEventListener('DOMContentLoaded', displayVersionInfo);
 }
 
