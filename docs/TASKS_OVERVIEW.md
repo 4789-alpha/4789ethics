@@ -16,7 +16,7 @@ This file tracks pending improvements and roadmap actions.
 - [x] Show a personalized greeting after login.
 
 ## Accessibility Features
-- [ ] Improve screen reader labels.
+- [x] Improve screen reader labels.
 - [x] Offer high-contrast terminal colors that can be disabled.
 - [x] Ensure full keyboard navigation.
 - [x] Add a slow mode with pauses and explanations.
@@ -28,8 +28,8 @@ This file tracks pending improvements and roadmap actions.
 - [ ] Add optional humorous responses.
 
 ## Advanced
-- [ ] Publish an OpenAPI spec.
-- [ ] Add integrated help (`--help` or hotkeys).
+- [x] Publish an OpenAPI spec.
+- [x] Add integrated help (`--help` or hotkeys).
 - [ ] Display version and build number in the interface.
 
 ## Roadmap Items
