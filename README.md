@@ -10,7 +10,7 @@ It is not tied to a person, but to a standard: responsibility over convenience: 
 ### Kurzüberblick
 
 - **Zweck:** Diese Sammlung bietet klare Werkzeuge für verantwortungsvolle digitale Projekte.
-- **Zielgruppe:** Entwicklerinnen, Lehrpersonen und alle Interessierten.
+- **Zielgruppe:** Jeder Mensch.
 - **Einstiegspunkt:** Öffne [GET_STARTED.md](GET_STARTED.md) und danach [index.html](index.html).
 
 **What this is:**
