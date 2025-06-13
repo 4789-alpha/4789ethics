@@ -21,7 +21,7 @@ It is not tied to a person, but to a standard: responsibility over convenience: 
 **What this is not:**
 - A belief system
 - A rulebook
-- A tool for control or moralism
+- A tool for moralism
 
 This structure must be carried – not quoted.
 Use it only if you reflect, respond, and act with consequence.
