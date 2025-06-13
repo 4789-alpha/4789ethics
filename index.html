@@ -8,89 +8,19 @@
   <script src="interface/bundle.js" defer></script>
   <script src="utils/op-level.js"></script>
   <link rel="icon" href="sources/images/institutions/logo-bsvrb.svg" sizes="32x32">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-  <style>
-    #departments_fallback.hidden { display: none; }
-  </style>
 </head>
-<body>
+<body class="home">
   <a class="skip-link" href="#main_content">Skip to main content</a>
   <div id="op_background"></div>
-  <header data-logo="sources/images/institutions/logo-bsvrb.png">
+  <header>
     <a href="index.html"><img src="sources/images/institutions/logo-bsvrb.png" alt="BSVRB" class="title-logo"></a>
   </header>
-  <div class="hero">
-    <p class="tagline">Bündnis für sinnvolle Vernetzung in regionalen Belangen</p>
-  </div>
-  <nav>
-      <a href="index.html" class="icon-only" aria-label="Home">🏠</a>
-      <a href="interface/settings.html" class="icon-only" aria-label="Settings">⚙</a>
-      <a href="interface/login.html" class="icon-only" aria-label="Login">🔑</a>
-      <a href="interface/signup.html">Signup</a>
-      <a href="README.html" class="icon-only readme-link" aria-label="Help">?</a>
-      <button id="side_menu" type="button" class="icon-only" aria-label="Menu" data-min-op="OP-6">☰</button>
+  <nav aria-label="Main">
+    <a aria-current="page" class="icon-only" aria-label="Home">🏠</a>
+    <a href="signup.html" class="icon-only" aria-label="Signup or Login">🔑</a>
+    <a href="README.html" class="icon-only readme-link" aria-label="README">?</a>
   </nav>
-  <main id="main_content" class="cards-grid">
-    <div id="lang_selection" class="card" style="margin-bottom:1em;">
-      <label for="lang_select" data-ui="choose_language_label">Language:</label>
-      <select id="lang_select"></select>
-    </div>
-    <div id="departments_section">
-      <div id="departments_fallback" class="card">
-        <ul>
-          <li><a href="bsvrb-dept-1.html">Gesellschaft / Bewegung / Plattform</a></li>
-          <li><a href="bsvrb-dept-2.html">Bildung / Zukunft / Ethik</a></li>
-          <li><a href="bsvrb-dept-3.html">Technik / Innovation / Forschung</a></li>
-          <li><a href="bsvrb-dept-4.html">Gesellschaft + Genuss</a></li>
-          <li><a href="bsvrb-dept-5.html">Für Kultur, Natur, Mensch &amp; Region</a></li>
-        </ul>
-      </div>
-    </div>
-  <section class="card">
-    <h2>Qualitätskontrolle / Verantwortungssystem</h2>
-    <p><a href="bsvrb-quality.html">Details</a></p>
-  </section>
-
-  <section class="card">
-    <h2>Persönlicher Gatekeeper</h2>
-    <p><a href="downloads/personal-gatekeeper.zip">Download</a> – temporärer
-    Kontrolldienst.</p>
-  </section>
-
-  <section class="card">
-    <h2>Begonnene Projekte</h2>
-      <ul>
-        <li><a href="verax/index.html">Verax</a> – Entscheidungsspiel in natürlichem Raum.</li>
-        <li><a href="interface/fish-interface/fischeSchweiz.html">Fische Schweiz</a> – nationale Artenliste.</li>
-        <li><a href="beatclub-basel.html">Beatclub Basel</a> – Bier, Solidarität, Vielfalt, Rave &amp; Beats.</li>
-        <li><a href="grimmhorn.html">Grimmhorn</a> – Raum für laute Experimente.</li>
-        <li><a href="wings/index.html">Wings</a> – Ethik-Kompass für technologische Projekte.</li>
-        <li><a href="interface/tanna-registers.html">Tanna Demo</a> – Hintergrundanimation.</li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h2>Disclaimers</h2>
-      <ul>
-        <li>Diese Struktur wird ohne Gewährleistung bereitgestellt.</li>
-        <li>Die Nutzung erfolgt auf eigene Verantwortung.</li>
-        <li>4789 ist ein Standard für Verantwortung, keine Person.</li>
-        <li>Nutzung nur reflektiert und mit Konsequenz.</li>
-      </ul>
-    </section>
-  </main>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      getLanguage();
-      checkLanguageSetup();
-      initLanguageDropdown('lang_select');
-      localStorage.setItem('visited_start', 'true');
-      initSideDrop('interface/nav-menu.html');
-      const menu = document.getElementById('side_menu');
-      if(menu) menu.addEventListener('click', e => { e.preventDefault(); toggleSideDrop(); });
-    });
-  </script>
+  <main id="main_content"></main>
   <footer id="version_footer" class="text-xs text-center my-4"></footer>
-  <div id="side_drop"></div>
 </body>
 </html>

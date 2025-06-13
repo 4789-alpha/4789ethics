@@ -166,6 +166,8 @@ function initLogoBackground() {
       rotation: 0,
       rotSpeed: 0,
       rotFrames: 0,
+      boostFactor: 1,
+      boostFrames: 0,
       alpha: 1,
       scale: 1,
       scaleDir: 0,
@@ -265,6 +267,12 @@ function initLogoBackground() {
               s.scaleDir = -1;
               s.fadeOut = true;
               s.fadeStart = performance.now();
+              if (s.boostFrames === 0) {
+                s.dx *= 1.5;
+                s.dy *= 1.5;
+              }
+              s.boostFactor = 1.5;
+              s.boostFrames = 20;
             } else if (o.lvl < s.lvl) {
               const base = 0.2 + Math.random() * 0.3;
               const factor = 1 - o.lvl / (maxLvl + 1);
@@ -273,6 +281,12 @@ function initLogoBackground() {
               o.scaleDir = -1;
               o.fadeOut = true;
               o.fadeStart = performance.now();
+              if (o.boostFrames === 0) {
+                o.dx *= 1.5;
+                o.dy *= 1.5;
+              }
+              o.boostFactor = 1.5;
+              o.boostFrames = 20;
             }
           }
         }
@@ -280,6 +294,15 @@ function initLogoBackground() {
 
       s.dx *= RESTITUTION;
       s.dy *= RESTITUTION;
+
+      if (s.boostFrames > 0) {
+        s.boostFrames--;
+        if (s.boostFrames === 0) {
+          s.dx /= s.boostFactor;
+          s.dy /= s.boostFactor;
+          s.boostFactor = 1;
+        }
+      }
 
       if (Math.hypot(s.dx, s.dy) < MIN_VELOCITY) {
         const angle = Math.random() * Math.PI * 2;
@@ -306,7 +329,8 @@ function initLogoBackground() {
           } else if (s.scaleDir === 1) {
             s.scale += 0.02;
             if (s.scale >= 1) {
-              s.scale = 1;
+              const variance = (Math.random() - 0.5) * 0.0228;
+              s.scale = 1 + variance;
               s.scaleDir = 0;
             }
           }
