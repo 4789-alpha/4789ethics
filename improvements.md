@@ -7,7 +7,7 @@ Diese Liste enthält konkrete Vorschläge zur Verbesserung der Benutzerfreundlic
 ## 1. Einstieg & Zugänglichkeit
 
 - [x] Einführungsscript (setup.sh/install.py): Interaktive Erstkonfiguration.
-- [ ] Konsistente, sprechende Ordnerstruktur.
+- [x] Konsistente, sprechende Ordnerstruktur.
 
 ## 3. Login & Benutzerführung
 - [x] Optionales Loginmodul mit lokalem Userprofil.

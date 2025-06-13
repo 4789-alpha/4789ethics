@@ -148,6 +148,8 @@ bilden gemeinsam den Kern von MYRIA.
 | `anon_inputs/` | Anonymized user inputs aggregated by `anon-input-sync.js` |
 | `references/` | Reference tables and scores |
 
+See [docs/FOLDER_STRUCTURE.md](docs/FOLDER_STRUCTURE.md) for a concise directory overview.
+
 
 ### Interface Pages
 [⇧](#contents)

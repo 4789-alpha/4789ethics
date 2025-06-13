@@ -7,7 +7,7 @@ This file tracks pending improvements and roadmap actions.
 - [x] Use short, active sentences for better readability.
 - [x] Add a simple ASCII diagram of the workflow.
 - [x] Provide a setup script for initial configuration (`tools/guided-install.sh`).
-- [ ] Document a consistent folder structure.
+- [x] Document a consistent folder structure.
 - [ ] Keep default settings in `config.json`.
 
 ## User Handling
