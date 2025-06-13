@@ -3,9 +3,9 @@
 set -e
 
 # Disclaimers
-echo "Diese Struktur wird ohne Gew\u00e4hrleistung bereitgestellt. Fehler oder Auslassungen sind m\u00f6glich."
-echo "Die Nutzung erfolgt auf eigene Verantwortung. Weder Signature 4789 noch die Maintainer haften f\u00fcr Folgen oder Anspr\u00fcche."
-echo "4789 ist ein Standard f\u00fcr Verantwortung, keine Person und kein Glaubenssystem."
+echo "Diese Struktur wird ohne Gewährleistung bereitgestellt. Fehler oder Auslassungen sind möglich."
+echo "Die Nutzung erfolgt auf eigene Verantwortung. Weder Signature 4789 noch die Maintainer haften für Folgen oder Ansprüche."
+echo "4789 ist ein Standard für Verantwortung, keine Person und kein Glaubenssystem."
 echo "Nutzung nur reflektiert und mit Konsequenz, niemals zur Manipulation oder unkontrollierten Automatisierung."
 
 # Always run from repository root
