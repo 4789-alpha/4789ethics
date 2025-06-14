@@ -124,8 +124,8 @@ function initLogoBackground() {
 
   const symbols = [];
   // Density of floating symbols can be customized via settings
-  const storedPct = parseInt(localStorage.getItem('ethicom_bg_fill') || '40', 10);
-  const fillRatio = Number.isFinite(storedPct) ? storedPct / 100 : 0.4;
+  const storedPct = parseInt(localStorage.getItem('ethicom_bg_fill') || '80', 10);
+  const fillRatio = Number.isFinite(storedPct) ? storedPct / 100 : 0.8;
   const storedSize = parseInt(localStorage.getItem('ethicom_bg_symbol_size') || '100', 10);
   const sizeScale = Number.isFinite(storedSize) ? storedSize / 100 : 1;
   const avgSize =
