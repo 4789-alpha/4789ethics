@@ -6,7 +6,7 @@
 
 
 :root {
-  --bg-color: #1e1e1e;
+  --bg-color: transparent;
   --text-color: #e0e0e0;
   --header-text-color: var(--text-color);
   --nav-text-color: var(--text-color);
