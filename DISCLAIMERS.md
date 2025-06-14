@@ -19,3 +19,4 @@
 - Aliase bestehen nur aus Nickname und OP-Stufe und sind nicht an Realnamen gebunden.
 
 - TOTP-Geheimnisse werden verschluesselt gespeichert.
+- Der Verein unterscheidet aktive und passive Mitglieder. Aktive stellen einen Teil ihrer Serverressourcen zur Verfügung. Passive erhalten eine Serverinstanz und bestätigen monatlich ihre Mitgliedschaft, wobei ein Spesenbeitrag anfällt.
