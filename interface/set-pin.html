@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PIN eingeben – BSVRB</title>
+  <link rel="stylesheet" href="/ethicom-style.css">
+  <script src="/bundle.js" defer></script>
+  <script src="../utils/op-level.js"></script>
+  <script src="set-pin.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main_content">Skip to main content</a>
+  <div id="op_background"></div>
+  <main id="main_content" class="card" style="margin:2em auto;max-width:30em;">
+    <h1>PIN eingeben</h1>
+    <label for="pin_input">PIN:</label>
+    <input type="password" id="pin_input" inputmode="numeric" />
+    <button id="pin_btn">OK</button>
+    <p id="status"></p>
+  </main>
+</body>
+</html>
