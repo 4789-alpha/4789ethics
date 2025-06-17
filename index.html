@@ -8,6 +8,16 @@
   <script src="interface/bundle.js" defer></script>
   <script src="utils/op-level.js"></script>
   <script>
+    function initMemberDropdown(){
+      const names=[{id:"ref",label:"RL",pw:"pwSet_ref"},{id:"baduren",label:"MB",pw:"pwSet_baduren"},{id:"sime",label:"Sime",pw:"pin_sime"}];
+      const sel=document.getElementById("member_select");
+      if(!sel) return;
+      const remain=names.filter(n=>!localStorage.getItem(n.pw));
+      if(remain.length===0) {document.getElementById("member_login").style.display=none;return;}
+      sel.innerHTML=remain.map(n=>`<option value="${n.id}">${n.label}</option>`).join('');
+      if(remain.length===1) sel.innerHTML+=`<option value="signup">Mitglied werden</option>`;
+      document.getElementById("member_btn").onclick=function(){const v=sel.value;if(v==='signup') location.href='signup.html'; else if(v==='sime') location.href='interface/set-pin.html'; else location.href='interface/set-password.html?u='+v;};
+    }
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('./service-worker.js');
     }
@@ -30,6 +40,11 @@
   </nav>
   <main id="main_content">
     <p>Chatbot im Aufbau – experimentelle Version.</p>
+    <section class="card" style="max-width:20em;margin:2em auto;" id="member_login">
+      <label for="member_select">Login:</label>
+      <select id="member_select"></select>
+      <button id="member_btn">OK</button>
+    </section>
     <section class="card" style="max-width:40em;margin:2em auto;">
       <h1>Eigenen Server starten</h1>
       <p>So richtest du die Seite zuhause ein:</p>
@@ -88,7 +103,6 @@
   </main>
   <footer id="version_footer" class="text-xs text-center my-4"></footer>
   <script>
-    async function serverOnline() {
       try {
         const r = await fetch('config.json', {method:'HEAD', cache:'no-cache'});
         return r.ok;
@@ -97,6 +111,7 @@
       }
     }
     window.addEventListener('load', async () => {
+    initMemberDropdown();
       if (!await serverOnline()) {
         const el = document.getElementById('offline_fallback');
         if (el) el.style.display = 'block';
