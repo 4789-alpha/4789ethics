@@ -96,6 +96,7 @@ bilden gemeinsam den Kern von MYRIA.
 - [SRC vs. OO Levels](#src-vs-oo-levels)
 - [Evaluated Sources (as examples)](#evaluated-sources-as-examples)
 - [Person Image Sources](#person-image-sources)
+- [Digital Roles](docs/digital_roles.md)
 - [File Integrity](#file-integrity)
 - [Adding Languages](#adding-languages)
 - [Semantic Word Lists](#semantic-word-lists)
