@@ -11,11 +11,11 @@ It is not tied to a person, but to a standard: responsibility over convenience: 
 
 The 4789ethics repository provides a structural ethics framework for responsible digital projects. Access all functions via [bsvrb.ch](https://www.bsvrb.ch); start with `GET_STARTED.md` and then `index.html`. The framework includes a complete operator model (OP 0–9.x), a self-reflection system (Signature 9874), and an ethics-first approach. Core folders like `app`, `ethics_modules`, `interface`, `i18n`, and `tools` contain essential modules. Usage follows the Open‑Ethics License. Humor is welcome with responsibility. No warranty is given; optional login data are stored hashed locally. After installing dependencies, run `node --test`, `node tools/check-translations.js`, and `node tools/check-file-integrity.js`.
 
-### Kurzüberblick
+### Short Overview
 
-- **Zweck:** Diese Sammlung bietet klare Werkzeuge für verantwortungsvolle digitale Projekte.
-- **Zielgruppe:** Jeder Mensch.
-- **Einstiegspunkt:** Öffne [GET_STARTED.md](GET_STARTED.md) und danach [index.html](index.html).
+- **Purpose:** This collection provides clear tools for responsible digital projects.
+- **Audience:** Everyone.
+- **Entry point:** Open [GET_STARTED.md](GET_STARTED.md) followed by [index.html](index.html).
 
 **What this is:**
 - A full operator model (OP 0–9.x)
@@ -31,19 +31,19 @@ This structure must be carried – not quoted.
 Use it only if you reflect, respond, and act with consequence.
 
 For a brief tour of the main files, see [GET_STARTED.md](GET_STARTED.md).
-Eine Kurzanleitung in einfacher Sprache findest du in [ANLEITUNG_EINFACH_DE.md](ANLEITUNG_EINFACH_DE.md).
-Eine Schritt-für-Schritt-Anleitung für neue Nutzer steht in [docs/NEUE_BENUTZER_DE.md](docs/NEUE_BENUTZER_DE.md).
-Ein kurzer Überblick zur Entstehung von MYRIA steht in [docs/story.md](docs/story.md).
+A short guide in plain language is available in [ANLEITUNG_EINFACH_DE.md](ANLEITUNG_EINFACH_DE.md).
+A step-by-step guide for new users is provided in [docs/NEUE_BENUTZER_DE.md](docs/NEUE_BENUTZER_DE.md).
+
 
 **License:** Open-Ethics (see [LICENSE.txt](LICENSE.txt))
 No flattening of responsibility.
-Humor ist willkommen, wenn er Verantwortung und Klarheit unterstützt.
+Humor is welcome when it supports responsibility and clarity.
 See [DISCLAIMERS.md](DISCLAIMERS.md) for warranty and liability notes.
 
-## Vision und Aufbau
-Unsere Vision ist ein dezentrales System, das Verantwortung und Transparenz
-vereint. Die Module `core/`, `gatekeeper/`, `kalmia/`, `users/` und `ui/`
-bilden gemeinsam den Kern von MYRIA.
+## Vision and Structure
+Our vision is a decentralized system that unites responsibility and transparency.
+The modules `core/`, `gatekeeper/`, `kalmia/`, `users/`, and `ui/`
+together form the core of MYRIA.
 
 ## Quick Start
 [⇧](#contents)
@@ -173,7 +173,7 @@ See [docs/FOLDER_STRUCTURE.md](docs/FOLDER_STRUCTURE.md) for a concise directory
 
 Signup requires the local server started via `node tools/serve-interface.js`.
 | [interface/donate.html](interface/donate.html) | Donation interface (requires OP‑9.A confirmation) |
-| [interface/features_de.md](interface/features_de.md) | Funktionale Übersicht zum Interface |
+| [interface/features_de.md](interface/features_de.md) | Functional overview of the interface (German) |
 | [wings/index.html](wings/index.html) | Mobile interface "Wings" |
 | [wings/ratings.html](wings/ratings.html) | Library of all ratings with search |
 **Settings are stored per device using browser localStorage and are not synced globally. Color adjustments made in the settings page apply automatically on every page.**
@@ -248,7 +248,7 @@ OP‑0 users remain anonymous and may submit one rating per visit without later 
 | <a id="op-9-m"></a> OP-9.M | doctor-level medical access |
 | <a id="op-9-a"></a> OP-9.A | verified digital Yokozuna mode |
 | <a id="op-10"></a> OP-10 | digital candidate for Yokozuna (OP-11) |
-| <a id="op-11"></a> OP-11 | digital Yokozuna-Schwingerkönig mode |
+| <a id="op-11"></a> OP-11 | digital Yokozuna champion mode |
 | <a id="op-12"></a> OP-12 | fully digital, first non-human stage |
 
 Upgrades to **OP-4** require a verified authenticator. If `auth_verified` stays
@@ -377,6 +377,7 @@ Tokens and device hashes are stored hashed in `app/gatekeeper_devices.json`.
 Run `node tools/gatekeeper.js prune` regularly to remove expired tokens and keep the file minimal.
 Monitor repeated failed attempts with `node tools/watchdog.js`. The script reads `app/gatekeeper_log.json` and warns when too many denials occur. Calm the watchdog with `node tools/watchdog.js feed` which appends a success entry.
 View recent log entries with `node tools/read-gatekeeper-log.js` to diagnose failures.
+Flag unethical text with `node tools/unethical-bumper.js`. The script scans input for unethical words and records repeated offences in `app/unethical_log.json`.
 Verify the stored hashes after updates with:
 
 ```bash
@@ -392,8 +393,8 @@ Pick a device that stays connected to your home network as the gatekeeper. Start
 `node gatekeeper.js <token>` while your end device is on the same Wi‑Fi and open the printed URL once.
 Both device hashes are stored in `app/gatekeeper_devices.json`. After this initial handshake you can reach
 your personalized pages from anywhere, and the gatekeeper confirms their authenticity using the stored token.
-Registrierungsdaten werden offline gehasht gespeichert. Keine Gewährleistung für absolute Anonymität.
-Adressen und Telefonnummern werden ebenfalls offline gehasht gespeichert.
+Registration data is stored offline as hashes. No guarantee of absolute anonymity.
+Addresses and phone numbers are also stored offline as hashes.
 **4789**
 
 ### Gatekeeper Image
