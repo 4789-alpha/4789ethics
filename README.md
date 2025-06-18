@@ -373,6 +373,7 @@ Tokens and device hashes are stored hashed in `app/gatekeeper_devices.json`.
 Run `node tools/gatekeeper.js prune` regularly to remove expired tokens and keep the file minimal.
 Monitor repeated failed attempts with `node tools/watchdog.js`. The script reads `app/gatekeeper_log.json` and warns when too many denials occur. Calm the watchdog with `node tools/watchdog.js feed` which appends a success entry.
 View recent log entries with `node tools/read-gatekeeper-log.js` to diagnose failures.
+Flag unethical text with `node tools/unethical-bumper.js`. The script scans input for unethical words and records repeated offences in `app/unethical_log.json`.
 Verify the stored hashes after updates with:
 
 ```bash
