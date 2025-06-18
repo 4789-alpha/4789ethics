@@ -30,6 +30,7 @@ For a brief tour of the main files, see [GET_STARTED.md](GET_STARTED.md).
 A short guide in plain language is available in [ANLEITUNG_EINFACH_DE.md](ANLEITUNG_EINFACH_DE.md).
 A step-by-step guide for new users is provided in [docs/NEUE_BENUTZER_DE.md](docs/NEUE_BENUTZER_DE.md).
 
+
 **License:** Open-Ethics (see [LICENSE.txt](LICENSE.txt))
 No flattening of responsibility.
 Humor is welcome when it supports responsibility and clarity.
