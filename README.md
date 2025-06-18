@@ -7,6 +7,10 @@ It is not tied to a person, but to a standard: responsibility over convenience: 
 **All functions are accessible on [bsvrb.ch](https://www.bsvrb.ch) and run according to your OP level.**
 **Open [`index.html`](index.html) from the register to run them in the browser.**
 
+### Abstract
+
+The 4789ethics repository provides a structural ethics framework for responsible digital projects. Access all functions via [bsvrb.ch](https://www.bsvrb.ch); start with `GET_STARTED.md` and then `index.html`. The framework includes a complete operator model (OP 0–9.x), a self-reflection system (Signature 9874), and an ethics-first approach. Core folders like `app`, `ethics_modules`, `interface`, `i18n`, and `tools` contain essential modules. Usage follows the Open‑Ethics License. Humor is welcome with responsibility. No warranty is given; optional login data are stored hashed locally. After installing dependencies, run `node --test`, `node tools/check-translations.js`, and `node tools/check-file-integrity.js`.
+
 ### Kurzüberblick
 
 - **Zweck:** Diese Sammlung bietet klare Werkzeuge für verantwortungsvolle digitale Projekte.

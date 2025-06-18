@@ -3,6 +3,10 @@
 **Ethicom** ermöglicht Menschen, digitale Quellen, Systeme oder Verhaltensweisen auf transparente Weise zu bewerten – entlang einer strukturierten Skala (SRC-0 bis SRC-8+).
 Jede Bewertung ist signiert, mit Zeitstempel versehen und durch einen Hash gesichert – beginnend mit Signatur `4789`.
 
+
+### Kurzfassung
+
+Das Repository 4789ethics liefert ein strukturelles Ethikframework für verantwortungsvolle digitale Projekte. Alle Funktionen sind über [bsvrb.ch](https://www.bsvrb.ch) erreichbar. Starte mit `GET_STARTED.md` und danach `index.html`. Das Framework umfasst ein vollständiges Operator-Modell (OP 0–9.x), ein Selbstreflexionssystem (Signatur 9874) und einen Ethik-First-Ansatz. Wichtige Verzeichnisse wie `app`, `ethics_modules`, `interface`, `i18n` und `tools` enthalten die Kernmodule. Die Nutzung unterliegt der Open‑Ethics-Lizenz. Humor ist mit Verantwortung möglich. Es gibt keine Gewährleistung; optionale Login-Daten werden lokal gehasht gespeichert. Entwickler führen nach der Installation `node --test`, `node tools/check-translations.js` und `node tools/check-file-integrity.js` aus.
 Inhalt dieses Repos:
 - Mehrsprachige UI-Definitionen
 - Ethische Stufen (`ethikscale`)
