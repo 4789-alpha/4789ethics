@@ -86,6 +86,15 @@ Die folgenden Abschnitte fassen die Kernbausteine von VERAX zusammen.
 
 VERAX befindet sich im aktiven Aufbau. Neue Limen-Routen, Tierprofile, Codex-Mappings und Entscheidungslogiken werden fortlaufend ergänzt.
 
+## Neue Limen-Routen
+
+So legst du selbst eine Route an:
+
+1. **Editor starten** – rufe `/verax/index.html` auf und wähle "Route bearbeiten".
+2. **Wegpunkte setzen** – klicke auf der Karte auf Start, Engstellen und Ziel.
+3. **Story hinzufügen** – jeder Punkt erlaubt einen kurzen Beschreibungstext.
+4. **GPX/JSON speichern** – speichere die Strecke als `.gpx` und im Ordner `logs/` als `.json`.
+
 ## Lizenz
 
 BSVRB-intern – nicht-kommerzielle Nutzung im Rahmen des Verbands. Entwickelt mit Aarulon. Kontakt: <https://www.bsvrb.ch>
