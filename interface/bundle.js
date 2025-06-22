@@ -868,7 +868,7 @@ function openColorSettingsWizard(){
 
   cancelBtn.addEventListener('click', () => overlay.remove());
 
-  const tempTheme = localStorage.getItem('ethicom_theme') || 'transparent';
+  const tempTheme = localStorage.getItem('ethicom_theme') || 'tanna-dark';
   tempColors = {};
 
   const steps = [];
@@ -948,7 +948,7 @@ window.openColorSettingsWizard = openColorSettingsWizard;
 
 function openColorSettingsWizardCLI(){
   const themes=['dark','tanna-dark','tanna','transparent','ocean','desert','accessible','custom'];
-  let theme=prompt('Color Scheme ('+themes.join(', ')+'):',localStorage.getItem('ethicom_theme')||'transparent');
+  let theme=prompt('Color Scheme ('+themes.join(', ')+'):',localStorage.getItem('ethicom_theme')||'tanna-dark');
   if(theme&&themes.includes(theme)){
     localStorage.setItem('ethicom_theme',theme);
     if(typeof applyTheme==='function') applyTheme(theme);
@@ -2326,16 +2326,22 @@ function applyLoginTexts() {
     if (lang.startsWith('de')) formalityLabel.textContent = 'Ansprache:';
     else formalityLabel.textContent = 'Address formality:';
   }
+  const humorLabel = document.querySelector('label[for="humor_toggle"]');
+  if (humorLabel) humorLabel.textContent = t.humor_toggle_label || humorLabel.textContent;
 }
 
-function makeWelcome(name, formality) {
+function makeWelcome(name, formality, humor) {
   const lang = document.documentElement.lang || 'de';
   if (lang.startsWith('de')) {
     if (formality === 'sie') return `Sch\u00f6n, dass Sie wieder da sind, ${name}.`;
     if (formality === 'neutral') return `Willkommen zur\u00fcck, ${name}.`;
-    return `Sch\u00f6n, dass du wieder da bist, ${name}.`;
+    let msg = `Sch\u00f6n, dass du wieder da bist, ${name}.`;
+    if (humor) msg += ' \u263A';
+    return msg;
   }
-  return (uiText.login_welcome || 'Welcome back, {name}.').replace('{name}', name);
+  let msg = (uiText.login_welcome || 'Welcome back, {name}.').replace('{name}', name);
+  if (humor) msg += ' \u263A';
+  return msg;
 }
 
 function initLogin() {
@@ -2358,9 +2364,11 @@ function loadProfile() {
       }
       const sel = document.getElementById('formality_select');
       if (sel && p.formality) sel.value = p.formality;
+      const humorBox = document.getElementById('humor_toggle');
+      if (humorBox) humorBox.checked = !!p.humor;
       if (p.alias) {
         const statusEl = document.getElementById('login_status');
-        statusEl.textContent = makeWelcome(p.alias, p.formality);
+        statusEl.textContent = makeWelcome(p.alias, p.formality, p.humor);
       }
     })
     .catch(() => {});
@@ -2399,10 +2407,11 @@ function handleLogin() {
       const sig = { email, id: data.id, op_level: data.op_level, alias: data.alias };
       localStorage.setItem('ethicom_signature', JSON.stringify(sig));
       const formality = document.getElementById('formality_select')?.value || 'du';
+      const humor = document.getElementById('humor_toggle')?.checked || false;
       fetch('/api/profile', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ alias: data.alias, lang: getLanguage(), formality })
+        body: JSON.stringify({ alias: data.alias, lang: getLanguage(), formality, humor })
       }).catch(() => {});
       statusEl.textContent = uiText.login_saved || 'Login successful. ID stored.';
       setTimeout(() => { window.location.href = 'ethicom.html'; }, 500);
@@ -2430,6 +2439,13 @@ function initLogoBackground() {
   const container = document.getElementById('op_background');
   if (!container) return;
   localStorage.setItem('ethicom_bg_collisions', 'true');
+
+  if (!localStorage.getItem('ethicom_bg_fill')) {
+    localStorage.setItem('ethicom_bg_fill', '90');
+  }
+  if (!localStorage.getItem('ethicom_bg_symbol_size')) {
+    localStorage.setItem('ethicom_bg_symbol_size', '120');
+  }
 
   let RESTITUTION = 1;
   const storedRest = parseFloat(localStorage.getItem('ethicom_bg_restitution'));
@@ -2552,8 +2568,8 @@ function initLogoBackground() {
 
   const symbols = [];
   // Density of floating symbols can be customized via settings
-  const storedPct = parseInt(localStorage.getItem('ethicom_bg_fill') || '40', 10);
-  const fillRatio = Number.isFinite(storedPct) ? storedPct / 100 : 0.4;
+  const storedPct = parseInt(localStorage.getItem('ethicom_bg_fill') || '80', 10);
+  const fillRatio = Number.isFinite(storedPct) ? storedPct / 100 : 0.8;
   const storedSize = parseInt(localStorage.getItem('ethicom_bg_symbol_size') || '100', 10);
   const sizeScale = Number.isFinite(storedSize) ? storedSize / 100 : 1;
   const avgSize =
@@ -3530,6 +3546,69 @@ if (typeof module !== 'undefined') {
   setInterval(check, 60 * 1000);
 })();
 
+
+
+//----- set-password.js -----
+function getParam(name) {
+  const m = new URLSearchParams(location.search).get(name);
+  return m ? m.replace(/[^a-z0-9_-]/gi, '') : '';
+}
+
+async function savePassword(user) {
+  const pw1 = document.getElementById('pw1').value;
+  const pw2 = document.getElementById('pw2').value;
+  const status = document.getElementById('status');
+  status.textContent = '';
+  if (pw1 !== pw2) { status.textContent = 'Passw\u00f6rter stimmen nicht \u00fcberein.'; return; }
+  if (pw1.length < 8) { status.textContent = 'Mindestens 8 Zeichen.'; return; }
+  const hash = await sha256(pw1);
+  localStorage.setItem('pw_' + user, hash);
+  localStorage.setItem('pwSet_' + user, '1');
+  status.textContent = 'Gespeichert.';
+  setTimeout(() => { location.href = '../index.html'; }, 500);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const user = getParam('u');
+  const label = document.getElementById('user_label');
+  if (user === 'ref') label.textContent = 'Login f\u00fcr RL';
+  else if (user === 'baduren') label.textContent = 'Login f\u00fcr MB';
+  else label.textContent = user;
+  document.getElementById('save_btn').addEventListener('click', () => savePassword(user));
+});
+
+
+//----- set-pin.js -----
+function tryPin() {
+  const pin = document.getElementById('pin_input').value.trim();
+  const status = document.getElementById('status');
+  const blockedUntil = parseInt(localStorage.getItem('sime_blocked') || '0', 10);
+  if (blockedUntil > Date.now()) {
+    const dt = new Date(blockedUntil).toLocaleString();
+    status.textContent = 'Gesperrt bis ' + dt;
+    return;
+  }
+  if (pin === '1988') {
+    localStorage.setItem('pin_sime', '1988');
+    localStorage.removeItem('sime_attempts');
+    status.textContent = 'Willkommen.';
+    setTimeout(() => { location.href = '../index.html'; }, 500);
+    return;
+  }
+  let attempts = parseInt(localStorage.getItem('sime_attempts') || '0', 10) + 1;
+  localStorage.setItem('sime_attempts', attempts);
+  if (attempts > 2) {
+    const until = Date.now() + 24*3600*1000;
+    localStorage.setItem('sime_blocked', until.toString());
+    status.textContent = 'Zu viele Fehlversuche. IP 24h blockiert. Admin RL informiert.';
+  } else {
+    status.textContent = 'Falscher PIN.';
+  }
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('pin_btn').addEventListener('click', tryPin);
+});
 
 
 //----- side-drop.js -----
@@ -4940,7 +5019,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 //----- version.js -----
 window.APP_VERSION = '1.0.0';
-window.APP_COMMIT = 'd19fed3';
+window.APP_COMMIT = '5b1c26a';
 
 function displayVersionInfo() {
   var el = document.getElementById('version_footer');
