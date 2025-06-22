@@ -3,6 +3,13 @@ function initLogoBackground() {
   if (!container) return;
   localStorage.setItem('ethicom_bg_collisions', 'true');
 
+  if (!localStorage.getItem('ethicom_bg_fill')) {
+    localStorage.setItem('ethicom_bg_fill', '90');
+  }
+  if (!localStorage.getItem('ethicom_bg_symbol_size')) {
+    localStorage.setItem('ethicom_bg_symbol_size', '120');
+  }
+
   let RESTITUTION = 1;
   const storedRest = parseFloat(localStorage.getItem('ethicom_bg_restitution'));
   if (!Number.isNaN(storedRest)) RESTITUTION = storedRest;
