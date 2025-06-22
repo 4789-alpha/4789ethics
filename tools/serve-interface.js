@@ -191,7 +191,9 @@ function writeJson(file, data) {
 }
 
 function readProfile() {
-  return db.getProfile();
+  const base = db.getProfile();
+  const defaults = cfg.defaults || {};
+  return { ...defaults, ...base };
 }
 
 function writeProfile(data) {

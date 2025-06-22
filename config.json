@@ -11,5 +11,9 @@
     "gatekeeperDevices": "app/gatekeeper_devices.json",
     "gatekeeperLog": "app/gatekeeper_log.json",
     "demotionLog": "app/demotion_log.json"
+  },
+  "defaults": {
+    "formality": "du",
+    "humor": false
   }
 }

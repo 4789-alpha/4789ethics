@@ -19,16 +19,22 @@ function applyLoginTexts() {
     if (lang.startsWith('de')) formalityLabel.textContent = 'Ansprache:';
     else formalityLabel.textContent = 'Address formality:';
   }
+  const humorLabel = document.querySelector('label[for="humor_toggle"]');
+  if (humorLabel) humorLabel.textContent = t.humor_toggle_label || humorLabel.textContent;
 }
 
-function makeWelcome(name, formality) {
+function makeWelcome(name, formality, humor) {
   const lang = document.documentElement.lang || 'de';
   if (lang.startsWith('de')) {
     if (formality === 'sie') return `Sch\u00f6n, dass Sie wieder da sind, ${name}.`;
     if (formality === 'neutral') return `Willkommen zur\u00fcck, ${name}.`;
-    return `Sch\u00f6n, dass du wieder da bist, ${name}.`;
+    let msg = `Sch\u00f6n, dass du wieder da bist, ${name}.`;
+    if (humor) msg += ' \u263A';
+    return msg;
   }
-  return (uiText.login_welcome || 'Welcome back, {name}.').replace('{name}', name);
+  let msg = (uiText.login_welcome || 'Welcome back, {name}.').replace('{name}', name);
+  if (humor) msg += ' \u263A';
+  return msg;
 }
 
 function initLogin() {
@@ -51,9 +57,11 @@ function loadProfile() {
       }
       const sel = document.getElementById('formality_select');
       if (sel && p.formality) sel.value = p.formality;
+      const humorBox = document.getElementById('humor_toggle');
+      if (humorBox) humorBox.checked = !!p.humor;
       if (p.alias) {
         const statusEl = document.getElementById('login_status');
-        statusEl.textContent = makeWelcome(p.alias, p.formality);
+        statusEl.textContent = makeWelcome(p.alias, p.formality, p.humor);
       }
     })
     .catch(() => {});
@@ -92,10 +100,11 @@ function handleLogin() {
       const sig = { email, id: data.id, op_level: data.op_level, alias: data.alias };
       localStorage.setItem('ethicom_signature', JSON.stringify(sig));
       const formality = document.getElementById('formality_select')?.value || 'du';
+      const humor = document.getElementById('humor_toggle')?.checked || false;
       fetch('/api/profile', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ alias: data.alias, lang: getLanguage(), formality })
+        body: JSON.stringify({ alias: data.alias, lang: getLanguage(), formality, humor })
       }).catch(() => {});
       statusEl.textContent = uiText.login_saved || 'Login successful. ID stored.';
       setTimeout(() => { window.location.href = 'ethicom.html'; }, 500);
