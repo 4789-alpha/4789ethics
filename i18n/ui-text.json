@@ -113,7 +113,9 @@
     "nav_navigator": "Navigator Menu",
     "nav_story": "Story",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "verax_new_route": "New Route",
+    "verax_add_stop": "Add Stop"
   },
   "de": {
     "title": "Ethicom: Bewertung durch Menschen",
@@ -229,7 +231,9 @@
     "nav_navigator": "Navigator",
     "nav_story": "Geschichte",
     "signup_server_notice": "Nur mit lokalem Server nutzbar. Offline-signup.html verwenden, falls nötig.",
-    "login_welcome": "Willkommen zurück, {name}."
+    "login_welcome": "Willkommen zurück, {name}.",
+    "verax_new_route": "Neue Route",
+    "verax_add_stop": "Stopp hinzufügen"
   },
   "de-ch": {
     "title": "Ethicom: Bewertung durch Menschen",
@@ -345,7 +349,9 @@
     "nav_navigator": "Navigator",
     "nav_story": "Geschichte",
     "signup_server_notice": "Nur mit lokalem Server nutzbar. Offline-signup.html verwenden, falls nötig.",
-    "login_welcome": "Willkommen zurück, {name}."
+    "login_welcome": "Willkommen zurück, {name}.",
+    "verax_new_route": "Neue Route",
+    "verax_add_stop": "Stopp hinzufügen"
   },
   "fr": {
     "title": "Ethicom : Évaluation humaine",
@@ -461,7 +467,9 @@
     "nav_story": "Story",
     "nav_navigator": "Navigator Menu",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "verax_new_route": "New Route",
+    "verax_add_stop": "Add Stop"
   },
   "es": {
     "title": "Ethicom: Evaluación Humana",
@@ -577,7 +585,9 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "verax_new_route": "New Route",
+    "verax_add_stop": "Add Stop"
   },
   "pt": {
     "title": "Ethicom: Avaliação Humana",
@@ -692,7 +702,9 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "verax_new_route": "New Route",
+    "verax_add_stop": "Add Stop"
   },
   "zh": {
     "title": "Ethicom：人工评估",
@@ -808,7 +820,9 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "verax_new_route": "New Route",
+    "verax_add_stop": "Add Stop"
   },
   "hi": {
     "title": "Ethicom: मानवीय मूल्यांकन",
@@ -923,7 +937,9 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "verax_new_route": "New Route",
+    "verax_add_stop": "Add Stop"
   },
   "ar": {
     "title": "إيثيكوم: التقييم البشري",
@@ -1038,7 +1054,9 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "verax_new_route": "New Route",
+    "verax_add_stop": "Add Stop"
   },
   "ja": {
     "title": "Ethicom：人間による評価",
@@ -1153,7 +1171,9 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "verax_new_route": "New Route",
+    "verax_add_stop": "Add Stop"
   },
   "sw": {
     "title": "Ethicom: Tathmini ya Kibinadamu",
@@ -1268,7 +1288,9 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "verax_new_route": "New Route",
+    "verax_add_stop": "Add Stop"
   },
   "ru": {
     "title": "Ethicom: Оценка человеком",
@@ -1383,7 +1405,9 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "verax_new_route": "New Route",
+    "verax_add_stop": "Add Stop"
   },
   "it": {
     "title": "Ethicom: Valutazione Umana",
@@ -1499,7 +1523,9 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "verax_new_route": "New Route",
+    "verax_add_stop": "Add Stop"
   },
   "ko": {
     "title": "Ethicom: 인간 평가",
@@ -1614,7 +1640,9 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "verax_new_route": "New Route",
+    "verax_add_stop": "Add Stop"
   },
   "fa": {
     "title": "ایتیکام: ارزیابی انسانی",
@@ -1729,7 +1757,9 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "verax_new_route": "New Route",
+    "verax_add_stop": "Add Stop"
   },
   "pl": {
     "title": "Ethicom: Ocena Ludzka",
@@ -1844,7 +1874,9 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "verax_new_route": "New Route",
+    "verax_add_stop": "Add Stop"
   },
   "am": {
     "title": "Ethicom: Human Evaluation",
@@ -1959,7 +1991,9 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "verax_new_route": "New Route",
+    "verax_add_stop": "Add Stop"
   },
   "af": {
     "title": "Ethicom: Human Evaluation",
@@ -2074,7 +2108,9 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "verax_new_route": "New Route",
+    "verax_add_stop": "Add Stop"
   },
   "bn": {
     "title": "Ethicom: Human Evaluation",
@@ -2189,7 +2225,9 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "verax_new_route": "New Route",
+    "verax_add_stop": "Add Stop"
   },
   "ha": {
     "title": "Ethicom: Human Evaluation",
@@ -2304,7 +2342,9 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "verax_new_route": "New Route",
+    "verax_add_stop": "Add Stop"
   },
   "id": {
     "title": "Ethicom: Human Evaluation",
@@ -2419,7 +2459,9 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "verax_new_route": "New Route",
+    "verax_add_stop": "Add Stop"
   },
   "ig": {
     "title": "Ethicom: Human Evaluation",
@@ -2534,7 +2576,9 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "verax_new_route": "New Route",
+    "verax_add_stop": "Add Stop"
   },
   "om": {
     "title": "Ethicom: Human Evaluation",
@@ -2649,7 +2693,9 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "verax_new_route": "New Route",
+    "verax_add_stop": "Add Stop"
   },
   "rm": {
     "title": "Ethicom: Human Evaluation",
@@ -2764,7 +2810,9 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "verax_new_route": "New Route",
+    "verax_add_stop": "Add Stop"
   },
   "ta": {
     "title": "Ethicom: Human Evaluation",
@@ -2879,7 +2927,9 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "verax_new_route": "New Route",
+    "verax_add_stop": "Add Stop"
   },
   "te": {
     "title": "Ethicom: Human Evaluation",
@@ -2994,7 +3044,9 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "verax_new_route": "New Route",
+    "verax_add_stop": "Add Stop"
   },
   "th": {
     "title": "Ethicom: Human Evaluation",
@@ -3109,7 +3161,9 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "verax_new_route": "New Route",
+    "verax_add_stop": "Add Stop"
   },
   "tr": {
     "title": "Ethicom: Human Evaluation",
@@ -3224,7 +3278,9 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "verax_new_route": "New Route",
+    "verax_add_stop": "Add Stop"
   },
   "ur": {
     "title": "Ethicom: Human Evaluation",
@@ -3340,7 +3396,9 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "verax_new_route": "New Route",
+    "verax_add_stop": "Add Stop"
   },
   "vi": {
     "title": "Ethicom: Human Evaluation",
@@ -3455,7 +3513,9 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "verax_new_route": "New Route",
+    "verax_add_stop": "Add Stop"
   },
   "xh": {
     "title": "Ethicom: Human Evaluation",
@@ -3570,7 +3630,9 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "verax_new_route": "New Route",
+    "verax_add_stop": "Add Stop"
   },
   "yo": {
     "title": "Ethicom: Human Evaluation",
@@ -3685,7 +3747,9 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "verax_new_route": "New Route",
+    "verax_add_stop": "Add Stop"
   },
   "zu": {
     "title": "Ethicom: Human Evaluation",
@@ -3800,7 +3864,9 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "verax_new_route": "New Route",
+    "verax_add_stop": "Add Stop"
   },
   "nl": {
     "title": "Ethicom: Menselijke Evaluatie",
@@ -3915,6 +3981,8 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "verax_new_route": "New Route",
+    "verax_add_stop": "Add Stop"
   }
 }

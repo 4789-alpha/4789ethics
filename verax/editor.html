@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Verax Editor</title>
+  <link rel="stylesheet" href="../interface/ethicom-style.css" />
+  <script src="../interface/bundle.js" defer></script>
+  <script src="../utils/op-level.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.css" />
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.js"></script>
+  <style>
+    body, html { margin: 0; padding: 0; }
+    #map { height: 60vh; width: 100%; }
+    form { margin: 1rem; display: none; }
+    label { display: block; margin-top: 0.5rem; }
+    #exportBtn { margin: 1rem; }
+  </style>
+</head>
+<body>
+  <div id="op_background" aria-hidden="true"></div>
+  <header>
+    <h1>VERAX Editor</h1>
+  </header>
+  <div id="map"></div>
+  <form id="stopForm">
+    <h2 data-i18n="verax_add_stop">Add Stop</h2>
+    <label>Name: <input type="text" id="stopName" required></label>
+    <label>Type: <input type="text" id="stopType" required></label>
+    <label>Attempts/Time limit: <input type="number" id="stopAttempts" min="1" value="1"></label>
+    <button type="button" id="saveStop">Save</button>
+  </form>
+  <button id="exportBtn" data-i18n="verax_new_route">Export</button>
+<script>
+const map = L.map('map').setView([46.8345, 7.4953], 14);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom:18 }).addTo(map);
+const drawnItems = new L.FeatureGroup().addTo(map);
+const drawControl = new L.Control.Draw({
+  edit: { featureGroup: drawnItems },
+  draw: { polygon:false, circle:false, rectangle:false, circlemarker:false }
+});
+map.addControl(drawControl);
+let currentMarker = null;
+const stops = [];
+map.on(L.Draw.Event.CREATED, e => {
+  const layer = e.layer;
+  if (e.layerType === 'polyline') {
+    drawnItems.addLayer(layer);
+  } else if (e.layerType === 'marker') {
+    currentMarker = layer;
+    document.getElementById('stopForm').style.display = 'block';
+  }
+});
+
+document.getElementById('saveStop').onclick = () => {
+  if (!currentMarker) return;
+  const stop = {
+    name: document.getElementById('stopName').value,
+    typ: document.getElementById('stopType').value,
+    versuche: parseInt(document.getElementById('stopAttempts').value, 10) || 1,
+    lat: currentMarker.getLatLng().lat,
+    lon: currentMarker.getLatLng().lng
+  };
+  stops.push(stop);
+  currentMarker.bindPopup(stop.name).addTo(drawnItems);
+  currentMarker = null;
+  document.getElementById('stopForm').reset();
+  document.getElementById('stopForm').style.display = 'none';
+};
+
+function toGPX() {
+  let gpx = '<?xml version="1.0" encoding="UTF-8"?>\n<gpx version="1.1" creator="VERAX">\n  <rte>\n';
+  drawnItems.eachLayer(l => {
+    if (l instanceof L.Polyline && !(l instanceof L.Polygon)) {
+      l.getLatLngs().forEach(pt => {
+        gpx += `    <rtept lat="${pt.lat}" lon="${pt.lng}"></rtept>\n`;
+      });
+    }
+  });
+  stops.forEach(s => {
+    gpx += `    <rtept lat="${s.lat}" lon="${s.lon}"><desc>${s.name}</desc></rtept>\n`;
+  });
+  gpx += '  </rte>\n</gpx>';
+  return gpx;
+}
+
+document.getElementById('exportBtn').onclick = () => {
+  const gpxData = toGPX();
+  const gpxBlob = new Blob([gpxData], { type: 'application/gpx+xml' });
+  const a1 = document.createElement('a');
+  a1.href = URL.createObjectURL(gpxBlob);
+  a1.download = 'editor-route.gpx';
+  a1.click();
+  const stopBlob = new Blob([JSON.stringify(stops, null, 2)], { type: 'application/json' });
+  const a2 = document.createElement('a');
+  a2.href = URL.createObjectURL(stopBlob);
+  a2.download = 'stops.json';
+  a2.click();
+};
+
+document.addEventListener('DOMContentLoaded', () => { applyTheme('tanna-dark'); });
+</script>
+</body>
+</html>
