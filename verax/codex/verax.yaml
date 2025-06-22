@@ -100,3 +100,11 @@ meta:
   erstellt: "2025-06-07"
   autor: "R. Lauper / Aarulon"
   lizenz: "BSVRB intern"
+
+stops:
+  - name: "Beispiel-Stop"
+    typ: "Rast"
+    versuche: 1
+    zeitlimit: 60
+    lat: 46.8345
+    lon: 7.4935

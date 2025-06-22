@@ -5,6 +5,7 @@
   "main": "tools/serve-interface.js",
   "dependencies": {
     "express": "^4.19.2",
+    "js-yaml": "^4.1.0",
     "node-telegram-bot-api": "^0.66.0"
   },
   "optionalDependencies": {

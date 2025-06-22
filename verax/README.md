@@ -75,6 +75,7 @@ Die folgenden Abschnitte fassen die Kernbausteine von VERAX zusammen.
 - Gefahren wie Bären, Wildflüsse, Kälte oder moralische Dilemmata
 - Authentische Einbindung historisch-helvetischer Symbolik
 - Interaktive Karte mit GPX-Vektor und Engstellenanzeige (Leaflet.js)
+- Editor zum Zeichnen neuer Routen und Stops (`editor.html`)
 
 ## Voraussetzungen
 
@@ -82,6 +83,13 @@ Die folgenden Abschnitte fassen die Kernbausteine von VERAX zusammen.
 - Flutter SDK (für App-Entwicklung)
 - Zugriff auf `/verax/` auf bsvrb.ch
 - Optionaler Swisstopo-Zugang für Schweizer Kartenlayer
+
+### Editor
+
+Mit `editor.html` lassen sich neue Routen direkt im Browser einzeichnen.
+Mit dem Zeichenwerkzeug erstellt man die Linienführung und fügt Marker als
+Stops hinzu. Nach dem Speichern können GPX-Datei und Stop-Daten als JSON
+heruntergeladen und in `map/` bzw. `codex/verax.yaml` abgelegt werden.
 
 ## Projektstatus
 
