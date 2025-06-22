@@ -192,6 +192,10 @@ Users may add a nickname during signup. The server combines it with the OP level
 
 In this anonymous system, the OP signature stands in for the person. Personal data remains private and becomes visible only when a user releases it at the corresponding OP sublevel; see [signaturdesign.md](signaturdesign.md) and [DISCLAIMERS.md](DISCLAIMERS.md).
 
+**Purpose of anonymization:** All ratings are collected in `anon_inputs/` and later merged
+with `anon-input-sync.js`. This turns subjective opinions into one understandable picture
+without revealing individual identities.
+
 ### Login Methods by OP Level
 [⇧](#contents)
 
