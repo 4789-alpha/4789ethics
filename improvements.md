@@ -22,9 +22,9 @@ Diese Liste enthält konkrete Vorschläge zur Verbesserung der Benutzerfreundlic
 
 ## 5. Sprachführung & Dialoge
 - [x] Globale Sprachumschaltung via locales/*.json.
-- [ ] Einstellung für Du/Sie oder neutrale Ansprache.
+- [x] Einstellung für Du/Sie oder neutrale Ansprache.
 - [x] Fehlermeldungen mit klaren Hinweisen zur Lösung.
-- [ ] Optionale humorvolle Rückmeldungen ohne Klarheit zu verlieren.
+- [x] Optionale humorvolle Rückmeldungen ohne Klarheit zu verlieren.
 
 ## 6. Weiterführende Verbesserungen
 - [x] API-Dokumentation mit OpenAPI/YAML.

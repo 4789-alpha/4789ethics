@@ -8,7 +8,7 @@ This file tracks pending improvements and roadmap actions.
 - [x] Add a simple ASCII diagram of the workflow.
 - [x] Provide a setup script for initial configuration (`tools/guided-install.sh`).
 - [x] Document a consistent folder structure.
-- [ ] Keep default settings in `config.json`.
+ - [x] Keep default settings in `config.json`.
 
 ## User Handling
 - [x] Offer optional local login.
@@ -23,14 +23,14 @@ This file tracks pending improvements and roadmap actions.
 
 ## Language and Feedback
 - [x] Allow global language switching via `locales/*.json`.
-- [ ] Provide options for formal, informal or neutral address.
+ - [x] Provide options for formal, informal or neutral address.
 - [x] Give clearer error messages with hints.
-- [ ] Add optional humorous responses.
+ - [x] Add optional humorous responses.
 
 ## Advanced
 - [x] Publish an OpenAPI spec.
 - [x] Add integrated help (`--help` or hotkeys).
-- [ ] Display version and build number in the interface.
+ - [x] Display version and build number in the interface.
 
 ## Roadmap Items
 - [ ] Replace the pass/ID system with an optional anonymous level.

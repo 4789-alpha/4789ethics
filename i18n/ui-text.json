@@ -113,7 +113,8 @@
     "nav_navigator": "Navigator Menu",
     "nav_story": "Story",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "humor_toggle_label": "Humorous responses"
   },
   "de": {
     "title": "Ethicom: Bewertung durch Menschen",
@@ -229,7 +230,8 @@
     "nav_navigator": "Navigator",
     "nav_story": "Geschichte",
     "signup_server_notice": "Nur mit lokalem Server nutzbar. Offline-signup.html verwenden, falls nötig.",
-    "login_welcome": "Willkommen zurück, {name}."
+    "login_welcome": "Willkommen zurück, {name}.",
+    "humor_toggle_label": "Humorvolle Rückmeldungen"
   },
   "de-ch": {
     "title": "Ethicom: Bewertung durch Menschen",
@@ -345,7 +347,8 @@
     "nav_navigator": "Navigator",
     "nav_story": "Geschichte",
     "signup_server_notice": "Nur mit lokalem Server nutzbar. Offline-signup.html verwenden, falls nötig.",
-    "login_welcome": "Willkommen zurück, {name}."
+    "login_welcome": "Willkommen zurück, {name}.",
+    "humor_toggle_label": "Humorvolle Rückmeldungen"
   },
   "fr": {
     "title": "Ethicom : Évaluation humaine",
@@ -461,7 +464,8 @@
     "nav_story": "Story",
     "nav_navigator": "Navigator Menu",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "humor_toggle_label": "Humorous responses"
   },
   "es": {
     "title": "Ethicom: Evaluación Humana",
@@ -577,7 +581,8 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "humor_toggle_label": "Humorous responses"
   },
   "pt": {
     "title": "Ethicom: Avaliação Humana",
@@ -692,7 +697,8 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "humor_toggle_label": "Humorous responses"
   },
   "zh": {
     "title": "Ethicom：人工评估",
@@ -808,7 +814,8 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "humor_toggle_label": "Humorous responses"
   },
   "hi": {
     "title": "Ethicom: मानवीय मूल्यांकन",
@@ -923,7 +930,8 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "humor_toggle_label": "Humorous responses"
   },
   "ar": {
     "title": "إيثيكوم: التقييم البشري",
@@ -1038,7 +1046,8 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "humor_toggle_label": "Humorous responses"
   },
   "ja": {
     "title": "Ethicom：人間による評価",
@@ -1153,7 +1162,8 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "humor_toggle_label": "Humorous responses"
   },
   "sw": {
     "title": "Ethicom: Tathmini ya Kibinadamu",
@@ -1268,7 +1278,8 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "humor_toggle_label": "Humorous responses"
   },
   "ru": {
     "title": "Ethicom: Оценка человеком",
@@ -1383,7 +1394,8 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "humor_toggle_label": "Humorous responses"
   },
   "it": {
     "title": "Ethicom: Valutazione Umana",
@@ -1499,7 +1511,8 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "humor_toggle_label": "Humorous responses"
   },
   "ko": {
     "title": "Ethicom: 인간 평가",
@@ -1614,7 +1627,8 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "humor_toggle_label": "Humorous responses"
   },
   "fa": {
     "title": "ایتیکام: ارزیابی انسانی",
@@ -1729,7 +1743,8 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "humor_toggle_label": "Humorous responses"
   },
   "pl": {
     "title": "Ethicom: Ocena Ludzka",
@@ -1844,7 +1859,8 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "humor_toggle_label": "Humorous responses"
   },
   "am": {
     "title": "Ethicom: Human Evaluation",
@@ -1959,7 +1975,8 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "humor_toggle_label": "Humorous responses"
   },
   "af": {
     "title": "Ethicom: Human Evaluation",
@@ -2074,7 +2091,8 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "humor_toggle_label": "Humorous responses"
   },
   "bn": {
     "title": "Ethicom: Human Evaluation",
@@ -2189,7 +2207,8 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "humor_toggle_label": "Humorous responses"
   },
   "ha": {
     "title": "Ethicom: Human Evaluation",
@@ -2304,7 +2323,8 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "humor_toggle_label": "Humorous responses"
   },
   "id": {
     "title": "Ethicom: Human Evaluation",
@@ -2419,7 +2439,8 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "humor_toggle_label": "Humorous responses"
   },
   "ig": {
     "title": "Ethicom: Human Evaluation",
@@ -2534,7 +2555,8 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "humor_toggle_label": "Humorous responses"
   },
   "om": {
     "title": "Ethicom: Human Evaluation",
@@ -2649,7 +2671,8 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "humor_toggle_label": "Humorous responses"
   },
   "rm": {
     "title": "Ethicom: Human Evaluation",
@@ -2764,7 +2787,8 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "humor_toggle_label": "Humorous responses"
   },
   "ta": {
     "title": "Ethicom: Human Evaluation",
@@ -2879,7 +2903,8 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "humor_toggle_label": "Humorous responses"
   },
   "te": {
     "title": "Ethicom: Human Evaluation",
@@ -2994,7 +3019,8 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "humor_toggle_label": "Humorous responses"
   },
   "th": {
     "title": "Ethicom: Human Evaluation",
@@ -3109,7 +3135,8 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "humor_toggle_label": "Humorous responses"
   },
   "tr": {
     "title": "Ethicom: Human Evaluation",
@@ -3224,7 +3251,8 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "humor_toggle_label": "Humorous responses"
   },
   "ur": {
     "title": "Ethicom: Human Evaluation",
@@ -3340,7 +3368,8 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "humor_toggle_label": "Humorous responses"
   },
   "vi": {
     "title": "Ethicom: Human Evaluation",
@@ -3455,7 +3484,8 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "humor_toggle_label": "Humorous responses"
   },
   "xh": {
     "title": "Ethicom: Human Evaluation",
@@ -3570,7 +3600,8 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "humor_toggle_label": "Humorous responses"
   },
   "yo": {
     "title": "Ethicom: Human Evaluation",
@@ -3685,7 +3716,8 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "humor_toggle_label": "Humorous responses"
   },
   "zu": {
     "title": "Ethicom: Human Evaluation",
@@ -3800,7 +3832,8 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "humor_toggle_label": "Humorous responses"
   },
   "nl": {
     "title": "Ethicom: Menselijke Evaluatie",
@@ -3915,6 +3948,7 @@
     "signup_country": "Country/Region:",
     "signup_placeholder_country": "US",
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
-    "login_welcome": "Welcome back, {name}."
+    "login_welcome": "Welcome back, {name}.",
+    "humor_toggle_label": "Humorous responses"
   }
 }
