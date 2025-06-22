@@ -17,6 +17,30 @@
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#main_content">Skip to main content</a>
   <div id="op_background"></div>
+  <header>
+    <h1>Tanna Kollisionsanimationen</h1>
+  </header>
+  <nav>
+    <a href="index.html" class="icon-only" aria-label="Home">🏠</a>
+    <a href="interface/login.html" class="icon-only" aria-label="Login">🔑</a>
+    <a href="interface/signup.html" class="icon-only" aria-label="Signup">📝</a>
+    <a href="README.html" class="icon-only readme-link" aria-label="Help">?</a>
+    <button id="side_menu" type="button" class="icon-only" aria-label="Menu" data-min-op="OP-6">☰</button>
+  </nav>
+  <main id="main_content">
+    <img id="tanna_animation" src="sources/images/op-logo/tanna_op0.png" alt="Tanna animation" style="max-width:80%;height:auto;">
+  </main>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      initSideDrop('interface/nav-menu.html');
+      const menu = document.getElementById('side_menu');
+      if (menu) menu.addEventListener('click', e => { e.preventDefault(); toggleSideDrop(); });
+      if (typeof startTannaAnimation === 'function')
+        startTannaAnimation('tanna_animation');
+    });
+  </script>
+  <div id="side_drop"></div>
 </body>
 </html>
