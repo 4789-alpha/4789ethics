@@ -26,13 +26,13 @@
   </header>
   <div id="map"></div>
   <form id="stopForm">
-    <h2 data-i18n="verax_add_stop">Add Stop</h2>
+    <h2>Add Stop</h2>
     <label>Name: <input type="text" id="stopName" required></label>
     <label>Type: <input type="text" id="stopType" required></label>
     <label>Attempts/Time limit: <input type="number" id="stopAttempts" min="1" value="1"></label>
     <button type="button" id="saveStop">Save</button>
   </form>
-  <button id="exportBtn" data-i18n="verax_new_route">Export</button>
+  <button id="exportBtn">Export</button>
 <script>
 const map = L.map('map').setView([46.8345, 7.4953], 14);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom:18 }).addTo(map);
