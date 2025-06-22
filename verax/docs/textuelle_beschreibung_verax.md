@@ -13,6 +13,7 @@ gebogener Vektor, mind. 2 km Länge
 min. 2 physische, 1 taktische, 2 entscheidungsbasierte Engstellen
 
 .gpx-Datei mit Routenpunkten erforderlich
+Bearbeitung im Routeneditor möglich. Bilder dürfen keine Personen oder Privatgrundstücke zeigen.
 
 Namensschema: Limen-Ort-Jahr, optional VX-3 bis VX-9
 

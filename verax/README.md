@@ -24,6 +24,7 @@ Nicht Geschwindigkeit entscheidet, sondern ob man würdig besteht.
 | `media/` | Logo, Marker und visuelle Elemente |
 | `docs/` | Spielerhandbuch, Codex-Hinweise, Beispiele und weitere Dokumente |
 | `index.html` & `style.css` | Landing-Page und Styles |
+| `route_editor.html` | Routeneditor mit Bild-Upload (ohne Personen oder Privatgrundstücke) |
 | `logs/` | Gespeicherte Entscheidungen und Bewegungen |
 
 ## Moduldetails
