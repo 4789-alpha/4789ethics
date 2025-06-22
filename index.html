@@ -5,99 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>BSVRB</title>
   <link rel="stylesheet" href="interface/ethicom-style.css">
-  <script src="interface/bundle.js" defer></script>
-  <script src="utils/op-level.js"></script>
-  <script>
-    function initMemberDropdown(){
-      const names=[{id:"ref",label:"RL",pw:"pwSet_ref"},{id:"baduren",label:"MB",pw:"pwSet_baduren"},{id:"sime",label:"Sime",pw:"pin_sime"}];
-      const sel=document.getElementById("member_select");
-      if(!sel) return;
-      const remain=names.filter(n=>!localStorage.getItem(n.pw));
-      if(remain.length===0) {document.getElementById("member_login").style.display=none;return;}
-      sel.innerHTML=remain.map(n=>`<option value="${n.id}">${n.label}</option>`).join('');
-      if(remain.length===1) sel.innerHTML+=`<option value="signup">Mitglied werden</option>`;
-      document.getElementById("member_btn").onclick=function(){const v=sel.value;if(v==='signup') location.href='signup.html'; else if(v==='sime') location.href='interface/set-pin.html'; else location.href='interface/set-password.html?u='+v;};
-    }
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('./service-worker.js');
-    }
-  </script>
-  <link rel="icon" href="sources/images/institutions/logo-bsvrb.svg" sizes="32x32">
 </head>
-  <body class="home">
+<body class="home">
   <a class="skip-link" href="#main_content">Skip to main content</a>
   <div id="op_background"></div>
   <header>
-    <a href="index.html"><img src="sources/images/institutions/logo-bsvrb.png" alt="BSVRB" class="title-logo"></a>
+    <img src="sources/images/institutions/logo-bsvrb.png" alt="BSVRB" class="title-logo">
   </header>
-  <div id="offline_fallback" style="display:none;text-align:center;">
-    <img id="tanna_animation" src="sources/images/op-logo/tanna_op0.png" alt="Tanna animation" style="max-width:80%;height:auto;">
-  </div>
-  <nav aria-label="Main">
-    <a aria-current="page" class="icon-only" aria-label="Home">🏠</a>
-    <a href="signup.html" class="icon-only" aria-label="Signup or Login">🔑</a>
-    <a href="README.html" class="icon-only readme-link" aria-label="README">?</a>
-  </nav>
   <main id="main_content">
-    <p>Chatbot im Aufbau – experimentelle Version.</p>
-    <section class="card" style="max-width:40em;margin:2em auto;">
-      <h1>Willkommen beim BSVRB</h1>
-      <p>Der Biersportverein Region Bern fördert laut <a href="statuten/BSVRB_2019.md">seinen Statuten</a> die Bierkultur, Geselligkeit und kreative Begegnungen. Vereinsabende, Brauwettbewerbe und Degustationen stehen im Vordergrund.</p>
-      <p>Aktivmitglieder engagieren sich und verfügen über Stimmrecht. Passivmitglieder beziehen eine festgelegte Menge Vereinsbier für eine befristete Mitgliedschaft ohne Stimmrecht. Gemäß <a href="DISCLAIMERS.md">Disclaimers</a> stellen Aktive Serverressourcen bereit, Passive erhalten eine Instanz und bestätigen monatlich gegen Spesenbeitrag.</p>
-      <p><a href="signup.html">Jetzt Mitglied werden</a></p>
-    </section>
-    <section class="card" style="max-width:20em;margin:2em auto;" id="member_login">
-      <label for="member_select">Login:</label>
-      <select id="member_select"></select>
-      <button id="member_btn">OK</button>
-    </section>
-    <section class="card" style="max-width:40em;margin:2em auto;">
-      <h1>Eigenen Server starten</h1>
-      <p>So richtest du die Seite zuhause ein:</p>
-      <ol style="text-align:left;">
-        <li><a href="/download.zip">Projekt als ZIP herunterladen</a> und entpacken.</li>
-        <li>Node.js&nbsp;18 installieren.</li>
-        <li>Im entpackten Ordner <code>node tools/easy-start.js</code> ausführen.</li>
-      </ol>
-    </section>
-    <section class="card" style="max-width:40em;margin:2em auto;">
-      <h1>Abteilungen</h1>
-      <ul style="text-align:left;">
-        <li><a href="bsvrb.ch/index.html">Biersportverein Region Bern – Hauptseite</a></li>
-        <li><a href="bsvrb-dept-1.html">Gesellschaft / Bewegung / Plattform / Genuss</a> (Abteilung Soziales)</li>
-        <li><a href="bsvrb-dept-2.html">Bildung / Zukunft / Ethik</a> (Abteilung Verantwortung)</li>
-        <li><a href="bsvrb-dept-3.html">Technik / Innovation / Forschung</a> (Abteilung Wissenschaft)</li>
-        <li><a href="bsvrb-dept-5.html">Für Kultur, Natur, Mensch &amp; Region</a> (Abteilung Kultur)</li>
-        <li><a href="bsvrb-quality.html">Qualitätskontrolle / Verantwortungssystem / Sicherheitsprüfungen</a> (Abteilung Sicherheit)</li>
-      </ul>
-    </section>
-    <section class="card" style="max-width:40em;margin:2em auto;">
-      <h1>Begonnene Projekte</h1>
-      <details>
-        <summary><a href="verax/index.html">Verax – Entscheidungsspiel in natürlichem Raum</a> (Abt. Soz.)</summary>
-        <p>Realweltliches Spielsystem für Bewegung, Ethik und Entscheidungen in einem 300&nbsp;m breiten Korridor mit dokumentierter Bewertung.</p>
-      </details>
-      <details>
-        <summary><a href="bsvrb-fischerabteilung.html">Fische Schweiz – nationale Artenliste und Verbesserung der FischeApp für alle Kantone</a> (Abt. Kul.)</summary>
-        <p>Pro Piscis Bernensis fördert eine ökologische Fischerei, schützt einheimische Arten und arbeitet an einer aktualisierten App.</p>
-      </details>
-      <details>
-        <summary><a href="beatclub-basel.html">Beatclub Basel – Bier, Solidarität, Vielfalt, Rave &amp; Beats</a> (Abt. Soz.)</summary>
-        <p>Gemeinschaftsprojekt für kulturellen Austausch und elektronische Musik.</p>
-      </details>
-      <details>
-        <summary><a href="grimmhorn.html">Grimmhorn – Raum für laute Experimente</a> (Abt. Wis.)</summary>
-        <p>Ein archaisch-modernes Instrument mit zwei Klangkernen; lädt zu Klangexperimenten ein.</p>
-      </details>
-      <details>
-        <summary><a href="wings/index.html">Wings – Ethik-Kompass für technologische Projekte</a> (Abt. Ver.)</summary>
-        <p>Minimales Interface zur Bewertung technologischer Ideen nach ethischen Kriterien.</p>
-      </details>
-      <details>
-        <summary><a href="tantes.html">Tanna Demo – Hintergrundanimation</a> (Abt. Wis.)</summary>
-        <p>Demonstration einer animierten Tanna-Kollisionsgrafik im 4789-Stil.</p>
-      </details>
-    </section>
+    <p><a href="signup.html">Jetzt registrieren</a></p>
     <section class="card" style="max-width:40em;margin:2em auto;">
       <h2>Disclaimers</h2>
       <ul>
@@ -108,24 +24,5 @@
       </ul>
     </section>
   </main>
-  <footer id="version_footer" class="text-xs text-center my-4"></footer>
-  <script>
-      try {
-        const r = await fetch('config.json', {method:'HEAD', cache:'no-cache'});
-        return r.ok;
-      } catch {
-        return false;
-      }
-    }
-    window.addEventListener('load', async () => {
-    initMemberDropdown();
-      if (!await serverOnline()) {
-        const el = document.getElementById('offline_fallback');
-        if (el) el.style.display = 'block';
-        if (typeof startTannaAnimation === 'function')
-          startTannaAnimation('tanna_animation');
-      }
-    });
-  </script>
 </body>
 </html>
