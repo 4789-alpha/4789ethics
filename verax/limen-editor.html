@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Limen-Editor</title>
+  <link rel="stylesheet" href="../interface/ethicom-style.css">
+  <script src="../interface/bundle.js" defer></script>
+  <script src="../utils/op-level.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.css" />
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.js"></script>
+  <style>
+    body, html { margin:0; padding:0; }
+    #map { height: 100vh; width: 100vw; }
+    #controls {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      z-index: 1000;
+      background: white;
+      padding: 4px;
+      border-radius: 4px;
+    }
+    #controls button { margin-right: 4px; }
+  </style>
+</head>
+<body>
+  <div id="op_background" aria-hidden="true"></div>
+  <header>
+    <h1>Limen-Editor</h1>
+  </header>
+  <div id="map"></div>
+  <div id="controls">
+    <button id="export_json">Export JSON</button>
+    <button id="export_gpx">Export GPX</button>
+  </div>
+  <script src="limen-editor.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      applyTheme('tanna-dark');
+    });
+  </script>
+</body>
+</html>
