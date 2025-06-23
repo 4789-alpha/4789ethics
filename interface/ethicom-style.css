@@ -183,6 +183,7 @@ body {
 a {
   color: var(--accent-color);
   text-decoration: underline;
+  font-weight: bold;
 }
 
 
