@@ -3,33 +3,31 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Offline Signup</title>
+  <title>Offline Login</title>
   <link rel="stylesheet" href="/ethicom-style.css">
   <script src="/bundle.js" defer></script>
   <script src="../utils/op-level.js"></script>
+  <script src="offline-login.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main_content">Skip to main content</a>
   <div id="op_background"></div>
   <header>
-    <h1>Offline Signup</h1>
+    <h1>Offline Login</h1>
   </header>
   <main id="main_content">
     <div id="lang_selection" class="card" style="margin-bottom:1em;">
       <label for="lang_select" data-ui="choose_language_label">Language:</label>
       <select id="lang_select"></select>
     </div>
-    <p>This page stores a local profile when no server is available.</p>
-    <label for="nick_input">Nickname:</label>
-    <input type="text" id="nick_input" placeholder="Optional nickname" />
+    <p>Sign in with your locally stored profile.</p>
     <label for="email_input">Email:</label>
     <input type="email" id="email_input" placeholder="name@provider.com" />
 
     <label for="pw_input">Password:</label>
-    <input type="password" id="pw_input" placeholder="At least 8 characters" />
+    <input type="password" id="pw_input" placeholder="Password" />
 
-    <button onclick="storeOfflineProfile()">Store Locally</button>
-    <p><a href="offline-login.html">Offline login</a> after storing.</p>
+    <button onclick="offlineLogin()">Log in</button>
     <pre id="status" style="white-space:pre-wrap;margin-top:1em;"></pre>
     <section class="card" style="margin-top:2em;">
       <h2>Disclaimers</h2>

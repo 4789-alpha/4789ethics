@@ -1,6 +1,7 @@
 async function storeOfflineProfile() {
   const emailEl = document.getElementById('email_input');
   const pwEl = document.getElementById('pw_input');
+  const nickEl = document.getElementById('nick_input');
   const statusEl = document.getElementById('status');
   const email = emailEl.value.trim();
   const pw = pwEl.value;
@@ -19,7 +20,8 @@ async function storeOfflineProfile() {
   const emailHash = await sha256(email);
   const pwHash = await sha256(pw + salt);
   const created = new Date().toISOString();
-  const obj = { emailHash, pwHash, salt, created };
+  const alias = nickEl && nickEl.value.trim() ? `${nickEl.value.trim()}@OP-1` : '';
+  const obj = { emailHash, pwHash, salt, created, op_level: 'OP-1', alias };
   localStorage.setItem('ethicom_offline_user', JSON.stringify(obj));
   statusEl.textContent = 'Profile stored locally.';
 }
