@@ -89,7 +89,7 @@ together form the core of MYRIA.
     +-------------+
       |         |
       v         v
- settings_OLD.html (deprecated)  ethicom.html
+ settings.html  ethicom.html
 ```
 
 ## Contents
@@ -167,7 +167,7 @@ See [docs/FOLDER_STRUCTURE.md](docs/FOLDER_STRUCTURE.md) for a concise directory
 | [bewertung.html](bewertung.html) | Entry page for rating modules |
 | [personenbewertung.html](personenbewertung.html) | Swipe-based person rating |
 | [org-bewertung.html](org-bewertung.html) | Preview for organisation ratings |
-| [interface/settings_OLD.html](interface/settings_OLD.html) | Language, theme, Tanna logo, and low motion settings |
+| [interface/settings.html](interface/settings.html) | Language, theme, Tanna logo, and low motion settings |
 | [interface/signup.html](interface/signup.html) | Registration form |
 | [interface/offline-signup.html](interface/offline-signup.html) | Offline local signup |
 | [interface/offline-login.html](interface/offline-login.html) | Offline login |
@@ -296,7 +296,7 @@ Use the `image_url` field in `sources/persons/human-op0-candidates.json` to reco
 [⇧](#contents)
 
 **ethicom.html**
-SHA-256: f1f55ca91fb7333af074cc69ceda2575b4bff6144551899e0f47596280539a04
+SHA-256: 0a35182d89bc457a96ed9d9b189b83479520c5f3a650224a041e06b88848e93d
 Verified 2025-05-21 by Signature 4789
 
 **ethicom-consensus.js**
