@@ -116,7 +116,9 @@
     "login_welcome": "Welcome back, {name}.",
     "verax_new_route": "New Route",
     "verax_add_stop": "Add Stop",
-    "humor_toggle_label": "Humorous responses"
+    "humor_toggle_label": "Humorous responses",
+    "signup_server_login": "Server login",
+    "signup_offline_login": "Offline login"
   },
   "de": {
     "title": "Ethicom: Bewertung durch Menschen",
@@ -235,7 +237,9 @@
     "login_welcome": "Willkommen zurück, {name}.",
     "verax_new_route": "Neue Route",
     "verax_add_stop": "Stopp hinzufügen",
-    "humor_toggle_label": "Humorvolle Rückmeldungen"
+    "humor_toggle_label": "Humorvolle Rückmeldungen",
+    "signup_server_login": "Server-Login",
+    "signup_offline_login": "Offline-Login"
   },
   "de-ch": {
     "title": "Ethicom: Bewertung durch Menschen",
@@ -354,7 +358,9 @@
     "login_welcome": "Willkommen zurück, {name}.",
     "verax_new_route": "Neue Route",
     "verax_add_stop": "Stopp hinzufügen",
-    "humor_toggle_label": "Humorvolle Rückmeldungen"
+    "humor_toggle_label": "Humorvolle Rückmeldungen",
+    "signup_server_login": "Server-Login",
+    "signup_offline_login": "Offline-Login"
   },
   "fr": {
     "title": "Ethicom : Évaluation humaine",
@@ -473,7 +479,9 @@
     "login_welcome": "Welcome back, {name}.",
     "verax_new_route": "New Route",
     "verax_add_stop": "Add Stop",
-    "humor_toggle_label": "Humorous responses"
+    "humor_toggle_label": "Humorous responses",
+    "signup_server_login": "Server login",
+    "signup_offline_login": "Offline login"
   },
   "es": {
     "title": "Ethicom: Evaluación Humana",
@@ -592,7 +600,9 @@
     "login_welcome": "Welcome back, {name}.",
     "verax_new_route": "New Route",
     "verax_add_stop": "Add Stop",
-    "humor_toggle_label": "Humorous responses"
+    "humor_toggle_label": "Humorous responses",
+    "signup_server_login": "Server login",
+    "signup_offline_login": "Offline login"
   },
   "pt": {
     "title": "Ethicom: Avaliação Humana",
@@ -710,7 +720,9 @@
     "login_welcome": "Welcome back, {name}.",
     "verax_new_route": "New Route",
     "verax_add_stop": "Add Stop",
-    "humor_toggle_label": "Humorous responses"
+    "humor_toggle_label": "Humorous responses",
+    "signup_server_login": "Server login",
+    "signup_offline_login": "Offline login"
   },
   "zh": {
     "title": "Ethicom：人工评估",
@@ -829,7 +841,9 @@
     "login_welcome": "Welcome back, {name}.",
     "verax_new_route": "New Route",
     "verax_add_stop": "Add Stop",
-    "humor_toggle_label": "Humorous responses"
+    "humor_toggle_label": "Humorous responses",
+    "signup_server_login": "Server login",
+    "signup_offline_login": "Offline login"
   },
   "hi": {
     "title": "Ethicom: मानवीय मूल्यांकन",
@@ -947,7 +961,9 @@
     "login_welcome": "Welcome back, {name}.",
     "verax_new_route": "New Route",
     "verax_add_stop": "Add Stop",
-    "humor_toggle_label": "Humorous responses"
+    "humor_toggle_label": "Humorous responses",
+    "signup_server_login": "Server login",
+    "signup_offline_login": "Offline login"
   },
   "ar": {
     "title": "إيثيكوم: التقييم البشري",
@@ -1065,7 +1081,9 @@
     "login_welcome": "Welcome back, {name}.",
     "verax_new_route": "New Route",
     "verax_add_stop": "Add Stop",
-    "humor_toggle_label": "Humorous responses"
+    "humor_toggle_label": "Humorous responses",
+    "signup_server_login": "Server login",
+    "signup_offline_login": "Offline login"
   },
   "ja": {
     "title": "Ethicom：人間による評価",
@@ -1183,7 +1201,9 @@
     "login_welcome": "Welcome back, {name}.",
     "verax_new_route": "New Route",
     "verax_add_stop": "Add Stop",
-    "humor_toggle_label": "Humorous responses"
+    "humor_toggle_label": "Humorous responses",
+    "signup_server_login": "Server login",
+    "signup_offline_login": "Offline login"
   },
   "sw": {
     "title": "Ethicom: Tathmini ya Kibinadamu",
@@ -1301,7 +1321,9 @@
     "login_welcome": "Welcome back, {name}.",
     "verax_new_route": "New Route",
     "verax_add_stop": "Add Stop",
-    "humor_toggle_label": "Humorous res."
+    "humor_toggle_label": "Humorous res.",
+    "signup_server_login": "Server login",
+    "signup_offline_login": "Offline login"
   },
   "ru": {
     "title": "Ethicom: Оценка человеком",
@@ -1419,7 +1441,9 @@
     "login_welcome": "Welcome back, {name}.",
     "verax_new_route": "New Route",
     "verax_add_stop": "Add Stop",
-    "humor_toggle_label": "Humorous responses"
+    "humor_toggle_label": "Humorous responses",
+    "signup_server_login": "Server login",
+    "signup_offline_login": "Offline login"
   },
   "it": {
     "title": "Ethicom: Valutazione Umana",
@@ -1538,7 +1562,9 @@
     "login_welcome": "Welcome back, {name}.",
     "verax_new_route": "New Route",
     "verax_add_stop": "Add Stop",
-    "humor_toggle_label": "Humorous responses"
+    "humor_toggle_label": "Humorous responses",
+    "signup_server_login": "Server login",
+    "signup_offline_login": "Offline login"
   },
   "ko": {
     "title": "Ethicom: 인간 평가",
@@ -1656,7 +1682,9 @@
     "login_welcome": "Welcome back, {name}.",
     "verax_new_route": "New Route",
     "verax_add_stop": "Add Stop",
-    "humor_toggle_label": "Humorous responses"
+    "humor_toggle_label": "Humorous responses",
+    "signup_server_login": "Server login",
+    "signup_offline_login": "Offline login"
   },
   "fa": {
     "title": "ایتیکام: ارزیابی انسانی",
@@ -1774,7 +1802,9 @@
     "login_welcome": "Welcome back, {name}.",
     "verax_new_route": "New Route",
     "verax_add_stop": "Add Stop",
-    "humor_toggle_label": "Humorous responses"
+    "humor_toggle_label": "Humorous responses",
+    "signup_server_login": "Server login",
+    "signup_offline_login": "Offline login"
   },
   "pl": {
     "title": "Ethicom: Ocena Ludzka",
@@ -1892,7 +1922,9 @@
     "login_welcome": "Welcome back, {name}.",
     "verax_new_route": "New Route",
     "verax_add_stop": "Add Stop",
-    "humor_toggle_label": "Humorous responses"
+    "humor_toggle_label": "Humorous responses",
+    "signup_server_login": "Server login",
+    "signup_offline_login": "Offline login"
   },
   "am": {
     "title": "Ethicom: Human Evaluation",
@@ -2010,7 +2042,9 @@
     "login_welcome": "Welcome back, {name}.",
     "verax_new_route": "New Route",
     "verax_add_stop": "Add Stop",
-    "humor_toggle_label": "Humorous responses"
+    "humor_toggle_label": "Humorous responses",
+    "signup_server_login": "Server login",
+    "signup_offline_login": "Offline login"
   },
   "af": {
     "title": "Ethicom: Human Evaluation",
@@ -2128,7 +2162,9 @@
     "login_welcome": "Welcome back, {name}.",
     "verax_new_route": "New Route",
     "verax_add_stop": "Add Stop",
-    "humor_toggle_label": "Humorous responses"
+    "humor_toggle_label": "Humorous responses",
+    "signup_server_login": "Server login",
+    "signup_offline_login": "Offline login"
   },
   "bn": {
     "title": "Ethicom: Human Evaluation",
@@ -2246,10 +2282,139 @@
     "login_welcome": "Welcome back, {name}.",
     "verax_new_route": "New Route",
     "verax_add_stop": "Add Stop",
-    "humor_toggle_label": "Humorous responses"
+    "humor_toggle_label": "Humorous responses",
+    "signup_server_login": "Server login",
+    "signup_offline_login": "Offline login"
   },
-  
+  "ha": {
+    "title": "Ethicom: Human Evaluation",
+    "label_source": "Source (URL or Title)",
+    "label_srclvl": "Ethical Level (SRC)",
+    "label_aspects": "Optional Aspects",
+    "label_comment": "Comment",
+    "btn_generate": "Show My Evaluation",
+    "btn_download": "Download as File",
+    "aspects": [
+      "Transparency",
+      "Repairability",
+      "System Reflection",
+      "Error Handling",
+      "Purpose Clarity"
+    ],
+    "signup_title": "Sign up",
+    "signup_email": "Email:",
+    "signup_password": "Password:",
+    "signup_btn": "Create Account",
+    "signup_placeholder_email": "name@provider.com",
+    "signup_placeholder_pw": "At least 8 characters",
+    "signup_address": "Address:",
+    "signup_phone": "Phone:",
+    "signup_nick": "Nickname:",
+    "signup_placeholder_nick": "Optional nickname",
+    "signup_alias": "Alias (public): {alias}",
+    "signup_placeholder_address": "Optional address",
+    "signup_placeholder_phone": "+12025550123",
+    "signup_invalid_email": "Invalid email format.",
+    "signup_unsupported": "Email provider not supported. Use a secure host.",
+    "signup_pw_short": "Password must be at least 8 characters.",
+    "signup_saved": "Signup information saved locally.",
+    "signup_secret": "Authenticator secret: {secret}",
+    "help_title": "Help – Operator Conduct",
+    "help_items": [
+      "Always check if your actions meet the ethics of responsibility.",
+      "Use only the tools assigned to your OP level.",
+      "Document decisions in the manifest for verification.",
+      "Nominations and feedback are structured and without personal pressure.",
+      "Consult a higher structure (from OP-7) if unsure.",
+      "Responsibility outweighs convenience.",
+      "Create signatures locally and confirm them structurally.",
+      "Withdrawals or corrections are part of the process, not weakness.",
+      "Maintain transparency at every step, even with anonymous use."
+    ],
+    "access_title": "Accessibility Setup",
+    "access_label_vision": "Can you see the screen?",
+    "access_label_hearing": "Can you hear from this device?",
+    "access_label_speech": "Can you speak?",
+    "access_label_simple": "Simplified interface?",
+    "access_save_btn": "Save Setup",
+    "access_opt_yes": "Yes",
+    "access_opt_no": "No",
+    "access_opt_yes_nospeech": "Yes, but cannot speak",
+    "access_saved": "Accessibility preferences saved.",
+    "nav_start": "Start",
+    "nav_ratings": "Ratings",
+    "nav_signup": "Signup",
+    "nav_readme": "README",
+    "nav_tools": "Tools",
+    "nav_settings": "Settings",
+    "label_choose_language": "Choose your language (ISO 639-1):",
+    "status_verifying_sig": "Verifying signature...",
+    "status_sig_missing": "Signature not found or incomplete.",
+    "status_sig_invalid": "Signature invalid or password incorrect.",
+    "status_sig_valid": "Signature valid: {level}",
+    "status_loading_op0": "Loading OP-0...",
+    "simple_toggle_label": "Toggle Simple Mode",
+    "simple_mode_on": "Simple mode is active.",
+    "simple_mode_off": "Simple mode is off.",
+    "disclaimer_title": "Disclaimers",
+    "disclaimer_items": [
+      "This structure is provided without warranty.",
+      "Use is at your own risk.",
+      "4789 is a standard for responsibility, not a person or belief system.",
+      "Use only with reflection and consequence; no manipulation or uncontrolled automation.",
+      "If a contradiction arises, apply self-reflection (structure_9874).",
+      "Humor is allowed if responsibility and clarity remain.",
+      "Each user’s TOTP secret is stored encrypted."
+    ],
     "btn_disclaimer_accept": "I understand",
+    "help_title": "Help – Operator Conduct",
+    "help_items": [
+      "Always check if your actions meet the ethics of responsibility.",
+      "Use only the tools assigned to your OP level.",
+      "Document decisions in the manifest for verification.",
+      "Nominations and feedback are structured and without personal pressure.",
+      "Consult a higher structure (from OP-7) if unsure.",
+      "Responsibility outweighs convenience.",
+      "Create signatures locally and confirm them structurally.",
+      "Withdrawals or corrections are part of the process, not weakness.",
+      "Maintain transparency at every step, even with anonymous use."
+    ],
+    "access_title": "Accessibility Setup",
+    "access_label_vision": "Can you see the screen?",
+    "access_label_hearing": "Can you hear from this device?",
+    "access_label_speech": "Can you speak?",
+    "access_label_simple": "Simplified interface?",
+    "access_save_btn": "Save Setup",
+    "access_opt_yes": "Yes",
+    "access_opt_no": "No",
+    "access_opt_yes_nospeech": "Yes, but cannot speak",
+    "access_saved": "Accessibility preferences saved.",
+    "nav_start": "Start",
+    "nav_ratings": "Ratings",
+    "nav_signup": "Signup",
+    "nav_readme": "README",
+    "nav_tools": "Tools",
+    "nav_settings": "Settings",
+    "label_choose_language": "Choose your language (ISO 639-1):",
+    "status_verifying_sig": "Verifying signature...",
+    "status_sig_missing": "Signature not found or incomplete.",
+    "status_sig_invalid": "Signature invalid or password incorrect.",
+    "status_sig_valid": "Signature valid: {level}",
+    "status_loading_op0": "Loading OP-0...",
+    "simple_toggle_label": "Toggle Simple Mode",
+    "simple_mode_on": "Simple mode is active.",
+    "simple_mode_off": "Simple mode is off.",
+    "disclaimer_title": "Disclaimers",
+    "disclaimer_items": [
+      "This structure is provided without warranty.",
+      "Use is at your own risk.",
+      "The operators and contributors accept no liability; BSVRB is an association under Swiss law (Swiss Civil Code art. 60 ff.: https://www.fedlex.admin.ch/eli/cc/24/233_245_233/en).",
+      "4789 is a standard for responsibility, not a person or belief system.",
+      "Use only with reflection and consequence; no manipulation or uncontrolled automation.",
+      "If a contradiction arises, apply self-reflection (structure_9874).",
+      "Humor is allowed if responsibility and clarity remain.",
+      "Each user’s TOTP secret is stored encrypted."
+    ],
     "signup_insecure_warn": "Insecure email host. Allowed only until OP-5.",
     "attention_toggle_wiggle": "Rawar jiki idan babu aiki",
     "attention_toggle_beep": "Beep idan babu aiki",
@@ -2285,10 +2450,13 @@
     "login_welcome": "Welcome back, {name}.",
     "verax_new_route": "New Route",
     "verax_add_stop": "Add Stop",
-    "humor_toggle_label": "Humorous responses"
+    "humor_toggle_label": "Humorous responses",
+    "signup_server_login": "Server login",
+    "signup_offline_login": "Offline login"
   },
-
-    "title": "Ethicom: Human Evaluation",e (URL or Title)",
+  "ig": {
+    "title": "Ethicom: Human Evaluation",
+    "label_source": "Source (URL or Title)",
     "label_srclvl": "Ethical Level (SRC)",
     "label_aspects": "Optional Aspects",
     "label_comment": "Comment",
@@ -2402,7 +2570,9 @@
     "login_welcome": "Welcome back, {name}.",
     "verax_new_route": "New Route",
     "verax_add_stop": "Add Stop",
-    "humor_toggle_label": "Humorous responses"
+    "humor_toggle_label": "Humorous responses",
+    "signup_server_login": "Server login",
+    "signup_offline_login": "Offline login"
   },
   "om": {
     "title": "Ethicom: Human Evaluation",
@@ -2520,7 +2690,9 @@
     "login_welcome": "Welcome back, {name}.",
     "verax_new_route": "New Route",
     "verax_add_stop": "Add Stop",
-    "humor_toggle_label": "Humorous responses"
+    "humor_toggle_label": "Humorous responses",
+    "signup_server_login": "Server login",
+    "signup_offline_login": "Offline login"
   },
   "rm": {
     "title": "Ethicom: Human Evaluation",
@@ -2638,7 +2810,9 @@
     "login_welcome": "Welcome back, {name}.",
     "verax_new_route": "New Route",
     "verax_add_stop": "Add Stop",
-    "humor_toggle_label": "Humorous responses"
+    "humor_toggle_label": "Humorous responses",
+    "signup_server_login": "Server login",
+    "signup_offline_login": "Offline login"
   },
   "ta": {
     "title": "Ethicom: Human Evaluation",
@@ -2756,7 +2930,9 @@
     "login_welcome": "Welcome back, {name}.",
     "verax_new_route": "New Route",
     "verax_add_stop": "Add Stop",
-    "humor_toggle_label": "Humorous responses"
+    "humor_toggle_label": "Humorous responses",
+    "signup_server_login": "Server login",
+    "signup_offline_login": "Offline login"
   },
   "te": {
     "title": "Ethicom: Human Evaluation",
@@ -2873,8 +3049,10 @@
     "signup_server_notice": "Requires local server. Use offline-signup.html if unavailable.",
     "login_welcome": "Welcome back, {name}.",
     "verax_new_route": "New Route",
-    "verax_add_stop": "Add Stop"
-    "humor_toggle_label": "Humorous responses"
+    "verax_add_stop": "Add Stop",
+    "humor_toggle_label": "Humorous responses",
+    "signup_server_login": "Server login",
+    "signup_offline_login": "Offline login"
   },
   "th": {
     "title": "Ethicom: Human Evaluation",
@@ -2992,7 +3170,9 @@
     "login_welcome": "Welcome back, {name}.",
     "verax_new_route": "New Route",
     "verax_add_stop": "Add Stop",
-    "humor_toggle_label": "Humorous responses"
+    "humor_toggle_label": "Humorous responses",
+    "signup_server_login": "Server login",
+    "signup_offline_login": "Offline login"
   },
   "tr": {
     "title": "Ethicom: Human Evaluation",
@@ -3110,7 +3290,9 @@
     "login_welcome": "Welcome back, {name}.",
     "verax_new_route": "New Route",
     "verax_add_stop": "Add Stop",
-    "humor_toggle_label": "Humorous responses"
+    "humor_toggle_label": "Humorous responses",
+    "signup_server_login": "Server login",
+    "signup_offline_login": "Offline login"
   },
   "ur": {
     "title": "Ethicom: Human Evaluation",
@@ -3229,7 +3411,9 @@
     "login_welcome": "Welcome back, {name}.",
     "verax_new_route": "New Route",
     "verax_add_stop": "Add Stop",
-    "humor_toggle_label": "Humorous responses"
+    "humor_toggle_label": "Humorous responses",
+    "signup_server_login": "Server login",
+    "signup_offline_login": "Offline login"
   },
   "vi": {
     "title": "Ethicom: Human Evaluation",
@@ -3347,7 +3531,9 @@
     "login_welcome": "Welcome back, {name}.",
     "verax_new_route": "New Route",
     "verax_add_stop": "Add Stop",
-    "humor_toggle_label": "Humorous responses"
+    "humor_toggle_label": "Humorous responses",
+    "signup_server_login": "Server login",
+    "signup_offline_login": "Offline login"
   },
   "xh": {
     "title": "Ethicom: Human Evaluation",
@@ -3465,7 +3651,9 @@
     "login_welcome": "Welcome back, {name}.",
     "verax_new_route": "New Route",
     "verax_add_stop": "Add Stop",
-    "humor_toggle_label": "Humorous responses"
+    "humor_toggle_label": "Humorous responses",
+    "signup_server_login": "Server login",
+    "signup_offline_login": "Offline login"
   },
   "yo": {
     "title": "Ethicom: Human Evaluation",
@@ -3583,7 +3771,9 @@
     "login_welcome": "Welcome back, {name}.",
     "verax_new_route": "New Route",
     "verax_add_stop": "Add Stop",
-    "humor_toggle_label": "Humorous responses"
+    "humor_toggle_label": "Humorous responses",
+    "signup_server_login": "Server login",
+    "signup_offline_login": "Offline login"
   },
   "zu": {
     "title": "Ethicom: Human Evaluation",
@@ -3701,7 +3891,9 @@
     "login_welcome": "Welcome back, {name}.",
     "verax_new_route": "New Route",
     "verax_add_stop": "Add Stop",
-    "humor_toggle_label": "Humorous responses"
+    "humor_toggle_label": "Humorous responses",
+    "signup_server_login": "Server login",
+    "signup_offline_login": "Offline login"
   },
   "nl": {
     "title": "Ethicom: Menselijke Evaluatie",
@@ -3819,6 +4011,8 @@
     "login_welcome": "Welcome back, {name}.",
     "verax_new_route": "New Route",
     "verax_add_stop": "Add Stop",
-    "humor_toggle_label": "Humorous responses"
+    "humor_toggle_label": "Humorous responses",
+    "signup_server_login": "Server login",
+    "signup_offline_login": "Offline login"
   }
 }

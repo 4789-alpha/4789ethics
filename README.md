@@ -173,6 +173,7 @@ See [docs/FOLDER_STRUCTURE.md](docs/FOLDER_STRUCTURE.md) for a concise directory
 | [interface/offline-login.html](interface/offline-login.html) | Offline login |
 
 Signup requires the local server started via `node tools/serve-interface.js`.
+After registration, use [interface/login.html](interface/login.html) for regular login or [interface/offline-login.html](interface/offline-login.html) when offline.
 | [interface/donate.html](interface/donate.html) | Donation interface (requires OP‑9.A confirmation) |
 | [interface/features_de.md](interface/features_de.md) | Functional overview of the interface (German) |
 | [wings/index.html](wings/index.html) | Mobile interface "Wings" |
@@ -295,7 +296,7 @@ Use the `image_url` field in `sources/persons/human-op0-candidates.json` to reco
 [⇧](#contents)
 
 **ethicom.html**
-SHA-256: 38ebbdd1d3363432e9e9cda982e7aca6391786d779ff52e4566a8f0c8a0754d7
+SHA-256: f1f55ca91fb7333af074cc69ceda2575b4bff6144551899e0f47596280539a04
 Verified 2025-05-21 by Signature 4789
 
 **ethicom-consensus.js**

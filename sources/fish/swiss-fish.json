@@ -57,6 +57,7 @@
   {"scientific_name": "Scardinius erythrophthalmus", "name": "Rotfeder", "origin": "einheimisch", "status": "LC", "in_bern": false, "image": "sources/fish/ch/scardinius_erythrophthalmus_ch.png"},
   {"scientific_name": "Scardinius hesperidicus", "name": "Scardola italiana", "origin": "einheimisch", "status": "VU", "in_bern": false, "image": "sources/fish/ch/scardinius_hesperidicus_ch.png"},
   {"scientific_name": "Silurus glanis", "name": "Wels", "origin": "einheimisch", "status": "LC", "in_bern": false, "image": "sources/fish/ch/silurus_glanis_ch.png"},
+  {"scientific_name": "Sander lucioperca", "name": "Zander", "origin": "einheimisch", "status": "LC", "in_bern": false, "image": "sources/fish/ch/sander_lucioperca_ch.png"},
   {"scientific_name": "Squalius cephalus", "name": "Alet", "origin": "einheimisch", "status": "LC", "in_bern": false, "image": "sources/fish/ch/squalius_cephalus_ch.png"},
   {"scientific_name": "Squalius squalus", "name": "Cavedano italiano", "origin": "einheimisch", "status": "VU", "in_bern": false, "image": "sources/fish/ch/squalius_squalio_ch.png"},
   {"scientific_name": "Telestes muticellus", "name": "Strigione", "origin": "einheimisch", "status": "NT", "in_bern": false, "image": "sources/fish/ch/telestes_muticellus_ch.png"},
