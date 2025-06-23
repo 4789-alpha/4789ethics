@@ -170,6 +170,7 @@ See [docs/FOLDER_STRUCTURE.md](docs/FOLDER_STRUCTURE.md) for a concise directory
 | [interface/settings_OLD.html](interface/settings_OLD.html) | Language, theme, Tanna logo, and low motion settings |
 | [interface/signup.html](interface/signup.html) | Registration form |
 | [interface/offline-signup.html](interface/offline-signup.html) | Offline local signup |
+| [interface/offline-login.html](interface/offline-login.html) | Offline login |
 
 Signup requires the local server started via `node tools/serve-interface.js`.
 | [interface/donate.html](interface/donate.html) | Donation interface (requires OP‑9.A confirmation) |
