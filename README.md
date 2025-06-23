@@ -173,6 +173,7 @@ See [docs/FOLDER_STRUCTURE.md](docs/FOLDER_STRUCTURE.md) for a concise directory
 | [interface/offline-login.html](interface/offline-login.html) | Offline login |
 
 Signup requires the local server started via `node tools/serve-interface.js`.
+After registration, use [interface/login.html](interface/login.html) for regular login or [interface/offline-login.html](interface/offline-login.html) when offline.
 | [interface/donate.html](interface/donate.html) | Donation interface (requires OP‑9.A confirmation) |
 | [interface/features_de.md](interface/features_de.md) | Functional overview of the interface (German) |
 | [wings/index.html](wings/index.html) | Mobile interface "Wings" |
