@@ -296,7 +296,7 @@ Use the `image_url` field in `sources/persons/human-op0-candidates.json` to reco
 [⇧](#contents)
 
 **ethicom.html**
-SHA-256: 38ebbdd1d3363432e9e9cda982e7aca6391786d779ff52e4566a8f0c8a0754d7
+SHA-256: f1f55ca91fb7333af074cc69ceda2575b4bff6144551899e0f47596280539a04
 Verified 2025-05-21 by Signature 4789
 
 **ethicom-consensus.js**
