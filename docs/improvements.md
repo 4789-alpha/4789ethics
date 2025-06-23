@@ -29,8 +29,8 @@ Diese Liste enthält konkrete Vorschläge zur Verbesserung der Benutzerfreundlic
 ## 6. Weiterführende Verbesserungen
 - [ ] API-Dokumentation mit OpenAPI/YAML.
 - [ ] Eingebaute Hilfe via --help oder Hotkeys.
-- [ ] GitHub Actions für automatisierte Tests und Deployments.
-- [ ] Dependabot für Abhängigkeits-Updates.
+- [x] GitHub Actions für automatisierte Tests und Deployments.
+- [x] Dependabot für Abhängigkeits-Updates.
 - [ ] Codecov oder Coveralls für Testabdeckung.
 - [ ] Snyk oder GitHub Advanced Security für Sicherheits-Scans.
 
