@@ -58,6 +58,10 @@ function applySignupTexts() {
   if (phoneInput && t.signup_placeholder_phone) phoneInput.placeholder = t.signup_placeholder_phone;
   const serverNotice = document.getElementById('server_notice');
   if (serverNotice && t.signup_server_notice) serverNotice.textContent = t.signup_server_notice;
+  const serverLoginLink = document.getElementById('server_login_link');
+  if (serverLoginLink && t.signup_server_login) serverLoginLink.textContent = t.signup_server_login;
+  const offlineLoginLink = document.getElementById('offline_login_link');
+  if (offlineLoginLink && t.signup_offline_login) offlineLoginLink.textContent = t.signup_offline_login;
   updatePhonePlaceholder();
 }
 
