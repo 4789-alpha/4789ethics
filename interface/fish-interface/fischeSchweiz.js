@@ -1,5 +1,6 @@
 async function initFischeSchweiz() {
   const table = document.getElementById('fisch_table');
+  const searchInput = document.getElementById('fish_search');
   if (!table) return;
   try {
     const list = await fetch('../../sources/fish/swiss-fish.json').then(r => r.json());
@@ -47,6 +48,14 @@ async function initFischeSchweiz() {
       tbody.appendChild(row);
     });
     table.appendChild(tbody);
+    if (searchInput) {
+      searchInput.addEventListener('input', e => {
+        const q = e.target.value.toLowerCase();
+        Array.from(tbody.rows).forEach(r => {
+          r.style.display = r.textContent.toLowerCase().includes(q) ? '' : 'none';
+        });
+      });
+    }
   } catch (e) {
     table.innerHTML = '<tr><td colspan="7">Daten konnten nicht geladen werden. Bitte Seite neu laden.</td></tr>';
   }
