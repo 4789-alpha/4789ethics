@@ -2,6 +2,8 @@
 
 Tanna symbols in the background collide and highlight each other. The logic is implemented in [`interface/logo-background.js`](../interface/logo-background.js).
 
+The default values under the `ethicom_bg_*` keys fill roughly **90%** of the page background with all available Tanna logos. Animation speed and symbol size are driven by these settings.
+
 To check that collisions work:
 
 1. **Page setup** – A page must contain a `<div id="op_background"></div>` and load `bundle.js`.
