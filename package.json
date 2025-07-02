@@ -5,11 +5,16 @@
   "main": "tools/serve-interface.js",
   "dependencies": {
     "express": "^4.19.2",
+    "pdf-parse": "^1.1.1",
     "js-yaml": "^4.1.0",
     "node-telegram-bot-api": "^0.66.0"
   },
   "optionalDependencies": {
     "canvas": "^2.11.2"
+  },
+  "devDependencies": {
+    "nyc": "^15.1.0",
+    "pdfkit": "^0.17.1"
   },
   "engines": {
     "node": ">=18"
@@ -24,6 +29,9 @@
     "bundle-interface": "node tools/bundle-interface.js",
     "generate-wiki": "node tools/generate-wiki.js",
     "test": "node --test && node tools/check-translations.js && node tools/check-file-integrity.js",
-    "telegram-bot": "node tools/telegram-bot.js"
+    "telegram-bot": "node tools/telegram-bot.js",
+    "coverage": "nyc npm test",
+    "security-scan": "node tools/security-scan.js",
+    "package": "node tools/create-package.js"
   }
 }

@@ -614,6 +614,17 @@ the helper works without network access.
 Run `tools/auto-server-setup.sh` to install Node.js 18 if needed and launch the
 local server. The script shows key lines from `DISCLAIMERS.md` before starting
 `tools/serve-interface.js`.
+Run `node tools/serve-interface.js --help-offline` to view a short usage guide
+without network access.
+
+### Docker Test Image
+[⇧](#contents)
+
+Build the provided `Dockerfile` to run all tests in an isolated environment:
+
+```bash
+docker build -t 4789ethics-test .
+```
 
 ### Automated Gatekeeper Setup
 [⇧](#contents)
