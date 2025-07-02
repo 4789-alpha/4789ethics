@@ -31,9 +31,9 @@ Diese Liste enthält konkrete Vorschläge zur Verbesserung der Benutzerfreundlic
 - [x] Eingebaute Hilfe via --help oder Hotkeys.
 - [x] GitHub Actions für automatisierte Tests und Deployments.
 - [x] Dependabot für Abhängigkeits-Updates.
-- [ ] Codecov oder Coveralls für Testabdeckung.
-- [ ] Snyk oder GitHub Advanced Security für Sicherheits-Scans.
-- [ ] DNA-Daten aus PDF extrahieren und in `gatekeeper/` integrieren.
+- [x] Codecov oder Coveralls für Testabdeckung.
+- [x] Snyk oder GitHub Advanced Security für Sicherheits-Scans.
+- [x] DNA-Daten aus PDF extrahieren und in `gatekeeper/` integrieren.
 - [x] OP-Logo-Kollisionen im Hintergrund stets sichtbar halten; Logo-Farbe vom Hintergrund abheben und davor platzieren.
 
 ---
