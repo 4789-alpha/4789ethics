@@ -53,6 +53,7 @@
       getLanguage();
       checkLanguageSetup();
       initLanguageDropdown('lang_select');
+      initSignup();
       setTimeout(() => {
         if (window.uiText && Array.isArray(window.uiText.disclaimer_items)) {
           const list = document.getElementById('disclaimers_list');
