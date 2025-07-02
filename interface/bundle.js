@@ -2558,11 +2558,11 @@ function initLogoBackground() {
   const maxLvl = Math.max(...levels);
   const minScale = 0.5;
   const FADE_MS = 0;
-  const imgBase = window.location.pathname.includes('/interface/') ||
-                  window.location.pathname.includes('/wings/') ||
-                  window.location.pathname.includes('/bsvrb.ch/')
-                    ? '../sources/images/op-logo/'
-                    : 'sources/images/op-logo/';
+  const depth = window.location.pathname
+    .replace(/[^/]+$/, '')
+    .split('/')
+    .filter(Boolean).length;
+  const imgBase = '../'.repeat(depth) + 'sources/images/op-logo/';
   const images = levels.map(lvl => {
     const img = new Image();
     const src = lvl >= 8 ? 7 : lvl;
@@ -2848,7 +2848,11 @@ function initLogoBackground() {
   requestAnimationFrame(step);
 }
 
-document.addEventListener('DOMContentLoaded', initLogoBackground);
+if (document.readyState !== 'loading') {
+  initLogoBackground();
+} else {
+  document.addEventListener('DOMContentLoaded', initLogoBackground);
+}
 
 
 //----- module-arranger.js -----
@@ -2982,8 +2986,8 @@ if (typeof window !== 'undefined') {
 }
 
 
-//----- offline-signup.js -----
-async function storeOfflineProfile() {
+//----- offline-login.js -----
+async function offlineLogin() {
   const emailEl = document.getElementById('email_input');
   const pwEl = document.getElementById('pw_input');
   const statusEl = document.getElementById('status');
@@ -2991,12 +2995,54 @@ async function storeOfflineProfile() {
   const pw = pwEl.value;
   statusEl.textContent = '';
 
+  const stored = localStorage.getItem('ethicom_offline_user');
+  if (!stored) {
+    statusEl.textContent = 'No offline profile found. Use offline-signup.html.';
+    return;
+  }
+  const profile = JSON.parse(stored);
+  const emailHash = await sha256(email);
+  if (emailHash !== profile.emailHash) {
+    statusEl.textContent = 'Email not found.';
+    return;
+  }
+  const pwHash = await sha256(pw + profile.salt);
+  if (pwHash !== profile.pwHash) {
+    statusEl.textContent = 'Password incorrect.';
+    return;
+  }
+  const sig = {
+    emailHash: profile.emailHash,
+    op_level: profile.op_level || 'OP-1',
+    alias: profile.alias || ''
+  };
+  localStorage.setItem('ethicom_signature', JSON.stringify(sig));
+  statusEl.textContent = 'Login successful.';
+  setTimeout(() => { window.location.href = 'ethicom.html'; }, 500);
+}
+
+if (typeof window !== 'undefined') {
+  window.offlineLogin = offlineLogin;
+}
+
+
+//----- offline-signup.js -----
+async function storeOfflineProfile() {
+  const emailEl = document.getElementById('email_input');
+  const pwEl = document.getElementById('pw_input');
+  const nickEl = document.getElementById('nick_input');
+  const statusEl = document.getElementById('status');
+  const t = window.uiText || {};
+  const email = emailEl.value.trim();
+  const pw = pwEl.value;
+  statusEl.textContent = '';
+
   if (!/^[^@]+@[^@]+\.[^@]+$/.test(email)) {
-    statusEl.textContent = 'Invalid email format.';
+    statusEl.textContent = t.signup_invalid_email || 'Invalid email format.';
     return;
   }
   if (pw.length < 8) {
-    statusEl.textContent = 'Password must be at least 8 characters.';
+    statusEl.textContent = t.signup_pw_short || 'Password must be at least 8 characters.';
     return;
   }
 
@@ -3004,9 +3050,10 @@ async function storeOfflineProfile() {
   const emailHash = await sha256(email);
   const pwHash = await sha256(pw + salt);
   const created = new Date().toISOString();
-  const obj = { emailHash, pwHash, salt, created };
+  const alias = nickEl && nickEl.value.trim() ? `${nickEl.value.trim()}@OP-1` : '';
+  const obj = { emailHash, pwHash, salt, created, op_level: 'OP-1', alias };
   localStorage.setItem('ethicom_offline_user', JSON.stringify(obj));
-  statusEl.textContent = 'Profile stored locally.';
+  statusEl.textContent = t.signup_saved || 'Profile stored locally.';
 }
 
 if (typeof window !== 'undefined') {
@@ -3853,6 +3900,10 @@ function applySignupTexts() {
   if (phoneInput && t.signup_placeholder_phone) phoneInput.placeholder = t.signup_placeholder_phone;
   const serverNotice = document.getElementById('server_notice');
   if (serverNotice && t.signup_server_notice) serverNotice.textContent = t.signup_server_notice;
+  const serverLoginLink = document.getElementById('server_login_link');
+  if (serverLoginLink && t.signup_server_login) serverLoginLink.textContent = t.signup_server_login;
+  const offlineLoginLink = document.getElementById('offline_login_link');
+  if (offlineLoginLink && t.signup_offline_login) offlineLoginLink.textContent = t.signup_offline_login;
   updatePhonePlaceholder();
 }
 
@@ -5008,7 +5059,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 //----- version.js -----
 window.APP_VERSION = '1.0.0';
-window.APP_COMMIT = '5b1c26a';
+window.APP_COMMIT = '730e4ac';
 
 function displayVersionInfo() {
   var el = document.getElementById('version_footer');

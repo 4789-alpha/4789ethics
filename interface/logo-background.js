@@ -411,4 +411,8 @@ function initLogoBackground() {
   requestAnimationFrame(step);
 }
 
-document.addEventListener('DOMContentLoaded', initLogoBackground);
+if (document.readyState !== 'loading') {
+  initLogoBackground();
+} else {
+  document.addEventListener('DOMContentLoaded', initLogoBackground);
+}
