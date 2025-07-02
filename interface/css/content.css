@@ -300,7 +300,7 @@ body.home #op_background {
   content: '';
   position: absolute;
   inset: 0;
-  background: url('/sources/images/op-logo/tanna_op0.png') center/20vmin no-repeat;
+  background: url('../sources/images/op-logo/tanna_op0.png') center/20vmin no-repeat;
   opacity: 0.25;
   animation: tannaFallback 12s linear infinite;
 }
