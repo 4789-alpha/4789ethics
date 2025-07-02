@@ -1,6 +1,10 @@
 function initLogoBackground() {
-  const container = document.getElementById('op_background');
-  if (!container) return;
+  let container = document.getElementById('op_background');
+  if (!container) {
+    container = document.createElement('div');
+    container.id = 'op_background';
+    document.body.prepend(container);
+  }
   localStorage.setItem('ethicom_bg_collisions', 'true');
 
   if (!localStorage.getItem('ethicom_bg_fill')) {
