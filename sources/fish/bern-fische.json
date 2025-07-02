@@ -6,7 +6,8 @@
     "habitat": "Seen und Fluesse",
     "max_cm": 150,
     "spawn": "Fruehjahr",
-    "image": "sources/fish/ch/esox_ch.png"
+    "image": "sources/fish/ch/esox_ch.png",
+    "spawn_cm": 50
   },
   {
     "name": "Egli",
@@ -15,7 +16,8 @@
     "habitat": "Seen und Fluesse",
     "max_cm": 60,
     "spawn": "Fruehjahr",
-    "image": "sources/fish/ch/perca_ch.png"
+    "image": "sources/fish/ch/perca_ch.png",
+    "spawn_cm": 20
   },
   {
     "name": "Bachforelle",
@@ -24,7 +26,8 @@
     "habitat": "Baeche und Fluesse",
     "max_cm": 80,
     "spawn": "Herbst",
-    "image": "sources/fish/ch/salmo_trutta_fario_ch.png"
+    "image": "sources/fish/ch/salmo_trutta_fario_ch.png",
+    "spawn_cm": 25
   },
   {
     "name": "Rotauge",
@@ -32,6 +35,7 @@
     "type": "Weissfisch",
     "habitat": "Seen und Fluesse",
     "max_cm": 45,
-    "spawn": "Fruehjahr"
+    "spawn": "Fruehjahr",
+    "spawn_cm": 15
   }
 ]
