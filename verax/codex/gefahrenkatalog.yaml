@@ -1,0 +1,80 @@
+gefahrenkatalog:
+  tierische_bedrohungen:
+    - id: T001
+      art: Wildschwein
+      verhalten: "Verteidigt Frischlinge"
+      risiko: Verletzungsgefahr
+      aktiv: "D\u00e4mmerung, Fr\u00fchjahr"
+    - id: T002
+      art: Kreuzotter
+      verhalten: "Sonnenbad auf Pfaden"
+      risiko: "Biss (leicht giftig)"
+      aktiv: ">15\u00b0C, Kieszonen"
+    - id: T003
+      art: Fuchs
+      verhalten: "Scheu, aber evtl. tollw\u00fctig"
+      risiko: indirekt
+      aktiv: "Herbst, Waldn\u00e4he"
+    - id: T004
+      art: Bussard
+      verhalten: "Nestschutz durch Sturzfl\u00fcge"
+      risiko: Erschrecken
+      aktiv: "Fr\u00fchling, H\u00f6henlagen"
+
+  natuerliche_hindernisse:
+    - id: N001
+      element: Windbruch
+      risiko: "Weg blockiert"
+      aktiv: "nach Sturm"
+    - id: N002
+      element: Altwasser
+      risiko: Einsinken
+      aktiv: "nach Regen"
+    - id: N003
+      element: Mor\u00e4nenkante
+      risiko: Steinschlaggefahr
+      aktiv: Fr\u00fchjahr
+    - id: N004
+      element: Wurzelhang
+      risiko: "Glatt, laut"
+      aktiv: "feucht, Schatten"
+
+  menschliche_hindernisse:
+    - id: M001
+      typ: Weidezaun
+      wirkung: Elektroschock
+      aktiv: "Fr\u00fchjahr\u2013Herbst"
+    - id: M002
+      typ: Forstarbeiten
+      wirkung: "Sperrung, L\u00e4rm"
+      aktiv: Werktags
+    - id: M003
+      typ: Verkehrsweg
+      wirkung: "Sichtbarkeit, L\u00e4rm"
+      aktiv: Querung
+    - id: M004
+      typ: Fremdperson
+      wirkung: Verunsicherung
+      aktiv: "alle Tageszeiten"
+
+  zeit_und_wetterrisiken:
+    - id: Z001
+      typ: Nebel
+      wirkung: "Sicht < 10 m"
+      bedingung: "<8\u00b0C, 90% LF"
+    - id: Z002
+      typ: D\u00e4mmerung
+      wirkung: "Ver\u00e4nderte Akustik"
+      bedingung: "<06:00 oder >21:00"
+    - id: Z003
+      typ: Hitze
+      wirkung: Ersch\u00f6pfung
+      bedingung: ">30\u00b0C, 11\u201316 Uhr"
+    - id: Z004
+      typ: Windb\u00f6en
+      wirkung: Astbruchgefahr
+      bedingung: ">40 km/h"
+
+metadata:
+  version: 1
+  stand: 2025

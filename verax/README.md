@@ -73,6 +73,7 @@ Die folgenden Abschnitte fassen die Kernbausteine von VERAX zusammen.
 - Echtzeit-Entscheidungen per Lautstärketasten oder Spracheingabe
 - GPS-Interpretation von Bewegung, Stillstand und Richtung
 - Gefahren wie Bären, Wildflüsse, Kälte oder moralische Dilemmata
+- Vollständiger Gefahrenkatalog in `codex/gefahrenkatalog.yaml`
 - Authentische Einbindung historisch-helvetischer Symbolik
 - Interaktive Karte mit GPX-Vektor und Engstellenanzeige (Leaflet.js)
 - Editor zum Zeichnen neuer Routen und Stops (`editor.html`)

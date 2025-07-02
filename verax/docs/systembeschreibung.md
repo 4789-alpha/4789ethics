@@ -8,7 +8,7 @@ VERAX ist ein naturnahes Bewegungsspiel im realen Raum. Der Spieler befindet sic
 
 - **Codex**: Ethikregeln und Signaturen
 - **Szenario**: Orts- und situationsgebundene Aufgabe
-- **Gefahrenkatalog**: Adaptiver Modulspeicher
+- **Gefahrenkatalog**: Adaptiver Modulspeicher (`codex/gefahrenkatalog.yaml`)
 - **Resonanzpunkte**: Reale Orte mit Aufgaben
 - **Linien**: Symbolische Verbindung durch Handlung
 
@@ -51,6 +51,8 @@ VERAX ist ein naturnahes Bewegungsspiel im realen Raum. Der Spieler befindet sic
 | Z004 | Windböen  | Astbruchgefahr           | >40 km/h           |
 
 ## Szenarienlogik
+
+Der Katalog wird als YAML-Datei geführt und steht unter `codex/gefahrenkatalog.yaml` zur Verfügung.
 
 Ein Szenario kombiniert jeweils 1–2 tierische Gefahren, 1–2 natürliche Hindernisse, ein menschliches Hindernis und einen Zeit-/Wetterfaktor. Beispiel:
 
