@@ -29,7 +29,6 @@
     <button id="side_menu" type="button" class="icon-only" aria-label="Menu" data-min-op="OP-6">☰</button>
   </nav>
   <main id="main_content">
-    <img id="tanna_animation" src="../sources/images/op-logo/tanna_op0.png" alt="Tanna animation" style="max-width:80%;height:auto;margin-top:1em;">
     <section class="card" style="max-width:40em;margin:2em auto;">
       <h2>Eigenen Server starten</h2>
       <p>So richtest du die Seite zuhause ein:</p>
@@ -61,8 +60,7 @@
       initSideDrop('../interface/nav-menu.html');
       const menu = document.getElementById('side_menu');
       if (menu) menu.addEventListener('click', e => { e.preventDefault(); toggleSideDrop(); });
-      if (typeof startTannaAnimation === 'function')
-        startTannaAnimation('tanna_animation');
+      // Tanna animation removed
     });
   </script>
   <div id="side_drop"></div>
