@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Fische Schweiz</title>
+  <title>Fisch-Quiz</title>
   <link rel="stylesheet" href="../ethicom-style.css">
   <script src="../bundle.js" defer></script>
   <script src="../../utils/op-level.js"></script>
-  <script src="fischeSchweiz.js"></script>
+  <script src="fischQuiz.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main_content">Skip to main content</a>
   <div id="op_background"></div>
   <header>
-    <h1>Fische Schweiz</h1>
+    <h1>Fisch-Quiz</h1>
     <nav>
       <a href="../../index.html">Home</a>
       <a href="../../bewertung.html">Bewertung</a>
@@ -21,27 +21,23 @@
       <a href="../login.html">Login</a>
       <a href="../wings/ratings.html">Ratings</a>
       <a href="../signup.html">Signup</a>
-      <a href="fischQuiz.html">Fisch-Quiz</a>
       <a href="../../README.html" class="readme-link">README</a>
     </nav>
   </header>
   <main id="main_content">
-    <label for="fish_search">Suche:</label>
-    <input type="text" id="fish_search" placeholder="Name oder wiss. Name" />
-    <table id="fisch_table">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Bild</th>
-          <th>Wiss. Name</th>
-          <th>Ursprung</th>
-          <th>Status</th>
-          <th>Ø-Grösse nach 1. Laichen (cm)</th>
-          <th>Maximale Grösse (cm)</th>
-          <th>In Bern</th>
-        </tr>
-      </thead>
-    </table>
+    <section id="start_screen" class="card">
+      <label>Fragenanzahl (0 = endlos)
+        <input id="quiz_length" type="number" min="0" value="0" />
+      </label>
+      <button id="start_btn">Start</button>
+    </section>
+    <section id="quiz_area" class="card" style="display:none;">
+      <img id="quiz_image" alt="" class="fish-image" />
+      <p id="quiz_question"></p>
+      <div id="quiz_options"></div>
+      <button id="stop_btn">Stop</button>
+    </section>
+    <section id="quiz_result" class="card" style="display:none;"></section>
   </main>
   <script>
     document.addEventListener('DOMContentLoaded', () => {

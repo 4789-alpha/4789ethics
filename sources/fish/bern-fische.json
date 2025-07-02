@@ -37,5 +37,50 @@
     "max_cm": 45,
     "spawn": "Fruehjahr",
     "spawn_cm": 15
+  },
+  {
+    "name": "Barbe",
+    "scientific_name": "Barbus barbus",
+    "type": "Weissfisch",
+    "habitat": "Fluesse",
+    "max_cm": 80,
+    "spawn": "Fruehjahr",
+    "image": "sources/fish/ch/barbus_barbus_ch.png"
+  },
+  {
+    "name": "Felchen",
+    "scientific_name": "Coregonus spp.",
+    "type": "Salmoniden",
+    "habitat": "Seen",
+    "max_cm": 60,
+    "spawn": "Winter",
+    "image": "sources/fish/ch/coregonus_spp_1_ch.png"
+  },
+  {
+    "name": "Alet",
+    "scientific_name": "Squalius cephalus",
+    "type": "Weissfisch",
+    "habitat": "Seen und Fluesse",
+    "max_cm": 60,
+    "spawn": "Fruehjahr",
+    "image": "sources/fish/ch/squalius_cephalus_ch.png"
+  },
+  {
+    "name": "Aal",
+    "scientific_name": "Anguilla anguilla",
+    "type": "Wanderfisch",
+    "habitat": "Seen und Fluesse",
+    "max_cm": 150,
+    "spawn": "Winter",
+    "image": "sources/fish/ch/anguilla_anguilla_ch.png"
+  },
+  {
+    "name": "Karpfen",
+    "scientific_name": "Cyprinus carpio",
+    "type": "Weissfisch",
+    "habitat": "Seen",
+    "max_cm": 100,
+    "spawn": "Fruehjahr",
+    "image": "sources/fish/ch/cyprinus_carpio_ch.png"
   }
 ]
