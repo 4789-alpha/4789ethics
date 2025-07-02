@@ -21,7 +21,7 @@
       <label for="lang_select" data-ui="choose_language_label">Language:</label>
       <select id="lang_select"></select>
     </div>
-    <p data-ui="signup_server_notice" class="card">This page stores a local profile when no server is available.</p>
+    <p id="server_notice" data-ui="signup_server_notice" class="card">This page stores a local profile when no server is available.</p>
     <label for="nick_input" data-ui="signup_nick">Nickname:</label>
     <input type="text" id="nick_input" placeholder="Optional nickname" />
     <label for="email_input" data-ui="signup_email">Email:</label>
@@ -35,7 +35,7 @@
     <pre id="status" style="white-space:pre-wrap;margin-top:1em;"></pre>
     <section class="card" style="margin-top:2em;">
       <h2>Disclaimers</h2>
-      <ul>
+      <ul id="disclaimers_list">
         <li>This structure is provided without warranty.</li>
         <li>Use it responsibly and at your own risk.</li>
         <li>Registration data is hashed and stored locally.</li>
