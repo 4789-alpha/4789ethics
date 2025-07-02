@@ -59,7 +59,7 @@
       <button id="color_wizard_btn" class="accent-button" type="button" onclick="openColorSettingsWizard()">Color Wizard</button>
       <button id="color_cli_wizard_btn" class="accent-button" type="button" onclick="openColorSettingsWizardCLI()">Text Wizard</button>
     </details>
-    <details class="card">
+    <details class="card" id="background_card">
       <summary>Background</summary>
       <div id="background_settings">
         <div id="background_count">
@@ -225,10 +225,12 @@
       const lvlNum = typeof getStoredOpLevel === 'function' ? opLevelToNumber(getStoredOpLevel()) : 0;
       const themeWrap = document.getElementById('theme_selection');
       const colorWrap = document.getElementById('color_settings');
+      const bgCard = document.getElementById('background_card');
       if (lvlNum < 3) {
         if (themeWrap) themeWrap.style.display = 'none';
         if (colorWrap) colorWrap.style.display = 'none';
       }
+      if (bgCard) bgCard.style.display = lvlNum >= 2 ? 'block' : 'none';
       if (sameWrap) sameWrap.style.display = lvlNum >= 1 ? 'block' : 'none';
       if (lvlNum >= 1 && sameSlider && sameVal) {
         const storedSame = parseInt(localStorage.getItem('ethicom_same_level_count') || '1', 10);

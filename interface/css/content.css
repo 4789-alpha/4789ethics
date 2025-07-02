@@ -296,6 +296,20 @@ body.home #op_background {
   filter: drop-shadow(0 0 2px var(--bg-color));
 }
 
+#op_background::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('../sources/images/op-logo/tanna_op0.png') center/20vmin no-repeat;
+  opacity: 0.25;
+  animation: tannaFallback 12s linear infinite;
+}
+
+@keyframes tannaFallback {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
 @keyframes backgroundSway {
   0% { transform: scale(1) translate(0, 0); }
   50% { transform: scale(1.02) translate(1%, 1%); }
