@@ -28,6 +28,7 @@
     "serve-bsvrb": "BASE_URL=https://bsvrb.ch node tools/serve-interface.js",
     "bundle-interface": "node tools/bundle-interface.js",
     "generate-wiki": "node tools/generate-wiki.js",
+    "pretest": "npm install",
     "test": "node --test && node tools/check-translations.js && node tools/check-file-integrity.js",
     "telegram-bot": "node tools/telegram-bot.js",
     "coverage": "nyc npm test",

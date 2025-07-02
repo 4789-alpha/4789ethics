@@ -6,6 +6,9 @@ This project welcomes ethical improvements and translations. Before changing the
 2. `structure_9874.md` – principles for clarity.
 3. `README.md` – overall goals and license.
 
+Before running tests or scripts, install the Node.js dependencies with `npm install` or run
+`tools/guided-install.sh` so that Express and other packages are available.
+
 Apply changes with intention and in alignment with the Open‑Ethics License:
 
 ```
