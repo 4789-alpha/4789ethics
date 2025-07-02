@@ -17,6 +17,7 @@
   "scripts": {
     "verify": "node tools/check-file-integrity.js",
     "start": "node tools/start-server.js",
+    "start-backend": "node backend/server.js",
     "easy-start": "node tools/easy-start.js",
     "serve-gh": "BASE_URL=https://4789-alpha.github.io node tools/serve-interface.js",
     "serve-bsvrb": "BASE_URL=https://bsvrb.ch node tools/serve-interface.js",
