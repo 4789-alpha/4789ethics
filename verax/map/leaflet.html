@@ -54,7 +54,7 @@
     map.on('locationfound', onLocationFound);
     map.on('locationerror', onLocationError);
 
-    map.locate({setView: true, maxZoom: 16, watch: true, enableHighAccuracy: true});
+    map.locate({setView: false, watch: false, enableHighAccuracy: true});
   </script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
