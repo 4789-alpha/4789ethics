@@ -5,8 +5,12 @@ async function initFischeSchweiz() {
   try {
     const list = await fetch('../../sources/fish/swiss-fish.json').then(r => r.json());
     const bernData = await fetch('../../sources/fish/bern-fische.json').then(r => r.json());
-    const sizeMap = {};
-    bernData.forEach(f => { sizeMap[f.scientific_name] = f.max_cm; });
+    const maxMap = {};
+    const spawnMap = {};
+    bernData.forEach(f => {
+      maxMap[f.scientific_name] = f.max_cm;
+      if (f.spawn_cm) spawnMap[f.scientific_name] = f.spawn_cm;
+    });
     const tbody = document.createElement('tbody');
     list.forEach(f => {
       const row = document.createElement('tr');
@@ -40,9 +44,13 @@ async function initFischeSchweiz() {
       statusCell.textContent = f.status;
       row.appendChild(statusCell);
 
-      const sizeCell = document.createElement('td');
-      sizeCell.textContent = sizeMap[f.scientific_name] || '';
-      row.appendChild(sizeCell);
+      const spawnCell = document.createElement('td');
+      spawnCell.textContent = f.spawn_cm || spawnMap[f.scientific_name] || '';
+      row.appendChild(spawnCell);
+
+      const maxCell = document.createElement('td');
+      maxCell.textContent = f.max_cm || maxMap[f.scientific_name] || '';
+      row.appendChild(maxCell);
 
       const bernCell = document.createElement('td');
       bernCell.textContent = f.in_bern ? '✓' : '';
@@ -60,7 +68,7 @@ async function initFischeSchweiz() {
       });
     }
   } catch (e) {
-    table.innerHTML = '<tr><td colspan="7">Daten konnten nicht geladen werden. Bitte Seite neu laden.</td></tr>';
+    table.innerHTML = '<tr><td colspan="8">Daten konnten nicht geladen werden. Bitte Seite neu laden.</td></tr>';
   }
 }
 
