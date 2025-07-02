@@ -19,8 +19,11 @@ async function initFischeSchweiz() {
       if (f.image) {
         const imgElem = document.createElement('img');
         imgElem.className = 'fish-image';
+        imgElem.loading = 'lazy';
         imgElem.src = `../../${f.image}`;
         imgElem.alt = f.name;
+        imgElem.style.cursor = 'pointer';
+        imgElem.addEventListener('click', () => showFishPopin(f));
         imgCell.appendChild(imgElem);
       }
       row.appendChild(imgCell);
@@ -59,6 +62,50 @@ async function initFischeSchweiz() {
   } catch (e) {
     table.innerHTML = '<tr><td colspan="7">Daten konnten nicht geladen werden. Bitte Seite neu laden.</td></tr>';
   }
+}
+
+function showFishPopin(f) {
+  const overlay = document.createElement('div');
+  overlay.style.position = 'fixed';
+  overlay.style.top = 0;
+  overlay.style.left = 0;
+  overlay.style.right = 0;
+  overlay.style.bottom = 0;
+  overlay.style.background = 'rgba(0,0,0,0.6)';
+  overlay.style.zIndex = 1000;
+
+  const box = document.createElement('div');
+  box.className = 'card';
+  box.style.background = '#fff';
+  box.style.color = '#000';
+  box.style.maxWidth = '90%';
+  box.style.margin = '5% auto';
+  box.style.position = 'relative';
+  box.style.padding = '1em';
+
+  const img = document.createElement('img');
+  img.src = `../../${f.image}`;
+  img.alt = f.name;
+  img.style.maxWidth = '100%';
+  box.appendChild(img);
+
+  const info = document.createElement('p');
+  info.innerHTML = `<strong>${f.name}</strong><br>${f.scientific_name}<br>Ursprung: ${f.origin}<br>Status: ${f.status}`;
+  box.appendChild(info);
+
+  const closeBtn = document.createElement('button');
+  closeBtn.textContent = 'X';
+  closeBtn.style.position = 'absolute';
+  closeBtn.style.top = '0.5em';
+  closeBtn.style.right = '0.5em';
+  closeBtn.addEventListener('click', () => overlay.remove());
+  box.appendChild(closeBtn);
+
+  overlay.appendChild(box);
+  overlay.addEventListener('click', e => { if (e.target === overlay) overlay.remove(); });
+  overlay.addEventListener('keydown', e => { if (e.key === 'Escape') overlay.remove(); });
+  document.body.appendChild(overlay);
+  setTimeout(() => closeBtn.focus(), 0);
 }
 
 document.addEventListener('DOMContentLoaded', initFischeSchweiz);
