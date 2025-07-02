@@ -591,6 +591,14 @@ node tools/github-opauth-token.js <email> <TOTP>
 ```
 It validates your stored OPauth credentials before printing the same token.
 
+To run the minimal backend for API experiments:
+
+```bash
+npm run start-backend
+```
+
+This launches `backend/server.js` on port 3000.
+
 
 ### Optional Setup Helper
 [⇧](#contents)
