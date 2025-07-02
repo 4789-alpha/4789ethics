@@ -68,10 +68,11 @@ together form the core of MYRIA.
 4. Optionally compile the Flutter launcher in `launcher/` to start the server
    without the terminal (`flutter run launcher`).
 5. The interface opens at `http://localhost:8080/index.html`.
-6. For quick static hosting, deploy the interface on
+6. Beim Start werden die Abteilungen automatisch unter den Projekten angezeigt.
+7. For quick static hosting, deploy the interface on
    [Netsly](interface/deploy_netsly.md) or
    [Hostpoint](interface/deploy_hostpoint.md).
-7. For the minimal Python helper see [docs/how_to_use.md](docs/how_to_use.md).
+8. For the minimal Python helper see [docs/how_to_use.md](docs/how_to_use.md).
 
 ```
     +-----------+
