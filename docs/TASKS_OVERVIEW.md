@@ -40,3 +40,6 @@ This file tracks pending improvements and roadmap actions.
 - [ ] Finalize data licensing and provide global guides.
 - [ ] Expand translations to all ISO 639-1 languages with a workflow.
 - [ ] Split tools and interface into independent modules.
+- [x] Provide a Docker image for local tests.
+- [x] Add offline help via `--help-offline`.
+- [x] Build cross-platform packages for Windows and macOS.

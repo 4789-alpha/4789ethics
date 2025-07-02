@@ -2436,8 +2436,12 @@ window.addEventListener('DOMContentLoaded', initLogin);
 
 //----- logo-background.js -----
 function initLogoBackground() {
-  const container = document.getElementById('op_background');
-  if (!container) return;
+  let container = document.getElementById('op_background');
+  if (!container) {
+    container = document.createElement('div');
+    container.id = 'op_background';
+    document.body.prepend(container);
+  }
   localStorage.setItem('ethicom_bg_collisions', 'true');
 
   if (!localStorage.getItem('ethicom_bg_fill')) {
@@ -3117,7 +3121,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const navHtml =
       '<nav class="op0-nav">'+
       `<a href="${base}index.html" class="icon-only" aria-label="Home">\u{1F3E0}</a>`+
-      `<a href="${base}interface/settings_OLD.html" class="icon-only" aria-label="Settings">\u2699</a>`+
+      `<a href="${base}interface/settings.html" class="icon-only" aria-label="Settings">\u2699</a>`+
       `<a href="${base}interface/login.html" class="icon-only" aria-label="Login">\u{1F511}</a>`+
       `<a href="${base}interface/signup.html">Signup</a>`+
       `<a href="${base}README.html" class="icon-only readme-link" aria-label="Help">?</a>`+

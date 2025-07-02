@@ -68,6 +68,8 @@ def main():
     update_yaml_value("interface_port", port)
     update_yaml_value("offline_mode", offline)
     print(f"Updated {SETTINGS_FILE}")
+    if lang:
+        print(f"Display language set to: {lang}")
 
 
 if __name__ == "__main__":

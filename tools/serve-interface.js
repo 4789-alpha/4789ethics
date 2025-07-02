@@ -145,6 +145,16 @@ if (process.argv.includes('--help') || process.argv.includes('-h')) {
   console.log('BASE_URL overrides the public origin for OAuth.');
   process.exit(0);
 }
+if (process.argv.includes('--help-offline')) {
+  const helpFile = path.join(repoRoot, 'docs', 'OFFLINE_HELP.md');
+  try {
+    const txt = fs.readFileSync(helpFile, 'utf8');
+    console.log(txt);
+  } catch {
+    console.log('Offline help not found.');
+  }
+  process.exit(0);
+}
 const paths = cfg.paths || {};
 
 const usersFile = path.join(repoRoot, paths.users || 'app/users.json');
