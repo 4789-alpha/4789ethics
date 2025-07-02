@@ -16,7 +16,7 @@
     #map { height: 60vh; width: 100%; }
     form { margin: 1rem; display: none; }
     label { display: block; margin-top: 0.5rem; }
-    #exportBtn { margin: 1rem; }
+    #exportBtn, #undoBtn { margin: 1rem; }
   </style>
 </head>
 <body>
@@ -33,10 +33,12 @@
     <button type="button" id="saveStop">Save</button>
   </form>
   <button id="exportBtn">Export</button>
+  <button id="undoBtn">Undo Last</button>
 <script>
 const map = L.map('map').setView([46.8345, 7.4953], 14);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom:18 }).addTo(map);
 const drawnItems = new L.FeatureGroup().addTo(map);
+const history = [];
 const drawControl = new L.Control.Draw({
   edit: { featureGroup: drawnItems },
   draw: { polygon:false, circle:false, rectangle:false, circlemarker:false }
@@ -48,6 +50,7 @@ map.on(L.Draw.Event.CREATED, e => {
   const layer = e.layer;
   if (e.layerType === 'polyline') {
     drawnItems.addLayer(layer);
+    history.push({ layer, type: 'polyline' });
   } else if (e.layerType === 'marker') {
     currentMarker = layer;
     document.getElementById('stopForm').style.display = 'block';
@@ -65,6 +68,7 @@ document.getElementById('saveStop').onclick = () => {
   };
   stops.push(stop);
   currentMarker.bindPopup(stop.name).addTo(drawnItems);
+  history.push({ layer: currentMarker, type: 'marker', stop });
   currentMarker = null;
   document.getElementById('stopForm').reset();
   document.getElementById('stopForm').style.display = 'none';
@@ -98,6 +102,16 @@ document.getElementById('exportBtn').onclick = () => {
   a2.href = URL.createObjectURL(stopBlob);
   a2.download = 'stops.json';
   a2.click();
+};
+
+document.getElementById('undoBtn').onclick = () => {
+  const last = history.pop();
+  if (!last) return;
+  drawnItems.removeLayer(last.layer);
+  if (last.type === 'marker') {
+    const idx = stops.indexOf(last.stop);
+    if (idx !== -1) stops.splice(idx, 1);
+  }
 };
 
 document.addEventListener('DOMContentLoaded', () => { applyTheme('tanna-dark'); });
