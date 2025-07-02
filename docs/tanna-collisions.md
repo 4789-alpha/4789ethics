@@ -6,7 +6,8 @@ The default values under the `ethicom_bg_*` keys fill roughly **90%** of the pag
 
 To check that collisions work:
 
-1. **Page setup** – A page must contain a `<div id="op_background"></div>` and load `bundle.js`.
+1. **Page setup** – Load `bundle.js`. The script creates
+   a `<div id="op_background"></div>` if missing.
    See [`interface/tanna-animation.html`](../interface/tanna-animation.html) lines 7–18.
    Collisions are only visible when this script runs; otherwise the background stays static.
 2. **Settings** – With a running server open `settings.html` to tweak the animation.
