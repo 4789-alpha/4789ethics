@@ -121,11 +121,11 @@ function initLogoBackground() {
   const maxLvl = Math.max(...levels);
   const minScale = 0.5;
   const FADE_MS = 0;
-  const imgBase = window.location.pathname.includes('/interface/') ||
-                  window.location.pathname.includes('/wings/') ||
-                  window.location.pathname.includes('/bsvrb.ch/')
-                    ? '../sources/images/op-logo/'
-                    : 'sources/images/op-logo/';
+  const depth = window.location.pathname
+    .replace(/[^/]+$/, '')
+    .split('/')
+    .filter(Boolean).length;
+  const imgBase = '../'.repeat(depth) + 'sources/images/op-logo/';
   const images = levels.map(lvl => {
     const img = new Image();
     const src = lvl >= 8 ? 7 : lvl;
