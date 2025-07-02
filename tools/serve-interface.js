@@ -920,6 +920,7 @@ const server = http.createServer((req, res) => {
 if (require.main === module) {
   server.listen(port, () => {
     console.log(`Ethicom interface available at ${baseUrl}/ethicom.html`);
+    console.log('Run "node tools/serve-interface.js --help-offline" for offline help.');
   });
 } else {
   module.exports = {
