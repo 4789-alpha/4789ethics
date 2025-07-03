@@ -15,12 +15,14 @@ fields:
   "scientific_name": "...",
   "name": "...",
   "origin": "einheimisch" | "NA",
-  "status": "LC" | "EN" | ...,
+  "status": "LC" | "EN" | ..., 
+  "spawn_cm": number,
+  "max_cm": number,
   "in_bern": true | false
 }
 ```
 
-`in_bern` indicates whether the species also appears in `bern-fische.json`.
+`in_bern` indicates whether the species also appears in `bern-fische.json`. `spawn_cm` and `max_cm` list the average size after first spawning and the maximum size in centimeters.
 
 The page `fischeSchweiz.html` renders the national list for convenient browsing.
 
