@@ -4,6 +4,8 @@ let fishMap = {};
 let quizLength = 0;
 let asked = 0;
 let score = 0;
+let answers = [];
+let currentFish = null;
 
 async function loadFishData() {
   try {
@@ -34,6 +36,8 @@ function startQuiz() {
   quizLength = parseInt(document.getElementById('quiz_length').value, 10) || 0;
   asked = 0;
   score = 0;
+  answers = [];
+  currentFish = null;
   document.getElementById('start_screen').style.display = 'none';
   document.getElementById('quiz_result').style.display = 'none';
   document.getElementById('quiz_area').style.display = 'block';
@@ -88,15 +92,24 @@ function nextQuestion() {
         nextQuestion();
       });
       optDiv.appendChild(btn);
+
     });
   }
 }
 
 function finishQuiz() {
   document.getElementById('quiz_area').style.display = 'none';
-  const result = `Ergebnis: ${score} von ${asked}`;
+  let result = `Ergebnis: ${score} von ${asked}`;
+  const wrong = answers.filter(a => a.selected !== a.question);
+  if (wrong.length) {
+    result += '<h2>Falsche Antworten</h2><ul>';
+    wrong.forEach(a => {
+      result += `<li>Gewählt: ${a.selected} – Richtig: ${a.question}</li>`;
+    });
+    result += '</ul>';
+  }
   const resDiv = document.getElementById('quiz_result');
-  resDiv.textContent = result;
+  resDiv.innerHTML = result;
   resDiv.style.display = 'block';
   document.getElementById('start_screen').style.display = 'block';
 }
