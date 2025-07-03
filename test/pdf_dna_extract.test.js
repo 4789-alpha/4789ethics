@@ -6,8 +6,9 @@ const path = require('node:path');
 const { spawnSync } = require('node:child_process');
 const PDFDocument = require('pdfkit');
 const yaml = require('js-yaml');
+const hasPyDeps = spawnSync('python3', ['-c', 'import yaml, PyPDF2'], { encoding: 'utf8' }).status === 0;
 
-test('extracts DNA from PDF into identity record', () => {
+test('extracts DNA from PDF into identity record', { skip: !hasPyDeps }, () => {
   const pdfFile = path.join(os.tmpdir(), 'dna.pdf');
   const doc = new PDFDocument();
   const stream = fs.createWriteStream(pdfFile);
