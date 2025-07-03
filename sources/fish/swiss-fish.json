@@ -1,80 +1,635 @@
 [
-  {"scientific_name": "Abramis brama", "name": "Brachse", "origin": "einheimisch", "status": "LC", "in_bern": false, "image": "sources/fish/ch/abramis_brama_ch.png"},
-  {"scientific_name": "Acipenser sturio", "name": "Stör", "origin": "einheimisch", "status": "RE", "in_bern": false, "image": "sources/fish/ch/acipenser_sturio_ch.png"},
-  {"scientific_name": "Alburnoides bipunctatus", "name": "Schneider", "origin": "einheimisch", "status": "VU", "in_bern": false, "image": "sources/fish/ch/alburnoides_bipunctatus_ch.png"},
-  {"scientific_name": "Alburnus alburnus", "name": "Laube", "origin": "einheimisch", "status": "LC", "in_bern": false, "image": "sources/fish/ch/alburnus_alburnus_ch.png"},
-  {"scientific_name": "Alburnus arborella", "name": "Alborella", "origin": "einheimisch", "status": "CR", "in_bern": false, "image": "sources/fish/ch/alburnus_arborella_ch.png"},
-  {"scientific_name": "Alosa agone", "name": "Agone", "origin": "einheimisch", "status": "VU", "in_bern": false, "image": "sources/fish/ch/alosa_agone_ch.png"},
-  {"scientific_name": "Alosa alosa", "name": "Maifisch", "origin": "einheimisch", "status": "RE", "in_bern": false},
-  {"scientific_name": "Alosa fallax", "name": "Finte", "origin": "einheimisch", "status": "DD", "in_bern": false, "image": "sources/fish/ch/alosa_fallax_ch.png"},
-  {"scientific_name": "Anguilla anguilla", "name": "Aal", "origin": "einheimisch", "status": "CR", "in_bern": false, "image": "sources/fish/ch/anguilla_anguilla_ch.png"},
-  {"scientific_name": "Barbatula barbatula", "name": "Bartgrundel", "origin": "einheimisch", "status": "NT", "in_bern": false, "image": "sources/fish/ch/barbatula_barbatula_ch.png"},
-  {"scientific_name": "Barbus barbus", "name": "Barbe", "origin": "einheimisch", "status": "NT", "in_bern": false, "image": "sources/fish/ch/barbus_barbus_ch.png"},
-  {"scientific_name": "Barbus caninus", "name": "Hundsbarbe", "origin": "einheimisch", "status": "VU", "in_bern": false, "image": "sources/fish/ch/barbus_caninus_ch.png"},
-  {"scientific_name": "Barbus plebejus", "name": "Barbo", "origin": "einheimisch", "status": "VU", "in_bern": false, "image": "sources/fish/ch/barbus_plebejus_ch.png"},
-  {"scientific_name": "Blicca bjoerkna", "name": "Blicke", "origin": "einheimisch", "status": "NT", "in_bern": false, "image": "sources/fish/ch/blicca_bjoerkna_ch.png"},
-  {"scientific_name": "Chondrostoma nasus", "name": "Nase", "origin": "einheimisch", "status": "CR", "in_bern": false, "image": "sources/fish/ch/chondrostoma_nasus_ch.png"},
-  {"scientific_name": "Chondrostoma soetta", "name": "Savetta", "origin": "einheimisch", "status": "CR", "in_bern": false, "image": "sources/fish/ch/chondrostoma_soetta_ch.png"},
-  {"scientific_name": "Cobitis bilineata", "name": "Dorngrundel", "origin": "einheimisch", "status": "EN", "in_bern": false, "image": "sources/fish/ch/cobitis_bilineata_ch.png"},
-  {"scientific_name": "Cobitis taenia", "name": "Steinbeisser", "origin": "einheimisch", "status": "DD", "in_bern": false, "image": "sources/fish/ch/cobitis_taenia_ch.png"},
-  {"scientific_name": "Coregonus spp.", "name": "Felchen", "origin": "einheimisch", "status": "NT", "in_bern": false, "image": "sources/fish/ch/coregonus_spp_1_ch.png"},
-  {"scientific_name": "Cottus gobio", "name": "Groppe", "origin": "einheimisch", "status": "NT", "in_bern": false, "image": "sources/fish/ch/cottus_gobio_ch.png"},
-  {"scientific_name": "Cyprinus carpio", "name": "Karpfen", "origin": "einheimisch", "status": "NT", "in_bern": false, "image": "sources/fish/ch/cyprinus_carpio_ch.png"},
-  {"scientific_name": "Esox lucius", "name": "Hecht", "origin": "einheimisch", "status": "LC", "in_bern": true, "image": "sources/fish/ch/esox_lucius_ch.png"},
-  {"scientific_name": "Gasterosteus gymnurus", "name": "Dreistachliger Stichling", "origin": "einheimisch", "status": "NT", "in_bern": false, "image": "sources/fish/ch/gasterosteus_gymnurus_ch.png"},
-  {"scientific_name": "Gobio gobio", "name": "Gründling", "origin": "einheimisch", "status": "LC", "in_bern": false, "image": "sources/fish/ch/gobio_gobio.png"},
-  {"scientific_name": "Gobio obtusirostris", "name": "Donau-Gründling", "origin": "einheimisch", "status": "DD", "in_bern": false, "image": "sources/fish/ch/gobio_obtusirostris_ch.png"},
-  {"scientific_name": "Gymnocephalus cernua", "name": "Kaulbarsch", "origin": "einheimisch", "status": "LC", "in_bern": false, "image": "sources/fish/ch/gymnocephalus_cernua_ch.png"},
-  {"scientific_name": "Hucho hucho", "name": "Huchen", "origin": "einheimisch", "status": "RE", "in_bern": false, "image": "sources/fish/ch/hucho_hucho_ch.png"},
-  {"scientific_name": "Lampetra fluviatilis", "name": "Flussneunauge", "origin": "einheimisch", "status": "RE", "in_bern": false, "image": "sources/fish/ch/lampetra_fluviatilis_ch.png"},
-  {"scientific_name": "Lampetra planeri", "name": "Bachneunauge", "origin": "einheimisch", "status": "EN", "in_bern": false, "image": "sources/fish/ch/lampetra_planeri_ch.png"},
-  {"scientific_name": "Lampetra zanandreai", "name": "Piccola lampreda", "origin": "einheimisch", "status": "CR", "in_bern": false, "image": "sources/fish/ch/lampetra_zanandreai_ch.png"},
-  {"scientific_name": "Leucaspius delineatus", "name": "Moderlieschen", "origin": "einheimisch", "status": "VU", "in_bern": false, "image": "sources/fish/ch/leucaspius_delineatus_ch.png"},
-  {"scientific_name": "Leuciscus leuciscus", "name": "Hasel", "origin": "einheimisch", "status": "LC", "in_bern": false, "image": "sources/fish/ch/leuciscus_leuciscus_ch.png"},
-  {"scientific_name": "Lota lota", "name": "Trüsche", "origin": "einheimisch", "status": "LC", "in_bern": false, "image": "sources/fish/ch/lota_lota_ch.png"},
-  {"scientific_name": "Misgurnus fossilis", "name": "Moorgrundel", "origin": "einheimisch", "status": "RE", "in_bern": false, "image": "sources/fish/ch/misgurnus_fossilis_ch.png"},
-  {"scientific_name": "Padogobius bonelli", "name": "Ghiozzo", "origin": "einheimisch", "status": "EN", "in_bern": false, "image": "sources/fish/ch/padogobius_bonelli_ch.png"},
-  {"scientific_name": "Parachondrostoma toxostoma", "name": "Sofie", "origin": "einheimisch", "status": "CR", "in_bern": false, "image": "sources/fish/ch/parachodrostoma_toxostoma_ch.png"},
-  {"scientific_name": "Perca fluviatilis", "name": "Egli", "origin": "einheimisch", "status": "LC", "in_bern": true, "image": "sources/fish/ch/perca_fluviatilis_ch.png"},
-  {"scientific_name": "Petromyzon marinus", "name": "Meerneunauge", "origin": "einheimisch", "status": "RE", "in_bern": false, "image": "sources/fish/ch/petromyzon_marinus_ch.png"},
-  {"scientific_name": "Phoxinus phoxinus", "name": "Elritze", "origin": "einheimisch", "status": "LC", "in_bern": false, "image": "sources/fish/ch/phoxinus_phoxinus_ch.png"},
-  {"scientific_name": "Rhodeus amarus", "name": "Bitterling", "origin": "einheimisch", "status": "EN", "in_bern": false, "image": "sources/fish/ch/rhodeus_amarus_ch.png"},
-  {"scientific_name": "Rutilus aula", "name": "Triotto", "origin": "einheimisch", "status": "CR", "in_bern": false, "image": "sources/fish/ch/rutilus_aula_ch.png"},
-  {"scientific_name": "Rutilus pigus", "name": "Pigo", "origin": "einheimisch", "status": "CR", "in_bern": false, "image": "sources/fish/ch/rutilus_pigus_ch.png"},
-  {"scientific_name": "Rutilus rutilus", "name": "Rotauge", "origin": "einheimisch", "status": "LC", "in_bern": true, "image": "sources/fish/ch/rutilus_rutilus_ch.png"},
-  {"scientific_name": "Salaria fluviatilis", "name": "Cagnetta", "origin": "einheimisch", "status": "VU", "in_bern": false, "image": "sources/fish/ch/salaria_fluviatilis_ch.png"},
-  {"scientific_name": "Salmo cenerinus", "name": "Adriatische Forelle", "origin": "einheimisch", "status": "CR", "in_bern": false, "image": "sources/fish/ch/salmo_cenerinus_ch.png"},
-  {"scientific_name": "Salmo labrax", "name": "Donauforelle", "origin": "einheimisch", "status": "CR", "in_bern": false, "image": "sources/fish/ch/salmo_labrax_ch.png"},
-  {"scientific_name": "Salmo marmoratus", "name": "Marmorataforelle", "origin": "einheimisch", "status": "CR", "in_bern": false, "image": "sources/fish/ch/salmo_marmoratus_ch.png"},
-  {"scientific_name": "Salmo rhodanensis", "name": "Zebraforelle", "origin": "einheimisch", "status": "EN", "in_bern": false, "image": "sources/fish/ch/salmo_rhodanensis_ch.png"},
-  {"scientific_name": "Salmo trutta (f. fluviatilis)", "name": "Flussforelle", "origin": "einheimisch", "status": "EN", "in_bern": false, "image": "sources/fish/ch/salmo_trutta_fluviatilis_ch.png"},
-  {"scientific_name": "Salmo trutta (f. fario)", "name": "Bachforelle", "origin": "einheimisch", "status": "NT", "in_bern": true, "image": "sources/fish/ch/salmo_trutta_fario_ch.png"},
-  {"scientific_name": "Salmo trutta (f. lacustris)", "name": "Seeforelle", "origin": "einheimisch", "status": "EN", "in_bern": false, "image": "sources/fish/ch/salmo_trutta_lacustris_ch.png"},
-  {"scientific_name": "Salmo trutta (f. marinus)", "name": "Meerforelle", "origin": "einheimisch", "status": "RE", "in_bern": false, "image": "sources/fish/ch/salmo_trutta_marinus_ch.png"},
-  {"scientific_name": "Salmo salar", "name": "Atlantischer Lachs", "origin": "einheimisch", "status": "RE", "in_bern": false, "image": "sources/fish/ch/salmo_salar_ch.png"},
-  {"scientific_name": "Salvelinus alpinus", "name": "Alpensee-Saibling", "origin": "einheimisch", "status": "VU", "in_bern": false, "image": "sources/fish/ch/salvelinus_alpinus_ch.png"},
-  {"scientific_name": "Salvelinus profundus", "name": "Tiefseesaibling", "origin": "einheimisch", "status": "CR", "in_bern": false, "image": "sources/fish/ch/salvelinus_profundus_ch.png"},
-  {"scientific_name": "Scardinius erythrophthalmus", "name": "Rotfeder", "origin": "einheimisch", "status": "LC", "in_bern": false, "image": "sources/fish/ch/scardinius_erythrophthalmus_ch.png"},
-  {"scientific_name": "Scardinius hesperidicus", "name": "Scardola italiana", "origin": "einheimisch", "status": "VU", "in_bern": false, "image": "sources/fish/ch/scardinius_hesperidicus_ch.png"},
-  {"scientific_name": "Silurus glanis", "name": "Wels", "origin": "einheimisch", "status": "LC", "in_bern": false, "image": "sources/fish/ch/silurus_glanis_ch.png"},
-  {"scientific_name": "Sander lucioperca", "name": "Zander", "origin": "einheimisch", "status": "LC", "in_bern": false, "image": "sources/fish/ch/sander_lucioperca_ch.png"},
-  {"scientific_name": "Squalius cephalus", "name": "Alet", "origin": "einheimisch", "status": "LC", "in_bern": false, "image": "sources/fish/ch/squalius_cephalus_ch.png"},
-  {"scientific_name": "Squalius squalus", "name": "Cavedano italiano", "origin": "einheimisch", "status": "VU", "in_bern": false, "image": "sources/fish/ch/squalius_squalio_ch.png"},
-  {"scientific_name": "Telestes muticellus", "name": "Strigione", "origin": "einheimisch", "status": "NT", "in_bern": false, "image": "sources/fish/ch/telestes_muticellus_ch.png"},
-  {"scientific_name": "Telestes souffia", "name": "Strömer", "origin": "einheimisch", "status": "VU", "in_bern": false, "image": "sources/fish/ch/telestes_souffia_ch.png"},
-  {"scientific_name": "Thymallus aeliani", "name": "Adriatische Äsche", "origin": "einheimisch", "status": "CR", "in_bern": false, "image": "sources/fish/ch/thymallus_aeliani_ch.png"},
-  {"scientific_name": "Thymallus thymallus", "name": "Äsche", "origin": "einheimisch", "status": "EN", "in_bern": false, "image": "sources/fish/ch/thymallus_thymallus_ch.png"},
-  {"scientific_name": "Zingel asper", "name": "Apron (Roi du Doubs)", "origin": "einheimisch", "status": "CR", "in_bern": false, "image": "sources/fish/ch/zingel_asper_ch.png"},
-  {"scientific_name": "Coregonus zugensis", "name": "Zuger Albeli", "origin": "einheimisch", "status": "RE", "in_bern": false, "image": "sources/fish/ch/coregonus_zugensis_ch.png"},
-  {"scientific_name": "Coregonus palaea", "name": "Palée", "origin": "einheimisch", "status": "RE", "in_bern": false, "image": "sources/fish/ch/coregonus_palaea_ch.png"},
-  {"scientific_name": "Coregonus confusus", "name": "Bondelle", "origin": "einheimisch", "status": "DD", "in_bern": false, "image": "sources/fish/ch/coregonus_confusus_ch.png"},
-  {"scientific_name": "Coregonus brienzii", "name": "Brienzer Kleinbalchen", "origin": "einheimisch", "status": "VU", "in_bern": false, "image": "sources/fish/ch/coregonus_brienzii_ch.png"},
-  {"scientific_name": "Coregonus steinmanni", "name": "Steinmanns Balchen", "origin": "einheimisch", "status": "VU", "in_bern": false, "image": "sources/fish/ch/coregonus_steinmanni_ch.png"},
-  {"scientific_name": "Coregonus nobilis", "name": "Edelfisch", "origin": "einheimisch", "status": "EN", "in_bern": false, "image": "sources/fish/ch/coregonus_nobilis_ch.png"},
-  {"scientific_name": "Gasterosteus aculeatus", "name": "Stichling (nicht-einheimisch)", "origin": "NA", "status": "NA", "in_bern": false, "image": "sources/fish/ch/gasterosteus_aculeatus_ch.png"},
-  {"scientific_name": "Carassius gibelio", "name": "Giebel", "origin": "NA", "status": "NA", "in_bern": false, "image": "sources/fish/ch/carassius_gibelio_ch.png"},
-  {"scientific_name": "Alburnus alburnus (eingeführt)", "name": "Laube (eingeführt)", "origin": "NA", "status": "NA", "in_bern": false, "image": "sources/fish/ch/alburnus_alburnus_ch.png"},
-  {"scientific_name": "Oncorhynchus mykiss", "name": "Regenbogenforelle", "origin": "NA", "status": "NA", "in_bern": false, "image": "sources/fish/ch/oncorhynchus_mykiss_ch.png"},
-  {"scientific_name": "Pseudorasbora parva", "name": "Amurgrundel", "origin": "NA", "status": "NA", "in_bern": false, "image": "sources/fish/ch/pseudorasbora_parva_ch.png"},
-  {"scientific_name": "Lepomis gibbosus", "name": "Sonnenbarsch", "origin": "NA", "status": "NA", "in_bern": false, "image": "sources/fish/ch/lepomis_gibbosus_ch.png"}
+  {
+    "scientific_name": "Abramis brama",
+    "name": "Brachse",
+    "origin": "einheimisch",
+    "status": "LC",
+    "in_bern": false,
+    "image": "sources/fish/ch/abramis_brama_ch.png"
+  },
+  {
+    "scientific_name": "Acipenser sturio",
+    "name": "Stör",
+    "origin": "einheimisch",
+    "status": "RE",
+    "in_bern": false,
+    "image": "sources/fish/ch/acipenser_sturio_ch.png"
+  },
+  {
+    "scientific_name": "Alburnoides bipunctatus",
+    "name": "Schneider",
+    "origin": "einheimisch",
+    "status": "VU",
+    "in_bern": false,
+    "image": "sources/fish/ch/alburnoides_bipunctatus_ch.png"
+  },
+  {
+    "scientific_name": "Alburnus alburnus",
+    "name": "Laube",
+    "origin": "einheimisch",
+    "status": "LC",
+    "in_bern": false,
+    "image": "sources/fish/ch/alburnus_alburnus_ch.png"
+  },
+  {
+    "scientific_name": "Alburnus arborella",
+    "name": "Alborella",
+    "origin": "einheimisch",
+    "status": "CR",
+    "in_bern": false,
+    "image": "sources/fish/ch/alburnus_arborella_ch.png"
+  },
+  {
+    "scientific_name": "Alosa agone",
+    "name": "Agone",
+    "origin": "einheimisch",
+    "status": "VU",
+    "in_bern": false,
+    "image": "sources/fish/ch/alosa_agone_ch.png"
+  },
+  {
+    "scientific_name": "Alosa alosa",
+    "name": "Maifisch",
+    "origin": "einheimisch",
+    "status": "RE",
+    "in_bern": false
+  },
+  {
+    "scientific_name": "Alosa fallax",
+    "name": "Finte",
+    "origin": "einheimisch",
+    "status": "DD",
+    "in_bern": false,
+    "image": "sources/fish/ch/alosa_fallax_ch.png"
+  },
+  {
+    "scientific_name": "Anguilla anguilla",
+    "name": "Aal",
+    "origin": "einheimisch",
+    "status": "CR",
+    "in_bern": false,
+    "image": "sources/fish/ch/anguilla_anguilla_ch.png"
+  },
+  {
+    "scientific_name": "Barbatula barbatula",
+    "name": "Bartgrundel",
+    "origin": "einheimisch",
+    "status": "NT",
+    "in_bern": false,
+    "image": "sources/fish/ch/barbatula_barbatula_ch.png"
+  },
+  {
+    "scientific_name": "Barbus barbus",
+    "name": "Barbe",
+    "origin": "einheimisch",
+    "status": "NT",
+    "in_bern": false,
+    "image": "sources/fish/ch/barbus_barbus_ch.png"
+  },
+  {
+    "scientific_name": "Barbus caninus",
+    "name": "Hundsbarbe",
+    "origin": "einheimisch",
+    "status": "VU",
+    "in_bern": false,
+    "image": "sources/fish/ch/barbus_caninus_ch.png"
+  },
+  {
+    "scientific_name": "Barbus plebejus",
+    "name": "Barbo",
+    "origin": "einheimisch",
+    "status": "VU",
+    "in_bern": false,
+    "image": "sources/fish/ch/barbus_plebejus_ch.png"
+  },
+  {
+    "scientific_name": "Blicca bjoerkna",
+    "name": "Blicke",
+    "origin": "einheimisch",
+    "status": "NT",
+    "in_bern": false,
+    "image": "sources/fish/ch/blicca_bjoerkna_ch.png"
+  },
+  {
+    "scientific_name": "Chondrostoma nasus",
+    "name": "Nase",
+    "origin": "einheimisch",
+    "status": "CR",
+    "in_bern": false,
+    "image": "sources/fish/ch/chondrostoma_nasus_ch.png"
+  },
+  {
+    "scientific_name": "Chondrostoma soetta",
+    "name": "Savetta",
+    "origin": "einheimisch",
+    "status": "CR",
+    "in_bern": false,
+    "image": "sources/fish/ch/chondrostoma_soetta_ch.png"
+  },
+  {
+    "scientific_name": "Cobitis bilineata",
+    "name": "Dorngrundel",
+    "origin": "einheimisch",
+    "status": "EN",
+    "in_bern": false,
+    "image": "sources/fish/ch/cobitis_bilineata_ch.png"
+  },
+  {
+    "scientific_name": "Cobitis taenia",
+    "name": "Steinbeisser",
+    "origin": "einheimisch",
+    "status": "DD",
+    "in_bern": false,
+    "image": "sources/fish/ch/cobitis_taenia_ch.png"
+  },
+  {
+    "scientific_name": "Coregonus spp.",
+    "name": "Felchen",
+    "origin": "einheimisch",
+    "status": "NT",
+    "in_bern": false,
+    "image": "sources/fish/ch/coregonus_spp_1_ch.png"
+  },
+  {
+    "scientific_name": "Cottus gobio",
+    "name": "Groppe",
+    "origin": "einheimisch",
+    "status": "NT",
+    "in_bern": false,
+    "image": "sources/fish/ch/cottus_gobio_ch.png"
+  },
+  {
+    "scientific_name": "Cyprinus carpio",
+    "name": "Karpfen",
+    "origin": "einheimisch",
+    "status": "NT",
+    "in_bern": false,
+    "image": "sources/fish/ch/cyprinus_carpio_ch.png"
+  },
+  {
+    "scientific_name": "Esox lucius",
+    "name": "Hecht",
+    "origin": "einheimisch",
+    "status": "LC",
+    "in_bern": true,
+    "image": "sources/fish/ch/esox_lucius_ch.png",
+    "spawn_cm": 50,
+    "max_cm": 150
+  },
+  {
+    "scientific_name": "Gasterosteus gymnurus",
+    "name": "Dreistachliger Stichling",
+    "origin": "einheimisch",
+    "status": "NT",
+    "in_bern": false,
+    "image": "sources/fish/ch/gasterosteus_gymnurus_ch.png"
+  },
+  {
+    "scientific_name": "Gobio gobio",
+    "name": "Gründling",
+    "origin": "einheimisch",
+    "status": "LC",
+    "in_bern": false,
+    "image": "sources/fish/ch/gobio_gobio.png"
+  },
+  {
+    "scientific_name": "Gobio obtusirostris",
+    "name": "Donau-Gründling",
+    "origin": "einheimisch",
+    "status": "DD",
+    "in_bern": false,
+    "image": "sources/fish/ch/gobio_obtusirostris_ch.png"
+  },
+  {
+    "scientific_name": "Gymnocephalus cernua",
+    "name": "Kaulbarsch",
+    "origin": "einheimisch",
+    "status": "LC",
+    "in_bern": false,
+    "image": "sources/fish/ch/gymnocephalus_cernua_ch.png"
+  },
+  {
+    "scientific_name": "Hucho hucho",
+    "name": "Huchen",
+    "origin": "einheimisch",
+    "status": "RE",
+    "in_bern": false,
+    "image": "sources/fish/ch/hucho_hucho_ch.png"
+  },
+  {
+    "scientific_name": "Lampetra fluviatilis",
+    "name": "Flussneunauge",
+    "origin": "einheimisch",
+    "status": "RE",
+    "in_bern": false,
+    "image": "sources/fish/ch/lampetra_fluviatilis_ch.png"
+  },
+  {
+    "scientific_name": "Lampetra planeri",
+    "name": "Bachneunauge",
+    "origin": "einheimisch",
+    "status": "EN",
+    "in_bern": false,
+    "image": "sources/fish/ch/lampetra_planeri_ch.png"
+  },
+  {
+    "scientific_name": "Lampetra zanandreai",
+    "name": "Piccola lampreda",
+    "origin": "einheimisch",
+    "status": "CR",
+    "in_bern": false,
+    "image": "sources/fish/ch/lampetra_zanandreai_ch.png"
+  },
+  {
+    "scientific_name": "Leucaspius delineatus",
+    "name": "Moderlieschen",
+    "origin": "einheimisch",
+    "status": "VU",
+    "in_bern": false,
+    "image": "sources/fish/ch/leucaspius_delineatus_ch.png"
+  },
+  {
+    "scientific_name": "Leuciscus leuciscus",
+    "name": "Hasel",
+    "origin": "einheimisch",
+    "status": "LC",
+    "in_bern": false,
+    "image": "sources/fish/ch/leuciscus_leuciscus_ch.png"
+  },
+  {
+    "scientific_name": "Lota lota",
+    "name": "Trüsche",
+    "origin": "einheimisch",
+    "status": "LC",
+    "in_bern": false,
+    "image": "sources/fish/ch/lota_lota_ch.png"
+  },
+  {
+    "scientific_name": "Misgurnus fossilis",
+    "name": "Moorgrundel",
+    "origin": "einheimisch",
+    "status": "RE",
+    "in_bern": false,
+    "image": "sources/fish/ch/misgurnus_fossilis_ch.png"
+  },
+  {
+    "scientific_name": "Padogobius bonelli",
+    "name": "Ghiozzo",
+    "origin": "einheimisch",
+    "status": "EN",
+    "in_bern": false,
+    "image": "sources/fish/ch/padogobius_bonelli_ch.png"
+  },
+  {
+    "scientific_name": "Parachondrostoma toxostoma",
+    "name": "Sofie",
+    "origin": "einheimisch",
+    "status": "CR",
+    "in_bern": false,
+    "image": "sources/fish/ch/parachodrostoma_toxostoma_ch.png"
+  },
+  {
+    "scientific_name": "Perca fluviatilis",
+    "name": "Egli",
+    "origin": "einheimisch",
+    "status": "LC",
+    "in_bern": true,
+    "image": "sources/fish/ch/perca_fluviatilis_ch.png",
+    "spawn_cm": 20,
+    "max_cm": 60
+  },
+  {
+    "scientific_name": "Petromyzon marinus",
+    "name": "Meerneunauge",
+    "origin": "einheimisch",
+    "status": "RE",
+    "in_bern": false,
+    "image": "sources/fish/ch/petromyzon_marinus_ch.png"
+  },
+  {
+    "scientific_name": "Phoxinus phoxinus",
+    "name": "Elritze",
+    "origin": "einheimisch",
+    "status": "LC",
+    "in_bern": false,
+    "image": "sources/fish/ch/phoxinus_phoxinus_ch.png"
+  },
+  {
+    "scientific_name": "Rhodeus amarus",
+    "name": "Bitterling",
+    "origin": "einheimisch",
+    "status": "EN",
+    "in_bern": false,
+    "image": "sources/fish/ch/rhodeus_amarus_ch.png"
+  },
+  {
+    "scientific_name": "Rutilus aula",
+    "name": "Triotto",
+    "origin": "einheimisch",
+    "status": "CR",
+    "in_bern": false,
+    "image": "sources/fish/ch/rutilus_aula_ch.png"
+  },
+  {
+    "scientific_name": "Rutilus pigus",
+    "name": "Pigo",
+    "origin": "einheimisch",
+    "status": "CR",
+    "in_bern": false,
+    "image": "sources/fish/ch/rutilus_pigus_ch.png"
+  },
+  {
+    "scientific_name": "Rutilus rutilus",
+    "name": "Rotauge",
+    "origin": "einheimisch",
+    "status": "LC",
+    "in_bern": true,
+    "image": "sources/fish/ch/rutilus_rutilus_ch.png",
+    "spawn_cm": 15,
+    "max_cm": 45
+  },
+  {
+    "scientific_name": "Salaria fluviatilis",
+    "name": "Cagnetta",
+    "origin": "einheimisch",
+    "status": "VU",
+    "in_bern": false,
+    "image": "sources/fish/ch/salaria_fluviatilis_ch.png"
+  },
+  {
+    "scientific_name": "Salmo cenerinus",
+    "name": "Adriatische Forelle",
+    "origin": "einheimisch",
+    "status": "CR",
+    "in_bern": false,
+    "image": "sources/fish/ch/salmo_cenerinus_ch.png"
+  },
+  {
+    "scientific_name": "Salmo labrax",
+    "name": "Donauforelle",
+    "origin": "einheimisch",
+    "status": "CR",
+    "in_bern": false,
+    "image": "sources/fish/ch/salmo_labrax_ch.png"
+  },
+  {
+    "scientific_name": "Salmo marmoratus",
+    "name": "Marmorataforelle",
+    "origin": "einheimisch",
+    "status": "CR",
+    "in_bern": false,
+    "image": "sources/fish/ch/salmo_marmoratus_ch.png"
+  },
+  {
+    "scientific_name": "Salmo rhodanensis",
+    "name": "Zebraforelle",
+    "origin": "einheimisch",
+    "status": "EN",
+    "in_bern": false,
+    "image": "sources/fish/ch/salmo_rhodanensis_ch.png"
+  },
+  {
+    "scientific_name": "Salmo trutta (f. fluviatilis)",
+    "name": "Flussforelle",
+    "origin": "einheimisch",
+    "status": "EN",
+    "in_bern": false,
+    "image": "sources/fish/ch/salmo_trutta_fluviatilis_ch.png"
+  },
+  {
+    "scientific_name": "Salmo trutta (f. fario)",
+    "name": "Bachforelle",
+    "origin": "einheimisch",
+    "status": "NT",
+    "in_bern": true,
+    "image": "sources/fish/ch/salmo_trutta_fario_ch.png",
+    "spawn_cm": 25,
+    "max_cm": 80
+  },
+  {
+    "scientific_name": "Salmo trutta (f. lacustris)",
+    "name": "Seeforelle",
+    "origin": "einheimisch",
+    "status": "EN",
+    "in_bern": false,
+    "image": "sources/fish/ch/salmo_trutta_lacustris_ch.png"
+  },
+  {
+    "scientific_name": "Salmo trutta (f. marinus)",
+    "name": "Meerforelle",
+    "origin": "einheimisch",
+    "status": "RE",
+    "in_bern": false,
+    "image": "sources/fish/ch/salmo_trutta_marinus_ch.png"
+  },
+  {
+    "scientific_name": "Salmo salar",
+    "name": "Atlantischer Lachs",
+    "origin": "einheimisch",
+    "status": "RE",
+    "in_bern": false,
+    "image": "sources/fish/ch/salmo_salar_ch.png",
+    "spawn_cm": 70,
+    "max_cm": 150
+  },
+  {
+    "scientific_name": "Salvelinus alpinus",
+    "name": "Alpensee-Saibling",
+    "origin": "einheimisch",
+    "status": "VU",
+    "in_bern": false,
+    "image": "sources/fish/ch/salvelinus_alpinus_ch.png"
+  },
+  {
+    "scientific_name": "Salvelinus profundus",
+    "name": "Tiefseesaibling",
+    "origin": "einheimisch",
+    "status": "CR",
+    "in_bern": false,
+    "image": "sources/fish/ch/salvelinus_profundus_ch.png"
+  },
+  {
+    "scientific_name": "Scardinius erythrophthalmus",
+    "name": "Rotfeder",
+    "origin": "einheimisch",
+    "status": "LC",
+    "in_bern": false,
+    "image": "sources/fish/ch/scardinius_erythrophthalmus_ch.png"
+  },
+  {
+    "scientific_name": "Scardinius hesperidicus",
+    "name": "Scardola italiana",
+    "origin": "einheimisch",
+    "status": "VU",
+    "in_bern": false,
+    "image": "sources/fish/ch/scardinius_hesperidicus_ch.png"
+  },
+  {
+    "scientific_name": "Silurus glanis",
+    "name": "Wels",
+    "origin": "einheimisch",
+    "status": "LC",
+    "in_bern": false,
+    "image": "sources/fish/ch/silurus_glanis_ch.png"
+  },
+  {
+    "scientific_name": "Sander lucioperca",
+    "name": "Zander",
+    "origin": "einheimisch",
+    "status": "LC",
+    "in_bern": false,
+    "image": "sources/fish/ch/sander_lucioperca_ch.png"
+  },
+  {
+    "scientific_name": "Squalius cephalus",
+    "name": "Alet",
+    "origin": "einheimisch",
+    "status": "LC",
+    "in_bern": false,
+    "image": "sources/fish/ch/squalius_cephalus_ch.png"
+  },
+  {
+    "scientific_name": "Squalius squalus",
+    "name": "Cavedano italiano",
+    "origin": "einheimisch",
+    "status": "VU",
+    "in_bern": false,
+    "image": "sources/fish/ch/squalius_squalio_ch.png"
+  },
+  {
+    "scientific_name": "Telestes muticellus",
+    "name": "Strigione",
+    "origin": "einheimisch",
+    "status": "NT",
+    "in_bern": false,
+    "image": "sources/fish/ch/telestes_muticellus_ch.png"
+  },
+  {
+    "scientific_name": "Telestes souffia",
+    "name": "Strömer",
+    "origin": "einheimisch",
+    "status": "VU",
+    "in_bern": false,
+    "image": "sources/fish/ch/telestes_souffia_ch.png"
+  },
+  {
+    "scientific_name": "Thymallus aeliani",
+    "name": "Adriatische Äsche",
+    "origin": "einheimisch",
+    "status": "CR",
+    "in_bern": false,
+    "image": "sources/fish/ch/thymallus_aeliani_ch.png"
+  },
+  {
+    "scientific_name": "Thymallus thymallus",
+    "name": "Äsche",
+    "origin": "einheimisch",
+    "status": "EN",
+    "in_bern": false,
+    "image": "sources/fish/ch/thymallus_thymallus_ch.png"
+  },
+  {
+    "scientific_name": "Zingel asper",
+    "name": "Apron (Roi du Doubs)",
+    "origin": "einheimisch",
+    "status": "CR",
+    "in_bern": false,
+    "image": "sources/fish/ch/zingel_asper_ch.png"
+  },
+  {
+    "scientific_name": "Coregonus zugensis",
+    "name": "Zuger Albeli",
+    "origin": "einheimisch",
+    "status": "RE",
+    "in_bern": false,
+    "image": "sources/fish/ch/coregonus_zugensis_ch.png"
+  },
+  {
+    "scientific_name": "Coregonus palaea",
+    "name": "Palée",
+    "origin": "einheimisch",
+    "status": "RE",
+    "in_bern": false,
+    "image": "sources/fish/ch/coregonus_palaea_ch.png"
+  },
+  {
+    "scientific_name": "Coregonus confusus",
+    "name": "Bondelle",
+    "origin": "einheimisch",
+    "status": "DD",
+    "in_bern": false,
+    "image": "sources/fish/ch/coregonus_confusus_ch.png"
+  },
+  {
+    "scientific_name": "Coregonus brienzii",
+    "name": "Brienzer Kleinbalchen",
+    "origin": "einheimisch",
+    "status": "VU",
+    "in_bern": false,
+    "image": "sources/fish/ch/coregonus_brienzii_ch.png"
+  },
+  {
+    "scientific_name": "Coregonus steinmanni",
+    "name": "Steinmanns Balchen",
+    "origin": "einheimisch",
+    "status": "VU",
+    "in_bern": false,
+    "image": "sources/fish/ch/coregonus_steinmanni_ch.png"
+  },
+  {
+    "scientific_name": "Coregonus nobilis",
+    "name": "Edelfisch",
+    "origin": "einheimisch",
+    "status": "EN",
+    "in_bern": false,
+    "image": "sources/fish/ch/coregonus_nobilis_ch.png"
+  },
+  {
+    "scientific_name": "Gasterosteus aculeatus",
+    "name": "Stichling (nicht-einheimisch)",
+    "origin": "NA",
+    "status": "NA",
+    "in_bern": false,
+    "image": "sources/fish/ch/gasterosteus_aculeatus_ch.png"
+  },
+  {
+    "scientific_name": "Carassius gibelio",
+    "name": "Giebel",
+    "origin": "NA",
+    "status": "NA",
+    "in_bern": false,
+    "image": "sources/fish/ch/carassius_gibelio_ch.png"
+  },
+  {
+    "scientific_name": "Alburnus alburnus (eingeführt)",
+    "name": "Laube (eingeführt)",
+    "origin": "NA",
+    "status": "NA",
+    "in_bern": false,
+    "image": "sources/fish/ch/alburnus_alburnus_ch.png"
+  },
+  {
+    "scientific_name": "Oncorhynchus mykiss",
+    "name": "Regenbogenforelle",
+    "origin": "NA",
+    "status": "NA",
+    "in_bern": false,
+    "image": "sources/fish/ch/oncorhynchus_mykiss_ch.png"
+  },
+  {
+    "scientific_name": "Pseudorasbora parva",
+    "name": "Amurgrundel",
+    "origin": "NA",
+    "status": "NA",
+    "in_bern": false,
+    "image": "sources/fish/ch/pseudorasbora_parva_ch.png"
+  },
+  {
+    "scientific_name": "Lepomis gibbosus",
+    "name": "Sonnenbarsch",
+    "origin": "NA",
+    "status": "NA",
+    "in_bern": false,
+    "image": "sources/fish/ch/lepomis_gibbosus_ch.png"
+  }
 ]
