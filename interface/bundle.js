@@ -2645,11 +2645,17 @@ function initLogoBackground() {
   const maxLvl = Math.max(...levels);
   const minScale = 0.5;
   const FADE_MS = 0;
-  const depth = window.location.pathname
-    .replace(/[^/]+$/, '')
-    .split('/')
-    .filter(Boolean).length;
-  const imgBase = '../'.repeat(depth) + 'sources/images/op-logo/';
+  let imgBase;
+  if (document.currentScript && document.currentScript.src) {
+    const scriptUrl = new URL(document.currentScript.src, location.href);
+    imgBase = new URL('../sources/images/op-logo/', scriptUrl).href;
+  } else {
+    const depth = window.location.pathname
+      .replace(/[^/]+$/, '')
+      .split('/')
+      .filter(Boolean).length;
+    imgBase = '../'.repeat(depth) + 'sources/images/op-logo/';
+  }
   const images = levels.map(lvl => {
     const img = new Image();
     const src = lvl >= 8 ? 7 : lvl;
@@ -5147,7 +5153,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 //----- version.js -----
 window.APP_VERSION = '1.0.0';
-window.APP_COMMIT = '3271205';
+window.APP_COMMIT = '6692a03';
 
 function displayVersionInfo() {
   var el = document.getElementById('version_footer');
