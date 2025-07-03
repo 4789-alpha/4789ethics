@@ -18,6 +18,11 @@ main {
   z-index: 1;
 }
 
+/* Utility class to hide elements */
+.hidden {
+  display: none;
+}
+
 .card {
   background-color: var(--card-alpha-bg);
   color: inherit;
