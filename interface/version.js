@@ -1,5 +1,5 @@
 window.APP_VERSION = '1.0.0';
-window.APP_COMMIT = '466236e';
+window.APP_COMMIT = '6692a03';
 
 function displayVersionInfo() {
   var el = document.getElementById('version_footer');
