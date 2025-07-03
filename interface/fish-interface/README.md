@@ -25,6 +25,8 @@ fields:
 `in_bern` indicates whether the species also appears in `bern-fische.json`. `spawn_cm` and `max_cm` list the average size after first spawning and the maximum size in centimeters.
 
 The page `fischeSchweiz.html` renders the national list for convenient browsing.
+The quiz page `fischQuiz.html` now also draws from the SaNa question catalog in
+`sources/sana/sana_questions.json`.
 
 The page `gewaesserBern.html` shows a simplified map of the canton Bern with
 lakes and the river Aare based on `sources/maps/bern-waters.json`.
