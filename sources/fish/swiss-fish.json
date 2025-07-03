@@ -5,7 +5,9 @@
     "origin": "einheimisch",
     "status": "LC",
     "in_bern": false,
-    "image": "sources/fish/ch/abramis_brama_ch.png"
+    "image": "sources/fish/ch/abramis_brama_ch.png",
+    "max_cm": 82.0,
+    "spawn_cm": 28.75
   },
   {
     "scientific_name": "Acipenser sturio",
@@ -13,7 +15,9 @@
     "origin": "einheimisch",
     "status": "RE",
     "in_bern": false,
-    "image": "sources/fish/ch/acipenser_sturio_ch.png"
+    "image": "sources/fish/ch/acipenser_sturio_ch.png",
+    "max_cm": 600.0,
+    "spawn_cm": 150.0
   },
   {
     "scientific_name": "Alburnoides bipunctatus",
@@ -21,7 +25,8 @@
     "origin": "einheimisch",
     "status": "VU",
     "in_bern": false,
-    "image": "sources/fish/ch/alburnoides_bipunctatus_ch.png"
+    "image": "sources/fish/ch/alburnoides_bipunctatus_ch.png",
+    "max_cm": 18.5
   },
   {
     "scientific_name": "Alburnus alburnus",
@@ -29,7 +34,9 @@
     "origin": "einheimisch",
     "status": "LC",
     "in_bern": false,
-    "image": "sources/fish/ch/alburnus_alburnus_ch.png"
+    "image": "sources/fish/ch/alburnus_alburnus_ch.png",
+    "max_cm": 25.0,
+    "spawn_cm": 9.899999618530273
   },
   {
     "scientific_name": "Alburnus arborella",
@@ -37,7 +44,8 @@
     "origin": "einheimisch",
     "status": "CR",
     "in_bern": false,
-    "image": "sources/fish/ch/alburnus_arborella_ch.png"
+    "image": "sources/fish/ch/alburnus_arborella_ch.png",
+    "max_cm": 12.699999809265137
   },
   {
     "scientific_name": "Alosa agone",
@@ -45,14 +53,17 @@
     "origin": "einheimisch",
     "status": "VU",
     "in_bern": false,
-    "image": "sources/fish/ch/alosa_agone_ch.png"
+    "image": "sources/fish/ch/alosa_agone_ch.png",
+    "max_cm": 42.599998474121094
   },
   {
     "scientific_name": "Alosa alosa",
     "name": "Maifisch",
     "origin": "einheimisch",
     "status": "RE",
-    "in_bern": false
+    "in_bern": false,
+    "max_cm": 69.0,
+    "spawn_cm": 42.54999923706055
   },
   {
     "scientific_name": "Alosa fallax",
@@ -60,7 +71,9 @@
     "origin": "einheimisch",
     "status": "DD",
     "in_bern": false,
-    "image": "sources/fish/ch/alosa_fallax_ch.png"
+    "image": "sources/fish/ch/alosa_fallax_ch.png",
+    "max_cm": 60.0,
+    "spawn_cm": 28.875
   },
   {
     "scientific_name": "Anguilla anguilla",
@@ -68,7 +81,9 @@
     "origin": "einheimisch",
     "status": "CR",
     "in_bern": false,
-    "image": "sources/fish/ch/anguilla_anguilla_ch.png"
+    "image": "sources/fish/ch/anguilla_anguilla_ch.png",
+    "max_cm": 121.5,
+    "spawn_cm": 50.833333333333336
   },
   {
     "scientific_name": "Barbatula barbatula",
@@ -76,7 +91,8 @@
     "origin": "einheimisch",
     "status": "NT",
     "in_bern": false,
-    "image": "sources/fish/ch/barbatula_barbatula_ch.png"
+    "image": "sources/fish/ch/barbatula_barbatula_ch.png",
+    "max_cm": 21.0
   },
   {
     "scientific_name": "Barbus barbus",
@@ -84,7 +100,8 @@
     "origin": "einheimisch",
     "status": "NT",
     "in_bern": false,
-    "image": "sources/fish/ch/barbus_barbus_ch.png"
+    "image": "sources/fish/ch/barbus_barbus_ch.png",
+    "max_cm": 120.0
   },
   {
     "scientific_name": "Barbus caninus",
@@ -92,7 +109,8 @@
     "origin": "einheimisch",
     "status": "VU",
     "in_bern": false,
-    "image": "sources/fish/ch/barbus_caninus_ch.png"
+    "image": "sources/fish/ch/barbus_caninus_ch.png",
+    "max_cm": 25.0
   },
   {
     "scientific_name": "Barbus plebejus",
@@ -100,7 +118,9 @@
     "origin": "einheimisch",
     "status": "VU",
     "in_bern": false,
-    "image": "sources/fish/ch/barbus_plebejus_ch.png"
+    "image": "sources/fish/ch/barbus_plebejus_ch.png",
+    "max_cm": 70.0,
+    "spawn_cm": 13.700000286102295
   },
   {
     "scientific_name": "Blicca bjoerkna",
@@ -108,7 +128,9 @@
     "origin": "einheimisch",
     "status": "NT",
     "in_bern": false,
-    "image": "sources/fish/ch/blicca_bjoerkna_ch.png"
+    "image": "sources/fish/ch/blicca_bjoerkna_ch.png",
+    "max_cm": 45.5,
+    "spawn_cm": 14.0
   },
   {
     "scientific_name": "Chondrostoma nasus",
@@ -116,7 +138,8 @@
     "origin": "einheimisch",
     "status": "CR",
     "in_bern": false,
-    "image": "sources/fish/ch/chondrostoma_nasus_ch.png"
+    "image": "sources/fish/ch/chondrostoma_nasus_ch.png",
+    "max_cm": 50.0
   },
   {
     "scientific_name": "Chondrostoma soetta",
@@ -124,7 +147,8 @@
     "origin": "einheimisch",
     "status": "CR",
     "in_bern": false,
-    "image": "sources/fish/ch/chondrostoma_soetta_ch.png"
+    "image": "sources/fish/ch/chondrostoma_soetta_ch.png",
+    "max_cm": 45.0
   },
   {
     "scientific_name": "Cobitis bilineata",
@@ -132,7 +156,8 @@
     "origin": "einheimisch",
     "status": "EN",
     "in_bern": false,
-    "image": "sources/fish/ch/cobitis_bilineata_ch.png"
+    "image": "sources/fish/ch/cobitis_bilineata_ch.png",
+    "max_cm": 6.5
   },
   {
     "scientific_name": "Cobitis taenia",
@@ -140,7 +165,9 @@
     "origin": "einheimisch",
     "status": "DD",
     "in_bern": false,
-    "image": "sources/fish/ch/cobitis_taenia_ch.png"
+    "image": "sources/fish/ch/cobitis_taenia_ch.png",
+    "max_cm": 13.5,
+    "spawn_cm": 4.9433333079020185
   },
   {
     "scientific_name": "Coregonus spp.",
@@ -156,7 +183,9 @@
     "origin": "einheimisch",
     "status": "NT",
     "in_bern": false,
-    "image": "sources/fish/ch/cottus_gobio_ch.png"
+    "image": "sources/fish/ch/cottus_gobio_ch.png",
+    "max_cm": 18.0,
+    "spawn_cm": 4.699999928474426
   },
   {
     "scientific_name": "Cyprinus carpio",
@@ -164,7 +193,9 @@
     "origin": "einheimisch",
     "status": "NT",
     "in_bern": false,
-    "image": "sources/fish/ch/cyprinus_carpio_ch.png"
+    "image": "sources/fish/ch/cyprinus_carpio_ch.png",
+    "max_cm": 120.0,
+    "spawn_cm": 31.967727227644488
   },
   {
     "scientific_name": "Esox lucius",
@@ -190,7 +221,9 @@
     "origin": "einheimisch",
     "status": "LC",
     "in_bern": false,
-    "image": "sources/fish/ch/gobio_gobio.png"
+    "image": "sources/fish/ch/gobio_gobio.png",
+    "max_cm": 21.0,
+    "spawn_cm": 10.75
   },
   {
     "scientific_name": "Gobio obtusirostris",
@@ -198,7 +231,8 @@
     "origin": "einheimisch",
     "status": "DD",
     "in_bern": false,
-    "image": "sources/fish/ch/gobio_obtusirostris_ch.png"
+    "image": "sources/fish/ch/gobio_obtusirostris_ch.png",
+    "max_cm": 12.5
   },
   {
     "scientific_name": "Gymnocephalus cernua",
@@ -206,7 +240,9 @@
     "origin": "einheimisch",
     "status": "LC",
     "in_bern": false,
-    "image": "sources/fish/ch/gymnocephalus_cernua_ch.png"
+    "image": "sources/fish/ch/gymnocephalus_cernua_ch.png",
+    "max_cm": 25.0,
+    "spawn_cm": 10.25
   },
   {
     "scientific_name": "Hucho hucho",
@@ -214,7 +250,9 @@
     "origin": "einheimisch",
     "status": "RE",
     "in_bern": false,
-    "image": "sources/fish/ch/hucho_hucho_ch.png"
+    "image": "sources/fish/ch/hucho_hucho_ch.png",
+    "max_cm": 150.0,
+    "spawn_cm": 72.5
   },
   {
     "scientific_name": "Lampetra fluviatilis",
@@ -222,7 +260,9 @@
     "origin": "einheimisch",
     "status": "RE",
     "in_bern": false,
-    "image": "sources/fish/ch/lampetra_fluviatilis_ch.png"
+    "image": "sources/fish/ch/lampetra_fluviatilis_ch.png",
+    "max_cm": 50.0,
+    "spawn_cm": 30.03333282470703
   },
   {
     "scientific_name": "Lampetra planeri",
@@ -230,7 +270,9 @@
     "origin": "einheimisch",
     "status": "EN",
     "in_bern": false,
-    "image": "sources/fish/ch/lampetra_planeri_ch.png"
+    "image": "sources/fish/ch/lampetra_planeri_ch.png",
+    "max_cm": 20.5,
+    "spawn_cm": 11.5
   },
   {
     "scientific_name": "Lampetra zanandreai",
@@ -238,7 +280,9 @@
     "origin": "einheimisch",
     "status": "CR",
     "in_bern": false,
-    "image": "sources/fish/ch/lampetra_zanandreai_ch.png"
+    "image": "sources/fish/ch/lampetra_zanandreai_ch.png",
+    "max_cm": 26.0,
+    "spawn_cm": 14.0
   },
   {
     "scientific_name": "Leucaspius delineatus",
@@ -246,7 +290,8 @@
     "origin": "einheimisch",
     "status": "VU",
     "in_bern": false,
-    "image": "sources/fish/ch/leucaspius_delineatus_ch.png"
+    "image": "sources/fish/ch/leucaspius_delineatus_ch.png",
+    "max_cm": 9.0
   },
   {
     "scientific_name": "Leuciscus leuciscus",
@@ -254,7 +299,9 @@
     "origin": "einheimisch",
     "status": "LC",
     "in_bern": false,
-    "image": "sources/fish/ch/leuciscus_leuciscus_ch.png"
+    "image": "sources/fish/ch/leuciscus_leuciscus_ch.png",
+    "max_cm": 40.0,
+    "spawn_cm": 16.424999713897705
   },
   {
     "scientific_name": "Lota lota",
@@ -262,7 +309,9 @@
     "origin": "einheimisch",
     "status": "LC",
     "in_bern": false,
-    "image": "sources/fish/ch/lota_lota_ch.png"
+    "image": "sources/fish/ch/lota_lota_ch.png",
+    "max_cm": 152.0,
+    "spawn_cm": 37.833333333333336
   },
   {
     "scientific_name": "Misgurnus fossilis",
@@ -270,7 +319,8 @@
     "origin": "einheimisch",
     "status": "RE",
     "in_bern": false,
-    "image": "sources/fish/ch/misgurnus_fossilis_ch.png"
+    "image": "sources/fish/ch/misgurnus_fossilis_ch.png",
+    "max_cm": 30.0
   },
   {
     "scientific_name": "Padogobius bonelli",
@@ -278,7 +328,8 @@
     "origin": "einheimisch",
     "status": "EN",
     "in_bern": false,
-    "image": "sources/fish/ch/padogobius_bonelli_ch.png"
+    "image": "sources/fish/ch/padogobius_bonelli_ch.png",
+    "max_cm": 8.600000381469727
   },
   {
     "scientific_name": "Parachondrostoma toxostoma",
@@ -286,7 +337,8 @@
     "origin": "einheimisch",
     "status": "CR",
     "in_bern": false,
-    "image": "sources/fish/ch/parachodrostoma_toxostoma_ch.png"
+    "image": "sources/fish/ch/parachodrostoma_toxostoma_ch.png",
+    "max_cm": 30.0
   },
   {
     "scientific_name": "Perca fluviatilis",
@@ -304,7 +356,8 @@
     "origin": "einheimisch",
     "status": "RE",
     "in_bern": false,
-    "image": "sources/fish/ch/petromyzon_marinus_ch.png"
+    "image": "sources/fish/ch/petromyzon_marinus_ch.png",
+    "max_cm": 120.0
   },
   {
     "scientific_name": "Phoxinus phoxinus",
@@ -312,7 +365,9 @@
     "origin": "einheimisch",
     "status": "LC",
     "in_bern": false,
-    "image": "sources/fish/ch/phoxinus_phoxinus_ch.png"
+    "image": "sources/fish/ch/phoxinus_phoxinus_ch.png",
+    "max_cm": 14.0,
+    "spawn_cm": 4.979999971389771
   },
   {
     "scientific_name": "Rhodeus amarus",
@@ -320,7 +375,9 @@
     "origin": "einheimisch",
     "status": "EN",
     "in_bern": false,
-    "image": "sources/fish/ch/rhodeus_amarus_ch.png"
+    "image": "sources/fish/ch/rhodeus_amarus_ch.png",
+    "max_cm": 11.199999809265137,
+    "spawn_cm": 4.375
   },
   {
     "scientific_name": "Rutilus aula",
@@ -336,7 +393,8 @@
     "origin": "einheimisch",
     "status": "CR",
     "in_bern": false,
-    "image": "sources/fish/ch/rutilus_pigus_ch.png"
+    "image": "sources/fish/ch/rutilus_pigus_ch.png",
+    "max_cm": 45.0
   },
   {
     "scientific_name": "Rutilus rutilus",
@@ -362,7 +420,8 @@
     "origin": "einheimisch",
     "status": "CR",
     "in_bern": false,
-    "image": "sources/fish/ch/salmo_cenerinus_ch.png"
+    "image": "sources/fish/ch/salmo_cenerinus_ch.png",
+    "max_cm": 80.0
   },
   {
     "scientific_name": "Salmo labrax",
@@ -370,7 +429,8 @@
     "origin": "einheimisch",
     "status": "CR",
     "in_bern": false,
-    "image": "sources/fish/ch/salmo_labrax_ch.png"
+    "image": "sources/fish/ch/salmo_labrax_ch.png",
+    "max_cm": 80.0
   },
   {
     "scientific_name": "Salmo marmoratus",
@@ -378,7 +438,8 @@
     "origin": "einheimisch",
     "status": "CR",
     "in_bern": false,
-    "image": "sources/fish/ch/salmo_marmoratus_ch.png"
+    "image": "sources/fish/ch/salmo_marmoratus_ch.png",
+    "max_cm": 120.0
   },
   {
     "scientific_name": "Salmo rhodanensis",
@@ -386,7 +447,8 @@
     "origin": "einheimisch",
     "status": "EN",
     "in_bern": false,
-    "image": "sources/fish/ch/salmo_rhodanensis_ch.png"
+    "image": "sources/fish/ch/salmo_rhodanensis_ch.png",
+    "max_cm": 80.0
   },
   {
     "scientific_name": "Salmo trutta (f. fluviatilis)",
@@ -394,7 +456,9 @@
     "origin": "einheimisch",
     "status": "EN",
     "in_bern": false,
-    "image": "sources/fish/ch/salmo_trutta_fluviatilis_ch.png"
+    "image": "sources/fish/ch/salmo_trutta_fluviatilis_ch.png",
+    "max_cm": 140.0,
+    "spawn_cm": 29.755714334760395
   },
   {
     "scientific_name": "Salmo trutta (f. fario)",
@@ -412,7 +476,9 @@
     "origin": "einheimisch",
     "status": "EN",
     "in_bern": false,
-    "image": "sources/fish/ch/salmo_trutta_lacustris_ch.png"
+    "image": "sources/fish/ch/salmo_trutta_lacustris_ch.png",
+    "max_cm": 140.0,
+    "spawn_cm": 29.755714334760395
   },
   {
     "scientific_name": "Salmo trutta (f. marinus)",
@@ -420,7 +486,9 @@
     "origin": "einheimisch",
     "status": "RE",
     "in_bern": false,
-    "image": "sources/fish/ch/salmo_trutta_marinus_ch.png"
+    "image": "sources/fish/ch/salmo_trutta_marinus_ch.png",
+    "max_cm": 140.0,
+    "spawn_cm": 29.755714334760395
   },
   {
     "scientific_name": "Salmo salar",
@@ -438,7 +506,9 @@
     "origin": "einheimisch",
     "status": "VU",
     "in_bern": false,
-    "image": "sources/fish/ch/salvelinus_alpinus_ch.png"
+    "image": "sources/fish/ch/salvelinus_alpinus_ch.png",
+    "max_cm": 107.0,
+    "spawn_cm": 44.36666615804037
   },
   {
     "scientific_name": "Salvelinus profundus",
@@ -446,7 +516,8 @@
     "origin": "einheimisch",
     "status": "CR",
     "in_bern": false,
-    "image": "sources/fish/ch/salvelinus_profundus_ch.png"
+    "image": "sources/fish/ch/salvelinus_profundus_ch.png",
+    "max_cm": 24.0
   },
   {
     "scientific_name": "Scardinius erythrophthalmus",
@@ -454,7 +525,8 @@
     "origin": "einheimisch",
     "status": "LC",
     "in_bern": false,
-    "image": "sources/fish/ch/scardinius_erythrophthalmus_ch.png"
+    "image": "sources/fish/ch/scardinius_erythrophthalmus_ch.png",
+    "spawn_cm": 7.610000133514404
   },
   {
     "scientific_name": "Scardinius hesperidicus",
@@ -462,7 +534,8 @@
     "origin": "einheimisch",
     "status": "VU",
     "in_bern": false,
-    "image": "sources/fish/ch/scardinius_hesperidicus_ch.png"
+    "image": "sources/fish/ch/scardinius_hesperidicus_ch.png",
+    "max_cm": 40.0
   },
   {
     "scientific_name": "Silurus glanis",
@@ -470,7 +543,9 @@
     "origin": "einheimisch",
     "status": "LC",
     "in_bern": false,
-    "image": "sources/fish/ch/silurus_glanis_ch.png"
+    "image": "sources/fish/ch/silurus_glanis_ch.png",
+    "max_cm": 273.0,
+    "spawn_cm": 90.25
   },
   {
     "scientific_name": "Sander lucioperca",
@@ -478,7 +553,9 @@
     "origin": "einheimisch",
     "status": "LC",
     "in_bern": false,
-    "image": "sources/fish/ch/sander_lucioperca_ch.png"
+    "image": "sources/fish/ch/sander_lucioperca_ch.png",
+    "max_cm": 100.0,
+    "spawn_cm": 35.132142952510286
   },
   {
     "scientific_name": "Squalius cephalus",
@@ -486,7 +563,9 @@
     "origin": "einheimisch",
     "status": "LC",
     "in_bern": false,
-    "image": "sources/fish/ch/squalius_cephalus_ch.png"
+    "image": "sources/fish/ch/squalius_cephalus_ch.png",
+    "max_cm": 60.0,
+    "spawn_cm": 15.400000095367432
   },
   {
     "scientific_name": "Squalius squalus",
@@ -494,7 +573,8 @@
     "origin": "einheimisch",
     "status": "VU",
     "in_bern": false,
-    "image": "sources/fish/ch/squalius_squalio_ch.png"
+    "image": "sources/fish/ch/squalius_squalio_ch.png",
+    "max_cm": 60.0
   },
   {
     "scientific_name": "Telestes muticellus",
@@ -502,7 +582,8 @@
     "origin": "einheimisch",
     "status": "NT",
     "in_bern": false,
-    "image": "sources/fish/ch/telestes_muticellus_ch.png"
+    "image": "sources/fish/ch/telestes_muticellus_ch.png",
+    "max_cm": 17.0
   },
   {
     "scientific_name": "Telestes souffia",
@@ -510,7 +591,8 @@
     "origin": "einheimisch",
     "status": "VU",
     "in_bern": false,
-    "image": "sources/fish/ch/telestes_souffia_ch.png"
+    "image": "sources/fish/ch/telestes_souffia_ch.png",
+    "max_cm": 25.0
   },
   {
     "scientific_name": "Thymallus aeliani",
@@ -526,7 +608,9 @@
     "origin": "einheimisch",
     "status": "EN",
     "in_bern": false,
-    "image": "sources/fish/ch/thymallus_thymallus_ch.png"
+    "image": "sources/fish/ch/thymallus_thymallus_ch.png",
+    "max_cm": 60.0,
+    "spawn_cm": 30.0
   },
   {
     "scientific_name": "Zingel asper",
@@ -534,7 +618,8 @@
     "origin": "einheimisch",
     "status": "CR",
     "in_bern": false,
-    "image": "sources/fish/ch/zingel_asper_ch.png"
+    "image": "sources/fish/ch/zingel_asper_ch.png",
+    "max_cm": 22.0
   },
   {
     "scientific_name": "Coregonus zugensis",
@@ -542,7 +627,8 @@
     "origin": "einheimisch",
     "status": "RE",
     "in_bern": false,
-    "image": "sources/fish/ch/coregonus_zugensis_ch.png"
+    "image": "sources/fish/ch/coregonus_zugensis_ch.png",
+    "max_cm": 20.0
   },
   {
     "scientific_name": "Coregonus palaea",
@@ -550,7 +636,8 @@
     "origin": "einheimisch",
     "status": "RE",
     "in_bern": false,
-    "image": "sources/fish/ch/coregonus_palaea_ch.png"
+    "image": "sources/fish/ch/coregonus_palaea_ch.png",
+    "max_cm": 45.0
   },
   {
     "scientific_name": "Coregonus confusus",
@@ -558,7 +645,8 @@
     "origin": "einheimisch",
     "status": "DD",
     "in_bern": false,
-    "image": "sources/fish/ch/coregonus_confusus_ch.png"
+    "image": "sources/fish/ch/coregonus_confusus_ch.png",
+    "max_cm": 35.0
   },
   {
     "scientific_name": "Coregonus brienzii",
@@ -582,7 +670,8 @@
     "origin": "einheimisch",
     "status": "EN",
     "in_bern": false,
-    "image": "sources/fish/ch/coregonus_nobilis_ch.png"
+    "image": "sources/fish/ch/coregonus_nobilis_ch.png",
+    "max_cm": 34.0
   },
   {
     "scientific_name": "Gasterosteus aculeatus",
@@ -590,7 +679,9 @@
     "origin": "NA",
     "status": "NA",
     "in_bern": false,
-    "image": "sources/fish/ch/gasterosteus_aculeatus_ch.png"
+    "image": "sources/fish/ch/gasterosteus_aculeatus_ch.png",
+    "max_cm": 11.0,
+    "spawn_cm": 4.5333333015441895
   },
   {
     "scientific_name": "Carassius gibelio",
@@ -598,7 +689,9 @@
     "origin": "NA",
     "status": "NA",
     "in_bern": false,
-    "image": "sources/fish/ch/carassius_gibelio_ch.png"
+    "image": "sources/fish/ch/carassius_gibelio_ch.png",
+    "max_cm": 46.599998474121094,
+    "spawn_cm": 10.0
   },
   {
     "scientific_name": "Alburnus alburnus (eingeführt)",
@@ -606,7 +699,9 @@
     "origin": "NA",
     "status": "NA",
     "in_bern": false,
-    "image": "sources/fish/ch/alburnus_alburnus_ch.png"
+    "image": "sources/fish/ch/alburnus_alburnus_ch.png",
+    "max_cm": 25.0,
+    "spawn_cm": 9.899999618530273
   },
   {
     "scientific_name": "Oncorhynchus mykiss",
@@ -614,7 +709,8 @@
     "origin": "NA",
     "status": "NA",
     "in_bern": false,
-    "image": "sources/fish/ch/oncorhynchus_mykiss_ch.png"
+    "image": "sources/fish/ch/oncorhynchus_mykiss_ch.png",
+    "max_cm": 122.0
   },
   {
     "scientific_name": "Pseudorasbora parva",
@@ -622,7 +718,9 @@
     "origin": "NA",
     "status": "NA",
     "in_bern": false,
-    "image": "sources/fish/ch/pseudorasbora_parva_ch.png"
+    "image": "sources/fish/ch/pseudorasbora_parva_ch.png",
+    "max_cm": 12.5,
+    "spawn_cm": 3.0
   },
   {
     "scientific_name": "Lepomis gibbosus",
@@ -630,6 +728,7 @@
     "origin": "NA",
     "status": "NA",
     "in_bern": false,
-    "image": "sources/fish/ch/lepomis_gibbosus_ch.png"
+    "image": "sources/fish/ch/lepomis_gibbosus_ch.png",
+    "max_cm": 40.0
   }
 ]
