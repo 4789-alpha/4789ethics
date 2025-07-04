@@ -17,6 +17,14 @@ Diese Liste enthält konkrete Vorschläge zur Verbesserung der Benutzerfreundlic
 - [ ] Codecov oder Coveralls für Testabdeckung.
 - [ ] Snyk oder GitHub Advanced Security für Sicherheits-Scans.
 
+## 7. Debug-Checkliste für Animationen
+Nutze diese Liste, wenn eine Animation nicht sichtbar ist oder blockiert erscheint:
+
+- [ ] Ist das animierte Element im DOM sichtbar?
+- [ ] Hat es `z-index: 0` und liegt damit unter dem Content?
+- [ ] Blockiert ein Container die Sicht (etwa durch `background-color`)?
+- [ ] Wird eine `display: none`-Regel versehentlich gesetzt?
+- [ ] Wird `overflow: hidden` auf `body` oder `html` gesetzt?
 ## Fragenkatalog
 ### Designfragen
 - Wie lassen sich Farben und Kontraste weiter verbessern?
