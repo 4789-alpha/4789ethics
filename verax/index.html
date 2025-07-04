@@ -10,10 +10,15 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main_content">Skip to main content</a>
   <div id="op_background" aria-hidden="true"></div>
   <header>
     <h1>Verax – Entscheidung in Bewegung</h1>
   </header>
+  <nav aria-label="Hauptnavigation">
+    <a href="../index.html" class="icon-only" aria-label="Home">🏠</a>
+    <a href="README.html" class="icon-only readme-link" aria-label="Hilfe">?</a>
+  </nav>
   <main id="main_content">
     <section class="card" style="max-width:40em;margin:2em auto;">
       <h2>Projektbeschreibung</h2>
@@ -26,16 +31,38 @@
       </ul>
     </section>
     <p style="text-align:center;margin-bottom:1em;">
-      <button type="button" class="accent-button" onclick="window.open('limen-editor.html','_blank')">Neue Route</button>
+      <button type="button" class="accent-button" onclick="window.open('limen-editor.html','_blank')">Route bearbeiten</button>
+      <span class="help-icon" title="Öffnet den Routeneditor in einem neuen Tab">?</span>
     </p>
-    <iframe src="/verax/map/leaflet.html" width="100%" height="500" style="border:none;"></iframe>
-    <p style="text-align:right;margin-top:0.5rem;">
-      <button onclick="window.open('editor.html', '_blank');">Neue Route</button>
-    </p>
-    <p style="text-align:center;margin-top:1em;">
-      <a href="../interface/fish-interface/fischQuiz.html">Fisch-Quiz</a>
-    </p>
+    <iframe src="/verax/map/leaflet.html" width="100%" height="500" style="border:none;" title="Verax Karte"></iframe>
+      <details class="card" style="max-width:40em;margin:1em auto;">
+        <summary>Legende</summary>
+        <ul>
+          <li>Blaue Linie: vorgesehene Route</li>
+          <li>Rote Marker: Entscheidungspunkt oder Engstelle</li>
+        </ul>
+      </details>
+      <details class="card" style="max-width:40em;margin:2em auto;">
+        <summary>Hinweise</summary>
+        <ul>
+          <li>Diese Struktur wird ohne Gewährleistung bereitgestellt.</li>
+          <li>Die Nutzung erfolgt auf eigene Verantwortung.</li>
+          <li>4789 ist ein Standard für Verantwortung, keine Person.</li>
+          <li>Nutzung nur reflektiert und mit Konsequenz.</li>
+          <li>This structure is provided without warranty.</li>
+          <li>Use is at your own risk.</li>
+          <li>4789 is a standard for responsibility, not a person.</li>
+          <li>Use only with reflection and consequence.</li>
+          <li>Wetterdaten von OpenWeatherMap; keine Gewähr für Genauigkeit.</li>
+        </ul>
+      </details>
+      <p style="text-align:center;margin-top:1em;">
+        <a href="../interface/fish-interface/fischQuiz.html">Fisch-Quiz</a>
+      </p>
   </main>
+  <footer>
+    <p>Beta-Version – Feedback willkommen.</p>
+  </footer>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       applyTheme('tanna-dark');

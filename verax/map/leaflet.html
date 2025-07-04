@@ -16,20 +16,52 @@
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#map">Skip to map</a>
   <div id="op_background" aria-hidden="true"></div>
   <header>
     <h1>VERAX Karte</h1>
   </header>
+  <nav aria-label="Hauptnavigation">
+    <a href="../index.html" class="icon-only" aria-label="Home">🏠</a>
+    <a href="../README.html" class="icon-only readme-link" aria-label="Hilfe">?</a>
+  </nav>
   <div id="map"></div>
+  <details class="card" style="max-width:40em;margin:1em auto;">
+    <summary>Hinweise</summary>
+    <ul>
+      <li>Diese Struktur wird ohne Gewährleistung bereitgestellt.</li>
+      <li>Die Nutzung erfolgt auf eigene Verantwortung.</li>
+      <li>4789 ist ein Standard für Verantwortung, keine Person.</li>
+      <li>Wetterdaten von OpenWeatherMap; keine Gewähr für Genauigkeit.</li>
+    </ul>
+  </details>
+  <footer>
+    <p>Beta-Version – Feedback willkommen.</p>
+  </footer>
   <script>
     const map = L.map('map').setView([46.8345, 7.4953], 14);
     L.control.zoom({ position: 'topright' }).addTo(map);
 
     // Tile-Layer (OSM international)
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    const osmLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 18,
       attribution: '© OpenStreetMap contributors'
     }).addTo(map);
+
+    // Wetter-Overlays von OpenWeatherMap (API-Schlüssel erforderlich)
+    const apiKey = 'YOUR_API_KEY';
+    const tempLayer = L.tileLayer(`https://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?appid=${apiKey}`, {
+      opacity: 0.5,
+      attribution: '© OpenWeatherMap'
+    });
+    const precipLayer = L.tileLayer(`https://tile.openweathermap.org/map/precipitation_new/{z}/{x}/{y}.png?appid=${apiKey}`, {
+      opacity: 0.5,
+      attribution: '© OpenWeatherMap'
+    });
+    const snowLayer = L.tileLayer(`https://tile.openweathermap.org/map/snow/{z}/{x}/{y}.png?appid=${apiKey}`, {
+      opacity: 0.5,
+      attribution: '© OpenWeatherMap'
+    });
 
     // GPX-Track laden (Pfad anpassen)
     const gpxTrack = new L.GPX('/verax/map/limen-muehlethurnen.gpx', {
@@ -37,6 +69,12 @@
     }).on('loaded', function(e) {
       map.fitBounds(e.target.getBounds());
     }).addTo(map);
+
+    L.control.layers({ OSM: osmLayer }, {
+      Temperatur: tempLayer,
+      Regen: precipLayer,
+      Schnee: snowLayer
+    }, { position: 'topleft' }).addTo(map);
 
     // GPS-Ortung aktivieren
     function onLocationFound(e) {
