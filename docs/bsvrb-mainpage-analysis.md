@@ -28,3 +28,5 @@ Diese Datei fasst den aktuellen Eindruck der Startseite zusammen und gibt Hinwei
 | Registrierungs-Button    | Zweck klar benennen oder deaktivieren |
 
 **Gesamteindruck:** Die Seite wirkt aktuell wie eine offene Beta. Struktur und Idee sind erkennbar, jedoch fehlt ein fertiges Design und funktionierende Module.
+
+Weitere konkrete Aufgaben sind im Abschnitt "BSVRB Main Page" der Datei [docs/TASKS_OVERVIEW.md](TASKS_OVERVIEW.md) festgehalten.

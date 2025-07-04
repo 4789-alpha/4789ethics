@@ -43,3 +43,10 @@ This file tracks pending improvements and roadmap actions.
 - [x] Provide a Docker image for local tests.
 - [x] Add offline help via `--help-offline`.
 - [x] Build cross-platform packages for Windows and macOS.
+## BSVRB Main Page
+- [ ] Hide or implement the "Abteilungen" module
+- [ ] Add visual separators and animations to the header logo
+- [ ] Replace plain project links with icon cards
+- [ ] Clarify the purpose of the registration button or deactivate it
+- [ ] Provide a short explanation for "4789" via tooltip or link
+- [ ] Ensure responsive behavior on smaller screens
