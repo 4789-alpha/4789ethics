@@ -1,10 +1,14 @@
+function formatFishSize(value) {
+  if (value == null || value === '') return '';
+  return Number.isFinite(Number(value)) ? String(Math.round(Number(value))) : '';
+}
+
 async function initFischeSchweiz() {
   const table = document.getElementById('fisch_table');
   const searchInput = document.getElementById('fish_search');
   if (!table) return;
   try {
     const list = await fetch('../../sources/fish/swiss-fish.json').then(r => r.json());
-    const images = await fetch('../../quiz-assets/images.json').then(r => r.json());
     const bernData = await fetch('../../sources/fish/bern-fische.json').then(r => r.json());
     const maxMap = {};
     const spawnMap = {};
@@ -14,8 +18,7 @@ async function initFischeSchweiz() {
     });
     const tbody = document.createElement('tbody');
     list.forEach(original => {
-      const image=images.find(x=>x.scientific_name===original.scientific_name);
-      const f={...original,image:image?.image};
+      const f = original;
       const row = document.createElement('tr');
 
       const nameCell = document.createElement('td');
@@ -33,8 +36,7 @@ async function initFischeSchweiz() {
         imgElem.addEventListener('click', () => showFishPopin(f));
         imgCell.appendChild(imgElem);
       }
-      if(!f.image)imgCell.textContent='Kein geprüftes Bild';
-      else {const source=document.createElement('a');source.href=image.image_source;source.textContent=image.image_author+' · '+image.image_license;imgCell.append(document.createElement('br'),source);}
+      if (!f.image) imgCell.textContent = 'Keine Zeichnung vorhanden';
       row.appendChild(imgCell);
 
       const sciCell = document.createElement('td');
@@ -50,11 +52,11 @@ async function initFischeSchweiz() {
       row.appendChild(statusCell);
 
       const spawnCell = document.createElement('td');
-      spawnCell.textContent = f.spawn_cm || spawnMap[f.scientific_name] || '';
+      spawnCell.textContent = formatFishSize(f.spawn_cm ?? spawnMap[f.scientific_name]);
       row.appendChild(spawnCell);
 
       const maxCell = document.createElement('td');
-      maxCell.textContent = f.max_cm || maxMap[f.scientific_name] || '';
+      maxCell.textContent = formatFishSize(f.max_cm ?? maxMap[f.scientific_name]);
       row.appendChild(maxCell);
 
       const bernCell = document.createElement('td');
