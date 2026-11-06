@@ -1,175 +1,5 @@
 [
   {
-    "id": 1,
-    "question": "Bestimme diesen Fisch.",
-    "choices": [
-      "Zander",
-      "Egli",
-      "Schleie"
-    ],
-    "correct": "Zander"
-  },
-  {
-    "id": 2,
-    "question": "Bestimme diesen Fisch.",
-    "choices": [
-      "Schleie",
-      "Karpfen",
-      "Alet"
-    ],
-    "correct": "Schleie"
-  },
-  {
-    "id": 3,
-    "question": "Bestimme diesen Fisch.",
-    "choices": [
-      "Egli",
-      "Zander",
-      "Hecht"
-    ],
-    "correct": "Egli"
-  },
-  {
-    "id": 4,
-    "question": "Bestimme diesen Fisch.",
-    "choices": [
-      "Nase",
-      "Barbe",
-      "Alet"
-    ],
-    "correct": "Nase"
-  },
-  {
-    "id": 5,
-    "question": "Bestimme diesen Fisch.",
-    "choices": [
-      "Karpfen",
-      "Nase",
-      "Felche"
-    ],
-    "correct": "Karpfen"
-  },
-  {
-    "id": 6,
-    "question": "Bestimme diesen Fisch.",
-    "choices": [
-      "Schleie",
-      "Rotauge",
-      "Brachsmen"
-    ],
-    "correct": "Schleie"
-  },
-  {
-    "id": 7,
-    "question": "Bestimme diesen Fisch.",
-    "choices": [
-      "Barbe",
-      "Alet",
-      "Felche"
-    ],
-    "correct": "Barbe"
-  },
-  {
-    "id": 8,
-    "question": "Bestimme diesen Fisch.",
-    "choices": [
-      "Rotauge",
-      "Rotfeder",
-      "Alet"
-    ],
-    "correct": "Rotauge"
-  },
-  {
-    "id": 9,
-    "question": "Bestimme diesen Fisch.",
-    "choices": [
-      "Zander",
-      "Egli",
-      "Hecht"
-    ],
-    "correct": "Zander"
-  },
-  {
-    "id": 10,
-    "question": "Bestimme diesen Fisch.",
-    "choices": [
-      "Regenbogenforelle",
-      "Seeforelle",
-      "Seesaibling"
-    ],
-    "correct": "Regenbogenforelle"
-  },
-  {
-    "id": 11,
-    "question": "Bestimme diesen Fisch.",
-    "choices": [
-      "Felche",
-      "Seesaibling",
-      "Alet"
-    ],
-    "correct": "Felche"
-  },
-  {
-    "id": 12,
-    "question": "Bestimme diesen Fisch.",
-    "choices": [
-      "Wels",
-      "Aal",
-      "Trüsche"
-    ],
-    "correct": "Wels"
-  },
-  {
-    "id": 13,
-    "question": "Bestimme diesen Fisch.",
-    "choices": [
-      "Rotauge",
-      "Brachsmen",
-      "Rotfeder"
-    ],
-    "correct": "Rotauge"
-  },
-  {
-    "id": 14,
-    "question": "Bestimme diesen Fisch.",
-    "choices": [
-      "Rotfeder",
-      "Brachsmen",
-      "Rotauge"
-    ],
-    "correct": "Rotfeder"
-  },
-  {
-    "id": 15,
-    "question": "Bestimme diesen Fisch.",
-    "choices": [
-      "Seeforelle",
-      "Äsche",
-      "Barbe"
-    ],
-    "correct": "Seeforelle"
-  },
-  {
-    "id": 16,
-    "question": "Bestimme diesen Fisch.",
-    "choices": [
-      "Seesaibling",
-      "Felche",
-      "Bachforelle"
-    ],
-    "correct": "Seesaibling"
-  },
-  {
-    "id": 17,
-    "question": "Bestimme diesen Fisch.",
-    "choices": [
-      "Äsche",
-      "Seeforelle",
-      "Felche"
-    ],
-    "correct": "Äsche"
-  },
-  {
     "id": 18,
     "question": "Welche Fischarten sind typische Kieslaicher?",
     "choices": [
@@ -177,7 +7,11 @@
       "z. B. Hecht, Egli, Rotfeder",
       "z. B. Felche, Karpfen, Schleie"
     ],
-    "correct": "z. B. Forelle, Äsche, Barbe, Nase"
+    "correct": "z. B. Forelle, Äsche, Barbe, Nase",
+    "explanation": "Richtig ist: z. B. Forelle, Äsche, Barbe, Nase.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   },
   {
     "id": 19,
@@ -187,7 +21,11 @@
       "Dichter Pflanzenbewuchs",
       "Mindestens 80 cm Wassertiefe"
     ],
-    "correct": "Lockerer, gut durchströmter Kies"
+    "correct": "Lockerer, gut durchströmter Kies",
+    "explanation": "Richtig ist: Lockerer, gut durchströmter Kies.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   },
   {
     "id": 20,
@@ -197,7 +35,11 @@
       "Weil es Arten gibt, die stark gefährdet oder vom Aussterben bedroht sind",
       "Weil sie als Futter für Raubfische dienen"
     ],
-    "correct": "Weil sie aus touristischen Gründen interessant sind"
+    "correct": "Weil es Arten gibt, die stark gefährdet oder vom Aussterben bedroht sind",
+    "explanation": "Richtig ist: Weil es Arten gibt, die stark gefährdet oder vom Aussterben bedroht sind.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   },
   {
     "id": 21,
@@ -207,7 +49,11 @@
       "Ja, laut Verordnung zum Bundesgesetz über die Fischerei",
       "Ja, aber sie sind alle ausgestorben"
     ],
-    "correct": "Nein, das regeln nur die Kantone"
+    "correct": "Ja, laut Verordnung zum Bundesgesetz über die Fischerei",
+    "explanation": "Richtig ist: Ja, laut Verordnung zum Bundesgesetz über die Fischerei.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   },
   {
     "id": 22,
@@ -217,17 +63,25 @@
       "Herausnehmen, fotografieren, vermessen",
       "Lebend mitnehmen und Aufsicht zeigen"
     ],
-    "correct": "Im Wasser lösen und vorsichtig zurücksetzen"
+    "correct": "Im Wasser lösen und vorsichtig zurücksetzen",
+    "explanation": "Richtig ist: Im Wasser lösen und vorsichtig zurücksetzen.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   },
   {
     "id": 23,
-    "question": "Warum sind nicht-einheimische Krebsarten gefährlich?",
+    "question": "Welche Krankheit können eingeschleppte amerikanische Krebsarten übertragen?",
     "choices": [
       "Wegen Krebspest",
       "Weil sie schneller wachsen",
       "Weil sie Fischlaich fressen"
     ],
-    "correct": "Wegen Krebspest"
+    "correct": "Wegen Krebspest",
+    "explanation": "Richtig ist: Wegen Krebspest.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   },
   {
     "id": 24,
@@ -237,17 +91,11 @@
       "Dohlenkrebs",
       "Steinkrebs"
     ],
-    "correct": "Kamberkrebs"
-  },
-  {
-    "id": 25,
-    "question": "Zu welcher Fischfamilie gehören viele kleinwüchsige Arten?",
-    "choices": [
-      "Barschartige",
-      "Forellenartige",
-      "Karpfenartige"
-    ],
-    "correct": "Barschartige"
+    "correct": "Kamberkrebs",
+    "explanation": "Richtig ist: Kamberkrebs.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   },
   {
     "id": 26,
@@ -257,17 +105,25 @@
       "Es ist eine Fischkrankheit",
       "Die gesamte biologische Vielfalt, von der genetischen Vielfalt bis zur Ökosystem-Vielfalt"
     ],
-    "correct": "Fische schonend zurücksetzen"
+    "correct": "Die gesamte biologische Vielfalt, von der genetischen Vielfalt bis zur Ökosystem-Vielfalt",
+    "explanation": "Biodiversität umfasst die Vielfalt der Gene, Arten und Lebensräume.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.bafu.admin.ch/de/fischerei",
+    "source_label": "BAFU: Fischerei und Lebensräume"
   },
   {
     "id": 27,
-    "question": "Welche Fischfamilie ist in der Schweiz für aussergewöhnlich grosse Artenvielfalt bekannt?",
+    "question": "Welche Fischgruppe ist in der Schweiz für aussergewöhnlich grosse Artenvielfalt bekannt?",
     "choices": [
       "Felchen",
       "Hechte",
       "Barsche"
     ],
-    "correct": "Felchen"
+    "correct": "Felchen",
+    "explanation": "Richtig ist: Felchen.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   },
   {
     "id": 28,
@@ -277,7 +133,11 @@
       "Neuenburg",
       "Tessin"
     ],
-    "correct": "Luzern"
+    "correct": "Tessin",
+    "explanation": "Richtig ist: Tessin.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   },
   {
     "id": 29,
@@ -287,7 +147,11 @@
       "Durch natürliche Auslese und Evolution",
       "Durch reduzierte Aktivität"
     ],
-    "correct": "Durch schnelles Wachstum"
+    "correct": "Durch natürliche Auslese und Evolution",
+    "explanation": "Richtig ist: Durch natürliche Auslese und Evolution.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.bafu.admin.ch/de/fischerei",
+    "source_label": "BAFU: Fischerei und Lebensräume"
   },
   {
     "id": 30,
@@ -297,7 +161,11 @@
       "Ist bei Fischen unwichtig",
       "Damit das Fischfleisch besser schmeckt"
     ],
-    "correct": "Erhöht Anpassungsfähigkeit"
+    "correct": "Erhöht Anpassungsfähigkeit",
+    "explanation": "Richtig ist: Erhöht Anpassungsfähigkeit.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.bafu.admin.ch/de/fischerei",
+    "source_label": "BAFU: Fischerei und Lebensräume"
   },
   {
     "id": 31,
@@ -307,7 +175,11 @@
       "Durch Besatz mit grossen Fischen",
       "Durch gezielte Befischung nicht angepasster Fische"
     ],
-    "correct": "Durch Förderung der natürlichen Fortpflanzung"
+    "correct": "Durch Förderung der natürlichen Fortpflanzung",
+    "explanation": "Richtig ist: Durch Förderung der natürlichen Fortpflanzung.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.bafu.admin.ch/de/fischerei",
+    "source_label": "BAFU: Fischerei und Lebensräume"
   },
   {
     "id": 32,
@@ -317,7 +189,11 @@
       "Seesaiblinge",
       "Forellen"
     ],
-    "correct": "Äschen"
+    "correct": "Äschen",
+    "explanation": "Richtig ist: Äschen.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   },
   {
     "id": 33,
@@ -327,7 +203,11 @@
       "Afterflosse",
       "Schwanzflosse"
     ],
-    "correct": "Rückenflosse"
+    "correct": "Schwanzflosse",
+    "explanation": "Richtig ist: Schwanzflosse.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   },
   {
     "id": 34,
@@ -337,7 +217,11 @@
       "Schnelles Schwimmen",
       "Kalkreserve"
     ],
-    "correct": "Mechanischer Schutz"
+    "correct": "Mechanischer Schutz",
+    "explanation": "Richtig ist: Mechanischer Schutz.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   },
   {
     "id": 35,
@@ -347,7 +231,11 @@
       "Wichtigstes Atmungsorgan",
       "Temperaturausgleich"
     ],
-    "correct": "Unterstützen den Geruchssinn"
+    "correct": "Wichtigstes Atmungsorgan",
+    "explanation": "Kiemen ermöglichen den Gasaustausch: Sauerstoff wird aus dem Wasser aufgenommen.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   },
   {
     "id": 36,
@@ -357,7 +245,11 @@
       "Schwimmblase",
       "Rückenflosse"
     ],
-    "correct": "Kiemen"
+    "correct": "Schwimmblase",
+    "explanation": "Die Schwimmblase reguliert bei vielen Knochenfischen den Auftrieb.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   },
   {
     "id": 37,
@@ -365,9 +257,13 @@
     "choices": [
       "Hören",
       "Geschlechtsunterscheidung",
-      "Umgebungswahrnehmung"
+      "Wasserbewegungen und Druckunterschiede wahrnehmen"
     ],
-    "correct": "Hören"
+    "correct": "Wasserbewegungen und Druckunterschiede wahrnehmen",
+    "explanation": "Richtig ist: Wasserbewegungen und Druckunterschiede wahrnehmen.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   },
   {
     "id": 38,
@@ -377,7 +273,11 @@
       "Kleine Schuppen",
       "Grosse Schuppen"
     ],
-    "correct": "Schuppenlos"
+    "correct": "Kleine Schuppen",
+    "explanation": "Aale besitzen sehr kleine, in die Haut eingebettete Schuppen.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   },
   {
     "id": 39,
@@ -387,17 +287,25 @@
       "Äsche",
       "Seesaibling"
     ],
-    "correct": "Regenbogenforelle"
+    "correct": "Äsche",
+    "explanation": "Richtig ist: Äsche.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   },
   {
     "id": 40,
-    "question": "Welcher Fisch hat keine Schwimmblase/-gang?",
+    "question": "Welcher dieser Fische hat keine Schwimmblase?",
     "choices": [
       "Groppe",
       "Elritze",
       "Gründling"
     ],
-    "correct": "Groppe"
+    "correct": "Groppe",
+    "explanation": "Richtig ist: Groppe.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   },
   {
     "id": 41,
@@ -407,7 +315,11 @@
       "Laube",
       "Forelle"
     ],
-    "correct": "Nase"
+    "correct": "Nase",
+    "explanation": "Richtig ist: Nase.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   },
   {
     "id": 42,
@@ -417,7 +329,11 @@
       "Wenige, grosse Zähne",
       "Viele, kleine Zähnchen"
     ],
-    "correct": "Zahnlos"
+    "correct": "Viele, kleine Zähnchen",
+    "explanation": "Richtig ist: Viele, kleine Zähnchen.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   },
   {
     "id": 43,
@@ -427,7 +343,11 @@
       "Luft wird zusammengedrückt",
       "Das Herz hört auf zu schlagen – Fisch muss nicht getötet werden"
     ],
-    "correct": "Luft in der Schwimmblase dehnt sich aus"
+    "correct": "Luft in der Schwimmblase dehnt sich aus",
+    "explanation": "Mit sinkendem Wasserdruck dehnt sich das Gas aus; schnelles Hochholen kann den Fisch schwer verletzen.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   },
   {
     "id": 44,
@@ -437,7 +357,11 @@
       "Barschartige",
       "Karpfenartige"
     ],
-    "correct": "Forellenartige"
+    "correct": "Forellenartige",
+    "explanation": "Richtig ist: Forellenartige.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   },
   {
     "id": 45,
@@ -447,7 +371,11 @@
       "Vom Grund",
       "Aus freiem Wasser"
     ],
-    "correct": "Von der Oberfläche"
+    "correct": "Vom Grund",
+    "explanation": "Richtig ist: Vom Grund.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   },
   {
     "id": 46,
@@ -457,7 +385,11 @@
       "Weniger Feinde durch Aussehen",
       "Besseres Verstecken im Schilf"
     ],
-    "correct": "Hohe Geschwindigkeit auf kurzer Strecke"
+    "correct": "Hohe Geschwindigkeit auf kurzer Strecke",
+    "explanation": "Richtig ist: Hohe Geschwindigkeit auf kurzer Strecke.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   },
   {
     "id": 47,
@@ -467,7 +399,11 @@
       "Ja, bei starken Schäden",
       "Nein, nur Infektionsgefahr"
     ],
-    "correct": "Nein, nur Pilzgefahr"
+    "correct": "Ja, bei starken Schäden",
+    "explanation": "Richtig ist: Ja, bei starken Schäden.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   },
   {
     "id": 48,
@@ -477,7 +413,11 @@
       "Fischereiaufsicht",
       "Bundesamt für Veterinärwesen"
     ],
-    "correct": "Labor"
+    "correct": "Fischereiaufsicht",
+    "explanation": "Richtig ist: Fischereiaufsicht.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   },
   {
     "id": 49,
@@ -487,7 +427,11 @@
       "Kühle Bergbäche",
       "Wärmere Mittellandflüsse"
     ],
-    "correct": "Seen"
+    "correct": "Wärmere Mittellandflüsse",
+    "explanation": "Wärmeres Wasser begünstigt einen schweren Verlauf der proliferativen Nierenkrankheit (PKD).",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.blv.admin.ch/de/proliferative-nierenkrankheit-der-fische",
+    "source_label": "BLV: PKD"
   },
   {
     "id": 50,
@@ -497,7 +441,11 @@
       "Schutz der Schleimschicht",
       "Rücksetzen wird einfacher"
     ],
-    "correct": "Temperaturausgleich"
+    "correct": "Schutz der Schleimschicht",
+    "explanation": "Richtig ist: Schutz der Schleimschicht.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   },
   {
     "id": 51,
@@ -507,27 +455,11 @@
       "Geräte reinigen und trocknen",
       "Auch geschützte Fische entnehmen"
     ],
-    "correct": "Nichts – Sache des Bundes"
-  },
-  {
-    "id": 52,
-    "question": "Was fördert Ausbruch von Krankheiten?",
-    "choices": [
-      "Stress (Temperatur, Pestizide etc.)",
-      "Ungereinigte Ausrüstung",
-      "Mangel an Antibiotika"
-    ],
-    "correct": "Stress (Temperatur, Pestizide etc.)"
-  },
-  {
-    "id": 53,
-    "question": "Wie Geräte desinfizieren?",
-    "choices": [
-      "Hitze, Austrocknung oder Desinfektion",
-      "Lauwarmes Wasser",
-      "Nicht möglich"
-    ],
-    "correct": "Hitze, Austrocknung oder Desinfektion"
+    "correct": "Geräte reinigen und trocknen",
+    "explanation": "Richtig ist: Geräte reinigen und trocknen.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   },
   {
     "id": 54,
@@ -537,17 +469,11 @@
       "Forellenregion",
       "Äschenregion"
     ],
-    "correct": "Barbenregion"
-  },
-  {
-    "id": 55,
-    "question": "Was ändert sich, wenn aus Bach ein Strom wird?",
-    "choices": [
-      "Gefälle und Geschwindigkeit sinken",
-      "Untergrund wird grobkörniger",
-      "Temperatur-Schwankungen kleiner"
-    ],
-    "correct": "Gefälle und Geschwindigkeit sinken"
+    "correct": "Forellenregion",
+    "explanation": "Richtig ist: Forellenregion.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   },
   {
     "id": 56,
@@ -557,7 +483,11 @@
       "Wasser erwärmt sich schneller",
       "Lebensraum für Jungfische"
     ],
-    "correct": "Fischer kann besser waten"
+    "correct": "Lebensraum für Jungfische",
+    "explanation": "Richtig ist: Lebensraum für Jungfische.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   },
   {
     "id": 57,
@@ -567,27 +497,25 @@
       "Vielfältige Lebensräume",
       "Harte Uferverbauung"
     ],
-    "correct": "Landwirtschaft nahe Gewässer"
-  },
-  {
-    "id": 58,
-    "question": "Zusammenhang Nährstoff- & Sauerstoffgehalt?",
-    "choices": [
-      "Oligotroph = mehr O₂",
-      "Oligotroph = weniger O₂",
-      "Kein Zusammenhang"
-    ],
-    "correct": "Oligotroph = mehr O₂"
+    "correct": "Vielfältige Lebensräume",
+    "explanation": "Richtig ist: Vielfältige Lebensräume.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.bafu.admin.ch/de/fischerei",
+    "source_label": "BAFU: Fischerei und Lebensräume"
   },
   {
     "id": 59,
-    "question": "Zusammenhang Wassertemperatur & Sauerstoff?",
+    "question": "Wie verändert sich die Sauerstofflöslichkeit im Wasser bei steigender Temperatur?",
     "choices": [
-      "Immer gleich viel O₂",
-      "Je wärmer, desto weniger O₂",
-      "Je wärmer, desto mehr O₂"
+      "Sie bleibt immer gleich",
+      "Sie nimmt ab",
+      "Sie nimmt zu"
     ],
-    "correct": "Immer gleich viel O₂"
+    "correct": "Sie nimmt ab",
+    "explanation": "Warmes Wasser kann bei sonst gleichen Bedingungen weniger Sauerstoff lösen als kaltes.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   },
   {
     "id": 60,
@@ -597,27 +525,11 @@
       "Schnecken",
       "Fische"
     ],
-    "correct": "Wasserpflanzen"
-  },
-  {
-    "id": 61,
-    "question": "Fressen Fische ganzjährig gleich viel?",
-    "choices": [
-      "Im Winter mehr",
-      "Ja",
-      "Im Winter weniger"
-    ],
-    "correct": "Im Winter mehr"
-  },
-  {
-    "id": 62,
-    "question": "Welche Fischgrösse kommt am häufigsten vor?",
-    "choices": [
-      "Gleich verteilt",
-      "Grosse Fische",
-      "Kleine Jungfische"
-    ],
-    "correct": "Gleich verteilt"
+    "correct": "Wasserpflanzen",
+    "explanation": "Richtig ist: Wasserpflanzen.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   },
   {
     "id": 63,
@@ -627,17 +539,11 @@
       "Bundesamt für Veterinärwesen",
       "Bundesamt für Umwelt"
     ],
-    "correct": "Kantonale Fischereifachstellen"
-  },
-  {
-    "id": 64,
-    "question": "Welche Grösse von Besatztieren ist am erfolgversprechendsten?",
-    "choices": [
-      "Wenige grosse Fische",
-      "Angepasster Anteil Brütlinge/Sömmerlinge",
-      "Viele billige Brütlinge/Sömmerlinge"
-    ],
-    "correct": "Wenige grosse Fische"
+    "correct": "Kantonale Fischereifachstellen",
+    "explanation": "Richtig ist: Kantonale Fischereifachstellen.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   },
   {
     "id": 65,
@@ -647,7 +553,11 @@
       "Sie fressen",
       "Sie sterben"
     ],
-    "correct": "Sie legen Eier ab"
+    "correct": "Sie legen Eier ab",
+    "explanation": "Richtig ist: Sie legen Eier ab.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   },
   {
     "id": 66,
@@ -657,7 +567,11 @@
       "Spielt keine Rolle",
       "Möglichst zahlreich & aus dem gleichen Gewässer"
     ],
-    "correct": "Möglichst wenige grosse Tiere"
+    "correct": "Möglichst zahlreich & aus dem gleichen Gewässer",
+    "explanation": "Richtig ist: Möglichst zahlreich & aus dem gleichen Gewässer.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.bafu.admin.ch/de/fischerei",
+    "source_label": "BAFU: Fischerei und Lebensräume"
   },
   {
     "id": 67,
@@ -667,37 +581,11 @@
       "Aus Zielgewässer (angepasst)",
       "Aus billigster Zucht"
     ],
-    "correct": "Aus fremden Gewässern (\"Blutauffrischung\")"
-  },
-  {
-    "id": 68,
-    "question": "Was ist das Ziel von Schonmassnahmen?",
-    "choices": [
-      "Schutz der Jungfische",
-      "Förderung sportlicher Methoden",
-      "Schutz kranker Fische"
-    ],
-    "correct": "Schutz der Jungfische"
-  },
-  {
-    "id": 69,
-    "question": "Was passiert im Schongebiet?",
-    "choices": [
-      "Grosse Fische nehmen überhand",
-      "Gleichgewicht stellt sich ein",
-      "Bestand steigt ständig"
-    ],
-    "correct": "Grosse Fische nehmen überhand"
-  },
-  {
-    "id": 70,
-    "question": "Was bewirkt eine Fangzahnbeschränkung?",
-    "choices": [
-      "Gerechtere Verteilung",
-      "Mehr Bestand",
-      "Schutz der Laichtiere"
-    ],
-    "correct": "Gerechtere Verteilung"
+    "correct": "Aus Zielgewässer (angepasst)",
+    "explanation": "Richtig ist: Aus Zielgewässer (angepasst).",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.bafu.admin.ch/de/fischerei",
+    "source_label": "BAFU: Fischerei und Lebensräume"
   },
   {
     "id": 71,
@@ -707,17 +595,11 @@
       "Jahreszeiten",
       "Bedürfnisse der Angler"
     ],
-    "correct": "Laichzeit der Fische"
-  },
-  {
-    "id": 72,
-    "question": "Warum Fangmindestmasse?",
-    "choices": [
-      "Damit jeder Fisch einmal laichen kann",
-      "Kleine Fische schwer zu filetieren",
-      "Gleichmässiger Fangertrag"
-    ],
-    "correct": "Damit jeder Fisch einmal laichen kann"
+    "correct": "Laichzeit der Fische",
+    "explanation": "Richtig ist: Laichzeit der Fische.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   },
   {
     "id": 73,
@@ -727,17 +609,11 @@
       "Nicht unbedingt",
       "Nie"
     ],
-    "correct": "Ja"
-  },
-  {
-    "id": 74,
-    "question": "Was ist bei Fischsterben zu tun?",
-    "choices": [
-      "Alarm & Beweissicherung",
-      "Stauen, Abfischen, Beweise",
-      "Alarm, Gifteinfluss ableiten, Frischwasser"
-    ],
-    "correct": "Alarm & Beweissicherung"
+    "correct": "Nicht unbedingt",
+    "explanation": "Richtig ist: Nicht unbedingt.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   },
   {
     "id": 75,
@@ -747,7 +623,11 @@
       "Vereinspräsident",
       "Bundesamt für Umwelt"
     ],
-    "correct": "Fischereiaufsicht & Polizei"
+    "correct": "Fischereiaufsicht & Polizei",
+    "explanation": "Richtig ist: Fischereiaufsicht & Polizei.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   },
   {
     "id": 76,
@@ -757,37 +637,11 @@
       "Durch Revitalisierung",
       "Durch gebietsfremde Arten"
     ],
-    "correct": "Durch Besatz"
-  },
-  {
-    "id": 77,
-    "question": "Problem bei Wasserkraftnutzung?",
-    "choices": [
-      "Zu wenig Geschiebe durch Stau",
-      "Kein Problem",
-      "Zu viel Geschiebe"
-    ],
-    "correct": "Zu wenig Geschiebe durch Stau"
-  },
-  {
-    "id": 78,
-    "question": "Warum viele Gewässer kanalisiert?",
-    "choices": [
-      "Landgewinn",
-      "Für bessere Fischbedingungen",
-      "Fast keine Kanalisierung"
-    ],
-    "correct": "Landgewinn"
-  },
-  {
-    "id": 79,
-    "question": "Welcher Knoten verbindet zwei Schnüre?",
-    "choices": [
-      "Uni-Knoten",
-      "Chirurgen-Knoten",
-      "Clinch-Knoten"
-    ],
-    "correct": "Uni-Knoten"
+    "correct": "Durch Revitalisierung",
+    "explanation": "Richtig ist: Durch Revitalisierung.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.bafu.admin.ch/de/fischerei",
+    "source_label": "BAFU: Fischerei und Lebensräume"
   },
   {
     "id": 80,
@@ -797,37 +651,39 @@
       "Lockmittel",
       "Bissanzeiger"
     ],
-    "correct": "Standortmarkierung"
-  },
-  {
-    "id": 81,
-    "question": "Welche Arten beim Grundfischen?",
-    "choices": [
-      "Karpfen, Schleien, Weissfische",
-      "Köderfische",
-      "Raubfische"
-    ],
-    "correct": "Karpfen, Schleien, Weissfische"
+    "correct": "Bissanzeiger",
+    "explanation": "Richtig ist: Bissanzeiger.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   },
   {
     "id": 82,
-    "question": "Was dient als Beschwerung beim Grundfischen?",
+    "question": "Welche dieser Beschwerungen kann auf der Schnur gleiten?",
     "choices": [
       "Laufzapfen",
       "Laufblei",
-      "Klemmblei"
+      "Festgeklemmtes Klemmblei"
     ],
-    "correct": "Laufzapfen"
+    "correct": "Laufblei",
+    "explanation": "Richtig ist: Laufblei.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   },
   {
     "id": 83,
-    "question": "Wie verwendet man einen Spinnköder?",
+    "question": "Wie wird ein Spinnköder üblicherweise eingesetzt?",
     "choices": [
       "Auf den Grund setzen",
-      "Im Wasser spielen lassen",
+      "Durch Einholen und aktive Führung bewegen",
       "Mit Laufzapfen kombinieren"
     ],
-    "correct": "Auf den Grund setzen"
+    "correct": "Durch Einholen und aktive Führung bewegen",
+    "explanation": "Richtig ist: Durch Einholen und aktive Führung bewegen.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   },
   {
     "id": 84,
@@ -837,7 +693,11 @@
       "Weissfische",
       "Karpfenartige"
     ],
-    "correct": "Raubfische"
+    "correct": "Raubfische",
+    "explanation": "Richtig ist: Raubfische.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   },
   {
     "id": 85,
@@ -847,37 +707,11 @@
       "Hecht, Forelle",
       "Karpfen, Schleie"
     ],
-    "correct": "Felchen, Egli"
-  },
-  {
-    "id": 86,
-    "question": "Wann brauchen Boote einen weissen Ball?",
-    "choices": [
-      "Beim Spinnfischen",
-      "Beim Hegenen",
-      "Beim Schleppen"
-    ],
-    "correct": "Beim Spinnfischen"
-  },
-  {
-    "id": 87,
-    "question": "Hauptnahrung von Weissfischen?",
-    "choices": [
-      "Kleinlebewesen, Pflanzen, Algen",
-      "Kleine Fische",
-      "Teig, Boilies"
-    ],
-    "correct": "Kleinlebewesen, Pflanzen, Algen"
-  },
-  {
-    "id": 88,
-    "question": "Warum Kunstköder bevorzugen?",
-    "choices": [
-      "Preisgünstiger",
-      "Fängiger",
-      "Werden weniger tief geschluckt"
-    ],
-    "correct": "Preisgünstiger"
+    "correct": "Felchen, Egli",
+    "explanation": "Richtig ist: Felchen, Egli.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   },
   {
     "id": 89,
@@ -887,37 +721,11 @@
       "Kleine Fische",
       "Gummiköder"
     ],
-    "correct": "Algen"
-  },
-  {
-    "id": 90,
-    "question": "Welcher künstliche Köder ist hier abgebildet?",
-    "choices": [
-      "Spinner",
-      "Löffel",
-      "Wobbler"
-    ],
-    "correct": "Spinner"
-  },
-  {
-    "id": 91,
-    "question": "Welcher künstliche Köder ist hier abgebildet?",
-    "choices": [
-      "Twister",
-      "Nymphe",
-      "Streamer"
-    ],
-    "correct": "Twister"
-  },
-  {
-    "id": 92,
-    "question": "Wie heisst dieser künstliche Köder?",
-    "choices": [
-      "Spinner",
-      "Löffel",
-      "Wobbler"
-    ],
-    "correct": "Spinner"
+    "correct": "Kleine Fische",
+    "explanation": "Richtig ist: Kleine Fische.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   },
   {
     "id": 93,
@@ -927,17 +735,11 @@
       "Vergraben",
       "Mitnehmen und entsorgen"
     ],
-    "correct": "Liegen lassen"
-  },
-  {
-    "id": 94,
-    "question": "Warum dünneres Vorfach als Hauptschnur verwenden?",
-    "choices": [
-      "Weniger sichtbar",
-      "Besser zu knüpfen",
-      "Reisst zuerst, schont den Fisch"
-    ],
-    "correct": "Weniger sichtbar"
+    "correct": "Mitnehmen und entsorgen",
+    "explanation": "Richtig ist: Mitnehmen und entsorgen.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   },
   {
     "id": 95,
@@ -947,7 +749,11 @@
       "Nur für Salmoniden",
       "Für alle Fischarten"
     ],
-    "correct": "Nur für geschützte Arten"
+    "correct": "Für alle Fischarten",
+    "explanation": "Die Tierschutzvorschriften erfassen auch Fische unabhängig von ihrer Art.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   },
   {
     "id": 96,
@@ -957,17 +763,11 @@
       "Kantone",
       "Bund"
     ],
-    "correct": "Bezirk"
-  },
-  {
-    "id": 97,
-    "question": "Wo ist die Fischerei gesetzlich geregelt?",
-    "choices": [
-      "Gewässerschutzgesetz",
-      "Bundesverfassung",
-      "Bundesgesetz über die Fischerei"
-    ],
-    "correct": "Gewässerschutzgesetz"
+    "correct": "Kantone",
+    "explanation": "Richtig ist: Kantone.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   },
   {
     "id": 98,
@@ -977,7 +777,11 @@
       "Waidgerechter Umgang",
       "Setzen sich nicht für Hege/Pflege ein"
     ],
-    "correct": "Viel Beute mit teurer Ausrüstung"
+    "correct": "Waidgerechter Umgang",
+    "explanation": "Richtig ist: Waidgerechter Umgang.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   },
   {
     "id": 99,
@@ -987,27 +791,25 @@
       "Gefährden einheimische Arten",
       "Nicht essbar"
     ],
-    "correct": "Schwer zu fangen"
+    "correct": "Gefährden einheimische Arten",
+    "explanation": "Richtig ist: Gefährden einheimische Arten.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.bafu.admin.ch/de/fischerei",
+    "source_label": "BAFU: Fischerei und Lebensräume"
   },
   {
     "id": 100,
-    "question": "Warum schnurstärkengerecht angeln?",
+    "question": "Warum soll die Schnurstärke zur befischten Art passen?",
     "choices": [
       "Ermöglicht kurzen Drill",
       "Zu dicke Schnur → zu langer Drill",
       "Einige Arten beissen nicht bei dünner Schnur"
     ],
-    "correct": "Ermöglicht kurzen Drill"
-  },
-  {
-    "id": 101,
-    "question": "Mehrere untermassige Fische gefangen – was tun?",
-    "choices": [
-      "Platz wechseln",
-      "Weiterfischen",
-      "Grösseren Köder verwenden"
-    ],
-    "correct": "Platz wechseln"
+    "correct": "Ermöglicht kurzen Drill",
+    "explanation": "Richtig ist: Ermöglicht kurzen Drill.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   },
   {
     "id": 102,
@@ -1017,17 +819,11 @@
       "Gute Anlandemöglichkeiten, kein Jungfischgebiet",
       "Keine Kriterien nötig"
     ],
-    "correct": "Möglichst weit weg vom Wasser"
-  },
-  {
-    "id": 103,
-    "question": "Warum bei Naturköder sofort anschlagen?",
-    "choices": [
-      "Sonst spuckt er Köder aus",
-      "Sonst schluckt er tief, schwer lösbar",
-      "Spielt keine Rolle"
-    ],
-    "correct": "Sonst spuckt er Köder aus"
+    "correct": "Gute Anlandemöglichkeiten, kein Jungfischgebiet",
+    "explanation": "Richtig ist: Gute Anlandemöglichkeiten, kein Jungfischgebiet.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   },
   {
     "id": 104,
@@ -1037,17 +833,11 @@
       "Schont Schnur",
       "Für mehr Beute"
     ],
-    "correct": "Verhindert Erschöpfung & O₂-Mangel"
-  },
-  {
-    "id": 105,
-    "question": "Was tun bei tief geschlucktem Haken bei untermassigem Fisch?",
-    "choices": [
-      "Fisch töten",
-      "Vorfach knapp abschneiden",
-      "Haken herausoperieren"
-    ],
-    "correct": "Fisch töten"
+    "correct": "Verhindert Erschöpfung & O₂-Mangel",
+    "explanation": "Richtig ist: Verhindert Erschöpfung & O₂-Mangel.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   },
   {
     "id": 106,
@@ -1057,77 +847,11 @@
       "Schuppen & Schleimschicht",
       "Haut ist robust, braucht keinen Schutz"
     ],
-    "correct": "Nur Schuppen"
-  },
-  {
-    "id": 107,
-    "question": "Wie nimmt man Fisch zum Hakenlösen korrekt in die Hand?",
-    "choices": [
-      "Bauch in hohle, nasse Hand, Finger auf Rücken",
-      "Rücken in hohle, nasse Hand, Finger auf Bauch",
-      "Wie es gerade passt"
-    ],
-    "correct": "Bauch in hohle, nasse Hand, Finger auf Rücken"
-  },
-  {
-    "id": 108,
-    "question": "Was tun, wenn man den Fisch entnehmen darf?",
-    "choices": [
-      "Anlanden, vom Haken lösen, töten",
-      "Anlanden, betäuben, töten, Haken lösen",
-      "Anlanden, messen, dann töten"
-    ],
-    "correct": "Anlanden, vom Haken lösen, töten"
-  },
-  {
-    "id": 109,
-    "question": "Reicht ein Schlag auf den Kopf zum Töten?",
-    "choices": [
-      "Ja, mit 3 Schlägen",
-      "Meistens, evtl. zusätzlich schlagen",
-      "Nein, zusätzlich Entbluten oder Ausnehmen nötig"
-    ],
-    "correct": "Ja, mit 3 Schlägen"
-  },
-  {
-    "id": 110,
-    "question": "Wie werden lebende Fische korrekt gehältert?",
-    "choices": [
-      "In grossen Behältern mit Sauerstoff",
-      "In feuchtem Tuch",
-      "In Plastiksack mit Wasser"
-    ],
-    "correct": "In grossen Behältern mit Sauerstoff"
-  },
-  {
-    "id": 111,
-    "question": "Wie lange darf ein SaNa-Inhaber Fische hältern?",
-    "choices": [
-      "2 Stunden",
-      "Bis Ende Angeltag",
-      "3 Wochen"
-    ],
-    "correct": "2 Stunden"
-  },
-  {
-    "id": 112,
-    "question": "Wie hält man Fang frisch?",
-    "choices": [
-      "Nur durch lebende Hälterung",
-      "Sofort ausnehmen, kühl lagern",
-      "In Plastiksack legen"
-    ],
-    "correct": "Nur durch lebende Hälterung"
-  },
-  {
-    "id": 113,
-    "question": "Wie misst man einen knapp massigen Fisch korrekt?",
-    "choices": [
-      "Ruhig halten, dann messen",
-      "Mehrmals messen",
-      "Im Wasser messen, bei Zweifel zurücksetzen"
-    ],
-    "correct": "Ruhig halten, dann messen"
+    "correct": "Schuppen & Schleimschicht",
+    "explanation": "Richtig ist: Schuppen & Schleimschicht.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   },
   {
     "id": 114,
@@ -1137,57 +861,25 @@
       "Nein, eigene Vorschriften",
       "Nur Bundesrecht gilt"
     ],
-    "correct": "Ja"
-  },
-  {
-    "id": 115,
-    "question": "Welche Fischart ist ganzjährig geschützt?",
-    "choices": [
-      "Regenbogenforelle",
-      "Nase",
-      "Äsche"
-    ],
-    "correct": "Regenbogenforelle"
-  },
-  {
-    "id": 116,
-    "question": "Warum wurden Widerhaken verboten (ausser Ausnahmen)?",
-    "choices": [
-      "Empfehlung WHO",
-      "Verletzungsgefahr beim Lösen",
-      "Selbstschutz des Fischers"
-    ],
-    "correct": "Empfehlung WHO"
-  },
-  {
-    "id": 117,
-    "question": "Wann dürfen massige Fische zurückgesetzt werden?",
-    "choices": [
-      "Bei Absicht vor dem Fang",
-      "Aus ökologischen Gründen",
-      "Wenn sie zu gross für die Pfanne sind"
-    ],
-    "correct": "Bei Absicht vor dem Fang"
-  },
-  {
-    "id": 118,
-    "question": "Wie setzt man untermassige Fische korrekt zurück?",
-    "choices": [
-      "Schnell zurückwerfen",
-      "Gar nicht – Entnahmegebot",
-      "Im Wasser Haken lösen, Fisch gegen Strömung halten"
-    ],
-    "correct": "Schnell zurückwerfen"
+    "correct": "Ja",
+    "explanation": "Richtig ist: Ja.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   },
   {
     "id": 119,
-    "question": "Warum keinen Druck auf den Fischkörper ausüben?",
+    "question": "Warum darf der Bauch eines lebenden Fisches nicht stark zusammengedrückt werden?",
     "choices": [
-      "Schützt innere Organe",
-      "Galle nicht quetschen",
-      "Atmung nicht behindern"
+      "Das kann innere Organe verletzen",
+      "Das verändert dauerhaft die Schuppenfarbe",
+      "Das verhindert die spätere Geschmacksbildung"
     ],
-    "correct": "Schützt innere Organe"
+    "correct": "Das kann innere Organe verletzen",
+    "explanation": "Starker Druck kann die empfindlichen inneren Organe schädigen.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   },
   {
     "id": 120,
@@ -1197,27 +889,11 @@
       "Ja",
       "Liegt im Ermessen des Fischers"
     ],
-    "correct": "Nein, sind kaltblütig"
-  },
-  {
-    "id": 121,
-    "question": "Wer darf Fische lebend hältern?",
-    "choices": [
-      "Jeder Patent-Inhaber",
-      "Jeder SaNa-Inhaber, wo erlaubt",
-      "Jeder Fischer, wo erlaubt"
-    ],
-    "correct": "Jeder Patent-Inhaber"
-  },
-  {
-    "id": 122,
-    "question": "Darf man lebende Köderfische verwenden?",
-    "choices": [
-      "Niemals",
-      "Nur mit SaNa, wenn erlaubt",
-      "Immer bei Raubfischangeln"
-    ],
-    "correct": "Niemals"
+    "correct": "Ja",
+    "explanation": "Auch Fische sind Wirbeltiere und benötigen einen sorgfältigen, schonenden Umgang.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   },
   {
     "id": 123,
@@ -1227,7 +903,11 @@
       "Eidg. Fischereigesetz",
       "Kantonale Vorschriften"
     ],
-    "correct": "Bundesverfassung"
+    "correct": "Kantonale Vorschriften",
+    "explanation": "Richtig ist: Kantonale Vorschriften.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   },
   {
     "id": 124,
@@ -1237,17 +917,11 @@
       "Mit Sand rau machen",
       "Mit Desinfektionsmittel einreiben"
     ],
-    "correct": "Hand mit Wasser benetzen"
-  },
-  {
-    "id": 125,
-    "question": "Wie lebende Fische fotografieren?",
-    "choices": [
-      "Nur tot",
-      "Möglichst weit vom Wasser",
-      "Im Wasser oder kurz herausheben"
-    ],
-    "correct": "Nur tot"
+    "correct": "Hand mit Wasser benetzen",
+    "explanation": "Richtig ist: Hand mit Wasser benetzen.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   },
   {
     "id": 126,
@@ -1257,17 +931,11 @@
       "Überlebensfähigkeit sichern",
       "Fleischqualität nicht verlieren"
     ],
-    "correct": "Busse vermeiden"
-  },
-  {
-    "id": 127,
-    "question": "Warum sofort ausnehmen?",
-    "choices": [
-      "Sonst schwimmt er weg",
-      "Verwesung schadet Qualität",
-      "Innereien ungeniessbar"
-    ],
-    "correct": "Sonst schwimmt er weg"
+    "correct": "Überlebensfähigkeit sichern",
+    "explanation": "Richtig ist: Überlebensfähigkeit sichern.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   },
   {
     "id": 128,
@@ -1277,312 +945,10 @@
       "Gallenblase nicht anstechen",
       "Innereien nicht verlieren"
     ],
-    "correct": "Schleimschicht nicht verletzen"
-  },
-  {
-    "id": 129,
-    "question": "Wie ausgenommenen Fisch lagern beim Weiterfischen?",
-    "choices": [
-      "Plastiksack",
-      "Tuch oder Fischkorb, kühl",
-      "Ins Gras legen"
-    ],
-    "correct": "Plastiksack"
-  },
-  {
-    "id": 130,
-    "question": "Was bei zu langer Tiefkühllagerung?",
-    "choices": [
-      "Fisch trocknet aus, ungeniessbar",
-      "Beliebig lange lagerbar",
-      "Verfärbt sich, bleibt geniessbar"
-    ],
-    "correct": "Fisch trocknet aus, ungeniessbar"
-  },
-  {
-    "id": 131,
-    "question": "Wie erkennt man verdorbenen Fisch?",
-    "choices": [
-      "Trockene Schleimschicht",
-      "Geruch, trübe Augen",
-      "Nur an Kiemen erkennbar"
-    ],
-    "correct": "Trockene Schleimschicht"
-  },
-  {
-    "id": 132,
-    "question": "Können alle Fische gleich lang tiefgekühlt gelagert werden?",
-    "choices": [
-      "Nein, fettreiche kürzer haltbar",
-      "Fettreiche länger haltbar",
-      "Gleich haltbar"
-    ],
-    "correct": "Nein, fettreiche kürzer haltbar"
-  },
-  {
-    "id": 133,
-    "question": "Wie soll man Fisch auftauen?",
-    "choices": [
-      "Im Kühlschrank, nicht im Tauwasser",
-      "In lauwarmem Wasser",
-      "Über Nacht in der Küche"
-    ],
-    "correct": "Im Kühlschrank, nicht im Tauwasser"
-  },
-  {
-    "id": 134,
-    "question": "Worauf achten beim Einfrieren?",
-    "choices": [
-      "Beutel dicht, schnell einfrieren, Datum",
-      "In Folie wickeln, einfrieren",
-      "In Papier wickeln, einfrieren"
-    ],
-    "correct": "Beutel dicht, schnell einfrieren, Datum"
-  },
-  {
-    "id": 135,
-    "question": "Weissfischfilets mit Gräten – wie geniessbar machen?",
-    "choices": [
-      "Klein schneiden, Gräten zupfen, evtl. Hackfleisch",
-      "Nie Weissfische entnehmen",
-      "Unessbar wegen Gräten"
-    ],
-    "correct": "Klein schneiden, Gräten zupfen, evtl. Hackfleisch"
-  },
-  {
-    "id": 136,
-    "question": "Woran erkennt man frischen Fisch?",
-    "choices": [
-      "Kein Geruch, glänzende Augen, rote Kiemen",
-      "Kein Geruch, feuchte Haut, klare Kiemen",
-      "Frischer Geruch, glänzende Augen, rote Kiemen"
-    ],
-    "correct": "Kein Geruch, glänzende Augen, rote Kiemen"
-  },
-  {
-    "id": 137,
-    "question": "Welche Merkmale deuten auf verdorbenen Fisch hin?",
-    "choices": [
-      "Geruch, trockene Haut, verfärbte Kiemen",
-      "Geruch, verfärbte Haut, verklebte Kiemen",
-      "Frischer Geruch, glänzende Augen, rote Kiemen"
-    ],
-    "correct": "Geruch, trockene Haut, verfärbte Kiemen"
-  },
-  {
-    "id": 138,
-    "question": "Welche Vorschrift vor dem Angeln konsultieren?",
-    "choices": [
-      "Bundesverfassung",
-      "Eidg. Fischereigesetz",
-      "Kantonale Vorschriften"
-    ],
-    "correct": "Bundesverfassung"
-  },
-  {
-    "id": 139,
-    "question": "Was vor dem Anfassen eines Fisches tun?",
-    "choices": [
-      "Hand mit Wasser benetzen",
-      "Mit Sand rau machen",
-      "Mit Desinfektionsmittel einreiben"
-    ],
-    "correct": "Hand mit Wasser benetzen"
-  },
-  {
-    "id": 140,
-    "question": "Wie lebende Fische fotografieren?",
-    "choices": [
-      "Nur tot",
-      "Möglichst weit vom Wasser",
-      "Im Wasser oder kurz herausheben"
-    ],
-    "correct": "Nur tot"
-  },
-  {
-    "id": 141,
-    "question": "Warum zurückzusetzende Fische schonend behandeln?",
-    "choices": [
-      "Busse vermeiden",
-      "Überlebensfähigkeit sichern",
-      "Fleischqualität nicht verlieren"
-    ],
-    "correct": "Busse vermeiden"
-  },
-  {
-    "id": 142,
-    "question": "Warum sofort ausnehmen?",
-    "choices": [
-      "Sonst schwimmt er weg",
-      "Verwesung schadet Qualität",
-      "Innereien ungeniessbar"
-    ],
-    "correct": "Sonst schwimmt er weg"
-  },
-  {
-    "id": 143,
-    "question": "Worauf beim Bauchaufschneiden achten?",
-    "choices": [
-      "Schleimschicht nicht verletzen",
-      "Gallenblase nicht anstechen",
-      "Innereien nicht verlieren"
-    ],
-    "correct": "Schleimschicht nicht verletzen"
-  },
-  {
-    "id": 144,
-    "question": "Wie ausgenommenen Fisch lagern beim Weiterfischen?",
-    "choices": [
-      "Plastiksack",
-      "Tuch oder Fischkorb, kühl",
-      "Ins Gras legen"
-    ],
-    "correct": "Plastiksack"
-  },
-  {
-    "id": 145,
-    "question": "Was bei zu langer Tiefkühllagerung?",
-    "choices": [
-      "Fisch trocknet aus, ungeniessbar",
-      "Beliebig lange lagerbar",
-      "Verfärbt sich, bleibt geniessbar"
-    ],
-    "correct": "Fisch trocknet aus, ungeniessbar"
-  },
-  {
-    "id": 146,
-    "question": "Wie erkennt man verdorbenen Fisch?",
-    "choices": [
-      "Trockene Schleimschicht",
-      "Geruch, trübe Augen",
-      "Nur an Kiemen erkennbar"
-    ],
-    "correct": "Trockene Schleimschicht"
-  },
-  {
-    "id": 147,
-    "question": "Können alle Fische gleich lang tiefgekühlt gelagert werden?",
-    "choices": [
-      "Nein, fettreiche kürzer haltbar",
-      "Fettreiche länger haltbar",
-      "Gleich haltbar"
-    ],
-    "correct": "Nein, fettreiche kürzer haltbar"
-  },
-  {
-    "id": 148,
-    "question": "Wie soll man Fisch auftauen?",
-    "choices": [
-      "Im Kühlschrank, nicht im Tauwasser",
-      "In lauwarmem Wasser",
-      "Über Nacht in der Küche"
-    ],
-    "correct": "Im Kühlschrank, nicht im Tauwasser"
-  },
-  {
-    "id": 149,
-    "question": "Worauf achten beim Einfrieren?",
-    "choices": [
-      "Beutel dicht, schnell einfrieren, Datum",
-      "In Folie wickeln, einfrieren",
-      "In Papier wickeln, einfrieren"
-    ],
-    "correct": "Beutel dicht, schnell einfrieren, Datum"
-  },
-  {
-    "id": 150,
-    "question": "Weissfischfilets mit Gräten – wie geniessbar machen?",
-    "choices": [
-      "Klein schneiden, Gräten zupfen, evtl. Hackfleisch",
-      "Nie Weissfische entnehmen",
-      "Unessbar wegen Gräten"
-    ],
-    "correct": "Klein schneiden, Gräten zupfen, evtl. Hackfleisch"
-  }
-,
-  {
-    "id": 210,
-    "question": "Wie lange dauert die Schonzeit der Äsche im Kanton Bern?",
-    "choices": [
-      "01. März – 31. Mai",
-      "01. März – 31. August",
-      "01. Oktober – 31. Dezember",
-      "Keine Schonzeit",
-      "Ganzjährig geschützt"
-    ],
-    "correct": "01. März – 31. August",
-    "explanation": "Im Kanton Bern wurde die Schonzeit der Äsche verlängert und dauert nun vom 1. März bis zum 31. August, um den Bestand zu schützen.",
-    "kantone": ["BE"]
-  },
-  {
-    "id": 211,
-    "question": "Welche Mindestfanglänge gilt im Kanton Bern für den Zander?",
-    "choices": [
-      "45 cm",
-      "50 cm",
-      "55 cm",
-      "60 cm",
-      "Keine Mindestlänge"
-    ],
-    "correct": "50 cm",
-    "explanation": "Laut aktueller Berner Fischereiverordnung beträgt das Mindestmass für Zander 50 cm.",
-    "kantone": ["BE"]
-  },
-  {
-    "id": 212,
-    "question": "Welche Aussage zur Felchen-Fischerei im Kanton Bern ist korrekt?",
-    "choices": [
-      "Es besteht keine Fangzahlbeschränkung",
-      "Felchen dürfen nur mit der Hegene gefangen werden",
-      "Felchen haben eine Fangzeit von Sonnenaufgang bis -untergang",
-      "Der Fang ist auf 10 Stück pro Tag begrenzt",
-      "Felchen dürfen nicht vom Ufer aus gefangen werden"
-    ],
-    "correct": "Der Fang ist auf 10 Stück pro Tag begrenzt",
-    "explanation": "Im Kanton Bern gilt eine Tageshöchstfangzahl von 10 Felchen pro Angler.",
-    "kantone": ["BE"]
-  }
-,
-  {
-    "id": 213,
-    "question": "Wie lange dauert die Schonzeit der Äsche im Kanton Graubünden?",
-    "choices": [
-      "01. März – 31. Mai",
-      "01. Februar – 30. April",
-      "01. Oktober – 31. Dezember",
-      "Ganzjährig geschützt",
-      "Keine Schonzeit"
-    ],
-    "correct": "01. März – 31. Mai",
-    "explanation": "Gemäss der Verordnung über den Fischereibetrieb im Kanton Graubünden dauert die Schonzeit der Äsche vom 1. März bis zum 31. Mai.",
-    "kantone": ["GR"]
-  },
-  {
-    "id": 214,
-    "question": "Welche Mindestfanglänge gilt im Kanton Graubünden für den Zander?",
-    "choices": [
-      "45 cm",
-      "50 cm",
-      "55 cm",
-      "60 cm",
-      "Keine Mindestlänge"
-    ],
-    "correct": "50 cm",
-    "explanation": "Laut den Fischereibetriebsvorschriften des Kantons Graubünden beträgt das Mindestmass für Zander 50 cm.",
-    "kantone": ["GR"]
-  },
-  {
-    "id": 215,
-    "question": "Wie viele Edelfische dürfen pro Tag in Fliessgewässern im Kanton Graubünden gefangen werden?",
-    "choices": [
-      "4 Stück",
-      "6 Stück",
-      "8 Stück",
-      "10 Stück",
-      "Keine Begrenzung"
-    ],
-    "correct": "6 Stück",
-    "explanation": "Die Fischereibetriebsvorschriften des Kantons Graubünden legen fest, dass in Fliessgewässern maximal 6 Edelfische pro Tag gefangen werden dürfen.",
-    "kantone": ["GR"]
+    "correct": "Gallenblase nicht anstechen",
+    "explanation": "Richtig ist: Gallenblase nicht anstechen.",
+    "reviewed_on": "2026-11-06",
+    "source": "https://www.anglerausbildung.ch/erfolgskontrolle",
+    "source_label": "SaNa-Lernstoff (kein offizieller Lösungsschlüssel)"
   }
 ]
