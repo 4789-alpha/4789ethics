@@ -4,6 +4,7 @@ async function initFischeSchweiz() {
   if (!table) return;
   try {
     const list = await fetch('../../sources/fish/swiss-fish.json').then(r => r.json());
+    const images = await fetch('../../quiz-assets/images.json').then(r => r.json());
     const bernData = await fetch('../../sources/fish/bern-fische.json').then(r => r.json());
     const maxMap = {};
     const spawnMap = {};
@@ -12,7 +13,9 @@ async function initFischeSchweiz() {
       if (f.spawn_cm) spawnMap[f.scientific_name] = f.spawn_cm;
     });
     const tbody = document.createElement('tbody');
-    list.forEach(f => {
+    list.forEach(original => {
+      const image=images.find(x=>x.scientific_name===original.scientific_name);
+      const f={...original,image:image?.image};
       const row = document.createElement('tr');
 
       const nameCell = document.createElement('td');
@@ -30,6 +33,8 @@ async function initFischeSchweiz() {
         imgElem.addEventListener('click', () => showFishPopin(f));
         imgCell.appendChild(imgElem);
       }
+      if(!f.image)imgCell.textContent='Kein geprüftes Bild';
+      else {const source=document.createElement('a');source.href=image.image_source;source.textContent=image.image_author+' · '+image.image_license;imgCell.append(document.createElement('br'),source);}
       row.appendChild(imgCell);
 
       const sciCell = document.createElement('td');

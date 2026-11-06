@@ -1,51 +1,16 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Fisch-Quiz</title>
-  <link rel="stylesheet" href="../ethicom-style.css">
-  <script src="../bundle.js" defer></script>
-  <script src="../../utils/op-level.js"></script>
-  <script src="fischQuiz.js"></script>
-</head>
-<body>
-  <a class="skip-link" href="#main_content">Skip to main content</a>
-  <div id="op_background"></div>
-  <header>
-    <h1>Fisch-Quiz</h1>
-    <nav>
-      <a href="../../index.html">Home</a>
-      <a href="../../bewertung.html">Bewertung</a>
-      <a href="../settings.html" class="icon-only">⚙</a>
-      <a href="../login.html">Login</a>
-      <a href="../wings/ratings.html">Ratings</a>
-      <a href="../signup.html">Signup</a>
-      <a href="../../README.html" class="readme-link">README</a>
-    </nav>
-  </header>
-  <main id="main_content">
+<!doctype html><html lang="de-CH"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Fisch-Quiz · BSVRB</title><link rel="stylesheet" href="../../bsvrb-home.css"><script defer src="../../bsvrb-home.js"></script></head><body class="public-page"><a class="skip" href="#main_content">Zum Inhalt</a><header class="wrap"><a class="brand" href="../../index.html"><span class="seal">BSVRB<span>2018</span></span><span>Biersportverein<br>Region Bern</span></a><nav aria-label="Hauptnavigation"><a href="../../index.html#projekte">Projekte</a><a href="../../signup.html">Dabei sein</a></nav></header><main id="main_content" class="wrap public-content"><h1>Fisch-Quiz</h1><p><a href="fischeSchweiz.html">Zur Artenübersicht →</a></p>
+<p>Redaktionell geprüft am 6. November 2026. Kein offizieller SaNa-Prüfungskatalog. Mehrdeutige und veraltete Fragen sind ausgesetzt. <a href="../../sources/sana/quiz-pruefung-2026.md">Prüfbericht</a></p>
     <section id="start_screen" class="card">
       <label>Fragenanzahl (0 = endlos)
-        <input id="quiz_length" type="number" min="0" value="0" />
+        <input id="quiz_length" type="number" min="0" value="10" />
       </label>
-      <button id="start_btn">Start</button>
+      <button id="start_btn" disabled>Wird geladen…</button>
     </section>
     <section id="quiz_area" class="card" style="display:none;">
       <img id="quiz_image" alt="" class="fish-image" />
-      <p id="quiz_question"></p>
-      <div id="quiz_options"></div>
-      <button id="stop_btn">Stop</button>
+      <p id="quiz_credit" class="image-credit"></p><p id="quiz_progress" aria-live="polite"></p><p id="quiz_question"></p>
+      <p id="quiz_feedback" role="status"></p><div id="quiz_options"></div>
+      <button id="next_btn" type="button" hidden>Weiter →</button><button id="stop_btn">Stop</button>
     </section>
     <section id="quiz_result" class="card" style="display:none;"></section>
-  </main>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      initSideDrop('../op-navigation.html');
-      const menu = document.getElementById('side_menu');
-      if (menu) menu.addEventListener('click', e => { e.preventDefault(); toggleSideDrop(); });
-    });
-  </script>
-  <div id="side_drop"></div>
-</body>
-</html>
+  </main><footer><div class="wrap footer-bottom"><a href="../../index.html">← Zur Startseite</a><a href="../../bsvrb-statuten.html">Statuten</a><span>BSVRB · Seit 2018</span></div></footer><script src="fischQuiz.js" defer></script></body></html>
