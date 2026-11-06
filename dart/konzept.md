@@ -98,3 +98,6 @@ Die Kalibrierprüfung verwendet ein ausreichend grosses konvexes Viereck und set
 
 ## Legs und Checkout-Hilfe
 Matchlänge: einzelnes Leg oder Best of 3, 5, 7, 9 und 11; bei mehr als zwei Spielern gilt First to zur gewählten Zahl Gewinnlegs. Startspieler im ersten Leg ist der erste Spieler oder wird ausgelost; weitere Legs rotieren. Der Gastgeber startet das nächste Leg. Jedes Leg bleibt im lokalen Archiv. Checkout-Vorschläge berücksichtigen Restpunkte, verbleibende Darts und Single/Double/Master Out. Es wird ein gültiger Weg vorgeschlagen, keine persönliche Trefferwahrscheinlichkeit berechnet.
+
+## Spielerwechsel ohne Board-Bestätigung
+Nach drei Darts, Bust oder vorzeitig beendeter Aufnahme wechselt der Spieler direkt. Es gibt keine Bestätigung zum Entfernen der Darts. Bei Kameraerkennung bleibt ein anfängliches Referenzbild nötig; ein stabiles Bild nahe dieser Referenz setzt den Bildvergleich automatisch zurück, ohne Punkte zu buchen.
