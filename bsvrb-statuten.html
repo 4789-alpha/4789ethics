@@ -43,7 +43,7 @@
       initSideDrop('interface/nav-menu.html');
       const menu = document.getElementById('side_menu');
       if (menu) menu.addEventListener('click', e => { e.preventDefault(); toggleSideDrop(); });
-      fetch('statuten/BSVRB_2019.md')
+      fetch('statuten/BSVRB_2018.md')
         .then(r => r.text())
         .then(t => {
           const container = document.getElementById('statute_content');
