@@ -95,3 +95,6 @@ YouTube-Matchaufnahmen wurden als mögliche Quelle berücksichtigt; Direktlinks 
 Weitere Tests prüfen die Winkelkonvention, getrennte Pfeilachse, unbekannte Position, alternative Ringe, mehrdeutige Endpunkte und nicht belastbare Winkel nahe dem Zentrum. Zusammen mit den bisherigen Tests bestehen 19 Dart-, Bildanalyse- und Caller-Tests. Das ist kein Genauigkeitsnachweis mit realen Matchdarts.
 
 Die Kalibrierprüfung verwendet ein ausreichend grosses konvexes Viereck und setzt keine Ausrichtung an den Bildschirmachsen voraus. Auch eine um 90 Grad gedrehte Kamerasicht wird durch einen zusätzlichen Geometrietest abgedeckt.
+
+## Legs und Checkout-Hilfe
+Matchlänge: einzelnes Leg oder Best of 3, 5, 7, 9 und 11; bei mehr als zwei Spielern gilt First to zur gewählten Zahl Gewinnlegs. Startspieler im ersten Leg ist der erste Spieler oder wird ausgelost; weitere Legs rotieren. Der Gastgeber startet das nächste Leg. Jedes Leg bleibt im lokalen Archiv. Checkout-Vorschläge berücksichtigen Restpunkte, verbleibende Darts und Single/Double/Master Out. Es wird ein gültiger Weg vorgeschlagen, keine persönliche Trefferwahrscheinlichkeit berechnet.
