@@ -255,6 +255,7 @@ filters.forEach(button => button.addEventListener('click', () => {
       <div><h2 id="background-settings-title">Hintergrund</h2><p>So ruhig oder lebendig, wie du möchtest.</p></div>
       <button class="background-close" aria-label="Einstellungen schliessen" autofocus>×</button>
     </form>
+    <div class="background-theme"><label for="background-theme">Farbschema</label><select id="background-theme"><option value="system">Systemstandard</option><option value="light">Hell</option><option value="dark">Dunkel</option></select></div>
     <label class="background-switch"><span>Animation bewegen</span><input id="background-motion" type="checkbox"></label>
     <div class="background-sliders"></div>
     <label class="background-switch"><span>Effekte bei Kollisionen <small>Drehung und sanftes Aufleuchten</small></span><input id="background-effects" type="checkbox"></label>
@@ -263,6 +264,12 @@ filters.forEach(button => button.addEventListener('click', () => {
   document.body.append(dialog);
   const motionInput = dialog.querySelector('#background-motion');
   const effectsInput = dialog.querySelector('#background-effects');
+  const themeInput = dialog.querySelector('#background-theme');
+  themeInput.value = document.documentElement.dataset.themePreference || 'system';
+  themeInput.addEventListener('change', () => window.BsvrbTheme?.set(themeInput.value));
+  document.addEventListener('bsvrb-theme-change', () => {
+    themeInput.value = document.documentElement.dataset.themePreference || 'system';
+  });
   const controls = {};
   const saveConfig = () => write('bsvrb_background_v1', JSON.stringify(config));
   const sliders = [
