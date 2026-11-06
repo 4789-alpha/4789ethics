@@ -1,0 +1,10 @@
+const {test} = require('node:test');
+const assert = require('node:assert/strict');
+const {createGame, throwDart, stats} = require('../dart/engine');
+const dart = (g,b,m=1) => throwDart(g,{base:b,mult:m});
+test('three darts rotate between players; 180 deducts exactly',()=>{let g=createGame(['A','B']);for(let i=0;i<3;i++)g=dart(g,20,3);assert.equal(g.players[0].remaining,321);assert.equal(g.active,1);assert.equal(stats(g,0).average,180);});
+test('bust reverses whole visit and counts all thrown darts',()=>{let g=createGame(['A'],301);for(let i=0;i<4;i++)g=dart(g,20,3);assert.equal(g.players[0].remaining,61);g=dart(g,20,3);assert.equal(g.players[0].remaining,121);assert.equal(g.active,0);assert.equal(g.turnDarts,0);assert.equal(stats(g,0).points,180);assert.equal(stats(g,0).darts,5);});
+test('single out can finish on a triple; double out rejects it',()=>{for(const out of ['single','double']){let g=createGame(['A'],301,out);for(let i=0;i<4;i++)g=dart(g,20,3);g=dart(g,1);g=dart(g,20,3);assert.equal(g.winner,out==='single'?0:null);assert.equal(g.players[0].remaining,out==='single'?0:121);}});
+test('double bull finishes and no throws are accepted after winning',()=>{let g=createGame(['A'],301);for(let i=0;i<4;i++)g=dart(g,20,3);g=dart(g,11);g=dart(g,25,2);assert.equal(g.winner,0);assert.throws(()=>dart(g,1));});
+test('master out permits triple checkout and invalid darts are rejected',()=>{let g=createGame(['A'],301,'master');for(let i=0;i<4;i++)g=dart(g,20,3);g=dart(g,1);g=dart(g,20,3);assert.equal(g.winner,0);assert.throws(()=>dart(createGame(['A']),25,3));assert.throws(()=>dart(createGame(['A']),21));});
+test('scoring is immutable so undo can restore the exact state',()=>{const before=createGame(['A','B']);const after=dart(before,20,3);assert.equal(before.players[0].remaining,501);assert.equal(before.events.length,0);assert.equal(after.players[0].remaining,441);});
