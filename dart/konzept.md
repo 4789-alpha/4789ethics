@@ -64,7 +64,7 @@ Average berücksichtigt tatsächlich geworfene Darts, Bust-Aufnahmen ergeben nul
 
 ## Validierung und praktische Grenzen
 
-- Elf Regel-, Geometrie-, Bildvergleichs- und Caller-Texttests.
+- Neunzehn Regel-, Geometrie-, Bildvergleichs- und Caller-Texttests.
 - Browser: 180-Aufnahme, Korrektur und Spielerwechsel mit Leerboard-Bestätigung.
 - Zwei echte PeerJS-Browserinstanzen: private Einladung, Gastgeber-/Gastbeitritt, gemeinsamer Punktestand, gesperrte Fremdwertung, Gastwurf und Wiederbeitritt.
 - WebRTC-Test: Datenkanal-Rundreise und ein erzeugter Testvideostream in beide Richtungen.
@@ -92,4 +92,6 @@ Unter `analyse.html` können lokale Fotos und Clips geprüft werden. Für Bildve
 
 YouTube-Matchaufnahmen wurden als mögliche Quelle berücksichtigt; Direktlinks werden nicht heruntergeladen. Die Forschungsreferenz DeepDarts (McNally et al., CVSports 2021) und ihr veröffentlichtes Beispiel mit schräger Boardansicht wurden gesichtet. Das DeepDarts-Modell und der vollständige Datensatz wurden nicht eingebunden und es wurde kein Training auf Matchaufnahmen durchgeführt. Quelle: https://github.com/wmcnally/deep-darts und https://arxiv.org/abs/2105.09880.
 
-Weitere Tests prüfen die Winkelkonvention, getrennte Pfeilachse, unbekannte Position, alternative Ringe, mehrdeutige Endpunkte und nicht belastbare Winkel nahe dem Zentrum. Zusammen mit den bisherigen Tests bestehen 17 Dart-, Bildanalyse- und Caller-Tests. Das ist kein Genauigkeitsnachweis mit realen Matchdarts.
+Weitere Tests prüfen die Winkelkonvention, getrennte Pfeilachse, unbekannte Position, alternative Ringe, mehrdeutige Endpunkte und nicht belastbare Winkel nahe dem Zentrum. Zusammen mit den bisherigen Tests bestehen 19 Dart-, Bildanalyse- und Caller-Tests. Das ist kein Genauigkeitsnachweis mit realen Matchdarts.
+
+Die Kalibrierprüfung verwendet ein ausreichend grosses konvexes Viereck und setzt keine Ausrichtung an den Bildschirmachsen voraus. Auch eine um 90 Grad gedrehte Kamerasicht wird durch einen zusätzlichen Geometrietest abgedeckt.

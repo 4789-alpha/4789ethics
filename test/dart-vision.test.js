@@ -13,3 +13,6 @@ test('projected dart axis is separate from board azimuth',()=>{const a=V.analyze
 test('ambiguous endpoints remain uncertain until a person sets the tip',()=>{const a=V.analyze({x:0,y:-.3,ends:[[0,-.3],[0,-.8]],ambiguous:true});assert.equal(a.uncertain,true);assert.ok(a.radiusRange[1]-a.radiusRange[0]>70);const b=V.analyze({x:0,y:-.3,ends:[[0,-.3],[0,-.8]],ambiguous:true,manual:true});assert.equal(b.uncertain,false);});
 
 test('angle remains unknown when the tolerance envelope contains the centre',()=>{const a=V.analyze({x:.001,y:.001,manual:true,ends:[]});assert.equal(a.angle,null);});
+
+test('calibration accepts a rotated camera instead of assuming screen axes',()=>{const p=[[385,180],[240,325],[95,180],[240,35]];assert.equal(V.validCalibration(p),true);const h=V.homography(p,[[0,-1],[1,0],[0,1],[-1,0]]);const q=V.transform(h,312.5,180);assert.ok(Math.abs(q[0])<1e-8);assert.ok(Math.abs(q[1]+.5)<1e-8);});
+test('calibration rejects crossing, tiny or collinear reference points',()=>{assert.equal(V.validCalibration([[0,0],[100,100],[0,100],[100,0]]),false);assert.equal(V.validCalibration([[0,0],[2,0],[2,2],[0,2]]),false);assert.equal(V.validCalibration([[0,0],[100,0],[200,0],[300,0]]),false);});
