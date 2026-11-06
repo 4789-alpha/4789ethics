@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Egli",
+    "scientific_name": "Perca fluviatilis",
+    "image": "quiz-assets/fish-01.jpg",
+    "image_author": "Pmau",
+    "image_source": "https://commons.wikimedia.org/wiki/File:Perca_fluviatilis_img_33632.jpg",
+    "image_license": "CC BY-SA 4.0",
+    "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "reviewed_on": "2026-11-06"
+  },
+  {
+    "name": "Zander",
+    "scientific_name": "Sander lucioperca",
+    "image": "quiz-assets/fish-02.png",
+    "image_author": "P. Matschie, A. Reichenow, G. Tornier &  P. Pappenheim",
+    "image_source": "https://commons.wikimedia.org/wiki/File:Sander_lucioperca_(Linnaeus_1758)_als_Lucioperca_lucioperca_Fig_168_(Matschie_et_al._1909).svg",
+    "image_license": "Public domain",
+    "image_license_url": "",
+    "reviewed_on": "2026-11-06"
+  },
+  {
+    "name": "Hecht",
+    "scientific_name": "Esox lucius",
+    "image": "quiz-assets/fish-03.jpg",
+    "image_author": "Georg Mittenecker",
+    "image_source": "https://commons.wikimedia.org/wiki/File:Esox_Lucius_(cropped).JPG",
+    "image_license": "CC BY-SA 2.5",
+    "image_license_url": "https://creativecommons.org/licenses/by-sa/2.5",
+    "reviewed_on": "2026-11-06"
+  },
+  {
+    "name": "Karpfen",
+    "scientific_name": "Cyprinus carpio",
+    "image": "quiz-assets/fish-04.jpg",
+    "image_author": "Motokoka",
+    "image_source": "https://commons.wikimedia.org/wiki/File:Cyprinus_carpio,_Sunshine_Aquarium.jpg",
+    "image_license": "CC BY-SA 4.0",
+    "image_license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "reviewed_on": "2026-11-06"
+  },
+  {
+    "name": "Wels",
+    "scientific_name": "Silurus glanis",
+    "image": "quiz-assets/fish-05.jpg",
+    "image_author": "Tolderi",
+    "image_source": "https://commons.wikimedia.org/wiki/File:Silurus_glanis_head_detail.jpg",
+    "image_license": "CC BY-SA 3.0",
+    "image_license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "reviewed_on": "2026-11-06"
+  },
+  {
+    "name": "Schleie",
+    "scientific_name": "Tinca tinca",
+    "image": "quiz-assets/fish-06.png",
+    "image_author": "P. Matschie, A. Reichenow, G. Tornier &  P. Pappenheim",
+    "image_source": "https://commons.wikimedia.org/wiki/File:Tinca_tinca_(Linnaeus_1758)_Fig_130_(Matschie_et_al._1909).svg",
+    "image_license": "Public domain",
+    "image_license_url": "",
+    "reviewed_on": "2026-11-06"
+  }
+]
