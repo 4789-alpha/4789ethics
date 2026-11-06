@@ -1,142 +1,81 @@
-# BSVRB Dart – Produkt- und Umsetzungskonzept
+# BSVRB Dart – Live-Beta
 
-Stand: 6. November 2026. Ziel: gemeinsame Steeldart-Partien über verschiedene Standorte, im Browser, mit Softdart-Unterstützung.
+## Stand und Bedienung
 
-## 1. Produktziel und aktueller Stand
+Diese Fassung ersetzt den ersten lokalen Bedienprototyp durch private WebRTC-Partien und eine experimentelle, bestätigungspflichtige Kameraerkennung.
 
-Die Anwendung soll spontane Onlinepartien so einfach wie einen Videoanruf machen: Webseite öffnen, Namen eingeben, Mitspieler finden, Boardkamera ausrichten und spielen. Der Spielstand und die Wurfreihenfolge sind für alle identisch. Die Kamera des aktiven Spielers dominiert die schwarze Oberfläche.
+### Gemeinsam an einem Gerät
 
-Dieses Repository enthält zunächst einen funktionierenden lokalen Prototyp: Trainingspartien für 1–8 Spieler am selben Gerät, Einzelwurfwertung, Single/Double/Master Out, Bust, Rücknahme, lokales Archiv, Filter, JSON-Export, eigene Boardkamera, optionaler Mikrofonton für lokale Videoaufnahmen und Download der Aufnahmen. Alle Mitspieler werden ausdrücklich als lokal bezeichnet. Keine simulierten Onlinebenutzer, fremden Videos oder erfundenen KI-Ergebnisse.
+Namen eingeben, «Gemeinsam an einem Gerät» wählen und weitere Namen kommagetrennt ergänzen. Alle werfen nacheinander auf ein gemeinsames Board. Bis zu acht Spieler. Nach der Aufnahme Darts entfernen und «Board ist leer · weiter» drücken. Es ist keine Verbindung zwischen Geräten erforderlich.
 
-Noch nicht implementiert: Onlinepräsenz, Einladungen, geräteübergreifende Partien, WebRTC-Konferenzen, serverseitige Daten, automatische Kalibrierung und Darttreffererkennung. Der Entwurf beschreibt diese als folgende Entwicklungsstufen.
+### Mehrere Geräte, auch im selben WLAN
 
-## 2. Einstieg und Identität
+1. «Online · mehrere Geräte» wählen und eigenen Namen eingeben.
+2. Eine Person öffnet einen privaten Raum und teilt den vollständigen Einladungslink.
+3. Mitspieler öffnen den Link, geben ihren Namen ein und klicken «Raum beitreten».
+4. Wenn alle verbunden sind, startet der Gastgeber die Partie.
+5. Kamera und optional Mikrofon ausdrücklich einschalten. «Mitspieler hören» aktiviert den Empfangston. Das eigene Video bleibt stumm.
 
-- Anzeigename wird im Browser lokal gespeichert, zusammen mit einer zufälligen Geräteidentität. Ein Name allein ist keine sichere Identität und darf nicht als eindeutiger Datenbankschlüssel dienen.
-- Die Person entscheidet ausdrücklich, ob ihr Alias in der Online-Lobby sichtbar ist. Standard: unsichtbar. Kamera und Mikrofon erst nach Gerätefreigabe und Beitritt verwenden.
-- Sichtbarkeit: verfügbar, Einladung offen, in Partie, abwesend oder unsichtbar. Präsenz über zeitlich begrenzte Heartbeats; beim Verlassen automatisch abmelden.
-- Onlineprofil enthält nur freigegebenen Alias, Spielmodi, Sprache und optional Niveau. Standort nur freiwillig und grob.
-- Gastbetrieb ohne Konto; optional später Konto oder Wiederherstellungsschlüssel für geräteübergreifende Historie und Freunde. Das Löschen lokaler Daten darf keine fremden Profile über denselben Alias zugänglich machen.
-- Lobby mit Filter nach Steeldart/Softdart, Spielmodus, Sprache, Niveau und offenen Räumen. Einladung annehmen, ablehnen oder blockieren. Privater Einladungslink/Code für Freunde.
+Der Raum verwendet PeerJS 1.5.5 und WebRTC: Spielzustände werden über verschlüsselte Datenkanäle ausgetauscht, Kamera/Audio über Medienverbindungen. Der Gastgeber ist für den Spielstand zuständig. Nur der aktive Spieler darf Darts für seine Position einreichen; nur der vorherige Werfer darf das leere Board bestätigen oder seine letzte Aktion zurücknehmen. Versionsnummern und eindeutige Aktionskennungen verhindern doppelte/stale Wertungen. Alle sehen die vom Gastgeber bestätigte Wertung.
 
-## 3. Von der Einladung zum ersten Dart
+Der Gastgeber muss die Seite geöffnet halten. Bei Trennung wird die Wertung pausiert. Ein Gast kann auf derselben geöffneten Seite den Raum verlassen und mit derselben Einladung erneut beitreten; die Gerätekennung wird innerhalb dieser Seite wiederverwendet. Vollständiger Seitenneustart während einer laufenden Partie, Gastgeberwechsel und dauerhafte Server-Wiederherstellung sind noch nicht umgesetzt. Alle Geräte müssen verbunden sein; ein dauerhaft ausgeschiedener Spieler erfordert eine neue Partie.
 
-1. Spielparameter vereinbaren: 301/501/701, In-/Out-Regeln, Anzahl Legs/Sets, Reihenfolge, Teilnehmer, freie Partie oder Wettbewerb.
-2. Geräteeinrichtung pro Spieler: Kamera wählen, Board vollständig zeigen, Bildschärfe/Belichtung prüfen, Mikrofon optional. Smartphone über einmaligen, zeitlich befristeten QR-Kopplungscode als Boardkamera verbinden; Hauptanzeige kann auf PC oder TV laufen.
-3. Kalibrierung: leeres Board, Bull und Referenzpunkte erkennen; Segment 20 und Orientierung bestätigen. Perspektive korrigieren und Double-/Triple-Ringe bestimmen. Separate Profile für Boardtyp und Kamera speichern.
-4. Testwurf, Trefferkorrektur demonstrieren, Netzwerk und Audio prüfen. Bei schlechter Qualität konkrete Hinweise geben: Bild heller, Kamera näher, Board vollständig ins Bild.
-5. Alle melden bereit. Anwurf auslosen oder per Bull entscheiden; Startspieler pro Leg nach vereinbarter Regel wechseln.
+Private Einladung und Raumkennung sind zufällig erzeugt. Nur wer die Einladung kennt, kann dem Raum beitreten. Es gibt noch keine öffentliche Online-Lobby, Freundesliste, verifizierte Konten, globale Rangliste oder Wettkampf-Korrekturbestätigung durch den Gegner. Diese Beta ist für private Partien, keine betrugssichere Turnierinstanz.
 
-Der Browserzugriff auf Kamera und Mikrofon benötigt eine sichere Verbindung und die Freigabe der Person. Das Produkt kann Gerätezugriff nicht erzwingen. Ziel sind aktuelle Browser auf Windows, macOS, Linux, Android und iOS; Unterstützung wird anhand einer dokumentierten Gerätematrix getestet.
+## Verbindung und Betrieb
 
-## 4. Spieloberfläche
+Die Oberfläche bleibt statisch unter https://bsvrb.ch/dart/. Standardmässig vermittelt der öffentliche PeerJS-Cloud-Dienst die WebRTC-Verbindung; er ist eine externe Abhängigkeit und kein eigener BSVRB-Spielserver. PeerJS und seine Lizenz liegen lokal im Repository, kein Laufzeit-CDN ist nötig.
 
-- Hintergrund nahezu schwarz, weisse Zahlen, kontrastreiche grüne Markierung des aktiven Spielers. Farbe nie als einziges Signal.
-- Hauptfläche: Boardvideo des aktiven Spielers, typischerweise 65–75 % der Videofläche. Kleine Kacheln zeigen alle übrigen Boards. Bei grossen Räumen umblättern, ohne Teilnehmer zu verlieren.
-- Rechte Seite: Restpunkte, Legs/Sets, aktive Aufnahme mit drei Dartfeldern, Checkoutvorschläge und sichtbare Aktionen zum Korrigieren und Bestätigen.
-- Unten: Mikrofon, Lautsprecher, Kamera, Aufnahme, Chat, Pause und Raum verlassen. Kameraabschaltung im Wettkampf pausiert die Partie nach vereinbarter Regel.
-- Vergrösserung folgt dem aktiven Werfer, nicht der lautesten Stimme. Ein Video darf vorübergehend angeheftet werden; Rückkehr zum Spielmodus bleibt sichtbar.
-- Auf Mobilgeräten Hauptvideo oben, Score und Wurfeingabe darunter. Grosse Bedienelemente, Tastaturbedienung und Screenreader-Ausgabe der Spielstände.
-- Eigene Kameraansicht für Kalibrierung nicht spiegeln. Aktive Videoübertragung und Aufzeichnung unabhängig und deutlich anzeigen.
+In typischen Netzen entstehen direkte Verbindungen. Manche Mobilfunk-, Firmen- und symmetrischen NAT-Netze benötigen einen TURN-Relayserver. Ein eigener TURN-Dienst ist nicht provisioniert. Die Oberfläche erlaubt, einen vorhandenen TURN-Server sowie optional einen eigenen HTTPS/WSS-PeerServer einzutragen. Zugangsdaten werden nur im Arbeitsspeicher dieser Seite verwendet, nicht gespeichert oder ins Repository geschrieben. TURN-Zugangsdaten sollten kurzlebig und eingeschränkt sein. Eine Verbindungsgarantie über beliebige Netze kann ohne betriebene Relay-Infrastruktur nicht gegeben werden.
 
-## 5. Verlässlicher Spielablauf
+Quellen: https://peerjs.com/client/faq und https://peerjs.com/client/api/peer
 
-Zustände: Lobby → Einrichtung → bereit → Wurfphase → Wertung prüfen → Aufnahme bestätigt → Darts entfernen → Board leer → nächster Spieler → Leg/Set/Match beendet.
+## Kameraerkennung: tatsächlich implementierter Ablauf
 
-- Bis zu drei Darts pro Aufnahme; bei regelkonformem Checkout endet sie früher. Bust beendet die Aufnahme und stellt den Punktestand zu Beginn der Aufnahme wieder her.
-- Kein automatischer Spielerwechsel nur aufgrund eines Geräusches oder einer Handbewegung. Das System wartet auf stabile Bilder und die abgeschlossene Wertung.
-- Darts erst nach bestätigter Wertung entfernen. Entfernung wird als eigene Phase behandelt, damit herausgezogene Darts nicht als neue Treffer erscheinen.
-- Abpraller, Fehlwürfe, heruntergefallene Darts und abgebrochene Aufnahmen ausdrücklich erfassen. Ihre Behandlung folgt dem gewählten Regelprofil.
-- Checkoutvorschläge verwenden Restpunkte, verbleibende Darts und die Out-Regel. Anzeige ist eine Hilfe; das System erkennt keinen Checkout allein aus der Restsumme.
-- Audio optional: stummschalten, Lautstärke, Rausch-/Echounterdrückung, Kopfhörerhinweis. Textchat und Spielsignale funktionieren ohne Mikrofon.
-- Kurzer Netzabbruch: Raum und Spielstand bleiben reserviert, Wiederverbindung mit gleichem Spielerrecht. Bei längerem Ausfall Pause und gemeinsam vereinbarter Abbruch oder Aufgabe.
-- Ohne bestätigten gemeinsamen Zustand keine heimlich fortlaufenden Onlinewürfe. Ausstehende Eingaben sichtbar kennzeichnen und nach Wiederverbindung eindeutig abgleichen.
-- Nach Matchende: Ergebnis bestätigen, Statistiken, Rückspiel mit gleichen Einstellungen, Export oder nächste Gegnerwahl.
+1. Kamera so befestigen, dass das komplette Board im Bild bleibt.
+2. «Board kalibrieren» drücken. Die äussere Doppelring-Kante nacheinander oben bei 20, rechts bei 6, unten bei 3 und links bei 11 antippen.
+3. Die eingezeichneten Ringe prüfen. Bei Abweichung neu kalibrieren.
+4. Leeres Board aufnehmen: «Board leer · Erkennung starten».
+5. Einen Dart werfen. Nach mehreren stabilen Bildern sucht die Software längliche, neu hinzugekommene Bildveränderungen. Grössere Bewegungen und breite Verdeckungen werden nicht als Treffer übernommen.
+6. Eine längliche Veränderung erzeugt einen Vorschlag. Ihre Endpunkte werden geschätzt; der näher zum Zentrum gelegene Endpunkt dient als erste Spitzenhypothese. Das ist eine Heuristik, kein verlässlicher Nachweis der echten Eintrittsstelle.
+7. Die Software zeigt den Marker, die geometrisch berechnete Radiusposition, den Ring und einen Feldvorschlag. Über «Spitze im Kamerabild korrigieren» kann die tatsächliche Eintrittsstelle angetippt werden. Ring und Feld lassen sich auch direkt wählen.
+8. Erst «Treffer bestätigen» zählt den Dart. «Kein Dart» verwirft die Veränderung und aktualisiert die Referenz. Nach einer bestätigten Eingabe wird das Bild mit dem steckenden Dart zur Referenz für den nächsten Wurf.
+9. Nach der Aufnahme Darts entfernen und leeres Board bestätigen. Eine bewegte Kamera benötigt neue Kalibrierung.
 
-## 6. Bildanalyse für Steeldart und Softdart
+Technik: projektive Transformation aus vier Korrespondenzen, Grauwert-Bildvergleich, Stabilitätsprüfung, zusammenhängende Komponenten und Hauptachsenanalyse. Die Verarbeitung läuft lokal, ohne Bild-Upload für die Erkennung. Das ist bereits ausführbare Bildanalyse, aber kein trainiertes Dartmodell.
 
-Eine einzelne Webcam kann Eintrittspunkte verdecken. Dartschäfte und Flights können andere Spitzen überlagern; schräger Blickwinkel, Schatten, Drahtnähe, Bewegung und Reflexionen erschweren die Zuordnung. Fehlerfreie Erkennung mit beliebiger Hardware wird deshalb nicht versprochen.
+Grenzen: Flights/Schäfte können Eintrittspunkte verdecken; Schatten, Flackern, Kamerawackeln und nahe beieinanderliegende Darts können falsche oder ausbleibende Vorschläge erzeugen. Die Radiusangabe ist nur so korrekt wie Kalibrierung und gewählte Spitze. Im Zweifel Spitze oder Feld selbst setzen. Die Automatik erkennt nicht zuverlässig Abpraller, Fehlwürfe ohne steckenden Dart oder die Absicht eines Wurfs; dafür die manuellen Tasten verwenden. Während eigener Nicht-Wurfphasen ist die automatische Erkennung gesperrt.
 
-Vorgeschlagene Verarbeitung:
+Steeldart: Aussenradius 170 mm, Doppel 162–170 mm, Triple 99–107 mm, Outer Bull 15,9 mm, Bull 6,35 mm. Softdart in dieser Beta: dasselbe normierte Ringprofil, auf 168 mm skaliert, für verbreitete 13,2-Zoll-Boards. Andere Softdart-Geometrien benötigen ein passendes eigenes Ringprofil; nicht ungeprüft für 15,5-Zoll- oder abweichende Boards verwenden.
 
-1. Boardsegmentierung und Kalibrierung auf ein geometrisches Boardmodell; Orientierung des Zahlenrings sichern.
-2. Stabilität der Kamera und Schärfe überwachen. Nach Kamerabewegung stoppen und neu kalibrieren.
-3. Bilder vor/nach einem Wurf vergleichen; Hände und das Herausziehen von Darts vom Einwurf unterscheiden.
-4. Ein spezialisiertes, auf Dartaufnahmen trainiertes Modell lokalisiert den Eintrittspunkt. Ein allgemeiner Objekt-Detektor liefert dafür allein keine ausreichende Präzision.
-5. Eintrittspunkt in Boardkoordinaten überführen, Winkel und Radius bestimmen, Feld sowie Multiplikator zuordnen.
-6. Zeitliche Plausibilität, Anzahl vorhandener Darts und mehrere Frames prüfen. Grenztreffer und verdeckte Spitzen als unsicher markieren.
-7. Wertung vorschlagen, Unsicherheiten bestätigen lassen; keine stillen Schätzwerte als gesicherte Treffer ausgeben.
-8. Optional zwei oder drei Kameras mit gemeinsamer Kalibrierung kombinieren. Mehrkameranutzung verbessert die Sichtbarkeit, ersetzt aber keine Validierung.
+## Punkteansagen
 
-Steeldart und Softdart erhalten getrennte Boardprofile und Validierungsdaten. Boardgrössen und Segmentgeometrien dürfen nicht pauschal gleichgesetzt werden. Softdart-Punkte werden zunächst ebenfalls optisch/manuell erfasst; eine elektronische Boardanbindung ist eine eigene, gerätespezifische Erweiterung.
+«Aufnahmen laut ansagen» aktivieren. Nach abgeschlossener Aufnahme wird deren Summe gesprochen, bei Bust «No score» und beim Finish «Game shot». Die 180-Ansage ist langsamer und betonter. Sprache und vorhandene Gerätestimme sind wählbar. Es werden keine Aufnahmen realer Caller oder fremde Tondateien verwendet. Aussprache, verfügbare Stimmen und Wiedergabe hängen von Browser und Betriebssystem ab. Auf mobilen Geräten muss die Funktion zunächst über einen Tastendruck freigeschaltet werden.
 
-Die Erkennung soll möglichst am Kameragerät laufen, unabhängig von reduzierter Übertragungsauflösung für andere Spieler. Schwächere Geräte erhalten einen manuellen Modus. Eine optionale Serveranalyse braucht Einwilligung und eine separate Kapazitätsplanung.
+## Mobile Oberfläche
 
-Validierung: echte, freiwillig bereitgestellte und annotierte Boardaufnahmen mit getrennten Trainings- und Testgeräten, Boardmarken, Lichtbedingungen und Kamerawinkeln. Messen: exaktes Feld inklusive Multiplikator, übersehene/zusätzliche Darts, unsichere Treffer, Korrekturquote, Latenz und Fehlentscheidungen bei Checkouts. Automatik erst nach vorab definierten und erreichten Qualitätsgrenzen aktivieren; keine ungeprüften Genauigkeitsprozente veröffentlichen.
+Die Seite hat ein Geräte-Viewport, responsive Formulare, einen einspaltigen Spielbereich unter 950 px, passende Board-Videoflächen, zweispaltige kleine Teilnehmerkacheln, einen Fünfersatz grosser Zahlentasten sowie einen manuellen Korrekturlink zum eigenen Kamerabild. Kein festes Desktop-Mindestmass. Smartphone-Browser können Kamera und WebRTC beim Sperren des Bildschirms oder beim Wechsel in andere Apps unterbrechen; zum Spielen die Seite aktiv lassen.
 
-## 7. Korrekturen und Fairness
+## Speicherung und Auswertung
 
-- Jeder Dart erhält eine stabile Ereignis-ID. Korrektur per Feldauswahl, Boardklick oder direkter Einzelwurfeingabe; optional gesamte Aufnahme bearbeiten.
-- Änderung enthält ursprünglichen Wert, neuen Wert, Spieler, Zeit und Grund. Beide Seiten sehen die Änderung sofort.
-- Freies Spiel: Korrektur mit sichtbarer Mitteilung. Gewerteter Wettbewerb: Zustimmung des Gegners oder Schiedsrichters vor Fortsetzung.
-- Historische Korrekturen werden auf ihren Einfluss geprüft: Nachfolgende Aufnahmen, Busts, Reihenfolge und Legende müssen neu berechnet oder bis zum letzten gültigen Zustand zurückgesetzt werden. Blosses Ändern einer Restsumme reicht nicht.
-- Doppelquote benötigt tatsächlich geworfene Versuche auf Doppel und ihre Ziele. Aus Kameratreffern lässt sich die Absicht eines Fehlwurfs nicht sicher ableiten; fehlende Angaben als unbekannt führen.
-- Manuelle und automatisch erkannte Treffer getrennt kennzeichnen. Ranglisten erst mit geeigneter Identität, Streitfallregeln und Missbrauchsschutz freigeben.
+Anzeigename, Caller-Einstellung und abgeschlossene Legs liegen lokal im Browser. Das Archiv aus der ersten Fassung bleibt lesbar. Videoaufnahmen werden nur ausdrücklich gestartet und als lokaler Download angeboten. Nur eigenes Boardvideo und optional eigener Mikrofonton werden aufgenommen; entfernte Videos werden nicht mitgeschnitten. Lange Aufnahmen benötigen Arbeitsspeicher und sind vor dem Schliessen herunterzuladen.
 
-## 8. Aufzeichnung und Datenschutz im Produkt
+Average berücksichtigt tatsächlich geworfene Darts, Bust-Aufnahmen ergeben null Punkte. Archivfilter nach Spieler und Boardtyp sowie JSON-Export sind implementiert. First 9, Doppelquote, Heatmaps, Zeitfilter, Direktvergleich, Cloudarchiv, Legs/Sets als Mehrleg-Match und Turniere bleiben weitere Entwicklungsschritte.
 
-Spielereignisse und Videoaufzeichnungen sind getrennte Datenarten. Der Spielverlauf wird als strukturierter Ereignisstrom gespeichert und kann auch ohne Video ausgewertet werden.
+## Validierung und praktische Grenzen
 
-- Strukturierte Daten: Match, Teilnehmer, Regelprofil, Legs/Sets, Aufnahme, Dart, Korrekturen, Abbruch und Ergebnisbestätigung.
-- Video optional, standardmässig aus. Vor Beginn Zustimmung aller Betroffenen; neue Teilnehmer erneut berücksichtigen. Aufzeichnungsanzeige auf allen Geräten und jederzeitiger Stopp.
-- Wahl zwischen lokalem Download und ausdrücklich aktiviertem Onlinearchiv. Speicherdauer, Download, Löschung und Zugriffsberechtigung vor Aktivierung anzeigen.
-- Training mit eigenen Aufnahmen ist keine automatische Einwilligung zum Modelltraining. Dafür separate, widerrufbare Freigabe und geregelte Datenverwendung.
-- Öffentliche Profilansicht und private Analysen trennen. Blockieren, Melden, Raumrechte und Einladungslimits vor öffentlichem Lobbybetrieb implementieren.
+- Elf Regel-, Geometrie-, Bildvergleichs- und Caller-Texttests.
+- Browser: 180-Aufnahme, Korrektur und Spielerwechsel mit Leerboard-Bestätigung.
+- Zwei echte PeerJS-Browserinstanzen: private Einladung, Gastgeber-/Gastbeitritt, gemeinsamer Punktestand, gesperrte Fremdwertung, Gastwurf und Wiederbeitritt.
+- WebRTC-Test: Datenkanal-Rundreise und ein erzeugter Testvideostream in beide Richtungen.
+- Bildpipeline: ein künstlich hinzugefügter länglicher Dart im laufenden Testvideostream wurde erkannt. Das ist kein Genauigkeitsbenchmark mit physischen Darts.
+- Responsive Geometrieprüfung bei 390 px Breite in einem Browser-Frame. Reale Kameraauswertung unter verschiedenen Lichtbedingungen und echte getrennte Mobilfunk-/Heimnetze sind noch zu erproben.
 
-## 9. Auswertung
+## Open Source
 
-| Bereich | Auswertungen |
-|---|---|
-| Ergebnisse | Siege/Niederlagen, Legs/Sets, Serien, Aufgabe und abgebrochene Partien |
-| Scoring | 3-Dart-Average, First-9-Average, Punktverteilung, 60+/100+/140+/180, Best Leg |
-| Finish | Checkoutquote je klar definierter Basis, Doppelquote bei bekannten Versuchen, höchstes Finish, Bustquote |
-| Präzision | Trefferheatmap, Segment-/Ringverteilung, Streuung bei bekannten Zielpunkten |
-| Entwicklung | Verlauf über Zeit, gleitende Mittelwerte, Training/Wettkampf, Vergleich mit eigenem Niveau |
-| Gegner | Direktvergleich, Heim-/Remote-Setup, Ergebnisse nach Gegnerniveau bei ausreichenden Daten |
-| Technik | Korrekturquote, unsichere Erkennungen, Verbindungsqualität, Kameraprofile |
+PeerJS 1.5.5, MIT License, Copyright (c) 2013 Michelle Bu und Eric Zhang. Bibliothek und vollständige Lizenz im Unterordner `vendor/`.
 
-Filter: Zeitraum, Spieler, Gegner, Boardtyp, Spielmodus, In-/Out-Regeln, Training/Wettkampf, Liga/Turnier, gewonnen/verloren, manuell/automatisch, Kameraaufbau und abgeschlossene/abgebrochene Spiele. Kennzahlen zeigen Definition, Stichprobengrösse und fehlende Daten. Abgebrochene Legs standardmässig separat ausweisen. CSV-/JSON-Export, später Berichtsdownload.
+Quellcode: https://github.com/peers/peerjs
+Dokumentation: https://peerjs.com/client/getting-started
 
-3-Dart-Average = regelgültig erzielte Punkte / tatsächlich geworfene Darts × 3. Bei Bust zählt die gesamte Aufnahme null Punkte, geworfene Darts zählen weiter. Ein Checkout mit einem Dart zählt als ein Dart. Nicht geworfene Darts werden nicht künstlich ergänzt.
-
-## 10. Systemarchitektur und Betrieb
-
-Bestehende Oberfläche: statische Dateien im Repository `4789-alpha/4789ethics`. Die vorhandene `.github/workflows/deploy.yml` veröffentlicht nach `main` auf GitHub Pages; `CNAME` nennt `bsvrb.ch`. Hostpoint wurde als Anbieter genannt; Domainregistrierung, DNS und tatsächliches Webhosting müssen beim Betrieb getrennt betrachtet werden. Keine DNS-Änderung ist für das Hinzufügen statischer Dartdateien erforderlich.
-
-Vorgeschlagener Ausbau:
-
-- Browseroberfläche unter `/dart/` mit responsive Videoansicht und Kamera-Assistent.
-- Separater HTTPS/WSS-Spielservice für Präsenz, Räume, Einladungen und verbindliche Spielzustände. Technologieentscheidung nach Prüfung der verfügbaren Hostpoint-Laufzeit; alternativ eigener separater Dienst.
-- Server prüft aktive Person, Spielregel und Versionsnummer jedes Ereignisses. Idempotente Ereignis-IDs verhindern doppelte Punkte nach Wiederverbindung. Sequenznummern und Snapshots erlauben konsistente Wiederaufnahme.
-- Datenbank für Profile, Partien, Ereignisse und Berechtigungen. Video in separatem Objektspeicher mit begrenzten Zugriffslinks und Löschregeln.
-- WebRTC für Kamera/Audio, Signalisierung über den Spielservice, STUN/TURN für Verbindungen über unterschiedliche Netze. Für mehrere Teilnehmer ein SFU-Videoserver statt unbeschränkt wachsender Direktverbindungen.
-- Aktivem Board höhere Übertragungsqualität zuteilen, übrige Videos reduzieren. Analyse verwendet den lokalen Kamerastream, nicht zwingend die komprimierte Konferenzansicht.
-- Keine Zugangsschlüssel im Browsercode oder Repository. Raumbeitritt mit kurzlebigen Berechtigungen, Herkunftsprüfung, Einladungslimits und Servervalidierung.
-
-GitHub Pages allein kann diese Serverdienste nicht ausführen. Ein statischer Platzhalter oder lokaler Browser-Speicher ersetzt keine echte Online-Lobby. Der konkrete Tarif und die vorhandene Infrastruktur bestimmen, welche Dienste bei Hostpoint oder zusätzlich betrieben werden.
-
-## 11. Entwicklung und Freigabe
-
-1. Lokaler Bedienprototyp: Oberfläche, Kamera, manuelle Wertung, Archiv und Regeltests. In diesem Stand enthalten.
-2. Online-Basis: zwei echte Geräte, private Räume, synchronisierte manuelle Wertung, Kamera/Audio, Wiedereintritt und protokollierte Korrekturen. Danach Gruppenpartien mit aktiver Videovergrösserung.
-3. Kamera-Assistent: Kalibrierung, Testwürfe, Qualitätshinweise, Sammlung separat freigegebener Testdaten.
-4. Bildanalyse im Beobachtungsmodus: Treffer vorschlagen, manuelle Eingabe bleibt verbindlich; Fehlertypen auswerten. Anschliessend bestätigungspflichtige Automatik, erst später verlässliche automatische Übernahme.
-5. Ausbau: persistente Konten, Analysefilter, Teams, Turniere, Ligen, Zuschauer und Mehrkameramodus.
-
-Abnahme für Onlinebetrieb: gleicher Stand auf mindestens zwei entfernten Geräten; keine Doppelbuchung bei Wiederverbindung; Korrekturen verändern Scores und Statistiken konsistent; Kamera-/Mikrofonrechte sind widerrufbar; Netz-/Kameraausfälle führen zu nachvollziehbaren Zuständen; gültige Checkouts und Busts stimmen für jedes Regelprofil; Aufnahme erfolgt nur nach Zustimmung; wichtige Abläufe funktionieren auf der vereinbarten Desktop-/Mobilmatrix.
-
-## 12. Technische Referenzen
-
-- Browser-Kamera und Gerätefreigabe: https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia
-- WebRTC-Standard: https://www.w3.org/TR/webrtc/
-- Beispiel einer Laufzeit für lokale Bildmodelle (kein fertiges Dartmodell): https://developers.google.com/edge/mediapipe/solutions/vision/object_detector
+Die Dartlogik, geometrische Erkennung und Oberfläche sind projektspezifisch implementiert. Es wird keine ungetestete Erkennungsgenauigkeit oder allgemeine Verbindungsgarantie behauptet.

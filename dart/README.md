@@ -1,9 +1,9 @@
 # BSVRB Dart
 
-Lokaler Bedienprototyp und Produktkonzept für Online-Dart.
+Live-Beta unter https://bsvrb.ch/dart/ mit lokalen Partien, privaten PeerJS-WebRTC-Räumen, synchroner Wertung, Boardvideos, experimenteller bestätigter Bildanalyse, Radius-/Ringvorschlag und Browser-Punkteansagen.
 
-Öffnen: https://bsvrb.ch/dart/
+Bedienung, Netzwerkvoraussetzungen, Tests und Grenzen: [konzept.md](konzept.md).
 
-Aktuell: manuelle Einzelwurfwertung, Kamera, lokale Videoaufnahme und lokales Archiv. Onlinepartien und automatische Bildanalyse sind noch nicht implementiert. Details: [konzept.md](konzept.md).
+Prüfung: `node test/dart.test.js` und `node test/dart-vision.test.js`.
 
-Prüfung: sechs Dart-Regeltests bestanden. Übersetzungen und Dateiintegrität geprüft. Gesamtsuite: Fehler in bestehenden anderen Modulen und fehlende Abhängigkeiten.
+PeerJS 1.5.5 liegt mit MIT-Lizenz in `vendor/`. Kein eigener TURN-Dienst ist bereitgestellt; bei eingeschränkten Netzwerken einen vorhandenen Relayserver konfigurieren. Die Erkennung verwendet Bildvergleich und geometrische Hypothesen, kein trainiertes Dartmodell; jeden Dart prüfen und bestätigen.
