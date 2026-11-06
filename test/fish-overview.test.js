@@ -49,3 +49,10 @@ test('Bern protected species do not receive bait recommendations',()=>{
   const f=fish.find(f=>f.name===name);assert.match(f.fishing_method,/Fangverbot/);assert.equal(f.bait,'Keine Köderempfehlung');
  }
 });
+
+test('search matches parts inside compound fish names',()=>{
+ const names=fish.filter(f=>context.matchesFishSearch(f,'neunauge')).map(f=>f.name);
+ assert.deepEqual(names,['Flussneunauge','Bachneunauge','Meerneunauge']);
+ assert.ok(context.matchesFishSearch(fish.find(f=>f.name==='Bachforelle'),'forelle'));
+ assert.ok(context.matchesFishSearch(fish.find(f=>f.name==='Bachneunauge'),'NEUNAUGE'));
+});

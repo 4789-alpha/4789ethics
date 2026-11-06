@@ -49,7 +49,8 @@ function matchesFishSearch(f, query) {
   const tokens=text=>text.toLocaleLowerCase('de-CH').normalize('NFD').replace(/[\u0300-\u036f]/g,'').split(/[^\p{L}\p{N}]+/u).filter(Boolean);
   const wanted=tokens(query); if(!wanted.length) return true;
   const words=tokens([f.name,f.scientific_name,f.origin,f.status,FISH_STATUS[f.status],f.form_description,f.information,f.fishing_method,f.bait,FISH_BERN[f.bern_occurrence.state],f.bern_occurrence.detail].join(' '));
-  return wanted.every(term=>words.some(word=>word.startsWith(term)));
+  const names=tokens([f.name,f.scientific_name].join(' '));
+  return wanted.every(term=>names.some(name=>name.includes(term)) || words.some(word=>word.startsWith(term)));
 }
 function fishText(tag, text, className) {
   const el=document.createElement(tag); el.textContent=text;
