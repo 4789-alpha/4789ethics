@@ -79,3 +79,17 @@ Quellcode: https://github.com/peers/peerjs
 Dokumentation: https://peerjs.com/client/getting-started
 
 Die Dartlogik, geometrische Erkennung und Oberfläche sind projektspezifisch implementiert. Es wird keine ungetestete Erkennungsgenauigkeit oder allgemeine Verbindungsgarantie behauptet.
+
+## Erweiterung: Wurfanalyse und Winkel
+
+Die Analyse zeigt den Boardwinkel (0° oben bei 20, im Uhrzeigersinn), den Radius und die projizierte Pfeilachse. Die vier Referenzpunkte korrigieren die Perspektive der Boardebene; daraus folgt kein vermessener 3D-Eintrittswinkel. In Zentrumsnähe wird ein nicht belastbarer Winkel nicht ausgegeben.
+
+Bei unklarer Spitze, überlagerten Enden oder Drahtnähe werden ein geometrischer Prüfbereich und mögliche Felder angezeigt. Diese Bereiche sind Heuristiken, keine statistisch kalibrierten Konfidenzwerte. Der Wurf wird nicht automatisch gezählt. Ein eingefrorenes Prüfbild zeigt den Radiusstrahl, die projizierte Achse und den Positionsbereich. Die Spitze lässt sich im Prüfbild korrigieren; unklare Vorschläge benötigen zusätzlich die ausdrückliche Bestätigung «Spitze und Feld geprüft».
+
+«Wurf jetzt analysieren» liefert auch bei fehlendem eindeutigem Dart einen Prüfbericht. Ohne belastbare Position bleiben Radius, Winkel und Punkte unbekannt. Das Prüfbild und die Analyse können als JSON-Datei lokal gespeichert werden. Bestätigte Würfe können ihre geometrische Positionsschätzung im Spielereignis speichern; Prüfbilder werden nicht automatisch an Mitspieler übertragen oder im Archiv gespeichert.
+
+Unter `analyse.html` können lokale Fotos und Clips geprüft werden. Für Bildvergleich benötigt ein einzelnes Nachher-Foto ein passendes Vorher-Bild. Ohne dieses kann die Eintrittsstelle von Hand gesetzt und geometrisch ausgewertet werden. Im Clip ein leeres Board kalibrieren und als Referenz setzen, dann abspielen oder zur gewünschten Stelle springen. Kamerawechsel, Zoom und Ausschnittsänderung erfordern neue Kalibrierung und Referenz. Alle vier Referenzpositionen müssen sichtbar sein. Die Analyse arbeitet lokal und bucht keine Spielpunkte.
+
+YouTube-Matchaufnahmen wurden als mögliche Quelle berücksichtigt; Direktlinks werden nicht heruntergeladen. Die Forschungsreferenz DeepDarts (McNally et al., CVSports 2021) und ihr veröffentlichtes Beispiel mit schräger Boardansicht wurden gesichtet. Das DeepDarts-Modell und der vollständige Datensatz wurden nicht eingebunden und es wurde kein Training auf Matchaufnahmen durchgeführt. Quelle: https://github.com/wmcnally/deep-darts und https://arxiv.org/abs/2105.09880.
+
+Weitere Tests prüfen die Winkelkonvention, getrennte Pfeilachse, unbekannte Position, alternative Ringe, mehrdeutige Endpunkte und nicht belastbare Winkel nahe dem Zentrum. Zusammen mit den bisherigen Tests bestehen 17 Dart-, Bildanalyse- und Caller-Tests. Das ist kein Genauigkeitsnachweis mit realen Matchdarts.
