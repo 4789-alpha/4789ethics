@@ -1,0 +1,41 @@
+{
+  "members": [
+    {
+      "id": "lauper",
+      "name": "Raphael Lauper",
+      "role": "Präsident & Initiator",
+      "background": "Industriedesign und Produktdesign",
+      "duties": "Vereinsleitung, Weiterentwicklung und Koordination der Projekte.",
+      "sports": [
+        "Squash",
+        "Dart"
+      ],
+      "initials": "RL"
+    },
+    {
+      "id": "badurina",
+      "name": "Marco Badurina",
+      "role": "Administration & Mitgliederbetreuung",
+      "background": "KV-Ausbildung · Kundendienst bei Interdiscount",
+      "duties": "Mitgliederanliegen, administrative Abläufe und Kommunikation im Verein.",
+      "sports": [
+        "Dart",
+        "Squash"
+      ],
+      "initials": "MB"
+    },
+    {
+      "id": "stauffer",
+      "name": "Simon Stauffer",
+      "role": "Logistik & Spielbetrieb",
+      "background": "Logistikfachmann",
+      "duties": "Material, Veranstaltungslogistik sowie Organisation der Dart- und Squashrunden.",
+      "sports": [
+        "Dart",
+        "Squash"
+      ],
+      "initials": "SS"
+    }
+  ],
+  "roleNote": "Die Funktionen für Marco Badurina und Simon Stauffer sind Vorschläge zur Aufgabenverteilung."
+}

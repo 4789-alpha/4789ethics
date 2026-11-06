@@ -18,6 +18,8 @@ jobs:
         with:
           node-version: 18
       - run: npm install
+      - name: Verify club planning and calendar export
+        run: node --test test/bsvrb-club.test.mjs
       - run: npm run bundle-interface
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
