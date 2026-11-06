@@ -3,16 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <title>VERAX Karte</title>
-  <link rel="stylesheet" href="../../interface/ethicom-style.css">
-  <script src="../../interface/bundle.js" defer></script>
-  <script src="../../utils/op-level.js"></script>
+  
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.5.1/gpx.min.js"></script>
   <style>
-    body, html { margin: 0; padding: 0; }
-    #map { height: 100vh; width: 100vw; }
+    body, html { margin: 0; padding: 0; font:14px system-ui; } header,nav,.skip-link,details,footer{display:none} p{padding:8px;margin:0}
+    #map { height: calc(100vh - 80px); min-height:320px; width: 100vw; }
   </style>
 </head>
 <body>
@@ -23,23 +22,23 @@
   </header>
   <nav aria-label="Hauptnavigation">
     <a href="../index.html" class="icon-only" aria-label="Home">🏠</a>
-    <a href="../README.html" class="icon-only readme-link" aria-label="Hilfe">?</a>
+    <a href="https://github.com/4789-alpha/4789ethics/tree/main/verax" class="icon-only readme-link" aria-label="Hilfe">?</a>
   </nav>
-  <div id="map"></div>
+  <p><button id="locate_btn" type="button">Meinen Standort anzeigen</button> <span id="location_status" role="status"></span></p><div id="map"></div>
   <details class="card" style="max-width:40em;margin:1em auto;">
     <summary>Hinweise</summary>
     <ul>
       <li>Diese Struktur wird ohne Gewährleistung bereitgestellt.</li>
       <li>Die Nutzung erfolgt auf eigene Verantwortung.</li>
       <li>4789 ist ein Standard für Verantwortung, keine Person.</li>
-      <li>Wetterdaten von OpenWeatherMap; keine Gewähr für Genauigkeit.</li>
+      
     </ul>
   </details>
   <footer>
     <p>Beta-Version – Feedback willkommen.</p>
   </footer>
   <script>
-    const map = L.map('map').setView([46.8345, 7.4953], 14);
+    const map = L.map('map', {zoomControl: false}).setView([46.8345, 7.4953], 14);
     L.control.zoom({ position: 'topright' }).addTo(map);
 
     // Tile-Layer (OSM international)
@@ -48,33 +47,14 @@
       attribution: '© OpenStreetMap contributors'
     }).addTo(map);
 
-    // Wetter-Overlays von OpenWeatherMap (API-Schlüssel erforderlich)
-    const apiKey = 'YOUR_API_KEY';
-    const tempLayer = L.tileLayer(`https://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?appid=${apiKey}`, {
-      opacity: 0.5,
-      attribution: '© OpenWeatherMap'
-    });
-    const precipLayer = L.tileLayer(`https://tile.openweathermap.org/map/precipitation_new/{z}/{x}/{y}.png?appid=${apiKey}`, {
-      opacity: 0.5,
-      attribution: '© OpenWeatherMap'
-    });
-    const snowLayer = L.tileLayer(`https://tile.openweathermap.org/map/snow/{z}/{x}/{y}.png?appid=${apiKey}`, {
-      opacity: 0.5,
-      attribution: '© OpenWeatherMap'
-    });
-
     // GPX-Track laden (Pfad anpassen)
-    const gpxTrack = new L.GPX('/verax/map/limen-muehlethurnen.gpx', {
+    const gpxTrack = new L.GPX('limen-muehlethurnen.gpx', {
       async: true
     }).on('loaded', function(e) {
       map.fitBounds(e.target.getBounds());
     }).addTo(map);
 
-    L.control.layers({ OSM: osmLayer }, {
-      Temperatur: tempLayer,
-      Regen: precipLayer,
-      Schnee: snowLayer
-    }, { position: 'topleft' }).addTo(map);
+
 
     // GPS-Ortung aktivieren
     function onLocationFound(e) {
@@ -86,18 +66,14 @@
     }
 
     function onLocationError(e) {
-      alert("GPS-Fehler: " + e.message);
+      document.getElementById('location_status').textContent = 'Standort nicht verfügbar. Die Karte bleibt frei bedienbar.';
     }
 
     map.on('locationfound', onLocationFound);
     map.on('locationerror', onLocationError);
 
-    map.locate({setView: false, watch: false, enableHighAccuracy: true});
+    document.getElementById('locate_btn').addEventListener('click', () => map.locate({setView: true, watch: false}));
   </script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      applyTheme('tanna-dark');
-    });
-  </script>
+  
 </body>
 </html>
