@@ -14,7 +14,7 @@ const FISH_COLUMNS = [
   {key:'closed_season_be',label:'Schonzeit BE'}, {key:'min_length_be',label:'Fangmass BE'},
   {key:'catch_window_be',label:'Fangfenster BE'}, {key:'catch_quota_be',label:'Fangzahlen BE'}
 ];
-const FISH_KIND={species:'Art',life_form:'Lebensform',aggregate:'Artengruppe',provisional:'Forschungsform (unbeschrieben)'};
+const FISH_KIND={species:'Art',life_form:'Lebensform',aggregate:'Artengruppe',provisional:'Forschungsform (unbeschrieben)',crayfish:'Krebstier'};
 const FISH_ORDER_KEY = 'bsvrb-fish-columns-v1';
 const FISH_CANTON_KEY = 'bsvrb-fish-canton-v1';
 const FISH_RULE_LABELS = {closed_season_be:'Schonzeit',min_length_be:'Fangmass',catch_window_be:'Fangfenster',catch_quota_be:'Fangzahlen'};
@@ -27,8 +27,21 @@ function fishCantonRegulations(code, catalog, bern) {
 }
 function fishOccurrence(f) {
   const code=f.rule_metadata?.code || 'BE';
-  if(code==='BE') return f.bern_occurrence;
+  if(f.canton_occurrence) return f.canton_occurrence;
+  if(code==='BE' && f.bern_occurrence) return f.bern_occurrence;
   return {state:'unreviewed',detail:'Das Vorkommen in diesem Kanton wurde hier noch nicht geprüft.',source_ids:[]};
+}
+function occurrenceFromAtlas(f, code, atlas) {
+  const group=f.taxon_kind==='crayfish' ? 'CAPTECRE' : 'CAPTPOI';
+  const source='infofauna-'+group+'-'+code;
+  const record=atlas.occurrence[code]?.[f.scientific_name];
+  if(record) return {state:record[0],detail:record[1],source_ids:[record[2]]};
+  if(code==='BE' && f.bern_occurrence) return f.bern_occurrence;
+  if(!atlas.coverage[group].includes(code)) return null;
+  if(!['species','crayfish'].includes(f.taxon_kind)) return {
+    state:'uncertain',detail:'Die kantonale Artenliste belegt diese Form oder Sammelgruppe nicht separat.',source_ids:[source]
+  };
+  return {state:'no_record',detail:'Kein artspezifischer Eintrag in der abgefragten kantonalen Artenliste.',source_ids:[source]};
 }
 function fishCantonColumns(code, name='Bern') {
   return FISH_COLUMNS.map(c=>({...c,label:c.key==='bern' ? 'Im Kanton '+name : FISH_RULE_LABELS[c.key] ? FISH_RULE_LABELS[c.key]+' '+code : c.label}));
@@ -87,6 +100,21 @@ function fishSourceLinks(ids, references) {
 }
 
 function attachFishRules(f, regulations) {
+  if(f.taxon_kind==='crayfish') {
+    const isBern=regulations.code==='BE';
+    const isEdel=f.scientific_name==='Astacus astacus';
+    const protectedBern=['Austropotamobius pallipes','Austropotamobius torrentium'].includes(f.scientific_name);
+    const summary={
+      closed:isBern && protectedBern ? 'Ganzjährig geschützt' : isBern && isEdel ? '20.09.–30.06.' : 'Krebsfang im Reglement prüfen',
+      length:isBern && isEdel ? '12 cm' : isBern && protectedBern ? 'Keine Entnahme' : 'Gewässerreglement prüfen',
+      window:'–',
+      quota:isBern && protectedBern ? '0' : 'Bewilligung und Fangzahl prüfen'
+    };
+    const rules={title:'Krebsfang',summary,rows:[],windows:[],notes:[],
+      source_ids:[...(isBern ? ['be-crayfish'] : regulations.source_ids),'kfks-catching']};
+    return {...f,bern_rules:rules,rule_assignment:{},rule_metadata:regulations,
+      closed_season_be:summary.closed,min_length_be:summary.length,catch_window_be:summary.window,catch_quota_be:summary.quota};
+  }
   const assignment=regulations.species[f.scientific_name];
   const rules=regulations.groups[assignment?.group];
   if(!rules)throw new Error('Fangregeln fehlen: '+f.scientific_name);
@@ -128,11 +156,12 @@ async function initFischeSchweiz() {
   try { order=fishColumnOrder(JSON.parse(localStorage.getItem(FISH_ORDER_KEY))); } catch {}
   const getJson=async url=>{const response=await fetch(url);if(!response.ok)throw new Error('Datenabruf fehlgeschlagen');return response.json();};
   try {
-    const [list,bernData,references,bernRegulations,catalog]=await Promise.all([
-      getJson('../../sources/fish/swiss-fish.json?v=20261107-cantons'),getJson('../../sources/fish/bern-fische.json'),getJson('../../sources/fish/references.json?v=20261107-cantons'),getJson('../../sources/fish/bern-regulations.json?v=20261107-cantons'),getJson('../../sources/fish/cantonal-regulations.json?v=20261107-cantons')
+    const [list,bernData,fishReferences,bernRegulations,catalog,atlas]=await Promise.all([
+      getJson('../../sources/fish/swiss-fish.json?v=20261107-cantons'),getJson('../../sources/fish/bern-fische.json'),getJson('../../sources/fish/references.json?v=20261107-cantons'),getJson('../../sources/fish/bern-regulations.json?v=20261107-cantons'),getJson('../../sources/fish/cantonal-regulations.json?v=20261107-cantons'),getJson('../../sources/fish/cantonal-occurrence.json?v=20261107-atlas')
     ]);
+    const references={...fishReferences,...atlas.references};
     const bernMap=new Map(bernData.map(f=>[f.scientific_name,f]));
-    const baseFish=list.map(f=>({...f,spawn_cm:f.spawn_cm??bernMap.get(f.scientific_name)?.spawn_cm,max_cm:f.max_cm??bernMap.get(f.scientific_name)?.max_cm}));
+    const baseFish=[...list,...atlas.crayfish].map(f=>({...f,spawn_cm:f.spawn_cm??bernMap.get(f.scientific_name)?.spawn_cm,max_cm:f.max_cm??bernMap.get(f.scientific_name)?.max_cm}));
     let selectedCanton='BE';
     try {selectedCanton=fishCantonCode(localStorage.getItem(FISH_CANTON_KEY),catalog);}catch{}
     const cantons=Object.values(catalog.cantons).sort((a,b)=>fishCollator.compare(a.name,b.name));
@@ -140,13 +169,13 @@ async function initFischeSchweiz() {
     let fish=[],columns=new Map();
     function applyCanton() {
       const regulations=fishCantonRegulations(selectedCanton,catalog,bernRegulations);
-      fish=baseFish.map(f=>attachFishRules(f,regulations));
+      fish=baseFish.map(f=>attachFishRules({...f,canton_occurrence:occurrenceFromAtlas(f,selectedCanton,atlas)},regulations));
       columns=new Map(fishCantonColumns(selectedCanton,regulations.name).map(c=>[c.key,c]));
       sortChoice.replaceChildren();columns.forEach(c=>{const option=fishText('option',c.label);option.value=c.key;sortChoice.append(option);});
       cantonChoice.value=selectedCanton;
       document.getElementById('fish_occurrence_label').textContent='Im Kanton '+regulations.name;
       bernFilter.querySelectorAll('option[value]:not([value=""])').forEach(option=>{
-        option.hidden=(option.value==='unreviewed')!==(selectedCanton!=='BE');
+        option.hidden=!fish.some(f=>fishOccurrence(f).state===option.value);
       });
       bernFilter.value='';
       const scope=fishText('p',regulations.scope);
