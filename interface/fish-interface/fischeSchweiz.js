@@ -157,7 +157,7 @@ async function initFischeSchweiz() {
   const getJson=async url=>{const response=await fetch(url);if(!response.ok)throw new Error('Datenabruf fehlgeschlagen');return response.json();};
   try {
     const [list,bernData,fishReferences,bernRegulations,catalog,atlas]=await Promise.all([
-      getJson('../../sources/fish/swiss-fish.json?v=20261107-cantons'),getJson('../../sources/fish/bern-fische.json'),getJson('../../sources/fish/references.json?v=20261107-cantons'),getJson('../../sources/fish/bern-regulations.json?v=20261107-cantons'),getJson('../../sources/fish/cantonal-regulations.json?v=20261107-cantons'),getJson('../../sources/fish/cantonal-occurrence.json?v=20261107-atlas')
+      getJson('../../sources/fish/swiss-fish.json?v=20261107-cantons'),getJson('../../sources/fish/bern-fische.json'),getJson('../../sources/fish/references.json?v=20261107-cantons'),getJson('../../sources/fish/bern-regulations.json?v=20261107-cantons'),getJson('../../sources/fish/cantonal-regulations.json?v=20261107-cantons'),getJson('../../sources/fish/cantonal-occurrence.json?v=20261107-crayfish')
     ]);
     const references={...fishReferences,...atlas.references};
     const bernMap=new Map(bernData.map(f=>[f.scientific_name,f]));
