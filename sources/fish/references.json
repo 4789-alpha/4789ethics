@@ -214,5 +214,149 @@
   "colonisation-fish": {
     "title": "BAFU: Einwanderung von Fischarten in die Schweiz, Rheineinzugsgebiet",
     "url": "https://www.bafu.admin.ch/dam/fr/sd-web/nWAcMBweWcaF/einwanderungen_vonfischartenindieschweizrheineinzugsgebiet.pdf"
+  },
+  "ct-AG": {
+    "title": "Aargau: amtliche Fischereivorschriften",
+    "url": "https://gesetzessammlungen.ag.ch/app/de/texts_of_law/935.211"
+  },
+  "ct-AI": {
+    "title": "Appenzell Innerrhoden: amtliche Fischereivorschriften",
+    "url": "https://ai.clex.ch/app/de/texts_of_law/923.013"
+  },
+  "ct-AR": {
+    "title": "Appenzell Ausserrhoden: amtliche Fischereivorschriften",
+    "url": "https://ar.clex.ch/app/de/texts_of_law/527.2"
+  },
+  "ct-BL": {
+    "title": "Basel-Landschaft: amtliche Fischereivorschriften",
+    "url": "https://bl.clex.ch/app/de/texts_of_law/530.11"
+  },
+  "ct-BS": {
+    "title": "Basel-Stadt: amtliche Fischereivorschriften",
+    "url": "https://www.gesetzessammlung.bs.ch/api/annex_document_dictionaries/16816"
+  },
+  "ct-FR": {
+    "title": "Freiburg: amtliche Fischereivorschriften",
+    "url": "https://bdlf.fr.ch/app/fr/texts_of_law/923.12"
+  },
+  "ct-GE": {
+    "title": "Genf: amtliche Fischereivorschriften",
+    "url": "https://www.ge.ch/document/periodes-peche-taille-minimale-capture-limitations-capture-geneve"
+  },
+  "ct-GL": {
+    "title": "Glarus: amtliche Fischereivorschriften",
+    "url": "https://gesetze.gl.ch/app/de/texts_of_law/VI-E.31.3"
+  },
+  "ct-GR": {
+    "title": "Graubünden: amtliche Fischereivorschriften",
+    "url": "https://www.gr.ch/DE/institutionen/verwaltung/diem/ajf/recht/Documents/Vorschriften%20und%20Karten/FBV%202026%20DE.pdf"
+  },
+  "ct-JU": {
+    "title": "Jura: amtliche Fischereivorschriften",
+    "url": "https://www.jura.ch/fr/Autorites/Administration/DEC/ENV/Peche-et-faune-aquatique/Exercice-de-la-peche/Exercice-de-la-peche.html"
+  },
+  "ct-LU": {
+    "title": "Luzern: amtliche Fischereivorschriften",
+    "url": "https://srl.lu.ch/app/de/texts_of_law/721"
+  },
+  "ct-NE": {
+    "title": "Neuenburg: amtliche Fischereivorschriften",
+    "url": "https://www.ne.ch/legislation-jurisprudence/pubfo/ArrRegCE/Documents/2025/FO46_04_2025_11_12_DDTE_403_ACE_Peche_2026.pdf"
+  },
+  "ct-NW": {
+    "title": "Nidwalden: amtliche Fischereivorschriften",
+    "url": "https://gesetze.nw.ch/app/de/texts_of_law/842.11"
+  },
+  "ct-OW": {
+    "title": "Obwalden: amtliche Fischereivorschriften",
+    "url": "https://gdb.ow.ch/app/de/texts_of_law/651.214"
+  },
+  "ct-SG": {
+    "title": "St. Gallen: amtliche Fischereivorschriften",
+    "url": "https://www.gesetzessammlung.sg.ch/data/854.11/de"
+  },
+  "ct-SH": {
+    "title": "Schaffhausen: amtliche Fischereivorschriften",
+    "url": "https://rechtsbuch.sh.ch/app/de/texts_of_law/923.101"
+  },
+  "ct-SO": {
+    "title": "Solothurn: amtliche Fischereivorschriften",
+    "url": "https://so.ch/fileadmin/internet/vwd/vwd-awjf-jagd/pdf/Fischerei/Broschuere_Auszug_aus_den_Fischereivorschriften__ab_01.03.2026.pdf"
+  },
+  "ct-SZ": {
+    "title": "Schwyz: amtliche Fischereivorschriften",
+    "url": "https://www.sz.ch/public/upload/assets/63104/Ausfuehrungsbestimmungen_fuer_die_Angelfischerei_in_Fliessgewaessern.pdf?fp=5"
+  },
+  "ct-TG": {
+    "title": "Thurgau: amtliche Fischereivorschriften",
+    "url": "https://www.rechtsbuch.tg.ch/api/de/versions/2593/pdf_file_with_annexes"
+  },
+  "ct-TI": {
+    "title": "Tessin: amtliche Fischereivorschriften",
+    "url": "https://m3.ti.ch/CAN/RLeggi/public/index.php/raccolta-leggi/pdfattoindex/index/8.5.2.1.1"
+  },
+  "ct-UR": {
+    "title": "Uri: amtliche Fischereivorschriften",
+    "url": "https://rechtsbuch.ur.ch/api/de/versions/824/pdf_file"
+  },
+  "ct-VD": {
+    "title": "Waadt: amtliche Fischereivorschriften",
+    "url": "https://www.vd.ch/fileadmin/user_upload/themes/environnement/biodiversite/fichiers_pdf/P%C3%AAche/L%C3%A9gislation/Directives_rivieres_2025-2027.pdf"
+  },
+  "ct-VS": {
+    "title": "Wallis: amtliche Fischereivorschriften",
+    "url": "https://lex.vs.ch/api/fr/versions/3581/pdf_file"
+  },
+  "ct-ZG": {
+    "title": "Zug: amtliche Fischereivorschriften",
+    "url": "https://zg.ch/de/natur-umwelt-tiere/wasser-und-gewaesser/fischen"
+  },
+  "ct-ZH": {
+    "title": "Zürich: amtliche Fischereivorschriften",
+    "url": "https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/umwelt-tiere/tiere/fischerei-und-jagd/fischerei/verf%C3%BCgungen/fischereivorschriften_auszug_fuer_die_angelfischerei_202603.pdf"
+  },
+  "ct-LU-reuss": {
+    "title": "Luzern: Untere Reuss / Kleine Emme",
+    "url": "https://lawa.lu.ch/fischerei/angelfischerei/emme_reuss"
+  },
+  "ct-SG-rhine": {
+    "title": "St. Gallen: Fischereivorschriften Alpenrhein",
+    "url": "https://www.sg.ch/umwelt-natur/jagd-fischerei/fischerei/fischereipatente/ausfuehrungsbestimmungen-patentgewaesser/_jcr_content/Par/sgch_downloadlist_1528502077/DownloadListPar/sgch_download.ocFile/Fischereivorschriften%20Alpenrhein.pdf"
+  },
+  "ct-ZH-grayling": {
+    "title": "Zürich: Äschenfangverbot 01.10.2026–30.09.2029",
+    "url": "https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/umwelt-tiere/tiere/fischerei-und-jagd/fischerei/verf%C3%BCgungen/verfuegung_aeschenfangverbot_2026-2029.pdf"
+  },
+  "lake-Leman": {
+    "title": "Amtliches Fischereimerkblatt Leman 2026",
+    "url": "https://www.vd.ch/fileadmin/user_upload/themes/environnement/biodiversite/fichiers_pdf/P%C3%AAche/D%C3%A9couvrez_la_p%C3%AAche_dans_le_canton_de_Vaud__/DGE_Reglement_2026_Leman_Def.pdf"
+  },
+  "lake-Neuchatel": {
+    "title": "Amtliches Fischereimerkblatt Neuchatel 2026",
+    "url": "https://www.vd.ch/fileadmin/user_upload/themes/environnement/biodiversite/fichiers_pdf/P%C3%AAche/D%C3%A9couvrez_la_p%C3%AAche_dans_le_canton_de_Vaud__/DGE_Reglement_2026_Neuchatel_Def.pdf"
+  },
+  "lake-Morat": {
+    "title": "Amtliches Fischereimerkblatt Morat 2026",
+    "url": "https://www.vd.ch/fileadmin/user_upload/themes/environnement/biodiversite/fichiers_pdf/P%C3%AAche/D%C3%A9couvrez_la_p%C3%AAche_dans_le_canton_de_Vaud__/DGE_Reglement_2026_Morat_Def.pdf"
+  },
+  "lake-Joux": {
+    "title": "Amtliches Fischereimerkblatt Joux 2026",
+    "url": "https://www.vd.ch/fileadmin/user_upload/themes/environnement/biodiversite/fichiers_pdf/P%C3%AAche/D%C3%A9couvrez_la_p%C3%AAche_dans_le_canton_de_Vaud__/DGE_Reglement_2026_Joux_Def.pdf"
+  },
+  "lake-VWS": {
+    "title": "Vierwaldstättersee: geltende Ausführungsbestimmungen (Stand 01.09.2023)",
+    "url": "https://gdb.ow.ch/app/de/texts_of_law/651.311"
+  },
+  "ct-GE-rivers": {
+    "title": "Genf: RPêche – geltende Flussregeln",
+    "url": "https://silgeneve.ch/legis/data/rsg_m4_06p01.htm"
+  },
+  "ct-GE-table": {
+    "title": "Genf: Fangzeiten, Mindestmasse und Fangzahlen (Nov. 2025)",
+    "url": "https://www.ge.ch/document/1365/telecharger"
+  },
+  "ct-CH-law": {
+    "title": "Bund: VBGF, Art. 1–2a und Anhang 1",
+    "url": "https://www.fedlex.admin.ch/eli/cc/1993/3384_3384_3384/de"
   }
 }
