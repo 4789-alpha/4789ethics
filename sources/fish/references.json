@@ -126,5 +126,93 @@
   "angling-rotaugerotfederhasel": {
     "title": "BKFV: rotaugerotfederhasel, Angeltechniken",
     "url": "https://www.bkfv-fcbp.ch/fischen-im-kanton-bern/fisch-und-krebsarten/rotaugerotfederhasel/"
+  },
+  "fidv-2026": {
+    "title": "FiDV, Stand 01.01.2026, einschliesslich Anhänge (verbindlicher Text)",
+    "url": "https://www.belex.sites.be.ch/api/de/versions/3323/pdf_file_with_annexes"
+  },
+  "vbgf-current": {
+    "title": "VBGF: aktuelle Bundesfassung (Art. 1, 2, 2a und Anhang 1)",
+    "url": "https://www.fedlex.admin.ch/eli/cc/1993/3384_3384_3384/de"
+  },
+  "be-reglement-2026": {
+    "title": "Kanton Bern: amtliches Fischereireglement 2026 (inkl. Grenzvereinbarungen)",
+    "url": "https://www.weu.be.ch/content/dam/weu/dokumente/lanat/de/fischerei/wie-wo-fischen/Reglement-Fischerei-DE-2026.pdf"
+  },
+  "be-fr": {
+    "title": "Vereinbarung BE/FR: Sense und Saane (BSG 923.919.1)",
+    "url": "https://www.belex.sites.be.ch/app/de/texts_of_law/923.919.1"
+  },
+  "be-so": {
+    "title": "Vereinbarung BE/SO: Aare (BSG 923.921.1)",
+    "url": "https://www.belex.sites.be.ch/app/de/texts_of_law/923.921.1"
+  },
+  "be-ne": {
+    "title": "Vereinbarung BE/NE: Zihlkanal (BSG 923.933.1)",
+    "url": "https://www.belex.sites.be.ch/app/de/texts_of_law/923.933.1"
+  },
+  "be-ju": {
+    "title": "Vereinbarung BE/JU: Birs Moutier/Roches ab 2026 (BSG 923.941.1-1)",
+    "url": "https://www.belex.sites.be.ch/app/de/texts_of_law/923.941.1-1"
+  },
+  "be-gear-2026": {
+    "title": "Kanton Bern: erlaubte Fanggeräte ab 01.01.2026",
+    "url": "https://www.weu.be.ch/content/dam/weu/dokumente/lanat/de/fischerei/wie-wo-fischen/lanat-fi-vollzugshilfe-erlaubte-fangger%C3%A4te-01012026-de.pdf"
+  },
+  "schleie": {
+    "title": "BKFV: Schleie – Biologie, Berner Vorkommen und Angeltechniken",
+    "url": "https://bkfv-fcbp.ch/fischen-im-kanton-bern/fisch-und-krebsarten/schleie/"
+  },
+  "bkfv-bachsaibling": {
+    "title": "BKFV: Bachsaibling",
+    "url": "https://www.bkfv-fcbp.ch/fischen-im-kanton-bern/fisch-und-krebsarten/bachsaibling/"
+  },
+  "bkfv-kanadische-seeforelle": {
+    "title": "BKFV: Kanadische Seeforelle",
+    "url": "https://www.bkfv-fcbp.ch/fischen-im-kanton-bern/fisch-und-krebsarten/kanadische-seeforelle/"
+  },
+  "bkfv-karausche": {
+    "title": "BKFV: Karausche",
+    "url": "https://www.bkfv-fcbp.ch/fischen-im-kanton-bern/fisch-und-krebsarten/karausche/"
+  },
+  "fish-databank-2026": {
+    "title": "info fauna / InfoSpecies: Swiss National Fish Databank, Ausgabe 04.02.2026 (CC BY 4.0)",
+    "url": "https://ipt.gbif.ch/resource?r=cscf-poi&v=1.5"
+  },
+  "alien-fish-2022": {
+    "title": "BAFU: Gebietsfremde Arten in der Schweiz (2022), Fische und Rundmäuler",
+    "url": "https://www.bafu.admin.ch/dam/de/sd-web/VuUPKH7MdwV7/gebitesfremde-arten-in-der-schweiz.pdf"
+  },
+  "barbatula-2025": {
+    "title": "Calegari et al. 2025: Revision der Bartgrundeln, Erstbeschreibung B. fluvicola / B. ommata",
+    "url": "https://doi.org/10.1111/jfb.70108"
+  },
+  "elritzen-2026": {
+    "title": "FIBER: Elritzen – Fisch des Jahres 2026, vier Schweizer Formen",
+    "url": "https://www.fischereiberatung.ch/news-events/aktuelles/artikel/news/die-elritze-der-fisch-des-jahres-2026/?cHash=8be2abccea3b28002284a0714b5b07e3&tx_news_pi1%5Baction%5D=detail&tx_news_pi1%5Bcontroller%5D=News"
+  },
+  "projet-lac-2024": {
+    "title": "FIBER: Projet Lac – Fischarten-Vielfalt in den Schweizer Seen (2024)",
+    "url": "https://www.fischereiberatung.ch/fileadmin/sites/fiber/angebot/fiber_publ/broschueren/FIBER_Projet_Lac_2024_V10_GzA.pdf"
+  },
+  "fish-diversity-2026": {
+    "title": "BAFU: Unsere Fische – Vielfalt schafft Vielfalt (29.01.2026)",
+    "url": "https://www.bafu.admin.ch/de/fischvielfalt"
+  },
+  "benacensis": {
+    "title": "Bianco & Delmastro: Verbreitung und Unterscheidungsmerkmale des Po-Gründlings",
+    "url": "https://www.biodiversitylibrary.org/part/253633"
+  },
+  "larvata": {
+    "title": "Provinz Bozen: Maskierter Steinbeisser",
+    "url": "https://forstdienst.provinz.bz.it/de/wildtiermanagement/systematik-beschreibung-fischarten/maskierter-steinbeisser"
+  },
+  "neocomensis": {
+    "title": "Freyhof & Kottelat: Jaunet – Taxonomie und Typuslokalität",
+    "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=68608"
+  },
+  "colonisation-fish": {
+    "title": "BAFU: Einwanderung von Fischarten in die Schweiz, Rheineinzugsgebiet",
+    "url": "https://www.bafu.admin.ch/dam/fr/sd-web/nWAcMBweWcaF/einwanderungen_vonfischartenindieschweizrheineinzugsgebiet.pdf"
   }
 }

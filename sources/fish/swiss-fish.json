@@ -29,7 +29,8 @@
       "be-rules"
     ],
     "fishing_method": "Grund-/Feederfischen, Zapfenfischen",
-    "bait": "Wurm, Maden, Mais"
+    "bait": "Wurm, Maden, Mais",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Acipenser sturio",
@@ -57,7 +58,8 @@
     "fishing_note": "Artenschutz, Kleinfisch/Rundmaul oder kein gesicherter lokaler Zielfisch. Keine pauschale Aussage über den gesetzlichen Schutzstatus.",
     "fishing_source_ids": [],
     "fishing_method": "Keine gezielte Befischung empfohlen",
-    "bait": "Keine Empfehlung"
+    "bait": "Keine Empfehlung",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Alburnoides bipunctatus",
@@ -85,7 +87,8 @@
     "fishing_note": "Artenschutz, Kleinfisch/Rundmaul oder kein gesicherter lokaler Zielfisch. Keine pauschale Aussage über den gesetzlichen Schutzstatus.",
     "fishing_source_ids": [],
     "fishing_method": "Keine gezielte Befischung empfohlen",
-    "bait": "Keine Empfehlung"
+    "bait": "Keine Empfehlung",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Alburnus alburnus",
@@ -117,7 +120,8 @@
       "be-rules"
     ],
     "fishing_method": "Leichtes Zapfenfischen nahe der Oberfläche",
-    "bait": "Maden, kleine Brotflocken"
+    "bait": "Maden, kleine Brotflocken",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Alburnus arborella",
@@ -145,7 +149,8 @@
     "fishing_note": "Artenschutz, Kleinfisch/Rundmaul oder kein gesicherter lokaler Zielfisch. Keine pauschale Aussage über den gesetzlichen Schutzstatus.",
     "fishing_source_ids": [],
     "fishing_method": "Keine gezielte Befischung empfohlen",
-    "bait": "Keine Empfehlung"
+    "bait": "Keine Empfehlung",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Alosa agone",
@@ -173,7 +178,8 @@
     "fishing_note": "Artenschutz, Kleinfisch/Rundmaul oder kein gesicherter lokaler Zielfisch. Keine pauschale Aussage über den gesetzlichen Schutzstatus.",
     "fishing_source_ids": [],
     "fishing_method": "Keine gezielte Befischung empfohlen",
-    "bait": "Keine Empfehlung"
+    "bait": "Keine Empfehlung",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Alosa alosa",
@@ -186,7 +192,7 @@
     "form_description": "Hochrückiger Silberkörper, kurzer Rückenflossensaum, tief gegabelter Schwanz und dunkler Schulterfleck.",
     "information": "Wanderfisch zwischen Meer und Fluss; steigt zum Laichen auf und ernährt sich vorwiegend von tierischem Plankton.",
     "image": "sources/fish/ch/alosa_alosa_ch.png",
-    "image_note": "KI-Illustration im Stil der Sammlung (2026); kein Bestimmungsbeleg.",
+    "image_note": "Ergänzte Illustration im Stil der vorhandenen Fischzeichnungen.",
     "bern_occurrence": {
       "state": "no_record",
       "detail": "Kein artspezifischer BE-Beleg in den geprüften kantonalen Listen und Verbreitungsquellen; dies beweist kein Fehlen. Der Altbestand führt die Art zudem als in der Schweiz ausgestorben.",
@@ -202,7 +208,8 @@
     "fishing_note": "Artenschutz, Kleinfisch/Rundmaul oder kein gesicherter lokaler Zielfisch. Keine pauschale Aussage über den gesetzlichen Schutzstatus.",
     "fishing_source_ids": [],
     "fishing_method": "Keine gezielte Befischung empfohlen",
-    "bait": "Keine Empfehlung"
+    "bait": "Keine Empfehlung",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Alosa fallax",
@@ -231,7 +238,8 @@
     "fishing_note": "Artenschutz, Kleinfisch/Rundmaul oder kein gesicherter lokaler Zielfisch. Keine pauschale Aussage über den gesetzlichen Schutzstatus.",
     "fishing_source_ids": [],
     "fishing_method": "Keine gezielte Befischung empfohlen",
-    "bait": "Keine Empfehlung"
+    "bait": "Keine Empfehlung",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Anguilla anguilla",
@@ -262,18 +270,19 @@
       "be-rules"
     ],
     "fishing_method": "Im Kanton Bern ganzjähriges Fangverbot",
-    "bait": "Keine Köderempfehlung"
+    "bait": "Keine Köderempfehlung",
+    "taxon_kind": "species"
   },
   {
-    "scientific_name": "Barbatula barbatula",
-    "name": "Bartgrundel",
+    "scientific_name": "Barbatula spp. (Altbestand)",
+    "name": "Bartgrundeln / Schmerlen (Artengruppe)",
     "origin": "einheimisch",
     "status": "NT",
     "in_bern": true,
     "image": "sources/fish/ch/barbatula_barbatula_ch.png",
     "max_cm": 21.0,
     "form_description": "Schlanker, rundlicher Bodenfisch mit sechs Barteln und unregelmässiger Marmorierung.",
-    "information": "Versteckt sich zwischen Steinen; sucht am Grund nach kleinen Wirbellosen.",
+    "information": "Versteckt sich zwischen Steinen; sucht am Grund nach kleinen Wirbellosen. Sammelbezeichnung für ältere Schweizer Nachweise; die Revision 2025 unterscheidet B. fluvicola und B. ommata sowie noch ungeklärte Linien. Alte Nachweise sind nicht automatisch Nachweise einer dieser Arten.",
     "bern_occurrence": {
       "state": "documented",
       "detail": "In der kantonalen Artenübersicht bzw. beim BKFV für Bern aufgeführt.",
@@ -290,7 +299,13 @@
     "fishing_note": "Artenschutz, Kleinfisch/Rundmaul oder kein gesicherter lokaler Zielfisch. Keine pauschale Aussage über den gesetzlichen Schutzstatus.",
     "fishing_source_ids": [],
     "fishing_method": "Keine gezielte Befischung empfohlen",
-    "bait": "Keine Empfehlung"
+    "bait": "Keine Empfehlung",
+    "taxon_kind": "aggregate",
+    "aliases": [
+      "Bartgrundel",
+      "Barbatula barbatula",
+      "Barbatula quignardi"
+    ]
   },
   {
     "scientific_name": "Barbus barbus",
@@ -321,7 +336,8 @@
       "be-rules"
     ],
     "fishing_method": "Grund-/Feederfischen in der Strömung",
-    "bait": "Wurm, Maden, Käse"
+    "bait": "Wurm, Maden, Käse",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Barbus caninus",
@@ -349,7 +365,8 @@
     "fishing_note": "Artenschutz, Kleinfisch/Rundmaul oder kein gesicherter lokaler Zielfisch. Keine pauschale Aussage über den gesetzlichen Schutzstatus.",
     "fishing_source_ids": [],
     "fishing_method": "Keine gezielte Befischung empfohlen",
-    "bait": "Keine Empfehlung"
+    "bait": "Keine Empfehlung",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Barbus plebejus",
@@ -378,7 +395,8 @@
     "fishing_note": "Artenschutz, Kleinfisch/Rundmaul oder kein gesicherter lokaler Zielfisch. Keine pauschale Aussage über den gesetzlichen Schutzstatus.",
     "fishing_source_ids": [],
     "fishing_method": "Keine gezielte Befischung empfohlen",
-    "bait": "Keine Empfehlung"
+    "bait": "Keine Empfehlung",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Blicca bjoerkna",
@@ -410,7 +428,8 @@
       "be-rules"
     ],
     "fishing_method": "Feines Grund- oder Zapfenfischen",
-    "bait": "Maden, kleine Wurmstücke"
+    "bait": "Maden, kleine Wurmstücke",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Chondrostoma nasus",
@@ -440,7 +459,8 @@
       "be-rules"
     ],
     "fishing_method": "Im Kanton Bern ganzjähriges Fangverbot",
-    "bait": "Keine Köderempfehlung"
+    "bait": "Keine Köderempfehlung",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Chondrostoma soetta",
@@ -467,7 +487,8 @@
     "fishing_note": "Artenschutz, Kleinfisch/Rundmaul oder kein gesicherter lokaler Zielfisch. Keine pauschale Aussage über den gesetzlichen Schutzstatus.",
     "fishing_source_ids": [],
     "fishing_method": "Keine gezielte Befischung empfohlen",
-    "bait": "Keine Empfehlung"
+    "bait": "Keine Empfehlung",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Cobitis bilineata",
@@ -495,7 +516,8 @@
     "fishing_note": "Artenschutz, Kleinfisch/Rundmaul oder kein gesicherter lokaler Zielfisch. Keine pauschale Aussage über den gesetzlichen Schutzstatus.",
     "fishing_source_ids": [],
     "fishing_method": "Keine gezielte Befischung empfohlen",
-    "bait": "Keine Empfehlung"
+    "bait": "Keine Empfehlung",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Cobitis taenia",
@@ -524,7 +546,8 @@
     "fishing_note": "Artenschutz, Kleinfisch/Rundmaul oder kein gesicherter lokaler Zielfisch. Keine pauschale Aussage über den gesetzlichen Schutzstatus.",
     "fishing_source_ids": [],
     "fishing_method": "Keine gezielte Befischung empfohlen",
-    "bait": "Keine Empfehlung"
+    "bait": "Keine Empfehlung",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Coregonus spp.",
@@ -554,7 +577,8 @@
       "be-rules"
     ],
     "fishing_method": "Hegenenfischen, je nach See und Reglement",
-    "bait": "Künstliche Nymphen an der Hegene"
+    "bait": "Künstliche Nymphen an der Hegene",
+    "taxon_kind": "aggregate"
   },
   {
     "scientific_name": "Cottus gobio",
@@ -583,7 +607,8 @@
     "fishing_note": "Artenschutz, Kleinfisch/Rundmaul oder kein gesicherter lokaler Zielfisch. Keine pauschale Aussage über den gesetzlichen Schutzstatus.",
     "fishing_source_ids": [],
     "fishing_method": "Keine gezielte Befischung empfohlen",
-    "bait": "Keine Empfehlung"
+    "bait": "Keine Empfehlung",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Cyprinus carpio",
@@ -615,7 +640,8 @@
       "be-rules"
     ],
     "fishing_method": "Grundfischen, Zapfenfischen",
-    "bait": "Mais, Boilies, Wurm"
+    "bait": "Mais, Boilies, Wurm",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Esox lucius",
@@ -647,7 +673,8 @@
       "be-rules"
     ],
     "fishing_method": "Spinn-, Schlepp- oder Streamerfischen",
-    "bait": "Wobbler, Blinker, Gummifisch, grosser Streamer"
+    "bait": "Wobbler, Blinker, Gummifisch, grosser Streamer",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Gasterosteus gymnurus",
@@ -673,7 +700,8 @@
     "fishing_note": "Artenschutz, Kleinfisch/Rundmaul oder kein gesicherter lokaler Zielfisch. Keine pauschale Aussage über den gesetzlichen Schutzstatus.",
     "fishing_source_ids": [],
     "fishing_method": "Keine gezielte Befischung empfohlen",
-    "bait": "Keine Empfehlung"
+    "bait": "Keine Empfehlung",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Gobio gobio",
@@ -702,7 +730,8 @@
     "fishing_note": "Artenschutz, Kleinfisch/Rundmaul oder kein gesicherter lokaler Zielfisch. Keine pauschale Aussage über den gesetzlichen Schutzstatus.",
     "fishing_source_ids": [],
     "fishing_method": "Keine gezielte Befischung empfohlen",
-    "bait": "Keine Empfehlung"
+    "bait": "Keine Empfehlung",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Gobio obtusirostris",
@@ -730,7 +759,8 @@
     "fishing_note": "Artenschutz, Kleinfisch/Rundmaul oder kein gesicherter lokaler Zielfisch. Keine pauschale Aussage über den gesetzlichen Schutzstatus.",
     "fishing_source_ids": [],
     "fishing_method": "Keine gezielte Befischung empfohlen",
-    "bait": "Keine Empfehlung"
+    "bait": "Keine Empfehlung",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Gymnocephalus cernua",
@@ -761,7 +791,8 @@
       "be-rules"
     ],
     "fishing_method": "Leichtes Grundfischen",
-    "bait": "Kleine Wurmstücke, Maden"
+    "bait": "Kleine Wurmstücke, Maden",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Hucho hucho",
@@ -790,7 +821,8 @@
     "fishing_note": "Artenschutz, Kleinfisch/Rundmaul oder kein gesicherter lokaler Zielfisch. Keine pauschale Aussage über den gesetzlichen Schutzstatus.",
     "fishing_source_ids": [],
     "fishing_method": "Keine gezielte Befischung empfohlen",
-    "bait": "Keine Empfehlung"
+    "bait": "Keine Empfehlung",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Lampetra fluviatilis",
@@ -819,7 +851,8 @@
     "fishing_note": "Artenschutz, Kleinfisch/Rundmaul oder kein gesicherter lokaler Zielfisch. Keine pauschale Aussage über den gesetzlichen Schutzstatus.",
     "fishing_source_ids": [],
     "fishing_method": "Keine gezielte Befischung empfohlen",
-    "bait": "Keine Empfehlung"
+    "bait": "Keine Empfehlung",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Lampetra planeri",
@@ -850,7 +883,8 @@
       "be-rules"
     ],
     "fishing_method": "Im Kanton Bern ganzjähriges Fangverbot",
-    "bait": "Keine Köderempfehlung"
+    "bait": "Keine Köderempfehlung",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Lampetra zanandreai",
@@ -879,7 +913,8 @@
     "fishing_note": "Artenschutz, Kleinfisch/Rundmaul oder kein gesicherter lokaler Zielfisch. Keine pauschale Aussage über den gesetzlichen Schutzstatus.",
     "fishing_source_ids": [],
     "fishing_method": "Keine gezielte Befischung empfohlen",
-    "bait": "Keine Empfehlung"
+    "bait": "Keine Empfehlung",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Leucaspius delineatus",
@@ -907,7 +942,8 @@
     "fishing_note": "Artenschutz, Kleinfisch/Rundmaul oder kein gesicherter lokaler Zielfisch. Keine pauschale Aussage über den gesetzlichen Schutzstatus.",
     "fishing_source_ids": [],
     "fishing_method": "Keine gezielte Befischung empfohlen",
-    "bait": "Keine Empfehlung"
+    "bait": "Keine Empfehlung",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Leuciscus leuciscus",
@@ -939,7 +975,8 @@
       "be-rules"
     ],
     "fishing_method": "Feines Zapfen- oder Fliegenfischen",
-    "bait": "Kleine Fliegen, Maden, Wurmstücke"
+    "bait": "Kleine Fliegen, Maden, Wurmstücke",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Lota lota",
@@ -971,7 +1008,8 @@
       "be-rules"
     ],
     "fishing_method": "Grundfischen am Gewässergrund",
-    "bait": "Tauwurm, Wurmbündel"
+    "bait": "Tauwurm, Wurmbündel",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Misgurnus fossilis",
@@ -1001,7 +1039,8 @@
       "be-rules"
     ],
     "fishing_method": "Im Kanton Bern ganzjähriges Fangverbot",
-    "bait": "Keine Köderempfehlung"
+    "bait": "Keine Köderempfehlung",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Padogobius bonelli",
@@ -1028,7 +1067,8 @@
     "fishing_note": "Artenschutz, Kleinfisch/Rundmaul oder kein gesicherter lokaler Zielfisch. Keine pauschale Aussage über den gesetzlichen Schutzstatus.",
     "fishing_source_ids": [],
     "fishing_method": "Keine gezielte Befischung empfohlen",
-    "bait": "Keine Empfehlung"
+    "bait": "Keine Empfehlung",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Parachondrostoma toxostoma",
@@ -1056,7 +1096,8 @@
     "fishing_note": "Artenschutz, Kleinfisch/Rundmaul oder kein gesicherter lokaler Zielfisch. Keine pauschale Aussage über den gesetzlichen Schutzstatus.",
     "fishing_source_ids": [],
     "fishing_method": "Keine gezielte Befischung empfohlen",
-    "bait": "Keine Empfehlung"
+    "bait": "Keine Empfehlung",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Perca fluviatilis",
@@ -1088,7 +1129,8 @@
       "be-rules"
     ],
     "fishing_method": "Spinnfischen, Jiggen, Zapfenfischen",
-    "bait": "Kleine Spinner, Gummifische, Wurm"
+    "bait": "Kleine Spinner, Gummifische, Wurm",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Petromyzon marinus",
@@ -1116,11 +1158,12 @@
     "fishing_note": "Artenschutz, Kleinfisch/Rundmaul oder kein gesicherter lokaler Zielfisch. Keine pauschale Aussage über den gesetzlichen Schutzstatus.",
     "fishing_source_ids": [],
     "fishing_method": "Keine gezielte Befischung empfohlen",
-    "bait": "Keine Empfehlung"
+    "bait": "Keine Empfehlung",
+    "taxon_kind": "species"
   },
   {
-    "scientific_name": "Phoxinus phoxinus",
-    "name": "Elritze",
+    "scientific_name": "Phoxinus spp. (Altbestand)",
+    "name": "Elritzen (Artengruppe)",
     "origin": "einheimisch",
     "status": "LC",
     "in_bern": true,
@@ -1128,7 +1171,7 @@
     "max_cm": 14.0,
     "spawn_cm": 4.979999971389771,
     "form_description": "Kleiner, annähernd rundlicher Körper mit dunklen Flecken und sehr kleinen Schuppen.",
-    "information": "Geselliger Fisch kühler Bäche und Seen; frisst kleine Wirbellose und pflanzliches Material.",
+    "information": "Geselliger Fisch kühler Bäche und Seen; frisst kleine Wirbellose und pflanzliches Material. Ältere Nachweise unter P. phoxinus werden hier als Artengruppe geführt: Aktuell werden Donau-, Französische, Italienische und eine noch unbeschriebene See-Elritze unterschieden. Keine sichere Zuordnung alter Belege zu einer einzelnen Art.",
     "bern_occurrence": {
       "state": "documented",
       "detail": "In der kantonalen Artenübersicht bzw. beim BKFV für Bern aufgeführt.",
@@ -1145,7 +1188,12 @@
     "fishing_note": "Artenschutz, Kleinfisch/Rundmaul oder kein gesicherter lokaler Zielfisch. Keine pauschale Aussage über den gesetzlichen Schutzstatus.",
     "fishing_source_ids": [],
     "fishing_method": "Keine gezielte Befischung empfohlen",
-    "bait": "Keine Empfehlung"
+    "bait": "Keine Empfehlung",
+    "taxon_kind": "aggregate",
+    "aliases": [
+      "Elritze",
+      "Phoxinus phoxinus"
+    ]
   },
   {
     "scientific_name": "Rhodeus amarus",
@@ -1176,7 +1224,8 @@
       "be-rules"
     ],
     "fishing_method": "Im Kanton Bern ganzjähriges Fangverbot",
-    "bait": "Keine Köderempfehlung"
+    "bait": "Keine Köderempfehlung",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Rutilus aula",
@@ -1202,7 +1251,8 @@
     "fishing_note": "Artenschutz, Kleinfisch/Rundmaul oder kein gesicherter lokaler Zielfisch. Keine pauschale Aussage über den gesetzlichen Schutzstatus.",
     "fishing_source_ids": [],
     "fishing_method": "Keine gezielte Befischung empfohlen",
-    "bait": "Keine Empfehlung"
+    "bait": "Keine Empfehlung",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Rutilus pigus",
@@ -1230,7 +1280,8 @@
     "fishing_note": "Artenschutz, Kleinfisch/Rundmaul oder kein gesicherter lokaler Zielfisch. Keine pauschale Aussage über den gesetzlichen Schutzstatus.",
     "fishing_source_ids": [],
     "fishing_method": "Keine gezielte Befischung empfohlen",
-    "bait": "Keine Empfehlung"
+    "bait": "Keine Empfehlung",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Rutilus rutilus",
@@ -1262,7 +1313,8 @@
       "be-rules"
     ],
     "fishing_method": "Zapfenfischen, leichtes Grundfischen",
-    "bait": "Maden, Brotflocken, Mais, Wurm"
+    "bait": "Maden, Brotflocken, Mais, Wurm",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Salaria fluviatilis",
@@ -1288,7 +1340,8 @@
     "fishing_note": "Artenschutz, Kleinfisch/Rundmaul oder kein gesicherter lokaler Zielfisch. Keine pauschale Aussage über den gesetzlichen Schutzstatus.",
     "fishing_source_ids": [],
     "fishing_method": "Keine gezielte Befischung empfohlen",
-    "bait": "Keine Empfehlung"
+    "bait": "Keine Empfehlung",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Salmo cenerinus",
@@ -1315,7 +1368,8 @@
     "fishing_note": "Artenschutz, Kleinfisch/Rundmaul oder kein gesicherter lokaler Zielfisch. Keine pauschale Aussage über den gesetzlichen Schutzstatus.",
     "fishing_source_ids": [],
     "fishing_method": "Keine gezielte Befischung empfohlen",
-    "bait": "Keine Empfehlung"
+    "bait": "Keine Empfehlung",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Salmo labrax",
@@ -1342,7 +1396,8 @@
     "fishing_note": "Artenschutz, Kleinfisch/Rundmaul oder kein gesicherter lokaler Zielfisch. Keine pauschale Aussage über den gesetzlichen Schutzstatus.",
     "fishing_source_ids": [],
     "fishing_method": "Keine gezielte Befischung empfohlen",
-    "bait": "Keine Empfehlung"
+    "bait": "Keine Empfehlung",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Salmo marmoratus",
@@ -1369,7 +1424,8 @@
     "fishing_note": "Artenschutz, Kleinfisch/Rundmaul oder kein gesicherter lokaler Zielfisch. Keine pauschale Aussage über den gesetzlichen Schutzstatus.",
     "fishing_source_ids": [],
     "fishing_method": "Keine gezielte Befischung empfohlen",
-    "bait": "Keine Empfehlung"
+    "bait": "Keine Empfehlung",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Salmo rhodanensis",
@@ -1396,7 +1452,8 @@
     "fishing_note": "Artenschutz, Kleinfisch/Rundmaul oder kein gesicherter lokaler Zielfisch. Keine pauschale Aussage über den gesetzlichen Schutzstatus.",
     "fishing_source_ids": [],
     "fishing_method": "Keine gezielte Befischung empfohlen",
-    "bait": "Keine Empfehlung"
+    "bait": "Keine Empfehlung",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Salmo trutta (f. fluviatilis)",
@@ -1427,7 +1484,8 @@
       "be-rules"
     ],
     "fishing_method": "Fliegen- oder Spinnfischen",
-    "bait": "Nymphen, Streamer, kleine Wobbler und Spinner"
+    "bait": "Nymphen, Streamer, kleine Wobbler und Spinner",
+    "taxon_kind": "life_form"
   },
   {
     "scientific_name": "Salmo trutta (f. fario)",
@@ -1458,7 +1516,8 @@
       "be-rules"
     ],
     "fishing_method": "Fliegen-, Spinn- oder Tippfischen",
-    "bait": "Trockenfliegen, Nymphen, kleine Spinner, Wurm (wo erlaubt)"
+    "bait": "Trockenfliegen, Nymphen, kleine Spinner, Wurm (wo erlaubt)",
+    "taxon_kind": "life_form"
   },
   {
     "scientific_name": "Salmo trutta (f. lacustris)",
@@ -1489,7 +1548,8 @@
       "be-rules"
     ],
     "fishing_method": "Schlepp-, Spinn- oder Fliegenfischen",
-    "bait": "Schleppblinker, Wobbler, Streamer"
+    "bait": "Schleppblinker, Wobbler, Streamer",
+    "taxon_kind": "life_form"
   },
   {
     "scientific_name": "Salmo trutta (f. marinus)",
@@ -1517,7 +1577,8 @@
     "fishing_note": "Artenschutz, Kleinfisch/Rundmaul oder kein gesicherter lokaler Zielfisch. Keine pauschale Aussage über den gesetzlichen Schutzstatus.",
     "fishing_source_ids": [],
     "fishing_method": "Keine gezielte Befischung empfohlen",
-    "bait": "Keine Empfehlung"
+    "bait": "Keine Empfehlung",
+    "taxon_kind": "life_form"
   },
   {
     "scientific_name": "Salmo salar",
@@ -1544,11 +1605,12 @@
     "fishing_note": "Artenschutz, Kleinfisch/Rundmaul oder kein gesicherter lokaler Zielfisch. Keine pauschale Aussage über den gesetzlichen Schutzstatus.",
     "fishing_source_ids": [],
     "fishing_method": "Keine gezielte Befischung empfohlen",
-    "bait": "Keine Empfehlung"
+    "bait": "Keine Empfehlung",
+    "taxon_kind": "species"
   },
   {
-    "scientific_name": "Salvelinus alpinus",
-    "name": "Alpensee-Saibling",
+    "scientific_name": "Salvelinus umbla",
+    "name": "Seesaibling",
     "origin": "einheimisch",
     "status": "VU",
     "in_bern": true,
@@ -1556,7 +1618,7 @@
     "max_cm": 107.0,
     "spawn_cm": 44.36666615804037,
     "form_description": "Schlanker Lachsfisch mit Fettflosse, hellen Punkten und oft weissen unteren Flossensäumen.",
-    "information": "Bewohnt kühle Seen; frisst je nach Bestand Plankton, Bodentiere oder Fische. Färbung stark variabel.",
+    "information": "Bewohnt kühle Seen; frisst je nach Bestand Plankton, Bodentiere oder Fische. Färbung stark variabel. Die Rote Liste 2022 führt den Schweizer Seesaibling als Salvelinus umbla; der ältere Name Salvelinus alpinus bleibt als Suchbegriff erhalten.",
     "bern_occurrence": {
       "state": "documented",
       "detail": "In der kantonalen Artenübersicht bzw. beim BKFV für Bern aufgeführt.",
@@ -1576,7 +1638,12 @@
       "be-rules"
     ],
     "fishing_method": "Leichtes Spinn-, Tiefschlepp- oder Grundfischen",
-    "bait": "Kleine Blinker, Nymphen, Wurm (wo erlaubt)"
+    "bait": "Kleine Blinker, Nymphen, Wurm (wo erlaubt)",
+    "aliases": [
+      "Alpensee-Saibling",
+      "Salvelinus alpinus"
+    ],
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Salvelinus profundus",
@@ -1604,7 +1671,8 @@
     "fishing_note": "Artenschutz, Kleinfisch/Rundmaul oder kein gesicherter lokaler Zielfisch. Keine pauschale Aussage über den gesetzlichen Schutzstatus.",
     "fishing_source_ids": [],
     "fishing_method": "Keine gezielte Befischung empfohlen",
-    "bait": "Keine Empfehlung"
+    "bait": "Keine Empfehlung",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Scardinius erythrophthalmus",
@@ -1635,7 +1703,8 @@
       "be-rules"
     ],
     "fishing_method": "Zapfen- oder Fliegenfischen an Pflanzenrändern",
-    "bait": "Brotflocken, Maden, kleine Trockenfliegen"
+    "bait": "Brotflocken, Maden, kleine Trockenfliegen",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Scardinius hesperidicus",
@@ -1662,7 +1731,8 @@
     "fishing_note": "Artenschutz, Kleinfisch/Rundmaul oder kein gesicherter lokaler Zielfisch. Keine pauschale Aussage über den gesetzlichen Schutzstatus.",
     "fishing_source_ids": [],
     "fishing_method": "Keine gezielte Befischung empfohlen",
-    "bait": "Keine Empfehlung"
+    "bait": "Keine Empfehlung",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Silurus glanis",
@@ -1694,7 +1764,8 @@
       "be-rules"
     ],
     "fishing_method": "Kräftiges Spinn- oder Grundfischen",
-    "bait": "Grosse Gummifische, Blinker, Tauwurmbündel"
+    "bait": "Grosse Gummifische, Blinker, Tauwurmbündel",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Sander lucioperca",
@@ -1726,7 +1797,8 @@
       "be-rules"
     ],
     "fishing_method": "Spinnfischen, bodennahes Jiggen",
-    "bait": "Schlanke Gummifische, Wobbler"
+    "bait": "Schlanke Gummifische, Wobbler",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Squalius cephalus",
@@ -1758,7 +1830,8 @@
       "be-rules"
     ],
     "fishing_method": "Zapfen-, Spinn- oder Fliegenfischen",
-    "bait": "Brotflocken, Wurm, kleine Wobbler, Streamer"
+    "bait": "Brotflocken, Wurm, kleine Wobbler, Streamer",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Squalius squalus",
@@ -1786,7 +1859,8 @@
     "fishing_note": "Artenschutz, Kleinfisch/Rundmaul oder kein gesicherter lokaler Zielfisch. Keine pauschale Aussage über den gesetzlichen Schutzstatus.",
     "fishing_source_ids": [],
     "fishing_method": "Keine gezielte Befischung empfohlen",
-    "bait": "Keine Empfehlung"
+    "bait": "Keine Empfehlung",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Telestes muticellus",
@@ -1813,7 +1887,8 @@
     "fishing_note": "Artenschutz, Kleinfisch/Rundmaul oder kein gesicherter lokaler Zielfisch. Keine pauschale Aussage über den gesetzlichen Schutzstatus.",
     "fishing_source_ids": [],
     "fishing_method": "Keine gezielte Befischung empfohlen",
-    "bait": "Keine Empfehlung"
+    "bait": "Keine Empfehlung",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Telestes souffia",
@@ -1843,7 +1918,8 @@
       "be-rules"
     ],
     "fishing_method": "Im Kanton Bern ganzjähriges Fangverbot",
-    "bait": "Keine Köderempfehlung"
+    "bait": "Keine Köderempfehlung",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Thymallus aeliani",
@@ -1870,7 +1946,8 @@
     "fishing_note": "Artenschutz, Kleinfisch/Rundmaul oder kein gesicherter lokaler Zielfisch. Keine pauschale Aussage über den gesetzlichen Schutzstatus.",
     "fishing_source_ids": [],
     "fishing_method": "Keine gezielte Befischung empfohlen",
-    "bait": "Keine Empfehlung"
+    "bait": "Keine Empfehlung",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Thymallus thymallus",
@@ -1902,7 +1979,8 @@
       "be-rules"
     ],
     "fishing_method": "Fliegenfischen; in Berner Patentgewässern nur nach geltender Sonderregelung",
-    "bait": "Kleine Nymphen und Trockenfliegen"
+    "bait": "Kleine Nymphen und Trockenfliegen",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Zingel asper",
@@ -1930,7 +2008,8 @@
     "fishing_note": "Artenschutz, Kleinfisch/Rundmaul oder kein gesicherter lokaler Zielfisch. Keine pauschale Aussage über den gesetzlichen Schutzstatus.",
     "fishing_source_ids": [],
     "fishing_method": "Keine gezielte Befischung empfohlen",
-    "bait": "Keine Empfehlung"
+    "bait": "Keine Empfehlung",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Coregonus zugensis",
@@ -1941,15 +2020,14 @@
     "image": "sources/fish/ch/coregonus_zugensis_ch.png",
     "max_cm": 20.0,
     "form_description": "Schlanker Silberfisch mit kleinem Maul, Fettflosse und gegabelter Schwanzflosse.",
-    "information": "Felchen des Zugersees; ernährt sich vor allem von Zooplankton. Für die Artbestimmung sind zusätzliche Merkmale nötig.",
+    "information": "Ausgestorbenes ursprüngliches Albeli des Zugersees. Der Name wurde früher auch für andere Felchen verwendet; die Revision grenzt den heutigen Artbegriff enger ab.",
     "bern_occurrence": {
       "state": "no_record",
-      "detail": "Dem Zugersee zugeordnete Art; kein artspezifischer BE-Beleg in den geprüften Quellen. Der Altbestand führt die Art zudem als in der Schweiz ausgestorben.",
+      "detail": "Kein gesicherter Berner Nachweis im revidierten Artbegriff. Ältere Namensverwendungen werden nicht als aktuelles Vorkommen übernommen.",
+      "reviewed_on": "2026-11-07",
       "source_ids": [
-        "whitefish",
-        "be-guide"
-      ],
-      "reviewed_on": "2026-11-06"
+        "whitefish"
+      ]
     },
     "profile_source_ids": [
       "whitefish",
@@ -1958,7 +2036,9 @@
     "fishing_note": "Artenschutz, Kleinfisch/Rundmaul oder kein gesicherter lokaler Zielfisch. Keine pauschale Aussage über den gesetzlichen Schutzstatus.",
     "fishing_source_ids": [],
     "fishing_method": "Keine gezielte Befischung empfohlen",
-    "bait": "Keine Empfehlung"
+    "bait": "Keine Empfehlung",
+    "taxon_kind": "species",
+    "status_note": "Der revidierte Artbegriff (2023) bezeichnet das ausgestorbene Zuger Albeli. Ältere Verwendungen des Namens für andere Seen sind keine heutigen Nachweise dieser Art."
   },
   {
     "scientific_name": "Coregonus palaea",
@@ -1984,13 +2064,14 @@
       "whitefish-taxonomy"
     ],
     "status_note": "Palée: lokale Einstufungen unterscheiden sich zwischen den Jurarandseen; für den hier berücksichtigten Bielersee unzureichende Datengrundlage.",
-    "fishing_note": "Artzuordnung, lokale Schonzeiten und zulässige Hakenanzahl vor Ort prüfen.",
+    "fishing_note": "Felchen-Gruppenlimiten gemeinsam zählen. Lokale Populationen, Schonzeiten und zulässige Hakenanzahl vor Ort prüfen.",
     "fishing_source_ids": [
       "angling-felche",
-      "be-rules"
+      "fidv-2026"
     ],
-    "fishing_method": "Hegenenfischen, je nach See und Reglement",
-    "bait": "Künstliche Nymphen an der Hegene"
+    "fishing_method": "Hegenenfischen in den dafür zugelassenen Gewässern; lokale Artbestimmung beachten.",
+    "bait": "Künstliche Nymphen an der Hegene",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Coregonus confusus",
@@ -2015,13 +2096,15 @@
       "whitefish",
       "whitefish-taxonomy"
     ],
-    "fishing_note": "Artzuordnung, lokale Schonzeiten und zulässige Hakenanzahl vor Ort prüfen.",
+    "fishing_note": "Felchen-Gruppenlimiten gemeinsam zählen. Lokale Populationen, Schonzeiten und zulässige Hakenanzahl vor Ort prüfen.",
     "fishing_source_ids": [
       "angling-felche",
-      "be-rules"
+      "fidv-2026"
     ],
-    "fishing_method": "Hegenenfischen, je nach See und Reglement",
-    "bait": "Künstliche Nymphen an der Hegene"
+    "fishing_method": "Hegenenfischen in den dafür zugelassenen Gewässern; lokale Artbestimmung beachten.",
+    "bait": "Künstliche Nymphen an der Hegene",
+    "taxon_kind": "species",
+    "status_note": "Statusangabe des Bestands bzw. NE: keine neue schweizweite Einzelart-Bewertung vorgenommen. Seenbezogene Populationen separat beurteilen."
   },
   {
     "scientific_name": "Coregonus brienzii",
@@ -2044,13 +2127,15 @@
       "whitefish",
       "whitefish-taxonomy"
     ],
-    "fishing_note": "Artzuordnung, lokale Schonzeiten und zulässige Hakenanzahl vor Ort prüfen.",
+    "fishing_note": "Felchen-Gruppenlimiten gemeinsam zählen. Lokale Populationen, Schonzeiten und zulässige Hakenanzahl vor Ort prüfen.",
     "fishing_source_ids": [
       "angling-felche",
-      "be-rules"
+      "fidv-2026"
     ],
-    "fishing_method": "Hegenenfischen, je nach See und Reglement",
-    "bait": "Künstliche Nymphen an der Hegene"
+    "fishing_method": "Hegenenfischen in den dafür zugelassenen Gewässern; lokale Artbestimmung beachten.",
+    "bait": "Künstliche Nymphen an der Hegene",
+    "taxon_kind": "species",
+    "status_note": "Statusangabe des Bestands bzw. NE: keine neue schweizweite Einzelart-Bewertung vorgenommen. Seenbezogene Populationen separat beurteilen."
   },
   {
     "scientific_name": "Coregonus steinmanni",
@@ -2073,13 +2158,15 @@
       "whitefish",
       "whitefish-taxonomy"
     ],
-    "fishing_note": "Artzuordnung, lokale Schonzeiten und zulässige Hakenanzahl vor Ort prüfen.",
+    "fishing_note": "Felchen-Gruppenlimiten gemeinsam zählen. Lokale Populationen, Schonzeiten und zulässige Hakenanzahl vor Ort prüfen.",
     "fishing_source_ids": [
       "angling-felche",
-      "be-rules"
+      "fidv-2026"
     ],
-    "fishing_method": "Hegenenfischen, je nach See und Reglement",
-    "bait": "Künstliche Nymphen an der Hegene"
+    "fishing_method": "Hegenenfischen in den dafür zugelassenen Gewässern; lokale Artbestimmung beachten.",
+    "bait": "Künstliche Nymphen an der Hegene",
+    "taxon_kind": "species",
+    "status_note": "Statusangabe des Bestands bzw. NE: keine neue schweizweite Einzelart-Bewertung vorgenommen. Seenbezogene Populationen separat beurteilen."
   },
   {
     "scientific_name": "Coregonus nobilis",
@@ -2104,10 +2191,15 @@
       "whitefish",
       "whitefish-taxonomy"
     ],
-    "fishing_note": "Artenschutz, Kleinfisch/Rundmaul oder kein gesicherter lokaler Zielfisch. Keine pauschale Aussage über den gesetzlichen Schutzstatus.",
-    "fishing_source_ids": [],
-    "fishing_method": "Keine gezielte Befischung empfohlen",
-    "bait": "Keine Empfehlung"
+    "fishing_note": "Felchen-Gruppenlimiten gemeinsam zählen. Lokale Populationen, Schonzeiten und zulässige Hakenanzahl vor Ort prüfen.",
+    "fishing_source_ids": [
+      "angling-felche",
+      "fidv-2026"
+    ],
+    "fishing_method": "Hegenenfischen in den dafür zugelassenen Gewässern; lokale Artbestimmung beachten.",
+    "bait": "Künstliche Nymphen an der Hegene",
+    "taxon_kind": "species",
+    "status_note": "Statusangabe des Bestands bzw. NE: keine neue schweizweite Einzelart-Bewertung vorgenommen. Seenbezogene Populationen separat beurteilen."
   },
   {
     "scientific_name": "Gasterosteus aculeatus",
@@ -2136,7 +2228,8 @@
     "fishing_note": "Artenschutz, Kleinfisch/Rundmaul oder kein gesicherter lokaler Zielfisch. Keine pauschale Aussage über den gesetzlichen Schutzstatus.",
     "fishing_source_ids": [],
     "fishing_method": "Keine gezielte Befischung empfohlen",
-    "bait": "Keine Empfehlung"
+    "bait": "Keine Empfehlung",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Carassius gibelio",
@@ -2168,7 +2261,8 @@
       "be-rules"
     ],
     "fishing_method": "Zapfen- oder leichtes Grundfischen",
-    "bait": "Mais, Maden, Wurm"
+    "bait": "Mais, Maden, Wurm",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Oncorhynchus mykiss",
@@ -2199,7 +2293,8 @@
       "be-rules"
     ],
     "fishing_method": "Spinn-, Fliegen- oder Zapfenfischen",
-    "bait": "Kleine Blinker/Spinner, Nymphen, Wurm (wo erlaubt)"
+    "bait": "Kleine Blinker/Spinner, Nymphen, Wurm (wo erlaubt)",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Pseudorasbora parva",
@@ -2228,7 +2323,8 @@
     "fishing_note": "Artenschutz, Kleinfisch/Rundmaul oder kein gesicherter lokaler Zielfisch. Keine pauschale Aussage über den gesetzlichen Schutzstatus.",
     "fishing_source_ids": [],
     "fishing_method": "Keine gezielte Befischung empfohlen",
-    "bait": "Keine Empfehlung"
+    "bait": "Keine Empfehlung",
+    "taxon_kind": "species"
   },
   {
     "scientific_name": "Lepomis gibbosus",
@@ -2259,6 +2355,2733 @@
       "be-rules"
     ],
     "fishing_method": "Leichtes Zapfenfischen",
-    "bait": "Kleine Wurmstücke, Maden"
+    "bait": "Kleine Wurmstücke, Maden",
+    "taxon_kind": "species"
+  },
+  {
+    "scientific_name": "Tinca tinca",
+    "name": "Schleie",
+    "origin": "Einheimisch",
+    "status": "LC",
+    "in_bern": true,
+    "image": "sources/fish/ch/tinca_tinca_ch.webp",
+    "max_cm": 60,
+    "spawn_cm": null,
+    "form_description": "Kräftiger, rundlicher Körper mit breitem Schwanzstiel, winzigen Schuppen und abgerundeten Flossen. Olivgrün mit bronzenem Glanz; kleines Maul mit zwei kurzen Barteln und rötliche Augen.",
+    "information": "Bewohnt pflanzenreiche Seen, Weiher und ruhige Flussabschnitte mit weichem Grund. Sucht dort nach kleinen Wirbellosen. Die klebrigen Eier werden im warmen Wasser an Pflanzen abgelegt.",
+    "bern_occurrence": {
+      "state": "documented",
+      "detail": "Der BKFV beschreibt Bestände in Berner Kleinseen und Seeländer Kanälen sowie Fänge im Bielersee und Zihlkanal. Die Darstellung ist ein Vorkommensbeleg, keine aktuelle Bestandsschätzung.",
+      "source_ids": [
+        "schleie",
+        "be-reglement-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "schleie",
+      "rl-2022"
+    ],
+    "fishing_method": "Feines Zapfenfischen oder leichtes Grundfischen nahe Pflanzenbeständen, oft morgens oder abends.",
+    "bait": "Würmer, Maden oder Teig",
+    "fishing_note": "Zulässige Fangzeiten und Geräte des konkreten Gewässers beachten; kein Anfüttern in Berner Regalgewässern.",
+    "fishing_source_ids": [
+      "schleie",
+      "fidv-2026"
+    ],
+    "image_note": "Ergänzte Illustration im Stil der vorhandenen Fischzeichnungen.",
+    "taxon_kind": "species"
+  },
+  {
+    "scientific_name": "Salvelinus fontinalis",
+    "name": "Bachsaibling",
+    "origin": "Eingeführt",
+    "status": "NA",
+    "in_bern": true,
+    "image": "sources/fish/ch/salvelinus_fontinalis_ch.webp",
+    "max_cm": 50,
+    "spawn_cm": null,
+    "form_description": "Schlanker Körper mit Fettflosse, marmoriertem Rücken und hellen sowie rot-blau umrandeten Punkten. Die unteren Flossen tragen auffällige helle Vorderränder.",
+    "information": "Eingeführter Kaltwasserfisch nordamerikanischer Herkunft. Lebt bevorzugt in kühlen Oberläufen und ernährt sich von Wirbellosen und kleinen Fischen.",
+    "bern_occurrence": {
+      "state": "documented",
+      "detail": "Der BKFV nennt vereinzelte Vorkommen in Quellgebieten Berner Patent- und Pachtgewässer. Kein aktuelles Bestandsmonitoring.",
+      "source_ids": [
+        "bkfv-bachsaibling"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "bkfv-bachsaibling"
+    ],
+    "fishing_method": "Fliegen-, Zapfen- oder Spinnfischen im Rahmen der örtlich erlaubten Fischerei.",
+    "bait": "Künstliche Fliegen, Nymphen oder kleine Spinner",
+    "fishing_note": "Allgemeine Methodenhinweise; Fangregeln und zulässige Geräte des Gewässers beachten. Kein Anfüttern in Regalgewässern.",
+    "fishing_source_ids": [
+      "bkfv-bachsaibling",
+      "fidv-2026"
+    ],
+    "image_note": "Ergänzte Illustration im Stil der vorhandenen Fischzeichnungen.",
+    "taxon_kind": "species"
+  },
+  {
+    "scientific_name": "Salvelinus namaycush",
+    "name": "Kanadische Seeforelle",
+    "origin": "Eingeführt",
+    "status": "NA",
+    "in_bern": true,
+    "image": "sources/fish/ch/salvelinus_namaycush_ch.webp",
+    "max_cm": 120,
+    "spawn_cm": null,
+    "form_description": "Langgestreckter Saibling mit Fettflosse und deutlich gegabelter Schwanzflosse. Graugrüne Oberseite mit hellen Flecken, weisslicher Bauch und grosses Maul.",
+    "information": "Aus Nordamerika eingeführt. Ein langlebiger Räuber in kühlen Seen; in alpinen Bergseen kann er sich auch bei geringer Produktivität halten.",
+    "bern_occurrence": {
+      "state": "documented",
+      "detail": "Der BKFV dokumentiert Arnensee, Oeschinensee, Gelmersee und Engstlensee. Kein aktuelles Bestandsmonitoring.",
+      "source_ids": [
+        "bkfv-kanadische-seeforelle"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "bkfv-kanadische-seeforelle"
+    ],
+    "fishing_method": "Grundfischen und Hegene; Eisfischen nur bei zugelassener und sicher begehbarer Eisfläche.",
+    "bait": "Bienenmaden, Hegenennymphen oder erlaubte tote Köderfische",
+    "fishing_note": "Allgemeine Methodenhinweise; Fangregeln und zulässige Geräte des Gewässers beachten. Kein Anfüttern in Regalgewässern.",
+    "fishing_source_ids": [
+      "bkfv-kanadische-seeforelle",
+      "fidv-2026"
+    ],
+    "image_note": "Ergänzte Illustration im Stil der vorhandenen Fischzeichnungen.",
+    "taxon_kind": "species"
+  },
+  {
+    "scientific_name": "Carassius carassius",
+    "name": "Karausche",
+    "origin": "Eingeführt",
+    "status": "NA",
+    "in_bern": true,
+    "image": "sources/fish/ch/carassius_carassius_ch.webp",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Hochrückig und seitlich flach, braun-golden mit langer, leicht nach aussen gewölbter Rückenflosse. Keine Barteln; die Flossenform hilft bei der Abgrenzung zum Giebel.",
+    "information": "Bewohnt auch stark bewachsene Kleingewässer mit weichem Grund. Frisst Bodentiere und Pflanzenbestandteile; legt klebrige Eier an Wasserpflanzen ab.",
+    "bern_occurrence": {
+      "state": "documented",
+      "detail": "Der BKFV nennt die Aare, Gewässer im Berner Seeland und im Oberaargau. Kein aktuelles Bestandsmonitoring.",
+      "source_ids": [
+        "bkfv-karausche"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "bkfv-karausche"
+    ],
+    "fishing_method": "Allgemeiner Angelhinweis: feines Zapfen- oder Grundfischen; Artbestimmung gegenüber Giebel und Goldfisch absichern.",
+    "bait": "Würmer oder kleine Teigköder",
+    "fishing_note": "Allgemeine Methodenhinweise; Fangregeln und zulässige Geräte des Gewässers beachten. Kein Anfüttern in Regalgewässern.",
+    "fishing_source_ids": [
+      "bkfv-karausche",
+      "fidv-2026"
+    ],
+    "image_note": "Ergänzte Illustration im Stil der vorhandenen Fischzeichnungen.",
+    "taxon_kind": "species"
+  },
+  {
+    "scientific_name": "Esox cisalpinus",
+    "name": "Italienischer Hecht",
+    "origin": "einheimisch",
+    "status": "DD",
+    "taxon_kind": "species",
+    "aliases": [],
+    "in_bern": null,
+    "image": "sources/fish/ch/generated_0c902fb49e49.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Langgestreckter Raubfisch mit flachem Entenschnabel und weit hinten liegender Rückenflosse. Sichere Abgrenzung vom Hecht erfordert zusätzliche Merkmale.",
+    "information": "Schweizer Nachweise südlich der Alpen; Vermischung mit eingesetztem E. lucius erschwert die Artzuordnung.",
+    "bern_occurrence": {
+      "state": "no_record",
+      "detail": "In der geprüften nationalen Datenbank kein artspezifischer, dem Kanton BE zugeordneter Beleg gefunden. Das ist kein Beweis für Abwesenheit.",
+      "source_ids": [
+        "rl-2022",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "rl-2022",
+      "fish-databank-2026"
+    ],
+    "fishing_method": "Keine gezielte Fangempfehlung; Artbestimmung und örtliche Berechtigung zuerst klären.",
+    "bait": "Keine Köderempfehlung",
+    "fishing_note": "Der Eintrag dokumentiert die Art bzw. Forschungsform und ist keine Fangfreigabe.",
+    "fishing_source_ids": [
+      "fidv-2026",
+      "vbgf-current"
+    ]
+  },
+  {
+    "scientific_name": "Romanogobio benacensis",
+    "name": "Po-Gründling",
+    "origin": "einheimisch",
+    "status": "DD",
+    "taxon_kind": "species",
+    "aliases": [],
+    "in_bern": null,
+    "image": "sources/fish/ch/generated_41c1984b12ba.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Kleiner bodennaher Karpfenfisch mit unterständigem Maul und Barteln. Ähnelt dem Gründling; Schuppenmerkmale sind zur Bestimmung nötig.",
+    "information": "Art des Po-/nordadriatischen Einzugsgebiets; mögliche Vermischung mit eingeführtem Gobio gobio.",
+    "bern_occurrence": {
+      "state": "no_record",
+      "detail": "In der geprüften nationalen Datenbank kein artspezifischer, dem Kanton BE zugeordneter Beleg gefunden. Das ist kein Beweis für Abwesenheit.",
+      "source_ids": [
+        "rl-2022",
+        "benacensis",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "rl-2022",
+      "benacensis"
+    ],
+    "fishing_method": "Keine gezielte Fangempfehlung; Artbestimmung und örtliche Berechtigung zuerst klären.",
+    "bait": "Keine Köderempfehlung",
+    "fishing_note": "Der Eintrag dokumentiert die Art bzw. Forschungsform und ist keine Fangfreigabe.",
+    "fishing_source_ids": [
+      "fidv-2026",
+      "vbgf-current"
+    ]
+  },
+  {
+    "scientific_name": "Sabanejewia larvata",
+    "name": "Maskierter Steinbeisser",
+    "origin": "einheimisch",
+    "status": "CR",
+    "taxon_kind": "species",
+    "aliases": [
+      "Cobite mascherato",
+      "Italienischer Steinbeisser"
+    ],
+    "in_bern": null,
+    "image": "sources/fish/ch/generated_2c1651f8fb73.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Kleine langgestreckte Schmerle mit Barteln und dunkler Fleckenzeichnung; bodennahe Gestalt.",
+    "information": "Als Cobite mascherato in der Roten Liste geführt; Schweizer Vorkommen auf der Alpensüdseite.",
+    "bern_occurrence": {
+      "state": "no_record",
+      "detail": "In der geprüften nationalen Datenbank kein artspezifischer, dem Kanton BE zugeordneter Beleg gefunden. Das ist kein Beweis für Abwesenheit.",
+      "source_ids": [
+        "rl-2022",
+        "larvata",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "rl-2022",
+      "larvata"
+    ],
+    "fishing_method": "Fangverbot; keine gezielte Befischung.",
+    "bait": "Keine Köderempfehlung",
+    "fishing_note": "Der Eintrag dokumentiert die Art bzw. Forschungsform und ist keine Fangfreigabe.",
+    "fishing_source_ids": [
+      "fidv-2026",
+      "vbgf-current"
+    ]
+  },
+  {
+    "scientific_name": "Salvelinus neocomensis",
+    "name": "Jaunet (Neuenburger Saibling)",
+    "origin": "einheimisch",
+    "status": "RE",
+    "taxon_kind": "species",
+    "aliases": [],
+    "in_bern": null,
+    "image": "sources/fish/ch/generated_fcdb9a8005cb.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Kleiner Tiefwassersaibling mit Fettflosse. Bestimmung beruht auf historischen Exemplaren; keine heutige Feldbestimmung möglich.",
+    "information": "Ausgestorbener Saibling des Neuenburgersees. Historische Belege werden nicht als aktuelles Vorkommen dargestellt.",
+    "bern_occurrence": {
+      "state": "no_record",
+      "detail": "In der geprüften nationalen Datenbank kein artspezifischer, dem Kanton BE zugeordneter Beleg gefunden. Das ist kein Beweis für Abwesenheit.",
+      "source_ids": [
+        "rl-2022",
+        "neocomensis",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "rl-2022",
+      "neocomensis"
+    ],
+    "fishing_method": "Fangverbot; keine gezielte Befischung.",
+    "bait": "Keine Köderempfehlung",
+    "fishing_note": "Der Eintrag dokumentiert die Art bzw. Forschungsform und ist keine Fangfreigabe.",
+    "fishing_source_ids": [
+      "fidv-2026",
+      "vbgf-current"
+    ]
+  },
+  {
+    "scientific_name": "Phoxinus lumaireul",
+    "name": "Italienische Elritze",
+    "origin": "einheimisch",
+    "status": "VU",
+    "taxon_kind": "species",
+    "aliases": [],
+    "in_bern": null,
+    "image": "sources/fish/ch/generated_c50cce95daf8.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Kleiner schlanker Schwarmfisch mit stumpfer Schnauze und kleinen Schuppen. Nahe Elritzenarten sind äusserlich schwer zu trennen; Genetik kann nötig sein.",
+    "information": "Südliche Schweizer Elritzenart; nicht mit allen alten Meldungen als P. phoxinus gleichzusetzen.",
+    "bern_occurrence": {
+      "state": "no_record",
+      "detail": "In der geprüften nationalen Datenbank kein artspezifischer, dem Kanton BE zugeordneter Beleg gefunden. Das ist kein Beweis für Abwesenheit.",
+      "source_ids": [
+        "elritzen-2026",
+        "rl-2022",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "elritzen-2026",
+      "rl-2022"
+    ],
+    "fishing_method": "Keine gezielte Fangempfehlung; Artbestimmung und örtliche Berechtigung zuerst klären.",
+    "bait": "Keine Köderempfehlung",
+    "fishing_note": "Der Eintrag dokumentiert die Art bzw. Forschungsform und ist keine Fangfreigabe.",
+    "fishing_source_ids": [
+      "fidv-2026",
+      "vbgf-current"
+    ]
+  },
+  {
+    "scientific_name": "Phoxinus csikii",
+    "name": "Donau-Elritze",
+    "origin": "einheimisch",
+    "status": "NE",
+    "taxon_kind": "species",
+    "aliases": [],
+    "in_bern": null,
+    "image": "sources/fish/ch/generated_00495cbc8884.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Kleiner schlanker Schwarmfisch mit stumpfer Schnauze und kleinen Schuppen. Nahe Elritzenarten sind äusserlich schwer zu trennen; Genetik kann nötig sein.",
+    "information": "Eine der heute in Schweizer Fliessgewässern unterschiedenen Elritzenarten.",
+    "bern_occurrence": {
+      "state": "no_record",
+      "detail": "In der geprüften nationalen Datenbank kein artspezifischer, dem Kanton BE zugeordneter Beleg gefunden. Das ist kein Beweis für Abwesenheit.",
+      "source_ids": [
+        "elritzen-2026",
+        "rl-2022",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "elritzen-2026",
+      "rl-2022"
+    ],
+    "fishing_method": "Keine gezielte Fangempfehlung; Artbestimmung und örtliche Berechtigung zuerst klären.",
+    "bait": "Keine Köderempfehlung",
+    "fishing_note": "Der Eintrag dokumentiert die Art bzw. Forschungsform und ist keine Fangfreigabe.",
+    "fishing_source_ids": [
+      "fidv-2026",
+      "vbgf-current"
+    ]
+  },
+  {
+    "scientific_name": "Phoxinus septimaniae",
+    "name": "Französische Elritze",
+    "origin": "einheimisch",
+    "status": "NE",
+    "taxon_kind": "species",
+    "aliases": [],
+    "in_bern": true,
+    "image": "sources/fish/ch/generated_d4cf5c7d3c98.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Kleiner schlanker Schwarmfisch mit stumpfer Schnauze und kleinen Schuppen. Nahe Elritzenarten sind äusserlich schwer zu trennen; Genetik kann nötig sein.",
+    "information": "Mediterrane Elritzenart mit Schweizer Nachweisen; auch als Französische Elritze bezeichnet.",
+    "bern_occurrence": {
+      "state": "documented",
+      "detail": "Die Verbreitungskarte der Schweizer Elritzen (FIBER 2026, Calegari/Waldock) zeigt diese Form im Berner Aaregebiet. Übersichtskarte, kein aktuelles Bestandsmonitoring für jedes Gewässer.",
+      "source_ids": [
+        "elritzen-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "elritzen-2026",
+      "rl-2022"
+    ],
+    "fishing_method": "Keine gezielte Fangempfehlung; Artbestimmung und örtliche Berechtigung zuerst klären.",
+    "bait": "Keine Köderempfehlung",
+    "fishing_note": "Der Eintrag dokumentiert die Art bzw. Forschungsform und ist keine Fangfreigabe.",
+    "fishing_source_ids": [
+      "fidv-2026",
+      "vbgf-current"
+    ]
+  },
+  {
+    "scientific_name": "Phoxinus sp. (See-Elritze)",
+    "name": "See-Elritze (provisorisch)",
+    "origin": "einheimisch",
+    "status": "NE",
+    "taxon_kind": "provisional",
+    "aliases": [],
+    "in_bern": true,
+    "image": "sources/fish/ch/generated_be48fe5879d4.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Kleiner schlanker Schwarmfisch mit stumpfer Schnauze und kleinen Schuppen. Nahe Elritzenarten sind äusserlich schwer zu trennen; Genetik kann nötig sein.",
+    "information": "Noch nicht abschliessend benannte Form der Seen im Aare-Einzugsgebiet. Die Artzuordnung wird weiter untersucht.",
+    "bern_occurrence": {
+      "state": "documented",
+      "detail": "Die Verbreitungskarte der Schweizer Elritzen (FIBER 2026, Calegari/Waldock) ordnet Thuner- und Brienzersee der noch unbenannten See-Elritze zu. Übersichtskarte, kein aktuelles Bestandsmonitoring für jedes Gewässer.",
+      "source_ids": [
+        "elritzen-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "elritzen-2026",
+      "rl-2022"
+    ],
+    "fishing_method": "Keine gezielte Fangempfehlung; Artbestimmung und örtliche Berechtigung zuerst klären.",
+    "bait": "Keine Köderempfehlung",
+    "fishing_note": "Der Eintrag dokumentiert die Art bzw. Forschungsform und ist keine Fangfreigabe.",
+    "fishing_source_ids": [
+      "fidv-2026",
+      "vbgf-current"
+    ],
+    "image_caption": "Schematische Darstellung"
+  },
+  {
+    "scientific_name": "Barbatula fluvicola",
+    "name": "Nord-Voralpine Bartgrundel",
+    "origin": "einheimisch",
+    "status": "NE",
+    "taxon_kind": "species",
+    "aliases": [],
+    "in_bern": true,
+    "image": "sources/fish/ch/generated_bd9ae8ea45cb.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Langgestreckte bodennahe Schmerle mit Barteln und brauner Zeichnung. Gegenüber anderen Bartgrundeln sind Detailmerkmale nötig.",
+    "information": "2025 beschriebene Art schnell fliessender Bäche und Flüsse.",
+    "bern_occurrence": {
+      "state": "documented",
+      "detail": "Belege aus Lyssbach, Limpach, Urtene und Emme sind in der Erstbeschreibung für Bern aufgeführt.",
+      "source_ids": [
+        "barbatula-2025",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "barbatula-2025"
+    ],
+    "fishing_method": "Keine gezielte Fangempfehlung; Artbestimmung und örtliche Berechtigung zuerst klären.",
+    "bait": "Keine Köderempfehlung",
+    "fishing_note": "Der Eintrag dokumentiert die Art bzw. Forschungsform und ist keine Fangfreigabe.",
+    "fishing_source_ids": [
+      "fidv-2026",
+      "vbgf-current"
+    ]
+  },
+  {
+    "scientific_name": "Barbatula ommata",
+    "name": "Seebartgrundel / Seeschmerle",
+    "origin": "einheimisch",
+    "status": "NE",
+    "taxon_kind": "species",
+    "aliases": [],
+    "in_bern": true,
+    "image": "sources/fish/ch/generated_f01f6b5dd1d3.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Langgestreckte Schmerle mit Barteln, vergleichsweise grossen Augen und teils goldigem Flankenglanz.",
+    "information": "2025 beschriebene Art der Seeufer im Aare-Rhein-System.",
+    "bern_occurrence": {
+      "state": "documented",
+      "detail": "Bielersee in der Erstbeschreibung belegt; ältere Zuordnungen von Thuner- und Brienzersee bleiben dort ausdrücklich vorläufig.",
+      "source_ids": [
+        "barbatula-2025",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "barbatula-2025"
+    ],
+    "fishing_method": "Keine gezielte Fangempfehlung; Artbestimmung und örtliche Berechtigung zuerst klären.",
+    "bait": "Keine Köderempfehlung",
+    "fishing_note": "Der Eintrag dokumentiert die Art bzw. Forschungsform und ist keine Fangfreigabe.",
+    "fishing_source_ids": [
+      "fidv-2026",
+      "vbgf-current"
+    ]
+  },
+  {
+    "scientific_name": "Aspius aspius",
+    "name": "Rapfen",
+    "origin": "eingeführt",
+    "status": "NA",
+    "taxon_kind": "species",
+    "aliases": [
+      "Leuciscus aspius"
+    ],
+    "in_bern": null,
+    "image": "sources/fish/ch/generated_18fa1d8e90e8.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Schlanker silbriger Raubkarpfen mit grossem oberständigem Maul.",
+    "information": "Eingewanderter Raubfisch des Rheins; wissenschaftlich auch als Leuciscus aspius geführt.",
+    "bern_occurrence": {
+      "state": "no_record",
+      "detail": "In der geprüften nationalen Datenbank kein artspezifischer, dem Kanton BE zugeordneter Beleg gefunden. Das ist kein Beweis für Abwesenheit.",
+      "source_ids": [
+        "alien-fish-2022",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "alien-fish-2022",
+      "fish-databank-2026"
+    ],
+    "fishing_method": "Keine gezielte Fangempfehlung; Artbestimmung und örtliche Berechtigung zuerst klären.",
+    "bait": "Keine Köderempfehlung",
+    "fishing_note": "Der Eintrag dokumentiert die Art bzw. Forschungsform und ist keine Fangfreigabe.",
+    "fishing_source_ids": [
+      "fidv-2026",
+      "vbgf-current"
+    ]
+  },
+  {
+    "scientific_name": "Carassius auratus",
+    "name": "Goldfisch",
+    "origin": "eingeführt",
+    "status": "NA",
+    "taxon_kind": "species",
+    "aliases": [],
+    "in_bern": true,
+    "image": "sources/fish/ch/generated_934d7ff91750.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Karauschenart ohne Barteln; Wildformen oft bronze- statt orangefarben.",
+    "information": "Aus Zierhaltung in freie Gewässer gelangt; die Farbe allein genügt nicht zur Artbestimmung.",
+    "bern_occurrence": {
+      "state": "documented",
+      "detail": "In der Schweizer Fischdatenbank sind dem Kanton BE zugeordnete Belege verzeichnet. Daten können historische Fänge enthalten; kein Nachweis eines heutigen flächendeckenden Bestands.",
+      "source_ids": [
+        "alien-fish-2022",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "alien-fish-2022",
+      "fish-databank-2026"
+    ],
+    "fishing_method": "Keine gezielte Fangempfehlung; Artbestimmung und örtliche Berechtigung zuerst klären.",
+    "bait": "Keine Köderempfehlung",
+    "fishing_note": "Der Eintrag dokumentiert die Art bzw. Forschungsform und ist keine Fangfreigabe.",
+    "fishing_source_ids": [
+      "fidv-2026",
+      "vbgf-current"
+    ]
+  },
+  {
+    "scientific_name": "Ctenopharyngodon idella",
+    "name": "Graskarpfen / Weisser Amur",
+    "origin": "eingeführt",
+    "status": "NA",
+    "taxon_kind": "species",
+    "aliases": [],
+    "in_bern": true,
+    "image": "sources/fish/ch/generated_18556005cb4b.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Langgestreckter Körper mit grossen regelmässigen Schuppen und breitem Kopf.",
+    "information": "Asiatischer Pflanzenfresser; Besatz- und Einzelvorkommen von selbsttragenden Beständen unterscheiden.",
+    "bern_occurrence": {
+      "state": "documented",
+      "detail": "In der Schweizer Fischdatenbank sind dem Kanton BE zugeordnete Belege verzeichnet. Daten können historische Fänge enthalten; kein Nachweis eines heutigen flächendeckenden Bestands.",
+      "source_ids": [
+        "alien-fish-2022",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "alien-fish-2022",
+      "fish-databank-2026"
+    ],
+    "fishing_method": "Keine gezielte Fangempfehlung; Artbestimmung und örtliche Berechtigung zuerst klären.",
+    "bait": "Keine Köderempfehlung",
+    "fishing_note": "Der Eintrag dokumentiert die Art bzw. Forschungsform und ist keine Fangfreigabe.",
+    "fishing_source_ids": [
+      "fidv-2026",
+      "vbgf-current"
+    ]
+  },
+  {
+    "scientific_name": "Hypophthalmichthys molitrix",
+    "name": "Silberkarpfen",
+    "origin": "eingeführt",
+    "status": "NA",
+    "taxon_kind": "species",
+    "aliases": [],
+    "in_bern": true,
+    "image": "sources/fish/ch/generated_768bb4e9995c.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Silbriger, seitlich flacher Karpfenfisch mit tief sitzenden Augen.",
+    "information": "Asiatischer Filtrierer; durch frühere Besatzmassnahmen in die Schweiz gelangt.",
+    "bern_occurrence": {
+      "state": "documented",
+      "detail": "In der Schweizer Fischdatenbank sind dem Kanton BE zugeordnete Belege verzeichnet. Daten können historische Fänge enthalten; kein Nachweis eines heutigen flächendeckenden Bestands.",
+      "source_ids": [
+        "alien-fish-2022",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "alien-fish-2022",
+      "fish-databank-2026"
+    ],
+    "fishing_method": "Keine gezielte Fangempfehlung; Artbestimmung und örtliche Berechtigung zuerst klären.",
+    "bait": "Keine Köderempfehlung",
+    "fishing_note": "Der Eintrag dokumentiert die Art bzw. Forschungsform und ist keine Fangfreigabe.",
+    "fishing_source_ids": [
+      "fidv-2026",
+      "vbgf-current"
+    ]
+  },
+  {
+    "scientific_name": "Hypophthalmichthys nobilis",
+    "name": "Marmorkarpfen / Gefleckter Tolstolob",
+    "origin": "eingeführt",
+    "status": "NA",
+    "taxon_kind": "species",
+    "aliases": [
+      "Aristichthys nobilis"
+    ],
+    "in_bern": true,
+    "image": "sources/fish/ch/generated_c802ee76d8bd.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Grosser Kopf mit tief liegenden Augen; dunkel marmorierte Flanken.",
+    "information": "Asiatischer Filtrierer; ältere Literatur nennt Aristichthys nobilis.",
+    "bern_occurrence": {
+      "state": "documented",
+      "detail": "In der Schweizer Fischdatenbank sind dem Kanton BE zugeordnete Belege verzeichnet. Daten können historische Fänge enthalten; kein Nachweis eines heutigen flächendeckenden Bestands.",
+      "source_ids": [
+        "alien-fish-2022",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "alien-fish-2022",
+      "fish-databank-2026"
+    ],
+    "fishing_method": "Keine gezielte Fangempfehlung; Artbestimmung und örtliche Berechtigung zuerst klären.",
+    "bait": "Keine Köderempfehlung",
+    "fishing_note": "Der Eintrag dokumentiert die Art bzw. Forschungsform und ist keine Fangfreigabe.",
+    "fishing_source_ids": [
+      "fidv-2026",
+      "vbgf-current"
+    ]
+  },
+  {
+    "scientific_name": "Micropterus salmoides",
+    "name": "Forellenbarsch",
+    "origin": "eingeführt",
+    "status": "NA",
+    "taxon_kind": "species",
+    "aliases": [],
+    "in_bern": true,
+    "image": "sources/fish/ch/generated_ce5a6c0700d1.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Kräftiger Barsch mit sehr grossem Maul und geteiltem Rückenflossenprofil.",
+    "information": "Nordamerikanischer Raubfisch; in Schweizer Gewässer eingeführt.",
+    "bern_occurrence": {
+      "state": "documented",
+      "detail": "In der Schweizer Fischdatenbank sind dem Kanton BE zugeordnete Belege verzeichnet. Daten können historische Fänge enthalten; kein Nachweis eines heutigen flächendeckenden Bestands.",
+      "source_ids": [
+        "alien-fish-2022",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "alien-fish-2022",
+      "fish-databank-2026"
+    ],
+    "fishing_method": "Keine gezielte Fangempfehlung; Artbestimmung und örtliche Berechtigung zuerst klären.",
+    "bait": "Keine Köderempfehlung",
+    "fishing_note": "Der Eintrag dokumentiert die Art bzw. Forschungsform und ist keine Fangfreigabe.",
+    "fishing_source_ids": [
+      "fidv-2026",
+      "vbgf-current"
+    ]
+  },
+  {
+    "scientific_name": "Ameiurus melas",
+    "name": "Schwarzer Zwergwels",
+    "origin": "eingeführt",
+    "status": "NA",
+    "taxon_kind": "species",
+    "aliases": [],
+    "in_bern": null,
+    "image": "sources/fish/ch/generated_fd56429dc378.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Gedrungener Wels mit Barteln, Fettflosse und kurzer, kaum gegabelter Schwanzflosse.",
+    "information": "Eingeführter Katzenwels; ältere Belege können mit A. nebulosus vermischt sein.",
+    "bern_occurrence": {
+      "state": "no_record",
+      "detail": "In der geprüften nationalen Datenbank kein artspezifischer, dem Kanton BE zugeordneter Beleg gefunden. Das ist kein Beweis für Abwesenheit.",
+      "source_ids": [
+        "alien-fish-2022",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "alien-fish-2022",
+      "fish-databank-2026"
+    ],
+    "fishing_method": "Keine gezielte Fangempfehlung; Artbestimmung und örtliche Berechtigung zuerst klären.",
+    "bait": "Keine Köderempfehlung",
+    "fishing_note": "Der Eintrag dokumentiert die Art bzw. Forschungsform und ist keine Fangfreigabe.",
+    "fishing_source_ids": [
+      "fidv-2026",
+      "vbgf-current"
+    ]
+  },
+  {
+    "scientific_name": "Ameiurus nebulosus",
+    "name": "Brauner Zwergwels",
+    "origin": "eingeführt",
+    "status": "NA",
+    "taxon_kind": "species",
+    "aliases": [],
+    "in_bern": null,
+    "image": "sources/fish/ch/generated_b469f210c0f2.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Barteltragender Wels mit Fettflosse; ähnelt dem Schwarzen Zwergwels.",
+    "information": "Historisch auch als Katzenwels geführt; ältere Sammelangaben erlauben keine sichere Trennung beider Arten.",
+    "bern_occurrence": {
+      "state": "no_record",
+      "detail": "In der geprüften nationalen Datenbank kein artspezifischer, dem Kanton BE zugeordneter Beleg gefunden. Das ist kein Beweis für Abwesenheit.",
+      "source_ids": [
+        "alien-fish-2022",
+        "fish-databank-2026",
+        "colonisation-fish"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "alien-fish-2022",
+      "fish-databank-2026",
+      "colonisation-fish"
+    ],
+    "fishing_method": "Keine gezielte Fangempfehlung; Artbestimmung und örtliche Berechtigung zuerst klären.",
+    "bait": "Keine Köderempfehlung",
+    "fishing_note": "Der Eintrag dokumentiert die Art bzw. Forschungsform und ist keine Fangfreigabe.",
+    "fishing_source_ids": [
+      "fidv-2026",
+      "vbgf-current"
+    ]
+  },
+  {
+    "scientific_name": "Neogobius melanostomus",
+    "name": "Schwarzmaulgrundel",
+    "origin": "eingeführt",
+    "status": "NA",
+    "taxon_kind": "species",
+    "aliases": [],
+    "in_bern": null,
+    "image": "sources/fish/ch/generated_7b395710a66f.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Bodennaher Fisch mit Saugscheibe aus Bauchflossen und dunklem Fleck in der ersten Rückenflosse.",
+    "information": "Gebietsfremde Grundel im Schweizer Rhein; Ausbreitung über Schiffe und künstliche Wasserwege.",
+    "bern_occurrence": {
+      "state": "no_record",
+      "detail": "In der geprüften nationalen Datenbank kein artspezifischer, dem Kanton BE zugeordneter Beleg gefunden. Das ist kein Beweis für Abwesenheit.",
+      "source_ids": [
+        "alien-fish-2022",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "alien-fish-2022",
+      "fish-databank-2026"
+    ],
+    "fishing_method": "Keine gezielte Fangempfehlung; Artbestimmung und örtliche Berechtigung zuerst klären.",
+    "bait": "Keine Köderempfehlung",
+    "fishing_note": "Der Eintrag dokumentiert die Art bzw. Forschungsform und ist keine Fangfreigabe.",
+    "fishing_source_ids": [
+      "fidv-2026",
+      "vbgf-current"
+    ]
+  },
+  {
+    "scientific_name": "Ponticola kessleri",
+    "name": "Kesslergrundel",
+    "origin": "eingeführt",
+    "status": "NA",
+    "taxon_kind": "species",
+    "aliases": [],
+    "in_bern": null,
+    "image": "sources/fish/ch/generated_bf807fe0b675.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Breiter abgeflachter Kopf, grosses Maul und zu einer Saugscheibe verbundene Bauchflossen.",
+    "information": "Gebietsfremde Grundel im Schweizer Rhein.",
+    "bern_occurrence": {
+      "state": "no_record",
+      "detail": "In der geprüften nationalen Datenbank kein artspezifischer, dem Kanton BE zugeordneter Beleg gefunden. Das ist kein Beweis für Abwesenheit.",
+      "source_ids": [
+        "alien-fish-2022",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "alien-fish-2022",
+      "fish-databank-2026"
+    ],
+    "fishing_method": "Keine gezielte Fangempfehlung; Artbestimmung und örtliche Berechtigung zuerst klären.",
+    "bait": "Keine Köderempfehlung",
+    "fishing_note": "Der Eintrag dokumentiert die Art bzw. Forschungsform und ist keine Fangfreigabe.",
+    "fishing_source_ids": [
+      "fidv-2026",
+      "vbgf-current"
+    ]
+  },
+  {
+    "scientific_name": "Paramisgurnus dabryanus",
+    "name": "Chinesischer Schlammpeitzger",
+    "origin": "eingeführt",
+    "status": "NA",
+    "taxon_kind": "species",
+    "aliases": [],
+    "in_bern": null,
+    "image": "sources/fish/ch/generated_f1839a6c8282.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Aalartig langgestreckte Schmerle mit mehreren Barteln und kleinen Flossen.",
+    "information": "Die Schweizer Nachweise beziehen sich auf ein geschlossenes Gewässer; kein flächiger Bestand abgeleitet.",
+    "bern_occurrence": {
+      "state": "no_record",
+      "detail": "In der geprüften nationalen Datenbank kein artspezifischer, dem Kanton BE zugeordneter Beleg gefunden. Das ist kein Beweis für Abwesenheit.",
+      "source_ids": [
+        "alien-fish-2022",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "alien-fish-2022",
+      "fish-databank-2026"
+    ],
+    "fishing_method": "Keine gezielte Fangempfehlung; Artbestimmung und örtliche Berechtigung zuerst klären.",
+    "bait": "Keine Köderempfehlung",
+    "fishing_note": "Der Eintrag dokumentiert die Art bzw. Forschungsform und ist keine Fangfreigabe.",
+    "fishing_source_ids": [
+      "fidv-2026",
+      "vbgf-current"
+    ]
+  },
+  {
+    "scientific_name": "Acipenser naccarii",
+    "name": "Adriatischer Stör",
+    "origin": "Einzelfund / historischer Datensatz",
+    "status": "NE",
+    "taxon_kind": "species",
+    "aliases": [],
+    "in_bern": null,
+    "image": "sources/fish/ch/generated_e6ec3b179c89.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Störgestalt mit Knochenplattenreihen, unterständigem Maul und Barteln.",
+    "information": "In der nationalen Datenbank als Schweizer Fund erfasst (1989–2009). Einzel- und Altdaten belegen weder einen heutigen noch einen sich fortpflanzenden Bestand.",
+    "bern_occurrence": {
+      "state": "no_record",
+      "detail": "In der geprüften nationalen Datenbank kein artspezifischer, dem Kanton BE zugeordneter Beleg gefunden. Das ist kein Beweis für Abwesenheit.",
+      "source_ids": [
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "fish-databank-2026"
+    ],
+    "fishing_method": "Keine gezielte Fangempfehlung; Artbestimmung und örtliche Berechtigung zuerst klären.",
+    "bait": "Keine Köderempfehlung",
+    "fishing_note": "Der Eintrag dokumentiert die Art bzw. Forschungsform und ist keine Fangfreigabe.",
+    "fishing_source_ids": [
+      "fidv-2026",
+      "vbgf-current"
+    ]
+  },
+  {
+    "scientific_name": "Oncorhynchus kisutch",
+    "name": "Silberlachs / Coho",
+    "origin": "Einzelfund / historischer Datensatz",
+    "status": "NE",
+    "taxon_kind": "species",
+    "aliases": [],
+    "in_bern": null,
+    "image": "sources/fish/ch/generated_97d32a958156.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Silbriger Salmonide mit Fettflosse; Körperzeichnung verändert sich zur Laichzeit.",
+    "information": "In der nationalen Datenbank als Schweizer Fund erfasst (1985–1985). Einzel- und Altdaten belegen weder einen heutigen noch einen sich fortpflanzenden Bestand.",
+    "bern_occurrence": {
+      "state": "no_record",
+      "detail": "In der geprüften nationalen Datenbank kein artspezifischer, dem Kanton BE zugeordneter Beleg gefunden. Das ist kein Beweis für Abwesenheit.",
+      "source_ids": [
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "fish-databank-2026"
+    ],
+    "fishing_method": "Keine gezielte Fangempfehlung; Artbestimmung und örtliche Berechtigung zuerst klären.",
+    "bait": "Keine Köderempfehlung",
+    "fishing_note": "Der Eintrag dokumentiert die Art bzw. Forschungsform und ist keine Fangfreigabe.",
+    "fishing_source_ids": [
+      "fidv-2026",
+      "vbgf-current"
+    ]
+  },
+  {
+    "scientific_name": "Leuciscus idus",
+    "name": "Aland / Orfe",
+    "origin": "Einzelfund / historischer Datensatz",
+    "status": "NE",
+    "taxon_kind": "species",
+    "aliases": [],
+    "in_bern": null,
+    "image": "sources/fish/ch/generated_86dd703a959d.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Seitlich flacher silbriger Karpfenfisch; Zuchtform Goldorfe oft orange.",
+    "information": "In der nationalen Datenbank als Schweizer Fund erfasst (1930–1930). Einzel- und Altdaten belegen weder einen heutigen noch einen sich fortpflanzenden Bestand.",
+    "bern_occurrence": {
+      "state": "no_record",
+      "detail": "In der geprüften nationalen Datenbank kein artspezifischer, dem Kanton BE zugeordneter Beleg gefunden. Das ist kein Beweis für Abwesenheit.",
+      "source_ids": [
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "fish-databank-2026"
+    ],
+    "fishing_method": "Keine gezielte Fangempfehlung; Artbestimmung und örtliche Berechtigung zuerst klären.",
+    "bait": "Keine Köderempfehlung",
+    "fishing_note": "Der Eintrag dokumentiert die Art bzw. Forschungsform und ist keine Fangfreigabe.",
+    "fishing_source_ids": [
+      "fidv-2026",
+      "vbgf-current"
+    ]
+  },
+  {
+    "scientific_name": "Micropterus dolomieu",
+    "name": "Schwarzbarsch",
+    "origin": "Einzelfund / historischer Datensatz",
+    "status": "NE",
+    "taxon_kind": "species",
+    "aliases": [],
+    "in_bern": null,
+    "image": "sources/fish/ch/generated_0a77918ad9c2.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Kräftiger Barsch mit grossem Maul und dunklen Querbändern.",
+    "information": "In der nationalen Datenbank als Schweizer Fund erfasst (2006–2006). Einzel- und Altdaten belegen weder einen heutigen noch einen sich fortpflanzenden Bestand.",
+    "bern_occurrence": {
+      "state": "no_record",
+      "detail": "In der geprüften nationalen Datenbank kein artspezifischer, dem Kanton BE zugeordneter Beleg gefunden. Das ist kein Beweis für Abwesenheit.",
+      "source_ids": [
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "fish-databank-2026"
+    ],
+    "fishing_method": "Keine gezielte Fangempfehlung; Artbestimmung und örtliche Berechtigung zuerst klären.",
+    "bait": "Keine Köderempfehlung",
+    "fishing_note": "Der Eintrag dokumentiert die Art bzw. Forschungsform und ist keine Fangfreigabe.",
+    "fishing_source_ids": [
+      "fidv-2026",
+      "vbgf-current"
+    ]
+  },
+  {
+    "scientific_name": "Coregonus albellus",
+    "name": "Brienzlig",
+    "origin": "einheimisch / seenbezogen",
+    "status": "NE",
+    "taxon_kind": "species",
+    "aliases": [],
+    "in_bern": true,
+    "image": "sources/fish/ch/generated_25d982e2a1f6.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Silbriger Felchen mit Fettflosse und gegabelter Schwanzflosse. Artbestimmung erfordert Körpermasse, Kiemenreusendornen und Herkunft.",
+    "information": "Felchenart: Thuner-, Brienzer- und Bielersee. Von anderen Felchen desselben Sees zu unterscheiden.",
+    "bern_occurrence": {
+      "state": "documented",
+      "detail": "In der Schweizer Fischdatenbank sind dem Kanton BE zugeordnete Belege verzeichnet. Daten können historische Fänge enthalten; kein Nachweis eines heutigen flächendeckenden Bestands.",
+      "source_ids": [
+        "whitefish",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "whitefish"
+    ],
+    "fishing_method": "Hegenenfischen in den dafür zugelassenen Gewässern; lokale Artbestimmung beachten.",
+    "bait": "Künstliche Nymphen an der Hegene",
+    "fishing_note": "Felchen-Gruppenlimiten gemeinsam zählen. Lokale Populationen, Schonzeiten und zulässige Hakenanzahl vor Ort prüfen.",
+    "fishing_source_ids": [
+      "angling-felche",
+      "fidv-2026"
+    ],
+    "status_note": "Statusangabe des Bestands bzw. NE: keine neue schweizweite Einzelart-Bewertung vorgenommen. Seenbezogene Populationen separat beurteilen."
+  },
+  {
+    "scientific_name": "Coregonus acrinasus",
+    "name": "Albock",
+    "origin": "einheimisch / seenbezogen",
+    "status": "NE",
+    "taxon_kind": "species",
+    "aliases": [],
+    "in_bern": true,
+    "image": "sources/fish/ch/generated_45f22706244f.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Silbriger Felchen mit Fettflosse und gegabelter Schwanzflosse. Artbestimmung erfordert Körpermasse, Kiemenreusendornen und Herkunft.",
+    "information": "Felchenart: Thuner- und Brienzersee. Von anderen Felchen desselben Sees zu unterscheiden.",
+    "bern_occurrence": {
+      "state": "documented",
+      "detail": "In der Schweizer Fischdatenbank sind dem Kanton BE zugeordnete Belege verzeichnet. Daten können historische Fänge enthalten; kein Nachweis eines heutigen flächendeckenden Bestands.",
+      "source_ids": [
+        "whitefish",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "whitefish"
+    ],
+    "fishing_method": "Hegenenfischen in den dafür zugelassenen Gewässern; lokale Artbestimmung beachten.",
+    "bait": "Künstliche Nymphen an der Hegene",
+    "fishing_note": "Felchen-Gruppenlimiten gemeinsam zählen. Lokale Populationen, Schonzeiten und zulässige Hakenanzahl vor Ort prüfen.",
+    "fishing_source_ids": [
+      "angling-felche",
+      "fidv-2026"
+    ],
+    "status_note": "Statusangabe des Bestands bzw. NE: keine neue schweizweite Einzelart-Bewertung vorgenommen. Seenbezogene Populationen separat beurteilen."
+  },
+  {
+    "scientific_name": "Coregonus alpinus",
+    "name": "Thuner Balchen",
+    "origin": "einheimisch / seenbezogen",
+    "status": "NE",
+    "taxon_kind": "species",
+    "aliases": [],
+    "in_bern": true,
+    "image": "sources/fish/ch/generated_6064ca8daeea.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Silbriger Felchen mit Fettflosse und gegabelter Schwanzflosse. Artbestimmung erfordert Körpermasse, Kiemenreusendornen und Herkunft.",
+    "information": "Felchenart: Thunersee. Von anderen Felchen desselben Sees zu unterscheiden.",
+    "bern_occurrence": {
+      "state": "documented",
+      "detail": "In der Schweizer Fischdatenbank sind dem Kanton BE zugeordnete Belege verzeichnet. Daten können historische Fänge enthalten; kein Nachweis eines heutigen flächendeckenden Bestands.",
+      "source_ids": [
+        "whitefish",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "whitefish"
+    ],
+    "fishing_method": "Hegenenfischen in den dafür zugelassenen Gewässern; lokale Artbestimmung beachten.",
+    "bait": "Künstliche Nymphen an der Hegene",
+    "fishing_note": "Felchen-Gruppenlimiten gemeinsam zählen. Lokale Populationen, Schonzeiten und zulässige Hakenanzahl vor Ort prüfen.",
+    "fishing_source_ids": [
+      "angling-felche",
+      "fidv-2026"
+    ],
+    "status_note": "Statusangabe des Bestands bzw. NE: keine neue schweizweite Einzelart-Bewertung vorgenommen. Seenbezogene Populationen separat beurteilen."
+  },
+  {
+    "scientific_name": "Coregonus arenicolus",
+    "name": "Sandfelchen",
+    "origin": "einheimisch / seenbezogen",
+    "status": "NE",
+    "taxon_kind": "species",
+    "aliases": [],
+    "in_bern": null,
+    "image": "sources/fish/ch/generated_8b11aefd6443.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Silbriger Felchen mit Fettflosse und gegabelter Schwanzflosse. Artbestimmung erfordert Körpermasse, Kiemenreusendornen und Herkunft.",
+    "information": "Felchenart: Bodensee. Von anderen Felchen desselben Sees zu unterscheiden.",
+    "bern_occurrence": {
+      "state": "no_record",
+      "detail": "In der geprüften nationalen Datenbank kein artspezifischer, dem Kanton BE zugeordneter Beleg gefunden. Das ist kein Beweis für Abwesenheit.",
+      "source_ids": [
+        "whitefish",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "whitefish"
+    ],
+    "fishing_method": "Hegenenfischen in den dafür zugelassenen Gewässern; lokale Artbestimmung beachten.",
+    "bait": "Künstliche Nymphen an der Hegene",
+    "fishing_note": "Felchen-Gruppenlimiten gemeinsam zählen. Lokale Populationen, Schonzeiten und zulässige Hakenanzahl vor Ort prüfen.",
+    "fishing_source_ids": [
+      "angling-felche",
+      "fidv-2026"
+    ],
+    "status_note": "Statusangabe des Bestands bzw. NE: keine neue schweizweite Einzelart-Bewertung vorgenommen. Seenbezogene Populationen separat beurteilen."
+  },
+  {
+    "scientific_name": "Coregonus candidus",
+    "name": "Neuenburger Bondelle",
+    "origin": "einheimisch / seenbezogen",
+    "status": "NE",
+    "taxon_kind": "species",
+    "aliases": [],
+    "in_bern": null,
+    "image": "sources/fish/ch/generated_c412036a9866.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Silbriger Felchen mit Fettflosse und gegabelter Schwanzflosse. Artbestimmung erfordert Körpermasse, Kiemenreusendornen und Herkunft.",
+    "information": "Felchenart: Neuenburgersee; im Bielersee durch Besatz. Von anderen Felchen desselben Sees zu unterscheiden.",
+    "bern_occurrence": {
+      "state": "no_record",
+      "detail": "In der geprüften nationalen Datenbank kein artspezifischer, dem Kanton BE zugeordneter Beleg gefunden. Das ist kein Beweis für Abwesenheit.",
+      "source_ids": [
+        "whitefish",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "whitefish"
+    ],
+    "fishing_method": "Hegenenfischen in den dafür zugelassenen Gewässern; lokale Artbestimmung beachten.",
+    "bait": "Künstliche Nymphen an der Hegene",
+    "fishing_note": "Felchen-Gruppenlimiten gemeinsam zählen. Lokale Populationen, Schonzeiten und zulässige Hakenanzahl vor Ort prüfen.",
+    "fishing_source_ids": [
+      "angling-felche",
+      "fidv-2026"
+    ],
+    "status_note": "Statusangabe des Bestands bzw. NE: keine neue schweizweite Einzelart-Bewertung vorgenommen. Seenbezogene Populationen separat beurteilen."
+  },
+  {
+    "scientific_name": "Coregonus duplex",
+    "name": "Grunder / Sandfelchen",
+    "origin": "einheimisch / seenbezogen",
+    "status": "NE",
+    "taxon_kind": "species",
+    "aliases": [],
+    "in_bern": null,
+    "image": "sources/fish/ch/generated_049ed56a87b5.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Silbriger Felchen mit Fettflosse und gegabelter Schwanzflosse. Artbestimmung erfordert Körpermasse, Kiemenreusendornen und Herkunft.",
+    "information": "Felchenart: Zürich- und Walensee. Von anderen Felchen desselben Sees zu unterscheiden.",
+    "bern_occurrence": {
+      "state": "no_record",
+      "detail": "In der geprüften nationalen Datenbank kein artspezifischer, dem Kanton BE zugeordneter Beleg gefunden. Das ist kein Beweis für Abwesenheit.",
+      "source_ids": [
+        "whitefish",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "whitefish"
+    ],
+    "fishing_method": "Hegenenfischen in den dafür zugelassenen Gewässern; lokale Artbestimmung beachten.",
+    "bait": "Künstliche Nymphen an der Hegene",
+    "fishing_note": "Felchen-Gruppenlimiten gemeinsam zählen. Lokale Populationen, Schonzeiten und zulässige Hakenanzahl vor Ort prüfen.",
+    "fishing_source_ids": [
+      "angling-felche",
+      "fidv-2026"
+    ],
+    "status_note": "Statusangabe des Bestands bzw. NE: keine neue schweizweite Einzelart-Bewertung vorgenommen. Seenbezogene Populationen separat beurteilen."
+  },
+  {
+    "scientific_name": "Coregonus fatioi",
+    "name": "Felchen / Tiefenalbock",
+    "origin": "einheimisch / seenbezogen",
+    "status": "NE",
+    "taxon_kind": "species",
+    "aliases": [],
+    "in_bern": true,
+    "image": "sources/fish/ch/generated_c3a156212361.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Silbriger Felchen mit Fettflosse und gegabelter Schwanzflosse. Artbestimmung erfordert Körpermasse, Kiemenreusendornen und Herkunft.",
+    "information": "Felchenart: Thuner- und Brienzersee. Von anderen Felchen desselben Sees zu unterscheiden.",
+    "bern_occurrence": {
+      "state": "documented",
+      "detail": "In der Schweizer Fischdatenbank sind dem Kanton BE zugeordnete Belege verzeichnet. Daten können historische Fänge enthalten; kein Nachweis eines heutigen flächendeckenden Bestands.",
+      "source_ids": [
+        "whitefish",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "whitefish"
+    ],
+    "fishing_method": "Hegenenfischen in den dafür zugelassenen Gewässern; lokale Artbestimmung beachten.",
+    "bait": "Künstliche Nymphen an der Hegene",
+    "fishing_note": "Felchen-Gruppenlimiten gemeinsam zählen. Lokale Populationen, Schonzeiten und zulässige Hakenanzahl vor Ort prüfen.",
+    "fishing_source_ids": [
+      "angling-felche",
+      "fidv-2026"
+    ],
+    "status_note": "Statusangabe des Bestands bzw. NE: keine neue schweizweite Einzelart-Bewertung vorgenommen. Seenbezogene Populationen separat beurteilen."
+  },
+  {
+    "scientific_name": "Coregonus fera",
+    "name": "Féra",
+    "origin": "einheimisch / seenbezogen",
+    "status": "RE",
+    "taxon_kind": "species",
+    "aliases": [],
+    "in_bern": null,
+    "image": "sources/fish/ch/generated_e0c2b951c7ef.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Silbriger Felchen mit Fettflosse und gegabelter Schwanzflosse. Artbestimmung erfordert Körpermasse, Kiemenreusendornen und Herkunft.",
+    "information": "Felchenart: Genfersee. Ausgestorben nach revidierter Taxonomie.",
+    "bern_occurrence": {
+      "state": "no_record",
+      "detail": "In der geprüften nationalen Datenbank kein artspezifischer, dem Kanton BE zugeordneter Beleg gefunden. Das ist kein Beweis für Abwesenheit.",
+      "source_ids": [
+        "whitefish",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "whitefish"
+    ],
+    "fishing_method": "Keine gezielte Fangempfehlung; Artbestimmung und örtliche Berechtigung zuerst klären.",
+    "bait": "Keine Köderempfehlung",
+    "fishing_note": "Der Eintrag dokumentiert die Art bzw. Forschungsform und ist keine Fangfreigabe.",
+    "fishing_source_ids": [
+      "fidv-2026",
+      "vbgf-current"
+    ]
+  },
+  {
+    "scientific_name": "Coregonus gutturosus",
+    "name": "Bodensee-Kilch",
+    "origin": "einheimisch / seenbezogen",
+    "status": "RE",
+    "taxon_kind": "species",
+    "aliases": [],
+    "in_bern": null,
+    "image": "sources/fish/ch/generated_92736fbb5c8f.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Silbriger Felchen mit Fettflosse und gegabelter Schwanzflosse. Artbestimmung erfordert Körpermasse, Kiemenreusendornen und Herkunft.",
+    "information": "Felchenart: Bodensee. Ausgestorben nach revidierter Taxonomie.",
+    "bern_occurrence": {
+      "state": "no_record",
+      "detail": "In der geprüften nationalen Datenbank kein artspezifischer, dem Kanton BE zugeordneter Beleg gefunden. Das ist kein Beweis für Abwesenheit.",
+      "source_ids": [
+        "whitefish",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "whitefish"
+    ],
+    "fishing_method": "Keine gezielte Fangempfehlung; Artbestimmung und örtliche Berechtigung zuerst klären.",
+    "bait": "Keine Köderempfehlung",
+    "fishing_note": "Der Eintrag dokumentiert die Art bzw. Forschungsform und ist keine Fangfreigabe.",
+    "fishing_source_ids": [
+      "fidv-2026",
+      "vbgf-current"
+    ]
+  },
+  {
+    "scientific_name": "Coregonus heglingus",
+    "name": "Hägling",
+    "origin": "einheimisch / seenbezogen",
+    "status": "NE",
+    "taxon_kind": "species",
+    "aliases": [],
+    "in_bern": null,
+    "image": "sources/fish/ch/generated_47f14ce9ce6e.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Silbriger Felchen mit Fettflosse und gegabelter Schwanzflosse. Artbestimmung erfordert Körpermasse, Kiemenreusendornen und Herkunft.",
+    "information": "Felchenart: Zürich- und Walensee. Von anderen Felchen desselben Sees zu unterscheiden.",
+    "bern_occurrence": {
+      "state": "no_record",
+      "detail": "In der geprüften nationalen Datenbank kein artspezifischer, dem Kanton BE zugeordneter Beleg gefunden. Das ist kein Beweis für Abwesenheit.",
+      "source_ids": [
+        "whitefish",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "whitefish"
+    ],
+    "fishing_method": "Hegenenfischen in den dafür zugelassenen Gewässern; lokale Artbestimmung beachten.",
+    "bait": "Künstliche Nymphen an der Hegene",
+    "fishing_note": "Felchen-Gruppenlimiten gemeinsam zählen. Lokale Populationen, Schonzeiten und zulässige Hakenanzahl vor Ort prüfen.",
+    "fishing_source_ids": [
+      "angling-felche",
+      "fidv-2026"
+    ],
+    "status_note": "Statusangabe des Bestands bzw. NE: keine neue schweizweite Einzelart-Bewertung vorgenommen. Seenbezogene Populationen separat beurteilen."
+  },
+  {
+    "scientific_name": "Coregonus hiemalis",
+    "name": "Gravenche",
+    "origin": "einheimisch / seenbezogen",
+    "status": "RE",
+    "taxon_kind": "species",
+    "aliases": [],
+    "in_bern": null,
+    "image": "sources/fish/ch/generated_ab43ecf6413f.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Silbriger Felchen mit Fettflosse und gegabelter Schwanzflosse. Artbestimmung erfordert Körpermasse, Kiemenreusendornen und Herkunft.",
+    "information": "Felchenart: Genfersee. Ausgestorben nach revidierter Taxonomie.",
+    "bern_occurrence": {
+      "state": "no_record",
+      "detail": "In der geprüften nationalen Datenbank kein artspezifischer, dem Kanton BE zugeordneter Beleg gefunden. Das ist kein Beweis für Abwesenheit.",
+      "source_ids": [
+        "whitefish",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "whitefish"
+    ],
+    "fishing_method": "Keine gezielte Fangempfehlung; Artbestimmung und örtliche Berechtigung zuerst klären.",
+    "bait": "Keine Köderempfehlung",
+    "fishing_note": "Der Eintrag dokumentiert die Art bzw. Forschungsform und ist keine Fangfreigabe.",
+    "fishing_source_ids": [
+      "fidv-2026",
+      "vbgf-current"
+    ]
+  },
+  {
+    "scientific_name": "Coregonus intermundia",
+    "name": "Benthischer Schwebbalchen",
+    "origin": "einheimisch / seenbezogen",
+    "status": "NE",
+    "taxon_kind": "species",
+    "aliases": [],
+    "in_bern": null,
+    "image": "sources/fish/ch/generated_5041b90f007b.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Silbriger Felchen mit Fettflosse und gegabelter Schwanzflosse. Artbestimmung erfordert Körpermasse, Kiemenreusendornen und Herkunft.",
+    "information": "Felchenart: Vierwaldstättersee. Von anderen Felchen desselben Sees zu unterscheiden.",
+    "bern_occurrence": {
+      "state": "no_record",
+      "detail": "In der geprüften nationalen Datenbank kein artspezifischer, dem Kanton BE zugeordneter Beleg gefunden. Das ist kein Beweis für Abwesenheit.",
+      "source_ids": [
+        "whitefish",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "whitefish"
+    ],
+    "fishing_method": "Hegenenfischen in den dafür zugelassenen Gewässern; lokale Artbestimmung beachten.",
+    "bait": "Künstliche Nymphen an der Hegene",
+    "fishing_note": "Felchen-Gruppenlimiten gemeinsam zählen. Lokale Populationen, Schonzeiten und zulässige Hakenanzahl vor Ort prüfen.",
+    "fishing_source_ids": [
+      "angling-felche",
+      "fidv-2026"
+    ],
+    "status_note": "Statusangabe des Bestands bzw. NE: keine neue schweizweite Einzelart-Bewertung vorgenommen. Seenbezogene Populationen separat beurteilen."
+  },
+  {
+    "scientific_name": "Coregonus lavaretus",
+    "name": "Lavaret",
+    "origin": "einheimisch / seenbezogen",
+    "status": "NE",
+    "taxon_kind": "species",
+    "aliases": [],
+    "in_bern": null,
+    "image": "sources/fish/ch/generated_b46c0551b79e.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Silbriger Felchen mit Fettflosse und gegabelter Schwanzflosse. Artbestimmung erfordert Körpermasse, Kiemenreusendornen und Herkunft.",
+    "information": "Felchenart: Schweizer Nachweise durch Besatz; Artabgrenzung im Genfersee beachten. Von anderen Felchen desselben Sees zu unterscheiden.",
+    "bern_occurrence": {
+      "state": "no_record",
+      "detail": "In der geprüften nationalen Datenbank kein artspezifischer, dem Kanton BE zugeordneter Beleg gefunden. Das ist kein Beweis für Abwesenheit.",
+      "source_ids": [
+        "whitefish",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "whitefish"
+    ],
+    "fishing_method": "Hegenenfischen in den dafür zugelassenen Gewässern; lokale Artbestimmung beachten.",
+    "bait": "Künstliche Nymphen an der Hegene",
+    "fishing_note": "Felchen-Gruppenlimiten gemeinsam zählen. Lokale Populationen, Schonzeiten und zulässige Hakenanzahl vor Ort prüfen.",
+    "fishing_source_ids": [
+      "angling-felche",
+      "fidv-2026"
+    ],
+    "status_note": "Statusangabe des Bestands bzw. NE: keine neue schweizweite Einzelart-Bewertung vorgenommen. Seenbezogene Populationen separat beurteilen."
+  },
+  {
+    "scientific_name": "Coregonus litoralis",
+    "name": "Vierwaldstätter Balchen",
+    "origin": "einheimisch / seenbezogen",
+    "status": "NE",
+    "taxon_kind": "species",
+    "aliases": [],
+    "in_bern": null,
+    "image": "sources/fish/ch/generated_90c153602c1f.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Silbriger Felchen mit Fettflosse und gegabelter Schwanzflosse. Artbestimmung erfordert Körpermasse, Kiemenreusendornen und Herkunft.",
+    "information": "Felchenart: Vierwaldstättersee; auch Sarnersee. Von anderen Felchen desselben Sees zu unterscheiden.",
+    "bern_occurrence": {
+      "state": "no_record",
+      "detail": "In der geprüften nationalen Datenbank kein artspezifischer, dem Kanton BE zugeordneter Beleg gefunden. Das ist kein Beweis für Abwesenheit.",
+      "source_ids": [
+        "whitefish",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "whitefish"
+    ],
+    "fishing_method": "Hegenenfischen in den dafür zugelassenen Gewässern; lokale Artbestimmung beachten.",
+    "bait": "Künstliche Nymphen an der Hegene",
+    "fishing_note": "Felchen-Gruppenlimiten gemeinsam zählen. Lokale Populationen, Schonzeiten und zulässige Hakenanzahl vor Ort prüfen.",
+    "fishing_source_ids": [
+      "angling-felche",
+      "fidv-2026"
+    ],
+    "status_note": "Statusangabe des Bestands bzw. NE: keine neue schweizweite Einzelart-Bewertung vorgenommen. Seenbezogene Populationen separat beurteilen."
+  },
+  {
+    "scientific_name": "Coregonus macrophthalmus",
+    "name": "Gangfisch",
+    "origin": "einheimisch / seenbezogen",
+    "status": "NE",
+    "taxon_kind": "species",
+    "aliases": [],
+    "in_bern": null,
+    "image": "sources/fish/ch/generated_0fb9387d8d41.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Silbriger Felchen mit Fettflosse und gegabelter Schwanzflosse. Artbestimmung erfordert Körpermasse, Kiemenreusendornen und Herkunft.",
+    "information": "Felchenart: Bodensee. Von anderen Felchen desselben Sees zu unterscheiden.",
+    "bern_occurrence": {
+      "state": "no_record",
+      "detail": "In der geprüften nationalen Datenbank kein artspezifischer, dem Kanton BE zugeordneter Beleg gefunden. Das ist kein Beweis für Abwesenheit.",
+      "source_ids": [
+        "whitefish",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "whitefish"
+    ],
+    "fishing_method": "Hegenenfischen in den dafür zugelassenen Gewässern; lokale Artbestimmung beachten.",
+    "bait": "Künstliche Nymphen an der Hegene",
+    "fishing_note": "Felchen-Gruppenlimiten gemeinsam zählen. Lokale Populationen, Schonzeiten und zulässige Hakenanzahl vor Ort prüfen.",
+    "fishing_source_ids": [
+      "angling-felche",
+      "fidv-2026"
+    ],
+    "status_note": "Statusangabe des Bestands bzw. NE: keine neue schweizweite Einzelart-Bewertung vorgenommen. Seenbezogene Populationen separat beurteilen."
+  },
+  {
+    "scientific_name": "Coregonus muelleri",
+    "name": "Vierwaldstätter Albeli",
+    "origin": "einheimisch / seenbezogen",
+    "status": "NE",
+    "taxon_kind": "species",
+    "aliases": [],
+    "in_bern": null,
+    "image": "sources/fish/ch/generated_69984f3cf071.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Silbriger Felchen mit Fettflosse und gegabelter Schwanzflosse. Artbestimmung erfordert Körpermasse, Kiemenreusendornen und Herkunft.",
+    "information": "Felchenart: Vierwaldstättersee. Von anderen Felchen desselben Sees zu unterscheiden.",
+    "bern_occurrence": {
+      "state": "no_record",
+      "detail": "In der geprüften nationalen Datenbank kein artspezifischer, dem Kanton BE zugeordneter Beleg gefunden. Das ist kein Beweis für Abwesenheit.",
+      "source_ids": [
+        "whitefish",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "whitefish"
+    ],
+    "fishing_method": "Hegenenfischen in den dafür zugelassenen Gewässern; lokale Artbestimmung beachten.",
+    "bait": "Künstliche Nymphen an der Hegene",
+    "fishing_note": "Felchen-Gruppenlimiten gemeinsam zählen. Lokale Populationen, Schonzeiten und zulässige Hakenanzahl vor Ort prüfen.",
+    "fishing_source_ids": [
+      "angling-felche",
+      "fidv-2026"
+    ],
+    "status_note": "Statusangabe des Bestands bzw. NE: keine neue schweizweite Einzelart-Bewertung vorgenommen. Seenbezogene Populationen separat beurteilen."
+  },
+  {
+    "scientific_name": "Coregonus obliterus",
+    "name": "Zuger Albock",
+    "origin": "einheimisch / seenbezogen",
+    "status": "RE",
+    "taxon_kind": "species",
+    "aliases": [],
+    "in_bern": null,
+    "image": "sources/fish/ch/generated_69f9245a78a8.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Silbriger Felchen mit Fettflosse und gegabelter Schwanzflosse. Artbestimmung erfordert Körpermasse, Kiemenreusendornen und Herkunft.",
+    "information": "Felchenart: Zugersee. Ausgestorben nach revidierter Taxonomie.",
+    "bern_occurrence": {
+      "state": "no_record",
+      "detail": "In der geprüften nationalen Datenbank kein artspezifischer, dem Kanton BE zugeordneter Beleg gefunden. Das ist kein Beweis für Abwesenheit.",
+      "source_ids": [
+        "whitefish",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "whitefish"
+    ],
+    "fishing_method": "Keine gezielte Fangempfehlung; Artbestimmung und örtliche Berechtigung zuerst klären.",
+    "bait": "Keine Köderempfehlung",
+    "fishing_note": "Der Eintrag dokumentiert die Art bzw. Forschungsform und ist keine Fangfreigabe.",
+    "fishing_source_ids": [
+      "fidv-2026",
+      "vbgf-current"
+    ]
+  },
+  {
+    "scientific_name": "Coregonus profundus",
+    "name": "Kropfer",
+    "origin": "einheimisch / seenbezogen",
+    "status": "NE",
+    "taxon_kind": "species",
+    "aliases": [],
+    "in_bern": true,
+    "image": "sources/fish/ch/generated_d1db4907cdfd.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Silbriger Felchen mit Fettflosse und gegabelter Schwanzflosse. Artbestimmung erfordert Körpermasse, Kiemenreusendornen und Herkunft.",
+    "information": "Felchenart: Thunersee; eingeführt im Bielersee. Von anderen Felchen desselben Sees zu unterscheiden.",
+    "bern_occurrence": {
+      "state": "documented",
+      "detail": "In der Schweizer Fischdatenbank sind dem Kanton BE zugeordnete Belege verzeichnet. Daten können historische Fänge enthalten; kein Nachweis eines heutigen flächendeckenden Bestands.",
+      "source_ids": [
+        "whitefish",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "whitefish"
+    ],
+    "fishing_method": "Hegenenfischen in den dafür zugelassenen Gewässern; lokale Artbestimmung beachten.",
+    "bait": "Künstliche Nymphen an der Hegene",
+    "fishing_note": "Felchen-Gruppenlimiten gemeinsam zählen. Lokale Populationen, Schonzeiten und zulässige Hakenanzahl vor Ort prüfen.",
+    "fishing_source_ids": [
+      "angling-felche",
+      "fidv-2026"
+    ],
+    "status_note": "Statusangabe des Bestands bzw. NE: keine neue schweizweite Einzelart-Bewertung vorgenommen. Seenbezogene Populationen separat beurteilen."
+  },
+  {
+    "scientific_name": "Coregonus restrictus",
+    "name": "Murtensee-Felchen",
+    "origin": "einheimisch / seenbezogen",
+    "status": "RE",
+    "taxon_kind": "species",
+    "aliases": [],
+    "in_bern": null,
+    "image": "sources/fish/ch/generated_7937d5a482e0.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Silbriger Felchen mit Fettflosse und gegabelter Schwanzflosse. Artbestimmung erfordert Körpermasse, Kiemenreusendornen und Herkunft.",
+    "information": "Felchenart: Murtensee. Ausgestorben nach revidierter Taxonomie.",
+    "bern_occurrence": {
+      "state": "no_record",
+      "detail": "In der geprüften nationalen Datenbank kein artspezifischer, dem Kanton BE zugeordneter Beleg gefunden. Das ist kein Beweis für Abwesenheit.",
+      "source_ids": [
+        "whitefish",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "whitefish"
+    ],
+    "fishing_method": "Keine gezielte Fangempfehlung; Artbestimmung und örtliche Berechtigung zuerst klären.",
+    "bait": "Keine Köderempfehlung",
+    "fishing_note": "Der Eintrag dokumentiert die Art bzw. Forschungsform und ist keine Fangfreigabe.",
+    "fishing_source_ids": [
+      "fidv-2026",
+      "vbgf-current"
+    ]
+  },
+  {
+    "scientific_name": "Coregonus sarnensis",
+    "name": "Sarnerfelchen",
+    "origin": "einheimisch / seenbezogen",
+    "status": "NE",
+    "taxon_kind": "species",
+    "aliases": [],
+    "in_bern": null,
+    "image": "sources/fish/ch/generated_78cee12d19b0.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Silbriger Felchen mit Fettflosse und gegabelter Schwanzflosse. Artbestimmung erfordert Körpermasse, Kiemenreusendornen und Herkunft.",
+    "information": "Felchenart: Sarnersee. Von anderen Felchen desselben Sees zu unterscheiden.",
+    "bern_occurrence": {
+      "state": "no_record",
+      "detail": "In der geprüften nationalen Datenbank kein artspezifischer, dem Kanton BE zugeordneter Beleg gefunden. Das ist kein Beweis für Abwesenheit.",
+      "source_ids": [
+        "whitefish",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "whitefish"
+    ],
+    "fishing_method": "Hegenenfischen in den dafür zugelassenen Gewässern; lokale Artbestimmung beachten.",
+    "bait": "Künstliche Nymphen an der Hegene",
+    "fishing_note": "Felchen-Gruppenlimiten gemeinsam zählen. Lokale Populationen, Schonzeiten und zulässige Hakenanzahl vor Ort prüfen.",
+    "fishing_source_ids": [
+      "angling-felche",
+      "fidv-2026"
+    ],
+    "status_note": "Statusangabe des Bestands bzw. NE: keine neue schweizweite Einzelart-Bewertung vorgenommen. Seenbezogene Populationen separat beurteilen."
+  },
+  {
+    "scientific_name": "Coregonus suidteri",
+    "name": "Sempacher Balchen",
+    "origin": "einheimisch / seenbezogen",
+    "status": "NE",
+    "taxon_kind": "species",
+    "aliases": [],
+    "in_bern": null,
+    "image": "sources/fish/ch/generated_f21a0a434512.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Silbriger Felchen mit Fettflosse und gegabelter Schwanzflosse. Artbestimmung erfordert Körpermasse, Kiemenreusendornen und Herkunft.",
+    "information": "Felchenart: Sempachersee. Von anderen Felchen desselben Sees zu unterscheiden.",
+    "bern_occurrence": {
+      "state": "no_record",
+      "detail": "In der geprüften nationalen Datenbank kein artspezifischer, dem Kanton BE zugeordneter Beleg gefunden. Das ist kein Beweis für Abwesenheit.",
+      "source_ids": [
+        "whitefish",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "whitefish"
+    ],
+    "fishing_method": "Hegenenfischen in den dafür zugelassenen Gewässern; lokale Artbestimmung beachten.",
+    "bait": "Künstliche Nymphen an der Hegene",
+    "fishing_note": "Felchen-Gruppenlimiten gemeinsam zählen. Lokale Populationen, Schonzeiten und zulässige Hakenanzahl vor Ort prüfen.",
+    "fishing_source_ids": [
+      "angling-felche",
+      "fidv-2026"
+    ],
+    "status_note": "Statusangabe des Bestands bzw. NE: keine neue schweizweite Einzelart-Bewertung vorgenommen. Seenbezogene Populationen separat beurteilen."
+  },
+  {
+    "scientific_name": "Coregonus supersum",
+    "name": "Zuger Balchen",
+    "origin": "einheimisch / seenbezogen",
+    "status": "NE",
+    "taxon_kind": "species",
+    "aliases": [],
+    "in_bern": null,
+    "image": "sources/fish/ch/generated_c166d5b350c6.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Silbriger Felchen mit Fettflosse und gegabelter Schwanzflosse. Artbestimmung erfordert Körpermasse, Kiemenreusendornen und Herkunft.",
+    "information": "Felchenart: Zugersee; weitere Seen durch Besatz. Von anderen Felchen desselben Sees zu unterscheiden.",
+    "bern_occurrence": {
+      "state": "no_record",
+      "detail": "In der geprüften nationalen Datenbank kein artspezifischer, dem Kanton BE zugeordneter Beleg gefunden. Das ist kein Beweis für Abwesenheit.",
+      "source_ids": [
+        "whitefish",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "whitefish"
+    ],
+    "fishing_method": "Hegenenfischen in den dafür zugelassenen Gewässern; lokale Artbestimmung beachten.",
+    "bait": "Künstliche Nymphen an der Hegene",
+    "fishing_note": "Felchen-Gruppenlimiten gemeinsam zählen. Lokale Populationen, Schonzeiten und zulässige Hakenanzahl vor Ort prüfen.",
+    "fishing_source_ids": [
+      "angling-felche",
+      "fidv-2026"
+    ],
+    "status_note": "Statusangabe des Bestands bzw. NE: keine neue schweizweite Einzelart-Bewertung vorgenommen. Seenbezogene Populationen separat beurteilen."
+  },
+  {
+    "scientific_name": "Coregonus suspensus",
+    "name": "Pelagischer Schwebbalchen",
+    "origin": "einheimisch / seenbezogen",
+    "status": "NE",
+    "taxon_kind": "species",
+    "aliases": [],
+    "in_bern": null,
+    "image": "sources/fish/ch/generated_e78f84cb76f7.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Silbriger Felchen mit Fettflosse und gegabelter Schwanzflosse. Artbestimmung erfordert Körpermasse, Kiemenreusendornen und Herkunft.",
+    "information": "Felchenart: Vierwaldstättersee. Von anderen Felchen desselben Sees zu unterscheiden.",
+    "bern_occurrence": {
+      "state": "no_record",
+      "detail": "In der geprüften nationalen Datenbank kein artspezifischer, dem Kanton BE zugeordneter Beleg gefunden. Das ist kein Beweis für Abwesenheit.",
+      "source_ids": [
+        "whitefish",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "whitefish"
+    ],
+    "fishing_method": "Hegenenfischen in den dafür zugelassenen Gewässern; lokale Artbestimmung beachten.",
+    "bait": "Künstliche Nymphen an der Hegene",
+    "fishing_note": "Felchen-Gruppenlimiten gemeinsam zählen. Lokale Populationen, Schonzeiten und zulässige Hakenanzahl vor Ort prüfen.",
+    "fishing_source_ids": [
+      "angling-felche",
+      "fidv-2026"
+    ],
+    "status_note": "Statusangabe des Bestands bzw. NE: keine neue schweizweite Einzelart-Bewertung vorgenommen. Seenbezogene Populationen separat beurteilen."
+  },
+  {
+    "scientific_name": "Coregonus wartmanni",
+    "name": "Blaufelchen",
+    "origin": "einheimisch / seenbezogen",
+    "status": "NE",
+    "taxon_kind": "species",
+    "aliases": [],
+    "in_bern": null,
+    "image": "sources/fish/ch/generated_923924cd0e2e.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Silbriger Felchen mit Fettflosse und gegabelter Schwanzflosse. Artbestimmung erfordert Körpermasse, Kiemenreusendornen und Herkunft.",
+    "information": "Felchenart: Bodensee. Von anderen Felchen desselben Sees zu unterscheiden.",
+    "bern_occurrence": {
+      "state": "no_record",
+      "detail": "In der geprüften nationalen Datenbank kein artspezifischer, dem Kanton BE zugeordneter Beleg gefunden. Das ist kein Beweis für Abwesenheit.",
+      "source_ids": [
+        "whitefish",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "whitefish"
+    ],
+    "fishing_method": "Hegenenfischen in den dafür zugelassenen Gewässern; lokale Artbestimmung beachten.",
+    "bait": "Künstliche Nymphen an der Hegene",
+    "fishing_note": "Felchen-Gruppenlimiten gemeinsam zählen. Lokale Populationen, Schonzeiten und zulässige Hakenanzahl vor Ort prüfen.",
+    "fishing_source_ids": [
+      "angling-felche",
+      "fidv-2026"
+    ],
+    "status_note": "Statusangabe des Bestands bzw. NE: keine neue schweizweite Einzelart-Bewertung vorgenommen. Seenbezogene Populationen separat beurteilen."
+  },
+  {
+    "scientific_name": "Coregonus zuerichensis",
+    "name": "Blaalig / Zürichsee-Albeli",
+    "origin": "einheimisch / seenbezogen",
+    "status": "NE",
+    "taxon_kind": "species",
+    "aliases": [],
+    "in_bern": null,
+    "image": "sources/fish/ch/generated_a348d7d73381.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Silbriger Felchen mit Fettflosse und gegabelter Schwanzflosse. Artbestimmung erfordert Körpermasse, Kiemenreusendornen und Herkunft.",
+    "information": "Felchenart: Zürichsee; Walensee-Population ausgestorben. Von anderen Felchen desselben Sees zu unterscheiden.",
+    "bern_occurrence": {
+      "state": "no_record",
+      "detail": "In der geprüften nationalen Datenbank kein artspezifischer, dem Kanton BE zugeordneter Beleg gefunden. Das ist kein Beweis für Abwesenheit.",
+      "source_ids": [
+        "whitefish",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "whitefish"
+    ],
+    "fishing_method": "Hegenenfischen in den dafür zugelassenen Gewässern; lokale Artbestimmung beachten.",
+    "bait": "Künstliche Nymphen an der Hegene",
+    "fishing_note": "Felchen-Gruppenlimiten gemeinsam zählen. Lokale Populationen, Schonzeiten und zulässige Hakenanzahl vor Ort prüfen.",
+    "fishing_source_ids": [
+      "angling-felche",
+      "fidv-2026"
+    ],
+    "status_note": "Statusangabe des Bestands bzw. NE: keine neue schweizweite Einzelart-Bewertung vorgenommen. Seenbezogene Populationen separat beurteilen."
+  },
+  {
+    "scientific_name": "Coregonus sp. (Pfäffikersee)",
+    "name": "Felchenform Pfäffikersee (ausgestorben)",
+    "origin": "einheimisch",
+    "status": "RE",
+    "taxon_kind": "provisional",
+    "aliases": [],
+    "in_bern": null,
+    "image": "sources/fish/ch/generated_e5c3ed9b0645.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Felchengestalt mit Fettflosse; keine gesicherte artspezifische Zeichnung oder neue Benennung.",
+    "information": "In den Referenzen als ausgestorbene, noch nicht formal benannte Felchenform geführt: Pfäffikersee.",
+    "bern_occurrence": {
+      "state": "no_record",
+      "detail": "In der geprüften nationalen Datenbank kein artspezifischer, dem Kanton BE zugeordneter Beleg gefunden. Das ist kein Beweis für Abwesenheit.",
+      "source_ids": [
+        "whitefish",
+        "projet-lac-2024",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "whitefish",
+      "projet-lac-2024"
+    ],
+    "fishing_method": "Keine gezielte Fangempfehlung; Artbestimmung und örtliche Berechtigung zuerst klären.",
+    "bait": "Keine Köderempfehlung",
+    "fishing_note": "Der Eintrag dokumentiert die Art bzw. Forschungsform und ist keine Fangfreigabe.",
+    "fishing_source_ids": [
+      "fidv-2026",
+      "vbgf-current"
+    ],
+    "image_caption": "Schematische Darstellung"
+  },
+  {
+    "scientific_name": "Coregonus sp. (Greifensee)",
+    "name": "Felchenform Greifensee (ausgestorben)",
+    "origin": "einheimisch",
+    "status": "RE",
+    "taxon_kind": "provisional",
+    "aliases": [],
+    "in_bern": null,
+    "image": "sources/fish/ch/generated_cf1662172282.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Felchengestalt mit Fettflosse; keine gesicherte artspezifische Zeichnung oder neue Benennung.",
+    "information": "In den Referenzen als ausgestorbene, noch nicht formal benannte Felchenform geführt: Greifensee.",
+    "bern_occurrence": {
+      "state": "no_record",
+      "detail": "In der geprüften nationalen Datenbank kein artspezifischer, dem Kanton BE zugeordneter Beleg gefunden. Das ist kein Beweis für Abwesenheit.",
+      "source_ids": [
+        "whitefish",
+        "projet-lac-2024",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "whitefish",
+      "projet-lac-2024"
+    ],
+    "fishing_method": "Keine gezielte Fangempfehlung; Artbestimmung und örtliche Berechtigung zuerst klären.",
+    "bait": "Keine Köderempfehlung",
+    "fishing_note": "Der Eintrag dokumentiert die Art bzw. Forschungsform und ist keine Fangfreigabe.",
+    "fishing_source_ids": [
+      "fidv-2026",
+      "vbgf-current"
+    ],
+    "image_caption": "Schematische Darstellung"
+  },
+  {
+    "scientific_name": "Coregonus sp. (Bündeli)",
+    "name": "Felchenform Bündeli (ausgestorben)",
+    "origin": "einheimisch",
+    "status": "RE",
+    "taxon_kind": "provisional",
+    "aliases": [],
+    "in_bern": null,
+    "image": "sources/fish/ch/generated_14d209f36450.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Felchengestalt mit Fettflosse; keine gesicherte artspezifische Zeichnung oder neue Benennung.",
+    "information": "In den Referenzen als ausgestorbene, noch nicht formal benannte Felchenform geführt: Sempachersee.",
+    "bern_occurrence": {
+      "state": "no_record",
+      "detail": "In der geprüften nationalen Datenbank kein artspezifischer, dem Kanton BE zugeordneter Beleg gefunden. Das ist kein Beweis für Abwesenheit.",
+      "source_ids": [
+        "whitefish",
+        "projet-lac-2024",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "whitefish",
+      "projet-lac-2024"
+    ],
+    "fishing_method": "Keine gezielte Fangempfehlung; Artbestimmung und örtliche Berechtigung zuerst klären.",
+    "bait": "Keine Köderempfehlung",
+    "fishing_note": "Der Eintrag dokumentiert die Art bzw. Forschungsform und ist keine Fangfreigabe.",
+    "fishing_source_ids": [
+      "fidv-2026",
+      "vbgf-current"
+    ],
+    "image_caption": "Schematische Darstellung"
+  },
+  {
+    "scientific_name": "Coregonus sp. (Baldegger-Hallwilersee)",
+    "name": "Felchenform Baldegger-Hallwilersee (ausgestorben)",
+    "origin": "einheimisch",
+    "status": "RE",
+    "taxon_kind": "provisional",
+    "aliases": [],
+    "in_bern": null,
+    "image": "sources/fish/ch/generated_1ccff950536e.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Felchengestalt mit Fettflosse; keine gesicherte artspezifische Zeichnung oder neue Benennung.",
+    "information": "In den Referenzen als ausgestorbene, noch nicht formal benannte Felchenform geführt: Baldegger- und Hallwilersee.",
+    "bern_occurrence": {
+      "state": "no_record",
+      "detail": "In der geprüften nationalen Datenbank kein artspezifischer, dem Kanton BE zugeordneter Beleg gefunden. Das ist kein Beweis für Abwesenheit.",
+      "source_ids": [
+        "whitefish",
+        "projet-lac-2024",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "whitefish",
+      "projet-lac-2024"
+    ],
+    "fishing_method": "Keine gezielte Fangempfehlung; Artbestimmung und örtliche Berechtigung zuerst klären.",
+    "bait": "Keine Köderempfehlung",
+    "fishing_note": "Der Eintrag dokumentiert die Art bzw. Forschungsform und ist keine Fangfreigabe.",
+    "fishing_source_ids": [
+      "fidv-2026",
+      "vbgf-current"
+    ],
+    "image_caption": "Schematische Darstellung"
+  },
+  {
+    "scientific_name": "Cottus sp. (Aare-Seeufer)",
+    "name": "Aare-Seeufergroppe (Forschungsform)",
+    "origin": "einheimisch",
+    "status": "NE",
+    "taxon_kind": "provisional",
+    "aliases": [],
+    "in_bern": true,
+    "image": "sources/fish/ch/generated_7d93431c2f1e.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Bodenfisch mit breitem Kopf und grossen Brustflossen.",
+    "information": "Noch unbeschriebene Seeuferlinie des Aare-Systems.",
+    "bern_occurrence": {
+      "state": "documented",
+      "detail": "Forschungsform gemäss verlinkter Studie; Berner Seensystem im Bericht enthalten.",
+      "source_ids": [
+        "projet-lac-2024",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "projet-lac-2024"
+    ],
+    "fishing_method": "Keine gezielte Fangempfehlung; Artbestimmung und örtliche Berechtigung zuerst klären.",
+    "bait": "Keine Köderempfehlung",
+    "fishing_note": "Der Eintrag dokumentiert die Art bzw. Forschungsform und ist keine Fangfreigabe.",
+    "fishing_source_ids": [
+      "fidv-2026",
+      "vbgf-current"
+    ],
+    "image_caption": "Schematische Darstellung"
+  },
+  {
+    "scientific_name": "Cottus sp. (Thunersee-Tiefe)",
+    "name": "Thunersee-Tiefengroppe (Forschungsform)",
+    "origin": "einheimisch",
+    "status": "NE",
+    "taxon_kind": "provisional",
+    "aliases": [],
+    "in_bern": true,
+    "image": "sources/fish/ch/generated_e0755f9fdec3.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Breitköpfiger Bodenfisch mit grossen Brustflossen; Tiefenanpassungen wissenschaftlich untersucht.",
+    "information": "Im Projet Lac als eigenständige Forschungsform gefunden.",
+    "bern_occurrence": {
+      "state": "documented",
+      "detail": "Forschungsform gemäss verlinkter Studie; Berner Seensystem im Bericht enthalten.",
+      "source_ids": [
+        "projet-lac-2024",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "projet-lac-2024"
+    ],
+    "fishing_method": "Keine gezielte Fangempfehlung; Artbestimmung und örtliche Berechtigung zuerst klären.",
+    "bait": "Keine Köderempfehlung",
+    "fishing_note": "Der Eintrag dokumentiert die Art bzw. Forschungsform und ist keine Fangfreigabe.",
+    "fishing_source_ids": [
+      "fidv-2026",
+      "vbgf-current"
+    ],
+    "image_caption": "Schematische Darstellung"
+  },
+  {
+    "scientific_name": "Cottus sp. (Walensee-Tiefe)",
+    "name": "Walensee-Tiefengroppe (Forschungsform)",
+    "origin": "einheimisch",
+    "status": "NE",
+    "taxon_kind": "provisional",
+    "aliases": [],
+    "in_bern": null,
+    "image": "sources/fish/ch/generated_797f5d6da385.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Groppengestalt mit grossem Kopf und Brustflossen.",
+    "information": "Noch unbeschriebene Tiefenform des Walensees.",
+    "bern_occurrence": {
+      "state": "no_record",
+      "detail": "Forschungsform gemäss verlinkter Studie; Kein gesicherter artspezifischer Berner Nachweis zugeordnet.",
+      "source_ids": [
+        "projet-lac-2024",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "projet-lac-2024"
+    ],
+    "fishing_method": "Keine gezielte Fangempfehlung; Artbestimmung und örtliche Berechtigung zuerst klären.",
+    "bait": "Keine Köderempfehlung",
+    "fishing_note": "Der Eintrag dokumentiert die Art bzw. Forschungsform und ist keine Fangfreigabe.",
+    "fishing_source_ids": [
+      "fidv-2026",
+      "vbgf-current"
+    ],
+    "image_caption": "Schematische Darstellung"
+  },
+  {
+    "scientific_name": "Cottus sp. (Vierwaldstättersee-Tiefe)",
+    "name": "Vierwaldstättersee-Tiefengroppe (Forschungsform)",
+    "origin": "einheimisch",
+    "status": "NE",
+    "taxon_kind": "provisional",
+    "aliases": [],
+    "in_bern": null,
+    "image": "sources/fish/ch/generated_16d455202ee4.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Groppengestalt mit grossem Kopf und Brustflossen.",
+    "information": "Noch unbeschriebene Tiefenform des Vierwaldstättersees.",
+    "bern_occurrence": {
+      "state": "no_record",
+      "detail": "Forschungsform gemäss verlinkter Studie; Kein gesicherter artspezifischer Berner Nachweis zugeordnet.",
+      "source_ids": [
+        "projet-lac-2024",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "projet-lac-2024"
+    ],
+    "fishing_method": "Keine gezielte Fangempfehlung; Artbestimmung und örtliche Berechtigung zuerst klären.",
+    "bait": "Keine Köderempfehlung",
+    "fishing_note": "Der Eintrag dokumentiert die Art bzw. Forschungsform und ist keine Fangfreigabe.",
+    "fishing_source_ids": [
+      "fidv-2026",
+      "vbgf-current"
+    ],
+    "image_caption": "Schematische Darstellung"
+  },
+  {
+    "scientific_name": "Cottus sp. (Po-Seeufer)",
+    "name": "Po-Seeufergroppe (Forschungsform)",
+    "origin": "einheimisch",
+    "status": "NE",
+    "taxon_kind": "provisional",
+    "aliases": [],
+    "in_bern": null,
+    "image": "sources/fish/ch/generated_4782af52ecab.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Breiter Kopf und grosse Brustflossen, bodennaher Körper.",
+    "information": "Noch unbeschriebene Uferlinie der Seen südlich der Alpen.",
+    "bern_occurrence": {
+      "state": "no_record",
+      "detail": "Forschungsform gemäss verlinkter Studie; Kein gesicherter artspezifischer Berner Nachweis zugeordnet.",
+      "source_ids": [
+        "projet-lac-2024",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "projet-lac-2024"
+    ],
+    "fishing_method": "Keine gezielte Fangempfehlung; Artbestimmung und örtliche Berechtigung zuerst klären.",
+    "bait": "Keine Köderempfehlung",
+    "fishing_note": "Der Eintrag dokumentiert die Art bzw. Forschungsform und ist keine Fangfreigabe.",
+    "fishing_source_ids": [
+      "fidv-2026",
+      "vbgf-current"
+    ],
+    "image_caption": "Schematische Darstellung"
+  },
+  {
+    "scientific_name": "Cottus sp. (Po-Tiefe)",
+    "name": "Po-Tiefengroppe (Forschungsform)",
+    "origin": "einheimisch",
+    "status": "NE",
+    "taxon_kind": "provisional",
+    "aliases": [],
+    "in_bern": null,
+    "image": "sources/fish/ch/generated_3484adf62378.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Breiter Kopf und grosse Brustflossen, bodennaher Körper.",
+    "information": "Noch unbeschriebene Tiefenlinie der Seen südlich der Alpen.",
+    "bern_occurrence": {
+      "state": "no_record",
+      "detail": "Forschungsform gemäss verlinkter Studie; Kein gesicherter artspezifischer Berner Nachweis zugeordnet.",
+      "source_ids": [
+        "projet-lac-2024",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "projet-lac-2024"
+    ],
+    "fishing_method": "Keine gezielte Fangempfehlung; Artbestimmung und örtliche Berechtigung zuerst klären.",
+    "bait": "Keine Köderempfehlung",
+    "fishing_note": "Der Eintrag dokumentiert die Art bzw. Forschungsform und ist keine Fangfreigabe.",
+    "fishing_source_ids": [
+      "fidv-2026",
+      "vbgf-current"
+    ],
+    "image_caption": "Schematische Darstellung"
+  },
+  {
+    "scientific_name": "Cottus sp. (Rhone-Linie)",
+    "name": "Rhone-Groppe (Forschungsform)",
+    "origin": "einheimisch",
+    "status": "NE",
+    "taxon_kind": "provisional",
+    "aliases": [],
+    "in_bern": null,
+    "image": "sources/fish/ch/generated_0c24f1bb816b.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Groppengestalt mit breitem Kopf und grossen Brustflossen.",
+    "information": "Genetisch unterschiedene Linie; formale Artgrenzen bleiben zu klären.",
+    "bern_occurrence": {
+      "state": "no_record",
+      "detail": "Forschungsform gemäss verlinkter Studie; Kein gesicherter artspezifischer Berner Nachweis zugeordnet.",
+      "source_ids": [
+        "projet-lac-2024",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "projet-lac-2024"
+    ],
+    "fishing_method": "Keine gezielte Fangempfehlung; Artbestimmung und örtliche Berechtigung zuerst klären.",
+    "bait": "Keine Köderempfehlung",
+    "fishing_note": "Der Eintrag dokumentiert die Art bzw. Forschungsform und ist keine Fangfreigabe.",
+    "fishing_source_ids": [
+      "fidv-2026",
+      "vbgf-current"
+    ],
+    "image_caption": "Schematische Darstellung"
+  },
+  {
+    "scientific_name": "Barbatula sp. (W1)",
+    "name": "Bartgrundel W1 (Forschungsform)",
+    "origin": "einheimisch",
+    "status": "NE",
+    "taxon_kind": "provisional",
+    "aliases": [],
+    "in_bern": null,
+    "image": "sources/fish/ch/generated_0115ae44a07b.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Langgestreckte Schmerle mit Barteln.",
+    "information": "Morphologische Linie aus Genfer- und Bodensee; Revision 2025 belässt die Artzuordnung offen.",
+    "bern_occurrence": {
+      "state": "no_record",
+      "detail": "Forschungsform gemäss verlinkter Studie; Kein gesicherter artspezifischer Berner Nachweis zugeordnet.",
+      "source_ids": [
+        "barbatula-2025",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "barbatula-2025"
+    ],
+    "fishing_method": "Keine gezielte Fangempfehlung; Artbestimmung und örtliche Berechtigung zuerst klären.",
+    "bait": "Keine Köderempfehlung",
+    "fishing_note": "Der Eintrag dokumentiert die Art bzw. Forschungsform und ist keine Fangfreigabe.",
+    "fishing_source_ids": [
+      "fidv-2026",
+      "vbgf-current"
+    ],
+    "image_caption": "Schematische Darstellung"
+  },
+  {
+    "scientific_name": "Barbatula sp. (W2)",
+    "name": "Bartgrundel W2 (Forschungsform)",
+    "origin": "einheimisch",
+    "status": "NE",
+    "taxon_kind": "provisional",
+    "aliases": [],
+    "in_bern": null,
+    "image": "sources/fish/ch/generated_aa1e97de4982.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Langgestreckte Schmerle mit Barteln.",
+    "information": "Noch ungeklärte Linie aus Doubs-/Allaine- und Rhone-Zuflüssen; nicht als zusätzliche beschriebene Art zählen.",
+    "bern_occurrence": {
+      "state": "no_record",
+      "detail": "Forschungsform gemäss verlinkter Studie; Kein gesicherter artspezifischer Berner Nachweis zugeordnet.",
+      "source_ids": [
+        "barbatula-2025",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "barbatula-2025"
+    ],
+    "fishing_method": "Keine gezielte Fangempfehlung; Artbestimmung und örtliche Berechtigung zuerst klären.",
+    "bait": "Keine Köderempfehlung",
+    "fishing_note": "Der Eintrag dokumentiert die Art bzw. Forschungsform und ist keine Fangfreigabe.",
+    "fishing_source_ids": [
+      "fidv-2026",
+      "vbgf-current"
+    ],
+    "image_caption": "Schematische Darstellung"
+  },
+  {
+    "scientific_name": "Salvelinus sp. (Riese Vierwaldstättersee)",
+    "name": "Saibling Riese Vierwaldstättersee (Forschungsform)",
+    "origin": "einheimisch",
+    "status": "NE",
+    "taxon_kind": "provisional",
+    "aliases": [],
+    "in_bern": null,
+    "image": "sources/fish/ch/generated_21a2041a4a71.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Saiblingsgestalt mit Fettflosse; Proportionen und Färbung unterscheiden sich nach Lebensraum.",
+    "information": "Noch nicht abschliessend benannte Forschungsform: Vierwaldstättersee. Die Artzuordnung bleibt vorläufig.",
+    "bern_occurrence": {
+      "state": "no_record",
+      "detail": "Im Forschungsbericht für Vierwaldstättersee unterschieden; keine heutige Bestandszählung und keine automatische rechtliche Zuordnung.",
+      "source_ids": [
+        "projet-lac-2024",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "projet-lac-2024"
+    ],
+    "fishing_method": "Keine gezielte Fangempfehlung; Artbestimmung und örtliche Berechtigung zuerst klären.",
+    "bait": "Keine Köderempfehlung",
+    "fishing_note": "Der Eintrag dokumentiert die Art bzw. Forschungsform und ist keine Fangfreigabe.",
+    "fishing_source_ids": [
+      "fidv-2026",
+      "vbgf-current"
+    ],
+    "image_caption": "Schematische Darstellung"
+  },
+  {
+    "scientific_name": "Salvelinus sp. (Freiwasser Vierwaldstättersee)",
+    "name": "Saibling Freiwasser Vierwaldstättersee (Forschungsform)",
+    "origin": "einheimisch",
+    "status": "NE",
+    "taxon_kind": "provisional",
+    "aliases": [],
+    "in_bern": null,
+    "image": "sources/fish/ch/generated_f42fbc483a85.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Saiblingsgestalt mit Fettflosse; Proportionen und Färbung unterscheiden sich nach Lebensraum.",
+    "information": "Noch nicht abschliessend benannte Forschungsform: Vierwaldstättersee. Die Artzuordnung bleibt vorläufig.",
+    "bern_occurrence": {
+      "state": "no_record",
+      "detail": "Im Forschungsbericht für Vierwaldstättersee unterschieden; keine heutige Bestandszählung und keine automatische rechtliche Zuordnung.",
+      "source_ids": [
+        "projet-lac-2024",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "projet-lac-2024"
+    ],
+    "fishing_method": "Keine gezielte Fangempfehlung; Artbestimmung und örtliche Berechtigung zuerst klären.",
+    "bait": "Keine Köderempfehlung",
+    "fishing_note": "Der Eintrag dokumentiert die Art bzw. Forschungsform und ist keine Fangfreigabe.",
+    "fishing_source_ids": [
+      "fidv-2026",
+      "vbgf-current"
+    ],
+    "image_caption": "Schematische Darstellung"
+  },
+  {
+    "scientific_name": "Salvelinus sp. (Tiefenzwerg Vierwaldstättersee)",
+    "name": "Saibling Tiefenzwerg Vierwaldstättersee (Forschungsform)",
+    "origin": "einheimisch",
+    "status": "NE",
+    "taxon_kind": "provisional",
+    "aliases": [],
+    "in_bern": null,
+    "image": "sources/fish/ch/generated_bf5ded598e47.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Saiblingsgestalt mit Fettflosse; Proportionen und Färbung unterscheiden sich nach Lebensraum.",
+    "information": "Noch nicht abschliessend benannte Forschungsform: Vierwaldstättersee. Die Artzuordnung bleibt vorläufig.",
+    "bern_occurrence": {
+      "state": "no_record",
+      "detail": "Im Forschungsbericht für Vierwaldstättersee unterschieden; keine heutige Bestandszählung und keine automatische rechtliche Zuordnung.",
+      "source_ids": [
+        "projet-lac-2024",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "projet-lac-2024"
+    ],
+    "fishing_method": "Keine gezielte Fangempfehlung; Artbestimmung und örtliche Berechtigung zuerst klären.",
+    "bait": "Keine Köderempfehlung",
+    "fishing_note": "Der Eintrag dokumentiert die Art bzw. Forschungsform und ist keine Fangfreigabe.",
+    "fishing_source_ids": [
+      "fidv-2026",
+      "vbgf-current"
+    ],
+    "image_caption": "Schematische Darstellung"
+  },
+  {
+    "scientific_name": "Salvelinus sp. (Tiefenform Walensee I)",
+    "name": "Saibling Tiefenform Walensee I (Forschungsform)",
+    "origin": "einheimisch",
+    "status": "NE",
+    "taxon_kind": "provisional",
+    "aliases": [],
+    "in_bern": null,
+    "image": "sources/fish/ch/generated_b6db53ff3dbc.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Saiblingsgestalt mit Fettflosse; Proportionen und Färbung unterscheiden sich nach Lebensraum.",
+    "information": "Noch nicht abschliessend benannte Forschungsform: Walensee. Die Artzuordnung bleibt vorläufig.",
+    "bern_occurrence": {
+      "state": "no_record",
+      "detail": "Im Forschungsbericht für Walensee unterschieden; keine heutige Bestandszählung und keine automatische rechtliche Zuordnung.",
+      "source_ids": [
+        "projet-lac-2024",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "projet-lac-2024"
+    ],
+    "fishing_method": "Keine gezielte Fangempfehlung; Artbestimmung und örtliche Berechtigung zuerst klären.",
+    "bait": "Keine Köderempfehlung",
+    "fishing_note": "Der Eintrag dokumentiert die Art bzw. Forschungsform und ist keine Fangfreigabe.",
+    "fishing_source_ids": [
+      "fidv-2026",
+      "vbgf-current"
+    ],
+    "image_caption": "Schematische Darstellung"
+  },
+  {
+    "scientific_name": "Salvelinus sp. (Tiefenform Walensee II)",
+    "name": "Saibling Tiefenform Walensee II (Forschungsform)",
+    "origin": "einheimisch",
+    "status": "NE",
+    "taxon_kind": "provisional",
+    "aliases": [],
+    "in_bern": null,
+    "image": "sources/fish/ch/generated_c7b76335d734.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Saiblingsgestalt mit Fettflosse; Proportionen und Färbung unterscheiden sich nach Lebensraum.",
+    "information": "Noch nicht abschliessend benannte Forschungsform: Walensee. Die Artzuordnung bleibt vorläufig.",
+    "bern_occurrence": {
+      "state": "no_record",
+      "detail": "Im Forschungsbericht für Walensee unterschieden; keine heutige Bestandszählung und keine automatische rechtliche Zuordnung.",
+      "source_ids": [
+        "projet-lac-2024",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "projet-lac-2024"
+    ],
+    "fishing_method": "Keine gezielte Fangempfehlung; Artbestimmung und örtliche Berechtigung zuerst klären.",
+    "bait": "Keine Köderempfehlung",
+    "fishing_note": "Der Eintrag dokumentiert die Art bzw. Forschungsform und ist keine Fangfreigabe.",
+    "fishing_source_ids": [
+      "fidv-2026",
+      "vbgf-current"
+    ],
+    "image_caption": "Schematische Darstellung"
+  },
+  {
+    "scientific_name": "Salvelinus sp. (Freiwasser Thun-Brienz)",
+    "name": "Saibling Freiwasser Thun-Brienz (Forschungsform)",
+    "origin": "einheimisch",
+    "status": "NE",
+    "taxon_kind": "provisional",
+    "aliases": [],
+    "in_bern": true,
+    "image": "sources/fish/ch/generated_b5206ab918bb.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Saiblingsgestalt mit Fettflosse; Proportionen und Färbung unterscheiden sich nach Lebensraum.",
+    "information": "Noch nicht abschliessend benannte Forschungsform: Thuner- und Brienzersee. Die Artzuordnung bleibt vorläufig.",
+    "bern_occurrence": {
+      "state": "documented",
+      "detail": "Im Forschungsbericht für Thuner- und Brienzersee unterschieden; keine heutige Bestandszählung und keine automatische rechtliche Zuordnung.",
+      "source_ids": [
+        "projet-lac-2024",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "projet-lac-2024"
+    ],
+    "fishing_method": "Keine gezielte Fangempfehlung; Artbestimmung und örtliche Berechtigung zuerst klären.",
+    "bait": "Keine Köderempfehlung",
+    "fishing_note": "Der Eintrag dokumentiert die Art bzw. Forschungsform und ist keine Fangfreigabe.",
+    "fishing_source_ids": [
+      "fidv-2026",
+      "vbgf-current"
+    ],
+    "image_caption": "Schematische Darstellung"
+  },
+  {
+    "scientific_name": "Salvelinus sp. (Bodenform Thun-Brienz)",
+    "name": "Saibling Bodenform Thun-Brienz (Forschungsform)",
+    "origin": "einheimisch",
+    "status": "NE",
+    "taxon_kind": "provisional",
+    "aliases": [],
+    "in_bern": true,
+    "image": "sources/fish/ch/generated_f3691474aa65.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Saiblingsgestalt mit Fettflosse; Proportionen und Färbung unterscheiden sich nach Lebensraum.",
+    "information": "Noch nicht abschliessend benannte Forschungsform: Thuner- und Brienzersee. Die Artzuordnung bleibt vorläufig.",
+    "bern_occurrence": {
+      "state": "documented",
+      "detail": "Im Forschungsbericht für Thuner- und Brienzersee unterschieden; keine heutige Bestandszählung und keine automatische rechtliche Zuordnung.",
+      "source_ids": [
+        "projet-lac-2024",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "projet-lac-2024"
+    ],
+    "fishing_method": "Keine gezielte Fangempfehlung; Artbestimmung und örtliche Berechtigung zuerst klären.",
+    "bait": "Keine Köderempfehlung",
+    "fishing_note": "Der Eintrag dokumentiert die Art bzw. Forschungsform und ist keine Fangfreigabe.",
+    "fishing_source_ids": [
+      "fidv-2026",
+      "vbgf-current"
+    ],
+    "image_caption": "Schematische Darstellung"
+  },
+  {
+    "scientific_name": "Salvelinus sp. (Extreme Tiefe Thunersee)",
+    "name": "Saibling Extreme Tiefe Thunersee (Forschungsform)",
+    "origin": "einheimisch",
+    "status": "NE",
+    "taxon_kind": "provisional",
+    "aliases": [],
+    "in_bern": true,
+    "image": "sources/fish/ch/generated_fb2f275a4fc8.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Saiblingsgestalt mit Fettflosse; Proportionen und Färbung unterscheiden sich nach Lebensraum.",
+    "information": "Noch nicht abschliessend benannte Forschungsform: Thunersee. Die Artzuordnung bleibt vorläufig.",
+    "bern_occurrence": {
+      "state": "documented",
+      "detail": "Im Forschungsbericht für Thunersee unterschieden; keine heutige Bestandszählung und keine automatische rechtliche Zuordnung.",
+      "source_ids": [
+        "projet-lac-2024",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "projet-lac-2024"
+    ],
+    "fishing_method": "Keine gezielte Fangempfehlung; Artbestimmung und örtliche Berechtigung zuerst klären.",
+    "bait": "Keine Köderempfehlung",
+    "fishing_note": "Der Eintrag dokumentiert die Art bzw. Forschungsform und ist keine Fangfreigabe.",
+    "fishing_source_ids": [
+      "fidv-2026",
+      "vbgf-current"
+    ],
+    "image_caption": "Schematische Darstellung"
+  },
+  {
+    "scientific_name": "Salvelinus sp. (Tiefenzwerg Thunersee)",
+    "name": "Saibling Tiefenzwerg Thunersee (Forschungsform)",
+    "origin": "einheimisch",
+    "status": "NE",
+    "taxon_kind": "provisional",
+    "aliases": [],
+    "in_bern": true,
+    "image": "sources/fish/ch/generated_28dcef09a4f1.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Saiblingsgestalt mit Fettflosse; Proportionen und Färbung unterscheiden sich nach Lebensraum.",
+    "information": "Noch nicht abschliessend benannte Forschungsform: Thunersee. Die Artzuordnung bleibt vorläufig.",
+    "bern_occurrence": {
+      "state": "documented",
+      "detail": "Im Forschungsbericht für Thunersee unterschieden; keine heutige Bestandszählung und keine automatische rechtliche Zuordnung.",
+      "source_ids": [
+        "projet-lac-2024",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "projet-lac-2024"
+    ],
+    "fishing_method": "Keine gezielte Fangempfehlung; Artbestimmung und örtliche Berechtigung zuerst klären.",
+    "bait": "Keine Köderempfehlung",
+    "fishing_note": "Der Eintrag dokumentiert die Art bzw. Forschungsform und ist keine Fangfreigabe.",
+    "fishing_source_ids": [
+      "fidv-2026",
+      "vbgf-current"
+    ],
+    "image_caption": "Schematische Darstellung"
+  },
+  {
+    "scientific_name": "Salvelinus sp. (Riese Thunersee)",
+    "name": "Saibling Riese Thunersee (Forschungsform)",
+    "origin": "einheimisch",
+    "status": "NE",
+    "taxon_kind": "provisional",
+    "aliases": [],
+    "in_bern": true,
+    "image": "sources/fish/ch/generated_ff106591c6f4.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Saiblingsgestalt mit Fettflosse; Proportionen und Färbung unterscheiden sich nach Lebensraum.",
+    "information": "Noch nicht abschliessend benannte Forschungsform: Thunersee. Die Artzuordnung bleibt vorläufig.",
+    "bern_occurrence": {
+      "state": "documented",
+      "detail": "Im Forschungsbericht für Thunersee unterschieden; keine heutige Bestandszählung und keine automatische rechtliche Zuordnung.",
+      "source_ids": [
+        "projet-lac-2024",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "projet-lac-2024"
+    ],
+    "fishing_method": "Keine gezielte Fangempfehlung; Artbestimmung und örtliche Berechtigung zuerst klären.",
+    "bait": "Keine Köderempfehlung",
+    "fishing_note": "Der Eintrag dokumentiert die Art bzw. Forschungsform und ist keine Fangfreigabe.",
+    "fishing_source_ids": [
+      "fidv-2026",
+      "vbgf-current"
+    ],
+    "image_caption": "Schematische Darstellung"
+  },
+  {
+    "scientific_name": "Perca sp. (Alpensee)",
+    "name": "Alpensee-Egli (Forschungsform)",
+    "origin": "einheimisch",
+    "status": "NE",
+    "taxon_kind": "provisional",
+    "aliases": [],
+    "in_bern": null,
+    "image": "sources/fish/ch/generated_c38124d0e66d.webp",
+    "image_note": "Schematische Illustration; kein alleiniger Bestimmungsschlüssel.",
+    "max_cm": null,
+    "spawn_cm": null,
+    "form_description": "Barschgestalt mit zwei Rückenflossen und dunkler Querbänderung.",
+    "information": "Im Projet Lac als genetisch unterschiedene Alpensee-Linie geführt; die formale Beschreibung steht noch aus.",
+    "bern_occurrence": {
+      "state": "no_record",
+      "detail": "In der geprüften nationalen Datenbank kein artspezifischer, dem Kanton BE zugeordneter Beleg gefunden. Das ist kein Beweis für Abwesenheit.",
+      "source_ids": [
+        "projet-lac-2024",
+        "fish-databank-2026"
+      ],
+      "reviewed_on": "2026-11-07"
+    },
+    "profile_source_ids": [
+      "projet-lac-2024"
+    ],
+    "fishing_method": "Keine gezielte Fangempfehlung; Artbestimmung und örtliche Berechtigung zuerst klären.",
+    "bait": "Keine Köderempfehlung",
+    "fishing_note": "Der Eintrag dokumentiert die Art bzw. Forschungsform und ist keine Fangfreigabe.",
+    "fishing_source_ids": [
+      "fidv-2026",
+      "vbgf-current"
+    ],
+    "image_caption": "Schematische Darstellung"
   }
 ]

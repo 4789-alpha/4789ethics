@@ -15,7 +15,7 @@ Fangmethoden/Köder sind redaktionelle allgemeine Hinweise für übliche Angelfi
 
 ## Bildbearbeitung
 
-Built-in Imagegen: Maifisch neu im Stil der vorhandenen Finte illustriert; Forelle und Wels mit transparentem Hintergrund freigestellt. Die Übersicht zeigt die Bilder auf weissem Untergrund. Das Maifischbild ist als KI-Illustration gekennzeichnet. Die Zeichnungen sind kein alleiniger Bestimmungsschlüssel. Farbzeichnung und Artabgrenzung können zusätzliche Merkmale erfordern.
+Built-in Imagegen: Maifisch neu im Stil der vorhandenen Finte illustriert; Forelle und Wels mit transparentem Hintergrund freigestellt. Die Übersicht zeigt transparente Bilder direkt auf dem Seitenhintergrund. Die Zeichnungen sind kein alleiniger Bestimmungsschlüssel. Farbzeichnung und Artabgrenzung können zusätzliche Merkmale erfordern.
 
 ## Prüfung
 
@@ -24,3 +24,15 @@ Gezielte Regressionen: numerische Sortierung, unbekannte Werte zuletzt, Statusre
 ## Lizenz
 
 Die ursprünglichen Fischlisten sind als CC BY-NC-SA 4.0 bezeichnet. Siehe `LICENSE.txt` und `DISCLAIMERS.md` im Repository. Verlinkte Quellen bleiben bei ihren jeweiligen Rechteinhabern; keine fremden Bilder wurden übernommen.
+
+## Berner Fangregeln (2026)
+
+`bern-regulations.json` ordnet jedem Eintrag eine Regelgruppe zu. Vier Tabellenspalten zeigen Schonzeit, Fangmass, Fangfenster und Fangzahlen; der Steckbrief enthält gewässerbezogene Tabellen und amtliche Quellen. Geprüft am 7. November 2026. FiDV-Anhang 1 ist für die September-Fensterangabe Interlaken massgebend (30–45 cm); die abweichende WEU-Übersicht ist ausdrücklich erwähnt. Bundesrechtliche Fangverbote werden separat von IUCN-Codes zugeordnet. Nicht eindeutig zugeordnete Taxa sind gekennzeichnet. Die Informationen gelten für Angelfischerei und ersetzen keine konkrete Bewilligung oder aktuelle Sperrverfügung.
+
+Schleie, Bachsaibling, Kanadische Seeforelle und Karausche ergänzt (BKFV-Porträts und amtlicher Berner Arten-/Regelbestand). Spalten werden direkt am Kopf/Griff gezogen; die frühere Spaltenauswahl entfällt. Tastatur: Griff fokussieren, Alt + links/rechts.
+
+Vollständigkeit: `coverage-audit.json` dokumentiert den Abgleich sämtlicher 71 RL-2022-Taxa, sämtlicher Schweizer Namen der nationalen Fischdatenbank 2026 (107 Originalnamen einschliesslich historischer Einzelfunde), der 20 gebietsfremden Taxa und neuer Forschungsbestände. Alle referenzierten Namen sind einem Eintrag oder einem ausdrücklich als Altbestand gekennzeichneten Aggregat zugeordnet. Artgrenzen sind zeitabhängig. Schweizer Vorkommen werden nicht aus überregionalen, auch ausländische Seen umfassenden Abbildungen abgeleitet. 123 Arten, 4 Forellen-Lebensformen, 3 Aggregate und 25 vorläufige Forschungsformen sind einzeln filterbar.
+
+Seesaibling unter `Salvelinus umbla`, Altname `S. alpinus` als Suchalias. Alte `Phoxinus phoxinus`- und `Barbatula barbatula`-Daten sind Sammelgruppen, keine ungeprüft einer modernen Art zugewiesenen Belege. Neu benannte Bartgrundeln und Elritzen stehen separat. `Coregonus zugensis` nach Revision 2023 als ausgestorbenes Zuger Albeli berichtigt; alte Namensanwendungen in anderen Seen werden nicht als heutige Belege übernommen.
+
+Alle 155 Einträge haben eine Bildverknüpfung. Die 74 Ergänzungen wurden einzeln illustriert und als WebP mit Alphakanal gespeichert; Originalzeichnungen bleiben erhalten. Forschungsformen sind als schematische Darstellungen gekennzeichnet. Die Bilder sind kein alleiniger Bestimmungsschlüssel. Auf Wunsch erscheinen keine KI-Hinweise in der Oberfläche. Genaue Bildvorgaben und erzeugte Dateien liegen im lokalen Ausgabeverzeichnis.

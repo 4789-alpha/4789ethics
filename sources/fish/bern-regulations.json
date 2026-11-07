@@ -1,0 +1,1305 @@
+{
+  "reviewed_on": "2026-11-07",
+  "law_effective_from": "2026-01-01",
+  "scope": "Angelfischerei nach Berner Vorschriften. Interkantonale Sonderregeln sind separat gekennzeichnet; private und verpachtete Gewässer können weitere Vorgaben haben. Keine Berufsfischerei-/Netzregeln.",
+  "source_ids": [
+    "fidv-2026",
+    "be-rules",
+    "vbgf-current",
+    "be-reglement-2026",
+    "be-ne"
+  ],
+  "general": [
+    "Fischlänge: von der Kopfspitze bis zu den Spitzen der natürlich ausgebreiteten Schwanzflosse (VBGF Art. 2 Abs. 2).",
+    "Schonzeit = Fang-/Entnahmeverbot in der angegebenen Zeit; Fangzeitraum = Zeitraum, in dem das angegebene Längenfenster gilt. Die Bereichsangaben schliessen die Grenzwerte ein.",
+    "Tages- und Jahreslimiten gelten nach FiDV Art. 14 pro Fangberechtigung, in Patent- und Pachtgewässern. Gruppenlimiten für Forellen/Saiblinge bzw. Felchen werden gemeinsam gezählt, nicht je Tabellenzeile.",
+    "Zusätzlich gelten Schongebiete (FiDV Anhang 2), aktuelle Allgemeinverfügungen, Patent-/Pachtbedingungen und interkantonale Vereinbarungen. Ein leerer oder nicht eigens geregelter Wert ist keine Fangfreigabe.",
+    "Grundsätzlich Fangverbot während der Sommerzeit 00:00–05:00 Uhr, während der Winterzeit 20:00–06:00 Uhr (FiV Art. 13). Ausnahmen insbesondere in der Aare unterhalb des Bielersees bis Murgenthal sowie in dortigen Aarestauseen und einzelnen Grenzstrecken gesondert prüfen (FiDV Art. 22/23).",
+    "Lebende Köderfische sind verboten (FiDV Art. 18 Abs. 4). Anfüttern ist in Regalgewässern verboten (Art. 13). Fanggeräte/Hakenzahl und Widerhaken hängen von Gewässertyp und Sachkundenachweis ab.",
+    "Bestimmungen zu Fangstatistik und Dokumenten bleiben anwendbar. Geschonte oder untermassige, überlebensfähige Fische unverzüglich und sorgfältig zurückversetzen (FiDV Art. 4).",
+    "Markierte Zihlkanal-Grenzstrecke BE/NE: Köderfischfang höchstens 50 Fische/Tag gemäss Grenzvereinbarung; die Berner allgemeine Köderfischquote ist dort nicht ungeprüft anzuwenden."
+  ],
+  "groups": {
+    "trout": {
+      "title": "Bach- und Seeforellen / Atlantische Forelle",
+      "summary": {
+        "closed": "Flüsse meist 01.10.–15.03.; drei grosse Seen 01.09.–31.01.",
+        "length": "22–45 cm, gewässerabhängig",
+        "window": "Zusätzliche Längenfenster je Abschnitt",
+        "quota": "Gemeinsam 6 Forellen/Saiblinge pro Tag, davon höchstens 3 Forellen aus Brienzer-/Thuner-/Bielersee; gemeinsam 150 pro Kalenderjahr, davon höchstens 50 Bachforellen und 30 Forellen aus diesen drei Seen."
+      },
+      "rows": [
+        {
+          "water": "Engstligen, Fildrich, Grischbach, Kiene mit Gorneren- und Spiggenbach, Kirel, Narrenbach, Reichenbach, Saane (Grenze VS/BE bis Grenze BE/VD), Kleine Simme, Sorne, Suld, Urbach sowie staatliche Pacht-/private Fischgewässer im Oberland und Berner Jura",
+          "length": "22 cm",
+          "closed": "01.10.–15.03.",
+          "legal": "FiDV Anhang 1",
+          "scope": "BE-Grundregel"
+        },
+        {
+          "water": "Emme oberhalb der Heidbühlbrücke bei Eggiwil; Ilfis",
+          "length": "26 cm",
+          "closed": "01.10.–15.03.",
+          "legal": "FiDV Anhang 1",
+          "scope": "BE-Grundregel"
+        },
+        {
+          "water": "Aare ab Stauwehr Räterichsboden bis Brienzersee; Arnensee, Engstlensee, Gelmersee, Kander, Lombach, Lütschinen, Mattenalpsee, Oeschinensee, Räterichsbodensee, Saane (Grenze FR/BE bis Aare), Schwarzwasser, Sense, Simme, Zulg; sonstige nicht speziell geregelte Gewässer/Abschnitte",
+          "length": "24 cm",
+          "closed": "01.10.–15.03.",
+          "legal": "FiDV Anhang 1",
+          "scope": "BE-Grundregel"
+        },
+        {
+          "water": "Emme unterhalb der Heidbühlbrücke bei Eggiwil",
+          "length": "30 cm",
+          "closed": "01.10.–15.03.",
+          "legal": "FiDV Anhang 1",
+          "scope": "BE-Grundregel"
+        },
+        {
+          "water": "Alte Aare und Schüss",
+          "length": "26 cm",
+          "closed": "01.10.–15.03.",
+          "legal": "FiDV Anhang 1",
+          "scope": "BE-Grundregel"
+        },
+        {
+          "water": "Birs",
+          "length": "25 cm",
+          "closed": "01.10.–15.03.",
+          "legal": "FiDV Anhang 1",
+          "scope": "BE-Grundregel"
+        },
+        {
+          "water": "Aare ab Bielersee bis Kantonsgrenze Murgenthal einschliesslich Aarestauseen; Zihl bei Nidau",
+          "length": "38 cm",
+          "closed": "01.10.–15.03.",
+          "legal": "FiDV Anhang 1",
+          "scope": "BE-Grundregel"
+        },
+        {
+          "water": "Gürbe",
+          "length": "28 cm",
+          "closed": "01.10.–15.03.",
+          "legal": "FiDV Anhang 1",
+          "scope": "BE-Grundregel"
+        },
+        {
+          "water": "Aare vom Brienzersee bis Thunersee einschliesslich Schifffahrtskanal Interlaken; Aare unterhalb Stauwehr Wohlensee bis Bielersee",
+          "length": "30 cm",
+          "closed": "01.10.–15.03.",
+          "legal": "FiDV Anhang 1",
+          "scope": "BE-Grundregel"
+        },
+        {
+          "water": "Aare vom Thunersee bis Stauwehr Wohlensee",
+          "length": "34 cm",
+          "closed": "01.10.–15.03.",
+          "legal": "FiDV Anhang 1",
+          "scope": "BE-Grundregel"
+        },
+        {
+          "water": "Brienzer-, Thuner- und Bielersee",
+          "length": "45 cm",
+          "closed": "01.09.–31.01.",
+          "legal": "FiDV Anhang 1",
+          "scope": "BE-Grundregel"
+        },
+        {
+          "water": "Grenzstrecke Sense/Saane gemäss Vereinbarung BE/FR: Sense vom Zusammenfluss Muscherensense/Kalte Sense bis Saane; Saane von Niederbösingen bis Sensemündung",
+          "length": "24 cm",
+          "closed": "01.10.–15.03.",
+          "legal": "Vereinbarung BE/FR Art. 1, 5–8",
+          "scope": "Grenzgewässer"
+        },
+        {
+          "water": "Aare-Grenzstrecken BE/SO gemäss Vereinbarung: Niederholz unterhalb Büren a. A. bis Hagmatten bei Leuzigen; unterhalb Kraftwerk Ober-Wynau bis Murgmündung",
+          "length": "38 cm",
+          "closed": "01.10.–15.03.",
+          "legal": "Vereinbarung BE/SO Art. 1, 3–4",
+          "scope": "Grenzgewässer"
+        },
+        {
+          "water": "Zihlkanal innerhalb der markierten Grenzstrecke BE/NE (nicht die Zihl bei Nidau)",
+          "length": "45 cm",
+          "closed": "01.09.–31.01.",
+          "legal": "Vereinbarung BE/NE Art. 1, 6",
+          "scope": "Grenzgewässer"
+        },
+        {
+          "water": "Interkantonaler Birsabschnitt Moutier/Roches: obere Gorges de Court bis La Roche Saint-Jean",
+          "length": "25–32 cm oder ab 40 cm",
+          "closed": "01.10.–15.03.",
+          "legal": "Vereinbarung BE/JU Art. 1, 3, 6–7 (ab 2026)",
+          "scope": "Grenzgewässer"
+        }
+      ],
+      "windows": [
+        {
+          "water": "Aare ab Stauwehr Räterichsboden bis Brienzersee; Kander, Lombach, Lütschinen",
+          "length": "24–45 cm",
+          "period": "01.09.–30.09.",
+          "legal": "FiDV Anhang 1 Bst. c"
+        },
+        {
+          "water": "Schüss ab Wasserrückgabe Kraftwerk Bielersee Kraftwerke AG in Bözingen bis Bielersee",
+          "length": "26–45 cm",
+          "period": "01.09.–30.09.",
+          "legal": "FiDV Anhang 1 Bst. c"
+        },
+        {
+          "water": "Aare Interlaken und Schifffahrtskanal Interlaken",
+          "length": "30–37 cm oder ab 45 cm",
+          "period": "16.03.–31.08.",
+          "legal": "FiDV Anhang 1 Bst. c"
+        },
+        {
+          "water": "Aare Interlaken und Schifffahrtskanal Interlaken",
+          "length": "30–45 cm",
+          "period": "01.09.–30.09.",
+          "legal": "FiDV Anhang 1 Bst. c"
+        },
+        {
+          "water": "Urbach und Reichenbach",
+          "length": "22–45 cm",
+          "period": "01.09.–30.09.",
+          "legal": "FiDV Anhang 1 Bst. c"
+        },
+        {
+          "water": "Aare vom Thunersee bis Engehaldestauwehr",
+          "length": "34–40 cm oder ab 50 cm",
+          "period": "16.03.–30.09.",
+          "legal": "FiDV Anhang 1 Bst. c"
+        },
+        {
+          "water": "Birs",
+          "length": "25–32 cm oder ab 40 cm",
+          "period": "16.03.–30.09.",
+          "legal": "FiDV Anhang 1 Bst. c"
+        }
+      ],
+      "notes": [
+        "Die Basis-Mindestmasse und die zusätzlichen Fangfenster müssen zusammen gelesen werden; die Fenster gelten nur im jeweils genannten Zeitraum.",
+        "Aare Interlaken im September: Der verbindliche Verordnungsanhang nennt 30–45 cm. Die WEU-Übersichtsseite nennt abweichend 30–37 cm. Hier wird der Verordnungsanhang, Stand 01.01.2026, wiedergegeben (Anhang 1 Bst. c Ziff. 13, PDF-S. 21).",
+        "Interkantonale Birsstrecke: höchstens 3 Bachforellen pro Tag aus diesem Abschnitt; Fischerei nur 16.03.–30.09., Watverbot bis 30.04. Die Abschnittsgrenzen und die Patentherkunft beachten.",
+        "Für die Fluss-/Meerform des Altbestands wird die Regelgruppe der Atlantischen Forelle gezeigt. Die Quellen führen nicht jede Lebensform als eigene Fangart; daraus folgt keine Bestätigung eines heutigen BE-Vorkommens."
+      ],
+      "source_ids": [
+        "fidv-2026",
+        "be-rules",
+        "be-reglement-2026",
+        "be-fr",
+        "be-so",
+        "be-ne",
+        "be-ju"
+      ]
+    },
+    "felchen": {
+      "title": "Felchen (rechtlich als Artengruppe)",
+      "summary": {
+        "closed": "Je See: Oktober/November bis Jahresende",
+        "length": "18 / 23 / 25 cm, je See",
+        "window": "Kein zusätzliches Längenfenster in Anhang 1",
+        "quota": "Gemeinsam höchstens 25 Felchen pro Tag; davon höchstens 20 aus dem Bielersee und 15 aus dem Thunersee."
+      },
+      "rows": [
+        {
+          "water": "Brienzersee, Fang mit Angelrute",
+          "length": "18 cm",
+          "closed": "01.11.–31.12.",
+          "legal": "FiDV Anhang 1",
+          "scope": "BE-Grundregel"
+        },
+        {
+          "water": "Thunersee",
+          "length": "25 cm",
+          "closed": "01.10.–31.12.",
+          "legal": "FiDV Anhang 1",
+          "scope": "BE-Grundregel"
+        },
+        {
+          "water": "Bielersee",
+          "length": "23 cm",
+          "closed": "01.11.–31.12.",
+          "legal": "FiDV Anhang 1",
+          "scope": "BE-Grundregel"
+        },
+        {
+          "water": "Alle übrigen Gewässer",
+          "length": "25 cm",
+          "closed": "01.11.–31.12.",
+          "legal": "FiDV Anhang 1",
+          "scope": "BE-Grundregel"
+        },
+        {
+          "water": "Aare-Grenzstrecken BE/SO",
+          "length": "25 cm",
+          "closed": "01.11.–31.12.",
+          "legal": "Vereinbarung BE/SO Art. 3–4",
+          "scope": "Grenzgewässer"
+        }
+      ],
+      "windows": [],
+      "notes": [
+        "Die geänderten Schonzeiten im Thuner- und Bielersee gelten laut Fussnoten des Anhangs längstens bis 31.12.2028. Vor späteren Saisons neu prüfen.",
+        "Die Vorschriften nennen Felchen als Gruppe, nicht jeden wissenschaftlichen Artnamen. Lokale Populationen, Artbestimmung und Schutzgebiete beachten; aus der Gruppenregel folgt keine Freigabe für nicht nachgewiesene oder ausgestorbene Populationen.",
+        "Netzfischerei hat andere Regeln und wird hier nicht abgebildet."
+      ],
+      "source_ids": [
+        "fidv-2026",
+        "be-rules",
+        "be-reglement-2026",
+        "be-so"
+      ]
+    },
+    "grayling": {
+      "title": "Äsche: beschränkte Sonderfischerei",
+      "summary": {
+        "closed": "01.01.–30.09.; ausserhalb zugelassener Patentstrecken ganzjährig",
+        "length": "36 cm; Interlaken 40 cm; Pacht/privat 30 cm",
+        "window": "Kein zusätzliches Längenfenster in Anhang 1",
+        "quota": "Mit Sonderbewilligung höchstens 1 Äsche/Tag und 5/Jahr."
+      },
+      "rows": [
+        {
+          "water": "Zugelassene Aare-/Saane-/Alte-Aare-Patentstrecken nach Art. 14a (siehe Hinweise)",
+          "length": "36 cm",
+          "closed": "01.01.–30.09.",
+          "legal": "FiDV Anhang 1",
+          "scope": "BE-Grundregel"
+        },
+        {
+          "water": "Zugelassene Aare Interlaken und Schifffahrtskanal Interlaken",
+          "length": "40 cm",
+          "closed": "01.01.–30.09.",
+          "legal": "FiDV Anhang 1",
+          "scope": "BE-Grundregel"
+        },
+        {
+          "water": "Alle übrigen Patentgewässer",
+          "length": "Keine Freigabe",
+          "closed": "Ganzjährig",
+          "legal": "FiDV Anhang 1",
+          "scope": "BE-Grundregel"
+        },
+        {
+          "water": "Staatliche Pachtgewässer und private Fischgewässer",
+          "length": "30 cm",
+          "closed": "01.01.–30.09.",
+          "legal": "FiDV Anhang 1",
+          "scope": "BE-Grundregel"
+        },
+        {
+          "water": "Aare-Grenzstrecken BE/SO",
+          "length": "Keine Freigabe",
+          "closed": "Ganzjährig",
+          "legal": "Vereinbarung BE/SO Art. 3",
+          "scope": "Grenzgewässer"
+        },
+        {
+          "water": "Interkantonaler Birsabschnitt Moutier/Roches",
+          "length": "Keine Freigabe",
+          "closed": "Ganzjährig",
+          "legal": "Vereinbarung BE/JU Art. 6",
+          "scope": "Grenzgewässer"
+        },
+        {
+          "water": "Grenzstrecke Sense/Saane gemäss Vereinbarung BE/FR",
+          "length": "36 cm",
+          "closed": "01.01.–15.05.",
+          "legal": "Vereinbarung BE/FR Art. 5–8; FiDV Art. 14a Abs. 1",
+          "scope": "Grenzgewässer"
+        }
+      ],
+      "windows": [],
+      "notes": [
+        "Patentgewässer: Sonderbewilligung nur für Jahrespatente; Sonderfischerei 01.10.–31.12. Art. 14a lässt interkantonale Abweichungen ausdrücklich vorbehalten. Für die Grenzstrecke Sense/Saane deshalb die Vereinbarung und die konkrete Bewilligung prüfen.",
+        "Zugelassene Strecken: Aare vom Brienzersee bis 60 m oberhalb Nadelwehr Interlaken; Schifffahrtskanal Interlaken; Aare Kraftwerk Thun–Schützenfahrbrücke Münsingen; Aare Auguetbrücke Muri–Engehalde; Aare Tiefenaubrücke–Strassenbrücke Hagneck einschliesslich Aarestauseen; Saane Grenze BE/FR bei Bösingen–Aaremündung; Alte Aare.",
+        "Nur ein Köder mit einfachem Haken. Aare Tiefenaubrücke–Fähre Zehendermätteli: nur Fliegenrute mit künstlichen Fliegen/Nymphen. Nach 1 behändigten Äsche ist die Äschenfischerei an diesem Tag einzustellen; nach 5 erlischt die Sonderbewilligung. Weitere Bewilligungsauflagen beachten."
+      ],
+      "source_ids": [
+        "fidv-2026",
+        "be-rules",
+        "be-reglement-2026",
+        "be-fr",
+        "be-so",
+        "be-ju"
+      ]
+    },
+    "pike": {
+      "title": "Hecht",
+      "summary": {
+        "closed": "01.03.–30.04.",
+        "length": "Kein Mindestmass oder 45 cm, je Gewässer",
+        "window": "Kein zusätzliches Fenster in Anhang 1",
+        "quota": "Höchstens 5 Hechte pro Tag."
+      },
+      "rows": [
+        {
+          "water": "Aare vom Brienzersee bis Neubrücke Bern-Bremgarten; Saane, Gürbe und Schüss",
+          "length": "Kein Fangmindestmass",
+          "closed": "01.03.–30.04.",
+          "legal": "FiDV Anhang 1",
+          "scope": "BE-Grundregel"
+        },
+        {
+          "water": "Alle übrigen Gewässer",
+          "length": "45 cm",
+          "closed": "01.03.–30.04.",
+          "legal": "FiDV Anhang 1",
+          "scope": "BE-Grundregel"
+        },
+        {
+          "water": "Aare-Grenzstrecken BE/SO",
+          "length": "45 cm",
+          "closed": "01.03.–30.04.",
+          "legal": "Vereinbarung BE/SO Art. 3–4",
+          "scope": "Grenzgewässer"
+        },
+        {
+          "water": "Markierte Zihlkanal-Grenzstrecke BE/NE",
+          "length": "45 cm",
+          "closed": "01.03.–30.04.",
+          "legal": "Vereinbarung BE/NE Art. 6",
+          "scope": "Grenzgewässer"
+        }
+      ],
+      "windows": [],
+      "notes": [],
+      "source_ids": [
+        "fidv-2026",
+        "be-rules",
+        "be-reglement-2026",
+        "be-so",
+        "be-ne"
+      ]
+    },
+    "perch": {
+      "title": "Flussbarsch / Egli",
+      "summary": {
+        "closed": "Keine artspezifische Schonzeit",
+        "length": "15 cm; Aare-Grenzstrecke BE/SO abweichend",
+        "window": "Kein zusätzliches Fenster in Anhang 1",
+        "quota": "Höchstens 100 Egli pro Tag (BE-Grundregel)."
+      },
+      "rows": [
+        {
+          "water": "BE-Grundregel",
+          "length": "15 cm",
+          "closed": "Keine artspezifische Schonzeit",
+          "legal": "FiDV Anhang 1",
+          "scope": "BE-Grundregel"
+        },
+        {
+          "water": "Aare-Grenzstrecken BE/SO",
+          "length": "Kein Fangmindestmass",
+          "closed": "Keine artspezifische Schonzeit",
+          "legal": "Vereinbarung BE/SO Art. 3",
+          "scope": "Grenzgewässer"
+        },
+        {
+          "water": "Zihlkanal-Grenzstrecke BE/NE",
+          "length": "15 cm",
+          "closed": "Keine artspezifische Schonzeit",
+          "legal": "Vereinbarung BE/NE Art. 6",
+          "scope": "Grenzgewässer"
+        }
+      ],
+      "windows": [],
+      "notes": [
+        "Allgemeine Gewässersperren, Schongebiete und Nachtfangverbote gelten trotzdem."
+      ],
+      "source_ids": [
+        "fidv-2026",
+        "be-rules",
+        "be-reglement-2026",
+        "be-so",
+        "be-ne"
+      ]
+    },
+    "zander": {
+      "title": "Zander",
+      "summary": {
+        "closed": "01.04.–31.05.",
+        "length": "Kein Fangmindestmass nach Anhang 1",
+        "window": "Kein zusätzliches Fenster in Anhang 1",
+        "quota": "Höchstens 5 Zander pro Tag."
+      },
+      "rows": [
+        {
+          "water": "BE-Grundregel",
+          "length": "Kein Fangmindestmass",
+          "closed": "01.04.–31.05.",
+          "legal": "FiDV Anhang 1",
+          "scope": "BE-Grundregel"
+        }
+      ],
+      "windows": [],
+      "notes": [],
+      "source_ids": [
+        "fidv-2026",
+        "be-rules"
+      ]
+    },
+    "char": {
+      "title": "Seesaibling",
+      "summary": {
+        "closed": "Thunersee 01.10.–31.12.; sonst 01.11.–31.12.",
+        "length": "22 cm",
+        "window": "Kein zusätzliches Fenster in Anhang 1",
+        "quota": "Gemeinsam 6 Forellen/Saiblinge pro Tag, davon höchstens 3 Forellen aus Brienzer-/Thuner-/Bielersee; gemeinsam 150 pro Kalenderjahr, davon höchstens 50 Bachforellen und 30 Forellen aus diesen drei Seen."
+      },
+      "rows": [
+        {
+          "water": "Thunersee",
+          "length": "22 cm",
+          "closed": "01.10.–31.12.",
+          "legal": "FiDV Anhang 1",
+          "scope": "BE-Grundregel"
+        },
+        {
+          "water": "Alle übrigen Gewässer",
+          "length": "22 cm",
+          "closed": "01.11.–31.12.",
+          "legal": "FiDV Anhang 1",
+          "scope": "BE-Grundregel"
+        }
+      ],
+      "windows": [],
+      "notes": [
+        "Regel unter der Rechtsbezeichnung Seesaibling; die Bundesverordnung nennt Salvelinus umbla. Der frühere Name Salvelinus alpinus ist als Suchalias erhalten. Wissenschaftliche Artzuordnung und Population vor einer gezielten Befischung sicherstellen."
+      ],
+      "source_ids": [
+        "fidv-2026",
+        "be-rules"
+      ]
+    },
+    "cantonal-ban": {
+      "title": "Ganzjähriges Fangverbot im Kanton Bern",
+      "summary": {
+        "closed": "Ganzjährig",
+        "length": "Nicht anwendbar: Fangverbot",
+        "window": "Keine Entnahme",
+        "quota": "0; keine gezielte Befischung"
+      },
+      "rows": [
+        {
+          "water": "Gemäss Anhang 1: Aal, Bachneunauge, Strömer, Bitterling, Nase, Moorgrundel",
+          "length": "Nicht anwendbar",
+          "closed": "Ganzjährig",
+          "legal": "FiDV Anhang 1, Schlusssatz",
+          "scope": "BE-Grundregel"
+        }
+      ],
+      "windows": [],
+      "notes": [],
+      "source_ids": [
+        "fidv-2026",
+        "be-rules"
+      ]
+    },
+    "federal-ban": {
+      "title": "Fangverbot nach Bundesrecht",
+      "summary": {
+        "closed": "Ganzjähriges Fangverbot nach VBGF Art. 2a",
+        "length": "Nicht anwendbar: Fangverbot",
+        "window": "Keine Entnahme",
+        "quota": "0; Sonderfänge nur behördlich"
+      },
+      "rows": [
+        {
+          "water": "Art nach VBGF Anhang 1 mit Status 0, 1 oder 2; keine Ausnahme über Art. 1/2",
+          "length": "Nicht anwendbar",
+          "closed": "Ganzjährig",
+          "legal": "VBGF Art. 2a, Anhang 1",
+          "scope": "BE-Grundregel"
+        }
+      ],
+      "windows": [],
+      "notes": [
+        "Dies ist die Zuordnung anhand der nummerierten Gefährdungsstufen der VBGF, nicht anhand der IUCN-Kürzel in der Tabelle. Behördliche Sonderfänge nach Art. 3 sind keine private Angelbewilligung."
+      ],
+      "source_ids": [
+        "vbgf-current"
+      ]
+    },
+    "unlisted": {
+      "title": "Keine eigene Artregel in den geprüften BE-Grundtabellen",
+      "summary": {
+        "closed": "Nicht eigens festgelegt",
+        "length": "Nicht eigens festgelegt",
+        "window": "Kein artspezifisches Fenster zugeordnet",
+        "quota": "Keine eigene Artquote in FiDV Art. 14; weitere Regeln beachten"
+      },
+      "rows": [],
+      "windows": [],
+      "notes": [
+        "Für diese Art ist in FiDV Anhang 1 und den Bundes-Grundtabellen Art. 1/2 keine eigene Kalender-Schonzeit bzw. Mindestlänge zugeordnet. Das bedeutet keine pauschale Fangfreigabe: Bundesfangverbote, Gewässerreglement, Artbestimmung und Berechtigung bleiben zu prüfen.",
+        "Beim erlaubten Köderfischfang gilt für sonstige Köderfische die gemeinsame Obergrenze 100/Tag (FiDV Art. 18); geschützte Arten sind davon nicht freigegeben."
+      ],
+      "source_ids": [
+        "fidv-2026",
+        "vbgf-current"
+      ]
+    },
+    "trout-unmapped": {
+      "title": "Forellenart ohne gesicherte BE-Kalenderzuordnung",
+      "summary": {
+        "closed": "BE-Kalenderregel für dieses Taxon nicht sicher zugeordnet",
+        "length": "Bundesbasis 35 cm in grossen Stillgewässern unter 800 m, sonst 22 cm",
+        "window": "Kein BE-Fangfenster für dieses Taxon zugeordnet",
+        "quota": "Allgemeine Forellen-/Saiblings-Gruppenquote prüfen"
+      },
+      "rows": [],
+      "windows": [],
+      "notes": [
+        "VBGF Art. 1 umfasst Salmo cenerinus, S. marmoratus, S. rhodanensis und S. labrax mit mindestens 16 Wochen Schonzeit in Fliessgewässern/Stauhaltungen und 12 Wochen in stehenden Gewässern. Die kantonale Festlegung von Beginn und Ende für ein konkretes Vorkommen ist hier nicht gesichert.",
+        "Die Tabellen der BE-Bach-/Seeforelle werden nicht ungeprüft auf diese anderen Arten übertragen. Kein gesicherter BE-Nachweis und keine Fangfreigabe aus diesem Eintrag."
+      ],
+      "source_ids": [
+        "vbgf-current",
+        "fidv-2026"
+      ]
+    },
+    "alborella": {
+      "title": "Alborella: Bundesvorgabe, keine BE-Kalenderzuordnung",
+      "summary": {
+        "closed": "Mindestens 4 Wochen; konkrete BE-Daten nicht zugeordnet",
+        "length": "Keine artspezifische Mindestlänge in Art. 2 VBGF",
+        "window": "Kein BE-Fenster zugeordnet",
+        "quota": "Keine eigene Artquote in FiDV Art. 14 zugeordnet"
+      },
+      "rows": [],
+      "windows": [],
+      "notes": [
+        "Alborella hat trotz VBGF-Status 1 eine Schonzeitenregel in Art. 1. Deshalb wird kein automatisches Fangverbot allein aus dem Status abgeleitet. Konkrete kantonale Festlegung und Schutzauflagen vor Ort klären; kein BE-Vorkommen bestätigt."
+      ],
+      "source_ids": [
+        "vbgf-current"
+      ]
+    },
+    "groppe": {
+      "title": "Groppe: besondere Regeln beim Köderfischfang",
+      "summary": {
+        "closed": "Köderfischfang: nur 10.03.–31.10.",
+        "length": "Kein artspezifisches Mindestmass zugeordnet",
+        "window": "Kein Längenfenster zugeordnet",
+        "quota": "Beim Köderfischfang höchstens 30 Groppen/Tag"
+      },
+      "rows": [],
+      "windows": [],
+      "notes": [
+        "FiDV Art. 18 Abs. 1–2; diese Angabe betrifft den Köderfischfang. Erlaubnis, Schongebiete und Artenschutz zusätzlich prüfen."
+      ],
+      "source_ids": [
+        "fidv-2026",
+        "be-rules"
+      ]
+    },
+    "elritze": {
+      "title": "Elritze: Köderfischquote",
+      "summary": {
+        "closed": "Nicht eigens in Anhang 1 festgelegt",
+        "length": "Kein artspezifisches Mindestmass zugeordnet",
+        "window": "Kein Längenfenster zugeordnet",
+        "quota": "Beim Köderfischfang höchstens 50 Elritzen/Tag"
+      },
+      "rows": [],
+      "windows": [],
+      "notes": [
+        "FiDV Art. 18 Abs. 1; allgemeine Gewässer- und Bewilligungsregeln bleiben anwendbar."
+      ],
+      "source_ids": [
+        "fidv-2026",
+        "be-rules"
+      ]
+    },
+    "namaycush": {
+      "title": "Kanadische Seeforelle (Namaycush)",
+      "summary": {
+        "closed": "01.11.–31.12.",
+        "length": "22 cm",
+        "window": "Kein zusätzliches Fenster in Anhang 1",
+        "quota": "Gemeinsam 6 Forellen/Saiblinge pro Tag, davon höchstens 3 Forellen aus Brienzer-/Thuner-/Bielersee; gemeinsam 150 pro Kalenderjahr, davon höchstens 50 Bachforellen und 30 Forellen aus diesen drei Seen."
+      },
+      "rows": [
+        {
+          "water": "BE-Grundregel",
+          "length": "22 cm",
+          "closed": "01.11.–31.12.",
+          "legal": "FiDV Anhang 1 Bst. d",
+          "scope": "BE-Grundregel"
+        }
+      ],
+      "windows": [],
+      "notes": [
+        "Namaycush ist biologisch ein Saibling und wird in der gemeinsamen Forellen-/Saiblingsquote mitgezählt. Gewässerspezifische Fangzeiten und Sperren bleiben massgebend."
+      ],
+      "source_ids": [
+        "fidv-2026",
+        "be-rules"
+      ]
+    },
+    "brook-char": {
+      "title": "Bachsaibling",
+      "summary": {
+        "closed": "Nicht eigens festgelegt",
+        "length": "Nicht eigens festgelegt",
+        "window": "Kein artspezifisches Fenster zugeordnet",
+        "quota": "Gemeinsam 6 Forellen/Saiblinge pro Tag, davon höchstens 3 Forellen aus Brienzer-/Thuner-/Bielersee; gemeinsam 150 pro Kalenderjahr, davon höchstens 50 Bachforellen und 30 Forellen aus diesen drei Seen."
+      },
+      "rows": [],
+      "windows": [],
+      "notes": [
+        "Für diese Art ist in FiDV Anhang 1 und den Bundes-Grundtabellen Art. 1/2 keine eigene Kalender-Schonzeit bzw. Mindestlänge zugeordnet. Das bedeutet keine pauschale Fangfreigabe: Bundesfangverbote, Gewässerreglement, Artbestimmung und Berechtigung bleiben zu prüfen.",
+        "Beim erlaubten Köderfischfang gilt für sonstige Köderfische die gemeinsame Obergrenze 100/Tag (FiDV Art. 18); geschützte Arten sind davon nicht freigegeben.",
+        "Als Saibling in der gemeinsamen Forellen-/Saiblingsquote mitzählen (FiDV Art. 14). Nicht mit der eigenen Schonzeit des Seesaiblings gleichsetzen."
+      ],
+      "source_ids": [
+        "fidv-2026",
+        "vbgf-current"
+      ]
+    },
+    "taxon-unmapped": {
+      "title": "Keine gesicherte artspezifische BE-Rechtszuordnung",
+      "summary": {
+        "closed": "Artspezifische BE-Zuordnung offen",
+        "length": "Kein gesichertes artspezifisches Fangmass zugeordnet",
+        "window": "Keine gesicherte Zuordnung",
+        "quota": "Keine Fangfreigabe; Art-/Gewässerregeln klären"
+      },
+      "rows": [],
+      "windows": [],
+      "notes": [
+        "Die Rechtsquellen verwenden teilweise ältere Namen oder Sammelgruppen. Aus dieser offenen Zuordnung folgt weder eine Erlaubnis noch automatisch ein ganzjähriges Fangverbot. Vor einer Befischung ist die kantonale Fachstelle bzw. das konkrete Reglement zu konsultieren."
+      ],
+      "source_ids": [
+        "fidv-2026",
+        "vbgf-current"
+      ]
+    }
+  },
+  "species": {
+    "Abramis brama": {
+      "group": "unlisted",
+      "note": ""
+    },
+    "Acipenser sturio": {
+      "group": "federal-ban",
+      "note": ""
+    },
+    "Alburnoides bipunctatus": {
+      "group": "unlisted",
+      "note": ""
+    },
+    "Alburnus alburnus": {
+      "group": "unlisted",
+      "note": ""
+    },
+    "Alburnus arborella": {
+      "group": "alborella",
+      "note": ""
+    },
+    "Alosa agone": {
+      "group": "unlisted",
+      "note": ""
+    },
+    "Alosa alosa": {
+      "group": "federal-ban",
+      "note": ""
+    },
+    "Alosa fallax": {
+      "group": "unlisted",
+      "note": ""
+    },
+    "Anguilla anguilla": {
+      "group": "cantonal-ban",
+      "note": ""
+    },
+    "Barbus barbus": {
+      "group": "unlisted",
+      "note": ""
+    },
+    "Barbus caninus": {
+      "group": "unlisted",
+      "note": ""
+    },
+    "Barbus plebejus": {
+      "group": "unlisted",
+      "note": ""
+    },
+    "Blicca bjoerkna": {
+      "group": "unlisted",
+      "note": ""
+    },
+    "Chondrostoma nasus": {
+      "group": "cantonal-ban",
+      "note": ""
+    },
+    "Chondrostoma soetta": {
+      "group": "federal-ban",
+      "note": ""
+    },
+    "Cobitis bilineata": {
+      "group": "federal-ban",
+      "note": ""
+    },
+    "Cobitis taenia": {
+      "group": "unlisted",
+      "note": ""
+    },
+    "Coregonus spp.": {
+      "group": "felchen",
+      "note": "Die Regel bezieht sich auf die rechtliche Gruppe Felchen; keine artspezifische Vorkommens- oder Fangfreigabe."
+    },
+    "Cottus gobio": {
+      "group": "groppe",
+      "note": ""
+    },
+    "Cyprinus carpio": {
+      "group": "unlisted",
+      "note": ""
+    },
+    "Esox lucius": {
+      "group": "pike",
+      "note": ""
+    },
+    "Gasterosteus gymnurus": {
+      "group": "unlisted",
+      "note": ""
+    },
+    "Gobio gobio": {
+      "group": "unlisted",
+      "note": ""
+    },
+    "Gobio obtusirostris": {
+      "group": "unlisted",
+      "note": ""
+    },
+    "Gymnocephalus cernua": {
+      "group": "unlisted",
+      "note": ""
+    },
+    "Hucho hucho": {
+      "group": "federal-ban",
+      "note": ""
+    },
+    "Lampetra fluviatilis": {
+      "group": "federal-ban",
+      "note": ""
+    },
+    "Lampetra planeri": {
+      "group": "cantonal-ban",
+      "note": ""
+    },
+    "Lampetra zanandreai": {
+      "group": "federal-ban",
+      "note": ""
+    },
+    "Leucaspius delineatus": {
+      "group": "unlisted",
+      "note": ""
+    },
+    "Leuciscus leuciscus": {
+      "group": "unlisted",
+      "note": ""
+    },
+    "Lota lota": {
+      "group": "unlisted",
+      "note": ""
+    },
+    "Misgurnus fossilis": {
+      "group": "cantonal-ban",
+      "note": ""
+    },
+    "Padogobius bonelli": {
+      "group": "federal-ban",
+      "note": ""
+    },
+    "Parachondrostoma toxostoma": {
+      "group": "federal-ban",
+      "note": ""
+    },
+    "Perca fluviatilis": {
+      "group": "perch",
+      "note": ""
+    },
+    "Petromyzon marinus": {
+      "group": "federal-ban",
+      "note": ""
+    },
+    "Rhodeus amarus": {
+      "group": "cantonal-ban",
+      "note": ""
+    },
+    "Rutilus aula": {
+      "group": "federal-ban",
+      "note": ""
+    },
+    "Rutilus pigus": {
+      "group": "federal-ban",
+      "note": ""
+    },
+    "Rutilus rutilus": {
+      "group": "unlisted",
+      "note": ""
+    },
+    "Salaria fluviatilis": {
+      "group": "unlisted",
+      "note": ""
+    },
+    "Salmo cenerinus": {
+      "group": "trout-unmapped",
+      "note": ""
+    },
+    "Salmo labrax": {
+      "group": "trout-unmapped",
+      "note": ""
+    },
+    "Salmo marmoratus": {
+      "group": "trout-unmapped",
+      "note": ""
+    },
+    "Salmo rhodanensis": {
+      "group": "trout-unmapped",
+      "note": ""
+    },
+    "Salmo trutta (f. fluviatilis)": {
+      "group": "trout",
+      "note": ""
+    },
+    "Salmo trutta (f. fario)": {
+      "group": "trout",
+      "note": ""
+    },
+    "Salmo trutta (f. lacustris)": {
+      "group": "trout",
+      "note": ""
+    },
+    "Salmo trutta (f. marinus)": {
+      "group": "trout",
+      "note": ""
+    },
+    "Salmo salar": {
+      "group": "federal-ban",
+      "note": "Beim Angeln festgestellte oder zurückversetzte Lachse sind der kantonalen Fischereifachstelle unverzüglich zu melden (VBGF Art. 2a Abs. 2)."
+    },
+    "Salvelinus profundus": {
+      "group": "federal-ban",
+      "note": ""
+    },
+    "Scardinius erythrophthalmus": {
+      "group": "unlisted",
+      "note": ""
+    },
+    "Scardinius hesperidicus": {
+      "group": "unlisted",
+      "note": ""
+    },
+    "Silurus glanis": {
+      "group": "unlisted",
+      "note": ""
+    },
+    "Sander lucioperca": {
+      "group": "zander",
+      "note": ""
+    },
+    "Squalius cephalus": {
+      "group": "unlisted",
+      "note": ""
+    },
+    "Squalius squalus": {
+      "group": "unlisted",
+      "note": ""
+    },
+    "Telestes muticellus": {
+      "group": "unlisted",
+      "note": ""
+    },
+    "Telestes souffia": {
+      "group": "cantonal-ban",
+      "note": ""
+    },
+    "Thymallus aeliani": {
+      "group": "federal-ban",
+      "note": ""
+    },
+    "Thymallus thymallus": {
+      "group": "grayling",
+      "note": ""
+    },
+    "Zingel asper": {
+      "group": "federal-ban",
+      "note": ""
+    },
+    "Coregonus zugensis": {
+      "group": "felchen",
+      "note": "Die Regel bezieht sich auf die rechtliche Gruppe Felchen; keine artspezifische Vorkommens- oder Fangfreigabe."
+    },
+    "Coregonus palaea": {
+      "group": "felchen",
+      "note": "Die Regel bezieht sich auf die rechtliche Gruppe Felchen; keine artspezifische Vorkommens- oder Fangfreigabe."
+    },
+    "Coregonus confusus": {
+      "group": "felchen",
+      "note": "Die Regel bezieht sich auf die rechtliche Gruppe Felchen; keine artspezifische Vorkommens- oder Fangfreigabe."
+    },
+    "Coregonus brienzii": {
+      "group": "felchen",
+      "note": "Die Regel bezieht sich auf die rechtliche Gruppe Felchen; keine artspezifische Vorkommens- oder Fangfreigabe."
+    },
+    "Coregonus steinmanni": {
+      "group": "felchen",
+      "note": "Die Regel bezieht sich auf die rechtliche Gruppe Felchen; keine artspezifische Vorkommens- oder Fangfreigabe."
+    },
+    "Coregonus nobilis": {
+      "group": "felchen",
+      "note": "Die Regel bezieht sich auf die rechtliche Gruppe Felchen; keine artspezifische Vorkommens- oder Fangfreigabe."
+    },
+    "Gasterosteus aculeatus": {
+      "group": "unlisted",
+      "note": ""
+    },
+    "Carassius gibelio": {
+      "group": "unlisted",
+      "note": ""
+    },
+    "Oncorhynchus mykiss": {
+      "group": "unlisted",
+      "note": "Regenbogenforellen sind nicht mit der Regelgruppe Bach-/Seeforelle gleichzusetzen. Eine allgemeine Gewässerschliessung oder Gruppen-Fangzahl gilt trotzdem."
+    },
+    "Pseudorasbora parva": {
+      "group": "unlisted",
+      "note": ""
+    },
+    "Lepomis gibbosus": {
+      "group": "unlisted",
+      "note": ""
+    },
+    "Tinca tinca": {
+      "group": "unlisted",
+      "note": "Schleie: in den geprüften Berner Grundtabellen keine eigene Schonzeit, kein Fangmindestmass und keine eigene Artquote aufgeführt. Gewässerspezifische Regelungen und Berechtigung beachten."
+    },
+    "Salvelinus fontinalis": {
+      "group": "brook-char",
+      "note": "Keine eigene Kalender-Schonzeit und kein eigenes Fangmindestmass in FiDV Anhang 1. Gewässerschliessungen bleiben anwendbar."
+    },
+    "Salvelinus namaycush": {
+      "group": "namaycush",
+      "note": ""
+    },
+    "Carassius carassius": {
+      "group": "unlisted",
+      "note": "Keine eigene Kalender-Schonzeit und kein eigenes Fangmindestmass in FiDV Anhang 1. Gewässerschliessungen bleiben anwendbar."
+    },
+    "Barbatula spp. (Altbestand)": {
+      "group": "unlisted",
+      "note": ""
+    },
+    "Phoxinus spp. (Altbestand)": {
+      "group": "elritze",
+      "note": ""
+    },
+    "Salvelinus umbla": {
+      "group": "char",
+      "note": ""
+    },
+    "Esox cisalpinus": {
+      "group": "taxon-unmapped",
+      "note": "Keine heutige BE-Fangfreigabe aus dem Vorkommenseintrag ableiten."
+    },
+    "Romanogobio benacensis": {
+      "group": "taxon-unmapped",
+      "note": "Keine heutige BE-Fangfreigabe aus dem Vorkommenseintrag ableiten."
+    },
+    "Sabanejewia larvata": {
+      "group": "federal-ban",
+      "note": "Keine heutige BE-Fangfreigabe aus dem Vorkommenseintrag ableiten."
+    },
+    "Salvelinus neocomensis": {
+      "group": "federal-ban",
+      "note": "Keine heutige BE-Fangfreigabe aus dem Vorkommenseintrag ableiten."
+    },
+    "Phoxinus lumaireul": {
+      "group": "elritze",
+      "note": "FiDV Art. 18 nennt Elritzen als gemeinsame Gruppe. Die Köderfischquote gilt gemeinsam, nicht nochmals je neu unterschiedenem Arteintrag; Schutzauflagen und Berechtigung zusätzlich prüfen."
+    },
+    "Phoxinus csikii": {
+      "group": "elritze",
+      "note": "FiDV Art. 18 nennt Elritzen als gemeinsame Gruppe. Die Köderfischquote gilt gemeinsam, nicht nochmals je neu unterschiedenem Arteintrag; Schutzauflagen und Berechtigung zusätzlich prüfen."
+    },
+    "Phoxinus septimaniae": {
+      "group": "elritze",
+      "note": "FiDV Art. 18 nennt Elritzen als gemeinsame Gruppe. Die Köderfischquote gilt gemeinsam, nicht nochmals je neu unterschiedenem Arteintrag; Schutzauflagen und Berechtigung zusätzlich prüfen."
+    },
+    "Phoxinus sp. (See-Elritze)": {
+      "group": "elritze",
+      "note": "FiDV Art. 18 nennt Elritzen als gemeinsame Gruppe. Die Köderfischquote gilt gemeinsam, nicht nochmals je neu unterschiedenem Arteintrag; Schutzauflagen und Berechtigung zusätzlich prüfen."
+    },
+    "Barbatula fluvicola": {
+      "group": "taxon-unmapped",
+      "note": "Keine heutige BE-Fangfreigabe aus dem Vorkommenseintrag ableiten."
+    },
+    "Barbatula ommata": {
+      "group": "taxon-unmapped",
+      "note": "Keine heutige BE-Fangfreigabe aus dem Vorkommenseintrag ableiten."
+    },
+    "Aspius aspius": {
+      "group": "unlisted",
+      "note": "Keine eigene Schonzeit, Mindestlänge oder Artquote in FiDV Anhang 1 / Art. 14 und VBGF Art. 1/2 aufgeführt. Örtliche Berechtigung und Vorgaben zum Umgang mit gebietsfremden Fischen bleiben zu prüfen."
+    },
+    "Carassius auratus": {
+      "group": "unlisted",
+      "note": "Keine eigene Schonzeit, Mindestlänge oder Artquote in FiDV Anhang 1 / Art. 14 und VBGF Art. 1/2 aufgeführt. Örtliche Berechtigung und Vorgaben zum Umgang mit gebietsfremden Fischen bleiben zu prüfen."
+    },
+    "Ctenopharyngodon idella": {
+      "group": "unlisted",
+      "note": "Keine eigene Schonzeit, Mindestlänge oder Artquote in FiDV Anhang 1 / Art. 14 und VBGF Art. 1/2 aufgeführt. Örtliche Berechtigung und Vorgaben zum Umgang mit gebietsfremden Fischen bleiben zu prüfen."
+    },
+    "Hypophthalmichthys molitrix": {
+      "group": "unlisted",
+      "note": "Keine eigene Schonzeit, Mindestlänge oder Artquote in FiDV Anhang 1 / Art. 14 und VBGF Art. 1/2 aufgeführt. Örtliche Berechtigung und Vorgaben zum Umgang mit gebietsfremden Fischen bleiben zu prüfen."
+    },
+    "Hypophthalmichthys nobilis": {
+      "group": "unlisted",
+      "note": "Keine eigene Schonzeit, Mindestlänge oder Artquote in FiDV Anhang 1 / Art. 14 und VBGF Art. 1/2 aufgeführt. Örtliche Berechtigung und Vorgaben zum Umgang mit gebietsfremden Fischen bleiben zu prüfen."
+    },
+    "Micropterus salmoides": {
+      "group": "unlisted",
+      "note": "Keine eigene Schonzeit, Mindestlänge oder Artquote in FiDV Anhang 1 / Art. 14 und VBGF Art. 1/2 aufgeführt. Örtliche Berechtigung und Vorgaben zum Umgang mit gebietsfremden Fischen bleiben zu prüfen."
+    },
+    "Ameiurus melas": {
+      "group": "unlisted",
+      "note": "Keine eigene Schonzeit, Mindestlänge oder Artquote in FiDV Anhang 1 / Art. 14 und VBGF Art. 1/2 aufgeführt. Örtliche Berechtigung und Vorgaben zum Umgang mit gebietsfremden Fischen bleiben zu prüfen."
+    },
+    "Ameiurus nebulosus": {
+      "group": "unlisted",
+      "note": "Keine eigene Schonzeit, Mindestlänge oder Artquote in FiDV Anhang 1 / Art. 14 und VBGF Art. 1/2 aufgeführt. Örtliche Berechtigung und Vorgaben zum Umgang mit gebietsfremden Fischen bleiben zu prüfen."
+    },
+    "Neogobius melanostomus": {
+      "group": "unlisted",
+      "note": "Keine eigene Schonzeit, Mindestlänge oder Artquote in FiDV Anhang 1 / Art. 14 und VBGF Art. 1/2 aufgeführt. Örtliche Berechtigung und Vorgaben zum Umgang mit gebietsfremden Fischen bleiben zu prüfen."
+    },
+    "Ponticola kessleri": {
+      "group": "unlisted",
+      "note": "Keine eigene Schonzeit, Mindestlänge oder Artquote in FiDV Anhang 1 / Art. 14 und VBGF Art. 1/2 aufgeführt. Örtliche Berechtigung und Vorgaben zum Umgang mit gebietsfremden Fischen bleiben zu prüfen."
+    },
+    "Paramisgurnus dabryanus": {
+      "group": "unlisted",
+      "note": "Keine eigene Schonzeit, Mindestlänge oder Artquote in FiDV Anhang 1 / Art. 14 und VBGF Art. 1/2 aufgeführt. Örtliche Berechtigung und Vorgaben zum Umgang mit gebietsfremden Fischen bleiben zu prüfen."
+    },
+    "Acipenser naccarii": {
+      "group": "taxon-unmapped",
+      "note": "Keine heutige BE-Fangfreigabe aus dem Vorkommenseintrag ableiten."
+    },
+    "Oncorhynchus kisutch": {
+      "group": "unlisted",
+      "note": "Keine eigene Schonzeit, Mindestlänge oder Artquote in FiDV Anhang 1 / Art. 14 und VBGF Art. 1/2 aufgeführt. Örtliche Berechtigung und Vorgaben zum Umgang mit gebietsfremden Fischen bleiben zu prüfen."
+    },
+    "Leuciscus idus": {
+      "group": "unlisted",
+      "note": "Keine eigene Schonzeit, Mindestlänge oder Artquote in FiDV Anhang 1 / Art. 14 und VBGF Art. 1/2 aufgeführt. Örtliche Berechtigung und Vorgaben zum Umgang mit gebietsfremden Fischen bleiben zu prüfen."
+    },
+    "Micropterus dolomieu": {
+      "group": "unlisted",
+      "note": "Keine eigene Schonzeit, Mindestlänge oder Artquote in FiDV Anhang 1 / Art. 14 und VBGF Art. 1/2 aufgeführt. Örtliche Berechtigung und Vorgaben zum Umgang mit gebietsfremden Fischen bleiben zu prüfen."
+    },
+    "Coregonus albellus": {
+      "group": "felchen",
+      "note": "Keine heutige BE-Fangfreigabe aus dem Vorkommenseintrag ableiten."
+    },
+    "Coregonus acrinasus": {
+      "group": "felchen",
+      "note": "Keine heutige BE-Fangfreigabe aus dem Vorkommenseintrag ableiten."
+    },
+    "Coregonus alpinus": {
+      "group": "felchen",
+      "note": "Keine heutige BE-Fangfreigabe aus dem Vorkommenseintrag ableiten."
+    },
+    "Coregonus arenicolus": {
+      "group": "felchen",
+      "note": "Keine heutige BE-Fangfreigabe aus dem Vorkommenseintrag ableiten."
+    },
+    "Coregonus candidus": {
+      "group": "felchen",
+      "note": "Keine heutige BE-Fangfreigabe aus dem Vorkommenseintrag ableiten."
+    },
+    "Coregonus duplex": {
+      "group": "felchen",
+      "note": "Keine heutige BE-Fangfreigabe aus dem Vorkommenseintrag ableiten."
+    },
+    "Coregonus fatioi": {
+      "group": "felchen",
+      "note": "Keine heutige BE-Fangfreigabe aus dem Vorkommenseintrag ableiten."
+    },
+    "Coregonus fera": {
+      "group": "felchen",
+      "note": "Keine heutige BE-Fangfreigabe aus dem Vorkommenseintrag ableiten."
+    },
+    "Coregonus gutturosus": {
+      "group": "felchen",
+      "note": "Keine heutige BE-Fangfreigabe aus dem Vorkommenseintrag ableiten."
+    },
+    "Coregonus heglingus": {
+      "group": "felchen",
+      "note": "Keine heutige BE-Fangfreigabe aus dem Vorkommenseintrag ableiten."
+    },
+    "Coregonus hiemalis": {
+      "group": "felchen",
+      "note": "Keine heutige BE-Fangfreigabe aus dem Vorkommenseintrag ableiten."
+    },
+    "Coregonus intermundia": {
+      "group": "felchen",
+      "note": "Keine heutige BE-Fangfreigabe aus dem Vorkommenseintrag ableiten."
+    },
+    "Coregonus lavaretus": {
+      "group": "felchen",
+      "note": "Keine heutige BE-Fangfreigabe aus dem Vorkommenseintrag ableiten."
+    },
+    "Coregonus litoralis": {
+      "group": "felchen",
+      "note": "Keine heutige BE-Fangfreigabe aus dem Vorkommenseintrag ableiten."
+    },
+    "Coregonus macrophthalmus": {
+      "group": "felchen",
+      "note": "Keine heutige BE-Fangfreigabe aus dem Vorkommenseintrag ableiten."
+    },
+    "Coregonus muelleri": {
+      "group": "felchen",
+      "note": "Keine heutige BE-Fangfreigabe aus dem Vorkommenseintrag ableiten."
+    },
+    "Coregonus obliterus": {
+      "group": "felchen",
+      "note": "Keine heutige BE-Fangfreigabe aus dem Vorkommenseintrag ableiten."
+    },
+    "Coregonus profundus": {
+      "group": "felchen",
+      "note": "Keine heutige BE-Fangfreigabe aus dem Vorkommenseintrag ableiten."
+    },
+    "Coregonus restrictus": {
+      "group": "felchen",
+      "note": "Keine heutige BE-Fangfreigabe aus dem Vorkommenseintrag ableiten."
+    },
+    "Coregonus sarnensis": {
+      "group": "felchen",
+      "note": "Keine heutige BE-Fangfreigabe aus dem Vorkommenseintrag ableiten."
+    },
+    "Coregonus suidteri": {
+      "group": "felchen",
+      "note": "Keine heutige BE-Fangfreigabe aus dem Vorkommenseintrag ableiten."
+    },
+    "Coregonus supersum": {
+      "group": "felchen",
+      "note": "Keine heutige BE-Fangfreigabe aus dem Vorkommenseintrag ableiten."
+    },
+    "Coregonus suspensus": {
+      "group": "felchen",
+      "note": "Keine heutige BE-Fangfreigabe aus dem Vorkommenseintrag ableiten."
+    },
+    "Coregonus wartmanni": {
+      "group": "felchen",
+      "note": "Keine heutige BE-Fangfreigabe aus dem Vorkommenseintrag ableiten."
+    },
+    "Coregonus zuerichensis": {
+      "group": "felchen",
+      "note": "Keine heutige BE-Fangfreigabe aus dem Vorkommenseintrag ableiten."
+    },
+    "Coregonus sp. (Pfäffikersee)": {
+      "group": "taxon-unmapped",
+      "note": "Keine heutige BE-Fangfreigabe aus dem Vorkommenseintrag ableiten."
+    },
+    "Coregonus sp. (Greifensee)": {
+      "group": "taxon-unmapped",
+      "note": "Keine heutige BE-Fangfreigabe aus dem Vorkommenseintrag ableiten."
+    },
+    "Coregonus sp. (Bündeli)": {
+      "group": "taxon-unmapped",
+      "note": "Keine heutige BE-Fangfreigabe aus dem Vorkommenseintrag ableiten."
+    },
+    "Coregonus sp. (Baldegger-Hallwilersee)": {
+      "group": "taxon-unmapped",
+      "note": "Keine heutige BE-Fangfreigabe aus dem Vorkommenseintrag ableiten."
+    },
+    "Cottus sp. (Aare-Seeufer)": {
+      "group": "taxon-unmapped",
+      "note": "Keine heutige BE-Fangfreigabe aus dem Vorkommenseintrag ableiten."
+    },
+    "Cottus sp. (Thunersee-Tiefe)": {
+      "group": "taxon-unmapped",
+      "note": "Keine heutige BE-Fangfreigabe aus dem Vorkommenseintrag ableiten."
+    },
+    "Cottus sp. (Walensee-Tiefe)": {
+      "group": "taxon-unmapped",
+      "note": "Keine heutige BE-Fangfreigabe aus dem Vorkommenseintrag ableiten."
+    },
+    "Cottus sp. (Vierwaldstättersee-Tiefe)": {
+      "group": "taxon-unmapped",
+      "note": "Keine heutige BE-Fangfreigabe aus dem Vorkommenseintrag ableiten."
+    },
+    "Cottus sp. (Po-Seeufer)": {
+      "group": "taxon-unmapped",
+      "note": "Keine heutige BE-Fangfreigabe aus dem Vorkommenseintrag ableiten."
+    },
+    "Cottus sp. (Po-Tiefe)": {
+      "group": "taxon-unmapped",
+      "note": "Keine heutige BE-Fangfreigabe aus dem Vorkommenseintrag ableiten."
+    },
+    "Cottus sp. (Rhone-Linie)": {
+      "group": "taxon-unmapped",
+      "note": "Keine heutige BE-Fangfreigabe aus dem Vorkommenseintrag ableiten."
+    },
+    "Barbatula sp. (W1)": {
+      "group": "taxon-unmapped",
+      "note": "Keine heutige BE-Fangfreigabe aus dem Vorkommenseintrag ableiten."
+    },
+    "Barbatula sp. (W2)": {
+      "group": "taxon-unmapped",
+      "note": "Keine heutige BE-Fangfreigabe aus dem Vorkommenseintrag ableiten."
+    },
+    "Salvelinus sp. (Riese Vierwaldstättersee)": {
+      "group": "taxon-unmapped",
+      "note": "Keine heutige BE-Fangfreigabe aus dem Vorkommenseintrag ableiten."
+    },
+    "Salvelinus sp. (Freiwasser Vierwaldstättersee)": {
+      "group": "taxon-unmapped",
+      "note": "Keine heutige BE-Fangfreigabe aus dem Vorkommenseintrag ableiten."
+    },
+    "Salvelinus sp. (Tiefenzwerg Vierwaldstättersee)": {
+      "group": "taxon-unmapped",
+      "note": "Keine heutige BE-Fangfreigabe aus dem Vorkommenseintrag ableiten."
+    },
+    "Salvelinus sp. (Tiefenform Walensee I)": {
+      "group": "taxon-unmapped",
+      "note": "Keine heutige BE-Fangfreigabe aus dem Vorkommenseintrag ableiten."
+    },
+    "Salvelinus sp. (Tiefenform Walensee II)": {
+      "group": "taxon-unmapped",
+      "note": "Keine heutige BE-Fangfreigabe aus dem Vorkommenseintrag ableiten."
+    },
+    "Salvelinus sp. (Freiwasser Thun-Brienz)": {
+      "group": "taxon-unmapped",
+      "note": "Keine heutige BE-Fangfreigabe aus dem Vorkommenseintrag ableiten."
+    },
+    "Salvelinus sp. (Bodenform Thun-Brienz)": {
+      "group": "taxon-unmapped",
+      "note": "Keine heutige BE-Fangfreigabe aus dem Vorkommenseintrag ableiten."
+    },
+    "Salvelinus sp. (Extreme Tiefe Thunersee)": {
+      "group": "taxon-unmapped",
+      "note": "Keine heutige BE-Fangfreigabe aus dem Vorkommenseintrag ableiten."
+    },
+    "Salvelinus sp. (Tiefenzwerg Thunersee)": {
+      "group": "taxon-unmapped",
+      "note": "Keine heutige BE-Fangfreigabe aus dem Vorkommenseintrag ableiten."
+    },
+    "Salvelinus sp. (Riese Thunersee)": {
+      "group": "taxon-unmapped",
+      "note": "Keine heutige BE-Fangfreigabe aus dem Vorkommenseintrag ableiten."
+    },
+    "Perca sp. (Alpensee)": {
+      "group": "taxon-unmapped",
+      "note": "Keine heutige BE-Fangfreigabe aus dem Vorkommenseintrag ableiten."
+    }
+  }
+}

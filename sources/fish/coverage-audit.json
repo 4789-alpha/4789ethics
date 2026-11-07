@@ -1,0 +1,1030 @@
+{
+  "reviewed_on": "2026-11-07",
+  "scope": "Vollständiger Abgleich der unten festgehaltenen Referenzbestände. Arten, Lebensformen, Artengruppen und noch unbeschriebene Forschungsformen werden getrennt bezeichnet. Keine Behauptung einer endgültigen Taxonomie.",
+  "sources": [
+    {
+      "id": "rl-2022",
+      "label": "Rote Liste 2022, vollständige Taxaliste (71 Einträge)",
+      "coverage": [
+        {
+          "source_name": "Abramis brama",
+          "entry": "Abramis brama"
+        },
+        {
+          "source_name": "Acipenser sturio",
+          "entry": "Acipenser sturio"
+        },
+        {
+          "source_name": "Alburnoides bipunctatus",
+          "entry": "Alburnoides bipunctatus"
+        },
+        {
+          "source_name": "Alburnus alburnus",
+          "entry": "Alburnus alburnus"
+        },
+        {
+          "source_name": "Alburnus arborella",
+          "entry": "Alburnus arborella"
+        },
+        {
+          "source_name": "Alosa agone",
+          "entry": "Alosa agone"
+        },
+        {
+          "source_name": "Alosa alosa",
+          "entry": "Alosa alosa"
+        },
+        {
+          "source_name": "Alosa fallax",
+          "entry": "Alosa fallax"
+        },
+        {
+          "source_name": "Anguilla anguilla",
+          "entry": "Anguilla anguilla"
+        },
+        {
+          "source_name": "Barbatula barbatula",
+          "entry": "Barbatula spp. (Altbestand)"
+        },
+        {
+          "source_name": "Barbus barbus",
+          "entry": "Barbus barbus"
+        },
+        {
+          "source_name": "Barbus caninus",
+          "entry": "Barbus caninus"
+        },
+        {
+          "source_name": "Barbus plebejus",
+          "entry": "Barbus plebejus"
+        },
+        {
+          "source_name": "Blicca bjoerkna",
+          "entry": "Blicca bjoerkna"
+        },
+        {
+          "source_name": "Chondrostoma nasus",
+          "entry": "Chondrostoma nasus"
+        },
+        {
+          "source_name": "Chondrostoma soetta",
+          "entry": "Chondrostoma soetta"
+        },
+        {
+          "source_name": "Cobitis bilineata",
+          "entry": "Cobitis bilineata"
+        },
+        {
+          "source_name": "Cobitis taenia",
+          "entry": "Cobitis taenia"
+        },
+        {
+          "source_name": "Coregonus spp.",
+          "entry": "Coregonus spp."
+        },
+        {
+          "source_name": "Cottus gobio",
+          "entry": "Cottus gobio"
+        },
+        {
+          "source_name": "Cyprinus carpio",
+          "entry": "Cyprinus carpio"
+        },
+        {
+          "source_name": "Esox cisalpinus",
+          "entry": "Esox cisalpinus"
+        },
+        {
+          "source_name": "Esox lucius",
+          "entry": "Esox lucius"
+        },
+        {
+          "source_name": "Gasterosteus gymnurus",
+          "entry": "Gasterosteus gymnurus"
+        },
+        {
+          "source_name": "Gobio gobio",
+          "entry": "Gobio gobio"
+        },
+        {
+          "source_name": "Gobio obtusirostris",
+          "entry": "Gobio obtusirostris"
+        },
+        {
+          "source_name": "Gymnocephalus cernua",
+          "entry": "Gymnocephalus cernua"
+        },
+        {
+          "source_name": "Hucho hucho",
+          "entry": "Hucho hucho"
+        },
+        {
+          "source_name": "Lampetra fluviatilis",
+          "entry": "Lampetra fluviatilis"
+        },
+        {
+          "source_name": "Lampetra planeri",
+          "entry": "Lampetra planeri"
+        },
+        {
+          "source_name": "Lampetra zanandreai",
+          "entry": "Lampetra zanandreai"
+        },
+        {
+          "source_name": "Leucaspius delineatus",
+          "entry": "Leucaspius delineatus"
+        },
+        {
+          "source_name": "Leuciscus leuciscus",
+          "entry": "Leuciscus leuciscus"
+        },
+        {
+          "source_name": "Lota lota",
+          "entry": "Lota lota"
+        },
+        {
+          "source_name": "Misgurnus fossilis",
+          "entry": "Misgurnus fossilis"
+        },
+        {
+          "source_name": "Padogobius bonelli",
+          "entry": "Padogobius bonelli"
+        },
+        {
+          "source_name": "Parachondrostoma toxostoma",
+          "entry": "Parachondrostoma toxostoma"
+        },
+        {
+          "source_name": "Perca fluviatilis",
+          "entry": "Perca fluviatilis"
+        },
+        {
+          "source_name": "Petromyzon marinus",
+          "entry": "Petromyzon marinus"
+        },
+        {
+          "source_name": "Phoxinus lumaireul",
+          "entry": "Phoxinus lumaireul"
+        },
+        {
+          "source_name": "Phoxinus phoxinus",
+          "entry": "Phoxinus spp. (Altbestand)"
+        },
+        {
+          "source_name": "Rhodeus amarus",
+          "entry": "Rhodeus amarus"
+        },
+        {
+          "source_name": "Romanogobio benacensis",
+          "entry": "Romanogobio benacensis"
+        },
+        {
+          "source_name": "Rutilus aula",
+          "entry": "Rutilus aula"
+        },
+        {
+          "source_name": "Rutilus pigus",
+          "entry": "Rutilus pigus"
+        },
+        {
+          "source_name": "Rutilus rutilus",
+          "entry": "Rutilus rutilus"
+        },
+        {
+          "source_name": "Sabanejewia larvata",
+          "entry": "Sabanejewia larvata"
+        },
+        {
+          "source_name": "Salaria fluviatilis",
+          "entry": "Salaria fluviatilis"
+        },
+        {
+          "source_name": "Salmo cenerinus",
+          "entry": "Salmo cenerinus"
+        },
+        {
+          "source_name": "Salmo labrax",
+          "entry": "Salmo labrax"
+        },
+        {
+          "source_name": "Salmo marmoratus",
+          "entry": "Salmo marmoratus"
+        },
+        {
+          "source_name": "Salmo rhodanensis",
+          "entry": "Salmo rhodanensis"
+        },
+        {
+          "source_name": "Salmo salar",
+          "entry": "Salmo salar"
+        },
+        {
+          "source_name": "Salmo trutta (f. fario)",
+          "entry": "Salmo trutta (f. fario)"
+        },
+        {
+          "source_name": "Salmo trutta (f. fluviatilis)",
+          "entry": "Salmo trutta (f. fluviatilis)"
+        },
+        {
+          "source_name": "Salmo trutta (f. lacustris)",
+          "entry": "Salmo trutta (f. lacustris)"
+        },
+        {
+          "source_name": "Salmo trutta (f. marinus)",
+          "entry": "Salmo trutta (f. marinus)"
+        },
+        {
+          "source_name": "Salvelinus neocomensis",
+          "entry": "Salvelinus neocomensis"
+        },
+        {
+          "source_name": "Salvelinus profundus",
+          "entry": "Salvelinus profundus"
+        },
+        {
+          "source_name": "Salvelinus umbla",
+          "entry": "Salvelinus umbla"
+        },
+        {
+          "source_name": "Scardinius erythrophthalmus",
+          "entry": "Scardinius erythrophthalmus"
+        },
+        {
+          "source_name": "Scardinius hesperidicus",
+          "entry": "Scardinius hesperidicus"
+        },
+        {
+          "source_name": "Silurus glanis",
+          "entry": "Silurus glanis"
+        },
+        {
+          "source_name": "Squalius cephalus",
+          "entry": "Squalius cephalus"
+        },
+        {
+          "source_name": "Squalius squalus",
+          "entry": "Squalius squalus"
+        },
+        {
+          "source_name": "Telestes muticellus",
+          "entry": "Telestes muticellus"
+        },
+        {
+          "source_name": "Telestes souffia",
+          "entry": "Telestes souffia"
+        },
+        {
+          "source_name": "Thymallus aeliani",
+          "entry": "Thymallus aeliani"
+        },
+        {
+          "source_name": "Thymallus thymallus",
+          "entry": "Thymallus thymallus"
+        },
+        {
+          "source_name": "Tinca tinca",
+          "entry": "Tinca tinca"
+        },
+        {
+          "source_name": "Zingel asper",
+          "entry": "Zingel asper"
+        }
+      ]
+    },
+    {
+      "id": "fish-databank-2026",
+      "label": "Nationale Fischdatenbank 04.02.2026: sämtliche mit countryCode CH geführten Namen, auch historische Einzelfunde",
+      "coverage": [
+        {
+          "source_name": "Abramis brama (Linnaeus, 1758)",
+          "entry": "Abramis brama"
+        },
+        {
+          "source_name": "Acipenser naccarii Bonaparte, 1836",
+          "entry": "Acipenser naccarii"
+        },
+        {
+          "source_name": "Acipenser sturio Linnaeus, 1758",
+          "entry": "Acipenser sturio"
+        },
+        {
+          "source_name": "Alburnoides bipunctatus (Bloch, 1728)",
+          "entry": "Alburnoides bipunctatus"
+        },
+        {
+          "source_name": "Alburnus alburnus (Linnaeus, 1758)",
+          "entry": "Alburnus alburnus"
+        },
+        {
+          "source_name": "Alburnus arborella (De Filippi, 1844)",
+          "entry": "Alburnus arborella"
+        },
+        {
+          "source_name": "Alosa agone (Scopoli, 1786)",
+          "entry": "Alosa agone"
+        },
+        {
+          "source_name": "Alosa alosa (Linnaeus, 1758)",
+          "entry": "Alosa alosa"
+        },
+        {
+          "source_name": "Alosa fallax (Geoffroy, 1827)",
+          "entry": "Alosa fallax"
+        },
+        {
+          "source_name": "Ameiurus melas (Rafinesque, 1820)",
+          "entry": "Ameiurus melas"
+        },
+        {
+          "source_name": "Anguilla anguilla (Linnaeus, 1758)",
+          "entry": "Anguilla anguilla"
+        },
+        {
+          "source_name": "Aspius aspius (Linnaeus, 1758)",
+          "entry": "Aspius aspius"
+        },
+        {
+          "source_name": "Barbus barbus (Linnaeus, 1758)",
+          "entry": "Barbus barbus"
+        },
+        {
+          "source_name": "Barbus caninus (Risso, 1826)",
+          "entry": "Barbus caninus"
+        },
+        {
+          "source_name": "Barbus plebejus Bonaparte, 1839",
+          "entry": "Barbus plebejus"
+        },
+        {
+          "source_name": "Blicca bjoerkna (Linnaeus, 1758)",
+          "entry": "Blicca bjoerkna"
+        },
+        {
+          "source_name": "Carassius auratus (Linnaeus, 1758)",
+          "entry": "Carassius auratus"
+        },
+        {
+          "source_name": "Carassius carassius (Linnaeus, 1758)",
+          "entry": "Carassius carassius"
+        },
+        {
+          "source_name": "Carassius gibelio (Bloch, 1782)",
+          "entry": "Carassius gibelio"
+        },
+        {
+          "source_name": "Chondrostoma nasus (Linnaeus, 1758)",
+          "entry": "Chondrostoma nasus"
+        },
+        {
+          "source_name": "Chondrostoma soetta (Linnaeus, 1758)",
+          "entry": "Chondrostoma soetta"
+        },
+        {
+          "source_name": "Cobitis bilineata Canestrini, 1866",
+          "entry": "Cobitis bilineata"
+        },
+        {
+          "source_name": "Cobitis taenia (Linnaeus, 1758)",
+          "entry": "Cobitis taenia"
+        },
+        {
+          "source_name": "Coregonus acrinasus Selz, Dönz, Vonlanthen & Seehausen, 2020",
+          "entry": "Coregonus acrinasus"
+        },
+        {
+          "source_name": "Coregonus albellus Fatio, 1890",
+          "entry": "Coregonus albellus"
+        },
+        {
+          "source_name": "Coregonus alpinus Fatio, 1885",
+          "entry": "Coregonus alpinus"
+        },
+        {
+          "source_name": "Coregonus arenicolus Kottelat, 1997",
+          "entry": "Coregonus arenicolus"
+        },
+        {
+          "source_name": "Coregonus brienzii Selz, Dönz, Vonlanthen & Seehausen, 2020",
+          "entry": "Coregonus brienzii"
+        },
+        {
+          "source_name": "Coregonus candidus Goll, 1883",
+          "entry": "Coregonus candidus"
+        },
+        {
+          "source_name": "Coregonus duplex Fatio, 1890",
+          "entry": "Coregonus duplex"
+        },
+        {
+          "source_name": "Coregonus fatioi Kottelat, 1997",
+          "entry": "Coregonus fatioi"
+        },
+        {
+          "source_name": "Coregonus fera Jurine, 1825",
+          "entry": "Coregonus fera"
+        },
+        {
+          "source_name": "Coregonus gutturosus (Gmelin, 1818)",
+          "entry": "Coregonus gutturosus"
+        },
+        {
+          "source_name": "Coregonus heglingus Schinz, 1822",
+          "entry": "Coregonus heglingus"
+        },
+        {
+          "source_name": "Coregonus hiemalis Jurine, 1825",
+          "entry": "Coregonus hiemalis"
+        },
+        {
+          "source_name": "Coregonus intermundia Selz & Seehausen, 2023",
+          "entry": "Coregonus intermundia"
+        },
+        {
+          "source_name": "Coregonus litoralis Selz & Seehausen, 2023",
+          "entry": "Coregonus litoralis"
+        },
+        {
+          "source_name": "Coregonus macrophthalmus Nüsslin, 1882",
+          "entry": "Coregonus macrophthalmus"
+        },
+        {
+          "source_name": "Coregonus muelleri Selz & Seehausen, 2023",
+          "entry": "Coregonus muelleri"
+        },
+        {
+          "source_name": "Coregonus nobilis Haack, 1882",
+          "entry": "Coregonus nobilis"
+        },
+        {
+          "source_name": "Coregonus palaea Cuvier, 1829",
+          "entry": "Coregonus palaea"
+        },
+        {
+          "source_name": "Coregonus profundus Selz, Dönz, Vonlanthen & Seehausen, 2020",
+          "entry": "Coregonus profundus"
+        },
+        {
+          "source_name": "Coregonus sarnensis Selz & Seehausen, 2023",
+          "entry": "Coregonus sarnensis"
+        },
+        {
+          "source_name": "Coregonus sp.",
+          "entry": "Coregonus spp."
+        },
+        {
+          "source_name": "Coregonus steinmanni Selz, Dönz, Vonlanthen & Seehausen, 2020",
+          "entry": "Coregonus steinmanni"
+        },
+        {
+          "source_name": "Coregonus suidteri Fatio, 1885",
+          "entry": "Coregonus suidteri"
+        },
+        {
+          "source_name": "Coregonus suspensus Selz & Seehausen, 2023",
+          "entry": "Coregonus suspensus"
+        },
+        {
+          "source_name": "Coregonus zuerichensis Nüsslin, 1882",
+          "entry": "Coregonus zuerichensis"
+        },
+        {
+          "source_name": "Coregonus zugensis Nüsslin, 1882",
+          "entry": "Coregonus zugensis"
+        },
+        {
+          "source_name": "Cottus gobio (Linnaeus, 1758)",
+          "entry": "Cottus gobio"
+        },
+        {
+          "source_name": "Ctenopharyngodon idella (Valanciennes, 1844)",
+          "entry": "Ctenopharyngodon idella"
+        },
+        {
+          "source_name": "Cyprinus carpio (Linnaeus, 1758)",
+          "entry": "Cyprinus carpio"
+        },
+        {
+          "source_name": "Esox cisalpinus Bianco & Delmastro, 2011",
+          "entry": "Esox cisalpinus"
+        },
+        {
+          "source_name": "Esox lucius (Linnaeus, 1758)",
+          "entry": "Esox lucius"
+        },
+        {
+          "source_name": "Gasterosteus aculeatus (Linnaeus, 1758)",
+          "entry": "Gasterosteus aculeatus"
+        },
+        {
+          "source_name": "Gasterosteus gymnurus Cuvier, 1829",
+          "entry": "Gasterosteus gymnurus"
+        },
+        {
+          "source_name": "Gobio gobio (Linnaeus, 1758)",
+          "entry": "Gobio gobio"
+        },
+        {
+          "source_name": "Gymnocephalus cernua (Linnaeus, 1758)",
+          "entry": "Gymnocephalus cernua"
+        },
+        {
+          "source_name": "Hucho hucho (Linnaeus, 1758)",
+          "entry": "Hucho hucho"
+        },
+        {
+          "source_name": "Hypophthalmichthys molitrix (Valanciennes, 1844)",
+          "entry": "Hypophthalmichthys molitrix"
+        },
+        {
+          "source_name": "Hypophthalmichthys nobilis (Richardson, 1845)",
+          "entry": "Hypophthalmichthys nobilis"
+        },
+        {
+          "source_name": "Lampetra fluviatilis (Linnaeus, 1758)",
+          "entry": "Lampetra fluviatilis"
+        },
+        {
+          "source_name": "Lampetra planeri (Bloch, 1784)",
+          "entry": "Lampetra planeri"
+        },
+        {
+          "source_name": "Lampetra zanandreai Vladykov, 1955",
+          "entry": "Lampetra zanandreai"
+        },
+        {
+          "source_name": "Lepomis gibbosus (Linnaeus, 1758)",
+          "entry": "Lepomis gibbosus"
+        },
+        {
+          "source_name": "Leucaspius delineatus (Heckel, 1843)",
+          "entry": "Leucaspius delineatus"
+        },
+        {
+          "source_name": "Leuciscus idus (Linnaeus, 1758)",
+          "entry": "Leuciscus idus"
+        },
+        {
+          "source_name": "Leuciscus leuciscus (Linnaeus, 1758)",
+          "entry": "Leuciscus leuciscus"
+        },
+        {
+          "source_name": "Lota lota (Linnaeus, 1758)",
+          "entry": "Lota lota"
+        },
+        {
+          "source_name": "Micropterus dolomieu (Lac, 1802)",
+          "entry": "Micropterus dolomieu"
+        },
+        {
+          "source_name": "Micropterus salmoides (Lac, 1802)",
+          "entry": "Micropterus salmoides"
+        },
+        {
+          "source_name": "Misgurnus fossilis (Linnaeus, 1758)",
+          "entry": "Misgurnus fossilis"
+        },
+        {
+          "source_name": "Neogobius melanostomus (Pallas, 1814)",
+          "entry": "Neogobius melanostomus"
+        },
+        {
+          "source_name": "Oncorhynchus kisutch (Waldbaum, 1792)",
+          "entry": "Oncorhynchus kisutch"
+        },
+        {
+          "source_name": "Oncorhynchus mykiss (Walbaum, 1792)",
+          "entry": "Oncorhynchus mykiss"
+        },
+        {
+          "source_name": "Padogobius bonelli (Guenther, 1861)",
+          "entry": "Padogobius bonelli"
+        },
+        {
+          "source_name": "Parachondrostoma toxostoma (Vallot, 1837)",
+          "entry": "Parachondrostoma toxostoma"
+        },
+        {
+          "source_name": "Paramisgurnus dabryanus Dabry de Thiersant, 1872",
+          "entry": "Paramisgurnus dabryanus"
+        },
+        {
+          "source_name": "Perca fluviatilis (Linnaeus, 1758)",
+          "entry": "Perca fluviatilis"
+        },
+        {
+          "source_name": "Phoxinus lumaireul Schinz, 1840",
+          "entry": "Phoxinus lumaireul"
+        },
+        {
+          "source_name": "Pseudorasbora parva (Temminck & Schlegel, 1842)",
+          "entry": "Pseudorasbora parva"
+        },
+        {
+          "source_name": "Rhodeus amarus (Bloch, 1782)",
+          "entry": "Rhodeus amarus"
+        },
+        {
+          "source_name": "Rutilus aula (Bonaparte, 1841)",
+          "entry": "Rutilus aula"
+        },
+        {
+          "source_name": "Rutilus pigus (Lac, 1804)",
+          "entry": "Rutilus pigus"
+        },
+        {
+          "source_name": "Rutilus rutilus (Linnaeus, 1758)",
+          "entry": "Rutilus rutilus"
+        },
+        {
+          "source_name": "Sabanejewia larvata (De Filippi, 1859)",
+          "entry": "Sabanejewia larvata"
+        },
+        {
+          "source_name": "Salaria fluviatilis (Asso, 1801)",
+          "entry": "Salaria fluviatilis"
+        },
+        {
+          "source_name": "Salmo cenerinus Chiereghini, 1847",
+          "entry": "Salmo cenerinus"
+        },
+        {
+          "source_name": "Salmo labrax Pallas, 1814",
+          "entry": "Salmo labrax"
+        },
+        {
+          "source_name": "Salmo marmoratus Cuvier, 1829",
+          "entry": "Salmo marmoratus"
+        },
+        {
+          "source_name": "Salmo rhodanensis Fowler, 1974",
+          "entry": "Salmo rhodanensis"
+        },
+        {
+          "source_name": "Salmo salar (Linnaeus, 1758)",
+          "entry": "Salmo salar"
+        },
+        {
+          "source_name": "Salmo trutta",
+          "entry": "Salmo trutta (f. fario)",
+          "note": "Art durch mehrere Lebensformen repräsentiert; keine Zuordnung aller Funddaten zur Bachform."
+        },
+        {
+          "source_name": "Salvelinus fontinalis (Mitchell, 1815)",
+          "entry": "Salvelinus fontinalis"
+        },
+        {
+          "source_name": "Salvelinus namaycush (Walbaum, 1792)",
+          "entry": "Salvelinus namaycush"
+        },
+        {
+          "source_name": "Salvelinus umbla (Linnaeus, 1758)",
+          "entry": "Salvelinus umbla"
+        },
+        {
+          "source_name": "Sander lucioperca (Linnaeus, 1758)",
+          "entry": "Sander lucioperca"
+        },
+        {
+          "source_name": "Scardinius erythrophthalmus (Linnaeus, 1758)",
+          "entry": "Scardinius erythrophthalmus"
+        },
+        {
+          "source_name": "Scardinius hesperidicus Bonaparte, 1845",
+          "entry": "Scardinius hesperidicus"
+        },
+        {
+          "source_name": "Silurus glanis (Linnaeus, 1758)",
+          "entry": "Silurus glanis"
+        },
+        {
+          "source_name": "Squalius cephalus (Linnaeus, 1758)",
+          "entry": "Squalius cephalus"
+        },
+        {
+          "source_name": "Squalius squalus (Bonaparte, 1837)",
+          "entry": "Squalius squalus"
+        },
+        {
+          "source_name": "Telestes muticellus (Risso, 1826)",
+          "entry": "Telestes muticellus"
+        },
+        {
+          "source_name": "Telestes souffia (Risso, 1826)",
+          "entry": "Telestes souffia"
+        },
+        {
+          "source_name": "Thymallus thymallus (Linnaeus, 1758)",
+          "entry": "Thymallus thymallus"
+        },
+        {
+          "source_name": "Tinca tinca (Linnaeus, 1758)",
+          "entry": "Tinca tinca"
+        },
+        {
+          "source_name": "Zingel asper (Linnaeus, 1758)",
+          "entry": "Zingel asper"
+        }
+      ]
+    },
+    {
+      "id": "whitefish",
+      "label": "Felchenbericht 2025 / FIBER 2024: beschriebene Schweizer Seearten und separat markierte Forschungsformen",
+      "coverage": [
+        {
+          "source_name": "Coregonus spp.",
+          "entry": "Coregonus spp."
+        },
+        {
+          "source_name": "Coregonus zugensis",
+          "entry": "Coregonus zugensis"
+        },
+        {
+          "source_name": "Coregonus palaea",
+          "entry": "Coregonus palaea"
+        },
+        {
+          "source_name": "Coregonus confusus",
+          "entry": "Coregonus confusus"
+        },
+        {
+          "source_name": "Coregonus brienzii",
+          "entry": "Coregonus brienzii"
+        },
+        {
+          "source_name": "Coregonus steinmanni",
+          "entry": "Coregonus steinmanni"
+        },
+        {
+          "source_name": "Coregonus nobilis",
+          "entry": "Coregonus nobilis"
+        },
+        {
+          "source_name": "Coregonus albellus",
+          "entry": "Coregonus albellus"
+        },
+        {
+          "source_name": "Coregonus acrinasus",
+          "entry": "Coregonus acrinasus"
+        },
+        {
+          "source_name": "Coregonus alpinus",
+          "entry": "Coregonus alpinus"
+        },
+        {
+          "source_name": "Coregonus arenicolus",
+          "entry": "Coregonus arenicolus"
+        },
+        {
+          "source_name": "Coregonus candidus",
+          "entry": "Coregonus candidus"
+        },
+        {
+          "source_name": "Coregonus duplex",
+          "entry": "Coregonus duplex"
+        },
+        {
+          "source_name": "Coregonus fatioi",
+          "entry": "Coregonus fatioi"
+        },
+        {
+          "source_name": "Coregonus fera",
+          "entry": "Coregonus fera"
+        },
+        {
+          "source_name": "Coregonus gutturosus",
+          "entry": "Coregonus gutturosus"
+        },
+        {
+          "source_name": "Coregonus heglingus",
+          "entry": "Coregonus heglingus"
+        },
+        {
+          "source_name": "Coregonus hiemalis",
+          "entry": "Coregonus hiemalis"
+        },
+        {
+          "source_name": "Coregonus intermundia",
+          "entry": "Coregonus intermundia"
+        },
+        {
+          "source_name": "Coregonus lavaretus",
+          "entry": "Coregonus lavaretus"
+        },
+        {
+          "source_name": "Coregonus litoralis",
+          "entry": "Coregonus litoralis"
+        },
+        {
+          "source_name": "Coregonus macrophthalmus",
+          "entry": "Coregonus macrophthalmus"
+        },
+        {
+          "source_name": "Coregonus muelleri",
+          "entry": "Coregonus muelleri"
+        },
+        {
+          "source_name": "Coregonus obliterus",
+          "entry": "Coregonus obliterus"
+        },
+        {
+          "source_name": "Coregonus profundus",
+          "entry": "Coregonus profundus"
+        },
+        {
+          "source_name": "Coregonus restrictus",
+          "entry": "Coregonus restrictus"
+        },
+        {
+          "source_name": "Coregonus sarnensis",
+          "entry": "Coregonus sarnensis"
+        },
+        {
+          "source_name": "Coregonus suidteri",
+          "entry": "Coregonus suidteri"
+        },
+        {
+          "source_name": "Coregonus supersum",
+          "entry": "Coregonus supersum"
+        },
+        {
+          "source_name": "Coregonus suspensus",
+          "entry": "Coregonus suspensus"
+        },
+        {
+          "source_name": "Coregonus wartmanni",
+          "entry": "Coregonus wartmanni"
+        },
+        {
+          "source_name": "Coregonus zuerichensis",
+          "entry": "Coregonus zuerichensis"
+        },
+        {
+          "source_name": "Coregonus sp. (Pfäffikersee)",
+          "entry": "Coregonus sp. (Pfäffikersee)"
+        },
+        {
+          "source_name": "Coregonus sp. (Greifensee)",
+          "entry": "Coregonus sp. (Greifensee)"
+        },
+        {
+          "source_name": "Coregonus sp. (Bündeli)",
+          "entry": "Coregonus sp. (Bündeli)"
+        },
+        {
+          "source_name": "Coregonus sp. (Baldegger-Hallwilersee)",
+          "entry": "Coregonus sp. (Baldegger-Hallwilersee)"
+        }
+      ]
+    },
+    {
+      "id": "alien-fish-2022",
+      "label": "Gebietsfremde Fische: BAFU 2022, Kapitel Fische sowie info-fauna-Artenporträts",
+      "coverage": [
+        {
+          "source_name": "Aspius aspius",
+          "entry": "Aspius aspius"
+        },
+        {
+          "source_name": "Carassius auratus",
+          "entry": "Carassius auratus"
+        },
+        {
+          "source_name": "Carassius carassius",
+          "entry": "Carassius carassius"
+        },
+        {
+          "source_name": "Carassius gibelio",
+          "entry": "Carassius gibelio"
+        },
+        {
+          "source_name": "Ctenopharyngodon idella",
+          "entry": "Ctenopharyngodon idella"
+        },
+        {
+          "source_name": "Hypophthalmichthys molitrix",
+          "entry": "Hypophthalmichthys molitrix"
+        },
+        {
+          "source_name": "Hypophthalmichthys nobilis",
+          "entry": "Hypophthalmichthys nobilis"
+        },
+        {
+          "source_name": "Micropterus salmoides",
+          "entry": "Micropterus salmoides"
+        },
+        {
+          "source_name": "Ameiurus melas",
+          "entry": "Ameiurus melas"
+        },
+        {
+          "source_name": "Ameiurus nebulosus",
+          "entry": "Ameiurus nebulosus"
+        },
+        {
+          "source_name": "Neogobius melanostomus",
+          "entry": "Neogobius melanostomus"
+        },
+        {
+          "source_name": "Ponticola kessleri",
+          "entry": "Ponticola kessleri"
+        },
+        {
+          "source_name": "Paramisgurnus dabryanus",
+          "entry": "Paramisgurnus dabryanus"
+        },
+        {
+          "source_name": "Gasterosteus aculeatus",
+          "entry": "Gasterosteus aculeatus"
+        },
+        {
+          "source_name": "Lepomis gibbosus",
+          "entry": "Lepomis gibbosus"
+        },
+        {
+          "source_name": "Pseudorasbora parva",
+          "entry": "Pseudorasbora parva"
+        },
+        {
+          "source_name": "Salvelinus fontinalis",
+          "entry": "Salvelinus fontinalis"
+        },
+        {
+          "source_name": "Salvelinus namaycush",
+          "entry": "Salvelinus namaycush"
+        },
+        {
+          "source_name": "Oncorhynchus mykiss",
+          "entry": "Oncorhynchus mykiss"
+        },
+        {
+          "source_name": "Sander lucioperca",
+          "entry": "Sander lucioperca"
+        }
+      ]
+    },
+    {
+      "id": "barbatula-2025",
+      "label": "Bartgrundel-Revision 2025, beschriebene Arten und offene Schweizer Linien",
+      "coverage": [
+        {
+          "source_name": "Barbatula fluvicola",
+          "entry": "Barbatula fluvicola"
+        },
+        {
+          "source_name": "Barbatula ommata",
+          "entry": "Barbatula ommata"
+        },
+        {
+          "source_name": "Barbatula sp. (W1)",
+          "entry": "Barbatula sp. (W1)"
+        },
+        {
+          "source_name": "Barbatula sp. (W2)",
+          "entry": "Barbatula sp. (W2)"
+        }
+      ]
+    },
+    {
+      "id": "elritzen-2026",
+      "label": "Schweizer Elritzenformen 2026",
+      "coverage": [
+        {
+          "source_name": "Phoxinus csikii",
+          "entry": "Phoxinus csikii"
+        },
+        {
+          "source_name": "Phoxinus septimaniae",
+          "entry": "Phoxinus septimaniae"
+        },
+        {
+          "source_name": "Phoxinus lumaireul",
+          "entry": "Phoxinus lumaireul"
+        },
+        {
+          "source_name": "Phoxinus sp. (See-Elritze)",
+          "entry": "Phoxinus sp. (See-Elritze)"
+        }
+      ]
+    }
+  ],
+  "synonyms": {
+    "Phoxinus phoxinus": "Phoxinus spp. (Altbestand)",
+    "Barbatula barbatula": "Barbatula spp. (Altbestand)",
+    "Salvelinus alpinus": "Salvelinus umbla",
+    "Coregonus sp.": "Coregonus spp.",
+    "Salmo trutta": "Salmo trutta (f. fario)",
+    "Alburnus alborella": "Alburnus arborella",
+    "Alosa fallox": "Alosa fallax"
+  },
+  "excluded": [
+    {
+      "name": "Salmo carpio, Gambusia holbrooki, Salmo sp. blackspot",
+      "reason": "Die überregionale Projet-Lac-Abbildung enthält auch Seen in Italien und Frankreich. Keine Schweizer Zuordnung aus dieser Abbildung allein abgeleitet."
+    },
+    {
+      "name": "Weitere noch unbenannte genetische Linien",
+      "reason": "Keine zusätzlichen Arten erfunden; nur ausdrücklich benannte Forschungsformen der geprüften Quellen aufgenommen."
+    }
+  ]
+}

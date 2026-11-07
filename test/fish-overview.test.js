@@ -16,23 +16,25 @@ test('sizes sort numerically in both directions, with unknown values last',()=>{
 });
 test('reordering keeps each column exactly once and repairs obsolete saved settings',()=>{
  const order=context.fishColumnOrder(['name','name','obsolete','max_cm']);
- assert.equal(new Set(order).size,12);assert.equal(order.length,12);assert.equal(order[0],'name');assert.equal(order[1],'max_cm');
- const moved=context.moveFishColumn(order,'name',9);assert.equal(moved[9],'name');assert.equal(moved.length,12);assert.equal(order[0],'name');
+ assert.equal(new Set(order).size,16);assert.equal(order.length,16);assert.equal(order[0],'name');assert.equal(order[1],'max_cm');
+ const moved=context.moveFishColumn(order,'name',9);assert.equal(moved[9],'name');assert.equal(moved.length,16);assert.equal(order[0],'name');
 });
 test('status sorting follows threat severity rather than code spelling',()=>{
  const items=['CR','LC','DD','EN','RE','NT','VU','NA'].map(status=>({name:status,status}));
  const sorted=items.sort((a,b)=>context.compareFish(a,b,'status',1)).map(f=>f.status);
  assert.deepEqual(sorted.slice(0,6),['LC','NT','VU','EN','CR','RE']);assert.ok(sorted.indexOf('DD')>5);
 });
-test('every fish has a drawing, descriptions and a sourced Bern review; Laube appears once',()=>{
- assert.equal(fish.length,77);assert.equal(fish.filter(f=>f.scientific_name.startsWith('Alburnus alburnus')).length,1);
+test('every fish has descriptions, an honest drawing status and a sourced Bern review; Laube appears once',()=>{
+ assert.equal(fish.length,155);assert.equal(fish.filter(f=>f.scientific_name.startsWith('Alburnus alburnus')).length,1);
  assert.equal(new Set(fish.map(f=>f.scientific_name)).size,fish.length);
  for(const f of fish){
   assert.ok(f.form_description&&f.information&&f.fishing_method&&f.bait,f.name);
   assert.ok(['documented','historical','uncertain','no_record'].includes(f.bern_occurrence.state),f.name);
-  assert.equal(f.bern_occurrence.reviewed_on,'2026-11-06');
+  assert.ok(['2026-11-06','2026-11-07'].includes(f.bern_occurrence.reviewed_on));
   for(const id of [...f.bern_occurrence.source_ids,...f.profile_source_ids])assert.ok(references[id]?.url.startsWith('https://'),id);
-  assert.equal(fs.readFileSync(path.join(root,f.image)).subarray(0,8).toString('hex'),'89504e470d0a1a0a',f.name);
+  assert.ok(f.image,f.name+' hat eine Illustration');
+  if(f.image){const bytes=fs.readFileSync(path.join(root,f.image));if(f.image.endsWith('.webp')){assert.equal(bytes.subarray(0,4).toString(),'RIFF',f.name);assert.equal(bytes.subarray(8,12).toString(),'WEBP',f.name);}else assert.equal(bytes.subarray(0,8).toString('hex'),'89504e470d0a1a0a',f.name);}
+  else assert.match(f.image_note,/keine artspezifische Zeichnung/);
  }
  assert.equal(fish.find(f=>f.name==='Dorngrundel').bern_occurrence.state,'documented');
  assert.equal(fish.find(f=>f.name==='Bachneunauge').bern_occurrence.state,'documented');
