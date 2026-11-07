@@ -3,7 +3,7 @@ const FISH_STATUS = {
   EN: 'Stark gefährdet', CR: 'Vom Aussterben bedroht', RE: 'In der Schweiz ausgestorben',
   DD: 'Unzureichende Datengrundlage', NA: 'Nicht anwendbar', NE: 'Nicht beurteilt'
 };
-const FISH_BERN = {documented: 'Belegt', historical: 'Historisch', uncertain: 'Zuordnung offen', no_record: 'Kein BE-Beleg'};
+const FISH_BERN = {documented: 'Belegt', historical: 'Historisch', uncertain: 'Zuordnung offen', no_record: 'Kein Beleg', unreviewed: 'Noch nicht geprüft'};
 const FISH_COLUMNS = [
   {key:'name',label:'Name'}, {key:'image',label:'Bild'},
   {key:'form_description',label:'Formbeschrieb'}, {key:'information',label:'Lebensraum & Wissen'},
@@ -25,8 +25,13 @@ function fishCantonRegulations(code, catalog, bern) {
   const canton=catalog.cantons[fishCantonCode(code,catalog)];
   return canton.code==='BE' ? {...bern,...canton,general:bern.general} : canton;
 }
-function fishCantonColumns(code) {
-  return FISH_COLUMNS.map(c=>({...c,label:FISH_RULE_LABELS[c.key] ? FISH_RULE_LABELS[c.key]+' '+code : c.label}));
+function fishOccurrence(f) {
+  const code=f.rule_metadata?.code || 'BE';
+  if(code==='BE') return f.bern_occurrence;
+  return {state:'unreviewed',detail:'Das Vorkommen in diesem Kanton wurde hier noch nicht geprüft.',source_ids:[]};
+}
+function fishCantonColumns(code, name='Bern') {
+  return FISH_COLUMNS.map(c=>({...c,label:c.key==='bern' ? 'Im Kanton '+name : FISH_RULE_LABELS[c.key] ? FISH_RULE_LABELS[c.key]+' '+code : c.label}));
 }
 const fishCollator = new Intl.Collator('de-CH', {sensitivity:'base', numeric:true});
 function formatFishSize(value) {
@@ -56,14 +61,14 @@ function compareFish(a, b, key, direction=1) {
   }
   if (key==='bern') {
     const ranks={documented:0,historical:1,uncertain:2,no_record:3};
-    return ((ranks[a.bern_occurrence.state] ?? 3)-(ranks[b.bern_occurrence.state] ?? 3))*direction || fishCollator.compare(a.name,b.name);
+    return ((ranks[fishOccurrence(a).state] ?? 3)-(ranks[fishOccurrence(b).state] ?? 3))*direction || fishCollator.compare(a.name,b.name);
   }
   return fishCollator.compare(key==='image'?a.name:a[key]||'', key==='image'?b.name:b[key]||'')*direction || fishCollator.compare(a.name,b.name);
 }
 function matchesFishSearch(f, query) {
   const tokens=text=>text.toLocaleLowerCase('de-CH').normalize('NFD').replace(/[\u0300-\u036f]/g,'').split(/[^\p{L}\p{N}]+/u).filter(Boolean);
   const wanted=tokens(query); if(!wanted.length) return true;
-  const words=tokens([f.name,f.scientific_name,f.origin,f.status,FISH_STATUS[f.status],f.form_description,f.information,f.fishing_method,f.bait,FISH_BERN[f.bern_occurrence.state],f.bern_occurrence.detail].join(' '));
+  const words=tokens([f.name,f.scientific_name,f.origin,f.status,FISH_STATUS[f.status],f.form_description,f.information,f.fishing_method,f.bait,FISH_BERN[fishOccurrence(f).state],fishOccurrence(f).detail].join(' '));
   const names=tokens([f.name,f.scientific_name,...(f.aliases||[])].join(' '));
   return wanted.every(term=>names.some(name=>name.includes(term)) || words.some(word=>word.startsWith(term)));
 }
@@ -106,7 +111,7 @@ function fishRulesView(f,references) {
   ruleTable('Grundregeln und Gewässerausnahmen',rules.rows,[['water','Gewässer / Geltungsbereich'],['length','Mindestmass'],['closed','Schonzeit (Fang gesperrt)'],['legal','Rechtsgrundlage']]);
   ruleTable('Fangfenster: entnehmbare Längen im genannten Zeitraum',rules.windows,[['water','Gewässer / Abschnitt'],['length','Entnehmbare Länge'],['period','Zeitraum des Fensters'],['legal','Rechtsgrundlage']]);
   const notes=document.createElement('ul');rules.notes.forEach(note=>notes.append(fishText('li',note)));panel.append(notes,fishSourceLinks(rules.source_ids,references));
-  const general=document.createElement('details');general.append(fishText('summary','Allgemeine Regeln, Messweise und Geltungsbereich'));meta.general.forEach(note=>general.append(fishText('p',note)));general.append(fishSourceLinks(meta.source_ids,references));panel.append(general);return panel;
+  const general=document.createElement('details');general.append(fishText('summary','Allgemeine Regeln, Messweise und Geltungsbereich'));meta.general.filter(note=>!note.includes('Spalte «Im Kanton Bern»')).forEach(note=>general.append(fishText('p',note)));general.append(fishSourceLinks(meta.source_ids,references));panel.append(general);return panel;
 }
 
 async function initFischeSchweiz() {
@@ -136,9 +141,14 @@ async function initFischeSchweiz() {
     function applyCanton() {
       const regulations=fishCantonRegulations(selectedCanton,catalog,bernRegulations);
       fish=baseFish.map(f=>attachFishRules(f,regulations));
-      columns=new Map(fishCantonColumns(selectedCanton).map(c=>[c.key,c]));
+      columns=new Map(fishCantonColumns(selectedCanton,regulations.name).map(c=>[c.key,c]));
       sortChoice.replaceChildren();columns.forEach(c=>{const option=fishText('option',c.label);option.value=c.key;sortChoice.append(option);});
       cantonChoice.value=selectedCanton;
+      document.getElementById('fish_occurrence_label').textContent='Im Kanton '+regulations.name;
+      bernFilter.querySelectorAll('option[value]:not([value=""])').forEach(option=>{
+        option.hidden=(option.value==='unreviewed')!==(selectedCanton!=='BE');
+      });
+      bernFilter.value='';
       const scope=fishText('p',regulations.scope);
       const coverage=fishText('p',regulations.coverage.note,'fish-help');
       const checked=fishText('p','Quellenprüfung: '+regulations.reviewed_on+'. Die Tabellenregeln gelten nur für die jeweils genannten Gewässer.','fish-help');
@@ -168,8 +178,8 @@ async function initFischeSchweiz() {
       } else if(['closed_season_be','min_length_be','catch_window_be','catch_quota_be'].includes(key)) {
         const button=fishText('button',f[key],'fish-rule-button');button.type='button';button.title='Gewässerregeln und Quellen öffnen';button.addEventListener('click',()=>showFishPopin(f,references,true));cell.append(button);
       } else if(key==='bern') {
-        cell.append(fishText('span',FISH_BERN[f.bern_occurrence.state],'fish-bern fish-bern-'+f.bern_occurrence.state));
-        const detail=document.createElement('details');detail.append(fishText('summary','Beleg & Einordnung'),fishText('p',f.bern_occurrence.detail),fishSourceLinks(f.bern_occurrence.source_ids,references));cell.append(detail);
+        cell.append(fishText('span',FISH_BERN[fishOccurrence(f).state],'fish-bern fish-bern-'+fishOccurrence(f).state));
+        const detail=document.createElement('details');detail.append(fishText('summary','Beleg & Einordnung'),fishText('p',fishOccurrence(f).detail),fishSourceLinks(fishOccurrence(f).source_ids,references));cell.append(detail);
       } else if(key==='fishing_method') {
         cell.append(fishText('span',f.fishing_method));
         if(f.fishing_note)cell.append(fishText('small',f.fishing_note,'fish-image-note'));
@@ -212,7 +222,7 @@ async function initFischeSchweiz() {
         th.addEventListener('drop',e=>{e.preventDefault();if(dragged&&dragged!==key)reorder(dragged,order.indexOf(key));dragged=null;});header.append(th);
       });head.append(header);
       const query=search.value.trim().toLocaleLowerCase('de-CH');
-      const visible=fish.filter(f=>(!bernFilter.value||f.bern_occurrence.state===bernFilter.value) && (!kindFilter.value||f.taxon_kind===kindFilter.value) && matchesFishSearch(f,query)).sort((a,b)=>compareFish(a,b,sortKey,direction));
+      const visible=fish.filter(f=>(!bernFilter.value||fishOccurrence(f).state===bernFilter.value) && (!kindFilter.value||f.taxon_kind===kindFilter.value) && matchesFishSearch(f,query)).sort((a,b)=>compareFish(a,b,sortKey,direction));
       const body=document.createElement('tbody');
       visible.forEach(f=>{const row=document.createElement('tr');order.forEach(key=>row.append(makeCell(f,key)));body.append(row);});
       if(!visible.length){const row=document.createElement('tr'),cell=fishText('td','Keine Fische für diese Auswahl.');cell.colSpan=order.length;row.append(cell);body.append(row);}
@@ -240,8 +250,8 @@ function showFishPopin(f,references={},focusRules=false) {
   if(f.bern_rules)dialog.append(fishRulesView(f,references));
   dialog.append(fishText('p',`Ursprung: ${f.origin} · Status: ${f.status} – ${FISH_STATUS[f.status]||''}`));
   if(f.status_note)dialog.append(fishText('p',f.status_note));
-  dialog.append(fishText('h3','Im Kanton Bern: '+FISH_BERN[f.bern_occurrence.state]),fishText('p',f.bern_occurrence.detail),fishText('p','Quellenprüfung: '+f.bern_occurrence.reviewed_on));
-  dialog.append(fishSourceLinks(f.bern_occurrence.source_ids,references),fishText('h3','Weiterlesen'),fishSourceLinks(f.profile_source_ids||[],references));
+  dialog.append(fishText('h3','Im Kanton '+(f.rule_metadata?.name || 'Bern')+': '+FISH_BERN[fishOccurrence(f).state]),fishText('p',fishOccurrence(f).detail));
+  dialog.append(fishSourceLinks(fishOccurrence(f).source_ids,references),fishText('h3','Weiterlesen'),fishSourceLinks(f.profile_source_ids||[],references));
   dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close();}});
   dialog.addEventListener('close',()=>{dialog.remove();previous?.focus();},{once:true});document.body.append(dialog);dialog.showModal();if(focusRules)dialog.querySelector('.fish-rules')?.scrollIntoView({block:'start'});
 }
