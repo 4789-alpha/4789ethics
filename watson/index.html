@@ -8,16 +8,81 @@
 <style>
   :root { color-scheme: dark; background: #000; color: #eee; font: 1rem/1.45 system-ui, sans-serif; }
   body { margin: 0; min-height: 100dvh; display: grid; grid-template-rows: auto 1fr; }
-  header { display: flex; align-items: center; flex-wrap: wrap; gap: .4rem 1rem; padding: .7rem 1rem; border-bottom: 1px solid #444; }
+  header { display: flex; align-items: center; flex-wrap: wrap; gap: .6rem 1rem; padding: .8rem 1rem; border-bottom: 1px solid #444; }
   a { color: #b8dfbb; }
+  button { font: inherit; padding: .35rem .65rem; }
   iframe { box-sizing: border-box; width: 100%; height: 100%; min-height: 75vh; border: 0; }
+  iframe[hidden] { display: none; }
 </style>
 <header>
   <strong>Watson · Private Leseansicht</strong>
-  <a href="https://watson-leseansicht-privat.rafhimself.chatgpt.site/watson/" target="_blank" rel="noopener noreferrer">Anmeldung oder Leseansicht separat öffnen</a>
+  <button id="connect">Leseansicht verbinden</button>
+  <a href="https://watson-leseansicht-privat.rafhimself.chatgpt.site/watson/" target="_blank" rel="noopener noreferrer">Separat öffnen</a>
+  <span id="status" role="status">Bei Bedarf im neuen Fenster mit ChatGPT anmelden.</span>
 </header>
-<iframe
-  src="https://watson-leseansicht-privat.rafhimself.chatgpt.site/watson/"
-  title="Geschützte Watson-Leseansicht"
-  referrerpolicy="no-referrer"></iframe>
+<iframe id="reader" title="Watson-Leseansicht" sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox" referrerpolicy="no-referrer" hidden></iframe>
+<script type="module">
+  const origin = 'https://watson-leseansicht-privat.rafhimself.chatgpt.site';
+  const reader = document.querySelector('#reader');
+  const status = document.querySelector('#status');
+  let connection, timer;
+  let requestId = 0;
+  let path = '/watson/';
+  function load() {
+    if (!connection || connection.closed) {
+      status.textContent = 'Das Verbindungsfenster ist geschlossen. Bitte erneut verbinden.';
+      return;
+    }
+    status.textContent = 'Watson wird geladen …';
+    connection.postMessage({type:'watson-fetch', id:++requestId, path}, origin);
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      status.textContent = 'Der Abruf dauert zu lange. Bitte erneut verbinden oder die Ansicht separat öffnen.';
+    }, 25000);
+  }
+  document.querySelector('#connect').addEventListener('click', () => {
+    clearTimeout(timer);
+    connection = window.open(origin + '/verbindung', 'watson-verbindung', 'popup,width=560,height=690');
+    status.textContent = connection
+      ? 'Falls nötig anmelden und danach hier erneut auf «Leseansicht verbinden» klicken.'
+      : 'Der Browser hat das Anmeldefenster blockiert. Erlaube Pop-ups oder öffne die Ansicht separat.';
+  });
+  addEventListener('message', event => {
+    if (event.origin !== origin || event.source !== connection) return;
+    const message = event.data;
+    if (message?.type === 'watson-ready') {
+      load();
+      return;
+    }
+    if (message?.type !== 'watson-result' || message.id !== requestId) return;
+    clearTimeout(timer);
+    if (!message.ok || typeof message.html !== 'string') {
+      status.textContent = 'Watson konnte nicht geladen werden. Bitte erneut verbinden.';
+      return;
+    }
+    // Disable scripts in the reader document while allowing original video frames.
+    const policy = "default-src 'none'; script-src 'none'; style-src 'unsafe-inline'; img-src https: data:; media-src https:; frame-src https://www.youtube.com https://www.youtube-nocookie.com https://player.vimeo.com https://www.watson.ch; form-action 'none'; base-uri 'none'";
+    reader.srcdoc = '<!doctype html><meta http-equiv="Content-Security-Policy" content="' + policy + '">' + message.html;
+    reader.hidden = false;
+    status.textContent = 'Verbunden';
+  });
+  reader.addEventListener('load', () => {
+    const content = reader.contentDocument;
+    if (!content) return;
+    for (const link of content.querySelectorAll('a[href]')) {
+      const destination = link.getAttribute('href');
+      if (destination.startsWith('#')) continue;
+      if (!destination.startsWith('/watson/')) {
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        continue;
+      }
+      link.addEventListener('click', event => {
+        event.preventDefault();
+        path = destination;
+        load();
+      });
+    }
+  });
+</script>
 </html>
