@@ -12,7 +12,9 @@
   a { color: #b8dfbb; }
   button { font: inherit; padding: .35rem .65rem; }
   iframe { box-sizing: border-box; width: 100%; height: 100%; min-height: 75vh; border: 0; }
-  iframe[hidden] { display: none; }
+  iframe[hidden], header[hidden] { display: none; }
+  body:has(header[hidden]) { grid-template-rows: 1fr; }
+  body:has(header[hidden]) iframe { height: 100dvh; }
 </style>
 <header>
   <strong>Watson · Private Leseansicht</strong>
@@ -25,11 +27,13 @@
   const origin = 'https://watson-leseansicht-privat.rafhimself.chatgpt.site';
   const reader = document.querySelector('#reader');
   const status = document.querySelector('#status');
+  const toolbar = document.querySelector('header');
   let connection, timer;
   let requestId = 0;
   let path = '/watson/';
   function load() {
     if (!connection || connection.closed) {
+      toolbar.hidden = false;
       status.textContent = 'Das Verbindungsfenster ist geschlossen. Bitte erneut verbinden.';
       return;
     }
@@ -37,6 +41,7 @@
     connection.postMessage({type:'watson-fetch', id:++requestId, path}, origin);
     clearTimeout(timer);
     timer = setTimeout(() => {
+      toolbar.hidden = false;
       status.textContent = 'Der Abruf dauert zu lange. Bitte erneut verbinden oder die Ansicht separat öffnen.';
     }, 25000);
   }
@@ -57,29 +62,41 @@
     if (message?.type !== 'watson-result' || message.id !== requestId) return;
     clearTimeout(timer);
     if (!message.ok || typeof message.html !== 'string') {
+      toolbar.hidden = false;
       status.textContent = 'Watson konnte nicht geladen werden. Bitte erneut verbinden.';
       return;
     }
     // Disable scripts in the reader document while allowing original video frames.
     const policy = "default-src 'none'; script-src 'none'; style-src 'unsafe-inline'; img-src https: data:; media-src https:; frame-src https://www.youtube.com https://www.youtube-nocookie.com https://player.vimeo.com https://www.watson.ch; form-action 'none'; base-uri 'none'";
-    reader.srcdoc = '<!doctype html><meta http-equiv="Content-Security-Policy" content="' + policy + '">' + message.html;
+    reader.srcdoc = message.html.includes('<meta http-equiv="Content-Security-Policy" content="default-src')
+      ? message.html
+      : '<!doctype html><meta http-equiv="Content-Security-Policy" content="' + policy + '">' + message.html;
     reader.hidden = false;
+    toolbar.hidden = true;
     status.textContent = 'Verbunden';
   });
   reader.addEventListener('load', () => {
     const content = reader.contentDocument;
     if (!content) return;
     for (const link of content.querySelectorAll('a[href]')) {
-      const destination = link.getAttribute('href');
-      if (destination.startsWith('#')) continue;
-      if (!destination.startsWith('/watson/')) {
+      const href = link.getAttribute('href');
+      if (href.startsWith('#')) continue;
+      const destination = new URL(href, origin);
+      if (destination.origin !== origin || !destination.pathname.startsWith('/watson/')) {
         link.target = '_blank';
         link.rel = 'noopener noreferrer';
         continue;
       }
       link.addEventListener('click', event => {
         event.preventDefault();
-        path = destination;
+        const next = destination.pathname + destination.search;
+        if (next === path && destination.hash) {
+          let id = destination.hash.slice(1);
+          try { id = decodeURIComponent(id); } catch {}
+          content.getElementById(id)?.scrollIntoView();
+          return;
+        }
+        path = next;
         load();
       });
     }
