@@ -19,7 +19,7 @@
 <header>
   <strong>Watson · Private Leseansicht</strong>
   <button id="connect">Leseansicht verbinden</button>
-  <a href="https://watson-leseansicht-privat.rafhimself.chatgpt.site/watson/" target="_blank" rel="noopener noreferrer">Separat öffnen</a>
+  <a id="direct-reader" href="https://watson-leseansicht-privat.rafhimself.chatgpt.site/watson/" target="_blank" rel="noopener noreferrer">Separat öffnen</a>
   <span id="status" role="status">Bei Bedarf im neuen Fenster mit ChatGPT anmelden.</span>
 </header>
 <iframe id="reader" title="Watson-Leseansicht" sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox" referrerpolicy="no-referrer" hidden></iframe>
@@ -32,6 +32,7 @@
   let requestId = 0;
   let path = '/watson/';
   function load() {
+    document.querySelector('#direct-reader').href = new URL(path, origin).href;
     if (!connection || connection.closed) {
       toolbar.hidden = false;
       status.textContent = 'Das Verbindungsfenster ist geschlossen. Bitte erneut verbinden.';
@@ -52,7 +53,27 @@
       ? 'Falls nötig anmelden und danach hier erneut auf «Leseansicht verbinden» klicken.'
       : 'Der Browser hat das Anmeldefenster blockiert. Erlaube Pop-ups oder öffne die Ansicht separat.';
   });
+  function openReaderLink(href) {
+    if (typeof href !== 'string') return;
+    let destination;
+    try { destination = new URL(href, origin); } catch { return; }
+    if (destination.origin !== origin || !destination.pathname.startsWith('/watson/')) return;
+    const next = destination.pathname + destination.search;
+    if (next === path && destination.hash) {
+      let id = destination.hash.slice(1);
+      try { id = decodeURIComponent(id); } catch {}
+      reader.contentDocument?.getElementById(id)?.scrollIntoView();
+      return;
+    }
+    path = next;
+    load();
+  }
   addEventListener('message', event => {
+    if (event.origin === location.origin && event.source === reader.contentWindow &&
+        event.data?.type === 'watson-open-link') {
+      openReaderLink(event.data.href);
+      return;
+    }
     if (event.origin !== origin || event.source !== connection) return;
     const message = event.data;
     if (message?.type === 'watson-ready') {
@@ -89,15 +110,7 @@
       }
       link.addEventListener('click', event => {
         event.preventDefault();
-        const next = destination.pathname + destination.search;
-        if (next === path && destination.hash) {
-          let id = destination.hash.slice(1);
-          try { id = decodeURIComponent(id); } catch {}
-          content.getElementById(id)?.scrollIntoView();
-          return;
-        }
-        path = next;
-        load();
+        openReaderLink(destination.href);
       });
     }
   });
