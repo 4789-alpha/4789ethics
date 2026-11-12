@@ -1,0 +1,48 @@
+{
+  "artist": "EREL",
+  "project": "Beatclub Basel",
+  "albums": [
+    {
+      "title": "Implosion",
+      "releaseDate": "2026-06-12",
+      "tracks": 11,
+      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/d2/48/c0/d248c0e0-34d9-db51-1367-62c1404a9df6/823000810505.png/600x600bb.jpg",
+      "links": {
+        "YouTube": "https://www.youtube.com/playlist?list=OLAK5uy_nLg6Ed5BuU0VrrZts6IE9qToBHDQiLeYQ",
+        "Spotify": "https://open.spotify.com/album/4D8g8iOXARaPDBMqJPom7U",
+        "Apple Music": "https://music.apple.com/ch/album/implosion/6783055501",
+        "Amazon Music": "https://music.amazon.com/albums/B0H6CJTBXS",
+        "TIDAL": "https://listen.tidal.com/album/535691613"
+      },
+      "verified": "2026-11-12"
+    },
+    {
+      "title": "Primal",
+      "releaseDate": "2026-06-16",
+      "tracks": 8,
+      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/9a/d5/e9/9ad5e9f3-611e-2442-ddb5-cf9e24236b58/823000949144.png/600x600bb.jpg",
+      "links": {
+        "YouTube": "https://www.youtube.com/playlist?list=OLAK5uy_mQ_uA8H0yqdcPnMI7bDs-PpYr6wi6NpYM",
+        "Spotify": "https://open.spotify.com/album/4Rh5V7PFcc3N49FdRq8mr5",
+        "Apple Music": "https://music.apple.com/ch/album/primal/6789275360",
+        "Amazon Music": "https://music.amazon.com/albums/B0H897L5YX",
+        "TIDAL": "https://listen.tidal.com/album/541595692"
+      },
+      "verified": "2026-11-12"
+    },
+    {
+      "title": "Essence",
+      "releaseDate": "2026-08-25",
+      "tracks": 15,
+      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/52/c5/54/52c554f0-5c6f-e44e-3d67-8cbd6dcfc9da/885000392931.png/600x600bb.jpg",
+      "links": {
+        "YouTube": "https://www.youtube.com/playlist?list=OLAK5uy_nYT-ix2C4nbWv6byTx-6DD9VAc8nCcGnM",
+        "Spotify": "https://open.spotify.com/album/2hrEhHeX6UPMImfJMHofer",
+        "Apple Music": "https://music.apple.com/ch/album/essence/6813001907",
+        "Amazon Music": "https://music.amazon.com/albums/B0HK43P4B2",
+        "TIDAL": "https://listen.tidal.com/album/561845657"
+      },
+      "verified": "2026-11-12"
+    }
+  ]
+}

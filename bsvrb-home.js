@@ -7,7 +7,7 @@ filters.forEach(button => button.addEventListener('click', () => {
     project.hidden = button.dataset.filter !== 'alle' && project.dataset.category !== button.dataset.filter;
     if (!project.hidden) count++;
   });
-  document.getElementById('filter-status').textContent = `${count} Projekte angezeigt`;
+  document.getElementById('filter-status').textContent = count === 1 ? '1 Projekt oder Vorhaben angezeigt' : `${count} Projekte und Vorhaben angezeigt`;
 }));
 
 // Original TANNA logos and collision behavior, available without an account.
