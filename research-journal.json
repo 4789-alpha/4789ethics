@@ -1,1 +1,193 @@
-{"reports":[{"date":"2026-11-13","windowStart":"2026-10-30","summary":"Ein neuer, methodisch relevanter Beitrag für die Auswertung verankerter Smart-Floats (12.11.2026). Er verbindet gemessene Bojendaten mit künstlich erzeugten Zustandsänderungen; reale Schäden sind nicht validiert. Für Servoschwanz, Tiefenmessung, IMU-Hardware und akustische Verbindung wurde im geprüften Suchfenster keine weitere zeitlich verifizierte neue Primärarbeit aufgenommen.","searchNotes":"Letzter Bericht: 06.11.2026; Recherche bis 13.11.2026 mit sieben Tagen Überlappung ab 30.10.2026. Zwei Suchsysteme; Suchfelder robotic fish/servo/pressure/IMU/acoustic localization/floating sensor buoy sowie gezielte Datumssuchen. Verlagsquellen, arXiv und ETH-Projektseite geprüft; bestehende DOI/arXiv-IDs mit Journal abgeglichen. Frontiers-Volltext (Abstract, Methoden und Diskussion) geprüft. September-Preprint 2609.36993 nicht als Wochenneuheit gewertet; kein verifiziertes neues Versionsdatum. Fraunhofer-Nachricht vom 02.11. ist keine wissenschaftliche Primärarbeit. Treffer mit Heftdatum 15./30.11. oder 15.12. und nicht verifiziertem Erst-Onlinedatum nicht aufgenommen; einzelne Elsevier- und arXiv-Volltexte waren nicht abrufbar. Keine systematische Vollständigkeit zugesichert. Keine zusätzliche zeitlich verifizierte Neuheit zu ESP32/Arduino, Encoderrolle oder akustischer Verbindung.","papers":[{"id":"10.3389/fmars.2026.1949441","title":"Environmentally conditioned paired difference learning with field residual preservation for recovering controlled mooring response parameters from nonstationary buoy observations","authors":"Zhang, Yang, Hu & Pan","published":"2026-11-12","tags":["Smart-Float"],"status":"Begutachteter Zeitschriftenartikel · Felddaten mit synthetischen Zustandsänderungen","level":"Simulation","novelty":"Umwelteinflüsse werden aus Bojenbewegungen modelliert; künstliche Zustandsänderungen werden unter Erhaltung gemessener Restschwankungen ausgewertet.","evidence":"Volltext geprüft: reale Messdaten einer Hafenboje, aber synthetische Zustandsänderungen. Kein Nachweis echter Schäden oder Ankerbewegungen; Übertragbarkeit auf andere Bojen offen.","use":"Abgeleitete Idee: Smart-Float-Lageänderungen mit Umgebungsdaten und Encoderlänge gemeinsam auswerten. Encoderlänge allein belegt keine Tiefe oder Leinenkraft. Keine getestete ESP32-/Arduino-Implementierung.","test":"Zeitgleich Encoderlänge, Drucktiefe und IMU-Lage loggen; definierte Änderungen an Leinenlänge und Strömung getrennt testen. Das ist ein Versuchsvorschlag, kein Projektergebnis.","url":"https://doi.org/10.3389/fmars.2026.1949441","baseline":false}]},{"date":"2026-11-06","windowStart":"2026-10-30","summary":"Ein neuer relevanter Feldversuch mit wiederverwendeten Echolotbojen. Vier ältere Arbeiten bilden die klar getrennte Ausgangsbasis für Antrieb, Drucksensorik, IMU und Elektronik.","searchNotes":"Startrecherche am 06.11.2026: Verlagsseiten, arXiv, PMC und Hochschulquellen. Suchfelder: robotic fish, servo, pressure sensing, IMU, acoustic localization, floating sensor buoy. Kein Anspruch auf vollständige Erfassung.","papers":[{"id":"10.1038/s41598-026-72665-x","title":"Repurposed smart tuna-fishing buoys provide real-time intelligence for marine conservation and ocean observation","published":"2026-11-03","tags":["Smart-Float","Akustik"],"status":"Zeitschriftenartikel","level":"Feldversuch","novelty":"Ausgemusterte Echolotbojen werden zu autonomen Messstationen mit Positionsdaten und Telemetrie umgebaut.","evidence":"Kurze Pilot-Feldeinsätze: 393 akustische Datensätze. Die festen Stationen decken pro Standort 51,5–96,2 Stunden ab. Begutachteter Artikel; keine unabhängige Kalibrierung absoluter Biomasse und keine belastbare ökologische Langzeitaussage.","use":"Übertragungsidee: Smart-Float als wiederverwendbare Messplattform. Akustische Messwerte gemeinsam mit Position, Zeit und Umgebungsdaten protokollieren. Kein direkter Nachweis für einen kleinen Schweizer Süsswasser-Float.","test":"Einen vorhandenen Schallgeber zuerst gegen bekannte Ziele und Distanzen kalibrieren; Ausfälle und Energiebedarf mitloggen.","url":"https://doi.org/10.1038/s41598-026-72665-x","authors":"Lebrato et al.","baseline":false},{"id":"10.1016/j.ohx.2026.e00845","title":"OpenWater Hub: An open-source hardware platform for marine robotics support and water quality data acquisition","published":"2026-10-01","tags":["Smart-Float","Antrieb"],"status":"Zeitschriftenartikel","level":"Laborexperiment","novelty":"Eine offene Platine trennt Sensorabfragen und Motorsteuerung auf zwei Mikrocontroller; kombiniert RS485-Sensorik und PWM-Aktoren.","evidence":"HardwareX-Artikel mit Schaltplänen, CAD und Firmware. 240-Stunden-Thermaltest und hohe berichtete Telemetriezuverlässigkeit. Diese Laborprüfung belegt keine mehrmonatige Zuverlässigkeit im Gewässer.","use":"Übertragungsidee für ESP32/Arduino: zeitkritische Schwanzansteuerung von langsamen Sensorabfragen entkoppeln; Leistungspfade sauber trennen. Die 24-V-Plattform muss nicht unverändert übernommen werden.","test":"Servo-Pulsjitter während Sensorabfragen und Funkübertragung messen, zugleich Stromspitzen protokollieren.","url":"https://doi.org/10.1016/j.ohx.2026.e00845","authors":"Elesawy et al.","baseline":true},{"id":"arxiv:2609.27712","title":"Wave-Robust Passive AUV Localization Using FP-MUSIC","published":"2026-09-23","tags":["Smart-Float","IMU","Akustik"],"status":"Preprint","level":"Simulation","novelty":"Die IMU einer schwimmenden Hydrofonanordnung kompensiert wellenbedingte Drehungen vor der akustischen Richtungsbestimmung.","evidence":"arXiv-Preprint; die ausgewertete Zusammenfassung beschreibt simulierte Seegänge. Ein Einsatz mit realer Boje und unabhängige Replikation sind daraus nicht belegt.","use":"Übertragungsidee: IMU und akustische Aufnahmen des Smart-Floats synchronisieren. Ein Hydrofon allein liefert nicht die Richtungsinformation eines Arrays; akustische Ortung braucht passende Geometrie und Kalibrierung.","test":"Kippwinkel und Zeitstempel synchron loggen; danach einen bekannten Sender mit ruhender und bewegter Hydrofonanordnung vergleichen.","url":"https://arxiv.org/abs/2609.27712","authors":"Saqib, Rønning & Wąsowski","baseline":true},{"id":"arxiv:2603.02851","title":"Design, Modeling and Direction Control of a Wire-Driven Robotic Fish Based on a 2-DoF Crank-Slider Mechanism","published":"2026-03-03","tags":["Robo-Fisch","Antrieb","Servo"],"status":"ICRA 2026 angenommen","level":"Laborexperiment","novelty":"Ein Seilzug mit zwei Freiheitsgraden entkoppelt Vortrieb und Lenkung; Modell und kombinierte Vorsteuerung/Rückkopplung ergänzen die Mechanik.","evidence":"Primärquelle meldet Annahme bei ICRA 2026 und Prototypversuche zum Schwimmen, Wenden und Richtungshalten. Hier wurde die Zusammenfassung geprüft; keine unabhängige Replikation bewertet.","use":"Übertragungsidee: Schwanzschlagfrequenz und seitlichen Lenkoffset getrennt regeln. Die beschriebene Mechanik ist eine mögliche Weiterentwicklung des einfachen Servoschwanzes.","test":"Zuerst beim vorhandenen Servo Frequenz, Amplitude und Offset getrennt variieren; Geschwindigkeit, Wendekreis und Stromaufnahme vergleichen.","url":"https://arxiv.org/abs/2603.02851","authors":"Wang et al.","baseline":true},{"id":"arxiv:2502.07282","title":"Leader-follower formation enabled by pressure sensing in free-swimming undulatory robotic fish","published":"2025-02-11","tags":["Robo-Fisch","Druck","IMU"],"status":"ICRA 2025","level":"Laborexperiment","novelty":"Zwei seitliche Drucksensoren, IMU-Winkel und Motorbefehle ermöglichen einem Roboterfisch das Folgen eines zweiten Roboters.","evidence":"Freischwimmender Laborversuch: bis 200 mm Folgeabstand bei 155 mm/s, mit weniger als einer Stunde Trainingsdaten. Konferenzpublikation; Übertragung auf Strömung, andere Körperformen und natürliche Gewässer bleibt offen.","use":"Übertragungsidee: Drucksensorik nicht nur für Tauchtiefe, sondern als künstliche Seitenlinie prüfen. Strömungsdruck erfordert andere Messbereiche und Auswertung als reine Tiefenmessung.","test":"Zwei Sensoren symmetrisch am Kopf montieren; stationär und bei Schwanzbewegung Differenzdruck plus IMU messen, bevor ein Lernregler eingesetzt wird.","url":"https://doi.org/10.1109/ICRA55743.2025.11127903","authors":"Panta et al.","baseline":true}]}]}
+{
+  "reports": [
+    {
+      "date": "2026-11-20",
+      "windowStart": "2026-11-06",
+      "summary": "Drei relevante Ergänzungen: OmniFish (18.11.) erprobt einen Seilzugservo mit veränderlicher Körpersteifigkeit; eine akustische Ortungsarbeit (17.11.) zeigt Möglichkeiten und Grenzen bei Mehrwegeausbreitung; ein nachträglich gefundener ESP32-S3-Bojenversuch (12.11.) liefert Hinweise zu Messdatensicherung und Energiebedarf. Neue Experimente des eigenen Projekts sind damit nicht nachgewiesen.",
+      "searchNotes": "Letzter Bericht 13.11.2026; Suchfenster 06.–20.11.2026 mit sieben Tagen Überlappung. Frische Suche in zwei Suchsystemen zu robotic fish/servo/pressure/IMU/acoustic localization/floating sensor/ESP32 buoy. Erstveröffentlichungen auf arXiv bzw. Verlagsseiten geprüft; DOI und arXiv-IDs gegen sämtliche vorhandenen Berichte abgeglichen. Volltexte gezielt in Methoden, Hardware, Versuchsaufbau und Grenzen geprüft. OmniFish v1 vom 18.11.; beide MDPI-Publikationsdaten 17.11. und 12.11. Die Solarboje ist ein nachträglicher Fund aus dem überlappenden Zeitraum, keine Veröffentlichung nach dem letzten Bericht. DeepTrack nicht als Neuheit gewertet: Erst-online 08.07. statt Heftdatum 17.11. Mehrere Elsevier-Treffer mit späterem Heftdatum und unbestätigtem Erst-Onlinedatum ausgeschlossen; ein Volltext lieferte 403. Keine systematische Vollständigkeit zugesichert. Keine neue direkt verifizierte Arbeit zur Encoderrolle oder druckgeregelten Tauchtiefe aufgenommen.",
+      "papers": [
+        {
+          "id": "arxiv:2611.24511",
+          "title": "OmniFish: A Bioinspired, Modular, Reconfigurable Soft Robotic Fish Enabling Multi-Modal Swimming",
+          "authors": "Mathias Jensen & Saravana Prashanth Murali Babu",
+          "published": "2026-11-18",
+          "tags": [
+            "Robo-Fisch",
+            "Antrieb",
+            "Servo"
+          ],
+          "status": "Preprint v1 · Begutachtung läuft, nicht als angenommen bestätigt",
+          "level": "Laborexperiment",
+          "novelty": "Ein Seilzugservo erzeugt unterschiedliche Körperwellen; mechanisch blockierte Wirbelsäulensegmente verlagern die Biegung zum Schwanz.",
+          "evidence": "Volltext geprüft: geführter, kabelgebundener Laboraufbau; kein autonomes Freischwimmen. Moduswechsel verlangt Demontage. Servo begrenzt Frequenz und Amplitude; externe Führung beeinflusst die Messung.",
+          "use": "Abgeleitete Idee: beim Servoschwanz zuerst passive Steifigkeitsvarianten vergleichen, statt zusätzliche Aktoren einzubauen. Keine fertige ESP32-/Arduino-Steuerung.",
+          "test": "Bei gleicher Frequenz verschiedene Segmentversteifungen testen; tatsächliche Schwanzamplitude, Strom und Schub gemeinsam messen.",
+          "url": "https://arxiv.org/abs/2611.24511",
+          "baseline": false
+        },
+        {
+          "id": "10.3390/jmse14222176",
+          "title": "Cooperative Acoustic Source Localization in Shallow-Water Multipath Using an Array Element–Delay Complex Response Dictionary",
+          "authors": "Wu, Shi, Liang, Hong & Kang",
+          "published": "2026-11-17",
+          "tags": [
+            "Smart-Float",
+            "Akustik",
+            "IMU"
+          ],
+          "status": "Begutachteter Zeitschriftenartikel",
+          "level": "Feldversuch",
+          "novelty": "Gemeinsame Winkel- und Laufzeitauswertung eines Hydrofonarrays soll eng überlagerte Schallankünfte trennen.",
+          "evidence": "Volltext geprüft: Simulation plus Seeversuch. 27 ausgewählte Zyklen ergaben 51,8 m Positions-RMSE bei etwa 4 km; kein statistisch gesicherter Vorteil gegenüber Vergleichsmethoden. Ungünstige Arraywinkel verschlechterten die Fehler deutlich.",
+          "use": "Abgeleitete Idee: bekannte Prüfsignale und synchronisierte Lageinformationen für den Smart-Float nutzen. Arrayverfahren, keine unmittelbar übernehmbare Ein-Hydrofon- oder ESP32-Lösung.",
+          "test": "Zunächst direkte Ankunft und Echos bei bekannten Distanzen erfassen; IMU-Lage und Drucktiefe zeitgleich protokollieren.",
+          "url": "https://doi.org/10.3390/jmse14222176",
+          "baseline": false
+        },
+        {
+          "id": "10.3390/iot7040100",
+          "title": "A Solar-Powered Multiparameter IoT Buoy for Dissolved-Oxygen Monitoring and Short-Term Water-Quality Forecasting in a High-Altitude Trout Raceway",
+          "authors": "Pachas-Caycho et al.",
+          "published": "2026-11-12",
+          "tags": [
+            "Smart-Float"
+          ],
+          "status": "Begutachteter Zeitschriftenartikel · Nachtrag aus dem überlappenden Suchfenster",
+          "level": "Feldversuch",
+          "novelty": "ESP32-S3-Bojenplattform mit schaltbaren Sensorversorgungen und lokaler Datensicherung vor dem Senden.",
+          "evidence": "Volltext geprüft: 89 Tage an einem einzigen Forellenkanal. Gute Datenkontinuität, aber keine standortübergreifende Bestätigung. Prognosen liefen offline; grosse Deep-Sleep-Einsparungen sind berechnete Szenarien, kein Langzeitnachweis.",
+          "use": "Abgeleitete Idee: Smart-Float-Messungen mit festen Zeitstempeln und Sequenznummern puffern; Nachlieferung und aktuelle Warnwerte unterscheiden.",
+          "test": "Funk gezielt unterbrechen und Wiederanlauf prüfen; Strom im Mess-, Sende- und Schlafzustand direkt messen.",
+          "url": "https://doi.org/10.3390/iot7040100",
+          "baseline": false
+        }
+      ]
+    },
+    {
+      "date": "2026-11-13",
+      "windowStart": "2026-10-30",
+      "summary": "Ein neuer, methodisch relevanter Beitrag für die Auswertung verankerter Smart-Floats (12.11.2026). Er verbindet gemessene Bojendaten mit künstlich erzeugten Zustandsänderungen; reale Schäden sind nicht validiert. Für Servoschwanz, Tiefenmessung, IMU-Hardware und akustische Verbindung wurde im geprüften Suchfenster keine weitere zeitlich verifizierte neue Primärarbeit aufgenommen.",
+      "searchNotes": "Letzter Bericht: 06.11.2026; Recherche bis 13.11.2026 mit sieben Tagen Überlappung ab 30.10.2026. Zwei Suchsysteme; Suchfelder robotic fish/servo/pressure/IMU/acoustic localization/floating sensor buoy sowie gezielte Datumssuchen. Verlagsquellen, arXiv und ETH-Projektseite geprüft; bestehende DOI/arXiv-IDs mit Journal abgeglichen. Frontiers-Volltext (Abstract, Methoden und Diskussion) geprüft. September-Preprint 2609.36993 nicht als Wochenneuheit gewertet; kein verifiziertes neues Versionsdatum. Fraunhofer-Nachricht vom 02.11. ist keine wissenschaftliche Primärarbeit. Treffer mit Heftdatum 15./30.11. oder 15.12. und nicht verifiziertem Erst-Onlinedatum nicht aufgenommen; einzelne Elsevier- und arXiv-Volltexte waren nicht abrufbar. Keine systematische Vollständigkeit zugesichert. Keine zusätzliche zeitlich verifizierte Neuheit zu ESP32/Arduino, Encoderrolle oder akustischer Verbindung.",
+      "papers": [
+        {
+          "id": "10.3389/fmars.2026.1949441",
+          "title": "Environmentally conditioned paired difference learning with field residual preservation for recovering controlled mooring response parameters from nonstationary buoy observations",
+          "authors": "Zhang, Yang, Hu & Pan",
+          "published": "2026-11-12",
+          "tags": [
+            "Smart-Float"
+          ],
+          "status": "Begutachteter Zeitschriftenartikel · Felddaten mit synthetischen Zustandsänderungen",
+          "level": "Simulation",
+          "novelty": "Umwelteinflüsse werden aus Bojenbewegungen modelliert; künstliche Zustandsänderungen werden unter Erhaltung gemessener Restschwankungen ausgewertet.",
+          "evidence": "Volltext geprüft: reale Messdaten einer Hafenboje, aber synthetische Zustandsänderungen. Kein Nachweis echter Schäden oder Ankerbewegungen; Übertragbarkeit auf andere Bojen offen.",
+          "use": "Abgeleitete Idee: Smart-Float-Lageänderungen mit Umgebungsdaten und Encoderlänge gemeinsam auswerten. Encoderlänge allein belegt keine Tiefe oder Leinenkraft. Keine getestete ESP32-/Arduino-Implementierung.",
+          "test": "Zeitgleich Encoderlänge, Drucktiefe und IMU-Lage loggen; definierte Änderungen an Leinenlänge und Strömung getrennt testen. Das ist ein Versuchsvorschlag, kein Projektergebnis.",
+          "url": "https://doi.org/10.3389/fmars.2026.1949441",
+          "baseline": false
+        }
+      ]
+    },
+    {
+      "date": "2026-11-06",
+      "windowStart": "2026-10-30",
+      "summary": "Ein neuer relevanter Feldversuch mit wiederverwendeten Echolotbojen. Vier ältere Arbeiten bilden die klar getrennte Ausgangsbasis für Antrieb, Drucksensorik, IMU und Elektronik.",
+      "searchNotes": "Startrecherche am 06.11.2026: Verlagsseiten, arXiv, PMC und Hochschulquellen. Suchfelder: robotic fish, servo, pressure sensing, IMU, acoustic localization, floating sensor buoy. Kein Anspruch auf vollständige Erfassung.",
+      "papers": [
+        {
+          "id": "10.1038/s41598-026-72665-x",
+          "title": "Repurposed smart tuna-fishing buoys provide real-time intelligence for marine conservation and ocean observation",
+          "published": "2026-11-03",
+          "tags": [
+            "Smart-Float",
+            "Akustik"
+          ],
+          "status": "Zeitschriftenartikel",
+          "level": "Feldversuch",
+          "novelty": "Ausgemusterte Echolotbojen werden zu autonomen Messstationen mit Positionsdaten und Telemetrie umgebaut.",
+          "evidence": "Kurze Pilot-Feldeinsätze: 393 akustische Datensätze. Die festen Stationen decken pro Standort 51,5–96,2 Stunden ab. Begutachteter Artikel; keine unabhängige Kalibrierung absoluter Biomasse und keine belastbare ökologische Langzeitaussage.",
+          "use": "Übertragungsidee: Smart-Float als wiederverwendbare Messplattform. Akustische Messwerte gemeinsam mit Position, Zeit und Umgebungsdaten protokollieren. Kein direkter Nachweis für einen kleinen Schweizer Süsswasser-Float.",
+          "test": "Einen vorhandenen Schallgeber zuerst gegen bekannte Ziele und Distanzen kalibrieren; Ausfälle und Energiebedarf mitloggen.",
+          "url": "https://doi.org/10.1038/s41598-026-72665-x",
+          "authors": "Lebrato et al.",
+          "baseline": false
+        },
+        {
+          "id": "10.1016/j.ohx.2026.e00845",
+          "title": "OpenWater Hub: An open-source hardware platform for marine robotics support and water quality data acquisition",
+          "published": "2026-10-01",
+          "tags": [
+            "Smart-Float",
+            "Antrieb"
+          ],
+          "status": "Zeitschriftenartikel",
+          "level": "Laborexperiment",
+          "novelty": "Eine offene Platine trennt Sensorabfragen und Motorsteuerung auf zwei Mikrocontroller; kombiniert RS485-Sensorik und PWM-Aktoren.",
+          "evidence": "HardwareX-Artikel mit Schaltplänen, CAD und Firmware. 240-Stunden-Thermaltest und hohe berichtete Telemetriezuverlässigkeit. Diese Laborprüfung belegt keine mehrmonatige Zuverlässigkeit im Gewässer.",
+          "use": "Übertragungsidee für ESP32/Arduino: zeitkritische Schwanzansteuerung von langsamen Sensorabfragen entkoppeln; Leistungspfade sauber trennen. Die 24-V-Plattform muss nicht unverändert übernommen werden.",
+          "test": "Servo-Pulsjitter während Sensorabfragen und Funkübertragung messen, zugleich Stromspitzen protokollieren.",
+          "url": "https://doi.org/10.1016/j.ohx.2026.e00845",
+          "authors": "Elesawy et al.",
+          "baseline": true
+        },
+        {
+          "id": "arxiv:2609.27712",
+          "title": "Wave-Robust Passive AUV Localization Using FP-MUSIC",
+          "published": "2026-09-23",
+          "tags": [
+            "Smart-Float",
+            "IMU",
+            "Akustik"
+          ],
+          "status": "Preprint",
+          "level": "Simulation",
+          "novelty": "Die IMU einer schwimmenden Hydrofonanordnung kompensiert wellenbedingte Drehungen vor der akustischen Richtungsbestimmung.",
+          "evidence": "arXiv-Preprint; die ausgewertete Zusammenfassung beschreibt simulierte Seegänge. Ein Einsatz mit realer Boje und unabhängige Replikation sind daraus nicht belegt.",
+          "use": "Übertragungsidee: IMU und akustische Aufnahmen des Smart-Floats synchronisieren. Ein Hydrofon allein liefert nicht die Richtungsinformation eines Arrays; akustische Ortung braucht passende Geometrie und Kalibrierung.",
+          "test": "Kippwinkel und Zeitstempel synchron loggen; danach einen bekannten Sender mit ruhender und bewegter Hydrofonanordnung vergleichen.",
+          "url": "https://arxiv.org/abs/2609.27712",
+          "authors": "Saqib, Rønning & Wąsowski",
+          "baseline": true
+        },
+        {
+          "id": "arxiv:2603.02851",
+          "title": "Design, Modeling and Direction Control of a Wire-Driven Robotic Fish Based on a 2-DoF Crank-Slider Mechanism",
+          "published": "2026-03-03",
+          "tags": [
+            "Robo-Fisch",
+            "Antrieb",
+            "Servo"
+          ],
+          "status": "ICRA 2026 angenommen",
+          "level": "Laborexperiment",
+          "novelty": "Ein Seilzug mit zwei Freiheitsgraden entkoppelt Vortrieb und Lenkung; Modell und kombinierte Vorsteuerung/Rückkopplung ergänzen die Mechanik.",
+          "evidence": "Primärquelle meldet Annahme bei ICRA 2026 und Prototypversuche zum Schwimmen, Wenden und Richtungshalten. Hier wurde die Zusammenfassung geprüft; keine unabhängige Replikation bewertet.",
+          "use": "Übertragungsidee: Schwanzschlagfrequenz und seitlichen Lenkoffset getrennt regeln. Die beschriebene Mechanik ist eine mögliche Weiterentwicklung des einfachen Servoschwanzes.",
+          "test": "Zuerst beim vorhandenen Servo Frequenz, Amplitude und Offset getrennt variieren; Geschwindigkeit, Wendekreis und Stromaufnahme vergleichen.",
+          "url": "https://arxiv.org/abs/2603.02851",
+          "authors": "Wang et al.",
+          "baseline": true
+        },
+        {
+          "id": "arxiv:2502.07282",
+          "title": "Leader-follower formation enabled by pressure sensing in free-swimming undulatory robotic fish",
+          "published": "2025-02-11",
+          "tags": [
+            "Robo-Fisch",
+            "Druck",
+            "IMU"
+          ],
+          "status": "ICRA 2025",
+          "level": "Laborexperiment",
+          "novelty": "Zwei seitliche Drucksensoren, IMU-Winkel und Motorbefehle ermöglichen einem Roboterfisch das Folgen eines zweiten Roboters.",
+          "evidence": "Freischwimmender Laborversuch: bis 200 mm Folgeabstand bei 155 mm/s, mit weniger als einer Stunde Trainingsdaten. Konferenzpublikation; Übertragung auf Strömung, andere Körperformen und natürliche Gewässer bleibt offen.",
+          "use": "Übertragungsidee: Drucksensorik nicht nur für Tauchtiefe, sondern als künstliche Seitenlinie prüfen. Strömungsdruck erfordert andere Messbereiche und Auswertung als reine Tiefenmessung.",
+          "test": "Zwei Sensoren symmetrisch am Kopf montieren; stationär und bei Schwanzbewegung Differenzdruck plus IMU messen, bevor ein Lernregler eingesetzt wird.",
+          "url": "https://doi.org/10.1109/ICRA55743.2025.11127903",
+          "authors": "Panta et al.",
+          "baseline": true
+        }
+      ]
+    }
+  ]
+}
